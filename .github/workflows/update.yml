@@ -35,7 +35,12 @@ jobs:
       - name: Install the feed reader
         run: pip install feedparser==6.0.14
 
-      - name: Collect headlines and weather
+      # Checks the scoring rules against tests/cases.json. If an edit to config.json
+      # breaks a known case, the run stops here and the live screen keeps its last version.
+      - name: Check scoring rules
+        run: python scripts/check.py
+
+      - name: Collect headlines, meetings and weather
         run: python scripts/collect.py
 
       # GitHub pauses scheduled jobs in repos with no activity for 60 days.

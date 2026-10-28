@@ -1,6 +1,12 @@
 {
   "_readme": "Edit this file in GitHub to change sources, keywords and thresholds. Each run reports which feeds worked in site/news.json under 'sources_status'.",
 
+  "_site_url_readme": "Where the page is published. Each run reads the last news.json from here to remember what it already showed.",
+  "site_url": "https://peetko.github.io/cincy-news-glance/",
+
+  "_legistar_readme": "The City's public meeting calendar (Legistar). Shows today's council and committee meetings on screen.",
+  "legistar": {"client": "cincinnati", "look_ahead_days": 7},
+
   "location": {
     "name": "Cincinnati",
     "lat": 39.1031,
@@ -46,6 +52,12 @@
       "name": "City Hall sweep",
       "sweep": true,
       "feeds": ["https://news.google.com/rss/search?q=Cincinnati+(%22city+council%22+OR+%22city+hall%22+OR+%22city+manager%22+OR+mayor)+when:1d&hl=en-US&gl=US&ceid=US:en"]
+    },
+    {
+      "name": "City of Cincinnati",
+      "official": true,
+      "max_items": 10,
+      "feeds": ["https://news.google.com/rss/search?q=site:cincinnati-oh.gov+when:2d&hl=en-US&gl=US&ceid=US:en"]
     },
     {
       "name": "Ohio Capital Journal",
@@ -129,6 +141,7 @@
 
   "thresholds": {
     "city_min_score": 3,
+    "lead_switch_margin": 1.25,
     "lookback_hours": 18,
     "big_story_outlets": 3,
     "developing_outlets": 5,

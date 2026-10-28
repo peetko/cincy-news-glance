@@ -1,6 +1,8 @@
 {
- "generated_at": "2026-10-28T20:23:39.888897+00:00",
+ "generated_at": "2026-10-28T20:34:40.404983+00:00",
  "weather": {
+  "ok": true,
+  "as_of": "2026-10-28T20:34:40.404983+00:00",
   "temp": 58,
   "short": "Partly Sunny",
   "is_day": true,
@@ -8,17 +10,43 @@
    "text": "Rain likely around 10 PM",
    "level": "notable"
   },
-  "alerts": [],
-  "ok": true
+  "alerts": []
+ },
+ "meetings": {
+  "ok": true,
+  "day": "2026-10-28",
+  "is_today": true,
+  "meetings": [
+   {
+    "date": "2026-10-28",
+    "time": "1:00 PM",
+    "body": "Budget, Finance & Governance Committee",
+    "location": "Council Chambers, Room 300",
+    "agenda": "https://legistar/agenda1.pdf",
+    "url": "https://cincinnati-oh.legistar.com/x"
+   },
+   {
+    "date": "2026-10-28",
+    "time": "2:00 PM",
+    "body": "City Council",
+    "location": "Council Chambers, Room 300",
+    "agenda": "",
+    "url": ""
+   }
+  ]
  },
  "developing": "water-main-break-closes-several-downtown-streets",
  "lead": {
   "city": "council-budget-committee-takes-up-mid-year-spending-adjustme",
-  "general": "water-main-break-closes-several-downtown-streets"
+  "general": "water-main-break-closes-several-downtown-streets",
+  "why": {
+   "city": "same lead as last run",
+   "general": "highest score"
+  }
  },
  "counts": {
-  "stories": 20,
-  "city": 6
+  "stories": 21,
+  "city": 7
  },
  "stories": [
   {
@@ -35,8 +63,8 @@
     "WLWT"
    ],
    "outlet_count": 5,
-   "first_seen": "2026-10-28T19:48:39+00:00",
-   "updated": "2026-10-28T20:13:39+00:00",
+   "first_seen": "2026-10-28T19:59:40+00:00",
+   "updated": "2026-10-28T20:24:40+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 1.2,
@@ -45,7 +73,54 @@
    "is_new": false,
    "developing": true,
    "score": 13.13,
-   "city_rank": 0.0
+   "city_rank": 0.0,
+   "why": {
+    "matches": [
+     {
+      "group": "Water & Sewers",
+      "term": "Water main",
+      "where": "headline",
+      "outlet": "WCPO",
+      "points": 1.2
+     }
+    ],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": "Water main",
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "FOX19",
+     "Local 12",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": false,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Water main break shuts down several streets downtown"
+     ],
+     [
+      "WLWT",
+      "Downtown water main break closes streets, detours in place"
+     ],
+     [
+      "FOX19",
+      "Water main break closes several downtown streets; crews on scene"
+     ],
+     [
+      "Enquirer",
+      "Water main break closes downtown streets during evening commute"
+     ],
+     [
+      "Local 12",
+      "Water main break closes several downtown streets"
+     ]
+    ]
+   }
   },
   {
    "id": "brent-spence-companion-bridge-clears-final-federal-hurdle",
@@ -60,17 +135,51 @@
     "WLWT"
    ],
    "outlet_count": 4,
-   "first_seen": "2026-10-28T19:13:39+00:00",
-   "updated": "2026-10-28T19:28:39+00:00",
+   "first_seen": "2026-10-28T19:22:14+00:00",
+   "updated": "2026-10-28T19:39:40+00:00",
    "is_city": false,
    "city_reasons": [],
-   "city_score": 0.0,
+   "city_score": 0,
    "place": "maybe",
    "is_big": true,
    "is_new": false,
    "developing": false,
    "score": 9.441,
-   "city_rank": 0.0
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19",
+     "Local 12",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Brent Spence Bridge companion span gets final federal sign-off"
+     ],
+     [
+      "WLWT",
+      "Final federal approval clears way for Brent Spence companion bridge"
+     ],
+     [
+      "FOX19",
+      "Brent Spence companion bridge gets final federal sign-off"
+     ],
+     [
+      "Local 12",
+      "Brent Spence companion bridge clears final federal hurdle"
+     ]
+    ]
+   }
   },
   {
    "id": "council-budget-committee-takes-up-mid-year-spending-adjustme",
@@ -84,8 +193,8 @@
     "WVXU"
    ],
    "outlet_count": 3,
-   "first_seen": "2026-10-28T19:23:39+00:00",
-   "updated": "2026-10-28T19:41:39+00:00",
+   "first_seen": "2026-10-28T19:32:14+00:00",
+   "updated": "2026-10-28T19:52:40+00:00",
    "is_city": true,
    "city_reasons": [
     "Council"
@@ -96,7 +205,44 @@
    "is_new": false,
    "developing": false,
    "score": 7.564,
-   "city_rank": 10.322
+   "city_rank": 10.322,
+   "why": {
+    "matches": [
+     {
+      "group": "Council",
+      "term": "council",
+      "where": "headline",
+      "outlet": "Signal",
+      "points": 5.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "Signal",
+     "WVXU"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Signal",
+      "Cincinnati council budget committee weighs mid-year spending adjustments"
+     ],
+     [
+      "Enquirer",
+      "Council budget committee takes up mid-year spending adjustments"
+     ],
+     [
+      "WVXU",
+      "Council budget committee takes up mid-year spending adjustments"
+     ]
+    ]
+   }
   },
   {
    "id": "city-manager-sheryl-long-outlines-plan-to-speed-up-permit-re",
@@ -108,8 +254,8 @@
     "Enquirer"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T19:48:39+00:00",
-   "updated": "2026-10-28T19:48:39+00:00",
+   "first_seen": "2026-10-28T19:57:14+00:00",
+   "updated": "2026-10-28T19:59:40+00:00",
    "is_city": true,
    "city_reasons": [
     "City Manager"
@@ -120,7 +266,34 @@
    "is_new": false,
    "developing": false,
    "score": 3.176,
-   "city_rank": 9.799
+   "city_rank": 9.799,
+   "why": {
+    "matches": [
+     {
+      "group": "City Manager",
+      "term": "City Manager",
+      "where": "headline",
+      "outlet": "Enquirer",
+      "points": 6.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Sheryl Long",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "City Manager Sheryl Long outlines plan to speed up permit reviews"
+     ]
+    ]
+   }
   },
   {
    "id": "tri-state-community-to-hear-proposals-for-3-potential-mariju",
@@ -132,17 +305,36 @@
     "WLWT"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T19:38:39+00:00",
-   "updated": "2026-10-28T19:38:39+00:00",
+   "first_seen": "2026-10-28T19:47:14+00:00",
+   "updated": "2026-10-28T19:49:40+00:00",
    "is_city": false,
    "city_reasons": [],
-   "city_score": 0.0,
+   "city_score": 0,
    "place": "other",
    "is_big": false,
    "is_new": false,
    "developing": false,
    "score": 3.089,
-   "city_rank": 0.0
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "hamilton",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Tri-State community to hear proposals for 3 potential marijuana dispensaries"
+     ]
+    ]
+   }
   },
   {
    "id": "norwood-council-member-resigns-after-six-years",
@@ -154,31 +346,50 @@
     "WLWT"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T19:33:39+00:00",
-   "updated": "2026-10-28T19:33:39+00:00",
+   "first_seen": "2026-10-28T19:42:14+00:00",
+   "updated": "2026-10-28T19:44:40+00:00",
    "is_city": false,
    "city_reasons": [],
-   "city_score": 0.0,
+   "city_score": 0,
    "place": "other",
    "is_big": false,
    "is_new": false,
    "developing": false,
    "score": 3.046,
-   "city_rank": 0.0
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Norwood",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Norwood council member resigns after six years"
+     ]
+    ]
+   }
   },
   {
-   "id": "ohio-lawmakers-advance-bill-limiting-local-governments-home",
-   "title": "Ohio lawmakers advance bill limiting local governments' home rule on rentals",
-   "link": "https://news.google.com/o",
-   "outlet": "Statehouse News Bureau",
-   "summary": "",
+   "id": "ohio-house-bill-would-limit-cities-home-rule-over-short-term",
+   "title": "Ohio House bill would limit cities' home rule over short-term rentals",
+   "link": "https://ocj/1",
+   "outlet": "Ohio Capital Journal",
+   "summary": "Ohio House bill would limit cities' home rule over short-term rentals",
    "outlets": [
     "Ohio Capital Journal",
     "Statehouse News Bureau"
    ],
    "outlet_count": 2,
-   "first_seen": "2026-10-28T18:13:39+00:00",
-   "updated": "2026-10-28T18:33:39+00:00",
+   "first_seen": "2026-10-28T18:22:14+00:00",
+   "updated": "2026-10-28T18:44:40+00:00",
    "is_city": true,
    "city_reasons": [
     "State law"
@@ -189,7 +400,36 @@
    "is_new": false,
    "developing": false,
    "score": 2.947,
-   "city_rank": 6.483
+   "city_rank": 6.483,
+   "why": {
+    "matches": [
+     {
+      "group": "State law",
+      "term": "Ohio House",
+      "where": "headline",
+      "outlet": "Ohio Capital Journal",
+      "points": 4.0
+     }
+    ],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": false,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Ohio Capital Journal",
+      "Ohio House bill would limit cities' home rule over short-term rentals"
+     ],
+     [
+      "Statehouse News Bureau",
+      "Ohio lawmakers advance bill limiting local governments' home rule on rentals"
+     ]
+    ]
+   }
   },
   {
    "id": "covington-police-investigate-break-in-at-mainstrasse-shop",
@@ -201,17 +441,36 @@
     "WCPO"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T19:03:39+00:00",
-   "updated": "2026-10-28T19:03:39+00:00",
+   "first_seen": "2026-10-28T19:12:14+00:00",
+   "updated": "2026-10-28T19:14:40+00:00",
    "is_city": false,
    "city_reasons": [],
-   "city_score": 0.0,
+   "city_score": 0,
    "place": "other",
    "is_big": false,
    "is_new": false,
    "developing": false,
-   "score": 2.802,
-   "city_rank": 0.0
+   "score": 2.803,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Covington",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Covington police investigate break-in at Mainstrasse shop"
+     ]
+    ]
+   }
   },
   {
    "id": "riverfront-park-adds-evening-programming-for-the-holidays",
@@ -223,17 +482,85 @@
     "WLWT"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T18:23:39+00:00",
-   "updated": "2026-10-28T18:23:39+00:00",
+   "first_seen": "2026-10-28T18:32:14+00:00",
+   "updated": "2026-10-28T18:34:40+00:00",
    "is_city": false,
    "city_reasons": [],
-   "city_score": 0.0,
+   "city_score": 0,
    "place": "maybe",
    "is_big": false,
    "is_new": false,
    "developing": false,
    "score": 2.508,
-   "city_rank": 0.0
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Riverfront park adds evening programming for the holidays"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "city-announces-winter-warming-centers-open-nov-15",
+   "title": "City announces winter warming centers open Nov. 15",
+   "link": "https://news.google.com/rel",
+   "outlet": "City of Cincinnati",
+   "summary": "",
+   "outlets": [
+    "City of Cincinnati"
+   ],
+   "outlet_count": 1,
+   "first_seen": "2026-10-28T18:32:14+00:00",
+   "updated": "2026-10-28T18:34:40+00:00",
+   "is_city": true,
+   "city_reasons": [
+    "City Hall"
+   ],
+   "city_score": 4.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.508,
+   "city_rank": 5.446,
+   "why": {
+    "matches": [
+     {
+      "group": "City Hall",
+      "term": "City of Cincinnati release",
+      "where": "source",
+      "outlet": "City of Cincinnati",
+      "points": 4.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "City of Cincinnati release",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "City of Cincinnati",
+      "City announces winter warming centers open Nov. 15"
+     ]
+    ]
+   }
   },
   {
    "id": "cold-snap-expected-to-bring-first-frost-of-the-season-to-the",
@@ -245,17 +572,36 @@
     "FOX19"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T17:53:39+00:00",
-   "updated": "2026-10-28T17:53:39+00:00",
+   "first_seen": "2026-10-28T18:02:14+00:00",
+   "updated": "2026-10-28T18:04:40+00:00",
    "is_city": false,
    "city_reasons": [],
-   "city_score": 0.0,
+   "city_score": 0,
    "place": "maybe",
    "is_big": false,
    "is_new": false,
    "developing": false,
    "score": 2.307,
-   "city_rank": 0.0
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Cold snap expected to bring first frost of the season to the Tri-State"
+     ]
+    ]
+   }
   },
   {
    "id": "metro-board-reviews-feedback-on-bus-route-redesign",
@@ -267,17 +613,36 @@
     "WCPO"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T17:03:39+00:00",
-   "updated": "2026-10-28T17:03:39+00:00",
+   "first_seen": "2026-10-28T17:12:14+00:00",
+   "updated": "2026-10-28T17:14:40+00:00",
    "is_city": false,
    "city_reasons": [],
-   "city_score": 0.0,
+   "city_score": 0,
    "place": "maybe",
    "is_big": false,
    "is_new": false,
    "developing": false,
    "score": 2.008,
-   "city_rank": 0.0
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Metro board reviews feedback on bus route redesign"
+     ]
+    ]
+   }
   },
   {
    "id": "fc-cincinnati-season-ticket-holders-get-first-look-at-2027-s",
@@ -289,17 +654,36 @@
     "Enquirer"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T16:43:39+00:00",
-   "updated": "2026-10-28T16:43:39+00:00",
+   "first_seen": "2026-10-28T16:52:14+00:00",
+   "updated": "2026-10-28T16:54:40+00:00",
    "is_city": false,
    "city_reasons": [],
-   "city_score": 0.0,
+   "city_score": 0,
    "place": "yes",
    "is_big": false,
    "is_new": false,
    "developing": false,
    "score": 1.9,
-   "city_rank": 0.0
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "FC Cincinnati season-ticket holders get first look at 2027 schedule"
+     ]
+    ]
+   }
   },
   {
    "id": "planning-commission-schedules-hearing-on-west-end-housing-pl",
@@ -311,8 +695,8 @@
     "WVXU"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T16:03:39+00:00",
-   "updated": "2026-10-28T16:03:39+00:00",
+   "first_seen": "2026-10-28T16:12:14+00:00",
+   "updated": "2026-10-28T16:14:40+00:00",
    "is_city": true,
    "city_reasons": [
     "Planning & Development"
@@ -323,7 +707,34 @@
    "is_new": false,
    "developing": false,
    "score": 1.7,
-   "city_rank": 2.914
+   "city_rank": 2.914,
+   "why": {
+    "matches": [
+     {
+      "group": "Planning & Development",
+      "term": "Planning Commission",
+      "where": "headline",
+      "outlet": "WVXU",
+      "points": 3.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "West End",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WVXU"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WVXU",
+      "Planning Commission schedules hearing on West End housing plan"
+     ]
+    ]
+   }
   },
   {
    "id": "library-branch-reopens-in-northside-after-year-long-renovati",
@@ -335,17 +746,36 @@
     "WCPO"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T15:23:39+00:00",
-   "updated": "2026-10-28T15:23:39+00:00",
+   "first_seen": "2026-10-28T15:32:14+00:00",
+   "updated": "2026-10-28T15:34:40+00:00",
    "is_city": false,
    "city_reasons": [],
-   "city_score": 0.0,
+   "city_score": 0,
    "place": "yes",
    "is_big": false,
    "is_new": false,
    "developing": false,
    "score": 1.521,
-   "city_rank": 0.0
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Northside",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Library branch reopens in Northside after year-long renovation"
+     ]
+    ]
+   }
   },
   {
    "id": "cincinnati-city-council-members-react-to-new-curfew-numbers",
@@ -357,8 +787,8 @@
     "Spectrum News"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T15:23:39+00:00",
-   "updated": "2026-10-28T15:23:39+00:00",
+   "first_seen": "2026-10-28T15:32:14+00:00",
+   "updated": "2026-10-28T15:34:40+00:00",
    "is_city": true,
    "city_reasons": [
     "Council"
@@ -369,7 +799,32 @@
    "is_new": false,
    "developing": false,
    "score": 1.521,
-   "city_rank": 3.998
+   "city_rank": 3.998,
+   "why": {
+    "matches": [
+     {
+      "group": "Council",
+      "term": "Council",
+      "where": "headline",
+      "outlet": "Spectrum News",
+      "points": 5.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Spectrum News",
+      "Cincinnati City Council members react to new curfew numbers"
+     ]
+    ]
+   }
   },
   {
    "id": "hamilton-county-commissioners-discuss-levy-renewal-timeline",
@@ -381,17 +836,36 @@
     "WVXU"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T14:53:39+00:00",
-   "updated": "2026-10-28T14:53:39+00:00",
+   "first_seen": "2026-10-28T15:02:14+00:00",
+   "updated": "2026-10-28T15:04:40+00:00",
    "is_city": false,
    "city_reasons": [],
-   "city_score": 0.0,
+   "city_score": 0,
    "place": "maybe",
    "is_big": false,
    "is_new": false,
    "developing": false,
    "score": 1.399,
-   "city_rank": 0.0
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WVXU"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WVXU",
+      "Hamilton County commissioners discuss levy renewal timeline"
+     ]
+    ]
+   }
   },
   {
    "id": "bengals-prepare-for-sunday-matchup",
@@ -403,17 +877,36 @@
     "WLWT"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T18:53:39+00:00",
-   "updated": "2026-10-28T18:53:39+00:00",
+   "first_seen": "2026-10-28T19:02:14+00:00",
+   "updated": "2026-10-28T19:04:40+00:00",
    "is_city": false,
    "city_reasons": [],
-   "city_score": 0.0,
+   "city_score": 0,
    "place": "maybe",
    "is_big": false,
    "is_new": false,
    "developing": false,
    "score": 1.363,
-   "city_rank": 0.0
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": true,
+    "versions": [
+     [
+      "WLWT",
+      "Bengals prepare for Sunday matchup"
+     ]
+    ]
+   }
   },
   {
    "id": "new-coffee-shop-takes-over-historic-storefront-in-northside",
@@ -425,17 +918,36 @@
     "WLWT"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T13:43:39+00:00",
-   "updated": "2026-10-28T13:43:39+00:00",
+   "first_seen": "2026-10-28T13:52:14+00:00",
+   "updated": "2026-10-28T13:54:40+00:00",
    "is_city": false,
    "city_reasons": [],
-   "city_score": 0.0,
+   "city_score": 0,
    "place": "yes",
    "is_big": false,
    "is_new": false,
    "developing": false,
    "score": 1.152,
-   "city_rank": 0.0
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Northside",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "New coffee shop takes over historic storefront in Northside"
+     ]
+    ]
+   }
   },
   {
    "id": "congress-weighs-cuts-to-federal-grants-that-cities-use-for-h",
@@ -447,8 +959,8 @@
     "Route Fifty"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T17:53:39+00:00",
-   "updated": "2026-10-28T17:53:39+00:00",
+   "first_seen": "2026-10-28T18:02:14+00:00",
+   "updated": "2026-10-28T18:04:40+00:00",
    "is_city": true,
    "city_reasons": [
     "Federal"
@@ -459,7 +971,32 @@
    "is_new": false,
    "developing": false,
    "score": 0.989,
-   "city_rank": 3.955
+   "city_rank": 3.955,
+   "why": {
+    "matches": [
+     {
+      "group": "Federal",
+      "term": "Congress",
+      "where": "headline",
+      "outlet": "Route Fifty",
+      "points": 3.0
+     }
+    ],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": false,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Route Fifty",
+      "Congress weighs cuts to federal grants that cities use for housing"
+     ]
+    ]
+   }
   },
   {
    "id": "neighborhood-councils-weigh-in-on-transit-corridor-zoning-ch",
@@ -471,8 +1008,8 @@
     "Signal"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T12:03:39+00:00",
-   "updated": "2026-10-28T12:03:39+00:00",
+   "first_seen": "2026-10-28T12:12:14+00:00",
+   "updated": "2026-10-28T12:14:40+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 1.2,
@@ -481,7 +1018,34 @@
    "is_new": false,
    "developing": false,
    "score": 0.873,
-   "city_rank": 0.0
+   "city_rank": 0.0,
+   "why": {
+    "matches": [
+     {
+      "group": "Planning & Development",
+      "term": "zoning",
+      "where": "headline",
+      "outlet": "Signal",
+      "points": 1.2
+     }
+    ],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Signal"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Signal",
+      "Neighborhood councils weigh in on transit-corridor zoning changes"
+     ]
+    ]
+   }
   }
  ],
  "sources_status": [
@@ -489,6 +1053,7 @@
    "source": "Enquirer",
    "ok": true,
    "items": 4,
+   "junk_dropped": 1,
    "used": "https://news.google.com/rss/search?q=site:cincinnati.com+-obituary+-obituaries+-obituaries.cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en",
    "used_fallback": false,
    "errors": []
@@ -497,6 +1062,7 @@
    "source": "WCPO",
    "ok": true,
    "items": 5,
+   "junk_dropped": 0,
    "used": "https://www.wcpo.com/news/local-news.rss",
    "used_fallback": false,
    "errors": []
@@ -505,6 +1071,7 @@
    "source": "WLWT",
    "ok": true,
    "items": 7,
+   "junk_dropped": 0,
    "used": "https://www.wlwt.com/local-news-rss",
    "used_fallback": false,
    "errors": []
@@ -513,6 +1080,7 @@
    "source": "FOX19",
    "ok": true,
    "items": 3,
+   "junk_dropped": 0,
    "used": "https://www.fox19.com/arc/outboundfeeds/rss/category/news/?outputType=xml",
    "used_fallback": false,
    "errors": []
@@ -521,6 +1089,7 @@
    "source": "Local 12",
    "ok": true,
    "items": 2,
+   "junk_dropped": 0,
    "used": "https://news.google.com/rss/search?q=site:local12.com+-obituary+-obituaries+-obituaries.cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en",
    "used_fallback": true,
    "errors": [
@@ -531,6 +1100,7 @@
    "source": "WVXU",
    "ok": true,
    "items": 3,
+   "junk_dropped": 0,
    "used": "https://www.wvxu.org/local-news.rss",
    "used_fallback": false,
    "errors": []
@@ -539,6 +1109,7 @@
    "source": "Signal",
    "ok": true,
    "items": 2,
+   "junk_dropped": 0,
    "used": "https://signalcincinnati.org/feed/",
    "used_fallback": false,
    "errors": []
@@ -547,7 +1118,17 @@
    "source": "City Hall sweep",
    "ok": true,
    "items": 2,
+   "junk_dropped": 0,
    "used": "https://news.google.com/rss/search?q=Cincinnati+(%22city+council%22+OR+%22city+hall%22+OR+%22city+manager%22+OR+mayor)+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": []
+  },
+  {
+   "source": "City of Cincinnati",
+   "ok": true,
+   "items": 1,
+   "junk_dropped": 0,
+   "used": "https://news.google.com/rss/search?q=site:cincinnati-oh.gov+when:2d&hl=en-US&gl=US&ceid=US:en",
    "used_fallback": false,
    "errors": []
   },
@@ -555,6 +1136,7 @@
    "source": "Ohio Capital Journal",
    "ok": true,
    "items": 2,
+   "junk_dropped": 0,
    "used": "https://ohiocapitaljournal.com/feed/",
    "used_fallback": false,
    "errors": []
@@ -563,6 +1145,7 @@
    "source": "Ohio legislation sweep",
    "ok": true,
    "items": 1,
+   "junk_dropped": 0,
    "used": "https://news.google.com/rss/search?q=Ohio+(lawmakers+OR+Statehouse+OR+%22House+Bill%22+OR+%22Senate+Bill%22)+(cities+OR+%22local+governments%22+OR+municipalities+OR+%22home+rule%22)+when:2d&hl=en-US&gl=US&ceid=US:en",
    "used_fallback": false,
    "errors": []
@@ -571,9 +1154,348 @@
    "source": "Federal local-gov sweep",
    "ok": true,
    "items": 2,
+   "junk_dropped": 0,
    "used": "https://news.google.com/rss/search?q=(Congress+OR+%22federal+funding%22+OR+%22executive+order%22)+(%22local+governments%22+OR+cities+OR+mayors)+when:1d&hl=en-US&gl=US&ceid=US:en",
    "used_fallback": false,
    "errors": []
+  },
+  {
+   "source": "City meetings (Legistar)",
+   "ok": true,
+   "items": 2,
+   "error": null
   }
- ]
+ ],
+ "memory": {
+  "seen": [
+   {
+    "tok": [
+     "break",
+     "close",
+     "commute",
+     "crew",
+     "detour",
+     "downtown",
+     "during",
+     "evening",
+     "main",
+     "place",
+     "scene",
+     "several",
+     "shut",
+     "street",
+     "water"
+    ],
+    "first_seen": "2026-10-28T19:59:40+00:00",
+    "title": "Water main break closes several downtown streets"
+   },
+   {
+    "tok": [
+     "approval",
+     "brent",
+     "bridge",
+     "clear",
+     "companion",
+     "federal",
+     "final",
+     "get",
+     "hurdle",
+     "sign",
+     "span",
+     "spence",
+     "way"
+    ],
+    "first_seen": "2026-10-28T19:22:14+00:00",
+    "title": "Brent Spence companion bridge clears final federal hurdle"
+   },
+   {
+    "tok": [
+     "adjustment",
+     "budget",
+     "committee",
+     "council",
+     "mid",
+     "spending",
+     "take",
+     "weigh",
+     "year"
+    ],
+    "first_seen": "2026-10-28T19:32:14+00:00",
+    "title": "Council budget committee takes up mid-year spending adjustments"
+   },
+   {
+    "tok": [
+     "city",
+     "long",
+     "manager",
+     "outline",
+     "permit",
+     "plan",
+     "review",
+     "sheryl",
+     "speed"
+    ],
+    "first_seen": "2026-10-28T19:57:14+00:00",
+    "title": "City Manager Sheryl Long outlines plan to speed up permit reviews"
+   },
+   {
+    "tok": [
+     "community",
+     "dispensary",
+     "hear",
+     "marijuana",
+     "potential",
+     "proposal",
+     "state",
+     "tri"
+    ],
+    "first_seen": "2026-10-28T19:47:14+00:00",
+    "title": "Tri-State community to hear proposals for 3 potential marijuana dispensaries"
+   },
+   {
+    "tok": [
+     "council",
+     "member",
+     "norwood",
+     "resign",
+     "year"
+    ],
+    "first_seen": "2026-10-28T19:42:14+00:00",
+    "title": "Norwood council member resigns after six years"
+   },
+   {
+    "tok": [
+     "advance",
+     "bill",
+     "city",
+     "government",
+     "home",
+     "house",
+     "lawmaker",
+     "limit",
+     "limiting",
+     "rental",
+     "rule",
+     "short",
+     "term"
+    ],
+    "first_seen": "2026-10-28T18:22:14+00:00",
+    "title": "Ohio House bill would limit cities' home rule over short-term rentals"
+   },
+   {
+    "tok": [
+     "break",
+     "covington",
+     "investigate",
+     "mainstrasse",
+     "police",
+     "shop"
+    ],
+    "first_seen": "2026-10-28T19:12:14+00:00",
+    "title": "Covington police investigate break-in at Mainstrasse shop"
+   },
+   {
+    "tok": [
+     "add",
+     "evening",
+     "holiday",
+     "park",
+     "programming",
+     "riverfront"
+    ],
+    "first_seen": "2026-10-28T18:32:14+00:00",
+    "title": "Riverfront park adds evening programming for the holidays"
+   },
+   {
+    "tok": [
+     "announce",
+     "center",
+     "city",
+     "nov",
+     "open",
+     "warming",
+     "winter"
+    ],
+    "first_seen": "2026-10-28T18:32:14+00:00",
+    "title": "City announces winter warming centers open Nov. 15"
+   },
+   {
+    "tok": [
+     "bring",
+     "cold",
+     "expected",
+     "frost",
+     "season",
+     "snap",
+     "state",
+     "tri"
+    ],
+    "first_seen": "2026-10-28T18:02:14+00:00",
+    "title": "Cold snap expected to bring first frost of the season to the Tri-State"
+   },
+   {
+    "tok": [
+     "board",
+     "bus",
+     "feedback",
+     "metro",
+     "redesign",
+     "review",
+     "route"
+    ],
+    "first_seen": "2026-10-28T17:12:14+00:00",
+    "title": "Metro board reviews feedback on bus route redesign"
+   },
+   {
+    "tok": [
+     "2027",
+     "get",
+     "holder",
+     "look",
+     "schedule",
+     "season",
+     "ticket"
+    ],
+    "first_seen": "2026-10-28T16:52:14+00:00",
+    "title": "FC Cincinnati season-ticket holders get first look at 2027 schedule"
+   },
+   {
+    "tok": [
+     "commission",
+     "end",
+     "hearing",
+     "housing",
+     "plan",
+     "planning",
+     "schedule",
+     "west"
+    ],
+    "first_seen": "2026-10-28T16:12:14+00:00",
+    "title": "Planning Commission schedules hearing on West End housing plan"
+   },
+   {
+    "tok": [
+     "branch",
+     "library",
+     "long",
+     "northside",
+     "renovation",
+     "reopen",
+     "year"
+    ],
+    "first_seen": "2026-10-28T15:32:14+00:00",
+    "title": "Library branch reopens in Northside after year-long renovation"
+   },
+   {
+    "tok": [
+     "city",
+     "council",
+     "curfew",
+     "member",
+     "number",
+     "react"
+    ],
+    "first_seen": "2026-10-28T15:32:14+00:00",
+    "title": "Cincinnati City Council members react to new curfew numbers"
+   },
+   {
+    "tok": [
+     "commissioner",
+     "county",
+     "discuss",
+     "hamilton",
+     "levy",
+     "renewal",
+     "timeline"
+    ],
+    "first_seen": "2026-10-28T15:02:14+00:00",
+    "title": "Hamilton County commissioners discuss levy renewal timeline"
+   },
+   {
+    "tok": [
+     "bengal",
+     "matchup",
+     "prepare",
+     "sunday"
+    ],
+    "first_seen": "2026-10-28T19:02:14+00:00",
+    "title": "Bengals prepare for Sunday matchup"
+   },
+   {
+    "tok": [
+     "coffee",
+     "historic",
+     "northside",
+     "shop",
+     "storefront",
+     "take"
+    ],
+    "first_seen": "2026-10-28T13:52:14+00:00",
+    "title": "New coffee shop takes over historic storefront in Northside"
+   },
+   {
+    "tok": [
+     "city",
+     "congress",
+     "cut",
+     "federal",
+     "grant",
+     "housing",
+     "use",
+     "weigh"
+    ],
+    "first_seen": "2026-10-28T18:02:14+00:00",
+    "title": "Congress weighs cuts to federal grants that cities use for housing"
+   },
+   {
+    "tok": [
+     "change",
+     "corridor",
+     "council",
+     "neighborhood",
+     "transit",
+     "weigh",
+     "zoning"
+    ],
+    "first_seen": "2026-10-28T12:12:14+00:00",
+    "title": "Neighborhood councils weigh in on transit-corridor zoning changes"
+   }
+  ],
+  "lead": {
+   "city": {
+    "tok": [
+     "adjustment",
+     "budget",
+     "committee",
+     "council",
+     "mid",
+     "spending",
+     "take",
+     "weigh",
+     "year"
+    ],
+    "id": "council-budget-committee-takes-up-mid-year-spending-adjustme"
+   },
+   "general": {
+    "tok": [
+     "break",
+     "close",
+     "commute",
+     "crew",
+     "detour",
+     "downtown",
+     "during",
+     "evening",
+     "main",
+     "place",
+     "scene",
+     "several",
+     "shut",
+     "street",
+     "water"
+    ],
+    "id": "water-main-break-closes-several-downtown-streets"
+   }
+  }
+ }
 }

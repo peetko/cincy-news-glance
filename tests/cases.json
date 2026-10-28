@@ -1,0 +1,75 @@
+{
+  "_readme": "Real headlines and what the screen should do with them. GitHub checks every one before publishing; if any fail, the screen keeps the last good version. When the screen gets something wrong, add it here with the right answer. 'expect' can include: junk (true = dropped), city (true = counts for City Hall), label (the CITY HALL · label), place (yes / other / maybe).",
+
+  "headlines": [
+    {"note": "Hamilton, Ohio council — caught Oct 28",
+     "title": "Tri-State community to hear proposals for 3 potential marijuana dispensaries",
+     "summary": "City council will hear proposals for the three potential developments on Wednesday.",
+     "link": "https://local12.com/news/local/hamilton-ohio-city-council-marijuana-dispensaries-proposals",
+     "outlet": "Local 12", "expect": {"city": false, "place": "other"}},
+
+    {"note": "Another town's council",
+     "title": "Norwood council member resigns after six years", "outlet": "WLWT",
+     "expect": {"city": false, "place": "other"}},
+
+    {"note": "Obituary that showed up as a headline — caught Oct 28",
+     "title": "Michael Elmer Bouchonnet", "outlet": "Enquirer", "google": true,
+     "expect": {"junk": true}},
+
+    {"title": "Jane Doe obituary: longtime teacher remembered", "outlet": "Enquirer", "google": true,
+     "expect": {"junk": true}},
+
+    {"note": "Title-case headline that starts with a name must survive",
+     "title": "Seth Walsh Resigns", "outlet": "Enquirer", "google": true,
+     "expect": {"junk": false, "city": true, "label": "Council"}},
+
+    {"title": "City Manager Sheryl Long outlines plan to speed up permit reviews", "outlet": "Enquirer", "google": true,
+     "expect": {"city": true, "label": "City Manager"}},
+
+    {"title": "Cincinnati City Council approves mid-year budget adjustments", "outlet": "WVXU",
+     "expect": {"city": true, "label": "Council"}},
+
+    {"title": "Mayor Pureval calls for review of downtown curfew", "outlet": "WCPO",
+     "expect": {"city": true, "label": "Mayor"}},
+
+    {"title": "Covington police investigate break-in at Mainstrasse shop", "outlet": "WCPO",
+     "expect": {"city": false}},
+
+    {"title": "Cincinnati police chief announces new violence reduction plan", "outlet": "FOX19",
+     "expect": {"city": true}},
+
+    {"title": "Buildings and Inspections condemns Westwood apartment complex", "outlet": "WLWT",
+     "expect": {"city": true, "label": "Buildings & Inspections"}},
+
+    {"title": "Water main break closes several downtown Cincinnati streets", "outlet": "WLWT",
+     "expect": {"city": true, "label": "Water & Sewers"}},
+
+    {"title": "Ohio House bill would limit cities' home rule over short-term rentals", "outlet": "Ohio Capital Journal",
+     "expect": {"city": true, "label": "State law"}},
+
+    {"note": "Street named after a suburb is not another town",
+     "title": "Crash closes Reading Road in Avondale", "outlet": "WCPO",
+     "expect": {"city": false, "place": "yes"}},
+
+    {"title": "Hamilton County commissioners approve new jail contract", "outlet": "WVXU",
+     "expect": {"city": false}},
+
+    {"title": "Bengals hold off Steelers 24-17", "outlet": "WLWT",
+     "expect": {"city": false}},
+
+    {"note": "Council word only in one outlet's summary must not make a multi-outlet story City news",
+     "group": [
+       {"title": "Brent Spence companion bridge gets final federal sign-off", "outlet": "WCPO", "summary": ""},
+       {"title": "Final federal approval clears way for Brent Spence companion bridge", "outlet": "WLWT",
+        "summary": "Cincinnati council members have long pushed for the project."}
+     ],
+     "expect": {"city": false}}
+  ],
+
+  "same_story": [
+    {"a": "Water main break closes several downtown streets", "b": "Downtown water main break closes streets, detours in place", "expect": true},
+    {"a": "WATCH: Water main break shuts down several streets downtown", "b": "Water main break closes several downtown streets | WCPO 9 Cincinnati", "expect": true},
+    {"a": "Water main break closes several downtown streets", "b": "Brent Spence companion bridge gets final federal sign-off", "expect": false},
+    {"a": "Council budget committee takes up mid-year spending adjustments", "b": "Planning Commission schedules hearing on West End housing plan", "expect": false}
+  ]
+}

@@ -7,10 +7,14 @@ It costs nothing to run: GitHub collects the headlines on a schedule and hosts t
 ## How it works (the 30-second version)
 
 ```
- news sites' RSS feeds ─┐
- Google News searches ──┼─►  scripts/collect.py  ─►  site/news.json  ─►  site/index.html
- weather.gov (free) ────┘    (runs on GitHub          (one small          (the page on your
-                              every 15 minutes)        data file)          laptop reads it)
+ news sites' RSS feeds ──┐
+ Google News searches ───┤                           tests/cases.json
+ City meeting calendar ──┼─►  scripts/collect.py  ◄── checked first by
+ weather.gov (free) ─────┤    (runs on GitHub          scripts/check.py
+ last run's news.json ───┘     every 15 minutes)
+                                     │
+                                     ▼
+                              site/news.json  ─►  site/index.html (the page on your laptop)
 ```
 
 - **RSS feed**: a list of a site's latest headlines that's meant for programs to read. Most local outlets publish one.
@@ -26,6 +30,13 @@ It costs nothing to run: GitHub collects the headlines on a schedule and hosts t
 4. Check what worked: open `…/cincy-news-glance/news.json` and scroll to `sources_status`. Each outlet shows `ok: true/false` and whether it fell back to Google News.
 
 Preview without live data: add `?sample=calm` or `?sample=dev` to the page address.
+
+## Using the screen
+
+- **The river:** hover to pause it. Drag it sideways or scroll it (mouse wheel or a two-finger swipe) to browse every story; a quick flick keeps it gliding. Click a headline to open it.
+- **Today at City Hall:** under the lead story, today's council and committee meetings from the City's Legistar calendar, linked to the agenda when one is posted. If nothing is scheduled today, it shows the next meeting day.
+- **Breaking news:** when a story is developing, City Hall's clock and the story's dot pulse coral. Click the "DEVELOPING" label to mark it seen: the pulsing stops and the story stays in the lead.
+- **Weather:** if the weather service is down, the screen keeps the last reading and says "as of 2:15 PM".
 
 ## The City Hall / Biggest switch
 
@@ -47,10 +58,20 @@ Edit it right in GitHub: open the file, click the pencil icon, then **Commit cha
 | `local_terms` | Words that make a story count as local. Stories with none of them are dropped. |
 | `cincinnati_anchors` | Proof a story is about the City of Cincinnati: "Cincinnati", its neighborhoods, City officials' names, CPD, GCWW… Words like "city council" only count fully when one of these appears (in the text or the story's web address). |
 | `other_municipalities` | Other cities and towns (Hamilton, Norwood, Covington…). A council or police story naming one of these, and not Cincinnati, gets no City credit. Streets like Reading Road or Colerain Avenue don't count as other towns. |
+| `site_url` | The live page's address, used to read last run's results. |
+| `legistar` | The City's meeting calendar. Committee names from it also count as proof a story is about Cincinnati. |
 | `exclude` | Dropped entirely: obituaries, death notices, and Google News results whose headline is only a person's name. |
 | `downweight_terms` | Topics to push down (sports, by default). |
 | `breaking_terms` | Words that help flag breaking news. |
 | `thresholds` | `big_story_outlets` (3) = when a story moves up; `developing_outlets` (5) = when the screen gets your attention. |
+
+## When it picks something wrong
+
+1. Open the page with `?debug=1` at the end of the address (`…/cincy-news-glance/?debug=1`). A panel lists every story with its points, the exact words that matched (and whether they were in the headline or only the summary), which place it thinks the story is about and why, and which headlines were grouped together. It also shows each source's status.
+2. Fix the cause in `config.json`: add a town to `other_municipalities`, a name to `cincinnati_anchors`, a word to `exclude`, and so on.
+3. Add the headline to `tests/cases.json` with the right answer, so it can never come back.
+
+**The safety net:** before every publish, GitHub runs `scripts/check.py`, which checks every case in `tests/cases.json`. If an edit breaks one, the run stops, the screen keeps its last good version, and GitHub emails you about the failed run. Click into the failed run on the Actions tab to see which case failed and why.
 
 ## How a story is scored
 
@@ -58,7 +79,9 @@ Edit it right in GitHub: open the file, click the pencil icon, then **Commit cha
 - **More newsrooms covering it** counts the most. That's the stand-in for "most read", which feeds don't report.
 - **City relevance** is scored separately. The City Manager counts most, then the mayor and council, city staff, and departments. State or federal bills count only when they mention cities, local government or home rule. Police, mayors and councils from other towns barely count.
 - **Age**: a story loses about half its weight every 4 hours.
-- **Developing** = 5+ newsrooms within 3 hours, or 3+ newsrooms on a breaking-type story (fire, closures, outage…).
+- **Headline vs. summary:** words in the headline count fully; words only in the summary count half. If several outlets covered a story and only one mentions a City term, only in its summary, the story gets no City credit.
+- **Developing** = 5+ of our own newsrooms within 3 hours, or 3+ on a breaking-type story (fire, closures, outage…). Copies of a story through Google News (Yahoo, MSN…) and City press releases don't count toward the alert.
+- **Memory:** each run reads the previous `news.json` from the live site. A story keeps the time it was *first* seen, so it can't come back as "NEW". The lead only changes when a new story beats it by 25% (`lead_switch_margin`), so the screen doesn't flip back and forth between two close stories.
 
 ## Laptop tips
 
