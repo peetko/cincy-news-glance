@@ -105,11 +105,11 @@
     {"label": "Police", "weight": 3, "terms": ["Cincinnati Police", "Cincinnati police", "CPD", "police department", "police officer", "officers"], "requires_any": ["Cincinnati", "CPD", "city"]},
     {"label": "Fire", "weight": 3, "terms": ["Cincinnati Fire", "fire department", "firefighters", "CFD"], "requires_any": ["Cincinnati", "CFD", "city"]},
     {"label": "Buildings & Inspections", "weight": 3, "terms": ["Buildings & Inspections", "Buildings and Inspections", "building inspectors", "code enforcement", "building permit", "condemned"]},
-    {"label": "Transportation", "weight": 3, "terms": ["DOTE", "Transportation and Engineering", "Transportation & Engineering", "streetcar", "Connector", "road work", "repaving", "Vision Zero"]},
+    {"label": "Transportation", "weight": 3, "terms": ["Fort Washington Way", "DOTE", "Transportation and Engineering", "Transportation & Engineering", "streetcar", "Connector", "road work", "repaving", "Vision Zero"]},
     {"label": "Water & Sewers", "weight": 3, "terms": ["Water Works", "GCWW", "MSD", "Metropolitan Sewer", "Stormwater Management", "water main"]},
     {"label": "Parks & Rec", "weight": 2, "terms": ["Cincinnati Parks", "Park Board", "Recreation Commission", "rec center"]},
     {"label": "Health Dept", "weight": 3, "terms": ["Cincinnati Health Department", "health commissioner", "Board of Health"]},
-    {"label": "Planning & Development", "weight": 3, "terms": ["Planning Commission", "zoning", "Planning and Engagement", "Community and Economic Development", "DCED", "Connected Communities", "tax abatement", "TIF"]},
+    {"label": "Planning & Development", "weight": 4, "terms": ["3CDC", "Port Authority", "Planning Commission", "zoning", "Planning and Engagement", "Community and Economic Development", "DCED", "Connected Communities", "tax abatement", "TIF"]},
     {"label": "Public Services", "weight": 2, "terms": ["Public Services", "trash pickup", "snow removal", "potholes", "311"]},
     {"label": "Public Safety", "weight": 2, "terms": ["Emergency Communications Center", "911 center", "Citizen Complaint Authority", "Office of Performance and Data Analytics", "OPDA"]},
     {"label": "State law", "kind": "legislation", "weight": 4,
@@ -121,7 +121,7 @@
   ],
 
   "_places_readme": "City-relevance words like 'city council' or 'police chief' count fully only when a story names Cincinnati or something below; they count for nothing when it names another city instead.",
-  "cincinnati_anchors": ["Cincinnati", "Cincy", "Queen City", "CPD", "CFD", "GCWW", "MSD", "DOTE", "Pureval", "Sheryl Long", "Lemon Kearney", "Scotty Johnson", "Anna Albi", "Cramerding", "Ryan James", "Mark Jeffreys", "Evan Nolan", "Meeka Owens", "Seth Walsh", "Brazina", "Plum Street", "801 Plum", "Over-the-Rhine", "OTR", "West End", "Avondale", "Clifton", "Northside", "Westwood", "Price Hill", "Oakley", "Hyde Park", "Walnut Hills", "Madisonville", "Mount Auburn", "Mt. Auburn", "Camp Washington", "Evanston", "College Hill", "Bond Hill", "Roselawn", "Pleasant Ridge", "Mount Washington", "Mt. Washington", "Mount Adams", "Mt. Adams", "East End", "Linwood", "Kennedy Heights", "Sayler Park", "Corryville", "Pendleton", "Queensgate", "Mount Airy", "Mt. Airy", "Carthage", "Hartwell", "Winton Hills", "Columbia Tusculum", "Fairmount", "Sedamsville", "Riverside", "Spring Grove Village", "Paddock Hills", "North Avondale", "Mount Lookout", "Mt. Lookout", "East Walnut Hills", "Lower Price Hill", "English Woods", "Millvale"],
+  "cincinnati_anchors": ["Cincinnati", "Cincy", "Queen City", "CPD", "CFD", "GCWW", "MSD", "DOTE", "Pureval", "Sheryl Long", "Lemon Kearney", "Scotty Johnson", "Anna Albi", "Cramerding", "Ryan James", "Mark Jeffreys", "Evan Nolan", "Meeka Owens", "Seth Walsh", "Brazina", "Plum Street", "801 Plum", "Over-the-Rhine", "OTR", "West End", "Avondale", "Clifton", "Northside", "Westwood", "Price Hill", "Oakley", "Hyde Park", "Walnut Hills", "Madisonville", "Mount Auburn", "Mt. Auburn", "Camp Washington", "Evanston", "College Hill", "Bond Hill", "Roselawn", "Pleasant Ridge", "Mount Washington", "Mt. Washington", "Mount Adams", "Mt. Adams", "East End", "Linwood", "Kennedy Heights", "Sayler Park", "Corryville", "Pendleton", "Queensgate", "Mount Airy", "Mt. Airy", "Carthage", "Hartwell", "Winton Hills", "Columbia Tusculum", "Fairmount", "Sedamsville", "Riverside", "Spring Grove Village", "Paddock Hills", "North Avondale", "Mount Lookout", "Mt. Lookout", "East Walnut Hills", "Lower Price Hill", "English Woods", "Millvale", "Fort Washington Way", "Fountain Square", "Music Hall", "Washington Park", "Smale Riverfront Park", "Smale Park", "Sawyer Point", "Yeatman's Cove", "The Banks", "Union Terminal", "Findlay Market", "Eden Park", "Burnet Woods", "Ziegler Park", "Lytle Park", "Paycor Stadium", "Great American Ball Park", "TQL Stadium", "Duke Energy Convention Center", "Heritage Bank Center", "Carew Tower", "Roebling Bridge", "Roebling Suspension Bridge", "Central Parkway", "Mill Creek"],
   "other_municipalities": ["Hamilton", "Fairfield", "Middletown", "Oxford", "Lebanon", "Mason", "West Chester", "Liberty Township", "Blue Ash", "Norwood", "Cheviot", "Reading", "Sharonville", "Springdale", "Forest Park", "Montgomery", "Madeira", "Mariemont", "Indian Hill", "Deer Park", "Silverton", "Wyoming", "Lockland", "Loveland", "Milford", "Harrison", "Delhi", "Green Township", "Anderson Township", "Colerain", "Springfield Township", "Union Township", "Batavia", "Amelia", "Covington", "Newport", "Florence", "Erlanger", "Fort Thomas", "Fort Mitchell", "Bellevue", "Dayton, Ky", "Independence", "Highland Heights", "Lawrenceburg", "Dayton", "Columbus", "Cleveland", "Louisville", "Lexington", "Indianapolis", "Springboro", "Monroe", "Trenton", "Kettering", "Beavercreek", "Delhi Township", "Colerain Township", "Sycamore Township", "Symmes Township", "Miami Township", "Whitewater Township", "Crosby Township", "Harrison Township", "Columbia Township", "Springfield Township", "St. Bernard", "Elmwood Place", "Arlington Heights", "Golf Manor", "Amberley Village", "Woodlawn", "Evendale", "Glendale", "Greenhills", "North College Hill", "Mount Healthy", "Mt. Healthy", "Addyston", "Cleves", "North Bend", "Terrace Park", "Newtown", "Fairfax", "Lincoln Heights", "Fort Wright", "Ludlow", "Bromley", "Park Hills", "Villa Hills", "Crescent Springs", "Edgewood", "Taylor Mill", "Alexandria", "Cold Spring", "Southgate", "Wilder", "Burlington", "Hebron", "Walton", "Butler County", "Warren County", "Clermont County", "Boone County", "Kenton County", "Campbell County", "Brown County", "Dearborn County"],
 
   "ohio_terms": ["Ohio", "Ohioans", "Statehouse", "Columbus", "DeWine"],
@@ -132,7 +132,8 @@
   "exclude": {
     "title_terms": ["obituary", "obituaries", "death notice", "death notices", "passed away", "celebration of life", "in memoriam", "funeral home", "legacy.com"],
     "url_terms": ["/obituaries", "obituaries.", "legacy.com", "/obits/"],
-    "drop_name_only_titles": true
+    "drop_name_only_titles": true,
+    "drop_press_releases": true
   },
 
   "downweight_terms": ["Bengals", "Reds", "Bearcats", "Musketeers", "high school football", "lottery", "recipe"],
@@ -141,6 +142,8 @@
 
   "thresholds": {
     "city_min_score": 3,
+    "_summary_weight_readme": "How much a City word counts when it is only in the summary, not the headline (1.0 = same as headline).",
+    "summary_weight": 0.8,
     "lead_switch_margin": 1.25,
     "lookback_hours": 18,
     "big_story_outlets": 3,

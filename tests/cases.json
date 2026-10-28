@@ -25,6 +25,43 @@
     {"title": "Green Township trustees approve new fire station", "outlet": "WVXU",
      "expect": {"city": false, "place": "other"}},
 
+    {"note": "City/county officials reviewing a City project, only in the summary — missed Oct 28",
+     "title": "Proposal to cap Fort Washington Way moves one step closer to reality",
+     "summary": "The draft grant agreement with the U.S. Department of Transportation has now been received and is being reviewed by city and county officials.",
+     "link": "https://local12.com/news/local/proposal-cap-fort-washington-way-moves-one-step-closer-real",
+     "outlet": "Local 12", "expect": {"city": true}},
+
+    {"note": "TIF money for a Cincinnati park — missed Oct 28",
+     "title": "Park in Cincinnati could be in line for nearly $12M makeover",
+     "summary": "3CDC is seeking almost $6 million from the neighborhood's tax increment financing, or TIF fund.",
+     "outlet": "Local 12", "expect": {"city": true, "label": "Planning & Development"}},
+
+    {"note": "Wire press releases on cincinnati.com — caught Oct 28",
+     "title": "Viirtue Now Live in OpenAI’s Plugin Marketplace for ChatGPT and Codex", "outlet": "Enquirer", "google": true,
+     "expect": {"junk": true}},
+
+    {"title": "ANTIGUA AND BARBUDA SHOWCASE MICE CAPABILITIES AND TOURISM OFFERINGS AS HOST OF COMMONWEALTH HEADS OF GOVERNMENT MEETING",
+     "outlet": "Enquirer", "google": true, "expect": {"junk": true}},
+
+    {"title": "BoardCerts Expands Nursing Board Certification Prep to 30 Specialty Exams, Opens Group Access for Hospitals",
+     "outlet": "Enquirer", "google": true, "expect": {"junk": true}},
+
+    {"note": "A real Enquirer headline must survive the press-release filter",
+     "title": "Cincinnati consulting firm triples its footprint as it targets 80 new hires by 2029", "outlet": "Enquirer", "google": true,
+     "expect": {"junk": false}},
+
+    {"title": "Council budget committee takes up mid-year spending adjustments", "outlet": "Enquirer", "google": true,
+     "expect": {"junk": false}},
+
+    {"note": "Not City: a regional sanitation district in Kentucky",
+     "title": "Sewage cleanup continues in local creek after damaged pipe releases wastewater",
+     "summary": "SD1 said some wastewater continued through the pipe while an unknown amount entered the creek.",
+     "outlet": "Local 12", "expect": {"city": false}},
+
+    {"title": "Full-service pizza restaurant opening inside Rhinegeist Brewery",
+     "summary": "A new, full-service pizza restaurant is opening inside of one of Cincinnati’s most popular breweries.",
+     "outlet": "WLWT", "expect": {"city": false}},
+
     {"note": "Another town's council",
      "title": "Norwood council member resigns after six years", "outlet": "WLWT",
      "expect": {"city": false, "place": "other"}},

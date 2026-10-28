@@ -12,7 +12,7 @@ on:
     branches: [main]        # republish whenever you edit a file
 
 permissions:
-  contents: read
+  contents: write           # lets the run save a copy of news.json to the "data" branch
   pages: write
   id-token: write
   actions: write            # lets the keep-alive step below re-enable the schedule
@@ -50,6 +50,19 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/update.yml/enable"
+
+      # A copy of each run's results on a separate "data" branch (one commit, replaced each time),
+      # so problems can be looked at later without digging through the live site.
+      - name: Save a copy of the results
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/data && cp site/news.json /tmp/data/news.json && cd /tmp/data
+          git init -q -b data
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" add news.json
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -qm "Latest results"
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" data
 
       - uses: actions/configure-pages@v5
 

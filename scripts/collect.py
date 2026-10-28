@@ -130,6 +130,33 @@ NOT_NAMES = re.compile(r"\b(Cincinnati|Bengals|Reds|FC|Bearcats|Musketeers|Counc
                        r"Park|Parks|Street|Road|Bridge|School|Schools|Police|Fire|Day|Week|Weekend|News|Update|Live)\b")
 
 
+_LOCAL_CACHE = {}
+
+
+def looks_like_press_release(item, cfg):
+    """
+    cincinnati.com also hosts wire press releases ("Viirtue Now Live in OpenAI's Plugin Marketplace…").
+    They come through the Google News search, never name a local place, and Capitalize Every Word
+    or SHOUT. The Enquirer's own headlines are sentence case.
+    """
+    if not item.get("_google"):
+        return False
+    key = id(cfg)
+    if key not in _LOCAL_CACHE:
+        terms = list(cfg.get("local_terms", [])) + list(cfg.get("cincinnati_anchors", []))
+        _LOCAL_CACHE[key] = [term_regex(t) for t in terms]
+    title = item["title"]
+    if first_hit(_LOCAL_CACHE[key], title):
+        return False
+    words = [w for w in re.findall(r"[A-Za-z][A-Za-z'’.-]*", title) if len(w) > 3]
+    if len(words) < 4:
+        return False
+    if title.upper() == title:
+        return True
+    capitalized = sum(1 for w in words if w[0].isupper())
+    return capitalized / len(words) >= 0.8
+
+
 def is_junk(item, cfg):
     ex = cfg.get("exclude", {})
     title, link = item["title"], item["link"].lower()
@@ -137,6 +164,8 @@ def is_junk(item, cfg):
     if any(t.lower() in low for t in ex.get("title_terms", [])):
         return True
     if any(t.lower() in link for t in ex.get("url_terms", [])):
+        return True
+    if cfg.get("exclude", {}).get("drop_press_releases", True) and looks_like_press_release(item, cfg):
         return True
     # Name-only check: only for Google News results (where obituaries slip in), and never
     # when the "name" is a City official or a Cincinnati place.
@@ -368,6 +397,7 @@ class Rules:
     def __init__(self, cfg, extra_anchors=()):
         self.cfg = cfg
         self.th = cfg["thresholds"]
+        self.summary_weight = self.th.get("summary_weight", 0.8)
         self.groups = [{
             "label": g["label"],
             "kind": g.get("kind", "city"),
@@ -455,7 +485,7 @@ def item_matches(item, rules):
 def city_relevance(items, rules, is_local, is_ohio, place):
     """
     Score how much a story matters for City work.
-      - headline matches count fully, summary-only matches count half
+      - headline matches count fully, summary-only matches count a bit less (summary_weight)
       - generic words count fully only when the story is clearly about Cincinnati
       - in a story several outlets covered, a lone summary mention doesn't count
     """
@@ -468,7 +498,7 @@ def city_relevance(items, rules, is_local, is_ohio, place):
     best = {}       # group label -> (weight, term, where, outlet)
     for it, found in matched_items:
         for g, term, where in found:
-            w = g["weight"] * (0.5 if where == "summary" else 1.0)
+            w = g["weight"] * (rules.summary_weight if where == "summary" else 1.0)
             if g["kind"] == "legislation":
                 if not (is_local or is_ohio or g["national"]):
                     w *= 0.6

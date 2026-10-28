@@ -460,7 +460,7 @@ function wrapOffset(L) {
 }
 
 function setupLane(wrap, lane) {
-  const L = { wrap, lane, offset: 0, half: 0, hover: false, drag: null, vel: 0, moved: 0 };
+  const L = { wrap, lane, offset: 0, half: 0, hover: false, press: null, drag: false, vel: 0, moved: 0 };
   wrap.addEventListener('pointerenter', () => { L.hover = true; });
   wrap.addEventListener('pointerleave', () => { L.hover = false; });
   wrap.addEventListener('wheel', (e) => {
@@ -468,25 +468,33 @@ function setupLane(wrap, lane) {
     const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
     L.offset += d / SCALE; L.vel = 0; wrapOffset(L);
   }, { passive: false });
+  // Press doesn't grab anything yet, so a plain click still opens the story.
+  // Only once the pointer has moved a few pixels does it become a drag.
   wrap.addEventListener('pointerdown', (e) => {
     if (e.button !== 0) return;
-    L.drag = { x: e.clientX, t: performance.now() }; L.moved = 0; L.vel = 0;
-    wrap.setPointerCapture(e.pointerId);
+    L.press = { x: e.clientX, t: performance.now(), id: e.pointerId }; L.moved = 0; L.vel = 0;
   });
   wrap.addEventListener('pointermove', (e) => {
-    if (!L.drag) return;
-    const dx = (e.clientX - L.drag.x) / SCALE;
+    if (!L.press) return;
+    const dx = (e.clientX - L.press.x) / SCALE;
     const now = performance.now();
-    L.offset -= dx; L.moved += Math.abs(dx);
-    L.vel = -dx / Math.max((now - L.drag.t) / 1000, 0.008);
-    L.drag = { x: e.clientX, t: now };
-    if (L.moved > 6) wrap.classList.add('dragging');
-    wrapOffset(L);
+    L.moved += Math.abs(dx);
+    if (!L.drag && L.moved > 6) {
+      L.drag = true;
+      wrap.classList.add('dragging');
+      try { wrap.setPointerCapture(L.press.id); } catch (err) {}
+    }
+    if (L.drag) {
+      L.offset -= dx;
+      L.vel = -dx / Math.max((now - L.press.t) / 1000, 0.008);
+      wrapOffset(L);
+    }
+    L.press.x = e.clientX; L.press.t = now;
   });
-  const end = () => { if (!L.drag) return; L.drag = null; wrap.classList.remove('dragging'); };
+  const end = () => { L.press = null; if (L.drag) { L.drag = false; wrap.classList.remove('dragging'); } };
   wrap.addEventListener('pointerup', end);
   wrap.addEventListener('pointercancel', end);
-  // A drag shouldn't also open the story under the pointer.
+  // After a real drag, swallow the click so letting go doesn't open a story.
   wrap.addEventListener('click', (e) => { if (L.moved > 6) { e.preventDefault(); e.stopPropagation(); } }, true);
   return L;
 }
