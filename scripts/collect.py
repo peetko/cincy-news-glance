@@ -20,6 +20,7 @@ import sys
 import time
 import html
 import urllib.request
+from urllib.parse import urlparse
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -101,6 +102,32 @@ def canonical_source(raw, alias_pairs, default):
     return raw.strip() if raw else default
 
 
+# ---------------------------------------------------------------- junk filter
+
+# "Michael Elmer Bouchonnet", "Mary Ann (Smith) Jones", "Robert 'Bob' Lee Jr." — a bare name is an obituary.
+NAME_WORD = r"(?:[A-Z][a-zA-Z'’.-]+|[A-Z]\.|\"[^\"]+\"|'[^']+'|\([^)]+\)|Jr\.?|Sr\.?|II|III|IV)"
+NAME_ONLY = re.compile(rf"^{NAME_WORD}(?:,?\s+{NAME_WORD}){{1,5}}$")
+NOT_NAMES = re.compile(r"\b(Cincinnati|Bengals|Reds|FC|Bearcats|Musketeers|Council|County|City|Ohio|Kentucky|"
+                       r"Park|Parks|Street|Road|Bridge|School|Schools|Police|Fire|Day|Week|Weekend|News|Update|Live)\b")
+
+
+def is_junk(item, cfg):
+    ex = cfg.get("exclude", {})
+    title, link = item["title"], item["link"].lower()
+    low = (title + " " + item["summary"]).lower()
+    if any(t.lower() in low for t in ex.get("title_terms", [])):
+        return True
+    if any(t.lower() in link for t in ex.get("url_terms", [])):
+        return True
+    # Name-only check: only for Google News results (where obituaries slip in), and never
+    # when the "name" is a City official or a Cincinnati place.
+    if (ex.get("drop_name_only_titles", True) and item.get("_google")
+            and NAME_ONLY.match(title) and not NOT_NAMES.search(title)
+            and not any(a.lower() in title.lower() for a in cfg.get("cincinnati_anchors", []))):
+        return True
+    return False
+
+
 # ---------------------------------------------------------------- feeds → items
 
 def parse_feed(data, source_name, is_google, alias_pairs, now):
@@ -129,7 +156,8 @@ def parse_feed(data, source_name, is_google, alias_pairs, now):
             "title": title,
             "link": e.get("link", ""),
             "outlet": outlet,
-            "summary": clean_text(e.get("summary", ""))[:280],
+            "summary": "" if is_google else clean_text(e.get("summary", ""))[:280],
+            "_google": is_google,
             "published": published,
         })
     return items
@@ -147,6 +175,7 @@ def collect_items(cfg, now):
             try:
                 data = fetch(url)
                 items = parse_feed(data, src["name"], "news.google.com" in url, alias_pairs, now)
+                items = [i for i in items if not is_junk(i, cfg)]
                 if items:
                     if src.get("max_items"):
                         items = sorted(items, key=lambda i: i["published"], reverse=True)[: src["max_items"]]
@@ -213,8 +242,32 @@ def compile_relevance(cfg):
     return groups
 
 
-def city_relevance(text, groups, is_local, is_ohio):
+# Outlet names contain "Cincinnati"; strip them before asking "is this story about Cincinnati?"
+OUTLET_NAMES = re.compile(r"Cincinnati Enquirer|WCPO 9 Cincinnati|WCPO Cincinnati|cincinnati\.com|"
+                          r"Cincinnati Public Radio|Signal Cincinnati|Cincinnati Business Courier|CityBeat", re.I)
+
+
+def place_check(text, anchors, others, url_words=""):
+    """
+    Is the story clearly about the City of Cincinnati?
+      'yes'   - names Cincinnati, a Cincinnati neighborhood, or a City official/department
+      'other' - names a different city (Hamilton, Covington, Norwood...) and not Cincinnati
+      'maybe' - names no place at all ("city council will hear proposals...")
+    """
+    def hit(patterns, s, ignore_case=False):
+        return any((re.compile(rx.pattern, re.I) if ignore_case else rx).search(s) for rx in patterns)
+    if hit(anchors, text) or hit(anchors, url_words, ignore_case=True):
+        return "yes"
+    if hit(others, text) or hit(others, url_words, ignore_case=True):
+        return "other"
+    return "maybe"
+
+
+def city_relevance(text, groups, is_local, is_ohio, place="yes"):
     """How relevant a story is to working at the City, and why (e.g. 'City Manager', 'Police')."""
+    # Generic words like "city council" or "police chief" only count fully when the story is
+    # clearly about Cincinnati; they count for nothing when it's clearly another city.
+    place_factor = {"yes": 1.0, "maybe": 0.4, "other": 0.0}[place]
     score, reasons = 0.0, []
     for g in groups:
         if not any(rx.search(text) for rx in g["terms"]):
@@ -226,8 +279,12 @@ def city_relevance(text, groups, is_local, is_ohio):
             # State/federal laws count when they touch local government; Ohio ones count most.
             if not (is_local or is_ohio or g["national"]):
                 w *= 0.6
-        elif not is_local:
-            w *= 0.25          # another city's mayor, council or police
+        else:
+            w *= place_factor
+            if not is_local:
+                w *= 0.25      # not even a Tri-State story
+        if w <= 0:
+            continue
         score += w
         reasons.append(g["label"])
     return min(score, 10.0), reasons
@@ -241,6 +298,12 @@ def score_clusters(clusters, cfg, now):
     down_terms = [term_regex(t) for t in cfg.get("downweight_terms", [])]
     breaking_terms = [term_regex(t) for t in cfg.get("breaking_terms", [])]
     local_outlets = {s["name"] for s in cfg["sources"] if not s.get("sweep") and not s.get("statewide")}
+    anchors = [term_regex(t) for t in cfg.get("cincinnati_anchors", ["Cincinnati"])]
+    # "Hamilton" the city, not "Hamilton County" (which includes Cincinnati), and not
+    # Cincinnati streets named after suburbs (Reading Road, Montgomery Road, Colerain Avenue...).
+    others = [re.compile(term_regex(t).pattern + r"(?!\s+(County|Township|Road|Rd|Avenue|Ave|Street|St|Pike|Boulevard|Blvd|Parkway))",
+                         term_regex(t).flags)
+              for t in cfg.get("other_municipalities", [])]
 
     stories = []
     for c in clusters:
@@ -249,10 +312,13 @@ def score_clusters(clusters, cfg, now):
         first = min(i["published"] for i in its)
         latest = max(i["published"] for i in its)
         text = " ".join(i["title"] + " " + i["summary"] for i in its)
+        # Story web addresses often name the place: local12.com/news/local/hamilton-ohio-...
+        url_words = " ".join(re.sub(r"[-_/.]+", " ", urlparse(i["link"]).path) for i in its if "news.google.com" not in i["link"])
+        place = place_check(OUTLET_NAMES.sub(" ", text), anchors, others, url_words)
 
         is_local = any(rx.search(text) for rx in local_terms) or any(o in local_outlets for o in outlets)
         is_ohio = any(rx.search(text) for rx in ohio_terms)
-        city_score, reasons = city_relevance(text, groups, is_local, is_ohio)
+        city_score, reasons = city_relevance(OUTLET_NAMES.sub(" ", text), groups, is_local, is_ohio, place)
         is_legislation = any(r in ("State law", "Federal") for r in reasons)
         is_city = city_score >= th.get("city_min_score", 3)
 
@@ -288,6 +354,7 @@ def score_clusters(clusters, cfg, now):
             "is_city": is_city,
             "city_reasons": reasons if is_city else [],
             "city_score": round(city_score, 2),
+            "place": place,
             "is_big": n >= th["big_story_outlets"],
             "is_new": (now - first) <= timedelta(minutes=th["new_minutes"]),
             "developing": developing,

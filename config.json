@@ -10,37 +10,37 @@
   "sources": [
     {
       "name": "Enquirer",
-      "feeds": ["https://news.google.com/rss/search?q=site:cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en"]
+      "feeds": ["https://news.google.com/rss/search?q=site:cincinnati.com+-obituary+-obituaries+-obituaries.cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en"]
     },
     {
       "name": "WCPO",
       "feeds": ["https://www.wcpo.com/news/local-news.rss", "https://www.wcpo.com/news.rss"],
-      "fallback": "https://news.google.com/rss/search?q=site:wcpo.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+      "fallback": "https://news.google.com/rss/search?q=site:wcpo.com+-obituary+-obituaries+-obituaries.cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "name": "WLWT",
       "feeds": ["https://www.wlwt.com/local-news-rss", "https://www.wlwt.com/topstories-rss"],
-      "fallback": "https://news.google.com/rss/search?q=site:wlwt.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+      "fallback": "https://news.google.com/rss/search?q=site:wlwt.com+-obituary+-obituaries+-obituaries.cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "name": "FOX19",
       "feeds": ["https://www.fox19.com/arc/outboundfeeds/rss/category/news/?outputType=xml", "https://www.fox19.com/arc/outboundfeeds/rss/?outputType=xml"],
-      "fallback": "https://news.google.com/rss/search?q=site:fox19.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+      "fallback": "https://news.google.com/rss/search?q=site:fox19.com+-obituary+-obituaries+-obituaries.cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "name": "Local 12",
       "feeds": ["https://local12.com/news/local.rss"],
-      "fallback": "https://news.google.com/rss/search?q=site:local12.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+      "fallback": "https://news.google.com/rss/search?q=site:local12.com+-obituary+-obituaries+-obituaries.cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "name": "WVXU",
       "feeds": ["https://www.wvxu.org/local-news.rss", "https://www.wvxu.org/politics.rss"],
-      "fallback": "https://news.google.com/rss/search?q=site:wvxu.org+when:1d&hl=en-US&gl=US&ceid=US:en"
+      "fallback": "https://news.google.com/rss/search?q=site:wvxu.org+-obituary+-obituaries+-obituaries.cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "name": "Signal",
       "feeds": ["https://signalcincinnati.org/feed/"],
-      "fallback": "https://news.google.com/rss/search?q=site:signalcincinnati.org+when:2d&hl=en-US&gl=US&ceid=US:en"
+      "fallback": "https://news.google.com/rss/search?q=site:signalcincinnati.org+-obituary+-obituaries+-obituaries.cincinnati.com+when:2d&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "name": "City Hall sweep",
@@ -88,7 +88,7 @@
     {"label": "City Manager", "weight": 6, "terms": ["city manager", "Sheryl Long", "Sheryl M. M. Long", "Long administration"]},
     {"label": "City staff", "weight": 4, "terms": ["assistant city manager", "John Brazina", "Billy Weber", "Cathy Bailey", "budget director", "Andrew Dudas", "finance director", "Steve Webb", "city solicitor", "police chief", "fire chief", "city administration", "city employees", "city workers", "city staff", "city department"]},
     {"label": "Mayor", "weight": 5, "terms": ["Pureval", "Mayor Aftab", "Cincinnati mayor", "mayor's office"]},
-    {"label": "Council", "weight": 5, "terms": ["city council", "councilmember", "council member", "vice mayor", "Lemon Kearney", "Jan-Michele Lemon Kearney", "Scotty Johnson", "Anna Albi", "Jeff Cramerding", "Cramerding", "Ryan James", "Mark Jeffreys", "Evan Nolan", "Meeka Owens", "Seth Walsh", "council committee", "council vote"]},
+    {"label": "Council", "weight": 5, "terms": ["council", "city council", "councilmember", "council member", "vice mayor", "Lemon Kearney", "Jan-Michele Lemon Kearney", "Scotty Johnson", "Anna Albi", "Jeff Cramerding", "Cramerding", "Ryan James", "Mark Jeffreys", "Evan Nolan", "Meeka Owens", "Seth Walsh", "council committee", "council vote"]},
     {"label": "City Hall", "weight": 4, "terms": ["city hall", "city budget", "earnings tax", "city income tax", "city of Cincinnati", "Cincinnati officials", "city leaders", "city officials", "ordinance"]},
     {"label": "Police", "weight": 3, "terms": ["Cincinnati Police", "Cincinnati police", "CPD", "police department", "police officer", "officers"], "requires_any": ["Cincinnati", "CPD", "city"]},
     {"label": "Fire", "weight": 3, "terms": ["Cincinnati Fire", "fire department", "firefighters", "CFD"], "requires_any": ["Cincinnati", "CFD", "city"]},
@@ -108,9 +108,20 @@
      "requires_any": ["cities", "municipal", "municipalities", "local government", "local governments", "mayors", "Cincinnati", "community development block grant", "CDBG"]}
   ],
 
+  "_places_readme": "City-relevance words like 'city council' or 'police chief' count fully only when a story names Cincinnati or something below; they count for nothing when it names another city instead.",
+  "cincinnati_anchors": ["Cincinnati", "Cincy", "Queen City", "CPD", "CFD", "GCWW", "MSD", "DOTE", "Pureval", "Sheryl Long", "Lemon Kearney", "Scotty Johnson", "Anna Albi", "Cramerding", "Ryan James", "Mark Jeffreys", "Evan Nolan", "Meeka Owens", "Seth Walsh", "Brazina", "Plum Street", "801 Plum", "Over-the-Rhine", "OTR", "West End", "Avondale", "Clifton", "Northside", "Westwood", "Price Hill", "Oakley", "Hyde Park", "Walnut Hills", "Madisonville", "Mount Auburn", "Mt. Auburn", "Camp Washington", "Evanston", "College Hill", "Bond Hill", "Roselawn", "Pleasant Ridge", "Mount Washington", "Mt. Washington", "Mount Adams", "Mt. Adams", "East End", "Linwood", "Kennedy Heights", "Sayler Park", "Corryville", "Pendleton", "Queensgate", "Mount Airy", "Mt. Airy", "Carthage", "Hartwell", "Winton Hills", "Columbia Tusculum", "Fairmount", "Sedamsville", "Riverside", "Spring Grove Village", "Paddock Hills", "North Avondale", "Mount Lookout", "Mt. Lookout", "East Walnut Hills", "Lower Price Hill", "English Woods", "Millvale"],
+  "other_municipalities": ["Hamilton", "Fairfield", "Middletown", "Oxford", "Lebanon", "Mason", "West Chester", "Liberty Township", "Blue Ash", "Norwood", "Cheviot", "Reading", "Sharonville", "Springdale", "Forest Park", "Montgomery", "Madeira", "Mariemont", "Indian Hill", "Deer Park", "Silverton", "Wyoming", "Lockland", "Loveland", "Milford", "Harrison", "Delhi", "Green Township", "Anderson Township", "Colerain", "Springfield Township", "Union Township", "Batavia", "Amelia", "Covington", "Newport", "Florence", "Erlanger", "Fort Thomas", "Fort Mitchell", "Bellevue", "Dayton, Ky", "Independence", "Highland Heights", "Lawrenceburg", "Dayton", "Columbus", "Cleveland", "Louisville", "Lexington", "Indianapolis", "Springboro", "Monroe", "Trenton", "Kettering", "Beavercreek"],
+
   "ohio_terms": ["Ohio", "Ohioans", "Statehouse", "Columbus", "DeWine"],
 
   "local_terms": ["Cincinnati", "Cincy", "Hamilton County", "Northern Kentucky", "NKY", "Tri-State", "Covington", "Newport", "Ohio River", "Over-the-Rhine", "OTR", "West End", "Avondale", "Clifton", "Northside", "Westwood", "Price Hill", "Oakley", "Hyde Park", "Walnut Hills", "Madisonville", "Mount Auburn", "Mt. Auburn", "Downtown", "Camp Washington", "Evanston", "College Hill", "Bond Hill", "Roselawn", "Pleasant Ridge", "Mount Washington", "Mt. Washington", "Mount Adams", "East End", "Linwood", "Kennedy Heights", "Sayler Park", "Corryville", "Pendleton", "Queensgate", "Mount Airy", "Mt. Airy", "Carthage", "Hartwell", "Winton Hills", "Columbia Tusculum", "Fairmount", "Norwood", "Mason", "West Chester", "Blue Ash"],
+
+  "_exclude_readme": "Headlines dropped entirely: obituaries, death notices, and headlines that are only a person's name.",
+  "exclude": {
+    "title_terms": ["obituary", "obituaries", "death notice", "death notices", "passed away", "celebration of life", "in memoriam", "funeral home", "legacy.com"],
+    "url_terms": ["/obituaries", "obituaries.", "legacy.com", "/obits/"],
+    "drop_name_only_titles": true
+  },
 
   "downweight_terms": ["Bengals", "Reds", "Bearcats", "Musketeers", "high school football", "lottery", "recipe"],
 

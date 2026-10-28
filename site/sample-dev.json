@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T20:16:55.399559+00:00",
+ "generated_at": "2026-10-28T20:23:39.888897+00:00",
  "weather": {
   "temp": 58,
   "short": "Partly Sunny",
@@ -13,12 +13,12 @@
  },
  "developing": "water-main-break-closes-several-downtown-streets",
  "lead": {
-  "city": "water-main-break-closes-several-downtown-streets",
+  "city": "council-budget-committee-takes-up-mid-year-spending-adjustme",
   "general": "water-main-break-closes-several-downtown-streets"
  },
  "counts": {
-  "stories": 18,
-  "city": 7
+  "stories": 20,
+  "city": 6
  },
  "stories": [
   {
@@ -26,7 +26,7 @@
    "title": "Water main break closes several downtown streets",
    "link": "https://news.google.com/e",
    "outlet": "Local 12",
-   "summary": "Water main break closes several downtown streets",
+   "summary": "",
    "outlets": [
     "Enquirer",
     "FOX19",
@@ -35,25 +35,24 @@
     "WLWT"
    ],
    "outlet_count": 5,
-   "first_seen": "2026-10-28T19:41:55+00:00",
-   "updated": "2026-10-28T20:06:55+00:00",
-   "is_city": true,
-   "city_reasons": [
-    "Water & Sewers"
-   ],
-   "city_score": 3.0,
+   "first_seen": "2026-10-28T19:48:39+00:00",
+   "updated": "2026-10-28T20:13:39+00:00",
+   "is_city": false,
+   "city_reasons": [],
+   "city_score": 1.2,
+   "place": "maybe",
    "is_big": true,
    "is_new": false,
    "developing": true,
    "score": 13.13,
-   "city_rank": 10.504
+   "city_rank": 0.0
   },
   {
    "id": "brent-spence-companion-bridge-clears-final-federal-hurdle",
    "title": "Brent Spence companion bridge clears final federal hurdle",
    "link": "https://news.google.com/f",
    "outlet": "Local 12",
-   "summary": "Brent Spence companion bridge clears final federal hurdle",
+   "summary": "",
    "outlets": [
     "FOX19",
     "Local 12",
@@ -61,11 +60,12 @@
     "WLWT"
    ],
    "outlet_count": 4,
-   "first_seen": "2026-10-28T19:06:55+00:00",
-   "updated": "2026-10-28T19:21:55+00:00",
+   "first_seen": "2026-10-28T19:13:39+00:00",
+   "updated": "2026-10-28T19:28:39+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0.0,
+   "place": "maybe",
    "is_big": true,
    "is_new": false,
    "developing": false,
@@ -84,34 +84,38 @@
     "WVXU"
    ],
    "outlet_count": 3,
-   "first_seen": "2026-10-28T19:16:55+00:00",
-   "updated": "2026-10-28T19:34:55+00:00",
-   "is_city": false,
-   "city_reasons": [],
-   "city_score": 0.0,
+   "first_seen": "2026-10-28T19:23:39+00:00",
+   "updated": "2026-10-28T19:41:39+00:00",
+   "is_city": true,
+   "city_reasons": [
+    "Council"
+   ],
+   "city_score": 5.0,
+   "place": "yes",
    "is_big": true,
    "is_new": false,
    "developing": false,
    "score": 7.564,
-   "city_rank": 0.0
+   "city_rank": 10.322
   },
   {
    "id": "city-manager-sheryl-long-outlines-plan-to-speed-up-permit-re",
    "title": "City Manager Sheryl Long outlines plan to speed up permit reviews",
    "link": "https://news.google.com/a",
    "outlet": "Enquirer",
-   "summary": "City Manager Sheryl Long outlines plan to speed up permit reviews",
+   "summary": "",
    "outlets": [
     "Enquirer"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T19:41:55+00:00",
-   "updated": "2026-10-28T19:41:55+00:00",
+   "first_seen": "2026-10-28T19:48:39+00:00",
+   "updated": "2026-10-28T19:48:39+00:00",
    "is_city": true,
    "city_reasons": [
     "City Manager"
    ],
    "city_score": 6.0,
+   "place": "yes",
    "is_big": false,
    "is_new": false,
    "developing": false,
@@ -119,23 +123,68 @@
    "city_rank": 9.799
   },
   {
+   "id": "tri-state-community-to-hear-proposals-for-3-potential-mariju",
+   "title": "Tri-State community to hear proposals for 3 potential marijuana dispensaries",
+   "link": "https://local12.com/news/local/hamilton-ohio-city-council-marijuana-dispensaries",
+   "outlet": "WLWT",
+   "summary": "Tri-State community to hear proposals for 3 potential marijuana dispensaries",
+   "outlets": [
+    "WLWT"
+   ],
+   "outlet_count": 1,
+   "first_seen": "2026-10-28T19:38:39+00:00",
+   "updated": "2026-10-28T19:38:39+00:00",
+   "is_city": false,
+   "city_reasons": [],
+   "city_score": 0.0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 3.089,
+   "city_rank": 0.0
+  },
+  {
+   "id": "norwood-council-member-resigns-after-six-years",
+   "title": "Norwood council member resigns after six years",
+   "link": "https://wlwt.com/norwood",
+   "outlet": "WLWT",
+   "summary": "Norwood council member resigns after six years",
+   "outlets": [
+    "WLWT"
+   ],
+   "outlet_count": 1,
+   "first_seen": "2026-10-28T19:33:39+00:00",
+   "updated": "2026-10-28T19:33:39+00:00",
+   "is_city": false,
+   "city_reasons": [],
+   "city_score": 0.0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 3.046,
+   "city_rank": 0.0
+  },
+  {
    "id": "ohio-lawmakers-advance-bill-limiting-local-governments-home",
    "title": "Ohio lawmakers advance bill limiting local governments' home rule on rentals",
    "link": "https://news.google.com/o",
    "outlet": "Statehouse News Bureau",
-   "summary": "Ohio lawmakers advance bill limiting local governments' home rule on rentals",
+   "summary": "",
    "outlets": [
     "Ohio Capital Journal",
     "Statehouse News Bureau"
    ],
    "outlet_count": 2,
-   "first_seen": "2026-10-28T18:06:55+00:00",
-   "updated": "2026-10-28T18:26:55+00:00",
+   "first_seen": "2026-10-28T18:13:39+00:00",
+   "updated": "2026-10-28T18:33:39+00:00",
    "is_city": true,
    "city_reasons": [
     "State law"
    ],
    "city_score": 4.0,
+   "place": "maybe",
    "is_big": false,
    "is_new": false,
    "developing": false,
@@ -152,15 +201,16 @@
     "WCPO"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T18:56:55+00:00",
-   "updated": "2026-10-28T18:56:55+00:00",
+   "first_seen": "2026-10-28T19:03:39+00:00",
+   "updated": "2026-10-28T19:03:39+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0.0,
+   "place": "other",
    "is_big": false,
    "is_new": false,
    "developing": false,
-   "score": 2.803,
+   "score": 2.802,
    "city_rank": 0.0
   },
   {
@@ -173,11 +223,12 @@
     "WLWT"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T18:16:55+00:00",
-   "updated": "2026-10-28T18:16:55+00:00",
+   "first_seen": "2026-10-28T18:23:39+00:00",
+   "updated": "2026-10-28T18:23:39+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0.0,
+   "place": "maybe",
    "is_big": false,
    "is_new": false,
    "developing": false,
@@ -194,11 +245,12 @@
     "FOX19"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T17:46:55+00:00",
-   "updated": "2026-10-28T17:46:55+00:00",
+   "first_seen": "2026-10-28T17:53:39+00:00",
+   "updated": "2026-10-28T17:53:39+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0.0,
+   "place": "maybe",
    "is_big": false,
    "is_new": false,
    "developing": false,
@@ -215,11 +267,12 @@
     "WCPO"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T16:56:55+00:00",
-   "updated": "2026-10-28T16:56:55+00:00",
+   "first_seen": "2026-10-28T17:03:39+00:00",
+   "updated": "2026-10-28T17:03:39+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0.0,
+   "place": "maybe",
    "is_big": false,
    "is_new": false,
    "developing": false,
@@ -231,16 +284,17 @@
    "title": "FC Cincinnati season-ticket holders get first look at 2027 schedule",
    "link": "https://news.google.com/c",
    "outlet": "Enquirer",
-   "summary": "FC Cincinnati season-ticket holders get first look at 2027 schedule",
+   "summary": "",
    "outlets": [
     "Enquirer"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T16:36:55+00:00",
-   "updated": "2026-10-28T16:36:55+00:00",
+   "first_seen": "2026-10-28T16:43:39+00:00",
+   "updated": "2026-10-28T16:43:39+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0.0,
+   "place": "yes",
    "is_big": false,
    "is_new": false,
    "developing": false,
@@ -257,13 +311,14 @@
     "WVXU"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T15:56:55+00:00",
-   "updated": "2026-10-28T15:56:55+00:00",
+   "first_seen": "2026-10-28T16:03:39+00:00",
+   "updated": "2026-10-28T16:03:39+00:00",
    "is_city": true,
    "city_reasons": [
     "Planning & Development"
    ],
    "city_score": 3.0,
+   "place": "yes",
    "is_big": false,
    "is_new": false,
    "developing": false,
@@ -280,11 +335,12 @@
     "WCPO"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T15:16:55+00:00",
-   "updated": "2026-10-28T15:16:55+00:00",
+   "first_seen": "2026-10-28T15:23:39+00:00",
+   "updated": "2026-10-28T15:23:39+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0.0,
+   "place": "yes",
    "is_big": false,
    "is_new": false,
    "developing": false,
@@ -296,18 +352,19 @@
    "title": "Cincinnati City Council members react to new curfew numbers",
    "link": "https://news.google.com/g",
    "outlet": "Spectrum News",
-   "summary": "Cincinnati City Council members react to new curfew numbers",
+   "summary": "",
    "outlets": [
     "Spectrum News"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T15:16:55+00:00",
-   "updated": "2026-10-28T15:16:55+00:00",
+   "first_seen": "2026-10-28T15:23:39+00:00",
+   "updated": "2026-10-28T15:23:39+00:00",
    "is_city": true,
    "city_reasons": [
     "Council"
    ],
    "city_score": 5.0,
+   "place": "yes",
    "is_big": false,
    "is_new": false,
    "developing": false,
@@ -324,11 +381,12 @@
     "WVXU"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T14:46:55+00:00",
-   "updated": "2026-10-28T14:46:55+00:00",
+   "first_seen": "2026-10-28T14:53:39+00:00",
+   "updated": "2026-10-28T14:53:39+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0.0,
+   "place": "maybe",
    "is_big": false,
    "is_new": false,
    "developing": false,
@@ -345,11 +403,12 @@
     "WLWT"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T18:46:55+00:00",
-   "updated": "2026-10-28T18:46:55+00:00",
+   "first_seen": "2026-10-28T18:53:39+00:00",
+   "updated": "2026-10-28T18:53:39+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0.0,
+   "place": "maybe",
    "is_big": false,
    "is_new": false,
    "developing": false,
@@ -366,11 +425,12 @@
     "WLWT"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T13:36:55+00:00",
-   "updated": "2026-10-28T13:36:55+00:00",
+   "first_seen": "2026-10-28T13:43:39+00:00",
+   "updated": "2026-10-28T13:43:39+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0.0,
+   "place": "yes",
    "is_big": false,
    "is_new": false,
    "developing": false,
@@ -382,18 +442,19 @@
    "title": "Congress weighs cuts to federal grants that cities use for housing",
    "link": "https://news.google.com/fed",
    "outlet": "Route Fifty",
-   "summary": "Congress weighs cuts to federal grants that cities use for housing",
+   "summary": "",
    "outlets": [
     "Route Fifty"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T17:46:55+00:00",
-   "updated": "2026-10-28T17:46:55+00:00",
+   "first_seen": "2026-10-28T17:53:39+00:00",
+   "updated": "2026-10-28T17:53:39+00:00",
    "is_city": true,
    "city_reasons": [
     "Federal"
    ],
    "city_score": 3.0,
+   "place": "maybe",
    "is_big": false,
    "is_new": false,
    "developing": false,
@@ -410,18 +471,17 @@
     "Signal"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T11:56:55+00:00",
-   "updated": "2026-10-28T11:56:55+00:00",
-   "is_city": true,
-   "city_reasons": [
-    "Planning & Development"
-   ],
-   "city_score": 3.0,
+   "first_seen": "2026-10-28T12:03:39+00:00",
+   "updated": "2026-10-28T12:03:39+00:00",
+   "is_city": false,
+   "city_reasons": [],
+   "city_score": 1.2,
+   "place": "maybe",
    "is_big": false,
    "is_new": false,
    "developing": false,
    "score": 0.873,
-   "city_rank": 1.496
+   "city_rank": 0.0
   }
  ],
  "sources_status": [
@@ -429,7 +489,7 @@
    "source": "Enquirer",
    "ok": true,
    "items": 4,
-   "used": "https://news.google.com/rss/search?q=site:cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used": "https://news.google.com/rss/search?q=site:cincinnati.com+-obituary+-obituaries+-obituaries.cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en",
    "used_fallback": false,
    "errors": []
   },
@@ -444,7 +504,7 @@
   {
    "source": "WLWT",
    "ok": true,
-   "items": 5,
+   "items": 7,
    "used": "https://www.wlwt.com/local-news-rss",
    "used_fallback": false,
    "errors": []
@@ -461,7 +521,7 @@
    "source": "Local 12",
    "ok": true,
    "items": 2,
-   "used": "https://news.google.com/rss/search?q=site:local12.com+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used": "https://news.google.com/rss/search?q=site:local12.com+-obituary+-obituaries+-obituaries.cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en",
    "used_fallback": true,
    "errors": [
     "OSError: https://local12.com/news/local.rss"
