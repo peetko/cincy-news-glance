@@ -217,7 +217,7 @@ def collect_items(cfg, now):
     alias_pairs = make_alias_lookup(cfg.get("source_aliases", {}))
     all_items, status = [], []
     for src in cfg["sources"]:
-        got, used, errors, dropped = [], None, [], 0
+        got, used, errors, dropped, dropped_titles = [], None, [], 0, []
         candidates = list(src.get("feeds", []))
         if src.get("fallback"):
             candidates.append(src["fallback"])
@@ -227,6 +227,7 @@ def collect_items(cfg, now):
                 items = parse_feed(data, src["name"], "news.google.com" in url, alias_pairs, now, src.get("official", False))
                 kept = [i for i in items if not is_junk(i, cfg)]
                 dropped = len(items) - len(kept)
+                dropped_titles = [i["title"] for i in items if is_junk(i, cfg)][:12]
                 if kept:
                     if src.get("max_items"):
                         kept = sorted(kept, key=lambda i: i["published"], reverse=True)[: src["max_items"]]
@@ -237,6 +238,7 @@ def collect_items(cfg, now):
                 errors.append(f"{type(ex).__name__}: {url}")
         status.append({
             "source": src["name"], "ok": bool(got), "items": len(got), "junk_dropped": dropped,
+            "junk_examples": dropped_titles,
             "used": used, "used_fallback": bool(used and used == src.get("fallback")), "errors": errors[:3],
         })
         all_items.extend(got)
@@ -582,6 +584,8 @@ def score_clusters(clusters, rules, now, memory=None):
             "outlet": lead["outlet"],
             "summary": lead["summary"],
             "outlets": outlets,
+            # Each outlet's own version of the story, for the clickable outlet labels.
+            "links": {o: max((i for i in its if i["outlet"] == o), key=lambda i: i["published"])["link"] for o in outlets},
             "outlet_count": n,
             "first_seen": first.isoformat(),
             "updated": latest.isoformat(),

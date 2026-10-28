@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-28T20:32:14.877337+00:00",
+ "generated_at": "2026-10-28T20:51:29.356583+00:00",
  "weather": {
   "ok": true,
-  "as_of": "2026-10-28T20:32:14.877337+00:00",
+  "as_of": "2026-10-28T20:51:29.356583+00:00",
   "temp": 58,
   "short": "Partly Sunny",
   "is_day": true,
@@ -61,9 +61,15 @@
     "WCPO",
     "WLWT"
    ],
+   "links": {
+    "FOX19": "https://fox19.com/bsb",
+    "Local 12": "https://news.google.com/f",
+    "WCPO": "https://wcpo.com/bsb",
+    "WLWT": "https://wlwt.com/bsb"
+   },
    "outlet_count": 4,
-   "first_seen": "2026-10-28T19:22:14+00:00",
-   "updated": "2026-10-28T19:37:14+00:00",
+   "first_seen": "2026-10-28T19:41:29+00:00",
+   "updated": "2026-10-28T19:56:29+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0,
@@ -119,9 +125,14 @@
     "Signal",
     "WVXU"
    ],
+   "links": {
+    "Enquirer": "https://news.google.com/b",
+    "Signal": "https://signal/1",
+    "WVXU": "https://wvxu.org/1"
+   },
    "outlet_count": 3,
-   "first_seen": "2026-10-28T19:32:14+00:00",
-   "updated": "2026-10-28T19:50:14+00:00",
+   "first_seen": "2026-10-28T19:51:29+00:00",
+   "updated": "2026-10-28T20:09:29+00:00",
    "is_city": true,
    "city_reasons": [
     "Council"
@@ -180,9 +191,12 @@
    "outlets": [
     "Enquirer"
    ],
+   "links": {
+    "Enquirer": "https://news.google.com/a"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T19:57:14+00:00",
-   "updated": "2026-10-28T19:57:14+00:00",
+   "first_seen": "2026-10-28T20:16:29+00:00",
+   "updated": "2026-10-28T20:16:29+00:00",
    "is_city": true,
    "city_reasons": [
     "City Manager"
@@ -231,9 +245,12 @@
    "outlets": [
     "WLWT"
    ],
+   "links": {
+    "WLWT": "https://local12.com/news/local/hamilton-ohio-city-council-marijuana-dispensaries"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T19:47:14+00:00",
-   "updated": "2026-10-28T19:47:14+00:00",
+   "first_seen": "2026-10-28T20:06:29+00:00",
+   "updated": "2026-10-28T20:06:29+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0,
@@ -272,9 +289,12 @@
    "outlets": [
     "WLWT"
    ],
+   "links": {
+    "WLWT": "https://wlwt.com/norwood"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T19:42:14+00:00",
-   "updated": "2026-10-28T19:42:14+00:00",
+   "first_seen": "2026-10-28T20:01:29+00:00",
+   "updated": "2026-10-28T20:01:29+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0,
@@ -314,9 +334,13 @@
     "Ohio Capital Journal",
     "Statehouse News Bureau"
    ],
+   "links": {
+    "Ohio Capital Journal": "https://ocj/1",
+    "Statehouse News Bureau": "https://news.google.com/o"
+   },
    "outlet_count": 2,
-   "first_seen": "2026-10-28T18:22:14+00:00",
-   "updated": "2026-10-28T18:42:14+00:00",
+   "first_seen": "2026-10-28T18:41:29+00:00",
+   "updated": "2026-10-28T19:01:29+00:00",
    "is_city": true,
    "city_reasons": [
     "State law"
@@ -367,9 +391,12 @@
    "outlets": [
     "WCPO"
    ],
+   "links": {
+    "WCPO": "https://wcpo.com/cov"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T19:12:14+00:00",
-   "updated": "2026-10-28T19:12:14+00:00",
+   "first_seen": "2026-10-28T19:31:29+00:00",
+   "updated": "2026-10-28T19:31:29+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0,
@@ -377,7 +404,7 @@
    "is_big": false,
    "is_new": false,
    "developing": false,
-   "score": 2.802,
+   "score": 2.803,
    "city_rank": 0.0,
    "why": {
     "matches": [],
@@ -408,9 +435,12 @@
    "outlets": [
     "WLWT"
    ],
+   "links": {
+    "WLWT": "https://wlwt.com/1"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T18:32:14+00:00",
-   "updated": "2026-10-28T18:32:14+00:00",
+   "first_seen": "2026-10-28T18:51:29+00:00",
+   "updated": "2026-10-28T18:51:29+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0,
@@ -449,9 +479,12 @@
    "outlets": [
     "City of Cincinnati"
    ],
+   "links": {
+    "City of Cincinnati": "https://news.google.com/rel"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T18:32:14+00:00",
-   "updated": "2026-10-28T18:32:14+00:00",
+   "first_seen": "2026-10-28T18:51:29+00:00",
+   "updated": "2026-10-28T18:51:29+00:00",
    "is_city": true,
    "city_reasons": [
     "City Hall"
@@ -462,7 +495,7 @@
    "is_new": false,
    "developing": false,
    "score": 2.508,
-   "city_rank": 5.445,
+   "city_rank": 5.446,
    "why": {
     "matches": [
      {
@@ -498,9 +531,12 @@
    "outlets": [
     "FOX19"
    ],
+   "links": {
+    "FOX19": "https://fox19.com/1"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T18:02:14+00:00",
-   "updated": "2026-10-28T18:02:14+00:00",
+   "first_seen": "2026-10-28T18:21:29+00:00",
+   "updated": "2026-10-28T18:21:29+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0,
@@ -539,9 +575,12 @@
    "outlets": [
     "WCPO"
    ],
+   "links": {
+    "WCPO": "https://wcpo.com/1"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T17:12:14+00:00",
-   "updated": "2026-10-28T17:12:14+00:00",
+   "first_seen": "2026-10-28T17:31:29+00:00",
+   "updated": "2026-10-28T17:31:29+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0,
@@ -580,9 +619,12 @@
    "outlets": [
     "Enquirer"
    ],
+   "links": {
+    "Enquirer": "https://news.google.com/c"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T16:52:14+00:00",
-   "updated": "2026-10-28T16:52:14+00:00",
+   "first_seen": "2026-10-28T17:11:29+00:00",
+   "updated": "2026-10-28T17:11:29+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0,
@@ -621,20 +663,23 @@
    "outlets": [
     "WVXU"
    ],
+   "links": {
+    "WVXU": "https://wvxu.org/2"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T16:12:14+00:00",
-   "updated": "2026-10-28T16:12:14+00:00",
+   "first_seen": "2026-10-28T16:31:29+00:00",
+   "updated": "2026-10-28T16:31:29+00:00",
    "is_city": true,
    "city_reasons": [
     "Planning & Development"
    ],
-   "city_score": 3.0,
+   "city_score": 4.0,
    "place": "yes",
    "is_big": false,
    "is_new": false,
    "developing": false,
    "score": 1.7,
-   "city_rank": 2.914,
+   "city_rank": 3.691,
    "why": {
     "matches": [
      {
@@ -642,7 +687,7 @@
       "term": "Planning Commission",
       "where": "headline",
       "outlet": "WVXU",
-      "points": 3.0
+      "points": 4.0
      }
     ],
     "place": "yes",
@@ -672,9 +717,12 @@
    "outlets": [
     "WCPO"
    ],
+   "links": {
+    "WCPO": "https://wcpo.com/2"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T15:32:14+00:00",
-   "updated": "2026-10-28T15:32:14+00:00",
+   "first_seen": "2026-10-28T15:51:29+00:00",
+   "updated": "2026-10-28T15:51:29+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0,
@@ -713,9 +761,12 @@
    "outlets": [
     "Spectrum News"
    ],
+   "links": {
+    "Spectrum News": "https://news.google.com/g"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T15:32:14+00:00",
-   "updated": "2026-10-28T15:32:14+00:00",
+   "first_seen": "2026-10-28T15:51:29+00:00",
+   "updated": "2026-10-28T15:51:29+00:00",
    "is_city": true,
    "city_reasons": [
     "Council"
@@ -762,9 +813,12 @@
    "outlets": [
     "WVXU"
    ],
+   "links": {
+    "WVXU": "https://wvxu.org/3"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T15:02:14+00:00",
-   "updated": "2026-10-28T15:02:14+00:00",
+   "first_seen": "2026-10-28T15:21:29+00:00",
+   "updated": "2026-10-28T15:21:29+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0,
@@ -803,9 +857,12 @@
    "outlets": [
     "WLWT"
    ],
+   "links": {
+    "WLWT": "https://wlwt.com/3"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T19:02:14+00:00",
-   "updated": "2026-10-28T19:02:14+00:00",
+   "first_seen": "2026-10-28T19:21:29+00:00",
+   "updated": "2026-10-28T19:21:29+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0,
@@ -844,9 +901,12 @@
    "outlets": [
     "WLWT"
    ],
+   "links": {
+    "WLWT": "https://wlwt.com/2"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T13:52:14+00:00",
-   "updated": "2026-10-28T13:52:14+00:00",
+   "first_seen": "2026-10-28T14:11:29+00:00",
+   "updated": "2026-10-28T14:11:29+00:00",
    "is_city": false,
    "city_reasons": [],
    "city_score": 0,
@@ -885,9 +945,12 @@
    "outlets": [
     "Route Fifty"
    ],
+   "links": {
+    "Route Fifty": "https://news.google.com/fed"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T18:02:14+00:00",
-   "updated": "2026-10-28T18:02:14+00:00",
+   "first_seen": "2026-10-28T18:21:29+00:00",
+   "updated": "2026-10-28T18:21:29+00:00",
    "is_city": true,
    "city_reasons": [
     "Federal"
@@ -934,12 +997,15 @@
    "outlets": [
     "Signal"
    ],
+   "links": {
+    "Signal": "https://signal/2"
+   },
    "outlet_count": 1,
-   "first_seen": "2026-10-28T12:12:14+00:00",
-   "updated": "2026-10-28T12:12:14+00:00",
+   "first_seen": "2026-10-28T12:31:29+00:00",
+   "updated": "2026-10-28T12:31:29+00:00",
    "is_city": false,
    "city_reasons": [],
-   "city_score": 1.2,
+   "city_score": 1.6,
    "place": "maybe",
    "is_big": false,
    "is_new": false,
@@ -953,7 +1019,7 @@
       "term": "zoning",
       "where": "headline",
       "outlet": "Signal",
-      "points": 1.2
+      "points": 1.6
      }
     ],
     "place": "maybe",
@@ -981,6 +1047,9 @@
    "ok": true,
    "items": 3,
    "junk_dropped": 1,
+   "junk_examples": [
+    "Michael Elmer Bouchonnet"
+   ],
    "used": "https://news.google.com/rss/search?q=site:cincinnati.com+-obituary+-obituaries+-obituaries.cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en",
    "used_fallback": false,
    "errors": []
@@ -990,6 +1059,7 @@
    "ok": true,
    "items": 4,
    "junk_dropped": 0,
+   "junk_examples": [],
    "used": "https://www.wcpo.com/news/local-news.rss",
    "used_fallback": false,
    "errors": []
@@ -999,6 +1069,7 @@
    "ok": true,
    "items": 6,
    "junk_dropped": 0,
+   "junk_examples": [],
    "used": "https://www.wlwt.com/local-news-rss",
    "used_fallback": false,
    "errors": []
@@ -1008,6 +1079,7 @@
    "ok": true,
    "items": 2,
    "junk_dropped": 0,
+   "junk_examples": [],
    "used": "https://www.fox19.com/arc/outboundfeeds/rss/category/news/?outputType=xml",
    "used_fallback": false,
    "errors": []
@@ -1017,6 +1089,7 @@
    "ok": true,
    "items": 1,
    "junk_dropped": 0,
+   "junk_examples": [],
    "used": "https://news.google.com/rss/search?q=site:local12.com+-obituary+-obituaries+-obituaries.cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en",
    "used_fallback": true,
    "errors": [
@@ -1028,6 +1101,7 @@
    "ok": true,
    "items": 3,
    "junk_dropped": 0,
+   "junk_examples": [],
    "used": "https://www.wvxu.org/local-news.rss",
    "used_fallback": false,
    "errors": []
@@ -1037,6 +1111,7 @@
    "ok": true,
    "items": 2,
    "junk_dropped": 0,
+   "junk_examples": [],
    "used": "https://signalcincinnati.org/feed/",
    "used_fallback": false,
    "errors": []
@@ -1046,6 +1121,7 @@
    "ok": true,
    "items": 2,
    "junk_dropped": 0,
+   "junk_examples": [],
    "used": "https://news.google.com/rss/search?q=Cincinnati+(%22city+council%22+OR+%22city+hall%22+OR+%22city+manager%22+OR+mayor)+when:1d&hl=en-US&gl=US&ceid=US:en",
    "used_fallback": false,
    "errors": []
@@ -1055,6 +1131,7 @@
    "ok": true,
    "items": 1,
    "junk_dropped": 0,
+   "junk_examples": [],
    "used": "https://news.google.com/rss/search?q=site:cincinnati-oh.gov+when:2d&hl=en-US&gl=US&ceid=US:en",
    "used_fallback": false,
    "errors": []
@@ -1064,6 +1141,7 @@
    "ok": true,
    "items": 2,
    "junk_dropped": 0,
+   "junk_examples": [],
    "used": "https://ohiocapitaljournal.com/feed/",
    "used_fallback": false,
    "errors": []
@@ -1073,6 +1151,7 @@
    "ok": true,
    "items": 1,
    "junk_dropped": 0,
+   "junk_examples": [],
    "used": "https://news.google.com/rss/search?q=Ohio+(lawmakers+OR+Statehouse+OR+%22House+Bill%22+OR+%22Senate+Bill%22)+(cities+OR+%22local+governments%22+OR+municipalities+OR+%22home+rule%22)+when:2d&hl=en-US&gl=US&ceid=US:en",
    "used_fallback": false,
    "errors": []
@@ -1082,6 +1161,7 @@
    "ok": true,
    "items": 2,
    "junk_dropped": 0,
+   "junk_examples": [],
    "used": "https://news.google.com/rss/search?q=(Congress+OR+%22federal+funding%22+OR+%22executive+order%22)+(%22local+governments%22+OR+cities+OR+mayors)+when:1d&hl=en-US&gl=US&ceid=US:en",
    "used_fallback": false,
    "errors": []
@@ -1090,6 +1170,7 @@
    "source": "City meetings (Legistar)",
    "ok": true,
    "items": 2,
+   "used": "web API (cincinnatioh)",
    "error": null
   }
  ],
@@ -1111,7 +1192,7 @@
      "spence",
      "way"
     ],
-    "first_seen": "2026-10-28T19:22:14+00:00",
+    "first_seen": "2026-10-28T19:41:29+00:00",
     "title": "Brent Spence companion bridge clears final federal hurdle"
    },
    {
@@ -1126,7 +1207,7 @@
      "weigh",
      "year"
     ],
-    "first_seen": "2026-10-28T19:32:14+00:00",
+    "first_seen": "2026-10-28T19:51:29+00:00",
     "title": "Council budget committee takes up mid-year spending adjustments"
    },
    {
@@ -1141,7 +1222,7 @@
      "sheryl",
      "speed"
     ],
-    "first_seen": "2026-10-28T19:57:14+00:00",
+    "first_seen": "2026-10-28T20:16:29+00:00",
     "title": "City Manager Sheryl Long outlines plan to speed up permit reviews"
    },
    {
@@ -1155,7 +1236,7 @@
      "state",
      "tri"
     ],
-    "first_seen": "2026-10-28T19:47:14+00:00",
+    "first_seen": "2026-10-28T20:06:29+00:00",
     "title": "Tri-State community to hear proposals for 3 potential marijuana dispensaries"
    },
    {
@@ -1166,7 +1247,7 @@
      "resign",
      "year"
     ],
-    "first_seen": "2026-10-28T19:42:14+00:00",
+    "first_seen": "2026-10-28T20:01:29+00:00",
     "title": "Norwood council member resigns after six years"
    },
    {
@@ -1185,7 +1266,7 @@
      "short",
      "term"
     ],
-    "first_seen": "2026-10-28T18:22:14+00:00",
+    "first_seen": "2026-10-28T18:41:29+00:00",
     "title": "Ohio House bill would limit cities' home rule over short-term rentals"
    },
    {
@@ -1197,7 +1278,7 @@
      "police",
      "shop"
     ],
-    "first_seen": "2026-10-28T19:12:14+00:00",
+    "first_seen": "2026-10-28T19:31:29+00:00",
     "title": "Covington police investigate break-in at Mainstrasse shop"
    },
    {
@@ -1209,7 +1290,7 @@
      "programming",
      "riverfront"
     ],
-    "first_seen": "2026-10-28T18:32:14+00:00",
+    "first_seen": "2026-10-28T18:51:29+00:00",
     "title": "Riverfront park adds evening programming for the holidays"
    },
    {
@@ -1222,7 +1303,7 @@
      "warming",
      "winter"
     ],
-    "first_seen": "2026-10-28T18:32:14+00:00",
+    "first_seen": "2026-10-28T18:51:29+00:00",
     "title": "City announces winter warming centers open Nov. 15"
    },
    {
@@ -1236,7 +1317,7 @@
      "state",
      "tri"
     ],
-    "first_seen": "2026-10-28T18:02:14+00:00",
+    "first_seen": "2026-10-28T18:21:29+00:00",
     "title": "Cold snap expected to bring first frost of the season to the Tri-State"
    },
    {
@@ -1249,7 +1330,7 @@
      "review",
      "route"
     ],
-    "first_seen": "2026-10-28T17:12:14+00:00",
+    "first_seen": "2026-10-28T17:31:29+00:00",
     "title": "Metro board reviews feedback on bus route redesign"
    },
    {
@@ -1262,7 +1343,7 @@
      "season",
      "ticket"
     ],
-    "first_seen": "2026-10-28T16:52:14+00:00",
+    "first_seen": "2026-10-28T17:11:29+00:00",
     "title": "FC Cincinnati season-ticket holders get first look at 2027 schedule"
    },
    {
@@ -1276,7 +1357,7 @@
      "schedule",
      "west"
     ],
-    "first_seen": "2026-10-28T16:12:14+00:00",
+    "first_seen": "2026-10-28T16:31:29+00:00",
     "title": "Planning Commission schedules hearing on West End housing plan"
    },
    {
@@ -1289,7 +1370,7 @@
      "reopen",
      "year"
     ],
-    "first_seen": "2026-10-28T15:32:14+00:00",
+    "first_seen": "2026-10-28T15:51:29+00:00",
     "title": "Library branch reopens in Northside after year-long renovation"
    },
    {
@@ -1301,7 +1382,7 @@
      "number",
      "react"
     ],
-    "first_seen": "2026-10-28T15:32:14+00:00",
+    "first_seen": "2026-10-28T15:51:29+00:00",
     "title": "Cincinnati City Council members react to new curfew numbers"
    },
    {
@@ -1314,7 +1395,7 @@
      "renewal",
      "timeline"
     ],
-    "first_seen": "2026-10-28T15:02:14+00:00",
+    "first_seen": "2026-10-28T15:21:29+00:00",
     "title": "Hamilton County commissioners discuss levy renewal timeline"
    },
    {
@@ -1324,7 +1405,7 @@
      "prepare",
      "sunday"
     ],
-    "first_seen": "2026-10-28T19:02:14+00:00",
+    "first_seen": "2026-10-28T19:21:29+00:00",
     "title": "Bengals prepare for Sunday matchup"
    },
    {
@@ -1336,7 +1417,7 @@
      "storefront",
      "take"
     ],
-    "first_seen": "2026-10-28T13:52:14+00:00",
+    "first_seen": "2026-10-28T14:11:29+00:00",
     "title": "New coffee shop takes over historic storefront in Northside"
    },
    {
@@ -1350,7 +1431,7 @@
      "use",
      "weigh"
     ],
-    "first_seen": "2026-10-28T18:02:14+00:00",
+    "first_seen": "2026-10-28T18:21:29+00:00",
     "title": "Congress weighs cuts to federal grants that cities use for housing"
    },
    {
@@ -1363,7 +1444,7 @@
      "weigh",
      "zoning"
     ],
-    "first_seen": "2026-10-28T12:12:14+00:00",
+    "first_seen": "2026-10-28T12:31:29+00:00",
     "title": "Neighborhood councils weigh in on transit-corridor zoning changes"
    }
   ],
