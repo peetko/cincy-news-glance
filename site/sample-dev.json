@@ -1,43 +1,26 @@
 {
- "generated_at": "2026-10-28T19:53:01.704000+00:00",
+ "generated_at": "2026-10-28T20:16:55.399559+00:00",
  "weather": {
   "temp": 58,
   "short": "Partly Sunny",
   "is_day": true,
   "change": {
-   "text": "Rain likely around 9 PM",
+   "text": "Rain likely around 10 PM",
    "level": "notable"
   },
   "alerts": [],
   "ok": true
  },
  "developing": "water-main-break-closes-several-downtown-streets",
+ "lead": {
+  "city": "water-main-break-closes-several-downtown-streets",
+  "general": "water-main-break-closes-several-downtown-streets"
+ },
  "counts": {
-  "stories": 14,
-  "city": 5
+  "stories": 18,
+  "city": 7
  },
  "stories": [
-  {
-   "id": "council-budget-committee-takes-up-mid-year-spending-adjustme",
-   "title": "Council budget committee takes up mid-year spending adjustments",
-   "link": "https://wvxu.org/1",
-   "outlet": "WVXU",
-   "summary": "Council budget committee takes up mid-year spending adjustments",
-   "outlets": [
-    "Enquirer",
-    "Signal",
-    "Spectrum News",
-    "WVXU"
-   ],
-   "outlet_count": 4,
-   "first_seen": "2026-10-28T18:53:01+00:00",
-   "updated": "2026-10-28T19:13:01+00:00",
-   "is_city": true,
-   "is_big": true,
-   "is_new": false,
-   "developing": false,
-   "score": 14.496
-  },
   {
    "id": "water-main-break-closes-several-downtown-streets",
    "title": "Water main break closes several downtown streets",
@@ -52,85 +35,133 @@
     "WLWT"
    ],
    "outlet_count": 5,
-   "first_seen": "2026-10-28T19:18:01+00:00",
-   "updated": "2026-10-28T19:43:01+00:00",
-   "is_city": false,
+   "first_seen": "2026-10-28T19:41:55+00:00",
+   "updated": "2026-10-28T20:06:55+00:00",
+   "is_city": true,
+   "city_reasons": [
+    "Water & Sewers"
+   ],
+   "city_score": 3.0,
    "is_big": true,
    "is_new": false,
    "developing": true,
-   "score": 10.698
+   "score": 13.13,
+   "city_rank": 10.504
   },
   {
-   "id": "city-manager-outlines-plan-to-speed-up-permit-reviews",
-   "title": "City Manager outlines plan to speed up permit reviews",
+   "id": "brent-spence-companion-bridge-clears-final-federal-hurdle",
+   "title": "Brent Spence companion bridge clears final federal hurdle",
+   "link": "https://news.google.com/f",
+   "outlet": "Local 12",
+   "summary": "Brent Spence companion bridge clears final federal hurdle",
+   "outlets": [
+    "FOX19",
+    "Local 12",
+    "WCPO",
+    "WLWT"
+   ],
+   "outlet_count": 4,
+   "first_seen": "2026-10-28T19:06:55+00:00",
+   "updated": "2026-10-28T19:21:55+00:00",
+   "is_city": false,
+   "city_reasons": [],
+   "city_score": 0.0,
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 9.441,
+   "city_rank": 0.0
+  },
+  {
+   "id": "council-budget-committee-takes-up-mid-year-spending-adjustme",
+   "title": "Council budget committee takes up mid-year spending adjustments",
+   "link": "https://wvxu.org/1",
+   "outlet": "WVXU",
+   "summary": "Council budget committee takes up mid-year spending adjustments",
+   "outlets": [
+    "Enquirer",
+    "Signal",
+    "WVXU"
+   ],
+   "outlet_count": 3,
+   "first_seen": "2026-10-28T19:16:55+00:00",
+   "updated": "2026-10-28T19:34:55+00:00",
+   "is_city": false,
+   "city_reasons": [],
+   "city_score": 0.0,
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 7.564,
+   "city_rank": 0.0
+  },
+  {
+   "id": "city-manager-sheryl-long-outlines-plan-to-speed-up-permit-re",
+   "title": "City Manager Sheryl Long outlines plan to speed up permit reviews",
    "link": "https://news.google.com/a",
    "outlet": "Enquirer",
-   "summary": "City Manager outlines plan to speed up permit reviews",
+   "summary": "City Manager Sheryl Long outlines plan to speed up permit reviews",
    "outlets": [
     "Enquirer"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T18:18:01+00:00",
-   "updated": "2026-10-28T18:18:01+00:00",
+   "first_seen": "2026-10-28T19:41:55+00:00",
+   "updated": "2026-10-28T19:41:55+00:00",
    "is_city": true,
-   "is_big": false,
-   "is_new": false,
-   "developing": false,
-   "score": 5.991
-  },
-  {
-   "id": "planning-commission-schedules-hearing-on-west-end-housing-pl",
-   "title": "Planning Commission schedules hearing on West End housing plan",
-   "link": "https://wvxu.org/2",
-   "outlet": "WVXU",
-   "summary": "Planning Commission schedules hearing on West End housing plan",
-   "outlets": [
-    "WVXU"
+   "city_reasons": [
+    "City Manager"
    ],
-   "outlet_count": 1,
-   "first_seen": "2026-10-28T15:33:01+00:00",
-   "updated": "2026-10-28T15:33:01+00:00",
-   "is_city": true,
+   "city_score": 6.0,
    "is_big": false,
    "is_new": false,
    "developing": false,
-   "score": 3.205
+   "score": 3.176,
+   "city_rank": 9.799
   },
   {
-   "id": "hamilton-county-commissioners-discuss-levy-renewal-timeline",
-   "title": "Hamilton County commissioners discuss levy renewal timeline",
-   "link": "https://wvxu.org/3",
-   "outlet": "WVXU",
-   "summary": "Hamilton County commissioners discuss levy renewal timeline",
+   "id": "ohio-lawmakers-advance-bill-limiting-local-governments-home",
+   "title": "Ohio lawmakers advance bill limiting local governments' home rule on rentals",
+   "link": "https://news.google.com/o",
+   "outlet": "Statehouse News Bureau",
+   "summary": "Ohio lawmakers advance bill limiting local governments' home rule on rentals",
    "outlets": [
-    "WVXU"
+    "Ohio Capital Journal",
+    "Statehouse News Bureau"
    ],
-   "outlet_count": 1,
-   "first_seen": "2026-10-28T14:23:01+00:00",
-   "updated": "2026-10-28T14:23:01+00:00",
+   "outlet_count": 2,
+   "first_seen": "2026-10-28T18:06:55+00:00",
+   "updated": "2026-10-28T18:26:55+00:00",
    "is_city": true,
+   "city_reasons": [
+    "State law"
+   ],
+   "city_score": 4.0,
    "is_big": false,
    "is_new": false,
    "developing": false,
-   "score": 3.119
+   "score": 2.947,
+   "city_rank": 6.483
   },
   {
-   "id": "metro-board-reviews-feedback-on-bus-route-redesign",
-   "title": "Metro board reviews feedback on bus route redesign",
-   "link": "https://wcpo.com/1",
+   "id": "covington-police-investigate-break-in-at-mainstrasse-shop",
+   "title": "Covington police investigate break-in at Mainstrasse shop",
+   "link": "https://wcpo.com/cov",
    "outlet": "WCPO",
-   "summary": "Metro board reviews feedback on bus route redesign",
+   "summary": "Covington police investigate break-in at Mainstrasse shop",
    "outlets": [
     "WCPO"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T16:33:01+00:00",
-   "updated": "2026-10-28T16:33:01+00:00",
+   "first_seen": "2026-10-28T18:56:55+00:00",
+   "updated": "2026-10-28T18:56:55+00:00",
    "is_city": false,
+   "city_reasons": [],
+   "city_score": 0.0,
    "is_big": false,
    "is_new": false,
    "developing": false,
-   "score": 3.098
+   "score": 2.803,
+   "city_rank": 0.0
   },
   {
    "id": "riverfront-park-adds-evening-programming-for-the-holidays",
@@ -142,13 +173,16 @@
     "WLWT"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T17:53:01+00:00",
-   "updated": "2026-10-28T17:53:01+00:00",
+   "first_seen": "2026-10-28T18:16:55+00:00",
+   "updated": "2026-10-28T18:16:55+00:00",
    "is_city": false,
+   "city_reasons": [],
+   "city_score": 0.0,
    "is_big": false,
    "is_new": false,
    "developing": false,
-   "score": 2.15
+   "score": 2.508,
+   "city_rank": 0.0
   },
   {
    "id": "cold-snap-expected-to-bring-first-frost-of-the-season-to-the",
@@ -160,49 +194,37 @@
     "FOX19"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T17:23:01+00:00",
-   "updated": "2026-10-28T17:23:01+00:00",
+   "first_seen": "2026-10-28T17:46:55+00:00",
+   "updated": "2026-10-28T17:46:55+00:00",
    "is_city": false,
+   "city_reasons": [],
+   "city_score": 0.0,
    "is_big": false,
    "is_new": false,
    "developing": false,
-   "score": 1.978
+   "score": 2.307,
+   "city_rank": 0.0
   },
   {
-   "id": "weekend-lane-closures-planned-on-brent-spence-bridge",
-   "title": "Weekend lane closures planned on Brent Spence Bridge",
-   "link": "https://news.google.com/f",
-   "outlet": "Local 12",
-   "summary": "Weekend lane closures planned on Brent Spence Bridge",
+   "id": "metro-board-reviews-feedback-on-bus-route-redesign",
+   "title": "Metro board reviews feedback on bus route redesign",
+   "link": "https://wcpo.com/1",
+   "outlet": "WCPO",
+   "summary": "Metro board reviews feedback on bus route redesign",
    "outlets": [
-    "Local 12"
+    "WCPO"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T16:53:01+00:00",
-   "updated": "2026-10-28T16:53:01+00:00",
+   "first_seen": "2026-10-28T16:56:55+00:00",
+   "updated": "2026-10-28T16:56:55+00:00",
    "is_city": false,
+   "city_reasons": [],
+   "city_score": 0.0,
    "is_big": false,
    "is_new": false,
    "developing": false,
-   "score": 1.82
-  },
-  {
-   "id": "neighborhood-councils-weigh-in-on-transit-corridor-zoning-ch",
-   "title": "Neighborhood councils weigh in on transit-corridor zoning changes",
-   "link": "https://signal/2",
-   "outlet": "Signal",
-   "summary": "Neighborhood councils weigh in on transit-corridor zoning changes",
-   "outlets": [
-    "Signal"
-   ],
-   "outlet_count": 1,
-   "first_seen": "2026-10-28T11:33:01+00:00",
-   "updated": "2026-10-28T11:33:01+00:00",
-   "is_city": true,
-   "is_big": false,
-   "is_new": false,
-   "developing": false,
-   "score": 1.646
+   "score": 2.008,
+   "city_rank": 0.0
   },
   {
    "id": "fc-cincinnati-season-ticket-holders-get-first-look-at-2027-s",
@@ -214,13 +236,39 @@
     "Enquirer"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T16:13:01+00:00",
-   "updated": "2026-10-28T16:13:01+00:00",
+   "first_seen": "2026-10-28T16:36:55+00:00",
+   "updated": "2026-10-28T16:36:55+00:00",
    "is_city": false,
+   "city_reasons": [],
+   "city_score": 0.0,
    "is_big": false,
    "is_new": false,
    "developing": false,
-   "score": 1.628
+   "score": 1.9,
+   "city_rank": 0.0
+  },
+  {
+   "id": "planning-commission-schedules-hearing-on-west-end-housing-pl",
+   "title": "Planning Commission schedules hearing on West End housing plan",
+   "link": "https://wvxu.org/2",
+   "outlet": "WVXU",
+   "summary": "Planning Commission schedules hearing on West End housing plan",
+   "outlets": [
+    "WVXU"
+   ],
+   "outlet_count": 1,
+   "first_seen": "2026-10-28T15:56:55+00:00",
+   "updated": "2026-10-28T15:56:55+00:00",
+   "is_city": true,
+   "city_reasons": [
+    "Planning & Development"
+   ],
+   "city_score": 3.0,
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.7,
+   "city_rank": 2.914
   },
   {
    "id": "library-branch-reopens-in-northside-after-year-long-renovati",
@@ -232,13 +280,60 @@
     "WCPO"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T14:53:01+00:00",
-   "updated": "2026-10-28T14:53:01+00:00",
+   "first_seen": "2026-10-28T15:16:55+00:00",
+   "updated": "2026-10-28T15:16:55+00:00",
    "is_city": false,
+   "city_reasons": [],
+   "city_score": 0.0,
    "is_big": false,
    "is_new": false,
    "developing": false,
-   "score": 1.304
+   "score": 1.521,
+   "city_rank": 0.0
+  },
+  {
+   "id": "cincinnati-city-council-members-react-to-new-curfew-numbers",
+   "title": "Cincinnati City Council members react to new curfew numbers",
+   "link": "https://news.google.com/g",
+   "outlet": "Spectrum News",
+   "summary": "Cincinnati City Council members react to new curfew numbers",
+   "outlets": [
+    "Spectrum News"
+   ],
+   "outlet_count": 1,
+   "first_seen": "2026-10-28T15:16:55+00:00",
+   "updated": "2026-10-28T15:16:55+00:00",
+   "is_city": true,
+   "city_reasons": [
+    "Council"
+   ],
+   "city_score": 5.0,
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.521,
+   "city_rank": 3.998
+  },
+  {
+   "id": "hamilton-county-commissioners-discuss-levy-renewal-timeline",
+   "title": "Hamilton County commissioners discuss levy renewal timeline",
+   "link": "https://wvxu.org/3",
+   "outlet": "WVXU",
+   "summary": "Hamilton County commissioners discuss levy renewal timeline",
+   "outlets": [
+    "WVXU"
+   ],
+   "outlet_count": 1,
+   "first_seen": "2026-10-28T14:46:55+00:00",
+   "updated": "2026-10-28T14:46:55+00:00",
+   "is_city": false,
+   "city_reasons": [],
+   "city_score": 0.0,
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.399,
+   "city_rank": 0.0
   },
   {
    "id": "bengals-prepare-for-sunday-matchup",
@@ -250,13 +345,16 @@
     "WLWT"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T18:23:01+00:00",
-   "updated": "2026-10-28T18:23:01+00:00",
+   "first_seen": "2026-10-28T18:46:55+00:00",
+   "updated": "2026-10-28T18:46:55+00:00",
    "is_city": false,
+   "city_reasons": [],
+   "city_score": 0.0,
    "is_big": false,
    "is_new": false,
    "developing": false,
-   "score": 1.168
+   "score": 1.363,
+   "city_rank": 0.0
   },
   {
    "id": "new-coffee-shop-takes-over-historic-storefront-in-northside",
@@ -268,13 +366,62 @@
     "WLWT"
    ],
    "outlet_count": 1,
-   "first_seen": "2026-10-28T13:13:01+00:00",
-   "updated": "2026-10-28T13:13:01+00:00",
+   "first_seen": "2026-10-28T13:36:55+00:00",
+   "updated": "2026-10-28T13:36:55+00:00",
    "is_city": false,
+   "city_reasons": [],
+   "city_score": 0.0,
    "is_big": false,
    "is_new": false,
    "developing": false,
-   "score": 0.988
+   "score": 1.152,
+   "city_rank": 0.0
+  },
+  {
+   "id": "congress-weighs-cuts-to-federal-grants-that-cities-use-for-h",
+   "title": "Congress weighs cuts to federal grants that cities use for housing",
+   "link": "https://news.google.com/fed",
+   "outlet": "Route Fifty",
+   "summary": "Congress weighs cuts to federal grants that cities use for housing",
+   "outlets": [
+    "Route Fifty"
+   ],
+   "outlet_count": 1,
+   "first_seen": "2026-10-28T17:46:55+00:00",
+   "updated": "2026-10-28T17:46:55+00:00",
+   "is_city": true,
+   "city_reasons": [
+    "Federal"
+   ],
+   "city_score": 3.0,
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 0.989,
+   "city_rank": 3.955
+  },
+  {
+   "id": "neighborhood-councils-weigh-in-on-transit-corridor-zoning-ch",
+   "title": "Neighborhood councils weigh in on transit-corridor zoning changes",
+   "link": "https://signal/2",
+   "outlet": "Signal",
+   "summary": "Neighborhood councils weigh in on transit-corridor zoning changes",
+   "outlets": [
+    "Signal"
+   ],
+   "outlet_count": 1,
+   "first_seen": "2026-10-28T11:56:55+00:00",
+   "updated": "2026-10-28T11:56:55+00:00",
+   "is_city": true,
+   "city_reasons": [
+    "Planning & Development"
+   ],
+   "city_score": 3.0,
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 0.873,
+   "city_rank": 1.496
   }
  ],
  "sources_status": [
@@ -289,7 +436,7 @@
   {
    "source": "WCPO",
    "ok": true,
-   "items": 3,
+   "items": 5,
    "used": "https://www.wcpo.com/news/local-news.rss",
    "used_fallback": false,
    "errors": []
@@ -297,7 +444,7 @@
   {
    "source": "WLWT",
    "ok": true,
-   "items": 4,
+   "items": 5,
    "used": "https://www.wlwt.com/local-news-rss",
    "used_fallback": false,
    "errors": []
@@ -305,7 +452,7 @@
   {
    "source": "FOX19",
    "ok": true,
-   "items": 2,
+   "items": 3,
    "used": "https://www.fox19.com/arc/outboundfeeds/rss/category/news/?outputType=xml",
    "used_fallback": false,
    "errors": []
@@ -341,6 +488,30 @@
    "ok": true,
    "items": 2,
    "used": "https://news.google.com/rss/search?q=Cincinnati+(%22city+council%22+OR+%22city+hall%22+OR+%22city+manager%22+OR+mayor)+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": []
+  },
+  {
+   "source": "Ohio Capital Journal",
+   "ok": true,
+   "items": 2,
+   "used": "https://ohiocapitaljournal.com/feed/",
+   "used_fallback": false,
+   "errors": []
+  },
+  {
+   "source": "Ohio legislation sweep",
+   "ok": true,
+   "items": 1,
+   "used": "https://news.google.com/rss/search?q=Ohio+(lawmakers+OR+Statehouse+OR+%22House+Bill%22+OR+%22Senate+Bill%22)+(cities+OR+%22local+governments%22+OR+municipalities+OR+%22home+rule%22)+when:2d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": []
+  },
+  {
+   "source": "Federal local-gov sweep",
+   "ok": true,
+   "items": 2,
+   "used": "https://news.google.com/rss/search?q=(Congress+OR+%22federal+funding%22+OR+%22executive+order%22)+(%22local+governments%22+OR+cities+OR+mayors)+when:1d&hl=en-US&gl=US&ceid=US:en",
    "used_fallback": false,
    "errors": []
   }

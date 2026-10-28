@@ -37,11 +37,13 @@
 
   /* ---------- top bar ---------- */
   #bar {
-    position: absolute; top: 34px; left: 64px; right: 64px;
-    display: flex; justify-content: space-between; align-items: center;
+    position: absolute; top: 30px; left: 64px; right: 64px;
+    display: flex; justify-content: space-between; align-items: flex-start; white-space: nowrap;
     font-size: 13px; letter-spacing: 0.06em; color: var(--muted);
   }
-  #bar .left, #bar .right { display: flex; align-items: center; gap: 12px; }
+  #bar .left { display: flex; align-items: center; gap: 12px; min-height: 34px; }
+  #bar .right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+  #bar .sub { display: flex; gap: 10px; font-size: 11px; letter-spacing: 0.05em; }
   #bar .city { color: var(--ink); letter-spacing: 0.18em; }
   #wx { display: flex; align-items: center; gap: 8px; color: var(--ink); }
   #wx svg { width: 20px; height: 20px; }
@@ -49,6 +51,14 @@
   .pill.notable { border-color: var(--city); background: rgba(227,162,26,0.14); color: var(--city-text); }
   .pill.alert { border-color: var(--dev); background: rgba(226,96,60,0.12); color: var(--dev-text); }
   .stale { color: var(--dev-text); }
+
+  /* City Hall / Biggest switch */
+  .toggle { display: inline-flex; padding: 3px; gap: 2px; border-radius: 999px; background: rgba(255,255,255,0.45); border: 1px solid #A6B9C6; }
+  .toggle button { font: inherit; font-size: 12px; letter-spacing: 0.06em; color: var(--muted); background: transparent;
+    border: 0; border-radius: 999px; padding: 5px 12px; cursor: pointer; }
+  .toggle button:hover { color: var(--ink); }
+  .toggle button[aria-pressed="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 2px rgba(19,40,58,0.15); }
+  .toggle button:focus-visible { outline: 2px solid var(--city); outline-offset: 1px; }
 
   /* ---------- lead story ---------- */
   #lead { position: absolute; top: 120px; left: 64px; width: 610px; display: flex; flex-direction: column; gap: 14px; transition: opacity 1.2s ease; }
@@ -243,8 +253,11 @@
       <span id="wxchange" class="pill" hidden></span>
     </div>
     <div class="right">
-      <span id="counts"></span>
-      <span id="updated"></span>
+      <div id="mode" class="toggle" role="group" aria-label="Which story leads">
+        <button type="button" data-mode="city" aria-pressed="true" title="Lead with the biggest story for City work">City Hall</button>
+        <button type="button" data-mode="general" aria-pressed="false" title="Lead with the biggest story overall">Biggest</button>
+      </div>
+      <div class="sub"><span id="counts"></span><span id="updated"></span></div>
     </div>
   </div>
 
@@ -273,6 +286,18 @@ const DATA_URL = params.get('sample') ? `sample-${params.get('sample')}.json` : 
 
 const $ = (id) => document.getElementById(id);
 let lastKey = '';
+let lastData = null;
+
+// Which story leads: 'city' (default) or 'general'. Remembered in this browser.
+let mode = 'city';
+try { mode = localStorage.getItem('leadMode') === 'general' ? 'general' : 'city'; } catch (e) {}
+
+function setMode(next) {
+  mode = next;
+  try { localStorage.setItem('leadMode', mode); } catch (e) {}
+  document.querySelectorAll('#mode button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
+  if (lastData) render(lastData);
+}
 
 // Feed text is untrusted, so it is always inserted as text, never as HTML.
 function el(tag, cls, text) {
@@ -329,14 +354,24 @@ function renderWeather(w) {
 }
 
 /* ---------- lead story ---------- */
-function renderLead(story, isDev) {
-  const label = isDev ? 'DEVELOPING' : story.is_city ? 'CITY HALL' : 'AROUND TOWN';
+// "CITY HALL · CITY MANAGER", "CITY HALL · POLICE", "CITY HALL · STATE LAW"...
+function cityLabel(story) {
+  const why = (story.city_reasons || [])[0];
+  return why && why !== 'City Hall' ? `CITY HALL · ${why.toUpperCase()}` : 'CITY HALL';
+}
+
+function renderLead(story, isDev, noCityNews) {
+  const label = isDev ? 'DEVELOPING'
+    : story.is_city ? cityLabel(story)
+    : mode === 'general' ? 'TOP STORY'
+    : 'AROUND TOWN';
   const color = isDev ? 'var(--dev)' : story.is_city ? 'var(--city)' : '#6F9BB3';
   const textColor = isDev ? 'var(--dev-text)' : story.is_city ? 'var(--city-text)' : 'var(--muted)';
   const others = story.outlet_count - 1;
   const meta = isDev
     ? `· ${story.outlet_count} newsrooms · first report ${ago(story.first_seen)} · updated ${ago(story.updated)}`
-    : `· ${story.outlet}${others > 0 ? ` and ${others} other${others > 1 ? 's' : ''}` : ''} · ${ago(story.first_seen)}`;
+    : `· ${story.outlet}${others > 0 ? ` and ${others} other${others > 1 ? 's' : ''}` : ''} · ${ago(story.first_seen)}` +
+      (noCityNews ? ' · no City Hall news yet' : '');
 
   const tag = $('tag');
   tag.querySelector('.dot').style.background = color;
@@ -366,7 +401,7 @@ function renderLead(story, isDev) {
 function chip(s, devId) {
   const a = el('a', 'chip ' + (s.id === devId ? 'dev' : s.is_city ? 'city' : 'town'));
   a.href = s.link; a.target = '_blank'; a.rel = 'noopener';
-  a.title = `${s.title} — ${s.outlets.join(', ')}`;
+  a.title = `${s.title} — ${s.outlets.join(', ')}` + (s.is_city ? ` (${(s.city_reasons || []).join(', ')})` : '');
   a.append(el('span', 'd'));
   a.append(el('span', 'src mono', s.outlet.toUpperCase() + (s.outlet_count > 1 ? ` +${s.outlet_count - 1}` : '')));
   a.append(el('span', null, s.title));
@@ -403,28 +438,34 @@ function render(data) {
   $('empty').style.display = stories.length ? 'none' : 'block';
   $('lead').style.display = stories.length ? 'flex' : 'none';
 
-  const devStory = data.developing ? stories.find((s) => s.id === data.developing) : null;
-  const lead = devStory || stories[0];
+  lastData = data;
+  const byId = (id) => (id ? stories.find((s) => s.id === id) : null);
+  const devStory = byId(data.developing);
+  // A developing story always leads. Otherwise the switch decides.
+  const cityPick = byId(data.lead && data.lead.city) || stories.find((s) => s.is_city);
+  const generalPick = byId(data.lead && data.lead.general) || stories[0];
+  const noCityNews = mode === 'city' && !cityPick;
+  const lead = devStory || (mode === 'city' ? cityPick || generalPick : generalPick);
   document.body.classList.toggle('is-dev', !!devStory);
   $('clockFace').setAttribute('fill', devStory ? '#E2603C' : '#E3A21A');
   $('clockHalo').setAttribute('fill', devStory ? '#E2603C' : '#E3A21A');
   $('clockFace').classList.toggle('pulse', !!devStory);
 
   const c = data.counts || {};
-  $('counts').textContent = `${c.stories ?? stories.length} stories today · ${c.city ?? 0} City Hall`;
+  $('counts').textContent = `${c.stories ?? stories.length} stories today · ${c.city ?? 0} for City Hall`;
   const age = (Date.now() - new Date(data.generated_at)) / 60000;
   const upd = $('updated');
   upd.textContent = age > 60 ? `● paused since ${new Date(data.generated_at).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}` : '';
   upd.className = age > 60 ? 'stale' : '';
 
   // Only rebuild the moving parts when the news actually changed (keeps the river smooth).
-  const key = stories.map((s) => s.id + s.outlet_count).join('|') + data.developing;
+  const key = stories.map((s) => s.id + s.outlet_count).join('|') + data.developing + mode + (lead && lead.id);
   if (key === lastKey) return;
   const first = !lastKey;
   lastKey = key;
   if (!lead) return;
   const swap = () => {
-    renderLead(lead, !!devStory);
+    renderLead(lead, !!devStory, noCityNews);
     renderRiver(stories.filter((s) => s !== lead), devStory && devStory.id);
     $('lead').classList.remove('fading');
   };
@@ -459,6 +500,8 @@ async function stayAwake() {
   catch (e) { /* not supported or not allowed: no problem */ }
 }
 
+document.querySelectorAll('#mode button').forEach((b) => b.addEventListener('click', () => setMode(b.dataset.mode)));
+setMode(mode);
 addEventListener('resize', fit);
 document.addEventListener('visibilitychange', stayAwake);
 fit(); tickClock(); load(); stayAwake();

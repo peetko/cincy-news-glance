@@ -46,6 +46,24 @@
       "name": "City Hall sweep",
       "sweep": true,
       "feeds": ["https://news.google.com/rss/search?q=Cincinnati+(%22city+council%22+OR+%22city+hall%22+OR+%22city+manager%22+OR+mayor)+when:1d&hl=en-US&gl=US&ceid=US:en"]
+    },
+    {
+      "name": "Ohio Capital Journal",
+      "statewide": true,
+      "max_items": 15,
+      "feeds": ["https://ohiocapitaljournal.com/feed/"]
+    },
+    {
+      "name": "Ohio legislation sweep",
+      "sweep": true,
+      "max_items": 15,
+      "feeds": ["https://news.google.com/rss/search?q=Ohio+(lawmakers+OR+Statehouse+OR+%22House+Bill%22+OR+%22Senate+Bill%22)+(cities+OR+%22local+governments%22+OR+municipalities+OR+%22home+rule%22)+when:2d&hl=en-US&gl=US&ceid=US:en"]
+    },
+    {
+      "name": "Federal local-gov sweep",
+      "sweep": true,
+      "max_items": 10,
+      "feeds": ["https://news.google.com/rss/search?q=(Congress+OR+%22federal+funding%22+OR+%22executive+order%22)+(%22local+governments%22+OR+cities+OR+mayors)+when:1d&hl=en-US&gl=US&ceid=US:en"]
     }
   ],
 
@@ -60,14 +78,37 @@
     "CityBeat": ["citybeat"],
     "Business Courier": ["bizjournals", "business courier"],
     "Spectrum News": ["spectrum"],
+    "Ohio Capital Journal": ["ohio capital journal"],
+    "Statehouse News Bureau": ["statehouse news bureau", "statenews"],
     "LINK nky": ["link nky", "linknky"]
   },
 
-  "city_keywords": {
-    "3": ["city council", "councilmember", "council member", "city hall", "city manager", "vice mayor", "mayor", "city solicitor"],
-    "2": ["ordinance", "budget", "zoning", "planning commission", "levy", "income tax", "earnings tax", "DOTE", "Water Works", "GCWW", "MSD", "Metropolitan Sewer", "Cincinnati Police", "CPD", "Cincinnati Fire", "Cincinnati Parks", "Recreation Commission", "streetcar", "Connector", "Metro", "SORTA", "Hamilton County commission", "county commissioners", "Port Authority", "3CDC", "Cincinnati Public Schools", "CPS"],
-    "1": ["council", "neighborhood", "housing", "permit", "development", "public safety", "affordable"]
-  },
+  "_city_relevance_readme": "What makes a story matter for City work. Groups are checked in order; the first match becomes the label on screen (e.g. CITY HALL · CITY MANAGER). Add names as people change roles. Weight = how strongly it counts.",
+  "city_relevance": [
+    {"label": "City Manager", "weight": 6, "terms": ["city manager", "Sheryl Long", "Sheryl M. M. Long", "Long administration"]},
+    {"label": "City staff", "weight": 4, "terms": ["assistant city manager", "John Brazina", "Billy Weber", "Cathy Bailey", "budget director", "Andrew Dudas", "finance director", "Steve Webb", "city solicitor", "police chief", "fire chief", "city administration", "city employees", "city workers", "city staff", "city department"]},
+    {"label": "Mayor", "weight": 5, "terms": ["Pureval", "Mayor Aftab", "Cincinnati mayor", "mayor's office"]},
+    {"label": "Council", "weight": 5, "terms": ["city council", "councilmember", "council member", "vice mayor", "Lemon Kearney", "Jan-Michele Lemon Kearney", "Scotty Johnson", "Anna Albi", "Jeff Cramerding", "Cramerding", "Ryan James", "Mark Jeffreys", "Evan Nolan", "Meeka Owens", "Seth Walsh", "council committee", "council vote"]},
+    {"label": "City Hall", "weight": 4, "terms": ["city hall", "city budget", "earnings tax", "city income tax", "city of Cincinnati", "Cincinnati officials", "city leaders", "city officials", "ordinance"]},
+    {"label": "Police", "weight": 3, "terms": ["Cincinnati Police", "Cincinnati police", "CPD", "police department", "police officer", "officers"], "requires_any": ["Cincinnati", "CPD", "city"]},
+    {"label": "Fire", "weight": 3, "terms": ["Cincinnati Fire", "fire department", "firefighters", "CFD"], "requires_any": ["Cincinnati", "CFD", "city"]},
+    {"label": "Buildings & Inspections", "weight": 3, "terms": ["Buildings & Inspections", "Buildings and Inspections", "building inspectors", "code enforcement", "building permit", "condemned"]},
+    {"label": "Transportation", "weight": 3, "terms": ["DOTE", "Transportation and Engineering", "Transportation & Engineering", "streetcar", "Connector", "road work", "repaving", "Vision Zero"]},
+    {"label": "Water & Sewers", "weight": 3, "terms": ["Water Works", "GCWW", "MSD", "Metropolitan Sewer", "Stormwater Management", "water main"]},
+    {"label": "Parks & Rec", "weight": 2, "terms": ["Cincinnati Parks", "Park Board", "Recreation Commission", "rec center"]},
+    {"label": "Health Dept", "weight": 3, "terms": ["Cincinnati Health Department", "health commissioner", "Board of Health"]},
+    {"label": "Planning & Development", "weight": 3, "terms": ["Planning Commission", "zoning", "Planning and Engagement", "Community and Economic Development", "DCED", "Connected Communities", "tax abatement", "TIF"]},
+    {"label": "Public Services", "weight": 2, "terms": ["Public Services", "trash pickup", "snow removal", "potholes", "311"]},
+    {"label": "Public Safety", "weight": 2, "terms": ["Emergency Communications Center", "911 center", "Citizen Complaint Authority", "Office of Performance and Data Analytics", "OPDA"]},
+    {"label": "State law", "kind": "legislation", "weight": 4,
+     "terms": ["Statehouse", "General Assembly", "Ohio House", "Ohio Senate", "state lawmakers", "state legislators", "House Bill", "Senate Bill", "state budget", "DeWine", "Ohio Supreme Court", "legislature"],
+     "requires_any": ["cities", "city", "municipal", "municipalities", "local government", "local governments", "home rule", "local control", "preempt", "preemption", "Local Government Fund", "property tax", "Cincinnati", "counties", "mayors"]},
+    {"label": "Federal", "kind": "legislation", "national": true, "weight": 3,
+     "terms": ["Congress", "federal funding", "federal grant", "federal grants", "executive order", "HUD", "Department of Transportation", "FEMA", "Senate passes", "House passes"],
+     "requires_any": ["cities", "municipal", "municipalities", "local government", "local governments", "mayors", "Cincinnati", "community development block grant", "CDBG"]}
+  ],
+
+  "ohio_terms": ["Ohio", "Ohioans", "Statehouse", "Columbus", "DeWine"],
 
   "local_terms": ["Cincinnati", "Cincy", "Hamilton County", "Northern Kentucky", "NKY", "Tri-State", "Covington", "Newport", "Ohio River", "Over-the-Rhine", "OTR", "West End", "Avondale", "Clifton", "Northside", "Westwood", "Price Hill", "Oakley", "Hyde Park", "Walnut Hills", "Madisonville", "Mount Auburn", "Mt. Auburn", "Downtown", "Camp Washington", "Evanston", "College Hill", "Bond Hill", "Roselawn", "Pleasant Ridge", "Mount Washington", "Mt. Washington", "Mount Adams", "East End", "Linwood", "Kennedy Heights", "Sayler Park", "Corryville", "Pendleton", "Queensgate", "Mount Airy", "Mt. Airy", "Carthage", "Hartwell", "Winton Hills", "Columbia Tusculum", "Fairmount", "Norwood", "Mason", "West Chester", "Blue Ash"],
 
@@ -76,6 +117,7 @@
   "breaking_terms": ["breaking", "live updates", "shooting", "fire", "crash", "evacuation", "evacuated", "lockdown", "water main", "boil advisory", "power outage", "outages", "closed", "closes", "shut down", "manhunt", "tornado", "flooding", "explosion", "collapse"],
 
   "thresholds": {
+    "city_min_score": 3,
     "lookback_hours": 18,
     "big_story_outlets": 3,
     "developing_outlets": 5,

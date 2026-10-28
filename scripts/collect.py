@@ -5,7 +5,8 @@ Collects Cincinnati headlines + weather and writes site/news.json.
 How it works, in short:
   1. Read every feed listed in config.json (RSS = a site's list of latest headlines).
   2. Group headlines that are about the same story, even across outlets.
-  3. Score each story: more outlets covering it + City Hall keywords + newer = higher.
+  3. Score each story twice: overall (how many outlets + how new) and for City work
+     (city staff, elected officials, departments, laws that affect local government).
   4. Ask the National Weather Service (free, no key) for now + next 24 hours.
   5. Save it all as one small JSON file that the display page reads.
 
@@ -147,6 +148,8 @@ def collect_items(cfg, now):
                 data = fetch(url)
                 items = parse_feed(data, src["name"], "news.google.com" in url, alias_pairs, now)
                 if items:
+                    if src.get("max_items"):
+                        items = sorted(items, key=lambda i: i["published"], reverse=True)[: src["max_items"]]
                     got, used = items, url
                     break
                 errors.append(f"empty: {url}")
@@ -195,13 +198,49 @@ def cluster(items):
     return clusters
 
 
+def compile_relevance(cfg):
+    """City-relevance groups from config: each has a label, a weight and its terms."""
+    groups = []
+    for g in cfg["city_relevance"]:
+        groups.append({
+            "label": g["label"],
+            "kind": g.get("kind", "city"),
+            "weight": g["weight"],
+            "terms": [term_regex(t) for t in g["terms"]],
+            "requires": [term_regex(t) for t in g.get("requires_any", [])],
+            "national": g.get("national", False),
+        })
+    return groups
+
+
+def city_relevance(text, groups, is_local, is_ohio):
+    """How relevant a story is to working at the City, and why (e.g. 'City Manager', 'Police')."""
+    score, reasons = 0.0, []
+    for g in groups:
+        if not any(rx.search(text) for rx in g["terms"]):
+            continue
+        if g["requires"] and not any(rx.search(text) for rx in g["requires"]):
+            continue
+        w = g["weight"]
+        if g["kind"] == "legislation":
+            # State/federal laws count when they touch local government; Ohio ones count most.
+            if not (is_local or is_ohio or g["national"]):
+                w *= 0.6
+        elif not is_local:
+            w *= 0.25          # another city's mayor, council or police
+        score += w
+        reasons.append(g["label"])
+    return min(score, 10.0), reasons
+
+
 def score_clusters(clusters, cfg, now):
     th = cfg["thresholds"]
-    city_terms = [(int(w), term_regex(t)) for w, terms in cfg["city_keywords"].items() for t in terms]
+    groups = compile_relevance(cfg)
     local_terms = [term_regex(t) for t in cfg["local_terms"]]
+    ohio_terms = [term_regex(t) for t in cfg.get("ohio_terms", ["Ohio"])]
     down_terms = [term_regex(t) for t in cfg.get("downweight_terms", [])]
     breaking_terms = [term_regex(t) for t in cfg.get("breaking_terms", [])]
-    local_outlets = {s["name"] for s in cfg["sources"] if not s.get("sweep")}
+    local_outlets = {s["name"] for s in cfg["sources"] if not s.get("sweep") and not s.get("statewide")}
 
     stories = []
     for c in clusters:
@@ -211,25 +250,25 @@ def score_clusters(clusters, cfg, now):
         latest = max(i["published"] for i in its)
         text = " ".join(i["title"] + " " + i["summary"] for i in its)
 
-        matched = sorted({w for w, rx in city_terms if rx.search(text)}, reverse=True)
-        city_score = sum(w for w, rx in city_terms if rx.search(text))
         is_local = any(rx.search(text) for rx in local_terms) or any(o in local_outlets for o in outlets)
-        if not is_local:
-            city_score *= 0.3            # another city's mayor/council
-        city_score = min(city_score, 8)
-        is_city = city_score >= 3
+        is_ohio = any(rx.search(text) for rx in ohio_terms)
+        city_score, reasons = city_relevance(text, groups, is_local, is_ohio)
+        is_legislation = any(r in ("State law", "Federal") for r in reasons)
+        is_city = city_score >= th.get("city_min_score", 3)
 
         n = len(outlets)
         age_h = max((now - latest).total_seconds() / 3600, 0)
         recency = math.exp(-age_h / 6)   # a story loses ~half its weight every 4 hours
-        score = (2.0 * n + 1.2 * city_score + (1.0 if is_local else -2.0)) * recency
-        if any(rx.search(text) for rx in down_terms):
-            score *= 0.5
+        down = 0.5 if any(rx.search(text) for rx in down_terms) else 1.0
 
-        # "Developing" = breaking news: many outlets fast, or a breaking-type story picked up quickly.
+        # Biggest overall: mostly how many newsrooms have it, and how fresh it is.
+        score = (2.5 * n + (1.0 if is_local else -1.0)) * recency * down
+        # Biggest for City work: relevance first, coverage second.
+        city_rank = (1.6 * city_score + 1.2 * n) * recency * down if is_city else 0.0
+
         fresh = (now - first) <= timedelta(hours=th["developing_window_hours"])
         breaking = any(rx.search(text) for rx in breaking_terms)
-        developing = fresh and (
+        developing = is_local and fresh and (
             n >= th["developing_outlets"]
             or (breaking and n >= th["big_story_outlets"])
         )
@@ -247,21 +286,28 @@ def score_clusters(clusters, cfg, now):
             "first_seen": first.isoformat(),
             "updated": latest.isoformat(),
             "is_city": is_city,
+            "city_reasons": reasons if is_city else [],
+            "city_score": round(city_score, 2),
             "is_big": n >= th["big_story_outlets"],
             "is_new": (now - first) <= timedelta(minutes=th["new_minutes"]),
             "developing": developing,
             "score": round(score, 3),
+            "city_rank": round(city_rank, 3),
             "_age_h": age_h,
-            "_local": is_local,
+            "_keep": is_local or (is_legislation and is_city),
         })
 
     lookback = th["lookback_hours"]
-    stories = [s for s in stories if s["_age_h"] <= lookback and s["_local"] and s["score"] > 0]
+    stories = [s for s in stories if s["_age_h"] <= lookback and s["_keep"] and s["score"] > 0]
     stories.sort(key=lambda s: s["score"], reverse=True)
-    for s in stories:
+    top = stories[: th["max_stories"]]
+    # Never let the overall cut push out City-relevant stories.
+    extra_city = [s for s in stories[th["max_stories"]:] if s["is_city"]][:15]
+    out = top + extra_city
+    for s in out:
         s.pop("_age_h", None)
-        s.pop("_local", None)
-    return stories[: th["max_stories"]]
+        s.pop("_keep", None)
+    return out
 
 
 # ---------------------------------------------------------------- weather (National Weather Service)
@@ -353,12 +399,18 @@ def build(cfg, now=None):
 
     dev_list = [s for s in stories if s["developing"]]
     developing = max(dev_list, key=lambda s: (s["outlet_count"], s["first_seen"])) if dev_list else None
+    city_list = [s for s in stories if s["is_city"]]
+    lead_city = max(city_list, key=lambda s: s["city_rank"]) if city_list else None
     cutoff = now - timedelta(hours=12)
     today = [s for s in stories if datetime.fromisoformat(s["first_seen"]) >= cutoff]
     return {
         "generated_at": now.isoformat(),
         "weather": weather,
         "developing": developing["id"] if developing else None,
+        "lead": {
+            "city": lead_city["id"] if lead_city else None,
+            "general": stories[0]["id"] if stories else None,
+        },
         "counts": {"stories": len(today), "city": sum(1 for s in today if s["is_city"])},
         "stories": stories,
         "sources_status": status,

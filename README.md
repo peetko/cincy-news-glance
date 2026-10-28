@@ -1,6 +1,6 @@
 # Cincy News Glance
 
-A calm, always-on news screen for a spare laptop: the Cincinnati skyline by day, the biggest local story in the sky, and smaller headlines drifting down the Ohio. City Hall stories get a marigold dot. When a big story is breaking, City Hall's clock pulses coral and the horizon warms up a little.
+A calm, always-on news screen for a spare laptop: the Cincinnati skyline by day, the lead story in the sky, and smaller headlines drifting down the Ohio. City Hall stories get a marigold dot. When a big story is breaking, City Hall's clock pulses coral and the horizon warms up a little.
 
 It costs nothing to run: GitHub collects the headlines on a schedule and hosts the page for free.
 
@@ -27,14 +27,23 @@ It costs nothing to run: GitHub collects the headlines on a schedule and hosts t
 
 Preview without live data: add `?sample=calm` or `?sample=dev` to the page address.
 
+## The City Hall / Biggest switch
+
+Top right of the screen. It starts on **City Hall**, and the browser remembers your choice.
+
+- **City Hall** leads with the biggest story for City work. The label says why, e.g. `CITY HALL · CITY MANAGER`, `CITY HALL · POLICE` or `CITY HALL · STATE LAW`.
+- **Biggest** leads with the most-covered local story overall, whatever it's about.
+- A **developing** story takes the lead in either mode.
+- If there's no City news yet that day, City Hall mode shows the biggest story and says "no City Hall news yet".
+
 ## Making it yours: `config.json`
 
 Edit it right in GitHub: open the file, click the pencil icon, then **Commit changes**. The page republishes on its own.
 
 | Setting | What it does |
 |---|---|
-| `sources` | The outlets. Each has direct `feeds` (tried in order) and an optional Google News `fallback`. |
-| `city_keywords` | Words that make a story "City Hall". Bigger number = stronger signal. Add names of people or programs you track. |
+| `sources` | The outlets. Each has direct `feeds` (tried in order) and an optional Google News `fallback`. Statewide sources (Ohio Capital Journal and two Google News sweeps for state and federal legislation) only add stories that are local or City-relevant. |
+| `city_relevance` | What counts for City work, in labeled groups: City Manager, City staff, Mayor, Council, departments (Police, Fire, Buildings & Inspections, DOTE, Water Works…), and state or federal legislation that touches local government. Each group has a `weight`. Update names when people change roles. |
 | `local_terms` | Words that make a story count as local. Stories with none of them are dropped. |
 | `downweight_terms` | Topics to push down (sports, by default). |
 | `breaking_terms` | Words that help flag breaking news. |
@@ -44,7 +53,7 @@ Edit it right in GitHub: open the file, click the pencil icon, then **Commit cha
 
 - Headlines about the same event are grouped, even when each outlet words them differently.
 - **More newsrooms covering it** counts the most. That's the stand-in for "most read", which feeds don't report.
-- **City Hall keywords** add points.
+- **City relevance** is scored separately. The City Manager counts most, then the mayor and council, city staff, and departments. State or federal bills count only when they mention cities, local government or home rule. Police, mayors and councils from other towns barely count.
 - **Age**: a story loses about half its weight every 4 hours.
 - **Developing** = 5+ newsrooms within 3 hours, or 3+ newsrooms on a breaking-type story (fire, closures, outage…).
 
