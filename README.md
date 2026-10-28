@@ -16,13 +16,13 @@ It costs nothing to run: GitHub collects the headlines on a schedule and hosts t
 - **RSS feed**: a list of a site's latest headlines that's meant for programs to read. Most local outlets publish one.
 - **Why not have the page read the feeds itself?** Browsers block a page from reading other websites' data (a rule called CORS), so a small script fetches everything and saves it as `news.json` next to the page.
 - **GitHub Actions**: GitHub's free scheduled computer. The file `.github/workflows/update.yml` tells it to run the script every 15 minutes on weekdays during work hours.
-- **GitHub Pages**: GitHub's free web hosting. Your page will live at `https://peterkobak.github.io/cincy-news-glance/`.
+- **GitHub Pages**: GitHub's free web hosting. Your page will live at `https://peetko.github.io/cincy-news-glance/`.
 
 ## One-time setup
 
 1. **Settings → Pages →** under "Build and deployment", set **Source** to **GitHub Actions**.
 2. **Actions tab →** if GitHub asks, click to enable workflows. Pick **Update news → Run workflow**. Takes about a minute.
-3. Open `https://peterkobak.github.io/cincy-news-glance/` on the laptop, then press **F11** for full screen.
+3. Open `https://peetko.github.io/cincy-news-glance/` on the laptop, then press **F11** for full screen.
 4. Check what worked: open `…/cincy-news-glance/news.json` and scroll to `sources_status`. Each outlet shows `ok: true/false` and whether it fell back to Google News.
 
 Preview without live data: add `?sample=calm` or `?sample=dev` to the page address.
