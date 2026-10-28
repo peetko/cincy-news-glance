@@ -8,6 +8,23 @@
      "link": "https://local12.com/news/local/hamilton-ohio-city-council-marijuana-dispensaries-proposals",
      "outlet": "Local 12", "expect": {"city": false, "place": "other"}},
 
+    {"note": "Delhi Township is not the city — caught Oct 28",
+     "title": "West side grandmother arrested, home condemned for deplorable conditions",
+     "summary": "A Delhi Township woman was arrested after her father and four children were found to be living in an unsafe home covered in feces.",
+     "outlet": "Local 12", "expect": {"city": false, "place": "other"}},
+
+    {"note": "TV datelines say CINCINNATI even for suburban stories",
+     "title": "West side grandmother arrested, home condemned for deplorable conditions",
+     "summary": "CINCINNATI (WKRC) — A Delhi Township woman was arrested after her father and four children were found living in an unsafe home.",
+     "outlet": "Local 12", "expect": {"city": false, "place": "other"}},
+
+    {"note": "Headline names Cincinnati, summary names a suburb: still Cincinnati",
+     "title": "Cincinnati police arrest man after chase that ended in Norwood", "outlet": "WCPO",
+     "expect": {"place": "yes"}},
+
+    {"title": "Green Township trustees approve new fire station", "outlet": "WVXU",
+     "expect": {"city": false, "place": "other"}},
+
     {"note": "Another town's council",
      "title": "Norwood council member resigns after six years", "outlet": "WLWT",
      "expect": {"city": false, "place": "other"}},

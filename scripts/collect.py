@@ -388,24 +388,43 @@ class Rules:
         self.anchors_i = [re.compile(rx.pattern, re.I) for rx in self.anchors]
         # "Hamilton" the city, not "Hamilton County" (which includes Cincinnati), and not
         # Cincinnati streets named after suburbs (Reading Road, Montgomery Road, Colerain Avenue...).
-        tail = r"(?!\s+(County|Township|Road|Rd|Avenue|Ave|Street|St|Pike|Boulevard|Blvd|Parkway))"
+        # Townships (Delhi, Green, Anderson, Colerain...) are not part of the city, so they DO count as other places.
+        tail = r"(?!\s+(County|Road|Rd|Avenue|Ave|Street|St|Pike|Boulevard|Blvd|Parkway))"
         self.others = [re.compile(term_regex(t).pattern + tail, term_regex(t).flags) for t in cfg.get("other_municipalities", [])]
         self.others_i = [re.compile(rx.pattern, re.I) for rx in self.others]
 
 
-def place_check(text, rules, url_words=""):
+# TV stations start most summaries with "CINCINNATI (WKRC) —" even for suburban stories.
+DATELINE = re.compile(r"^\s*[A-Z][A-Z .,'’-]{2,40}(?:\s*\([A-Za-z0-9 .]+\))?\s*[—–:-]+\s*")
+
+
+def earliest(patterns, text):
+    """(position, matched text) of the first match of any pattern, or (None, None)."""
+    best = (None, None)
+    for rx in patterns:
+        m = rx.search(text)
+        if m and (best[0] is None or m.start() < best[0]):
+            best = (m.start(), m.group(0))
+    return best
+
+
+def place_check(titles, summaries, rules, url_words=""):
     """
-    Is the story clearly about the City of Cincinnati?  Returns (verdict, evidence).
-      'yes'   - names Cincinnati, a Cincinnati neighborhood, or a City official/department
-      'other' - names a different city (Hamilton, Covington, Norwood...) and not Cincinnati
+    Is the story about the City of Cincinnati?  Returns (verdict, evidence).
+      'yes'   - about Cincinnati (a neighborhood, a City official or department...)
+      'other' - about a different place (Delhi Township, Hamilton, Covington, Norwood...)
       'maybe' - names no place at all ("city council will hear proposals...")
+    The headline decides first; then whichever place the summary mentions first; then the
+    story's web address. Datelines like "CINCINNATI (WKRC) —" are ignored.
     """
-    hit = first_hit(rules.anchors, text) or first_hit(rules.anchors_i, url_words)
-    if hit:
-        return "yes", hit
-    hit = first_hit(rules.others, text) or first_hit(rules.others_i, url_words)
-    if hit:
-        return "other", hit
+    for text, ci in ((titles, False), (" ".join(DATELINE.sub("", x) for x in summaries), False), (url_words, True)):
+        a_pos, a_hit = earliest(rules.anchors_i if ci else rules.anchors, text)
+        o_pos, o_hit = earliest(rules.others_i if ci else rules.others, text)
+        if a_pos is None and o_pos is None:
+            continue
+        if o_pos is None or (a_pos is not None and a_pos <= o_pos):
+            return "yes", a_hit
+        return "other", o_hit
     return "maybe", None
 
 
@@ -491,7 +510,8 @@ def score_clusters(clusters, rules, now, memory=None):
         text = OUTLET_NAMES.sub(" ", " ".join(i["title"] + " " + i["summary"] for i in its))
         # Story web addresses often name the place: local12.com/news/local/hamilton-ohio-...
         url_words = " ".join(re.sub(r"[-_/.]+", " ", urlparse(i["link"]).path) for i in its if "news.google.com" not in i["link"])
-        place, place_hint = place_check(text, rules, url_words)
+        place, place_hint = place_check(OUTLET_NAMES.sub(" ", " | ".join(i["title"] for i in its)),
+                                        [OUTLET_NAMES.sub(" ", i["summary"]) for i in its], rules, url_words)
         if any(i.get("_official") for i in its):
             place, place_hint = "yes", "City of Cincinnati release"
 
