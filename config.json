@@ -75,7 +75,7 @@
       "name": "Federal local-gov sweep",
       "sweep": true,
       "max_items": 10,
-      "feeds": ["https://news.google.com/rss/search?q=(Congress+OR+%22federal+funding%22+OR+%22executive+order%22)+(%22local+governments%22+OR+cities+OR+mayors)+when:1d&hl=en-US&gl=US&ceid=US:en"]
+      "feeds": ["https://news.google.com/rss/search?q=(%22U.S.+Congress%22+OR+%22federal+funding%22+OR+%22federal+grants%22+OR+HUD+OR+FEMA+OR+%22Trump+administration%22)+(%22local+governments%22+OR+%22U.S.+cities%22+OR+mayors)+when:1d&hl=en-US&gl=US&ceid=US:en"]
     }
   ],
 

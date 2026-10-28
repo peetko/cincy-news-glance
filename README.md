@@ -37,6 +37,8 @@ Preview without live data: add `?sample=calm` or `?sample=dev` to the page addre
 - **Today at City Hall:** under the lead story, today's council and committee meetings from the City's Legistar calendar, linked to the agenda when one is posted. If nothing is scheduled today, it shows the next meeting day.
 - **Breaking news:** when a story is developing, City Hall's clock and the story's dot pulse coral. Click the "DEVELOPING" label to mark it seen: the pulsing stops and the story stays in the lead.
 - **Weather:** if the weather service is down, the screen keeps the last reading and says "as of 2:15 PM".
+- **Weather in the scene:** the background quietly follows the forecast: a breathing sun with faint rays when sunny, extra clouds when partly cloudy, a greyer sky when overcast, fine rain behind the hills with ripples on the river, a rare soft flash in storms, slow snowflakes, or haze drifting over the hills in fog. Preview any of them by adding `&weather=rain` (or `sunny`, `partly`, `cloudy`, `storm`, `snow`, `fog`) to the address.
+- **Outlet labels:** under the lead story, each outlet that covered it is a link to that outlet's own version.
 
 ## The City Hall / Biggest switch
 

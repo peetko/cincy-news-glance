@@ -115,6 +115,36 @@
   .cloud { animation: cloud 90s ease-in-out infinite; }
   .sh { animation: shimmer 11s ease-in-out infinite; }
   #glow { opacity: 0; transition: opacity 3s ease; }
+
+  /* ---------- weather in the scene: slow, faint, never the main event ---------- */
+  #stage, body { transition: background 6s ease; }
+  #sun { transition: opacity 6s ease; }
+  #rays { opacity: 0; transform-box: view-box; transform-origin: 1070px 128px; animation: spin 200s linear infinite; transition: opacity 6s ease; }
+  #sunGlow { transform-box: fill-box; transform-origin: center; animation: breathe 9s ease-in-out infinite; }
+  #moreClouds, #fog, #ripples, #precip { opacity: 0; transition: opacity 6s ease; }
+  #moreClouds .cl { fill: #FFFFFF; opacity: 0.75; transition: fill 6s ease; }
+  #flash { opacity: 0; pointer-events: none; }
+  .wx-sunny #rays { opacity: 0.55; }
+  .wx-partly #moreClouds { opacity: 0.55; }
+  .wx-cloudy #sun { opacity: 0.3; }
+  .wx-cloudy #moreClouds, .wx-rain #moreClouds, .wx-storm #moreClouds, .wx-snow #moreClouds { opacity: 1; }
+  .wx-rain #moreClouds .cl, .wx-storm #moreClouds .cl { fill: #E4EAEE; }
+  .wx-rain #sun, .wx-storm #sun, .wx-snow #sun, .wx-fog #sun { opacity: 0.12; }
+  .wx-rain #precip, .wx-storm #precip, .wx-snow #precip { opacity: 1; }
+  .wx-rain #ripples, .wx-storm #ripples { opacity: 1; }
+  .wx-fog #fog { opacity: 1; }
+  .wx-storm #flash { animation: flash 41s linear infinite; }
+  .fogband { animation: cloud 80s ease-in-out infinite; }
+  .drop { animation: rainfall var(--d, 1.8s) linear infinite; animation-delay: var(--delay, 0s); }
+  .flake { animation: snowfall var(--d, 18s) linear infinite; animation-delay: var(--delay, 0s); }
+  .ripple { transform-box: fill-box; transform-origin: center; animation: ripple var(--d, 4s) ease-out infinite; animation-delay: var(--delay, 0s); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+  @keyframes rainfall { from { transform: translate(0, -60px); } to { transform: translate(-80px, 640px); } }
+  @keyframes snowfall { 0% { transform: translate(0, -30px); } 50% { transform: translate(22px, 300px); } 100% { transform: translate(-8px, 640px); } }
+  @keyframes ripple { 0% { transform: scale(0.2); opacity: 0.55; } 70%,100% { transform: scale(1.6); opacity: 0; } }
+  @keyframes flash { 0%,95.6% { opacity: 0; } 96% { opacity: 0.22; } 96.5% { opacity: 0; } 97% { opacity: 0.14; } 97.6%,100% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { #precip, #ripples, #flash { display: none; } #rays, #sunGlow, .fogband { animation: none; } }
   .is-dev #glow { opacity: 0.22; }
   @media (prefers-reduced-motion: reduce) { .pulse, .cloud, .sh { animation: none; } }
 
@@ -150,8 +180,17 @@
     </defs>
     <rect x="0" y="260" width="1200" height="340" fill="url(#glowFade)" id="glow"></rect>
     <!-- sun + clouds -->
-    <circle cx="1070" cy="128" r="58" fill="#FFF3CF" opacity="0.6"></circle>
-    <circle cx="1070" cy="128" r="36" fill="#FFF3CF"></circle>
+    <rect id="flash" x="0" y="0" width="1200" height="600" fill="#FFFFFF"></rect>
+    <g id="sun">
+      <g id="rays" stroke="#FFE7A0" stroke-width="2" stroke-linecap="round">
+        <line x1="1070" y1="58" x2="1070" y2="44"></line><line x1="1070" y1="198" x2="1070" y2="212"></line>
+        <line x1="1000" y1="128" x2="986" y2="128"></line><line x1="1140" y1="128" x2="1154" y2="128"></line>
+        <line x1="1020.5" y1="78.5" x2="1010.6" y2="68.6"></line><line x1="1119.5" y1="177.5" x2="1129.4" y2="187.4"></line>
+        <line x1="1020.5" y1="177.5" x2="1010.6" y2="187.4"></line><line x1="1119.5" y1="78.5" x2="1129.4" y2="68.6"></line>
+      </g>
+      <circle id="sunGlow" cx="1070" cy="128" r="58" fill="#FFF3CF" opacity="0.6"></circle>
+      <circle cx="1070" cy="128" r="36" fill="#FFF3CF"></circle>
+    </g>
     <g class="cloud" fill="#FFFFFF" opacity="0.85">
       <rect x="760" y="96" width="150" height="16" rx="8"></rect>
       <rect x="800" y="80" width="80" height="20" rx="10"></rect>
@@ -160,6 +199,27 @@
       <rect x="930" y="232" width="120" height="14" rx="7"></rect>
       <rect x="958" y="218" width="58" height="18" rx="9"></rect>
     </g>
+
+    <!-- extra clouds for cloudy / rainy / snowy days -->
+    <g id="moreClouds">
+      <g class="cloud" style="animation-duration:120s;animation-delay:-20s">
+        <rect class="cl" x="80" y="150" width="200" height="22" rx="11"></rect>
+        <rect class="cl" x="130" y="130" width="100" height="26" rx="13"></rect>
+      </g>
+      <g class="cloud" style="animation-duration:140s;animation-delay:-70s">
+        <rect class="cl" x="420" y="70" width="230" height="22" rx="11"></rect>
+        <rect class="cl" x="480" y="50" width="120" height="26" rx="13"></rect>
+      </g>
+      <g class="cloud" style="animation-duration:110s;animation-delay:-50s">
+        <rect class="cl" x="980" y="60" width="200" height="22" rx="11"></rect>
+        <rect class="cl" x="1030" y="40" width="96" height="26" rx="13"></rect>
+      </g>
+      <g class="cloud" style="animation-duration:160s;animation-delay:-10s">
+        <rect class="cl" x="640" y="250" width="170" height="18" rx="9"></rect>
+      </g>
+    </g>
+    <!-- rain or snow, falling behind the hills -->
+    <g id="precip"></g>
 
     <!-- hills: Price Hill bluff (west), the basin, Mount Adams (east) -->
     <path d="M0 430 C 90 410 170 408 260 418 C 360 430 420 452 520 458 C 640 466 780 462 900 456 C 980 452 1020 420 1090 414 C 1140 410 1180 414 1200 418 L1200 600 L0 600 Z" fill="#C8DAE1"></path>
@@ -170,6 +230,13 @@
       <circle cx="1040" cy="468" r="7"></circle><circle cx="1100" cy="458" r="8"></circle><circle cx="1156" cy="458" r="8"></circle>
     </g>
     <path d="M0 560 C 120 548 240 552 340 566 C 380 574 420 584 460 590 L1200 590 L1200 600 L0 600 Z" fill="#9CBBA4"></path>
+
+    <!-- fog drifting over the hills -->
+    <g id="fog" fill="#FFFFFF">
+      <rect class="fogband" x="-100" y="452" width="760" height="26" rx="13" opacity="0.5"></rect>
+      <rect class="fogband" x="520" y="486" width="820" height="30" rx="15" opacity="0.45" style="animation-delay:-30s"></rect>
+      <rect class="fogband" x="120" y="530" width="900" height="28" rx="14" opacity="0.4" style="animation-delay:-60s"></rect>
+    </g>
 
     <!-- Mount Adams church -->
     <g fill="#7D93A3">
@@ -243,6 +310,9 @@
     <!-- river -->
     <rect x="0" y="596" width="1200" height="204" fill="#A9CADB"></rect>
     <rect x="0" y="594" width="1200" height="3" fill="#8FB0C2"></rect>
+
+    <!-- rain ripples on the river -->
+    <g id="ripples" fill="none" stroke="#FFFFFF" stroke-width="1.2"></g>
 
     <!-- Roebling Suspension Bridge -->
     <g fill="none" stroke="#5E89AB" stroke-width="1.6">
@@ -376,9 +446,69 @@ function weatherIcon(short) {
   return `<svg viewBox="0 0 20 22" aria-hidden="true">${body}</svg>`;
 }
 
+/* ---------- weather in the scene ---------- */
+const SKY = { sunny: '#DCEBF3', partly: '#DAE7EF', cloudy: '#D4DEE5', rain: '#CBD6DE', storm: '#C3CED7', snow: '#E0E7EC', fog: '#DCE2E6' };
+const SVGNS = 'http://www.w3.org/2000/svg';
+let sceneKind = null;
+
+function weatherKind(short) {
+  const s = (short || '').toLowerCase();
+  if (/thunder|t-storm|storm/.test(s)) return 'storm';
+  if (/snow|flurr|sleet|ice|wintry|freezing/.test(s)) return 'snow';
+  if (/rain|shower|drizzle/.test(s)) return 'rain';
+  if (/fog|haze|mist|smoke/.test(s)) return 'fog';
+  if (/partly|mostly sunny|mostly clear/.test(s)) return 'partly';
+  if (/cloud|overcast/.test(s)) return 'cloudy';
+  return 'sunny';
+}
+
+function svg(tag, attrs, cls) {
+  const n = document.createElementNS(SVGNS, tag);
+  for (const k in attrs) n.setAttribute(k, attrs[k]);
+  if (cls) n.setAttribute('class', cls);
+  return n;
+}
+
+function setScene(kind) {
+  if (kind === sceneKind) return;
+  sceneKind = kind;
+  document.body.classList.remove(...Object.keys(SKY).map((k) => 'wx-' + k));
+  document.body.classList.add('wx-' + kind);
+  document.documentElement.style.setProperty('--sky', SKY[kind]);
+
+  const precip = $('precip'), ripples = $('ripples');
+  precip.textContent = ''; ripples.textContent = '';
+  const rand = (a, b) => a + Math.random() * (b - a);
+  if (kind === 'rain' || kind === 'storm') {
+    const n = kind === 'storm' ? 90 : 60;
+    for (let i = 0; i < n; i++) {
+      const x = rand(0, 1280), y = rand(-40, 20);
+      const d = svg('line', { x1: x, y1: y, x2: x - 4, y2: y + 15, stroke: '#8EAABD', 'stroke-width': 1.2, 'stroke-linecap': 'round', opacity: rand(0.25, 0.5).toFixed(2) }, 'drop');
+      d.style.setProperty('--d', `${rand(1.5, 2.3).toFixed(2)}s`);
+      d.style.setProperty('--delay', `${-rand(0, 2.3).toFixed(2)}s`);
+      precip.append(d);
+    }
+    for (let i = 0; i < 10; i++) {
+      const r = svg('ellipse', { cx: rand(40, 1160), cy: rand(612, 790), rx: 10, ry: 2.6 }, 'ripple');
+      r.style.setProperty('--d', `${rand(3.5, 5.5).toFixed(2)}s`);
+      r.style.setProperty('--delay', `${-rand(0, 5).toFixed(2)}s`);
+      ripples.append(r);
+    }
+  } else if (kind === 'snow') {
+    for (let i = 0; i < 70; i++) {
+      const f = svg('circle', { cx: rand(0, 1200), cy: rand(-30, 10), r: rand(1.2, 2.8).toFixed(1), fill: '#FFFFFF', opacity: rand(0.55, 0.9).toFixed(2) }, 'flake');
+      f.style.setProperty('--d', `${rand(14, 26).toFixed(1)}s`);
+      f.style.setProperty('--delay', `${-rand(0, 26).toFixed(1)}s`);
+      precip.append(f);
+    }
+  }
+}
+
 function renderWeather(w) {
   const wx = $('wx'), ch = $('wxchange');
   wx.textContent = '';
+  // ?weather=rain (or sunny, partly, cloudy, storm, snow, fog) previews a scene.
+  setScene(params.get('weather') || (w && w.ok ? weatherKind(w.short) : 'sunny'));
   if (!w || !w.ok) { ch.hidden = true; return; }
   wx.insertAdjacentHTML('beforeend', weatherIcon(w.short)); // icon is our own markup, not feed text
   wx.append(el('span', null, `${w.temp}° ${w.short}`));

@@ -62,6 +62,10 @@
      "summary": "A new, full-service pizza restaurant is opening inside of one of Cincinnati’s most popular breweries.",
      "outlet": "WLWT", "expect": {"city": false}},
 
+    {"note": "A City road-closure release must not be dropped as a press release",
+     "title": "Taft Road and Collins Ave. Closed 10/9 through 10/12", "outlet": "City of Cincinnati", "google": true, "official": true,
+     "expect": {"junk": false}},
+
     {"note": "Another town's council",
      "title": "Norwood council member resigns after six years", "outlet": "WLWT",
      "expect": {"city": false, "place": "other"}},

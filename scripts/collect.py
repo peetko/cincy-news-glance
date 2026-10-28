@@ -139,8 +139,8 @@ def looks_like_press_release(item, cfg):
     They come through the Google News search, never name a local place, and Capitalize Every Word
     or SHOUT. The Enquirer's own headlines are sentence case.
     """
-    if not item.get("_google"):
-        return False
+    if not item.get("_google") or item.get("_official"):
+        return False          # the City's own releases ("Taft Road and Collins Ave. Closed…") are never junk
     key = id(cfg)
     if key not in _LOCAL_CACHE:
         terms = list(cfg.get("local_terms", [])) + list(cfg.get("cincinnati_anchors", []))
