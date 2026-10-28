@@ -1,0 +1,63 @@
+# Every 15 minutes on weekdays, roughly 7 AM–7 PM Eastern:
+# collect headlines + weather, then publish the page to GitHub Pages.
+name: Update news
+
+on:
+  schedule:
+    # GitHub schedules run in UTC. 11–23 UTC ≈ 7 AM–7 PM EDT / 6 AM–6 PM EST.
+    # Odd minutes (:07, :22…) dodge the top-of-hour rush when GitHub runs late.
+    - cron: "7,22,37,52 11-23 * * 1-5"
+  workflow_dispatch:        # adds a "Run workflow" button on the Actions tab
+  push:
+    branches: [main]        # republish whenever you edit a file
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: write            # lets the keep-alive step below re-enable the schedule
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the feed reader
+        run: pip install feedparser==6.0.14
+
+      - name: Collect headlines and weather
+        run: python scripts/collect.py
+
+      # GitHub pauses scheduled jobs in repos with no activity for 60 days.
+      # Re-enabling the workflow resets that clock, so this never goes quiet.
+      - name: Keep the schedule alive
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/update.yml/enable"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

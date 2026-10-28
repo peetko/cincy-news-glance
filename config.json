@@ -1,0 +1,86 @@
+{
+  "_readme": "Edit this file in GitHub to change sources, keywords and thresholds. Each run reports which feeds worked in site/news.json under 'sources_status'.",
+
+  "location": {
+    "name": "Cincinnati",
+    "lat": 39.1031,
+    "lon": -84.5120
+  },
+
+  "sources": [
+    {
+      "name": "Enquirer",
+      "feeds": ["https://news.google.com/rss/search?q=site:cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en"]
+    },
+    {
+      "name": "WCPO",
+      "feeds": ["https://www.wcpo.com/news/local-news.rss", "https://www.wcpo.com/news.rss"],
+      "fallback": "https://news.google.com/rss/search?q=site:wcpo.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "WLWT",
+      "feeds": ["https://www.wlwt.com/local-news-rss", "https://www.wlwt.com/topstories-rss"],
+      "fallback": "https://news.google.com/rss/search?q=site:wlwt.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "FOX19",
+      "feeds": ["https://www.fox19.com/arc/outboundfeeds/rss/category/news/?outputType=xml", "https://www.fox19.com/arc/outboundfeeds/rss/?outputType=xml"],
+      "fallback": "https://news.google.com/rss/search?q=site:fox19.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "Local 12",
+      "feeds": ["https://local12.com/news/local.rss"],
+      "fallback": "https://news.google.com/rss/search?q=site:local12.com+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "WVXU",
+      "feeds": ["https://www.wvxu.org/local-news.rss", "https://www.wvxu.org/politics.rss"],
+      "fallback": "https://news.google.com/rss/search?q=site:wvxu.org+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "Signal",
+      "feeds": ["https://signalcincinnati.org/feed/"],
+      "fallback": "https://news.google.com/rss/search?q=site:signalcincinnati.org+when:2d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "City Hall sweep",
+      "sweep": true,
+      "feeds": ["https://news.google.com/rss/search?q=Cincinnati+(%22city+council%22+OR+%22city+hall%22+OR+%22city+manager%22+OR+mayor)+when:1d&hl=en-US&gl=US&ceid=US:en"]
+    }
+  ],
+
+  "source_aliases": {
+    "Enquirer": ["enquirer", "cincinnati.com"],
+    "WCPO": ["wcpo"],
+    "WLWT": ["wlwt"],
+    "FOX19": ["fox19", "wxix"],
+    "Local 12": ["local 12", "local12", "wkrc"],
+    "WVXU": ["wvxu", "cincinnati public radio"],
+    "Signal": ["signal cincinnati", "signalcincinnati"],
+    "CityBeat": ["citybeat"],
+    "Business Courier": ["bizjournals", "business courier"],
+    "Spectrum News": ["spectrum"],
+    "LINK nky": ["link nky", "linknky"]
+  },
+
+  "city_keywords": {
+    "3": ["city council", "councilmember", "council member", "city hall", "city manager", "vice mayor", "mayor", "city solicitor"],
+    "2": ["ordinance", "budget", "zoning", "planning commission", "levy", "income tax", "earnings tax", "DOTE", "Water Works", "GCWW", "MSD", "Metropolitan Sewer", "Cincinnati Police", "CPD", "Cincinnati Fire", "Cincinnati Parks", "Recreation Commission", "streetcar", "Connector", "Metro", "SORTA", "Hamilton County commission", "county commissioners", "Port Authority", "3CDC", "Cincinnati Public Schools", "CPS"],
+    "1": ["council", "neighborhood", "housing", "permit", "development", "public safety", "affordable"]
+  },
+
+  "local_terms": ["Cincinnati", "Cincy", "Hamilton County", "Northern Kentucky", "NKY", "Tri-State", "Covington", "Newport", "Ohio River", "Over-the-Rhine", "OTR", "West End", "Avondale", "Clifton", "Northside", "Westwood", "Price Hill", "Oakley", "Hyde Park", "Walnut Hills", "Madisonville", "Mount Auburn", "Mt. Auburn", "Downtown", "Camp Washington", "Evanston", "College Hill", "Bond Hill", "Roselawn", "Pleasant Ridge", "Mount Washington", "Mt. Washington", "Mount Adams", "East End", "Linwood", "Kennedy Heights", "Sayler Park", "Corryville", "Pendleton", "Queensgate", "Mount Airy", "Mt. Airy", "Carthage", "Hartwell", "Winton Hills", "Columbia Tusculum", "Fairmount", "Norwood", "Mason", "West Chester", "Blue Ash"],
+
+  "downweight_terms": ["Bengals", "Reds", "Bearcats", "Musketeers", "high school football", "lottery", "recipe"],
+
+  "breaking_terms": ["breaking", "live updates", "shooting", "fire", "crash", "evacuation", "evacuated", "lockdown", "water main", "boil advisory", "power outage", "outages", "closed", "closes", "shut down", "manhunt", "tornado", "flooding", "explosion", "collapse"],
+
+  "thresholds": {
+    "lookback_hours": 18,
+    "big_story_outlets": 3,
+    "developing_outlets": 5,
+    "developing_window_hours": 3,
+    "new_minutes": 30,
+    "max_stories": 30
+  }
+}

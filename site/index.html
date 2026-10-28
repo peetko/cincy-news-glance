@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cincy News Glance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+  /* ---------- palette: change these to restyle everything ---------- */
+  :root {
+    --sky: #DCEBF3;
+    --ink: #13283A;
+    --muted: #3E5668;
+    --river: #A9CADB;
+    --city: #E3A21A;        /* City Hall marigold */
+    --city-text: #8A5A00;
+    --dev: #E2603C;         /* developing-story coral */
+    --dev-text: #B13D1C;
+    --chip: rgba(255, 255, 255, 0.82);
+  }
+
+  html, body { margin: 0; height: 100%; overflow: hidden; }
+  /* Sky on top, river below, so any spare screen edges match the scene. */
+  body { background: linear-gradient(var(--sky) 0 75%, var(--river) 75% 100%); cursor: default; }
+
+  /* The whole scene is drawn at 1200x800 (a 3:2 laptop screen) and scaled to fit. */
+  #stage {
+    position: absolute; left: 50%; top: 50%;
+    width: 1200px; height: 800px; overflow: hidden;
+    transform-origin: center; background: var(--sky); color: var(--ink);
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  }
+  .mono { font-family: 'DM Mono', ui-monospace, monospace; }
+  #scene { position: absolute; inset: 0; }
+
+  /* ---------- top bar ---------- */
+  #bar {
+    position: absolute; top: 34px; left: 64px; right: 64px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px; letter-spacing: 0.06em; color: var(--muted);
+  }
+  #bar .left, #bar .right { display: flex; align-items: center; gap: 12px; }
+  #bar .city { color: var(--ink); letter-spacing: 0.18em; }
+  #wx { display: flex; align-items: center; gap: 8px; color: var(--ink); }
+  #wx svg { width: 20px; height: 20px; }
+  .pill { padding: 4px 10px; border-radius: 999px; border: 1px solid #9DB2C0; font-size: 12px; letter-spacing: 0.03em; white-space: nowrap; }
+  .pill.notable { border-color: var(--city); background: rgba(227,162,26,0.14); color: var(--city-text); }
+  .pill.alert { border-color: var(--dev); background: rgba(226,96,60,0.12); color: var(--dev-text); }
+  .stale { color: var(--dev-text); }
+
+  /* ---------- lead story ---------- */
+  #lead { position: absolute; top: 120px; left: 64px; width: 610px; display: flex; flex-direction: column; gap: 14px; transition: opacity 1.2s ease; }
+  #lead.fading { opacity: 0; }
+  #tag { display: flex; align-items: center; gap: 10px; white-space: nowrap; width: max-content; font-size: 13px; letter-spacing: 0.12em; }
+  #tag .meta { color: var(--muted); letter-spacing: 0.03em; }
+  #tag .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+  #headline { margin: 0; font-size: 42px; line-height: 1.08; font-weight: 600; letter-spacing: -0.01em;
+    font-variation-settings: 'opsz' 96; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  #headline a { color: inherit; text-decoration: none; }
+  #headline a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+  #dek { margin: 0; font-size: 18px; line-height: 1.42; color: var(--muted);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  #coverage { display: flex; gap: 6px; flex-wrap: wrap; }
+  #coverage span { font-size: 12px; padding: 4px 9px; border-radius: 999px; border: 1px solid #A6B9C6; color: #4B6274; }
+  #coverage span.on { background: rgba(255,255,255,0.85); border-color: #7D93A3; color: var(--ink); }
+
+  /* ---------- river of headlines ---------- */
+  #river { position: absolute; left: 0; right: 0; top: 614px; display: flex; flex-direction: column; gap: 20px; }
+  .lane-wrap { overflow: hidden; }
+  .lane-wrap:nth-child(2) { padding-left: 170px; }
+  .lane-wrap:nth-child(3) { padding-left: 60px; }
+  .lane { display: flex; gap: 22px; width: max-content; animation: drift var(--dur, 240s) linear infinite; }
+  .lane-wrap:hover .lane { animation-play-state: paused; }
+  .chip { flex: none; display: inline-flex; align-items: center; gap: 10px; height: 40px; padding: 0 18px;
+    border-radius: 999px; background: var(--chip); border: 1px solid rgba(19,40,58,0.10);
+    color: var(--ink); text-decoration: none; font-size: 15px; white-space: nowrap; }
+  .chip:hover { background: #fff; }
+  .chip .d { width: 8px; height: 8px; border-radius: 50%; background: #6F9BB3; flex: none; }
+  .chip.city .d { background: var(--city); box-shadow: 0 0 0 1px #C98E16; }
+  .chip.dev { border-color: rgba(226,96,60,0.55); }
+  .chip.dev .d { background: var(--dev); }
+  .chip .src { font-size: 11px; letter-spacing: 0.06em; color: #4B6274; }
+  .chip .new { font-size: 10px; letter-spacing: 0.1em; color: var(--city-text); border: 1px solid var(--city); border-radius: 999px; padding: 1px 6px; }
+
+  #empty { position: absolute; top: 160px; left: 64px; font-size: 22px; color: var(--muted); display: none; }
+
+  /* ---------- motion ---------- */
+  @keyframes drift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .4; transform: scale(1.8); } }
+  @keyframes cloud { 0%,100% { transform: translateX(0); } 50% { transform: translateX(-40px); } }
+  @keyframes shimmer { 0%,100% { transform: translateX(0); opacity: .45; } 50% { transform: translateX(-20px); opacity: .9; } }
+  .pulse { animation: pulse 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+  .cloud { animation: cloud 90s ease-in-out infinite; }
+  .sh { animation: shimmer 11s ease-in-out infinite; }
+  #glow { opacity: 0; transition: opacity 3s ease; }
+  .is-dev #glow { opacity: 0.22; }
+  @media (prefers-reduced-motion: reduce) { .lane, .pulse, .cloud, .sh { animation: none; } }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <svg id="scene" viewBox="0 0 1200 800" aria-hidden="true">
+    <defs>
+      <linearGradient id="glowFade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#F08A62" stop-opacity="0"></stop>
+        <stop offset="1" stop-color="#F08A62" stop-opacity="1"></stop>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="260" width="1200" height="340" fill="url(#glowFade)" id="glow"></rect>
+    <!-- sun + clouds -->
+    <circle cx="1070" cy="128" r="58" fill="#FFF3CF" opacity="0.6"></circle>
+    <circle cx="1070" cy="128" r="36" fill="#FFF3CF"></circle>
+    <g class="cloud" fill="#FFFFFF" opacity="0.85">
+      <rect x="760" y="96" width="150" height="16" rx="8"></rect>
+      <rect x="800" y="80" width="80" height="20" rx="10"></rect>
+    </g>
+    <g class="cloud" fill="#FFFFFF" opacity="0.7" style="animation-delay:-40s">
+      <rect x="930" y="232" width="120" height="14" rx="7"></rect>
+      <rect x="958" y="218" width="58" height="18" rx="9"></rect>
+    </g>
+
+    <!-- hills: Price Hill bluff (west), the basin, Mount Adams (east) -->
+    <path d="M0 430 C 90 410 170 408 260 418 C 360 430 420 452 520 458 C 640 466 780 462 900 456 C 980 452 1020 420 1090 414 C 1140 410 1180 414 1200 418 L1200 600 L0 600 Z" fill="#C8DAE1"></path>
+    <path d="M0 452 C 70 436 170 430 260 440 C 310 446 340 470 380 506 C 410 532 450 544 520 546 C 640 550 820 548 920 540 C 960 530 985 490 1020 470 C 1060 452 1120 450 1200 456 L1200 600 L0 600 Z" fill="#ADC7B3"></path>
+    <g fill="#9EBDA6">
+      <circle cx="40" cy="452" r="9"></circle><circle cx="96" cy="444" r="8"></circle><circle cx="150" cy="440" r="9"></circle>
+      <circle cx="206" cy="442" r="8"></circle><circle cx="262" cy="448" r="7"></circle><circle cx="318" cy="470" r="7"></circle>
+      <circle cx="1040" cy="468" r="7"></circle><circle cx="1100" cy="458" r="8"></circle><circle cx="1156" cy="458" r="8"></circle>
+    </g>
+    <path d="M0 560 C 120 548 240 552 340 566 C 380 574 420 584 460 590 L1200 590 L1200 600 L0 600 Z" fill="#9CBBA4"></path>
+
+    <!-- Mount Adams church -->
+    <g fill="#7D93A3">
+      <rect x="1062" y="450" width="24" height="14"></rect>
+      <polygon points="1060,451 1088,451 1074,443"></polygon>
+      <rect x="1080" y="430" width="9" height="22"></rect>
+      <polygon points="1079,431 1090,431 1084.5,416"></polygon>
+    </g>
+
+    <!-- background buildings -->
+    <g fill="#AFC0CB">
+      <rect x="532" y="540" width="34" height="56"></rect>
+      <rect x="568" y="522" width="26" height="74"></rect>
+      <rect x="690" y="528" width="26" height="68"></rect>
+      <rect x="738" y="512" width="22" height="84"></rect>
+      <rect x="796" y="522" width="28" height="74"></rect>
+      <rect x="902" y="532" width="30" height="64"></rect>
+      <rect x="936" y="548" width="34" height="48"></rect>
+      <rect x="974" y="560" width="30" height="36"></rect>
+    </g>
+
+    <!-- landmark towers -->
+    <g fill="#7D93A3">
+      <!-- Carew Tower: stepped Art Deco crown -->
+      <rect x="604" y="520" width="70" height="76"></rect>
+      <rect x="620" y="446" width="40" height="76"></rect>
+      <rect x="626" y="428" width="28" height="20"></rect>
+      <rect x="632" y="414" width="16" height="16"></rect>
+      <rect x="639" y="402" width="2" height="13"></rect>
+      <!-- PNC / Central Trust Tower: pyramid top -->
+      <rect x="704" y="470" width="24" height="126"></rect>
+      <rect x="707" y="458" width="18" height="14"></rect>
+      <polygon points="705,459 727,459 716,438"></polygon>
+      <!-- Scripps Center -->
+      <rect x="760" y="474" width="28" height="122"></rect>
+      <rect x="764" y="464" width="20" height="12"></rect>
+      <!-- Great American Tower body -->
+      <rect x="826" y="410" width="30" height="186"></rect>
+      <rect x="866" y="490" width="26" height="106"></rect>
+    </g>
+    <!-- Great American Tower tiara -->
+    <g stroke="#7D93A3" stroke-width="2" stroke-linecap="round">
+      <line x1="823" y1="411" x2="823" y2="404"></line>
+      <line x1="828" y1="411" x2="828" y2="393"></line>
+      <line x1="833" y1="411" x2="833" y2="385"></line>
+      <line x1="838" y1="411" x2="838" y2="380"></line>
+      <line x1="843" y1="411" x2="843" y2="379"></line>
+      <line x1="848" y1="411" x2="848" y2="384"></line>
+      <line x1="853" y1="411" x2="853" y2="392"></line>
+      <line x1="858" y1="411" x2="858" y2="403"></line>
+    </g>
+    <g fill="#9AAEBC">
+      <rect x="833" y="420" width="2" height="170"></rect>
+      <rect x="845" y="420" width="2" height="170"></rect>
+      <rect x="630" y="456" width="2" height="60"></rect>
+      <rect x="646" y="456" width="2" height="60"></rect>
+    </g>
+
+    <!-- City Hall (West End): the clock face is the alert light -->
+    <g fill="#7D93A3">
+      <rect x="428" y="566" width="80" height="30"></rect>
+      <polygon points="425,567 511,567 503,558 433,558"></polygon>
+      <rect x="436" y="548" width="8" height="12"></rect>
+      <polygon points="435,549 445,549 440,541"></polygon>
+      <rect x="484" y="520" width="14" height="40"></rect>
+      <polygon points="482,521 500,521 491,503"></polygon>
+    </g>
+    <circle id="clockHalo" cx="491" cy="532" r="5.5" fill="#E3A21A" opacity="0.35"></circle>
+    <circle id="clockFace" cx="491" cy="532" r="3.4" fill="#E3A21A"></circle>
+
+    <!-- river -->
+    <rect x="0" y="596" width="1200" height="204" fill="#A9CADB"></rect>
+    <rect x="0" y="594" width="1200" height="3" fill="#8FB0C2"></rect>
+
+    <!-- Roebling Suspension Bridge -->
+    <g fill="none" stroke="#5E89AB" stroke-width="1.6">
+      <path d="M520 597 Q 545 560 563 526 Q 640 590 717 526 Q 740 560 760 597"></path>
+      <path d="M520 597 Q 545 566 563 532 Q 640 594 717 532 Q 740 566 760 597" opacity="0.6"></path>
+    </g>
+    <line x1="510" y1="595" x2="770" y2="595" stroke="#5E89AB" stroke-width="3"></line>
+    <g fill="#C7B496">
+      <rect x="556" y="528" width="14" height="72"></rect>
+      <rect x="710" y="528" width="14" height="72"></rect>
+    </g>
+    <g fill="#5E89AB">
+      <circle cx="559" cy="526" r="3"></circle><circle cx="567" cy="526" r="3"></circle>
+      <circle cx="713" cy="526" r="3"></circle><circle cx="721" cy="526" r="3"></circle>
+    </g>
+
+    <!-- Big Mac Bridge (east) -->
+    <g fill="none" stroke="#D9AE3C" stroke-width="3" stroke-linecap="round">
+      <path d="M1070 598 Q 1115 552 1160 598"></path>
+      <path d="M1160 598 Q 1190 566 1220 598"></path>
+    </g>
+    <line x1="1050" y1="596" x2="1200" y2="596" stroke="#8FA2AF" stroke-width="2.5"></line>
+
+    <g stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round">
+      <line class="sh" x1="120" y1="606" x2="170" y2="606"></line>
+      <line class="sh" x1="880" y1="608" x2="950" y2="608" style="animation-delay:-6s"></line>
+      <line class="sh" x1="300" y1="788" x2="350" y2="788" style="animation-delay:-2s"></line>
+      <line class="sh" x1="780" y1="792" x2="820" y2="792" style="animation-delay:-8s"></line>
+    </g>
+  </svg>
+
+  <div id="bar" class="mono">
+    <div class="left">
+      <span class="city">CINCINNATI</span>
+      <span id="date"></span><span>·</span><span id="time"></span>
+      <span id="wx"></span>
+      <span id="wxchange" class="pill" hidden></span>
+    </div>
+    <div class="right">
+      <span id="counts"></span>
+      <span id="updated"></span>
+    </div>
+  </div>
+
+  <div id="empty">Waiting for the first headlines…</div>
+
+  <div id="lead">
+    <div id="tag" class="mono"><span class="dot"></span><span class="label"></span><span class="meta"></span></div>
+    <h1 id="headline"><a target="_blank" rel="noopener"></a></h1>
+    <p id="dek"></p>
+    <div id="coverage" class="mono"></div>
+  </div>
+
+  <div id="river"></div>
+</div>
+
+<script>
+/* ------------------------------------------------------------------
+   The page reloads news.json every 5 minutes. A scheduled GitHub job
+   rewrites that file every 15 minutes during work hours.
+   Preview without live data:  index.html?sample=calm  or  ?sample=dev
+------------------------------------------------------------------- */
+const CORE_OUTLETS = ['Enquirer', 'WCPO', 'WLWT', 'FOX19', 'Local 12', 'WVXU', 'Signal'];
+const REFRESH_MS = 5 * 60 * 1000;
+const params = new URLSearchParams(location.search);
+const DATA_URL = params.get('sample') ? `sample-${params.get('sample')}.json` : 'news.json';
+
+const $ = (id) => document.getElementById(id);
+let lastKey = '';
+
+// Feed text is untrusted, so it is always inserted as text, never as HTML.
+function el(tag, cls, text) {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text != null) n.textContent = text;
+  return n;
+}
+
+function fit() {
+  const s = Math.min(innerWidth / 1200, innerHeight / 800);
+  $('stage').style.transform = `translate(-50%, -50%) scale(${s})`;
+}
+
+function tickClock() {
+  const now = new Date();
+  $('date').textContent = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  $('time').textContent = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+}
+
+function ago(iso) {
+  const m = Math.max(0, Math.round((Date.now() - new Date(iso)) / 60000));
+  if (m < 60) return `${m} min ago`;
+  const h = Math.round(m / 60);
+  return `${h} hr${h > 1 ? 's' : ''} ago`;
+}
+
+/* ---------- weather icon (simple line drawings) ---------- */
+function weatherIcon(short) {
+  const s = (short || '').toLowerCase();
+  const stroke = 'fill="none" stroke="#13283A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"';
+  const sun = `<circle cx="10" cy="10" r="4" ${stroke}/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.3 4.3l1.4 1.4M14.3 14.3l1.4 1.4M4.3 15.7l1.4-1.4M14.3 5.7l1.4-1.4" ${stroke}/>`;
+  const cloud = `<path d="M6 15h8.5a3.5 3.5 0 0 0 0-7 5 5 0 0 0-9.6 1.4A2.8 2.8 0 0 0 6 15z" ${stroke}/>`;
+  let body = sun;
+  if (/thunder/.test(s)) body = cloud + `<path d="M10 15l-1.5 3h3L10 21" ${stroke}/>`;
+  else if (/snow|flurr|sleet/.test(s)) body = cloud + `<path d="M7 18h.01M10 19h.01M13 18h.01" ${stroke}/>`;
+  else if (/rain|shower|drizzle/.test(s)) body = cloud + `<path d="M7 17l-1 2M10 17l-1 2M13 17l-1 2" ${stroke}/>`;
+  else if (/fog|haze|mist/.test(s)) body = `<path d="M3 8h14M3 11h14M5 14h10" ${stroke}/>`;
+  else if (/partly|mostly sunny|mostly clear/.test(s)) body = `<g transform="translate(-2,-2) scale(.8)">${sun}</g>` + cloud;
+  else if (/cloud|overcast/.test(s)) body = cloud;
+  return `<svg viewBox="0 0 20 22" aria-hidden="true">${body}</svg>`;
+}
+
+function renderWeather(w) {
+  const wx = $('wx'), ch = $('wxchange');
+  wx.textContent = '';
+  if (!w || !w.ok) { ch.hidden = true; return; }
+  wx.insertAdjacentHTML('beforeend', weatherIcon(w.short)); // icon is our own markup, not feed text
+  wx.append(el('span', null, `${w.temp}° ${w.short}`));
+  const c = w.change || {};
+  ch.hidden = !c.text;
+  ch.textContent = c.text || '';
+  ch.className = 'pill ' + (c.level === 'alert' ? 'alert' : c.level === 'notable' ? 'notable' : '');
+}
+
+/* ---------- lead story ---------- */
+function renderLead(story, isDev) {
+  const label = isDev ? 'DEVELOPING' : story.is_city ? 'CITY HALL' : 'AROUND TOWN';
+  const color = isDev ? 'var(--dev)' : story.is_city ? 'var(--city)' : '#6F9BB3';
+  const textColor = isDev ? 'var(--dev-text)' : story.is_city ? 'var(--city-text)' : 'var(--muted)';
+  const others = story.outlet_count - 1;
+  const meta = isDev
+    ? `· ${story.outlet_count} newsrooms · first report ${ago(story.first_seen)} · updated ${ago(story.updated)}`
+    : `· ${story.outlet}${others > 0 ? ` and ${others} other${others > 1 ? 's' : ''}` : ''} · ${ago(story.first_seen)}`;
+
+  const tag = $('tag');
+  tag.querySelector('.dot').style.background = color;
+  tag.querySelector('.dot').className = 'dot' + (isDev ? ' pulse' : '');
+  tag.querySelector('.label').textContent = label;
+  tag.querySelector('.label').style.color = textColor;
+  tag.querySelector('.meta').textContent = meta;
+
+  const a = $('headline').querySelector('a');
+  a.textContent = story.title;
+  a.href = story.link;
+
+  // Google News summaries often just repeat the headline; hide those.
+  const dek = story.summary && !story.summary.toLowerCase().startsWith(story.title.toLowerCase().slice(0, 30)) ? story.summary : '';
+  $('dek').textContent = dek;
+  $('dek').hidden = !dek;
+
+  const cov = $('coverage');
+  cov.textContent = '';
+  const extras = story.outlets.filter((o) => !CORE_OUTLETS.includes(o));
+  for (const o of CORE_OUTLETS.concat(extras)) {
+    cov.append(el('span', story.outlets.includes(o) ? 'on' : '', o));
+  }
+}
+
+/* ---------- river lanes ---------- */
+function chip(s, devId) {
+  const a = el('a', 'chip ' + (s.id === devId ? 'dev' : s.is_city ? 'city' : 'town'));
+  a.href = s.link; a.target = '_blank'; a.rel = 'noopener';
+  a.title = `${s.title} — ${s.outlets.join(', ')}`;
+  a.append(el('span', 'd'));
+  a.append(el('span', 'src mono', s.outlet.toUpperCase() + (s.outlet_count > 1 ? ` +${s.outlet_count - 1}` : '')));
+  a.append(el('span', null, s.title));
+  if (s.is_new) a.append(el('span', 'new mono', 'NEW'));
+  return a;
+}
+
+function renderRiver(stories, devId) {
+  const river = $('river');
+  river.textContent = '';
+  const lanes = [[], [], []];
+  stories.forEach((s, i) => lanes[i % 3].push(s));
+  lanes.forEach((list) => {
+    const wrap = el('div', 'lane-wrap');
+    const lane = el('div', 'lane');
+    if (!list.length) { river.append(wrap); return; }
+    // Repeat the list until it is wider than the screen, then double it for a seamless loop.
+    let seq = list.slice();
+    while (seq.length < 6) seq = seq.concat(list);
+    seq.concat(seq).forEach((s) => lane.append(chip(s, devId)));
+    wrap.append(lane);
+    river.append(wrap);
+    requestAnimationFrame(() => {
+      const half = lane.scrollWidth / 2;
+      lane.style.setProperty('--dur', `${Math.round(half / 18)}s`); // ~18 px per second
+    });
+  });
+}
+
+/* ---------- whole screen ---------- */
+function render(data) {
+  renderWeather(data.weather);
+  const stories = data.stories || [];
+  $('empty').style.display = stories.length ? 'none' : 'block';
+  $('lead').style.display = stories.length ? 'flex' : 'none';
+
+  const devStory = data.developing ? stories.find((s) => s.id === data.developing) : null;
+  const lead = devStory || stories[0];
+  document.body.classList.toggle('is-dev', !!devStory);
+  $('clockFace').setAttribute('fill', devStory ? '#E2603C' : '#E3A21A');
+  $('clockHalo').setAttribute('fill', devStory ? '#E2603C' : '#E3A21A');
+  $('clockFace').classList.toggle('pulse', !!devStory);
+
+  const c = data.counts || {};
+  $('counts').textContent = `${c.stories ?? stories.length} stories today · ${c.city ?? 0} City Hall`;
+  const age = (Date.now() - new Date(data.generated_at)) / 60000;
+  const upd = $('updated');
+  upd.textContent = age > 60 ? `● paused since ${new Date(data.generated_at).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}` : '';
+  upd.className = age > 60 ? 'stale' : '';
+
+  // Only rebuild the moving parts when the news actually changed (keeps the river smooth).
+  const key = stories.map((s) => s.id + s.outlet_count).join('|') + data.developing;
+  if (key === lastKey) return;
+  const first = !lastKey;
+  lastKey = key;
+  if (!lead) return;
+  const swap = () => {
+    renderLead(lead, !!devStory);
+    renderRiver(stories.filter((s) => s !== lead), devStory && devStory.id);
+    $('lead').classList.remove('fading');
+  };
+  if (first) swap();
+  else { $('lead').classList.add('fading'); setTimeout(swap, 1200); }
+}
+
+// Sample files were captured once; slide their timestamps up to "now" so the ages read naturally.
+function shiftSampleTimes(data) {
+  const offset = Date.now() - new Date(data.generated_at).getTime();
+  const shift = (iso) => new Date(new Date(iso).getTime() + offset).toISOString();
+  data.generated_at = shift(data.generated_at);
+  for (const s of data.stories || []) { s.first_seen = shift(s.first_seen); s.updated = shift(s.updated); }
+}
+
+async function load() {
+  try {
+    const res = await fetch(`${DATA_URL}?t=${Date.now()}`, { cache: 'no-store' });
+    if (!res.ok) throw new Error(res.status);
+    const data = await res.json();
+    if (params.get('sample')) shiftSampleTimes(data);
+    render(data);
+  } catch (e) {
+    console.warn('news.json not available yet', e);
+    if (!lastKey) $('empty').style.display = 'block';
+  }
+}
+
+/* Keep the laptop screen awake while this page is showing (Chrome / Edge). */
+async function stayAwake() {
+  try { if ('wakeLock' in navigator && document.visibilityState === 'visible') await navigator.wakeLock.request('screen'); }
+  catch (e) { /* not supported or not allowed: no problem */ }
+}
+
+addEventListener('resize', fit);
+document.addEventListener('visibilitychange', stayAwake);
+fit(); tickClock(); load(); stayAwake();
+setInterval(tickClock, 15000);
+setInterval(load, REFRESH_MS);
+</script>
+</body>
+</html>
