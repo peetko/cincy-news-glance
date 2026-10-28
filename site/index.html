@@ -92,7 +92,11 @@
     color: var(--ink); text-decoration: none; font-size: 15px; white-space: nowrap; }
   .chip:hover { background: #fff; }
   .chip .d { width: 8px; height: 8px; border-radius: 50%; background: #6F9BB3; flex: none; }
-  .chip.city .d { background: var(--city); box-shadow: 0 0 0 1px #C98E16; }
+  /* City Hall stories: a tiny City Hall in place of the dot, plus a faint warm tint */
+  .chip.city { background: rgba(255, 246, 222, 0.94); border-color: rgba(201, 142, 22, 0.55); }
+  .chip.city:hover { background: #FFF6DE; }
+  .hall { width: 15px; height: 15px; flex: none; display: block; }
+  #counts .hall { width: 13px; height: 13px; display: inline-block; vertical-align: -2px; margin: 0 5px 0 1px; }
   .chip.dev { border-color: rgba(226,96,60,0.55); }
   .chip.dev .d { background: var(--dev); }
   .chip .src { font-size: 11px; letter-spacing: 0.06em; color: #4B6274; }
@@ -427,11 +431,18 @@ function renderLead(story, isDev, noCityNews) {
 }
 
 /* ---------- river lanes ---------- */
+// A little City Hall: building, roof, clock tower. Our own markup, never feed text.
+const HALL_ICON = '<svg class="hall" viewBox="0 0 16 16" aria-hidden="true">' +
+  '<path d="M1.5 14.5h13M2.6 14.5V9.6h10.8v4.9M2 9.6l1.6-1.5h8.8L14 9.6M9 8.1V4.2l1.3-2.4 1.3 2.4v3.9M5 14.5v-2.6M7 14.5v-2.6" ' +
+  'fill="none" stroke="#8A5A00" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>' +
+  '<circle cx="10.3" cy="5.6" r="0.95" fill="#E3A21A"/></svg>';
+
 function chip(s, devId) {
   const a = el('a', 'chip ' + (s.id === devId ? 'dev' : s.is_city ? 'city' : 'town'));
   a.href = s.link; a.target = '_blank'; a.rel = 'noopener'; a.draggable = false;
   a.title = `${s.title} — ${s.outlets.join(', ')}` + (s.is_city ? ` (${(s.city_reasons || []).join(', ')})` : '');
-  a.append(el('span', 'd'));
+  if (s.is_city && s.id !== devId) a.insertAdjacentHTML('beforeend', HALL_ICON);
+  else a.append(el('span', 'd'));
   a.append(el('span', 'src mono', s.outlet.toUpperCase() + (s.outlet_count > 1 ? ` +${s.outlet_count - 1}` : '')));
   a.append(el('span', null, s.title));
   if (s.is_new) a.append(el('span', 'new mono', 'NEW'));
@@ -619,7 +630,10 @@ function render(data) {
   renderDebug(data, lead && lead.id);
 
   const c = data.counts || {};
-  $('counts').textContent = `${c.stories ?? stories.length} stories today · ${c.city ?? 0} for City Hall`;
+  const counts = $('counts');
+  counts.textContent = `${c.stories ?? stories.length} stories today · `;
+  counts.insertAdjacentHTML('beforeend', HALL_ICON);
+  counts.append(document.createTextNode(`${c.city ?? 0} for City Hall`));
   const age = (Date.now() - new Date(data.generated_at)) / 60000;
   const upd = $('updated');
   upd.textContent = age > 60 ? `● paused since ${new Date(data.generated_at).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}` : '';
