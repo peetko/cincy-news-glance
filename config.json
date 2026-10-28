@@ -4,8 +4,8 @@
   "_site_url_readme": "Where the page is published. Each run reads the last news.json from here to remember what it already showed.",
   "site_url": "https://peetko.github.io/cincy-news-glance/",
 
-  "_legistar_readme": "The City's public meeting calendar (Legistar). Shows today's council and committee meetings on screen.",
-  "legistar": {"client": "cincinnati", "look_ahead_days": 7},
+  "_legistar_readme": "The City's public meeting calendar (cincinnatioh.legistar.com). Shows today's council and committee meetings on screen. If the data service refuses, paste the calendar page's RSS link into 'rss'.",
+  "legistar": {"clients": ["cincinnatioh", "cincinnati"], "look_ahead_days": 7, "rss": ""},
 
   "location": {
     "name": "Cincinnati",

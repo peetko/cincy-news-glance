@@ -21,6 +21,7 @@ import math
 import re
 import sys
 import html
+import os
 import urllib.request
 from urllib.parse import urlparse, quote
 from datetime import datetime, timezone, timedelta
@@ -215,17 +216,84 @@ def collect_items(cfg, now):
 
 # ---------------------------------------------------------------- City meetings (Legistar)
 
+def http_error_text(ex):
+    """'HTTP 403: Token is required' instead of a bare 'HTTPError'."""
+    code = getattr(ex, "code", None)
+    body = ""
+    try:
+        body = ex.read().decode("utf-8", "replace")[:160] if hasattr(ex, "read") else ""
+    except Exception:
+        pass
+    body = clean_text(body)
+    return f"HTTP {code}: {body}" if code else f"{type(ex).__name__}: {ex}"[:200]
+
+
 def get_meetings(cfg, now):
     """Today's City Council and committee meetings, or the next meeting day within a week."""
     lg = cfg.get("legistar")
     if not lg:
         return {"ok": False, "error": "not configured"}
-    base = f"https://webapi.legistar.com/v1/{lg['client']}"
     local = now.astimezone(timezone(timedelta(hours=-4 if is_dst(now) else -5)))
     start = local.date()
     end = start + timedelta(days=lg.get("look_ahead_days", 7))
+
+    rows, errors, used = None, [], None
+    # 1) Legistar's data service. The client name matches the calendar's web address:
+    #    cincinnatioh.legistar.com  →  "cincinnatioh".
+    clients = lg.get("clients") or [lg.get("client", "cincinnatioh")]
+    token = os.environ.get("LEGISTAR_TOKEN") or lg.get("token") or ""
     flt = f"EventDate ge datetime'{start.isoformat()}' and EventDate lt datetime'{end.isoformat()}'"
-    events = fetch_json(f"{base}/events?$filter={quote(flt)}&$orderby=EventDate")
+    for client in clients:
+        url = f"https://webapi.legistar.com/v1/{client}/events?$filter={quote(flt)}&$orderby=EventDate"
+        if token:
+            url += f"&token={quote(token)}"
+        try:
+            rows = legistar_rows(fetch_json(url))
+            used = f"web API ({client})"
+            break
+        except Exception as ex:
+            errors.append(f"{client}: {http_error_text(ex)}")
+    # 2) Backup: the calendar's RSS link, copied from the City's Legistar calendar page.
+    if rows is None and lg.get("rss"):
+        try:
+            rows = legistar_rss_rows(fetch(lg["rss"]))
+            used = "calendar RSS"
+        except Exception as ex:
+            errors.append(f"rss: {http_error_text(ex)}")
+    if rows is None:
+        return {"ok": False, "error": " | ".join(errors)[:400]}
+
+    rows = [r for r in rows if start.isoformat() <= r["date"] < end.isoformat()]
+    rows.sort(key=lambda r: (r["date"], parse_clock(r["time"])))
+    first_day = rows[0]["date"] if rows else None
+    shown = [r for r in rows if r["date"] == first_day]
+    return {
+        "ok": True,
+        "used": used,
+        "day": first_day,
+        "is_today": first_day == start.isoformat(),
+        "meetings": shown[:6],
+        "bodies": sorted({r["body"] for r in rows if r["body"]}),
+    }
+
+
+def legistar_rss_rows(data):
+    """Calendar RSS items look like 'Budget, Finance & Governance Committee - 10/28/2026 - 1:00 PM'."""
+    rows = []
+    for e in feedparser.parse(data).entries:
+        t = clean_text(e.get("title", ""))
+        m = re.search(r"(\d{1,2})/(\d{1,2})/(\d{4})", t)
+        if not m:
+            continue
+        day = f"{m.group(3)}-{int(m.group(1)):02d}-{int(m.group(2)):02d}"
+        tm = re.search(r"\d{1,2}:\d{2}\s*[AP]M", t, re.I)
+        body = re.split(r"\s+-\s+\d{1,2}/", t)[0].strip(" -")
+        rows.append({"date": day, "time": tm.group(0).upper() if tm else "", "body": body,
+                     "location": "", "agenda": "", "url": e.get("link", "")})
+    return rows
+
+
+def legistar_rows(events):
     rows = []
     for e in events:
         if (e.get("EventAgendaStatusName") or "").lower() in ("cancelled", "canceled"):
@@ -239,16 +307,7 @@ def get_meetings(cfg, now):
             "agenda": e.get("EventAgendaFile") or "",
             "url": e.get("EventInSiteURL") or "",
         })
-    rows.sort(key=lambda r: (r["date"], parse_clock(r["time"])))
-    first_day = rows[0]["date"] if rows else None
-    shown = [r for r in rows if r["date"] == first_day]
-    return {
-        "ok": True,
-        "day": first_day,
-        "is_today": first_day == start.isoformat(),
-        "meetings": shown[:6],
-        "bodies": sorted({r["body"] for r in rows if r["body"]}),
-    }
+    return rows
 
 
 def parse_clock(t):
@@ -632,7 +691,8 @@ def build(cfg, now=None, previous=None):
 
     items, status = collect_items(cfg, now)
     status.append({"source": "City meetings (Legistar)", "ok": meetings.get("ok", False),
-                   "items": len(meetings.get("meetings", [])), "error": meetings.get("error")})
+                   "items": len(meetings.get("meetings") or []), "used": meetings.get("used"),
+                   "error": meetings.get("error")})
     rules = Rules(cfg, extra_anchors=bodies)
     seen = prev_mem.get("seen", [])
     stories = score_clusters(cluster(items), rules, now, memory=seen)
