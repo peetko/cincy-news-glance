@@ -118,6 +118,13 @@
     {"title": "Ohio House bill would limit cities' home rule over short-term rentals", "outlet": "Ohio Capital Journal",
      "expect": {"city": true, "national": false}},
 
+    {"note": "An untitled City web page (a login-protected dashboard) — caught Oct 29",
+     "title": "- City of Cincinnati (.gov)", "outlet": "City of Cincinnati", "google": true, "official": true,
+     "expect": {"junk": true}},
+
+    {"title": "Cincinnati", "outlet": "Enquirer", "google": true, "narrow": true,
+     "expect": {"junk": true}},
+
     {"note": "Another town's council",
      "title": "Norwood council member resigns after six years", "outlet": "WLWT",
      "expect": {"city": false, "place": "other"}},

@@ -160,6 +160,10 @@ def looks_like_press_release(item, cfg):
 def is_junk(item, cfg):
     ex = cfg.get("exclude", {})
     title, link = item["title"], item["link"].lower()
+    # No real headline: an untitled page ("- City of Cincinnati (.gov)"), a site name, or a couple of words.
+    words = re.findall(r"[A-Za-z0-9']+", title)
+    if len(words) < ex.get("min_title_words", 3) or re.fullmatch(r"[\s\-–—|:]*(city of cincinnati|cincinnati)[^a-z]*(\(\.gov\))?\s*", title, re.I):
+        return True
     low = (title + " " + item.get("summary", "")).lower()
     if any(t.lower() in low for t in ex.get("title_terms", [])):
         return True
@@ -193,7 +197,7 @@ def parse_feed(data, source_name, is_google, alias_pairs, now, official=False, n
             if e.get("source") and isinstance(e.source, dict):
                 src_title = e.source.get("title", "")
                 src_href = e.source.get("href", "")
-            m = re.match(r"^(.*)\s+-\s+([^-]+)$", title)
+            m = re.match(r"^(.*?)\s*-\s+([^-]+)$", title)
             if m:
                 title, tail = m.group(1).strip(), m.group(2).strip()
                 src_title = src_title or tail

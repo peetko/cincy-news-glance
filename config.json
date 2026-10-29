@@ -69,7 +69,8 @@
       "name": "City of Cincinnati",
       "official": true,
       "max_items": 10,
-      "feeds": ["https://news.google.com/rss/search?q=site:cincinnati-oh.gov+when:2d&hl=en-US&gl=US&ceid=US:en"]
+      "_note": "Only the City's news section (press releases), not dashboards or login pages.",
+      "feeds": ["https://news.google.com/rss/search?q=site:cincinnati-oh.gov/cityofcincinnati/news+when:3d&hl=en-US&gl=US&ceid=US:en"]
     },
     {
       "name": "Ohio Capital Journal",
@@ -152,9 +153,10 @@
   "_exclude_readme": "Headlines dropped entirely: obituaries, death notices, and headlines that are only a person's name.",
   "exclude": {
     "title_terms": ["obituary", "obituaries", "death notice", "death notices", "passed away", "celebration of life", "in memoriam", "funeral home", "legacy.com"],
-    "url_terms": ["/obituaries", "obituaries.", "legacy.com", "/obits/", "/press-release/", "vehiclesforsale", "/shop-vehicles"],
+    "url_terms": ["/login", "insights.cincinnati-oh.gov", "/obituaries", "obituaries.", "legacy.com", "/obits/", "/press-release/", "vehiclesforsale", "/shop-vehicles"],
     "drop_name_only_titles": true,
-    "drop_press_releases": true
+    "drop_press_releases": true,
+    "min_title_words": 3
   },
 
   "_local_teams_readme": "Also count as local (but sports are still downweighted).",
