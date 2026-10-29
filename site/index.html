@@ -756,7 +756,7 @@ function renderDebug(data, leadId) {
       `first seen ${ago(s.first_seen)}${y.remembered ? ' (remembered)' : ''}${y.downweighted ? ' · downweighted' : ''}`));
     for (const m of y.matches || []) {
       d.append(el('div', m.note ? 'bad' : '', m.note ? `✗ ${m.note} (${m.outlet})`
-        : `+${m.points} ${m.group}: “${m.term}” in ${m.where} (${m.outlet})`));
+        : `+${m.points} ${m.group}: “${m.term}” in ${m.where} (${m.outlet})` + (m.incident ? ` — reduced: incident report (“${m.incident}”)` : '')));
     }
     if (s.developing) d.append(el('div', 'bad', `breaking: ${y.newsrooms_for_alert.length} newsrooms` + (y.breaking_word ? `, word “${y.breaking_word}”` : '')));
     if ((y.versions || []).length > 1) d.append(el('div', 'k', 'grouped: ' + y.versions.map((v) => `${v[0]}: ${v[1]}`).join(' / ')));
@@ -785,7 +785,7 @@ function render(data) {
 
   const c = data.counts || {};
   const counts = $('counts');
-  counts.textContent = `${c.stories ?? stories.length} stories today · `;
+  counts.textContent = `${c.stories ?? stories.length} stories · `;
   counts.insertAdjacentHTML('beforeend', HALL_ICON);
   counts.append(document.createTextNode(`${c.city ?? 0} for City Hall`));
   const age = (Date.now() - new Date(data.generated_at)) / 60000;

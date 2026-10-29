@@ -91,6 +91,19 @@
      "title": "Parenting coach on how to make Halloween fun, stress-free for whole family", "outlet": "WCPO",
      "expect": {"kept": true}},
 
+    {"note": "A crime report quoting police isn't news about the Police Department — caught Oct 29",
+     "title": "1 dead after shooting in Walnut Hills, Cincinnati police say", "outlet": "Enquirer", "google": true, "narrow": true,
+     "expect": {"kept": true, "city": false}},
+
+    {"title": "Cincinnati police officer shot during traffic stop in Westwood", "outlet": "WCPO",
+     "expect": {"city": true, "label": "Police"}},
+
+    {"title": "Cincinnati police add drones to patrols in three neighborhoods", "outlet": "WLWT",
+     "expect": {"city": true, "label": "Police"}},
+
+    {"title": "Cincinnati firefighters battle house fire in Price Hill", "outlet": "FOX19",
+     "expect": {"city": false}},
+
     {"note": "Another town's council",
      "title": "Norwood council member resigns after six years", "outlet": "WLWT",
      "expect": {"city": false, "place": "other"}},

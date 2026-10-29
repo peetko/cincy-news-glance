@@ -413,7 +413,12 @@ class Rules:
             "terms": [term_regex(t) for t in g["terms"]],
             "requires": [term_regex(t) for t in g.get("requires_any", [])],
             "national": g.get("national", False),
+            "incident_rule": g.get("incident_rule", False),
         } for g in cfg["city_relevance"]]
+        ir = cfg.get("incident_rule", {})
+        self.incident_terms = [term_regex(t) for t in ir.get("incident_terms", [])]
+        self.business_terms = [term_regex(t) for t in ir.get("department_business_terms", [])]
+        self.incident_factor = ir.get("factor", 0.35)
         # Anywhere in the Tri-State counts as local: Cincinnati places, suburbs, and the teams.
         self.local_terms = [term_regex(t) for t in list(cfg["local_terms"]) + list(cfg.get("other_municipalities", []))
                             + list(cfg.get("cincinnati_anchors", [])) + list(cfg.get("local_teams", []))]
@@ -474,21 +479,27 @@ def item_matches(item, rules):
     summary = OUTLET_NAMES.sub(" ", item.get("summary", ""))
     both = title + " " + summary
     found = []
+    # "1 dead after shooting, Cincinnati police say" is a crime report, not news about the
+    # Police Department. Police/Fire matches count much less on incident reports unless the
+    # story is about the department itself (chief, staffing, drones, an officer-involved shooting...).
+    incident = first_hit(rules.incident_terms, both)
+    business = first_hit(rules.business_terms, both)
     for g in rules.groups:
         if g["requires"] and not first_hit(g["requires"], both):
             continue
+        factor = rules.incident_factor if (g["incident_rule"] and incident and not business) else 1.0
         t = first_hit(g["terms"], title)
         if t:
-            found.append((g, t, "headline"))
+            found.append((g, t, "headline", factor, incident if factor < 1 else None))
             continue
         s = first_hit(g["terms"], summary)
         if s:
-            found.append((g, s, "summary"))
-    if item.get("_official") and not any(g["kind"] != "legislation" for g, _, _ in found):
+            found.append((g, s, "summary", factor, incident if factor < 1 else None))
+    if item.get("_official") and not any(f[0]["kind"] != "legislation" for f in found):
         # The City's own news releases are City news by definition.
         hall = next((g for g in rules.groups if g["label"] == "City Hall"), None)
         if hall:
-            found.append((hall, "City of Cincinnati release", "source"))
+            found.append((hall, "City of Cincinnati release", "source", 1.0, None))
     return found
 
 
@@ -502,13 +513,13 @@ def city_relevance(items, rules, is_local, is_ohio, place):
     place_factor = {"yes": 1.0, "maybe": 0.4, "other": 0.0}[place]
     per_item = [(it, item_matches(it, rules)) for it in items]
     matched_items = [(it, m) for it, m in per_item if m]
-    if len(items) > 1 and len(matched_items) == 1 and all(where == "summary" for _, _, where in matched_items[0][1]):
+    if len(items) > 1 and len(matched_items) == 1 and all(f[2] == "summary" for f in matched_items[0][1]):
         return 0.0, [], [{"note": "only one outlet mentions it, and only in the summary", "outlet": matched_items[0][0]["outlet"]}]
 
-    best = {}       # group label -> (weight, term, where, outlet)
+    best = {}       # group label -> (weight, term, where, outlet, incident word)
     for it, found in matched_items:
-        for g, term, where in found:
-            w = g["weight"] * (rules.summary_weight if where == "summary" else 1.0)
+        for g, term, where, factor, incident in found:
+            w = g["weight"] * (rules.summary_weight if where == "summary" else 1.0) * factor
             if g["kind"] == "legislation":
                 if not (is_local or is_ohio or g["national"]):
                     w *= 0.6
@@ -517,11 +528,12 @@ def city_relevance(items, rules, is_local, is_ohio, place):
                 if not is_local:
                     w *= 0.25          # not even a Tri-State story
             if w > 0 and w > best.get(g["label"], (0,))[0]:
-                best[g["label"]] = (w, term, where, it["outlet"])
+                best[g["label"]] = (w, term, where, it["outlet"], incident)
     order = [g["label"] for g in rules.groups]
     labels = sorted(best, key=order.index)
     score = min(sum(best[k][0] for k in labels), 10.0)
-    why = [{"group": k, "term": best[k][1], "where": best[k][2], "outlet": best[k][3], "points": round(best[k][0], 2)} for k in labels]
+    why = [{"group": k, "term": best[k][1], "where": best[k][2], "outlet": best[k][3], "points": round(best[k][0], 2),
+            **({"incident": best[k][4]} if best[k][4] else {})} for k in labels]
     return score, labels, why
 
 
@@ -797,8 +809,6 @@ def build(cfg, now=None, previous=None):
     for s in stories:
         s.pop("_tok", None)
 
-    cutoff = now - timedelta(hours=12)
-    today = [s for s in stories if datetime.fromisoformat(s["first_seen"]) >= cutoff]
     return {
         "generated_at": now.isoformat(),
         # Which version of the code made this file; the open page reloads itself when it changes.
@@ -811,7 +821,7 @@ def build(cfg, now=None, previous=None):
             "general": lead_general["id"] if lead_general else None,
             "why": {"city": why_city, "general": why_general},
         },
-        "counts": {"stories": len(today), "city": sum(1 for s in today if s["is_city"])},
+        "counts": {"stories": len(stories), "city": sum(1 for s in stories if s["is_city"])},   # = what's on screen
         "stories": stories,
         "sources_status": status,
         "memory": memory,
