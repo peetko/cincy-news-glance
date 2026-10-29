@@ -122,7 +122,6 @@
   .phase-dusk #veil { opacity: 0.07; fill: #E8A27C; }
   .phase-evening #veil { opacity: 0.16; fill: #1F2B48; }
   #sun { transition: opacity 6s ease, transform 90s ease; transform-box: view-box; }
-  .phase-dusk #sun { transform: translateY(150px); }
   .phase-dusk #sun circle { fill: #FFD8B4; transition: fill 90s ease; }
   .phase-evening #sun { opacity: 0 !important; }
   #moon { opacity: 0; transition: opacity 60s ease; }
@@ -563,13 +562,43 @@ function svg(tag, attrs, cls) {
   return n;
 }
 
-/* Time of day: "day" until 5 PM, "dusk" until 7:30 PM, then "evening" (until 6:30 AM). */
+/* ---------- the real sun over Cincinnati ----------
+   Standard solar-position formulas (the same math as the NOAA calculator), so the scene
+   follows the actual daylight: dark by 5:30 in January, light past 8:30 in June. */
+const LAT = 39.1031, LON = -84.5120;
+const RAD = Math.PI / 180, DAY_MS = 86400000, J1970 = 2440588, J2000 = 2451545, TILT = RAD * 23.4397;
+function solar(date) {
+  const d = date / DAY_MS - 0.5 + J1970 - J2000;                                 // days since 2000
+  const M = RAD * (357.5291 + 0.98560028 * d);                                   // sun's mean anomaly
+  const L = M + RAD * (1.9148 * Math.sin(M) + 0.02 * Math.sin(2 * M) + 0.0003 * Math.sin(3 * M)) + RAD * 102.9372 + Math.PI;
+  const dec = Math.asin(Math.sin(TILT) * Math.sin(L));                           // declination
+  const ra = Math.atan2(Math.sin(L) * Math.cos(TILT), Math.cos(L));
+  const lw = RAD * -LON, phi = RAD * LAT;
+  const H = RAD * (280.16 + 360.9856235 * d) - lw - ra;                          // hour angle
+  const elevation = Math.asin(Math.sin(phi) * Math.sin(dec) + Math.cos(phi) * Math.cos(dec) * Math.cos(H)) / RAD;
+  // today's sunrise / sunset
+  const n = Math.round(d - 0.0009 - lw / (2 * Math.PI));
+  const ds = 0.0009 + lw / (2 * Math.PI) + n;
+  const Ms = RAD * (357.5291 + 0.98560028 * ds);
+  const Ls = Ms + RAD * (1.9148 * Math.sin(Ms) + 0.02 * Math.sin(2 * Ms) + 0.0003 * Math.sin(3 * Ms)) + RAD * 102.9372 + Math.PI;
+  const decS = Math.asin(Math.sin(TILT) * Math.sin(Ls));
+  const noon = J2000 + ds + 0.0053 * Math.sin(Ms) - 0.0069 * Math.sin(2 * Ls);
+  const w = Math.acos((Math.sin(RAD * -0.833) - Math.sin(phi) * Math.sin(decS)) / (Math.cos(phi) * Math.cos(decS)));
+  const set = noon + w / (2 * Math.PI);
+  const toDate = (j) => new Date((j + 0.5 - J1970) * DAY_MS);
+  return { elevation, sunrise: toDate(noon - (set - noon)), sunset: toDate(set) };
+}
+
+/* Phases: "dawn" around sunrise, "day", "dusk" from an hour before sunset to half an hour after,
+   then "evening" until 40 minutes before the next sunrise. (?phase=dusk etc. previews one.) */
 function dayPhase(now = new Date()) {
   const forced = params.get('phase');
   if (forced) return forced;
-  const m = now.getHours() * 60 + now.getMinutes();
-  if (m >= 17 * 60 && m < 19 * 60 + 30) return 'dusk';
-  if (m >= 19 * 60 + 30 || m < 6 * 60 + 30) return 'evening';
+  const { sunrise, sunset } = solar(now);
+  const min = 60000;
+  if (now < sunrise - 40 * min || now > sunset.getTime() + 35 * min) return 'evening';
+  if (now <= sunrise.getTime() + 40 * min) return 'dawn';
+  if (now >= sunset - 70 * min) return 'dusk';
   return 'day';
 }
 function blend(a, b, t) {
@@ -580,14 +609,19 @@ function blend(a, b, t) {
 let currentPhase = null;
 function applySky() {
   const phase = dayPhase();
+  const look = phase === 'dawn' ? 'dusk' : phase;          // dawn borrows dusk's soft colors
   const base = SKY[sceneKind || 'sunny'];
-  const sky = phase === 'dusk' ? blend(base, '#F2D2C2', 0.35) : phase === 'evening' ? blend(base, '#7C88A8', 0.4) : base;
+  const sky = look === 'dusk' ? blend(base, '#F2D2C2', 0.35) : look === 'evening' ? blend(base, '#7C88A8', 0.4) : base;
   document.documentElement.style.setProperty('--sky', sky);
-  if (phase !== currentPhase) {
+  if (look !== currentPhase) {
     document.body.classList.remove('phase-day', 'phase-dusk', 'phase-evening');
-    document.body.classList.add('phase-' + phase);
-    currentPhase = phase;
+    document.body.classList.add('phase-' + look);
+    currentPhase = look;
   }
+  // The sun sits as high in the picture as it really is: high at a summer noon, low on a winter afternoon.
+  const { elevation } = solar(new Date());
+  const drop = look === 'dusk' ? 150 : Math.max(0, Math.min(1, (45 - elevation) / 40)) * 110;
+  $('sun').style.transform = `translateY(${params.get('phase') ? (look === 'dusk' ? 150 : 0) : drop}px)`;
 }
 
 function setScene(kind) {
@@ -895,6 +929,8 @@ function renderDebug(data, leadId) {
   const w = (data.lead && data.lead.why) || {};
   line('k', `City pick: ${w.city || '—'} · Biggest pick: ${w.general || '—'}`);
   line('k', `breaking-news alert: ${data.developing || 'none'} · river pace ${DRIFT.toFixed(0)} px/s`);
+  const sun = solar(new Date());
+  line('k', `sunrise ${clock(sun.sunrise)} · sunset ${clock(sun.sunset)} · sun ${sun.elevation.toFixed(0)}° up · scene: ${dayPhase()}`);
   if (data.pending_cases) line('bad', `${data.pending_cases} wrong-call report(s) on the to-fix list (tests/cases.json → pending)`);
   box.append(el('h3', null, 'Sources'));
   for (const s of data.sources_status || []) {
