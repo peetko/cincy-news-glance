@@ -185,9 +185,12 @@
   #rays { opacity: 0; transform-box: view-box; transform-origin: 1070px 128px; animation: spin 200s linear infinite; transition: opacity 6s ease; }
   #sunGlow { transform-box: fill-box; transform-origin: center; animation: breathe 9s ease-in-out infinite; }
   #moreClouds, #fog, #ripples, #precip { opacity: 0; transition: opacity 6s ease; }
+  /* Clear skies get no clouds at all; "mostly sunny" gets just the two small ones. */
+  #baseClouds { transition: opacity 6s ease; }
+  .wx-sunny #baseClouds { opacity: 0; }
   #moreClouds .cl { fill: #FFFFFF; opacity: 0.75; transition: fill 6s ease; }
   #flash { opacity: 0; pointer-events: none; }
-  .wx-sunny #rays { opacity: 0.55; }
+  .wx-sunny #rays, .wx-fair #rays { opacity: 0.55; }
   .wx-partly #moreClouds { opacity: 0.55; }
   .wx-cloudy #sun { opacity: 0.3; }
   .wx-cloudy #moreClouds, .wx-rain #moreClouds, .wx-storm #moreClouds, .wx-snow #moreClouds { opacity: 1; }
@@ -261,6 +264,7 @@
       <circle id="sunGlow" cx="1070" cy="128" r="58" fill="#FFF3CF" opacity="0.6"></circle>
       <circle cx="1070" cy="128" r="36" fill="#FFF3CF"></circle>
     </g>
+    <g id="baseClouds">
     <g class="cloud" fill="#FFFFFF" opacity="0.85">
       <rect x="760" y="96" width="150" height="16" rx="8"></rect>
       <rect x="800" y="80" width="80" height="20" rx="10"></rect>
@@ -268,6 +272,7 @@
     <g class="cloud" fill="#FFFFFF" opacity="0.7" style="animation-delay:-40s">
       <rect x="930" y="232" width="120" height="14" rx="7"></rect>
       <rect x="958" y="218" width="58" height="18" rx="9"></rect>
+    </g>
     </g>
 
     <!-- extra clouds for cloudy / rainy / snowy days -->
@@ -587,7 +592,7 @@ function weatherIcon(short) {
 }
 
 /* ---------- weather in the scene ---------- */
-const SKY = { sunny: '#DCEBF3', partly: '#DAE7EF', cloudy: '#D4DEE5', rain: '#CBD6DE', storm: '#C3CED7', snow: '#E0E7EC', fog: '#DCE2E6' };
+const SKY = { sunny: '#DCEBF3', fair: '#DCEBF3', partly: '#DAE7EF', cloudy: '#D4DEE5', rain: '#CBD6DE', storm: '#C3CED7', snow: '#E0E7EC', fog: '#DCE2E6' };
 const SVGNS = 'http://www.w3.org/2000/svg';
 let sceneKind = null;
 
@@ -597,7 +602,8 @@ function weatherKind(short) {
   if (/snow|flurr|sleet|ice|wintry|freezing/.test(s)) return 'snow';
   if (/rain|shower|drizzle/.test(s)) return 'rain';
   if (/fog|haze|mist|smoke/.test(s)) return 'fog';
-  if (/partly|mostly sunny|mostly clear/.test(s)) return 'partly';
+  if (/mostly sunny|mostly clear/.test(s)) return 'fair';
+  if (/partly/.test(s)) return 'partly';
   if (/cloud|overcast/.test(s)) return 'cloudy';
   return 'sunny';
 }
@@ -709,7 +715,7 @@ function setScene(kind) {
 function renderWeather(w) {
   const wx = $('wx'), ch = $('wxchange');
   wx.textContent = '';
-  // ?weather=rain (or sunny, partly, cloudy, storm, snow, fog) previews a scene.
+  // ?weather=rain (or sunny, fair, partly, cloudy, storm, snow, fog) previews a scene.
   setScene(params.get('weather') || (w && w.ok ? weatherKind(w.short) : 'sunny'));
   if (!w || !w.ok) { ch.hidden = true; return; }
   wx.insertAdjacentHTML('beforeend', weatherIcon(w.short)); // icon is our own markup, not feed text
