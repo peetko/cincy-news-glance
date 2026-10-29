@@ -76,6 +76,7 @@ Top right of the screen. It starts on **City Hall**, and the browser remembers y
 - **City Hall** leads with the biggest story for City work. The label says why, e.g. `CITY HALL · CITY MANAGER`, `CITY HALL · POLICE` or `CITY HALL · STATE LAW`.
 - **Biggest** leads with the most-covered local story overall, whatever it's about.
 - A **developing** story takes the lead in either mode.
+- **‹ 1 / 3 ›** next to the label flips through the top three stories for the current mode (a breaking story stays #1). It returns to #1 after two minutes without a click.
 - If there's no City news yet that day, City Hall mode shows the biggest story and says "no City Hall news yet".
 
 ## Making it yours: `config.json`
