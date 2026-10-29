@@ -145,10 +145,14 @@
   .phase-evening .stadium.lit .halo { opacity: 0.6; }
   #crown { cursor: default; }
   /* played in the last 3 days: stadium glows in the team's colors; hover shows the result */
-  .stadium .aura { fill: var(--c1, #FFE2A0); opacity: 0; transition: opacity 6s ease; }
-  .stadium .rim { fill: none; stroke: var(--c2, #FFFFFF); stroke-width: 2; opacity: 0; transition: opacity 6s ease; }
-  .stadium.recent .aura { opacity: 0.38; animation: breathe 9s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-  .stadium.recent .rim { opacity: 0.85; }
+  .stadium .rim { fill: none; stroke: none; }
+  .stadium .bulbs { opacity: 0; transition: opacity 6s ease; }
+  .stadium.recent .bulbs { opacity: 1; }
+  .stadium.recent:not(.lit) .lamp { opacity: 0; }
+  .bulbs .b { fill: var(--c1, #FFE2A0); animation: twinkle var(--tw, 7s) ease-in-out infinite; animation-delay: var(--td, 0s); }
+  .bulbs .b.alt { fill: var(--c2, #FFFFFF); }
+  .bulbs .h { fill: var(--c1, #FFE2A0); opacity: 0.18; }
+  @keyframes twinkle { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
   .stadium .hit { fill: #000; fill-opacity: 0; }
   #scene .stadium.recent .hit { pointer-events: all; cursor: default; }
   #tip { position: absolute; z-index: 5; pointer-events: none; display: none; padding: 6px 10px; border-radius: 8px;
@@ -364,27 +368,27 @@
 
     <!-- stadiums: lights glow on home game days -->
     <g id="st-tql" class="stadium">
-      <ellipse class="aura" cx="245" cy="548" rx="52" ry="17"></ellipse>
       <path d="M205 560 L214 545 Q245 536 276 545 L285 560 Z" fill="#93A6B4"></path>
       <path class="rim" d="M214 545 Q245 536 276 545"></path>
+      <g class="bulbs"></g>
       <rect class="hit" x="195" y="525" width="100" height="40"></rect>
       <rect class="lamp" x="216" y="540" width="7" height="2.5"></rect><rect class="lamp" x="266" y="540" width="7" height="2.5"></rect>
       <circle class="halo" cx="219.5" cy="541" r="6"></circle><circle class="halo" cx="269.5" cy="541" r="6"></circle>
     </g>
     <g id="st-paycor" class="stadium">
-      <ellipse class="aura" cx="356" cy="580" rx="68" ry="19"></ellipse>
       <path d="M300 596 L311 578 L401 578 L412 596 Z" fill="#93A6B4"></path>
       <rect x="309" y="573" width="94" height="4" fill="#93A6B4"></rect>
       <path class="rim" d="M309 573 L403 573"></path>
+      <g class="bulbs"></g>
       <rect class="hit" x="292" y="556" width="128" height="42"></rect>
       <rect class="lamp" x="318" y="569" width="9" height="3"></rect><rect class="lamp" x="342" y="569" width="9" height="3"></rect>
       <rect class="lamp" x="362" y="569" width="9" height="3"></rect><rect class="lamp" x="386" y="569" width="9" height="3"></rect>
       <circle class="halo" cx="322.5" cy="570.5" r="7"></circle><circle class="halo" cx="346.5" cy="570.5" r="7"></circle><circle class="halo" cx="366.5" cy="570.5" r="7"></circle><circle class="halo" cx="390.5" cy="570.5" r="7"></circle>
     </g>
     <g id="st-gabp" class="stadium">
-      <ellipse class="aura" cx="1026" cy="584" rx="50" ry="17"></ellipse>
       <path d="M990 596 L1000 581 L1052 581 L1062 596 Z" fill="#93A6B4"></path>
       <path class="rim" d="M1000 581 L1052 581"></path>
+      <g class="bulbs"></g>
       <rect class="hit" x="982" y="558" width="88" height="40"></rect>
       <rect x="994" y="566" width="2.5" height="16" fill="#93A6B4"></rect><rect x="1055.5" y="566" width="2.5" height="16" fill="#93A6B4"></rect>
       <rect class="lamp" x="992" y="563" width="7" height="3"></rect><rect class="lamp" x="1053" y="563" width="7" height="3"></rect>
@@ -1057,6 +1061,24 @@ function renderGames(games) {
     if (r) { st.style.setProperty('--c1', r.colors[0] || '#FFE2A0'); st.style.setProperty('--c2', r.colors[1] || '#FFFFFF'); }
   }
 }
+
+// Tiny lights along each stadium's roofline: mostly the team's main color, every third its second color.
+function buildBulbs() {
+  for (const id of ['tql', 'paycor', 'gabp']) {
+    const st = document.getElementById('st-' + id);
+    const rim = st.querySelector('.rim'), layer = st.querySelector('.bulbs');
+    const len = rim.getTotalLength(), n = Math.max(5, Math.floor(len / 7));
+    for (let i = 0; i < n; i++) {
+      const pt = rim.getPointAtLength(((i + 0.5) / n) * len);
+      layer.append(svg('circle', { cx: pt.x, cy: pt.y - 1.2, r: 3.2 }, 'h'));
+      const b = svg('circle', { cx: pt.x, cy: pt.y - 1.2, r: 1.25 }, 'b' + (i % 3 === 1 ? ' alt' : ''));
+      b.style.setProperty('--tw', `${(5 + Math.random() * 4).toFixed(1)}s`);
+      b.style.setProperty('--td', `${(-Math.random() * 8).toFixed(1)}s`);
+      layer.append(b);
+    }
+  }
+}
+buildBulbs();
 
 // Hover card for a glowing stadium.
 function showTip(id, e) {
