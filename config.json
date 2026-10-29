@@ -138,6 +138,9 @@
     "drop_press_releases": true
   },
 
+  "_local_teams_readme": "Also count as local (but sports are still downweighted).",
+  "local_teams": ["Bengals", "Reds", "FC Cincinnati", "FCC", "Bearcats", "Musketeers", "Xavier", "UC", "NKU", "Cyclones"],
+
   "downweight_terms": ["Bengals", "Reds", "Bearcats", "Musketeers", "high school football", "lottery", "recipe"],
 
   "breaking_terms": ["breaking", "live updates", "shooting", "fire", "crash", "evacuation", "evacuated", "lockdown", "water main", "boil advisory", "power outage", "outages", "closed", "closes", "shut down", "manhunt", "tornado", "flooding", "explosion", "collapse"],

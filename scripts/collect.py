@@ -139,8 +139,8 @@ def looks_like_press_release(item, cfg):
     They come through the Google News search, never name a local place, and Capitalize Every Word
     or SHOUT. The Enquirer's own headlines are sentence case.
     """
-    if not item.get("_google") or item.get("_official"):
-        return False          # the City's own releases ("Taft Road and Collins Ave. Closed…") are never junk
+    if not item.get("_google") or item.get("_official") or item.get("_narrow"):
+        return False          # City releases and newsroom-only searches never contain press releases
     key = id(cfg)
     if key not in _LOCAL_CACHE:
         terms = list(cfg.get("local_terms", [])) + list(cfg.get("cincinnati_anchors", []))
@@ -179,7 +179,7 @@ def is_junk(item, cfg):
 
 # ---------------------------------------------------------------- feeds → items
 
-def parse_feed(data, source_name, is_google, alias_pairs, now, official=False):
+def parse_feed(data, source_name, is_google, alias_pairs, now, official=False, narrow=False):
     parsed = feedparser.parse(data)
     items = []
     for e in parsed.entries:
@@ -213,6 +213,7 @@ def parse_feed(data, source_name, is_google, alias_pairs, now, official=False):
             "_official": official,
             # Google hides the real address; its <source> tag still names the site (e.g. vehiclesforsale…cincinnati.com).
             "_source_site": src_href if is_google else "",
+            "_narrow": narrow,
         })
     return items
 
@@ -228,7 +229,8 @@ def collect_items(cfg, now):
         for url in candidates:
             try:
                 data = fetch(url)
-                items = parse_feed(data, src["name"], "news.google.com" in url, alias_pairs, now, src.get("official", False))
+                narrow = bool(re.search(r"site:[a-z0-9.-]+/[a-z]", url))     # e.g. site:cincinnati.com/story
+                items = parse_feed(data, src["name"], "news.google.com" in url, alias_pairs, now, src.get("official", False), narrow)
                 kept = [i for i in items if not is_junk(i, cfg)]
                 dropped = len(items) - len(kept)
                 dropped_titles = [i["title"] for i in items if is_junk(i, cfg)][:12]
@@ -412,7 +414,9 @@ class Rules:
             "requires": [term_regex(t) for t in g.get("requires_any", [])],
             "national": g.get("national", False),
         } for g in cfg["city_relevance"]]
-        self.local_terms = [term_regex(t) for t in cfg["local_terms"]]
+        # Anywhere in the Tri-State counts as local: Cincinnati places, suburbs, and the teams.
+        self.local_terms = [term_regex(t) for t in list(cfg["local_terms"]) + list(cfg.get("other_municipalities", []))
+                            + list(cfg.get("cincinnati_anchors", [])) + list(cfg.get("local_teams", []))]
         self.ohio_terms = [term_regex(t) for t in cfg.get("ohio_terms", ["Ohio"])]
         self.down_terms = [term_regex(t) for t in cfg.get("downweight_terms", [])]
         self.breaking_terms = [term_regex(t) for t in cfg.get("breaking_terms", [])]
@@ -551,7 +555,10 @@ def score_clusters(clusters, rules, now, memory=None):
         if any(i.get("_official") for i in its):
             place, place_hint = "yes", "City of Cincinnati release"
 
-        is_local = bool(first_hit(rules.local_terms, text)) or any(o in rules.local_outlets for o in outlets)
+        # A local outlet's own feed is local by definition. Results from a Google search under its name
+        # (e.g. USA TODAY network stories on cincinnati.com) have to name somewhere local themselves.
+        is_local = bool(first_hit(rules.local_terms, text)) or any(
+            i["outlet"] in rules.local_outlets and (not i.get("_google") or i.get("_official")) for i in its)
         is_ohio = bool(first_hit(rules.ohio_terms, text))
         city_score, reasons, why = city_relevance(its, rules, is_local, is_ohio, place)
         is_legislation = any(r in ("State law", "Federal") for r in reasons)
@@ -613,7 +620,10 @@ def score_clusters(clusters, rules, now, memory=None):
             },
             "_tok": sorted(c["_tok"]),
             "_age_h": age_h,
-            "_keep": is_local or (is_legislation and is_city),
+            # Keep it if it's local, a City-relevant law, or a local outlet's story that uses City words
+            # ("Council budget committee takes up…") even when it names no place.
+            "_keep": is_local or (is_legislation and is_city) or (
+                bool(why) and not is_legislation and place != "other" and any(o in rules.local_outlets for o in outlets)),
         })
 
     lookback = th["lookback_hours"]

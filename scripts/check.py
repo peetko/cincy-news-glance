@@ -30,6 +30,7 @@ def make_item(c, now):
         "published": now - timedelta(minutes=30),
         "_google": c.get("google", False),
         "_official": c.get("official", False),
+        "_narrow": c.get("narrow", False),
     }
 
 
@@ -54,6 +55,7 @@ def main():
             clusters = [{"items": items, "_tok": set().union(*(i["_tok"] for i in items))}]
             stories = collect.score_clusters(clusters, rules, now)
             s = stories[0] if stories else None
+            got["kept"] = bool(s)
             got["city"] = bool(s and s["is_city"])
             got["label"] = (s["city_reasons"][0] if s and s["city_reasons"] else None)
             got["place"] = s["place"] if s else None

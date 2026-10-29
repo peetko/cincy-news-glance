@@ -1,5 +1,5 @@
 {
-  "_readme": "Real headlines and what the screen should do with them. GitHub checks every one before publishing; if any fail, the screen keeps the last good version. When the screen gets something wrong, add it here with the right answer. 'expect' can include: junk (true = dropped), city (true = counts for City Hall), label (the CITY HALL · label), place (yes / other / maybe).",
+  "_readme": "Real headlines and what the screen should do with them. GitHub checks every one before publishing; if any fail, the screen keeps the last good version. When the screen gets something wrong, add it here with the right answer. 'expect' can include: junk (true = dropped), kept (false = not local, left off the screen), city (true = counts for City Hall), label (the CITY HALL · label), place (yes / other / maybe).",
 
   "headlines": [
     {"note": "Hamilton, Ohio council — caught Oct 28",
@@ -65,6 +65,31 @@
     {"note": "A City road-closure release must not be dropped as a press release",
      "title": "Taft Road and Collins Ave. Closed 10/9 through 10/12", "outlet": "City of Cincinnati", "google": true, "official": true,
      "expect": {"junk": false}},
+
+    {"note": "USA TODAY network stories on cincinnati.com aren't local — caught Oct 29",
+     "title": "Who was voted off 'Survivor' last night? Another castaway eliminated. See who", "outlet": "Enquirer", "google": true, "narrow": true,
+     "expect": {"junk": false, "kept": false}},
+
+    {"title": "Ohio high school football 2026 | Ranking the final top 8 Greater Akron teams", "outlet": "Enquirer", "google": true, "narrow": true,
+     "expect": {"kept": false}},
+
+    {"title": "Police identify 21-year-old man killed in Walnut Hills shooting", "outlet": "Enquirer", "google": true, "narrow": true,
+     "expect": {"kept": true}},
+
+    {"title": "Springdale company partners with Bengals on indoor practice facility", "outlet": "Enquirer", "google": true, "narrow": true,
+     "expect": {"kept": true, "city": false}},
+
+    {"note": "Enquirer City story with no place words in the headline stays on screen",
+     "title": "Council budget committee takes up mid-year spending adjustments", "outlet": "Enquirer", "google": true, "narrow": true,
+     "expect": {"kept": true}},
+
+    {"note": "A real column with a Title Case tag must not be treated as a press release",
+     "title": "Could Amy Acton sue Vivek Ramaswamy for defamation? | Strictly Legal", "outlet": "Enquirer", "google": true, "narrow": true,
+     "expect": {"junk": false}},
+
+    {"note": "A WCPO feed story with no place words is still local (it's WCPO's own feed)",
+     "title": "Parenting coach on how to make Halloween fun, stress-free for whole family", "outlet": "WCPO",
+     "expect": {"kept": true}},
 
     {"note": "Another town's council",
      "title": "Norwood council member resigns after six years", "outlet": "WLWT",
