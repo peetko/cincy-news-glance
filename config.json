@@ -16,7 +16,9 @@
   "sources": [
     {
       "name": "Enquirer",
-      "feeds": ["https://news.google.com/rss/search?q=site:cincinnati.com+-obituary+-obituaries+-obituaries.cincinnati.com+when:1d&hl=en-US&gl=US&ceid=US:en"]
+      "_note": "Only newsroom articles (cincinnati.com/story/...): leaves out press releases and car listings. The broad search is a backup if this ever comes back empty.",
+      "feeds": ["https://news.google.com/rss/search?q=site:cincinnati.com/story+when:1d&hl=en-US&gl=US&ceid=US:en"],
+      "fallback": "https://news.google.com/rss/search?q=site:cincinnati.com+-obituary+-obituaries+when:1d&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "name": "WCPO",
@@ -131,7 +133,7 @@
   "_exclude_readme": "Headlines dropped entirely: obituaries, death notices, and headlines that are only a person's name.",
   "exclude": {
     "title_terms": ["obituary", "obituaries", "death notice", "death notices", "passed away", "celebration of life", "in memoriam", "funeral home", "legacy.com"],
-    "url_terms": ["/obituaries", "obituaries.", "legacy.com", "/obits/"],
+    "url_terms": ["/obituaries", "obituaries.", "legacy.com", "/obits/", "/press-release/", "vehiclesforsale", "/shop-vehicles"],
     "drop_name_only_titles": true,
     "drop_press_releases": true
   },

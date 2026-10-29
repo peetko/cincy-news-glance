@@ -163,7 +163,8 @@ def is_junk(item, cfg):
     low = (title + " " + item.get("summary", "")).lower()
     if any(t.lower() in low for t in ex.get("title_terms", [])):
         return True
-    if any(t.lower() in link for t in ex.get("url_terms", [])):
+    site = item.get("_source_site", "").lower()
+    if any(t.lower() in link or t.lower() in site for t in ex.get("url_terms", [])):
         return True
     if cfg.get("exclude", {}).get("drop_press_releases", True) and looks_like_press_release(item, cfg):
         return True
@@ -188,9 +189,10 @@ def parse_feed(data, source_name, is_google, alias_pairs, now, official=False):
         outlet = source_name
         if is_google:
             # Google News titles end with " - Outlet name"; the outlet is also in <source>.
-            src_title = ""
+            src_title, src_href = "", ""
             if e.get("source") and isinstance(e.source, dict):
                 src_title = e.source.get("title", "")
+                src_href = e.source.get("href", "")
             m = re.match(r"^(.*)\s+-\s+([^-]+)$", title)
             if m:
                 title, tail = m.group(1).strip(), m.group(2).strip()
@@ -209,6 +211,8 @@ def parse_feed(data, source_name, is_google, alias_pairs, now, official=False):
             "published": published,
             "_google": is_google,
             "_official": official,
+            # Google hides the real address; its <source> tag still names the site (e.g. vehiclesforsale…cincinnati.com).
+            "_source_site": src_href if is_google else "",
         })
     return items
 
