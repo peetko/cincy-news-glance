@@ -42,8 +42,8 @@
     font-size: 13px; letter-spacing: 0.06em; color: var(--muted);
   }
   #bar .left { display: flex; align-items: center; gap: 12px; min-height: 34px; }
-  #bar .right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
-  #bar .sub { display: flex; gap: 10px; font-size: 11px; letter-spacing: 0.05em; }
+  #bar .right { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex: none; max-width: 330px; }
+  #bar .sub { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; font-size: 11px; letter-spacing: 0.05em; }
   #bar .city { color: var(--ink); letter-spacing: 0.18em; }
   #wx { display: flex; align-items: center; gap: 8px; color: var(--ink); }
   #wx svg { width: 20px; height: 20px; }
@@ -790,7 +790,11 @@ function render(data) {
   counts.append(document.createTextNode(`${c.city ?? 0} for City Hall`));
   const age = (Date.now() - new Date(data.generated_at)) / 60000;
   const upd = $('updated');
-  upd.textContent = age > 60 ? `● paused since ${new Date(data.generated_at).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}` : '';
+  const when = new Date(data.generated_at);
+  const sameDay = when.toDateString() === new Date().toDateString();
+  upd.textContent = age > 60
+    ? `● last update ${sameDay ? '' : when.toLocaleDateString('en-US', { weekday: 'short' }) + ' '}${clock(data.generated_at)}`
+    : '';
   upd.className = age > 60 ? 'stale' : '';
 
   // Only rebuild the moving parts when the news actually changed (keeps the river smooth).

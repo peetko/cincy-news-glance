@@ -31,6 +31,29 @@ It costs nothing to run: GitHub collects the headlines on a schedule and hosts t
 
 Preview without live data: add `?sample=calm` or `?sample=dev` to the page address.
 
+## Reliable updates: the outside timer (one-time, ~10 minutes)
+
+GitHub's built-in schedule often runs late or skips runs entirely. A free timer at cron-job.org fixes that by telling GitHub "run now" every 15 minutes.
+
+**1. Make a key that can only start this one workflow**
+- GitHub → your picture → **Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token**.
+- Name: `news glance timer`. Expiration: the longest offered (set a reminder to renew it).
+- Repository access: **Only select repositories → cincy-news-glance**.
+- Permissions → Repository permissions → **Actions: Read and write**. Nothing else.
+- Generate, then copy the token (it starts with `github_pat_`). You won't see it again.
+
+**2. Set up the timer**
+- Make a free account at cron-job.org → **Create cronjob**.
+- URL: `https://api.github.com/repos/peetko/cincy-news-glance/actions/workflows/update.yml/dispatches`
+- Schedule: **Custom** → every 15 minutes, hours 7–19, Monday–Friday, time zone **America/New_York**.
+- **Advanced** tab:
+  - Request method: **POST**
+  - Headers: `Accept: application/vnd.github+json`, `Authorization: Bearer <your token>`, `X-GitHub-Api-Version: 2022-11-28`
+  - Request body: `{"ref":"main"}`
+- Save, then **Test run**. A response of **204** means it worked; check the Actions tab for a new run.
+
+The key can only start this workflow, in this one repo: it can't read, change or delete anything else.
+
 ## Using the screen
 
 - **The river:** hover to pause it. Drag it sideways or scroll it (mouse wheel or a two-finger swipe) to browse every story; a quick flick keeps it gliding. Click a headline to open it.
@@ -90,7 +113,7 @@ Edit it right in GitHub: open the file, click the pencil icon, then **Commit cha
 - The page asks the browser to keep the screen awake while it's showing (Chrome or Edge).
 - Lower the laptop's brightness. The page is designed to sit quietly at the edge of your vision.
 - Hover over the river to pause it. Click any headline to open the story; your Enquirer login works as usual.
-- After about 7 PM and on weekends, updates pause. The top-right corner then shows "paused since…".
+- After about 7 PM and on weekends, updates pause. The top-right corner then shows "last update …".
 
 ## Cost and limits
 

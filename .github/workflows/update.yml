@@ -3,11 +3,12 @@
 name: Update news
 
 on:
+  # The main clock is an outside timer (cron-job.org, see README) that calls
+  # "run now" every 15 minutes, because GitHub's own scheduler often skips runs.
+  workflow_dispatch:        # what the outside timer triggers; also the "Run workflow" button
+  # Backup only: GitHub's schedule (UTC; 11–23 UTC ≈ 7 AM–7 PM Eastern). Often late or skipped.
   schedule:
-    # GitHub schedules run in UTC. 11–23 UTC ≈ 7 AM–7 PM EDT / 6 AM–6 PM EST.
-    # Odd minutes (:07, :22…) dodge the top-of-hour rush when GitHub runs late.
-    - cron: "7,22,37,52 11-23 * * 1-5"
-  workflow_dispatch:        # adds a "Run workflow" button on the Actions tab
+    - cron: "13,43 11-23 * * 1-5"
   push:
     branches: [main]        # republish whenever you edit a file
 
