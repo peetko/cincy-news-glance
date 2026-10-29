@@ -128,7 +128,7 @@
 
   "_incident_rule_readme": "Police and Fire count only 35% on routine incident reports (a shooting, crash, arrest, house fire) unless the story is about the department itself. Set factor to 1 to turn this off.",
   "incident_rule": {
-    "factor": 0.35,
+    "factor": 1,
     "incident_terms": ["shooting", "shot", "shots fired", "killed", "dead", "death", "dies", "died", "stabbing", "stabbed", "homicide", "murder", "crash", "wreck", "robbery", "robbed", "arrested", "arrest", "charged", "indicted", "sentenced", "carjacking", "burglary", "break-in", "missing", "house fire", "apartment fire", "blaze", "flames", "rescued", "overdose", "pursuit", "chase", "SWAT"],
     "department_business_terms": ["chief", "police chief", "fire chief", "staffing", "recruit", "recruits", "recruitment", "academy", "budget", "contract", "union", "FOP", "overtime", "policy", "body camera", "body cameras", "drone", "drones", "curfew", "oversight", "Citizen Complaint Authority", "CCA", "use of force", "officer-involved", "police shooting", "officer shot", "officer was shot", "firefighter injured", "firefighter killed", "lawsuit", "settlement", "discipline", "response times", "brownout", "new station", "firehouse", "violence reduction", "strategy", "plan", "council", "city manager"]
   },
