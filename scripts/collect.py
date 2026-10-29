@@ -766,6 +766,46 @@ def get_weather(cfg, now):
 
 # ---------------------------------------------------------------- game days (ESPN's public scoreboards)
 
+def game_odds(comp, ours, them):
+    """
+    The betting line ESPN shows for a game (from its sportsbook partner): who's favored,
+    by how much, the moneylines and the over/under. None if no line is posted yet.
+    """
+    lines = comp.get("odds") or []
+    if not lines:
+        return None
+    o = lines[0]
+    home_is_us = ours.get("homeAway") == "home"
+    side_us = o.get("homeTeamOdds" if home_is_us else "awayTeamOdds") or {}
+    side_them = o.get("awayTeamOdds" if home_is_us else "homeTeamOdds") or {}
+
+    def ml(side, key):
+        v = side.get("moneyLine")
+        if v is None:                                    # newer layout: odds.moneyline.home.close.odds
+            v = (((o.get("moneyline") or {}).get(key) or {}).get("close") or {}).get("odds")
+        try:
+            return int(str(v).replace("+", "")) if v not in (None, "", "EVEN") else (100 if v == "EVEN" else None)
+        except ValueError:
+            return None
+
+    us_ml = ml(side_us, "home" if home_is_us else "away")
+    them_ml = ml(side_them, "away" if home_is_us else "home")
+    fav = None
+    if side_us.get("favorite") or side_them.get("favorite"):
+        fav = "us" if side_us.get("favorite") else "them"
+    elif us_ml is not None and them_ml is not None and us_ml != them_ml:
+        fav = "us" if us_ml < them_ml else "them"
+    spread = o.get("spread")
+    return {
+        "provider": ((o.get("provider") or {}).get("name") or "").strip() or None,
+        "details": o.get("details"),                    # e.g. "CIN -3.5"
+        "spread": abs(float(spread)) if isinstance(spread, (int, float)) else None,
+        "over_under": o.get("overUnder"),
+        "favorite": fav,                                # "us" / "them" / None (pick'em)
+        "moneyline": [us_ml, them_ml],
+    }
+
+
 def get_games(cfg, now):
     """
     Bengals / Reds / FC Cincinnati games from 3 days ago through 5 days ahead, from ESPN's free
@@ -821,6 +861,7 @@ def get_games(cfg, now):
                 "detail": state.get("shortDetail", ""),
                 "score": [ours.get("score"), them.get("score")] if state.get("state") in ("in", "post") else None,
                 "result": result,
+                "odds": game_odds(comp, ours, them) if state.get("state") == "pre" else None,
             })
     games.sort(key=lambda g: g["start"] or "")
     # The same game can show up twice when day-by-day results overlap.

@@ -144,6 +144,7 @@
   #coverage .down::after { content: ''; display: inline-block; width: 5px; height: 5px; border-radius: 50%;
     background: var(--dev); margin-left: 6px; vertical-align: 1px; }
   #reminder { color: var(--dev-text); }
+  #games > span { cursor: default; }
   #games { color: var(--ink); display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
   #games .live { color: var(--dev-text); }
   /* home = solid dot, away = hollow ring, in the team's color */
@@ -1023,10 +1024,11 @@ let recentByStadium = {};
 
 function previewGames() {
   const h = 3600e3, now = Date.now();
+  const sample = (fav, spread, ou, ml) => ({ provider: 'ESPN BET', details: '', spread, over_under: ou, favorite: fav, moneyline: ml });
   return [
     { team: 'Bengals', stadium: 'paycor', colors: ['#FB4F14', '#000000'], home: true, opponent: 'Steelers', start: new Date(now - 50 * h).toISOString(), state: 'post', score: ['24', '17'], result: 'W' },
-    { team: 'FC Cincinnati', stadium: 'tql', colors: ['#F05323', '#263B80'], home: true, opponent: 'Orlando City', start: new Date(now + 54 * h).toISOString(), state: 'pre' },
-    { team: 'Bengals', stadium: 'paycor', colors: ['#FB4F14', '#000000'], home: false, opponent: 'Ravens', start: new Date(now + 76 * h).toISOString(), state: 'pre' },
+    { team: 'FC Cincinnati', stadium: 'tql', colors: ['#F05323', '#263B80'], home: true, opponent: 'Orlando City', start: new Date(now + 54 * h).toISOString(), state: 'pre', odds: sample('us', null, 2.5, [-125, 310]) },
+    { team: 'Bengals', stadium: 'paycor', colors: ['#FB4F14', '#000000'], home: false, opponent: 'Ravens', start: new Date(now + 76 * h).toISOString(), state: 'pre', odds: sample('them', 3.5, 47.5, [150, -175]) },
   ];
 }
 
@@ -1043,6 +1045,28 @@ function resultText(g) {
   const [us, them] = (g.score || []).map((x) => x ?? '');
   const verb = g.result === 'W' ? 'beat' : g.result === 'L' ? 'lost to' : 'tied';
   return `${g.team} ${verb} ${g.opponent} ${us}–${them}${g.home ? '' : ' (away)'} · ${dayLabel(g.start)}`;
+}
+
+// "Bengals favored by 3.5 (−175) · Titans +150 · O/U 44.5 · via ESPN BET"
+function oddsText(g) {
+  const o = g.odds;
+  if (!o) return g.state === 'pre' ? ['No betting line posted yet'] : [];
+  const sign = (n) => (n == null ? '' : n > 0 ? `+${n}` : `−${Math.abs(n)}`);
+  const [usML, themML] = o.moneyline || [];
+  const favName = o.favorite === 'us' ? g.team : o.favorite === 'them' ? g.opponent : null;
+  const favML = o.favorite === 'us' ? usML : themML;
+  const dogName = o.favorite === 'us' ? g.opponent : g.team;
+  const dogML = o.favorite === 'us' ? themML : usML;
+  const parts = [];
+  if (!favName) parts.push('Even matchup (pick ’em)');
+  else if (o.spread) parts.push(`${favName} favored by ${o.spread}${favML != null ? ` (${sign(favML)})` : ''}`);
+  else parts.push(`${favName} favored${favML != null ? ` (${sign(favML)})` : ''}`);
+  const more = [];
+  if (favName && dogML != null) more.push(`${dogName} ${sign(dogML)}`);
+  if (o.over_under) more.push(`Over/under ${o.over_under}`);
+  if (more.length) parts.push(more.join(' · '));
+  if (o.provider) parts.push(`Line via ${o.provider}`);
+  return parts;
 }
 
 function renderGames(games) {
@@ -1064,8 +1088,11 @@ function renderGames(games) {
     const c = (g.colors && g.colors[0]) || '#6F9BB3';
     if (g.home) mark.style.background = c;
     else mark.style.border = `1.5px solid ${c}`;
-    row.title = g.home ? `Home game at ${STADIUM_NAME[g.stadium] || 'home'}` : `Away game at ${g.opponent}`;
+    const where = g.home ? `Home game at ${STADIUM_NAME[g.stadium] || 'home'}` : `Away game at ${g.opponent}`;
     row.append(mark, document.createTextNode(text));
+    // Hover the line or its dot: where it is, plus the betting line.
+    row.addEventListener('pointermove', (e) => showTextTip([where, ...oddsText(g)], (g.colors || []).slice(0, 2), e));
+    row.addEventListener('pointerleave', () => { $('tip').style.display = 'none'; });
     box.append(row);
   }
 
@@ -1106,6 +1133,24 @@ function buildBulbs() {
   }
 }
 buildBulbs();
+
+// A small hover card with a few lines of text (and optional team-color swatches).
+function showTextTip(lines, colors, e) {
+  const tip = $('tip');
+  tip.textContent = '';
+  lines.forEach((t, i) => {
+    const row = el('div');
+    if (i === 0) for (const c of colors || []) { const sw = el('span', 'sw'); sw.style.background = c; sw.style.border = '1px solid #A6B9C6'; row.append(sw); }
+    row.append(document.createTextNode(t));
+    tip.append(row);
+  });
+  const stage = $('stage').getBoundingClientRect();
+  tip.style.display = 'block';
+  const x = (e.clientX - stage.left) / SCALE, y = (e.clientY - stage.top) / SCALE;
+  const w = tip.offsetWidth, W = stage.width / SCALE;
+  tip.style.left = `${Math.min(W - w - 12, Math.max(8, x - w / 2))}px`;
+  tip.style.top = `${y + 18}px`;
+}
 
 // Hover card for a glowing stadium.
 function showTip(id, e) {
