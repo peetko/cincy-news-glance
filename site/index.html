@@ -33,7 +33,7 @@
     font-family: 'Bricolage Grotesque', system-ui, sans-serif;
   }
   .mono { font-family: 'DM Mono', ui-monospace, monospace; }
-  #scene { position: absolute; inset: 0; }
+  #scene { position: absolute; inset: 0; width: 100%; height: 100%; }
 
   /* ---------- top bar ---------- */
   #bar {
@@ -61,7 +61,7 @@
   .toggle button:focus-visible { outline: 2px solid var(--city); outline-offset: 1px; }
 
   /* ---------- lead story ---------- */
-  #lead { position: absolute; top: 120px; left: 64px; width: 610px; display: flex; flex-direction: column; gap: 14px; transition: opacity 1.2s ease; }
+  #lead { position: absolute; top: 120px; left: 64px; width: min(660px, 46%); display: flex; flex-direction: column; gap: 14px; transition: opacity 1.2s ease; }
   #lead.fading { opacity: 0; }
   #tag { display: flex; align-items: center; gap: 10px; white-space: nowrap; width: max-content; font-size: 13px; letter-spacing: 0.12em;
     font-family: 'DM Mono', ui-monospace, monospace; background: none; border: 0; padding: 0; margin: 0; color: inherit; text-align: left; cursor: default; }
@@ -178,9 +178,9 @@
         <stop offset="1" stop-color="#F08A62" stop-opacity="1"></stop>
       </linearGradient>
     </defs>
-    <rect x="0" y="260" width="1200" height="340" fill="url(#glowFade)" id="glow"></rect>
+    <rect x="-1200" y="260" width="3600" height="340" fill="url(#glowFade)" id="glow"></rect>
     <!-- sun + clouds -->
-    <rect id="flash" x="0" y="0" width="1200" height="600" fill="#FFFFFF"></rect>
+    <rect id="flash" x="-1200" y="0" width="3600" height="600" fill="#FFFFFF"></rect>
     <g id="sun">
       <g id="rays" stroke="#FFE7A0" stroke-width="2" stroke-linecap="round">
         <line x1="1070" y1="58" x2="1070" y2="44"></line><line x1="1070" y1="198" x2="1070" y2="212"></line>
@@ -222,6 +222,19 @@
     <g id="precip"></g>
 
     <!-- hills: Price Hill bluff (west), the basin, Mount Adams (east) -->
+    <!-- hills beyond the original 1200px frame, for wide screens -->
+    <path d="M-1200 444 C -1000 424 -820 430 -640 438 S -300 416 -150 424 S -40 432 0 430 L0 600 L-1200 600 Z" fill="#C8DAE1"></path>
+    <path d="M1200 418 C 1330 412 1460 430 1600 426 S 1900 410 2050 420 S 2300 432 2400 428 L2400 600 L1200 600 Z" fill="#C8DAE1"></path>
+    <path d="M-1200 468 C -1020 446 -860 452 -700 460 S -380 440 -220 446 S -60 456 0 452 L0 600 L-1200 600 Z" fill="#ADC7B3"></path>
+    <path d="M1200 456 C 1320 450 1440 466 1560 462 S 1820 446 1960 452 S 2260 466 2400 460 L2400 600 L1200 600 Z" fill="#ADC7B3"></path>
+    <g fill="#9EBDA6">
+      <circle cx="-560" cy="450" r="8"></circle><circle cx="-480" cy="446" r="9"></circle><circle cx="-300" cy="440" r="8"></circle>
+      <circle cx="-120" cy="446" r="7"></circle><circle cx="1290" cy="456" r="8"></circle><circle cx="1420" cy="462" r="7"></circle>
+      <circle cx="1700" cy="456" r="9"></circle><circle cx="1880" cy="450" r="8"></circle>
+    </g>
+    <path d="M-1200 562 C -900 552 -500 550 -200 556 S -40 562 0 560 L0 600 L-1200 600 Z" fill="#9CBBA4"></path>
+    <path d="M1200 590 L2400 590 L2400 600 L1200 600 Z" fill="#9CBBA4"></path>
+
     <path d="M0 430 C 90 410 170 408 260 418 C 360 430 420 452 520 458 C 640 466 780 462 900 456 C 980 452 1020 420 1090 414 C 1140 410 1180 414 1200 418 L1200 600 L0 600 Z" fill="#C8DAE1"></path>
     <path d="M0 452 C 70 436 170 430 260 440 C 310 446 340 470 380 506 C 410 532 450 544 520 546 C 640 550 820 548 920 540 C 960 530 985 490 1020 470 C 1060 452 1120 450 1200 456 L1200 600 L0 600 Z" fill="#ADC7B3"></path>
     <g fill="#9EBDA6">
@@ -308,8 +321,8 @@
     <circle id="clockFace" cx="491" cy="532" r="3.4" fill="#E3A21A"></circle>
 
     <!-- river -->
-    <rect x="0" y="596" width="1200" height="204" fill="#A9CADB"></rect>
-    <rect x="0" y="594" width="1200" height="3" fill="#8FB0C2"></rect>
+    <rect x="-1200" y="596" width="3600" height="204" fill="#A9CADB"></rect>
+    <rect x="-1200" y="594" width="3600" height="3" fill="#8FB0C2"></rect>
 
     <!-- rain ripples on the river -->
     <g id="ripples" fill="none" stroke="#FFFFFF" stroke-width="1.2"></g>
@@ -334,7 +347,7 @@
       <path d="M1070 598 Q 1115 552 1160 598"></path>
       <path d="M1160 598 Q 1190 566 1220 598"></path>
     </g>
-    <line x1="1050" y1="596" x2="1200" y2="596" stroke="#8FA2AF" stroke-width="2.5"></line>
+    <line x1="1050" y1="596" x2="1330" y2="596" stroke="#8FA2AF" stroke-width="2.5"></line>
 
     <g stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round">
       <line class="sh" x1="120" y1="606" x2="170" y2="606"></line>
@@ -407,10 +420,23 @@ function el(tag, cls, text) {
   return n;
 }
 
+/* The scene is 800 units tall. On a screen wider than 3:2 the stage grows sideways to fill it
+   (skyline stays centered; hills, river and sky continue to the edges). On a narrower screen it
+   shrinks to fit the width instead. */
+let VB = { x: 0, w: 1200 };
 function fit() {
-  const s = Math.min(innerWidth / 1200, innerHeight / 800);
+  let s = innerHeight / 800;
+  let W = innerWidth / s;
+  if (W < 1200) { s = innerWidth / 1200; W = 1200; }
+  W = Math.min(W, 3400);
   SCALE = s;
-  $('stage').style.transform = `translate(-50%, -50%) scale(${s})`;
+  const stage = $('stage');
+  stage.style.width = `${W}px`;
+  stage.style.transform = `translate(-50%, -50%) scale(${s})`;
+  const pad = (W - 1200) / 2;
+  VB = { x: -pad, w: W };
+  $('scene').setAttribute('viewBox', `${-pad} 0 ${W} 800`);
+  if (sceneKind) { const k = sceneKind; sceneKind = null; setScene(k); }   // re-spread rain/snow across the new width
 }
 
 function tickClock() {
@@ -480,23 +506,23 @@ function setScene(kind) {
   precip.textContent = ''; ripples.textContent = '';
   const rand = (a, b) => a + Math.random() * (b - a);
   if (kind === 'rain' || kind === 'storm') {
-    const n = kind === 'storm' ? 90 : 60;
+    const n = Math.round((kind === 'storm' ? 90 : 60) * VB.w / 1200);
     for (let i = 0; i < n; i++) {
-      const x = rand(0, 1280), y = rand(-40, 20);
+      const x = rand(VB.x - 20, VB.x + VB.w + 80), y = rand(-40, 20);
       const d = svg('line', { x1: x, y1: y, x2: x - 4, y2: y + 15, stroke: '#8EAABD', 'stroke-width': 1.2, 'stroke-linecap': 'round', opacity: rand(0.25, 0.5).toFixed(2) }, 'drop');
       d.style.setProperty('--d', `${rand(1.5, 2.3).toFixed(2)}s`);
       d.style.setProperty('--delay', `${-rand(0, 2.3).toFixed(2)}s`);
       precip.append(d);
     }
     for (let i = 0; i < 10; i++) {
-      const r = svg('ellipse', { cx: rand(40, 1160), cy: rand(612, 790), rx: 10, ry: 2.6 }, 'ripple');
+      const r = svg('ellipse', { cx: rand(VB.x + 40, VB.x + VB.w - 40), cy: rand(612, 790), rx: 10, ry: 2.6 }, 'ripple');
       r.style.setProperty('--d', `${rand(3.5, 5.5).toFixed(2)}s`);
       r.style.setProperty('--delay', `${-rand(0, 5).toFixed(2)}s`);
       ripples.append(r);
     }
   } else if (kind === 'snow') {
-    for (let i = 0; i < 70; i++) {
-      const f = svg('circle', { cx: rand(0, 1200), cy: rand(-30, 10), r: rand(1.2, 2.8).toFixed(1), fill: '#FFFFFF', opacity: rand(0.55, 0.9).toFixed(2) }, 'flake');
+    for (let i = 0; i < Math.round(70 * VB.w / 1200); i++) {
+      const f = svg('circle', { cx: rand(VB.x, VB.x + VB.w), cy: rand(-30, 10), r: rand(1.2, 2.8).toFixed(1), fill: '#FFFFFF', opacity: rand(0.55, 0.9).toFixed(2) }, 'flake');
       f.style.setProperty('--d', `${rand(14, 26).toFixed(1)}s`);
       f.style.setProperty('--delay', `${-rand(0, 26).toFixed(1)}s`);
       precip.append(f);
@@ -668,7 +694,7 @@ function renderRiver(stories, devId) {
     if (!list.length) { river.append(wrap); return; }
     // Repeat the list until it is wider than the screen, then double it for a seamless loop.
     let seq = list.slice();
-    while (seq.length < 6) seq = seq.concat(list);
+    while (seq.length < Math.max(6, Math.ceil(VB.w / 300))) seq = seq.concat(list);
     seq.concat(seq).forEach((s) => lane.append(chip(s, devId)));
     wrap.append(lane);
     river.append(wrap);
