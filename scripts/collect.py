@@ -801,6 +801,8 @@ def build(cfg, now=None, previous=None):
     today = [s for s in stories if datetime.fromisoformat(s["first_seen"]) >= cutoff]
     return {
         "generated_at": now.isoformat(),
+        # Which version of the code made this file; the open page reloads itself when it changes.
+        "site_version": os.environ.get("GITHUB_SHA", "local")[:12],
         "weather": weather,
         "meetings": {k: meetings.get(k) for k in ("ok", "day", "is_today", "meetings")},
         "developing": developing["id"] if developing else None,

@@ -822,11 +822,18 @@ function shiftSampleTimes(data) {
   for (const s of data.stories || []) { s.first_seen = shift(s.first_seen); s.updated = shift(s.updated); }
 }
 
+let siteVersion = null;
+
 async function load() {
   try {
     const res = await fetch(`${DATA_URL}?t=${Date.now()}`, { cache: 'no-store' });
     if (!res.ok) throw new Error(res.status);
     const data = await res.json();
+    // New page design published? Reload once to pick it up (the open tab otherwise keeps the old code).
+    if (data.site_version && data.site_version !== 'local') {
+      if (siteVersion && data.site_version !== siteVersion) { location.reload(); return; }
+      siteVersion = data.site_version;
+    }
     if (params.get('sample')) shiftSampleTimes(data);
     render(data);
   } catch (e) {
