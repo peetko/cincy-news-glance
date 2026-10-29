@@ -85,7 +85,7 @@ Edit it right in GitHub: open the file, click the pencil icon, then **Commit cha
 
 | Setting | What it does |
 |---|---|
-| `sources` | The outlets. Each has direct `feeds` (tried in order) and an optional Google News `fallback`. Statewide sources (Ohio Capital Journal and two Google News sweeps for state and federal legislation) only add stories that are local or City-relevant. |
+| `sources` | The outlets. Each has direct `feeds` (tried in order) and an optional Google News `fallback`. Statewide sources (Ohio Capital Journal and two Google News sweeps for state and federal legislation) only add stories that are local or City-relevant. National or other-state policy stories (e.g. a HUD rule from a national site) appear in the river with the City Hall icon but never lead. |
 | `city_relevance` | What counts for City work, in labeled groups: City Manager, City staff, Mayor, Council, departments (Police, Fire, Buildings & Inspections, DOTE, Water Works…), and state or federal legislation that touches local government. Each group has a `weight`. Update names when people change roles. |
 | `local_terms` | Words that make a story count as local. Stories with none of them are dropped. |
 | `cincinnati_anchors` | Proof a story is about the City of Cincinnati: "Cincinnati", its neighborhoods, City officials' names, CPD, GCWW… Words like "city council" only count fully when one of these appears (in the text or the story's web address). |

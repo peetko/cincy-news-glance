@@ -1,5 +1,5 @@
 {
-  "_readme": "Real headlines and what the screen should do with them. GitHub checks every one before publishing; if any fail, the screen keeps the last good version. When the screen gets something wrong, add it here with the right answer. 'expect' can include: junk (true = dropped), kept (false = not local, left off the screen), city (true = counts for City Hall), label (the CITY HALL · label), place (yes / other / maybe).",
+  "_readme": "Real headlines and what the screen should do with them. GitHub checks every one before publishing; if any fail, the screen keeps the last good version. When the screen gets something wrong, add it here with the right answer. 'expect' can include: junk (true = dropped), kept (false = not local, left off the screen), national (true = river only, never the lead), city (true = counts for City Hall), label (the CITY HALL · label), place (yes / other / maybe).",
 
   "headlines": [
     {"note": "Hamilton, Ohio council — caught Oct 28",
@@ -110,6 +110,13 @@
 
     {"title": "Columbus City Council approves new transit levy", "outlet": "Spectrum News", "google": true,
      "expect": {"kept": false, "city": false}},
+
+    {"note": "Peter's call (Oct 29): national policy news shows in the river but never leads",
+     "title": "HUD proposals could transform manufactured housing. Cities must be ‘nimble,’ an expert says.", "outlet": "Smart Cities Dive", "google": true,
+     "expect": {"kept": true, "city": true, "label": "Federal", "national": true}},
+
+    {"title": "Ohio House bill would limit cities' home rule over short-term rentals", "outlet": "Ohio Capital Journal",
+     "expect": {"city": true, "national": false}},
 
     {"note": "Another town's council",
      "title": "Norwood council member resigns after six years", "outlet": "WLWT",

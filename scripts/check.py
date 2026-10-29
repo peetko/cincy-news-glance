@@ -57,6 +57,7 @@ def main():
             stories = collect.score_clusters(clusters, rules, now)
             s = stories[0] if stories else None
             got["kept"] = bool(s)
+            got["national"] = bool(s and s.get("national"))
             got["city"] = bool(s and s["is_city"])
             got["label"] = (s["city_reasons"][0] if s and s["city_reasons"] else None)
             got["place"] = s["place"] if s else None

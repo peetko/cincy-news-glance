@@ -575,6 +575,9 @@ def score_clusters(clusters, rules, now, memory=None):
         is_ohio = bool(first_hit(rules.ohio_terms, text))
         city_score, reasons, why = city_relevance(its, rules, is_local, is_ohio, place)
         is_legislation = any(r in ("State law", "Federal") for r in reasons)
+        # National or other-state policy news (e.g. HUD rules covered by a national site): shown in the
+        # river, but never the lead story. Ohio legislation and anything local still lead normally.
+        is_national = bool(reasons) and all(r in ("State law", "Federal") for r in reasons) and not (is_local or is_ohio)
         is_city = city_score >= th.get("city_min_score", 3)
 
         n = len(outlets)
@@ -614,6 +617,7 @@ def score_clusters(clusters, rules, now, memory=None):
             "first_seen": first.isoformat(),
             "updated": latest.isoformat(),
             "is_city": is_city,
+            "national": is_national,
             "city_reasons": reasons if is_city else [],
             "city_score": round(city_score, 2),
             "place": place,
@@ -882,8 +886,9 @@ def build(cfg, now=None, previous=None):
     prev_lead = prev_mem.get("lead", {})
     dev_list = [s for s in stories if s["developing"]]
     developing = max(dev_list, key=lambda s: (len(s["why"]["newsrooms_for_alert"]), s["first_seen"])) if dev_list else None
-    lead_city, why_city = pick_lead([s for s in stories if s["is_city"]], "city_rank", prev_lead.get("city"), margin)
-    lead_general, why_general = pick_lead(stories, "score", prev_lead.get("general"), margin)
+    leadable = [s for s in stories if not s["national"]]       # national policy stories stay in the river
+    lead_city, why_city = pick_lead([s for s in leadable if s["is_city"]], "city_rank", prev_lead.get("city"), margin)
+    lead_general, why_general = pick_lead(leadable, "score", prev_lead.get("general"), margin)
 
     # Memory for next run: every story seen in the last ~36 hours.
     keep_after = now - timedelta(hours=36)

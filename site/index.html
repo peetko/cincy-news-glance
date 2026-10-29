@@ -1180,7 +1180,8 @@ function scheduleBoats() {
 let topList = [], topIdx = 0, topCtx = null, topTimer = null;
 
 function buildTopList(stories, first, rankKey, onlyCity) {
-  const pool = stories.filter((s) => s !== first && (!onlyCity || s.is_city)).sort((a, b) => b[rankKey] - a[rankKey]);
+  // National policy stories stay in the river: never the lead, never in the top three.
+  const pool = stories.filter((s) => s !== first && !s.national && (!onlyCity || s.is_city)).sort((a, b) => b[rankKey] - a[rankKey]);
   return [first, ...pool].filter(Boolean).slice(0, 3);
 }
 
@@ -1220,8 +1221,8 @@ function render(data) {
   const byId = (id) => (id ? stories.find((s) => s.id === id) : null);
   const devStory = byId(data.developing);
   // A developing story always leads. Otherwise the switch decides.
-  const cityPick = byId(data.lead && data.lead.city) || stories.find((s) => s.is_city);
-  const generalPick = byId(data.lead && data.lead.general) || stories[0];
+  const cityPick = byId(data.lead && data.lead.city) || stories.find((s) => s.is_city && !s.national);
+  const generalPick = byId(data.lead && data.lead.general) || stories.find((s) => !s.national);
   const noCityNews = mode === 'city' && !cityPick;
   const lead = devStory || (mode === 'city' ? cityPick || generalPick : generalPick);
   currentDev = devStory;
