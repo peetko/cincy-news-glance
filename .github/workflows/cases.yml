@@ -1,0 +1,47 @@
+# The "should be / shouldn't be City Hall" buttons in the ?debug=1 panel open a GitHub issue.
+# This turns that issue into a pending test case in tests/cases.json, then closes the issue.
+name: Add wrong-call report
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  add-case:
+    # Only reports you file yourself, from the screen's buttons.
+    if: startsWith(github.event.issue.title, 'Case:') && github.event.issue.user.login == github.repository_owner
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Add the case
+        id: add
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python scripts/add_case.py
+
+      - name: Save it
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tests/cases.json
+          git diff --cached --quiet || git commit -m "Add wrong-call report #${{ github.event.issue.number }} to the to-fix list"
+          git pull --rebase -q origin main
+          git push
+
+      - name: Close the issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} \
+            --body "Added to the to-fix list in tests/cases.json (pending). It won't block updates; once the rules are tuned so it passes, it joins the regular checks."
+          gh issue close ${{ github.event.issue.number }} --repo ${{ github.repository }}

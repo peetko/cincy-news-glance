@@ -41,7 +41,8 @@ def main():
     now = datetime.now(timezone.utc)
     failures = 0
 
-    for case in cases["headlines"]:
+    def run_case(case):
+        """Returns (label, problems): problems is empty when the screen does what the case expects."""
         exp = case["expect"]
         parts = case.get("group") or [case]
         items = [make_item(p, now) for p in parts]
@@ -61,12 +62,23 @@ def main():
             got["place"] = s["place"] if s else None
 
         bad = {k: (v, got.get(k)) for k, v in exp.items() if got.get(k) != v}
-        if bad:
+        return label, ", ".join(f"{k}: expected {v[0]!r}, got {v[1]!r}" for k, v in bad.items())
+
+    for case in cases["headlines"]:
+        label, problem = run_case(case)
+        if problem:
             failures += 1
-            detail = ", ".join(f"{k}: expected {v[0]!r}, got {v[1]!r}" for k, v in bad.items())
-            print(f"FAIL  {label}\n      {detail}")
+            print(f"FAIL  {label}\n      {problem}")
         else:
             print(f"ok    {label}")
+
+    # Wrong-call reports from the screen: listed, but they never block publishing.
+    pending = cases.get("pending", [])
+    if pending:
+        print(f"\nTo fix ({len(pending)} wrong-call report(s) from the screen; these don't block updates):")
+        for case in pending:
+            label, problem = run_case(case)
+            print(f"  {'now passes' if not problem else 'to fix':<10} {label}" + (f"\n             {problem}" if problem else ""))
 
     for pair in cases.get("same_story", []):
         a = collect.tokens(collect.clean_headline(pair["a"]))

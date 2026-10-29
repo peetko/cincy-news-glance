@@ -34,6 +34,7 @@
   }
   .mono { font-family: 'DM Mono', ui-monospace, monospace; }
   #scene { position: absolute; inset: 0; width: 100%; height: 100%; }
+  #scene #crown { pointer-events: all; }
 
   /* ---------- top bar ---------- */
   #bar {
@@ -116,6 +117,39 @@
   .sh { animation: shimmer 11s ease-in-out infinite; }
   #glow { opacity: 0; transition: opacity 3s ease; }
 
+  /* ---------- time of day: dusk after 5 PM, evening after 7:30 PM ---------- */
+  #veil { opacity: 0; pointer-events: none; transition: opacity 90s ease, fill 90s ease; }
+  .phase-dusk #veil { opacity: 0.07; fill: #E8A27C; }
+  .phase-evening #veil { opacity: 0.16; fill: #1F2B48; }
+  #sun { transition: opacity 6s ease, transform 90s ease; transform-box: view-box; }
+  .phase-dusk #sun { transform: translateY(150px); }
+  .phase-dusk #sun circle { fill: #FFD8B4; transition: fill 90s ease; }
+  .phase-evening #sun { opacity: 0 !important; }
+  #moon { opacity: 0; transition: opacity 60s ease; }
+  .phase-evening #moon { opacity: 0.9; }
+  .phase-evening { --muted: #22364A; }
+
+  /* ---------- outlet feed trouble: dashed label with a coral dot ---------- */
+  #coverage .down { border-style: dashed; border-color: var(--dev); }
+  #coverage .down::after { content: ''; display: inline-block; width: 5px; height: 5px; border-radius: 50%;
+    background: var(--dev); margin-left: 6px; vertical-align: 1px; }
+  #reminder { color: var(--dev-text); }
+  #games { color: var(--ink); }
+
+  /* ---------- stadium lights on home game days ---------- */
+  .stadium .lamp { fill: #A9B9C4; transition: fill 4s ease; }
+  .stadium .halo { fill: #FFE2A0; opacity: 0; transition: opacity 6s ease; }
+  .stadium.lit .lamp { fill: #FFE7A8; }
+  .stadium.lit .halo { opacity: 0.18; }
+  .phase-dusk .stadium.lit .halo { opacity: 0.35; }
+  .phase-evening .stadium.lit .halo { opacity: 0.6; }
+  #crown { cursor: default; }
+
+  /* ---------- river: older headlines quietly fade ---------- */
+  .chip.aging { color: #2B4153; }
+  .chip.old { color: #4B6274; background: rgba(255, 255, 255, 0.66); }
+  .chip.city.old { background: rgba(255, 246, 222, 0.72); }
+
   /* ---------- weather in the scene: slow, faint, never the main event ---------- */
   #stage, body { transition: background 6s ease; }
   #sun { transition: opacity 6s ease; }
@@ -166,6 +200,9 @@
   #debug .bad { color: #B13D1C; }
   #debug .k { color: #4B6274; }
   #debug button { font: inherit; }
+  #debug .acts { display: flex; gap: 8px; margin-top: 4px; }
+  #debug .acts a { font-size: 11px; padding: 2px 8px; border: 1px solid #A6B9C6; border-radius: 999px; color: #13283A; text-decoration: none; }
+  #debug .acts a:hover { background: #EEF3F6; }
 </style>
 </head>
 <body>
@@ -181,6 +218,10 @@
     <rect x="-1200" y="260" width="3600" height="340" fill="url(#glowFade)" id="glow"></rect>
     <!-- sun + clouds -->
     <rect id="flash" x="-1200" y="0" width="3600" height="600" fill="#FFFFFF"></rect>
+    <defs>
+      <mask id="crescent"><rect x="1000" y="60" width="140" height="100" fill="#FFFFFF"></rect><circle cx="1079" cy="104" r="15" fill="#000000"></circle></mask>
+    </defs>
+    <g id="moon"><circle cx="1070" cy="110" r="16" fill="#F4F1E4" mask="url(#crescent)"></circle></g>
     <g id="sun">
       <g id="rays" stroke="#FFE7A0" stroke-width="2" stroke-linecap="round">
         <line x1="1070" y1="58" x2="1070" y2="44"></line><line x1="1070" y1="198" x2="1070" y2="212"></line>
@@ -301,11 +342,33 @@
       <line x1="853" y1="411" x2="853" y2="392"></line>
       <line x1="858" y1="411" x2="858" y2="403"></line>
     </g>
+    <!-- hidden switch: click the Great American Tower's tiara to open or close the "why" panel -->
+    <rect id="crown" x="816" y="372" width="50" height="44" fill="#000000" fill-opacity="0"></rect>
     <g fill="#9AAEBC">
       <rect x="833" y="420" width="2" height="170"></rect>
       <rect x="845" y="420" width="2" height="170"></rect>
       <rect x="630" y="456" width="2" height="60"></rect>
       <rect x="646" y="456" width="2" height="60"></rect>
+    </g>
+
+    <!-- stadiums: lights glow on home game days -->
+    <g id="st-tql" class="stadium">
+      <path d="M205 560 L214 545 Q245 536 276 545 L285 560 Z" fill="#93A6B4"></path>
+      <rect class="lamp" x="216" y="540" width="7" height="2.5"></rect><rect class="lamp" x="266" y="540" width="7" height="2.5"></rect>
+      <circle class="halo" cx="219.5" cy="541" r="6"></circle><circle class="halo" cx="269.5" cy="541" r="6"></circle>
+    </g>
+    <g id="st-paycor" class="stadium">
+      <path d="M300 596 L311 578 L401 578 L412 596 Z" fill="#93A6B4"></path>
+      <rect x="309" y="573" width="94" height="4" fill="#93A6B4"></rect>
+      <rect class="lamp" x="318" y="569" width="9" height="3"></rect><rect class="lamp" x="342" y="569" width="9" height="3"></rect>
+      <rect class="lamp" x="362" y="569" width="9" height="3"></rect><rect class="lamp" x="386" y="569" width="9" height="3"></rect>
+      <circle class="halo" cx="322.5" cy="570.5" r="7"></circle><circle class="halo" cx="346.5" cy="570.5" r="7"></circle><circle class="halo" cx="366.5" cy="570.5" r="7"></circle><circle class="halo" cx="390.5" cy="570.5" r="7"></circle>
+    </g>
+    <g id="st-gabp" class="stadium">
+      <path d="M990 596 L1000 581 L1052 581 L1062 596 Z" fill="#93A6B4"></path>
+      <rect x="994" y="566" width="2.5" height="16" fill="#93A6B4"></rect><rect x="1055.5" y="566" width="2.5" height="16" fill="#93A6B4"></rect>
+      <rect class="lamp" x="992" y="563" width="7" height="3"></rect><rect class="lamp" x="1053" y="563" width="7" height="3"></rect>
+      <circle class="halo" cx="995.5" cy="564.5" r="6"></circle><circle class="halo" cx="1056.5" cy="564.5" r="6"></circle>
     </g>
 
     <!-- City Hall (West End): the clock face is the alert light -->
@@ -323,6 +386,9 @@
     <!-- river -->
     <rect x="-1200" y="596" width="3600" height="204" fill="#A9CADB"></rect>
     <rect x="-1200" y="594" width="3600" height="3" fill="#8FB0C2"></rect>
+
+    <!-- the occasional paddlewheeler or barge -->
+    <g id="boats"></g>
 
     <!-- rain ripples on the river -->
     <g id="ripples" fill="none" stroke="#FFFFFF" stroke-width="1.2"></g>
@@ -355,6 +421,7 @@
       <line class="sh" x1="300" y1="788" x2="350" y2="788" style="animation-delay:-2s"></line>
       <line class="sh" x1="780" y1="792" x2="820" y2="792" style="animation-delay:-8s"></line>
     </g>
+    <rect id="veil" x="-1200" y="0" width="3600" height="800" fill="#1F2B48"></rect>
   </svg>
 
   <div id="bar" class="mono">
@@ -369,7 +436,7 @@
         <button type="button" data-mode="city" aria-pressed="true" title="Lead with the biggest story for City work">City Hall</button>
         <button type="button" data-mode="general" aria-pressed="false" title="Lead with the biggest story overall">Biggest</button>
       </div>
-      <div class="sub"><span id="counts"></span><span id="updated"></span></div>
+      <div class="sub"><span id="counts"></span><span id="games"></span><span id="updated"></span><span id="reminder"></span></div>
     </div>
   </div>
 
@@ -441,6 +508,7 @@ function fit() {
 
 function tickClock() {
   const now = new Date();
+  if (typeof applySky === 'function' && sceneKind) applySky();
   $('date').textContent = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
   $('time').textContent = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
 }
@@ -495,12 +563,39 @@ function svg(tag, attrs, cls) {
   return n;
 }
 
+/* Time of day: "day" until 5 PM, "dusk" until 7:30 PM, then "evening" (until 6:30 AM). */
+function dayPhase(now = new Date()) {
+  const forced = params.get('phase');
+  if (forced) return forced;
+  const m = now.getHours() * 60 + now.getMinutes();
+  if (m >= 17 * 60 && m < 19 * 60 + 30) return 'dusk';
+  if (m >= 19 * 60 + 30 || m < 6 * 60 + 30) return 'evening';
+  return 'day';
+}
+function blend(a, b, t) {
+  const p = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
+  const [x, y] = [p(a), p(b)];
+  return '#' + x.map((v, i) => Math.round(v + (y[i] - v) * t).toString(16).padStart(2, '0')).join('');
+}
+let currentPhase = null;
+function applySky() {
+  const phase = dayPhase();
+  const base = SKY[sceneKind || 'sunny'];
+  const sky = phase === 'dusk' ? blend(base, '#F2D2C2', 0.35) : phase === 'evening' ? blend(base, '#7C88A8', 0.4) : base;
+  document.documentElement.style.setProperty('--sky', sky);
+  if (phase !== currentPhase) {
+    document.body.classList.remove('phase-day', 'phase-dusk', 'phase-evening');
+    document.body.classList.add('phase-' + phase);
+    currentPhase = phase;
+  }
+}
+
 function setScene(kind) {
   if (kind === sceneKind) return;
   sceneKind = kind;
   document.body.classList.remove(...Object.keys(SKY).map((k) => 'wx-' + k));
   document.body.classList.add('wx-' + kind);
-  document.documentElement.style.setProperty('--sky', SKY[kind]);
+  applySky();
 
   const precip = $('precip'), ripples = $('ripples');
   precip.textContent = ''; ripples.textContent = '';
@@ -585,15 +680,21 @@ function renderLead(story, isDev, noCityNews) {
   const extras = story.outlets.filter((o) => !CORE_OUTLETS.includes(o));
   // Outlets that covered it link to their own version of the story.
   const links = story.links || {};
+  // Outlet feeds that have failed 3+ updates in a row get a dashed label and a coral dot.
+  const health = {};
+  for (const st of (lastData && lastData.sources_status) || []) health[st.source] = st.fail_streak || 0;
   for (const o of CORE_OUTLETS.concat(extras)) {
+    const down = (health[o] || 0) >= 3;
+    let n;
     if (story.outlets.includes(o) && links[o]) {
-      const a = el('a', 'on', o);
-      a.href = links[o]; a.target = '_blank'; a.rel = 'noopener';
-      a.title = `Read ${o}'s version`;
-      cov.append(a);
+      n = el('a', 'on', o);
+      n.href = links[o]; n.target = '_blank'; n.rel = 'noopener';
+      n.title = `Read ${o}'s version`;
     } else {
-      cov.append(el('span', story.outlets.includes(o) ? 'on' : '', o));
+      n = el('span', story.outlets.includes(o) ? 'on' : '', o);
     }
+    if (down) { n.classList.add('down'); n.title = `${o}'s feed hasn't worked for the last ${health[o]} updates`; }
+    cov.append(n);
   }
 }
 
@@ -606,6 +707,8 @@ const HALL_ICON = '<svg class="hall" viewBox="0 0 16 16" aria-hidden="true">' +
 
 function chip(s, devId) {
   const a = el('a', 'chip ' + (s.id === devId ? 'dev' : s.is_city ? 'city' : 'town'));
+  const ageH = (Date.now() - new Date(s.updated)) / 3600e3;
+  if (s.id !== devId) a.classList.add(ageH > 8 ? 'old' : ageH > 3 ? 'aging' : 'fresh');
   a.href = s.link; a.target = '_blank'; a.rel = 'noopener'; a.draggable = false;
   a.title = `${s.title} — ${s.outlets.join(', ')}` + (s.is_city ? ` (${(s.city_reasons || []).join(', ')})` : '');
   if (s.is_city && s.id !== devId) a.insertAdjacentHTML('beforeend', HALL_ICON);
@@ -618,7 +721,8 @@ function chip(s, devId) {
 
 /* Each lane drifts left on its own. Hover pauses it; drag it or scroll/swipe
    (mouse wheel or two-finger trackpad) to move it yourself. A quick flick coasts. */
-const DRIFT = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 18; // px per second
+const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let DRIFT = REDUCED ? 0 : 18;          // px per second; set by how busy the news is (see renderRiver)
 let riverLanes = [];
 let SCALE = 1;
 
@@ -683,6 +787,9 @@ function animate(now) {
 requestAnimationFrame(animate);
 
 function renderRiver(stories, devId) {
+  // Quiet news day: slow drift. Busy day: a little quicker. (12–24 px/s)
+  const recent = stories.filter((s) => Date.now() - new Date(s.updated) < 3 * 3600e3).length;
+  DRIFT = REDUCED ? 0 : 12 + Math.min(recent, 15) * 0.8;
   const river = $('river');
   river.textContent = '';
   riverLanes = [];
@@ -748,23 +855,52 @@ $('tag').addEventListener('click', () => {
   applyAlert();
 });
 
+/* ---------- "wrong call" reports → GitHub issue → pending test case ---------- */
+function repoInfo() {
+  const host = location.hostname;
+  if (host.endsWith('.github.io')) return { owner: host.split('.')[0], repo: location.pathname.split('/').filter(Boolean)[0] };
+  return { owner: 'peetko', repo: 'cincy-news-glance' };
+}
+function reportLink(s, expect, label) {
+  const google = (s.link || '').startsWith('https://news.google.com');
+  const c = {
+    title: s.title, summary: s.summary || '', link: s.link, outlet: s.outlet,
+    google, narrow: google && s.outlet === 'Enquirer', official: s.outlet === 'City of Cincinnati',
+    expect, note: `Wrong call reported from the screen, ${new Date().toLocaleDateString('en-US')}`,
+  };
+  const what = expect.junk ? 'not news' : expect.city ? 'should be City Hall' : 'not City Hall';
+  const body = `Reported from the screen (${what}).\n\nWhy it scored the way it did: see the ?debug=1 panel.\n\n\`\`\`json\n${JSON.stringify(c, null, 1)}\n\`\`\`\n`;
+  const { owner, repo } = repoInfo();
+  const a = el('a', null, label);
+  a.href = `https://github.com/${owner}/${repo}/issues/new?title=${encodeURIComponent(`Case: ${what} — ${s.title.slice(0, 80)}`)}&body=${encodeURIComponent(body)}`;
+  a.target = '_blank'; a.rel = 'noopener';
+  a.title = 'Opens a ready-made GitHub issue. Click "Create" and it becomes a test case automatically.';
+  return a;
+}
+
 /* ---------- ?debug=1: why each story scored the way it did ---------- */
+let debugOn = !!params.get('debug');
 function renderDebug(data, leadId) {
-  if (!params.get('debug')) return;
   let box = $('debug');
+  if (!debugOn) { if (box) box.remove(); return; }
   if (!box) { box = el('div'); box.id = 'debug'; document.body.append(box); }
   box.textContent = '';
   const line = (cls, text) => box.append(el('div', cls, text));
+  const close = el('button', null, 'Close ✕');
+  close.style.cssText = 'float:right;border:1px solid #A6B9C6;background:#fff;border-radius:999px;padding:2px 10px;cursor:pointer';
+  close.addEventListener('click', () => { debugOn = false; renderDebug(data, leadId); });
+  box.append(close);
   box.append(el('h3', null, 'Why this screen looks the way it does'));
   line('k', `updated ${clock(data.generated_at)} · mode: ${mode} · lead: ${leadId || '—'}`);
   const w = (data.lead && data.lead.why) || {};
   line('k', `City pick: ${w.city || '—'} · Biggest pick: ${w.general || '—'}`);
-  line('k', `breaking-news alert: ${data.developing || 'none'}`);
+  line('k', `breaking-news alert: ${data.developing || 'none'} · river pace ${DRIFT.toFixed(0)} px/s`);
+  if (data.pending_cases) line('bad', `${data.pending_cases} wrong-call report(s) on the to-fix list (tests/cases.json → pending)`);
   box.append(el('h3', null, 'Sources'));
   for (const s of data.sources_status || []) {
     line(s.ok ? '' : 'bad', `${s.ok ? '✓' : '✗'} ${s.source} — ${s.items} items` +
       (s.junk_dropped ? `, ${s.junk_dropped} dropped as junk` : '') + (s.used_fallback ? ' (via Google News backup)' : '') +
-      (s.ok ? '' : ` · ${(s.errors || [s.error]).join('; ')}`));
+      (s.ok ? '' : ` · ${(s.errors || [s.error]).join('; ')}`) + (s.fail_streak > 1 ? ` · failed ${s.fail_streak} updates in a row` : ''));
   }
   const junk = (data.sources_status || []).flatMap((s) => (s.junk_examples || []).map((t) => `${s.source}: ${t}`));
   if (junk.length) {
@@ -786,8 +922,84 @@ function renderDebug(data, leadId) {
     }
     if (s.developing) d.append(el('div', 'bad', `breaking: ${y.newsrooms_for_alert.length} newsrooms` + (y.breaking_word ? `, word “${y.breaking_word}”` : '')));
     if ((y.versions || []).length > 1) d.append(el('div', 'k', 'grouped: ' + y.versions.map((v) => `${v[0]}: ${v[1]}`).join(' / ')));
+    // One click files a GitHub issue that becomes a test case (see .github/workflows/cases.yml).
+    const acts = el('div', 'acts');
+    if (s.is_city) acts.append(reportLink(s, { city: false }, 'Not City Hall'));
+    else acts.append(reportLink(s, { city: true }, 'Should be City Hall'));
+    acts.append(reportLink(s, { junk: true }, 'Not news (junk)'));
+    d.append(acts);
     box.append(d);
   }
+}
+
+/* ---------- game days ---------- */
+function renderGames(games) {
+  if (params.get('preview') === 'game') {
+    games = [{ team: 'Bengals', stadium: 'paycor', home: true, opponent: 'Steelers', start: new Date(Date.now() + 3600e3).toISOString(), state: 'pre', detail: '' }];
+  }
+  const line = $('games');
+  line.textContent = '';
+  const lit = new Set();
+  const now = Date.now();
+  for (const g of games || []) {
+    const t = clock(g.start);
+    let text;
+    if (g.state === 'in') text = `${g.team} ${g.score[0]}–${g.score[1]} ${g.opponent} · ${g.detail}`;
+    else if (g.state === 'post') text = `${g.team} ${g.score[0]}, ${g.opponent} ${g.score[1]} · Final`;
+    else text = `${g.team} ${g.home ? 'vs.' : 'at'} ${g.opponent} · ${t}`;
+    line.textContent = line.textContent ? `${line.textContent} · ${text}` : text;
+    // Home games light up the stadium from 2 hours before the start until the game ends.
+    const soon = new Date(g.start) - now < 2 * 3600e3;
+    if (g.home && g.stadium && (g.state === 'in' || (g.state === 'pre' && soon))) lit.add(g.stadium);
+  }
+  for (const id of ['tql', 'paycor', 'gabp']) $('st-' + id).classList.toggle('lit', lit.has(id));
+}
+
+/* ---------- timer renewal reminder (last 30 days before the token expires) ---------- */
+function renderReminder(expires) {
+  const r = $('reminder');
+  r.textContent = '';
+  if (!expires) return;
+  const days = Math.ceil((new Date(expires + 'T23:59:00') - Date.now()) / 86400e3);
+  if (days > 30) return;
+  const date = new Date(expires + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  r.textContent = days >= 0 ? `Renew the update timer's GitHub token by ${date}` : `Update timer token expired ${date} — renew it`;
+}
+
+/* ---------- the occasional boat ---------- */
+function spawnBoat() {
+  if (REDUCED || document.hidden) return;
+  const layer = $('boats');
+  const rightward = Math.random() < 0.5;
+  const kind = Math.random() < 0.55 ? 'paddle' : 'barge';
+  const g = svg('g', { opacity: 0.85 });
+  const inner = svg('g', rightward ? {} : { transform: 'scale(-1,1)' });
+  if (kind === 'paddle') {
+    // Riverboat: hull, two white decks, twin stacks, red stern wheel.
+    inner.append(svg('polygon', { points: '2,612 64,612 70,604 -2,604', fill: '#6F8494' }));
+    inner.append(svg('rect', { x: 6, y: 598, width: 52, height: 6, fill: '#F1F4F6' }));
+    inner.append(svg('rect', { x: 14, y: 593, width: 34, height: 5, fill: '#E6EBEF' }));
+    inner.append(svg('rect', { x: 22, y: 584, width: 3, height: 9, fill: '#5E6E7A' }));
+    inner.append(svg('rect', { x: 30, y: 584, width: 3, height: 9, fill: '#5E6E7A' }));
+    inner.append(svg('circle', { cx: -4, cy: 605, r: 6, fill: 'none', stroke: '#B5483A', 'stroke-width': 2, opacity: 0.8 }));
+  } else {
+    // Towboat pushing three barges, the Ohio's everyday traffic.
+    for (let i = 0; i < 3; i++) inner.append(svg('rect', { x: 30 + i * 49, y: 605, width: 46, height: 7, fill: '#8E7D69' }));
+    inner.append(svg('rect', { x: 0, y: 603, width: 28, height: 9, fill: '#6F8494' }));
+    inner.append(svg('rect', { x: 4, y: 595, width: 14, height: 8, fill: '#E6EBEF' }));
+    inner.append(svg('rect', { x: 7, y: 590, width: 8, height: 5, fill: '#D6DEE4' }));
+  }
+  g.append(inner);
+  layer.append(g);
+  const from = rightward ? VB.x - 220 : VB.x + VB.w + 220;
+  const to = rightward ? VB.x + VB.w + 220 : VB.x - 220;
+  const anim = g.animate([{ transform: `translate(${from}px, 0)` }, { transform: `translate(${to}px, 0)` }],
+    { duration: (VB.w / 1200) * (kind === 'paddle' ? 260e3 : 340e3), easing: 'linear' });
+  anim.onfinish = () => g.remove();
+}
+function scheduleBoats() {
+  const first = params.get('boats') === 'now' ? 500 : (40 + Math.random() * 80) * 1000;
+  setTimeout(function next() { spawnBoat(); setTimeout(next, (6 + Math.random() * 8) * 60e3); }, first);
 }
 
 /* ---------- whole screen ---------- */
@@ -807,6 +1019,8 @@ function render(data) {
   const lead = devStory || (mode === 'city' ? cityPick || generalPick : generalPick);
   currentDev = devStory;
   renderMeetings(data.meetings);
+  renderGames(data.games);
+  renderReminder(data.timer_token_expires);
   renderDebug(data, lead && lead.id);
 
   const c = data.counts || {};
@@ -875,11 +1089,16 @@ async function stayAwake() {
 }
 
 document.querySelectorAll('#mode button').forEach((b) => b.addEventListener('click', () => setMode(b.dataset.mode)));
+$('crown').addEventListener('click', () => {
+  debugOn = !debugOn;
+  if (lastData) renderDebug(lastData, $('lead').dataset.id);
+});
 setMode(mode);
 addEventListener('resize', fit);
 document.addEventListener('visibilitychange', stayAwake);
 fit(); tickClock(); load(); stayAwake();
 setInterval(tickClock, 15000);
+scheduleBoats();
 setInterval(load, REFRESH_MS);
 </script>
 </body>

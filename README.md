@@ -62,7 +62,12 @@ The key can only start this workflow, in this one repo: it can't read, change or
 - **Staying current:** the open page checks for new headlines every 5 minutes, so you never need to refresh. When a new version of the page itself is published, it reloads itself once.
 - **Weather:** if the weather service is down, the screen keeps the last reading and says "as of 2:15 PM".
 - **Weather in the scene:** the background quietly follows the forecast: a breathing sun with faint rays when sunny, extra clouds when partly cloudy, a greyer sky when overcast, fine rain behind the hills with ripples on the river, a rare soft flash in storms, slow snowflakes, or haze drifting over the hills in fog. Preview any of them by adding `&weather=rain` (or `sunny`, `partly`, `cloudy`, `storm`, `snow`, `fog`) to the address.
-- **Outlet labels:** under the lead story, each outlet that covered it is a link to that outlet's own version.
+- **Outlet labels:** under the lead story, each outlet that covered it is a link to that outlet's own version. A dashed label with a coral dot means that outlet's feed has failed 3+ updates in a row.
+- **Time of day:** after 5 PM the scene shifts to dusk and the sun sinks; after 7:30 PM it dims to evening with a small moon. Preview with `&phase=dusk` or `&phase=evening`.
+- **The river** drifts slower on quiet news days and a little quicker on busy ones. Older headlines fade slightly, so new ones stand out.
+- **Game days:** Paycor Stadium, Great American Ball Park and TQL Stadium sit in the skyline. On Bengals, Reds or FC Cincinnati game days the matchup appears under the story counts, and for home games the stadium lights come on from two hours before kickoff (faint by day, glowing in the evening). Preview with `&preview=game`. Data: ESPN's public scoreboards.
+- **Boats:** every 6–14 minutes a paddlewheeler or a towboat with barges crosses the river. Preview with `&boats=now`.
+- **Timer reminder:** in the last 30 days before the cron-job.org token expires (`timer_token_expires` in `config.json`), a note appears in the top right.
 
 ## The City Hall / Biggest switch
 
@@ -93,9 +98,9 @@ Edit it right in GitHub: open the file, click the pencil icon, then **Commit cha
 
 ## When it picks something wrong
 
-1. Open the page with `?debug=1` at the end of the address (`…/cincy-news-glance/?debug=1`). A panel lists every story with its points, the exact words that matched (and whether they were in the headline or only the summary), which place it thinks the story is about and why, and which headlines were grouped together. It also shows each source's status.
+1. **Click the crown of the Great American Tower** in the skyline (or add `?debug=1` to the address). A panel lists every story with its points, the exact words that matched (and whether they were in the headline or only the summary), which place it thinks the story is about and why, and which headlines were grouped together. It also shows each source's status.
 2. Fix the cause in `config.json`: add a town to `other_municipalities`, a name to `cincinnati_anchors`, a word to `exclude`, and so on.
-3. Add the headline to `tests/cases.json` with the right answer, so it can never come back.
+3. Or skip steps 2–3: under each story in the panel, click **Should be City Hall**, **Not City Hall** or **Not news (junk)**. That opens a ready-made GitHub issue; click **Create** and a workflow adds it to the to-fix list (`pending` in `tests/cases.json`) and closes the issue. Pending cases never block updates. Once the rules are tuned so one passes, it moves into the regular list and becomes part of the safety net.
 
 **The safety net:** before every publish, GitHub runs `scripts/check.py`, which checks every case in `tests/cases.json`. If an edit breaks one, the run stops, the screen keeps its last good version, and GitHub emails you about the failed run. Click into the failed run on the Actions tab to see which case failed and why.
 

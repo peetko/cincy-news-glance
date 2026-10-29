@@ -435,7 +435,8 @@ class Rules:
         # Cincinnati streets named after suburbs (Reading Road, Montgomery Road, Colerain Avenue...).
         # Townships (Delhi, Green, Anderson, Colerain...) are not part of the city, so they DO count as other places.
         tail = r"(?!\s+(County|Road|Rd|Avenue|Ave|Street|St|Pike|Boulevard|Blvd|Parkway))"
-        self.others = [re.compile(term_regex(t).pattern + tail, term_regex(t).flags) for t in cfg.get("other_municipalities", [])]
+        self.others = [re.compile(term_regex(t).pattern + tail, term_regex(t).flags)
+                       for t in list(cfg.get("other_municipalities", [])) + list(cfg.get("far_places", []))]
         self.others_i = [re.compile(rx.pattern, re.I) for rx in self.others]
 
 
@@ -755,6 +756,49 @@ def get_weather(cfg, now):
     }
 
 
+# ---------------------------------------------------------------- game days (ESPN's public scoreboards)
+
+def get_games(cfg, now):
+    """Today's Bengals / Reds / FC Cincinnati games, from ESPN's free scoreboard data."""
+    local = now.astimezone(timezone(timedelta(hours=-4 if is_dst(now) else -5)))
+    day = local.strftime("%Y%m%d")
+    games, errors = [], []
+    for t in cfg.get("teams", []):
+        try:
+            data = fetch_json(f"https://site.api.espn.com/apis/site/v2/sports/{t['league']}/scoreboard?dates={day}")
+        except Exception as ex:
+            errors.append(f"{t['name']}: {http_error_text(ex)}")
+            continue
+        for e in data.get("events", []):
+            comp = (e.get("competitions") or [{}])[0]
+            sides = comp.get("competitors", [])
+            ours = next((c for c in sides if (c.get("team") or {}).get("abbreviation", "").upper() == t["abbr"].upper()), None)
+            if not ours:
+                continue
+            them = next((c for c in sides if c is not ours), {})
+            state = ((e.get("status") or {}).get("type") or {})
+            games.append({
+                "team": t["name"],
+                "stadium": t.get("stadium"),
+                "home": ours.get("homeAway") == "home",
+                "opponent": (them.get("team") or {}).get("shortDisplayName") or (them.get("team") or {}).get("name", ""),
+                "start": e.get("date"),
+                "state": state.get("state", "pre"),          # pre / in / post
+                "detail": state.get("shortDetail", ""),
+                "score": [ours.get("score"), them.get("score")] if state.get("state") in ("in", "post") else None,
+            })
+    return {"ok": not errors or bool(games), "games": games, "error": " | ".join(errors) or None}
+
+
+def pending_case_count():
+    """How many 'wrong call' reports from the screen are waiting for the rules to be tuned."""
+    try:
+        cases = json.loads((ROOT / "tests" / "cases.json").read_text())
+        return len(cases.get("pending", []))
+    except Exception:
+        return 0
+
+
 # ---------------------------------------------------------------- main
 
 def build(cfg, now=None, previous=None):
@@ -776,6 +820,19 @@ def build(cfg, now=None, previous=None):
     rules = Rules(cfg, extra_anchors=bodies)
     seen = prev_mem.get("seen", [])
     stories = score_clusters(cluster(items), rules, now, memory=seen)
+
+    try:
+        games = get_games(cfg, now)
+    except Exception as ex:
+        games = {"ok": False, "games": [], "error": type(ex).__name__}
+    status.append({"source": "Game days (ESPN)", "ok": games.get("ok", False), "items": len(games.get("games", [])),
+                   "error": games.get("error")})
+
+    # Source health: how many runs in a row each source has failed.
+    streaks = dict(prev_mem.get("fail_streak", {}))
+    for st in status:
+        streaks[st["source"]] = 0 if st["ok"] else streaks.get(st["source"], 0) + 1
+        st["fail_streak"] = streaks[st["source"]]
 
     try:
         weather = get_weather(cfg, now)
@@ -800,6 +857,7 @@ def build(cfg, now=None, previous=None):
         if datetime.fromisoformat(m["first_seen"]) >= keep_after and not any(same_story(set(m["tok"]), set(x["tok"])) for x in new_seen):
             new_seen.append(m)
     memory = {
+        "fail_streak": streaks,
         "seen": new_seen[:400],
         "lead": {
             "city": {"tok": lead_city["_tok"], "id": lead_city["id"]} if lead_city else None,
@@ -815,6 +873,9 @@ def build(cfg, now=None, previous=None):
         "site_version": os.environ.get("GITHUB_SHA", "local")[:12],
         "weather": weather,
         "meetings": {k: meetings.get(k) for k in ("ok", "day", "is_today", "meetings")},
+        "games": games.get("games", []),
+        "timer_token_expires": cfg.get("timer_token_expires"),
+        "pending_cases": pending_case_count(),
         "developing": developing["id"] if developing else None,
         "lead": {
             "city": lead_city["id"] if lead_city else None,
@@ -832,7 +893,7 @@ def main():
     cfg = json.loads(CONFIG_PATH.read_text())
     previous = load_previous(cfg)
     out = build(cfg, previous=previous)
-    news_sources = [s for s in out["sources_status"] if not s["source"].startswith("City meetings")]
+    news_sources = [s for s in out["sources_status"] if not s["source"].startswith(("City meetings", "Game days"))]
     ok = sum(1 for s in news_sources if s["ok"])
     if ok == 0 and previous:
         # Every feed failed (network hiccup): keep the last good file instead of blanking the screen.
