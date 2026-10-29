@@ -125,6 +125,10 @@
     {"title": "Cincinnati", "outlet": "Enquirer", "google": true, "narrow": true,
      "expect": {"junk": true}},
 
+    {"note": "A City events page in Title Case is not an obituary — caught Oct 29",
+     "title": "Krohn Conservatory Holiday Show Events", "outlet": "City of Cincinnati", "google": true, "official": true,
+     "expect": {"junk": false, "city": true}},
+
     {"note": "Another town's council",
      "title": "Norwood council member resigns after six years", "outlet": "WLWT",
      "expect": {"city": false, "place": "other"}},

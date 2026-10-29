@@ -174,7 +174,7 @@ def is_junk(item, cfg):
         return True
     # Name-only check: only for Google News results (where obituaries slip in), and never
     # when the "name" is a City official or a Cincinnati place.
-    if (ex.get("drop_name_only_titles", True) and item.get("_google")
+    if (ex.get("drop_name_only_titles", True) and item.get("_google") and not item.get("_official")
             and NAME_ONLY.match(title) and not NOT_NAMES.search(title)
             and not any(a.lower() in title.lower() for a in cfg.get("cincinnati_anchors", []))):
         return True
