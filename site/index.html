@@ -135,6 +135,8 @@
   #reminder { color: var(--dev-text); }
   #games { color: var(--ink); display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
   #games .live { color: var(--dev-text); }
+  /* home = solid dot, away = hollow ring, in the team's color */
+  #games .ha { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; box-sizing: border-box; }
 
   /* ---------- stadium lights on home game days ---------- */
   .stadium .lamp { fill: #A9B9C4; transition: fill 4s ease; }
@@ -1039,7 +1041,14 @@ function renderGames(games) {
     const text = g.state === 'in'
       ? `Live · ${g.team} ${g.score[0]}–${g.score[1]} ${g.opponent} · ${g.detail}`
       : `${dayLabel(g.start)} · ${g.team} ${ha} ${g.opponent} · ${clock(g.start)}`;
-    box.append(el('span', g.state === 'in' ? 'live' : '', text));
+    const row = el('span', g.state === 'in' ? 'live' : '');
+    const mark = el('span', 'ha');
+    const c = (g.colors && g.colors[0]) || '#6F9BB3';
+    if (g.home) mark.style.background = c;
+    else mark.style.border = `1.5px solid ${c}`;
+    row.title = g.home ? `Home game at ${STADIUM_NAME[g.stadium] || 'home'}` : `Away game at ${g.opponent}`;
+    row.append(mark, document.createTextNode(text));
+    box.append(row);
   }
 
   // Lights for home games today; team colors for anyone who played in the last 3 days.
