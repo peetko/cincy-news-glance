@@ -69,8 +69,9 @@
       "name": "City of Cincinnati",
       "official": true,
       "max_items": 10,
-      "_note": "Only the City's news section (press releases), not dashboards or login pages.",
-      "feeds": ["https://news.google.com/rss/search?q=site:cincinnati-oh.gov/cityofcincinnati/news+when:3d&hl=en-US&gl=US&ceid=US:en"]
+      "_note": "The City's news section first; if Google has nothing there, the whole City site (untitled pages and login pages are filtered out).",
+      "feeds": ["https://news.google.com/rss/search?q=site:cincinnati-oh.gov/cityofcincinnati/news+when:3d&hl=en-US&gl=US&ceid=US:en"],
+      "fallback": "https://news.google.com/rss/search?q=site:cincinnati-oh.gov+when:2d&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "name": "Ohio Capital Journal",
