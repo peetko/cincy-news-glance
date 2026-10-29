@@ -926,7 +926,10 @@ def build(cfg, now=None, previous=None):
             "general": lead_general["id"] if lead_general else None,
             "why": {"city": why_city, "general": why_general},
         },
-        "counts": {"stories": len(stories), "city": sum(1 for s in stories if s["is_city"])},   # = what's on screen
+        # = what's on screen. "city" counts the City stories the arrows can show; national ones are counted apart.
+        "counts": {"stories": len(stories),
+                   "city": sum(1 for s in stories if s["is_city"] and not s["national"]),
+                   "city_national": sum(1 for s in stories if s["is_city"] and s["national"])},
         "stories": stories,
         "sources_status": status,
         "memory": memory,

@@ -1236,6 +1236,12 @@ function render(data) {
   counts.textContent = `${c.stories ?? stories.length} stories · `;
   counts.insertAdjacentHTML('beforeend', HALL_ICON);
   counts.append(document.createTextNode(`${c.city ?? 0} for City Hall`));
+  if (c.city_national) {
+    const nat = el('span', null, ` (+${c.city_national} national)`);
+    nat.style.opacity = '0.75';
+    nat.title = 'National policy stories that touch local government: in the river only, never the lead';
+    counts.append(nat);
+  }
   const age = (Date.now() - new Date(data.generated_at)) / 60000;
   const upd = $('updated');
   const when = new Date(data.generated_at);
