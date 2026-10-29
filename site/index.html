@@ -133,7 +133,8 @@
   #coverage .down::after { content: ''; display: inline-block; width: 5px; height: 5px; border-radius: 50%;
     background: var(--dev); margin-left: 6px; vertical-align: 1px; }
   #reminder { color: var(--dev-text); }
-  #games { color: var(--ink); }
+  #games { color: var(--ink); display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+  #games .live { color: var(--dev-text); }
 
   /* ---------- stadium lights on home game days ---------- */
   .stadium .lamp { fill: #A9B9C4; transition: fill 4s ease; }
@@ -143,6 +144,17 @@
   .phase-dusk .stadium.lit .halo { opacity: 0.35; }
   .phase-evening .stadium.lit .halo { opacity: 0.6; }
   #crown { cursor: default; }
+  /* played in the last 3 days: stadium glows in the team's colors; hover shows the result */
+  .stadium .aura { fill: var(--c1, #FFE2A0); opacity: 0; transition: opacity 6s ease; }
+  .stadium .rim { fill: none; stroke: var(--c2, #FFFFFF); stroke-width: 2; opacity: 0; transition: opacity 6s ease; }
+  .stadium.recent .aura { opacity: 0.38; animation: breathe 9s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+  .stadium.recent .rim { opacity: 0.85; }
+  .stadium .hit { fill: #000; fill-opacity: 0; }
+  #scene .stadium.recent .hit { pointer-events: all; cursor: default; }
+  #tip { position: absolute; z-index: 5; pointer-events: none; display: none; padding: 6px 10px; border-radius: 8px;
+    background: rgba(255,255,255,0.96); box-shadow: 0 2px 10px rgba(19,40,58,0.18); font: 12px/1.35 'DM Mono', ui-monospace, monospace;
+    color: var(--ink); white-space: nowrap; }
+  #tip .sw { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
 
   /* ---------- river: older headlines quietly fade ---------- */
   .chip.aging { color: #2B4153; }
@@ -352,19 +364,28 @@
 
     <!-- stadiums: lights glow on home game days -->
     <g id="st-tql" class="stadium">
+      <ellipse class="aura" cx="245" cy="548" rx="52" ry="17"></ellipse>
       <path d="M205 560 L214 545 Q245 536 276 545 L285 560 Z" fill="#93A6B4"></path>
+      <path class="rim" d="M214 545 Q245 536 276 545"></path>
+      <rect class="hit" x="195" y="525" width="100" height="40"></rect>
       <rect class="lamp" x="216" y="540" width="7" height="2.5"></rect><rect class="lamp" x="266" y="540" width="7" height="2.5"></rect>
       <circle class="halo" cx="219.5" cy="541" r="6"></circle><circle class="halo" cx="269.5" cy="541" r="6"></circle>
     </g>
     <g id="st-paycor" class="stadium">
+      <ellipse class="aura" cx="356" cy="580" rx="68" ry="19"></ellipse>
       <path d="M300 596 L311 578 L401 578 L412 596 Z" fill="#93A6B4"></path>
       <rect x="309" y="573" width="94" height="4" fill="#93A6B4"></rect>
+      <path class="rim" d="M309 573 L403 573"></path>
+      <rect class="hit" x="292" y="556" width="128" height="42"></rect>
       <rect class="lamp" x="318" y="569" width="9" height="3"></rect><rect class="lamp" x="342" y="569" width="9" height="3"></rect>
       <rect class="lamp" x="362" y="569" width="9" height="3"></rect><rect class="lamp" x="386" y="569" width="9" height="3"></rect>
       <circle class="halo" cx="322.5" cy="570.5" r="7"></circle><circle class="halo" cx="346.5" cy="570.5" r="7"></circle><circle class="halo" cx="366.5" cy="570.5" r="7"></circle><circle class="halo" cx="390.5" cy="570.5" r="7"></circle>
     </g>
     <g id="st-gabp" class="stadium">
+      <ellipse class="aura" cx="1026" cy="584" rx="50" ry="17"></ellipse>
       <path d="M990 596 L1000 581 L1052 581 L1062 596 Z" fill="#93A6B4"></path>
+      <path class="rim" d="M1000 581 L1052 581"></path>
+      <rect class="hit" x="982" y="558" width="88" height="40"></rect>
       <rect x="994" y="566" width="2.5" height="16" fill="#93A6B4"></rect><rect x="1055.5" y="566" width="2.5" height="16" fill="#93A6B4"></rect>
       <rect class="lamp" x="992" y="563" width="7" height="3"></rect><rect class="lamp" x="1053" y="563" width="7" height="3"></rect>
       <circle class="halo" cx="995.5" cy="564.5" r="6"></circle><circle class="halo" cx="1056.5" cy="564.5" r="6"></circle>
@@ -450,6 +471,7 @@
   </div>
 
   <div id="river"></div>
+  <div id="tip"></div>
 </div>
 
 <script>
@@ -968,27 +990,92 @@ function renderDebug(data, leadId) {
   }
 }
 
-/* ---------- game days ---------- */
+/* ---------- game days ----------
+   Top right: Bengals / Reds / FC Cincinnati games in the next 5 days (day, opponent, home or away, time).
+   Skyline: a team that played in the last 3 days has its stadium glowing in its colors (hover for the score);
+   home games light the stadium from 2 hours before the start until the game ends. */
+const STADIUM_NAME = { paycor: 'Paycor Stadium', gabp: 'Great American Ball Park', tql: 'TQL Stadium' };
+let recentByStadium = {};
+
+function previewGames() {
+  const h = 3600e3, now = Date.now();
+  return [
+    { team: 'Bengals', stadium: 'paycor', colors: ['#FB4F14', '#000000'], home: true, opponent: 'Steelers', start: new Date(now - 50 * h).toISOString(), state: 'post', score: ['24', '17'], result: 'W' },
+    { team: 'FC Cincinnati', stadium: 'tql', colors: ['#F05323', '#263B80'], home: true, opponent: 'Orlando City', start: new Date(now + 54 * h).toISOString(), state: 'pre' },
+    { team: 'Bengals', stadium: 'paycor', colors: ['#FB4F14', '#000000'], home: false, opponent: 'Ravens', start: new Date(now + 76 * h).toISOString(), state: 'pre' },
+  ];
+}
+
+function dayLabel(d) {
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const that = new Date(d); that.setHours(0, 0, 0, 0);
+  const diff = Math.round((that - today) / 86400e3);
+  if (diff === 0) return 'Today';
+  if (diff === 1) return 'Tomorrow';
+  return new Date(d).toLocaleDateString('en-US', { weekday: 'short' });
+}
+
+function resultText(g) {
+  const [us, them] = (g.score || []).map((x) => x ?? '');
+  const verb = g.result === 'W' ? 'beat' : g.result === 'L' ? 'lost to' : 'tied';
+  return `${g.team} ${verb} ${g.opponent} ${us}–${them}${g.home ? '' : ' (away)'} · ${dayLabel(g.start)}`;
+}
+
 function renderGames(games) {
-  if (params.get('preview') === 'game') {
-    games = [{ team: 'Bengals', stadium: 'paycor', home: true, opponent: 'Steelers', start: new Date(Date.now() + 3600e3).toISOString(), state: 'pre', detail: '' }];
-  }
-  const line = $('games');
-  line.textContent = '';
-  const lit = new Set();
+  if (params.get('preview') === 'game') games = previewGames();
+  games = games || [];
   const now = Date.now();
-  for (const g of games || []) {
-    const t = clock(g.start);
-    let text;
-    if (g.state === 'in') text = `${g.team} ${g.score[0]}–${g.score[1]} ${g.opponent} · ${g.detail}`;
-    else if (g.state === 'post') text = `${g.team} ${g.score[0]}, ${g.opponent} ${g.score[1]} · Final`;
-    else text = `${g.team} ${g.home ? 'vs.' : 'at'} ${g.opponent} · ${t}`;
-    line.textContent = line.textContent ? `${line.textContent} · ${text}` : text;
-    // Home games light up the stadium from 2 hours before the start until the game ends.
+  const box = $('games');
+  box.textContent = '';
+
+  // Upcoming and live games, soonest first (at most 3 lines).
+  const ahead = games.filter((g) => g.state === 'in' || (g.state === 'pre' && new Date(g.start) - now < 5 * 86400e3 && new Date(g.start) > now - 4 * 3600e3));
+  for (const g of ahead.slice(0, 3)) {
+    const ha = g.home ? 'vs.' : 'at';
+    const text = g.state === 'in'
+      ? `Live · ${g.team} ${g.score[0]}–${g.score[1]} ${g.opponent} · ${g.detail}`
+      : `${dayLabel(g.start)} · ${g.team} ${ha} ${g.opponent} · ${clock(g.start)}`;
+    box.append(el('span', g.state === 'in' ? 'live' : '', text));
+  }
+
+  // Lights for home games today; team colors for anyone who played in the last 3 days.
+  const lit = new Set();
+  recentByStadium = {};
+  for (const g of games) {
     const soon = new Date(g.start) - now < 2 * 3600e3;
     if (g.home && g.stadium && (g.state === 'in' || (g.state === 'pre' && soon))) lit.add(g.stadium);
+    if (g.state === 'post' && g.stadium && now - new Date(g.start) < 3 * 86400e3) {
+      const prev = recentByStadium[g.stadium];
+      if (!prev || new Date(g.start) > new Date(prev.start)) recentByStadium[g.stadium] = g;
+    }
   }
-  for (const id of ['tql', 'paycor', 'gabp']) $('st-' + id).classList.toggle('lit', lit.has(id));
+  for (const id of ['tql', 'paycor', 'gabp']) {
+    const st = $('st-' + id);
+    st.classList.toggle('lit', lit.has(id));
+    const r = recentByStadium[id];
+    st.classList.toggle('recent', !!r);
+    if (r) { st.style.setProperty('--c1', r.colors[0] || '#FFE2A0'); st.style.setProperty('--c2', r.colors[1] || '#FFFFFF'); }
+  }
+}
+
+// Hover card for a glowing stadium.
+function showTip(id, e) {
+  const g = recentByStadium[id];
+  const tip = $('tip');
+  if (!g) { tip.style.display = 'none'; return; }
+  tip.textContent = '';
+  for (const c of (g.colors || []).slice(0, 2)) { const sw = el('span', 'sw'); sw.style.background = c; sw.style.border = '1px solid #A6B9C6'; tip.append(sw); }
+  tip.append(document.createTextNode(resultText(g)));
+  const stage = $('stage').getBoundingClientRect();
+  tip.style.display = 'block';
+  const x = (e.clientX - stage.left) / SCALE, y = (e.clientY - stage.top) / SCALE;
+  tip.style.left = `${Math.max(8, x - tip.offsetWidth / 2)}px`;
+  tip.style.top = `${y - tip.offsetHeight - 14}px`;
+}
+for (const id of ['tql', 'paycor', 'gabp']) {
+  const st = document.getElementById('st-' + id);
+  st.addEventListener('pointermove', (e) => showTip(id, e));
+  st.addEventListener('pointerleave', () => { $('tip').style.display = 'none'; });
 }
 
 /* ---------- timer renewal reminder (last 30 days before the token expires) ---------- */

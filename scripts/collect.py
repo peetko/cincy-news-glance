@@ -759,17 +759,33 @@ def get_weather(cfg, now):
 # ---------------------------------------------------------------- game days (ESPN's public scoreboards)
 
 def get_games(cfg, now):
-    """Today's Bengals / Reds / FC Cincinnati games, from ESPN's free scoreboard data."""
+    """
+    Bengals / Reds / FC Cincinnati games from 3 days ago through 5 days ahead, from ESPN's free
+    scoreboard data: upcoming games for the top bar, recent results for the glowing stadiums.
+    """
     local = now.astimezone(timezone(timedelta(hours=-4 if is_dst(now) else -5)))
-    day = local.strftime("%Y%m%d")
+    first, last = local - timedelta(days=3), local + timedelta(days=5)
+    span = f"{first.strftime('%Y%m%d')}-{last.strftime('%Y%m%d')}"
     games, errors = [], []
     for t in cfg.get("teams", []):
+        base = f"https://site.api.espn.com/apis/site/v2/sports/{t['league']}/scoreboard"
+        events = None
         try:
-            data = fetch_json(f"https://site.api.espn.com/apis/site/v2/sports/{t['league']}/scoreboard?dates={day}")
+            events = fetch_json(f"{base}?dates={span}&limit=200").get("events", [])
         except Exception as ex:
-            errors.append(f"{t['name']}: {http_error_text(ex)}")
-            continue
-        for e in data.get("events", []):
+            # Some leagues don't take a date range: fall back to asking day by day.
+            events, day_errors = [], []
+            d = first
+            while d.date() <= last.date():
+                try:
+                    events += fetch_json(f"{base}?dates={d.strftime('%Y%m%d')}").get("events", [])
+                except Exception as ex2:
+                    day_errors.append(http_error_text(ex2))
+                d += timedelta(days=1)
+            if day_errors and not events:
+                errors.append(f"{t['name']}: {http_error_text(ex)}")
+                continue
+        for e in events:
             comp = (e.get("competitions") or [{}])[0]
             sides = comp.get("competitors", [])
             ours = next((c for c in sides if (c.get("team") or {}).get("abbreviation", "").upper() == t["abbr"].upper()), None)
@@ -777,17 +793,36 @@ def get_games(cfg, now):
                 continue
             them = next((c for c in sides if c is not ours), {})
             state = ((e.get("status") or {}).get("type") or {})
+            done = state.get("state") == "post"
+            result = None
+            if done:
+                if ours.get("winner"):
+                    result = "W"
+                elif them.get("winner"):
+                    result = "L"
+                else:
+                    result = "T"
             games.append({
                 "team": t["name"],
                 "stadium": t.get("stadium"),
+                "colors": t.get("colors", []),
                 "home": ours.get("homeAway") == "home",
                 "opponent": (them.get("team") or {}).get("shortDisplayName") or (them.get("team") or {}).get("name", ""),
                 "start": e.get("date"),
                 "state": state.get("state", "pre"),          # pre / in / post
                 "detail": state.get("shortDetail", ""),
                 "score": [ours.get("score"), them.get("score")] if state.get("state") in ("in", "post") else None,
+                "result": result,
             })
-    return {"ok": not errors or bool(games), "games": games, "error": " | ".join(errors) or None}
+    games.sort(key=lambda g: g["start"] or "")
+    # The same game can show up twice when day-by-day results overlap.
+    seen, unique = set(), []
+    for g in games:
+        k = (g["team"], g["start"])
+        if k not in seen:
+            seen.add(k)
+            unique.append(g)
+    return {"ok": not errors or bool(unique), "games": unique, "error": " | ".join(errors) or None}
 
 
 def pending_case_count():

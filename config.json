@@ -10,11 +10,11 @@
   "_timer_readme": "When the cron-job.org token expires. The screen shows a reminder during the last 30 days.",
   "timer_token_expires": "2027-03-31",
 
-  "_teams_readme": "Home games light up the stadium in the skyline. Data: ESPN's public scoreboards.",
+  "_teams_readme": "Upcoming games (next 5 days) show in the top right; a team that played in the last 3 days gets its stadium glowing in its colors (hover for the score); home games light the stadium on game day. Data: ESPN's public scoreboards.",
   "teams": [
-    {"name": "Bengals", "league": "football/nfl", "abbr": "CIN", "stadium": "paycor"},
-    {"name": "Reds", "league": "baseball/mlb", "abbr": "CIN", "stadium": "gabp"},
-    {"name": "FC Cincinnati", "league": "soccer/usa.1", "abbr": "CIN", "stadium": "tql"}
+    {"name": "Bengals", "league": "football/nfl", "abbr": "CIN", "stadium": "paycor", "colors": ["#FB4F14", "#000000"]},
+    {"name": "Reds", "league": "baseball/mlb", "abbr": "CIN", "stadium": "gabp", "colors": ["#C6011F", "#FFFFFF"]},
+    {"name": "FC Cincinnati", "league": "soccer/usa.1", "abbr": "CIN", "stadium": "tql", "colors": ["#F05323", "#263B80"]}
   ],
 
   "location": {
