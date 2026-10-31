@@ -1,0 +1,3947 @@
+{
+ "generated_at": "2026-10-31T01:03:28.346376+00:00",
+ "site_version": "9e4e327876ac",
+ "weather": {
+  "ok": true,
+  "as_of": "2026-10-31T01:03:28.346376+00:00",
+  "temp": 62,
+  "short": "Partly Cloudy",
+  "is_day": false,
+  "change": {
+   "text": "No big changes in the next 24 hours",
+   "level": "none"
+  },
+  "alerts": []
+ },
+ "meetings": {
+  "ok": true,
+  "day": "2026-11-02",
+  "is_today": false,
+  "meetings": [
+   {
+    "date": "2026-11-02",
+    "time": "10:00 AM",
+    "body": "Economic and Cultural Opportunity",
+    "location": "Council Chambers, Room 300",
+    "agenda": "https://cincinnatioh.legistar1.com/cincinnatioh/meetings/2026/11/10875_A_Economic_and_Cultural_Opportunity_26-11-02_Agenda.pdf",
+    "url": "https://cincinnatioh.legistar.com/MeetingDetail.aspx?LEGID=10875&GID=737&G=F7C7ACE8-B3D9-494B-89D1-69B0D7338C01"
+   },
+   {
+    "date": "2026-11-02",
+    "time": "1:00 PM",
+    "body": "Budget, Finance & Governance Committee",
+    "location": "Council Chambers, Room 300",
+    "agenda": "",
+    "url": "https://cincinnatioh.legistar.com/MeetingDetail.aspx?LEGID=10880&GID=737&G=F7C7ACE8-B3D9-494B-89D1-69B0D7338C01"
+   }
+  ]
+ },
+ "games": [
+  {
+   "team": "FC Cincinnati",
+   "stadium": "tql",
+   "colors": [
+    "#F05323",
+    "#263B80"
+   ],
+   "home": false,
+   "opponent": "Miami",
+   "start": "2026-10-28T23:30Z",
+   "state": "post",
+   "detail": "FT",
+   "score": [
+    "2",
+    "2"
+   ],
+   "result": "T",
+   "odds": null
+  },
+  {
+   "team": "FC Cincinnati",
+   "stadium": "tql",
+   "colors": [
+    "#F05323",
+    "#263B80"
+   ],
+   "home": true,
+   "opponent": "Philadelphia",
+   "start": "2026-10-31T18:00Z",
+   "state": "pre",
+   "detail": "Scheduled",
+   "score": null,
+   "result": null,
+   "odds": {
+    "provider": "DraftKings",
+    "details": "CIN +130",
+    "spread": null,
+    "over_under": 3.5,
+    "favorite": "us",
+    "moneyline": [
+     130,
+     155
+    ]
+   }
+  },
+  {
+   "team": "Bengals",
+   "stadium": "paycor",
+   "colors": [
+    "#FB4F14",
+    "#000000"
+   ],
+   "home": true,
+   "opponent": "Titans",
+   "start": "2026-11-01T18:00Z",
+   "state": "pre",
+   "detail": "11/1 - 1:00 PM EST",
+   "score": null,
+   "result": null,
+   "odds": {
+    "provider": "Draft Kings",
+    "details": "CIN -12.5",
+    "spread": 12.5,
+    "over_under": 46.5,
+    "favorite": "us",
+    "moneyline": [
+     -675,
+     490
+    ]
+   }
+  }
+ ],
+ "timer_token_expires": "2027-03-31",
+ "pending_cases": 0,
+ "developing": null,
+ "lead": {
+  "city": "cincinnati-fire-truck-runs-into-building-in-college-hill",
+  "general": "adams-county-deputy-recovering-after-being-shot-suspect-iden",
+  "why": {
+   "city": "highest score",
+   "general": "same lead as last run"
+  }
+ },
+ "counts": {
+  "stories": 30,
+  "city": 1,
+  "city_national": 0
+ },
+ "stories": [
+  {
+   "id": "adams-county-deputy-recovering-after-being-shot-suspect-iden",
+   "title": "Adams County deputy recovering after being shot; suspect identified, charged",
+   "link": "https://www.wlwt.com/article/adams-county-sheriff-deputy-shot-hope-lane/74296505",
+   "outlet": "WLWT",
+   "summary": "An Adams County deputy is recovering in the hospital after being shot while responding to a call in West Union on Thursday night.",
+   "outlets": [
+    "Enquirer",
+    "FOX19",
+    "Local 12",
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPX0Zzd2hYUmI3dUdzRTdvOEU0dGYwVW56aWlsSTBOUUtEbVFhVDlRYzZVajFaQ04tQXNVNGl5TEhfblNDNDB6ZmVWZ1FONXFoWjN5YTV1VG5kTE1yR29FTmpyWVNldTJXRlZWZHVuaEJMcm1XWUVwTzVyaUloWnhBRTk0eTJLRG1CVUJJaXpoTFhTWUNHdVpUdlZPSHIxZVFrZnJRb2QzWTlVWFFNWTRoSXFqVGlTMG96TnBXQlNn?oc=5",
+    "FOX19": "https://www.fox19.com/2026/10/30/adams-county-deputy-recovering-suspect-remains-hospitalized-after-shooting/",
+    "Local 12": "https://local12.com/news/local/investigation-underway-after-officer-involved-shooting-in-adams-county-liberty-township-shots-fired-gun-guns-weapons-police-cincinnati",
+    "WCPO": "https://www.wcpo.com/news/local-news/adams-county-sheriffs-deputy-shot",
+    "WLWT": "https://www.wlwt.com/article/adams-county-sheriff-deputy-shot-hope-lane/74296505"
+   },
+   "outlet_count": 5,
+   "first_seen": "2026-10-30T02:40:15+00:00",
+   "updated": "2026-10-30T22:08:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 8.292,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Liberty Township",
+    "local": true,
+    "ohio": true,
+    "breaking_word": "shooting",
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "FOX19",
+     "Local 12",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Adams County deputy, suspect shot, flown to hospital: Sheriff"
+     ],
+     [
+      "Local 12",
+      "Adams County deputy recovering at home after shooting; suspect identified, charged"
+     ],
+     [
+      "WCPO",
+      "Suspect in Adams County shooting identified, charged with attempted aggravated murder"
+     ],
+     [
+      "FOX19",
+      "Man charged with attempted murder after Adams County deputy shot, sheriff\u2019s office says"
+     ],
+     [
+      "Enquirer",
+      "Adams County deputy released from hospital after being shot"
+     ],
+     [
+      "WLWT",
+      "Adams County deputy recovering after being shot; suspect identified, charged"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "police-identify-man-killed-in-walnut-hills-shooting-in-isola",
+   "title": "Police identify man killed in Walnut Hills shooting in 'isolated incident'",
+   "link": "https://www.wlwt.com/article/walnut-hills-cincinnati-shooting-mcmillan-essex/74279056",
+   "outlet": "WLWT",
+   "summary": "A man has died after a shooting in Cincinnati's Walnut Hills neighborhood on Wednesday night.",
+   "outlets": [
+    "Local 12",
+    "WLWT"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/1-hospitalized-after-shooting-walnut-hills-shots-fired-gun-guns-weapons-east-mcmilian-street-hospital-investigation-police-search-suspect",
+    "WLWT": "https://www.wlwt.com/article/walnut-hills-cincinnati-shooting-mcmillan-essex/74279056"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-10-29T02:48:56+00:00",
+   "updated": "2026-10-30T22:52:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 4.164,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Walnut Hills",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "shooting",
+    "newsrooms_for_alert": [
+     "Local 12",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Man dies at UC Medical Center after shooting in Walnut Hills"
+     ],
+     [
+      "WLWT",
+      "Police identify man killed in Walnut Hills shooting in 'isolated incident'"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "police-search-west-chester-properties-for-evidence-in-man-s",
+   "title": "Police search West Chester properties for evidence in man's 2018 disappearance",
+   "link": "https://www.wlwt.com/article/police-search-west-chester-properties-evidence-rigoberto-garcia/74299304",
+   "outlet": "WLWT",
+   "summary": "More than eight years after Rigoberto Jose Garcia disappeared, a tip has led investigators to dig on two West Chester properties for evidence in his case.",
+   "outlets": [
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/local-news/investigation-continues-regarding-backyard-search-warrant-in-west-chester",
+    "WLWT": "https://www.wlwt.com/article/police-search-west-chester-properties-evidence-rigoberto-garcia/74299304"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-10-28T21:10:16+00:00",
+   "updated": "2026-10-30T21:38:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 3.391,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "West Chester",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Police say backyard search in West Chester is in connection with man who went missing in 2018"
+     ],
+     [
+      "WLWT",
+      "Police searching West Chester property for remains in 2018 missing person case"
+     ],
+     [
+      "WLWT",
+      "Police search West Chester properties for evidence in man's 2018 disappearance"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "moroccan-inspired-wine-bar-in-over-the-rhine-announces-closu",
+   "title": "Moroccan-inspired wine bar in Over-the-Rhine announces closure",
+   "link": "https://www.wlwt.com/article/safi-wine-bar-over-the-rhine-cincinnati-closing/74300115",
+   "outlet": "WLWT",
+   "summary": "A well-known wine bar in Cincinnati\u2019s Over-the-Rhine neighborhood is closing.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/safi-wine-bar-over-the-rhine-cincinnati-closing/74300115"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T23:08:00+00:00",
+   "updated": "2026-10-31T00:39:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 3.27,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Over-the-Rhine",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Moroccan-inspired wine bar in Over-the-Rhine announces closure"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "man-arrested-for-allegedly-vandalizing-displays-for-light-up",
+   "title": "Man arrested for allegedly vandalizing displays for Light Up Middletown",
+   "link": "https://www.wlwt.com/article/nicholas-jones-middletown-ohio-vandalism-arrest/74298446",
+   "outlet": "WLWT",
+   "summary": "Police in Middletown made an arrest after a man allegedly caused thousands of dollars in damage to displays for the city\u2019s annual holiday tradition.",
+   "outlets": [
+    "Local 12",
+    "WLWT"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/grinches-middletown-christmas-light-display-damaged-by-vandals-twice-cincinnati-causing-up-to-10000-in-losses-grandpa-gang-repairs-candy-cane-lights-before-thanksgiving-opening-as-police-seek-information-from-witnesses",
+    "WLWT": "https://www.wlwt.com/article/nicholas-jones-middletown-ohio-vandalism-arrest/74298446"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-10-30T05:08:42+00:00",
+   "updated": "2026-10-30T21:24:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 3.261,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Middletown",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Middletown police arrest man following reports of damage to holiday light display"
+     ],
+     [
+      "WLWT",
+      "Man arrested for allegedly vandalizing displays for Light Up Middletown"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "judge-bars-arrested-kroger-protesters-from-downtown-hq-but-p",
+   "title": "Judge bars arrested Kroger protesters from downtown HQ but preserves sidewalk access",
+   "link": "https://www.wcpo.com/news/local-news/hamilton-county/cincinnati/judge-bars-arrested-kroger-protesters-from-downtown-hq-but-preserves-sidewalk-access",
+   "outlet": "WCPO",
+   "summary": "A judge has ruled on where activists arrested outside Kroger's headquarters can and can't protest as their cases move forward. Here's what the decision means.",
+   "outlets": [
+    "FOX19",
+    "WCPO"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/10/30/egg-protests-city-cincinnati-asks-court-ban-9-arrested-all-kroger-stores-downtown-headquarters/",
+    "WCPO": "https://www.wcpo.com/news/local-news/hamilton-county/cincinnati/judge-bars-arrested-kroger-protesters-from-downtown-hq-but-preserves-sidewalk-access"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-10-30T14:28:15+00:00",
+   "updated": "2026-10-30T21:18:31+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 3.212,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19",
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Egg protests: Judge rejects city\u2019s request to ban 9 arrested from all Kroger stores, Downtown headquarters"
+     ],
+     [
+      "WCPO",
+      "Judge bars arrested Kroger protesters from downtown HQ but preserves sidewalk access"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cincinnati-fire-truck-runs-into-building-in-college-hill",
+   "title": "Cincinnati fire truck runs into building in College Hill",
+   "link": "https://www.wcpo.com/news/local-news/cincinnati-fire-truck-runs-into-building-in-college-hill",
+   "outlet": "WCPO",
+   "summary": "A Cincinnati Fire Department truck ran into a building Friday night in College Hill. See footage in the comments:",
+   "outlets": [
+    "WCPO"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/local-news/cincinnati-fire-truck-runs-into-building-in-college-hill"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-31T00:24:09+00:00",
+   "updated": "2026-10-31T00:24:09+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "Fire"
+   ],
+   "city_score": 3.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 3.138,
+   "city_rank": 5.379,
+   "why": {
+    "matches": [
+     {
+      "group": "Fire",
+      "term": "Cincinnati fire",
+      "where": "headline",
+      "outlet": "WCPO",
+      "points": 3.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "fire",
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": false,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Cincinnati fire truck runs into building in College Hill"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "video-captures-sound-of-gunfire-near-children-at-evanston-pa",
+   "title": "Video captures sound of gunfire near children at Evanston park",
+   "link": "https://www.fox19.com/2026/10/30/video-captures-sound-gunfire-near-children-evanston-park/",
+   "outlet": "FOX19",
+   "summary": "Video obtained by FOX 19 NOW captures shots at an Evanston park where children were playing. Cincinnati police responded to a shots-fired call blocks away.",
+   "outlets": [
+    "FOX19"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/10/30/video-captures-sound-gunfire-near-children-evanston-park/"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T23:32:55+00:00",
+   "updated": "2026-10-30T23:32:55+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 2.4,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.722,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [
+     {
+      "group": "Police",
+      "term": "Cincinnati police",
+      "where": "summary",
+      "outlet": "FOX19",
+      "points": 2.4
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Evanston",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Video captures sound of gunfire near children at Evanston park"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "milford-announces-retirement-of-head-football-coach-tom-grip",
+   "title": "Milford announces retirement of head football coach Tom Grippa",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNbWJOVHBTYWJNZFpGeUc5WXFxb0pTdWJ6S29EdEQyNHhJbUVHdERkdGN2eVNTLTVOZVkyVi1HWVNEdDFqclVvekE0eVhobDkzUDkyZHpHWEdjTjJmdklGYWxJRThNaTUyeXVoay0wWGptVlU0YXZUUk5CdnRSY0dBY2JmSWdTQWlWb3laNDAyRXBCd0lqRnhWSEdsSmRPbUhCVG16dGduQUQ5Ny04TEJ0NnpSS214dmZVU1lPRjBSazU2N0tDVjlMcTNqajhfZzQ?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer",
+    "WCPO"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNbWJOVHBTYWJNZFpGeUc5WXFxb0pTdWJ6S29EdEQyNHhJbUVHdERkdGN2eVNTLTVOZVkyVi1HWVNEdDFqclVvekE0eVhobDkzUDkyZHpHWEdjTjJmdklGYWxJRThNaTUyeXVoay0wWGptVlU0YXZUUk5CdnRSY0dBY2JmSWdTQWlWb3laNDAyRXBCd0lqRnhWSEdsSmRPbUhCVG16dGduQUQ5Ny04TEJ0NnpSS214dmZVU1lPRjBSazU2N0tDVjlMcTNqajhfZzQ?oc=5",
+    "WCPO": "https://www.wcpo.com/sports/high-school-sports/milford-high-school-football-coach-tom-grippa-announces-his-retirement-from-the-position"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-10-30T19:19:46+00:00",
+   "updated": "2026-10-30T20:17:44+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.713,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Milford",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Milford football coach Tom Grippa announces his retirement from the position"
+     ],
+     [
+      "Enquirer",
+      "Milford announces retirement of head football coach Tom Grippa"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "loveland-city-hall-gets-spooky-makeover-for-halloween",
+   "title": "Loveland City Hall gets spooky makeover for Halloween",
+   "link": "https://www.wlwt.com/article/loveland-city-hall-spooky-halloween-haunted-hall/74299962",
+   "outlet": "WLWT",
+   "summary": "Loveland's downtown is celebrating Halloween Friday night with a spirited Halloween event for all ages.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/loveland-city-hall-spooky-halloween-haunted-hall/74299962"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T23:15:00+00:00",
+   "updated": "2026-10-30T23:15:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.589,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Loveland",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Loveland City Hall gets spooky makeover for Halloween"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "search-for-missing-man-at-tri-state-residence-enters-fourth",
+   "title": "Search for missing man at Tri-State residence enters fourth day after 2018 disappearance",
+   "link": "https://local12.com/news/local/search-missing-man-west-chester-residence-enters-4th-day-after-2018-disappearance-rigoberto-jose-garcia-cincinnati-ohio-search-efforts",
+   "outlet": "Local 12",
+   "summary": "Garcia was 37 years old when he went missing. He had a wife and three younger children.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/search-missing-man-west-chester-residence-enters-4th-day-after-2018-disappearance-rigoberto-jose-garcia-cincinnati-ohio-search-efforts"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T22:50:34+00:00",
+   "updated": "2026-10-30T22:50:34+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.42,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "west chester",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Search for missing man at Tri-State residence enters fourth day after 2018 disappearance"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ohio-offers-15-uber-lyft-vouchers-ahead-of-busy-halloween-we",
+   "title": "Ohio offers $15 Uber, Lyft vouchers ahead of busy Halloween weekend",
+   "link": "https://www.wlwt.com/article/ohio-uber-lyft-vouchers-halloween-weekend/74299883",
+   "outlet": "WLWT",
+   "summary": "The Ohio Department of Public Safety is offering $15 vouchers for Uber and Lyft rides through its Project Plan Ahead initiative, aimed at reducing impaired driving during one of the state\u2019s highest-risk holiday weekends.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/ohio-uber-lyft-vouchers-halloween-weekend/74299883"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T22:25:00+00:00",
+   "updated": "2026-10-30T22:25:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.254,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Ohio offers $15 Uber, Lyft vouchers ahead of busy Halloween weekend"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "neighbor-describes-hectic-moments-as-suspect-shoots-injures",
+   "title": "Neighbor describes hectic moments as suspect shoots, injures Adams County deputy",
+   "link": "https://local12.com/news/local/suspect-charged-after-adams-county-deputy-shot-while-responding-to-911-call-shooting-shots-fired-gun-guns-west-union-hospitalized-kyle-boudreau-uc-medical-center-cincinnati",
+   "outlet": "Local 12",
+   "summary": "A sheriff\u2019s deputy is recovering at home after being shot while responding to a mental health crisis call in Adams County.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/suspect-charged-after-adams-county-deputy-shot-while-responding-to-911-call-shooting-shots-fired-gun-guns-west-union-hospitalized-kyle-boudreau-uc-medical-center-cincinnati"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T22:25:01+00:00",
+   "updated": "2026-10-30T22:25:01+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.254,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Neighbor describes hectic moments as suspect shoots, injures Adams County deputy"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "west-chester-man-family-cherishing-time-together-after-near",
+   "title": "West Chester man, family cherishing time together after near-death experience",
+   "link": "https://www.wlwt.com/article/west-chester-bj-jen-zale-trihealth-heart-attack-doctors/74289692",
+   "outlet": "WLWT",
+   "summary": "Doctors and nurses are calling him a miracle patient.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/west-chester-bj-jen-zale-trihealth-heart-attack-doctors/74289692"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T22:20:00+00:00",
+   "updated": "2026-10-30T22:20:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.223,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "West Chester",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "West Chester man, family cherishing time together after near-death experience"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "police-release-call-that-led-to-check-at-blue-ash-home-where",
+   "title": "Police release call that led to check at Blue Ash home where 11-year-old died",
+   "link": "https://www.wlwt.com/article/blue-ash-11-year-old-911-call-belleview-avenue/74299009",
+   "outlet": "WLWT",
+   "summary": "Police have released the audio call made to Blue Ash Police that led to an 11-year-old boy being found dead inside of a home.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/blue-ash-11-year-old-911-call-belleview-avenue/74299009"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T22:10:00+00:00",
+   "updated": "2026-10-30T22:10:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.162,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Blue Ash",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Police release call that led to check at Blue Ash home where 11-year-old died"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "90-year-old-bodybuilder-hoping-to-inspire-others-to-stay-act",
+   "title": "90-year-old bodybuilder hoping to inspire others to stay active; has one more goal in mind",
+   "link": "https://local12.com/news/offbeat/90-year-old-bodybuilder-toshisuke-kanazawa-spain-competition-age-limitations-competition-world-fitness",
+   "outlet": "Local 12",
+   "summary": "Japanese bodybuilder Toshisuke Kanazawa, 90, competed in Spain and says he hopes to compete once more at 93 before retiring.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/offbeat/90-year-old-bodybuilder-toshisuke-kanazawa-spain-competition-age-limitations-competition-world-fitness"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T22:04:18+00:00",
+   "updated": "2026-10-30T22:04:18+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.128,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "90-year-old bodybuilder hoping to inspire others to stay active; has one more goal in mind"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "early-in-person-voting-continues-drawing-large-crowds-in-gre",
+   "title": "Early in-person voting continues drawing large crowds in Greater Cincinnati",
+   "link": "https://www.wlwt.com/article/early-in-person-voting-cincinnati-hamilton-county-elections/74299570",
+   "outlet": "WLWT",
+   "summary": "In Hamilton County, Ohio, a steady stream of voters lined up during the lunch rush at the county's Early Vote Center on Friday.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/early-in-person-voting-cincinnati-hamilton-county-elections/74299570"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T21:58:00+00:00",
+   "updated": "2026-10-30T21:58:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.091,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Early in-person voting continues drawing large crowds in Greater Cincinnati"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ohio-man-pleads-guilty-in-death-of-7-year-old-boy-with-speci",
+   "title": "Ohio man pleads guilty in death of 7-year-old boy with special needs",
+   "link": "https://www.wlwt.com/article/ohio-man-pleads-guilty-in-death-of-7-year-old-boy-with-special-needs/74297376",
+   "outlet": "WLWT",
+   "summary": "An Ohio man has pleaded guilty to multiple charges, including murder, in the death of a 7-year-old boy with special needs.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/ohio-man-pleads-guilty-in-death-of-7-year-old-boy-with-special-needs/74297376"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-29T13:53:59+00:00",
+   "updated": "2026-10-30T21:48:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.034,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Ohio man pleads guilty in death of 7-year-old boy with special needs"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "get-the-facts-ad-targets-acton-s-medical-knowledge-looking-i",
+   "title": "Get the Facts: Ad targets Acton\u2019s medical knowledge \u2013 looking into the claim",
+   "link": "https://www.wlwt.com/article/get-the-facts-ad-amy-acton-medical-knowledge-ramaswamy/74299564",
+   "outlet": "WLWT",
+   "summary": "Ohio will select its next governor in a matter of days, with former Ohio health director Amy Acton taking on businessman Vivek Ramaswamy.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/get-the-facts-ad-amy-acton-medical-knowledge-ramaswamy/74299564"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T21:44:00+00:00",
+   "updated": "2026-10-30T21:44:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.011,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Get the Facts: Ad targets Acton\u2019s medical knowledge \u2013 looking into the claim"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "she-loved-halloween-because-i-loved-halloween-crittenden-ha",
+   "title": "'She loved Halloween because I loved Halloween': Crittenden haunted display is a daughter's tribute to her mom",
+   "link": "https://www.wcpo.com/news/local-news/she-loved-halloween-because-i-loved-halloween-crittenden-haunted-display-is-a-daughters-tribute-to-her-mom",
+   "outlet": "WCPO",
+   "summary": "Halloween isn't just a weekend of fun for one Kentucky woman. Lisa Studer plans all year to make her haunted display in Crittenden the talk of the town. This year she's paying it forward for a cause close to her heart.",
+   "outlets": [
+    "WCPO"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/local-news/she-loved-halloween-because-i-loved-halloween-crittenden-haunted-display-is-a-daughters-tribute-to-her-mom"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T21:43:08+00:00",
+   "updated": "2026-10-30T21:43:08+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.006,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "'She loved Halloween because I loved Halloween': Crittenden haunted display is a daughter's tribute to her mom"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "trihealth-anthem-blue-cross-and-blue-shield-reach-new-multi",
+   "title": "TriHealth, Anthem Blue Cross and Blue Shield reach new, multi-year agreement",
+   "link": "https://www.wlwt.com/article/trihealth-anthem-blue-cross-and-blue-shield-new-agreement/74298705",
+   "outlet": "WLWT",
+   "summary": "TriHealth and Anthem Blue Cross and Blue Shield in Ohio have reached a new, multi-year agreement.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/trihealth-anthem-blue-cross-and-blue-shield-new-agreement/74298705"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T19:55:00+00:00",
+   "updated": "2026-10-30T21:32:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.945,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "TriHealth, Anthem Blue Cross and Blue Shield reach new, multi-year agreement"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "southgate-secures-662k-in-funding-to-rebuild-crumbling-us-27",
+   "title": "Southgate secures $662K in funding to rebuild crumbling US-27 sidewalks and improve pedestrian safety",
+   "link": "https://www.wcpo.com/news/northern-kentucky/southgate-secures-662k-in-funding-to-rebuild-crumbling-us-27-sidewalks-and-improve-pedestrian-safety",
+   "outlet": "WCPO",
+   "summary": "For years, Southgate neighbors and leaders have watched as the sidewalks along US-27 have crumbled underfoot and become a public safety risk.",
+   "outlets": [
+    "WCPO"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/northern-kentucky/southgate-secures-662k-in-funding-to-rebuild-crumbling-us-27-sidewalks-and-improve-pedestrian-safety"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T21:24:55+00:00",
+   "updated": "2026-10-30T21:24:55+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.907,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Southgate",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Southgate secures $662K in funding to rebuild crumbling US-27 sidewalks and improve pedestrian safety"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ohio-casino-control-raids-business-in-highland-county-in-ill",
+   "title": "Ohio Casino Control raids business in Highland County in illegal gambling probe",
+   "link": "https://www.wlwt.com/article/ohio-casino-control-commission-raid-illegal-gambling-highland-county/74295330",
+   "outlet": "WLWT",
+   "summary": "Dozens of illegal slot machines were seized during an illegal gambling probe at a business in Highland County, according to the Ohio Casino Control Commission.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/ohio-casino-control-commission-raid-illegal-gambling-highland-county/74295330"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T14:30:00+00:00",
+   "updated": "2026-10-30T21:24:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.902,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Ohio Casino Control raids business in Highland County in illegal gambling probe"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "police-man-injured-after-overnight-north-avondale-shooting",
+   "title": "Police: Man injured after overnight North Avondale shooting",
+   "link": "https://www.wlwt.com/article/cincinnati-north-avondale-shooting-man-injured-arm/74292453",
+   "outlet": "WLWT",
+   "summary": "A man has been injured after an overnight shooting in North Avondale.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/cincinnati-north-avondale-shooting-man-injured-arm/74292453"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T09:49:00+00:00",
+   "updated": "2026-10-30T21:24:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.902,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "North Avondale",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "shooting",
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Police: Man injured after overnight North Avondale shooting"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "police-1-hospitalized-in-critical-condition-after-crash-on-i",
+   "title": "Police: 1 hospitalized in critical condition after crash on I-275",
+   "link": "https://www.wlwt.com/article/1-hospitalized-critical-condition-crash-on-i-275/74297128",
+   "outlet": "WLWT",
+   "summary": "One person has been taken to the hospital in critical condition after a crash on I-275 Friday.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/1-hospitalized-critical-condition-crash-on-i-275/74297128"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T16:55:00+00:00",
+   "updated": "2026-10-30T21:24:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.902,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": "crash",
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Police: 1 hospitalized in critical condition after crash on I-275"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "police-2-hospitalized-with-serious-injuries-after-motorcycle",
+   "title": "Police: 2 hospitalized with serious injuries after motorcycle crash that shut down I-75",
+   "link": "https://www.wlwt.com/article/interstate-75-northbound-lanes-erlanger-commonwealth/74289223",
+   "outlet": "WLWT",
+   "summary": "Two people were taken to the hospital after a motorcycle crash on I-75 near Erlanger.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/interstate-75-northbound-lanes-erlanger-commonwealth/74289223"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T01:25:16+00:00",
+   "updated": "2026-10-30T21:24:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.902,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Erlanger",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "crash",
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Police: 2 hospitalized with serious injuries after motorcycle crash that shut down I-75"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "deputies-75-year-old-dies-another-hurt-after-boone-county-cr",
+   "title": "Deputies: 75-year-old dies, another hurt after Boone County crash",
+   "link": "https://www.wlwt.com/article/boone-county-crash-sullivan-hathaway-road-aircare-injuries/74285181",
+   "outlet": "WLWT",
+   "summary": "A 75-year-old has died and another has been injured after a crash in Boone County, according to the Boone County Sheriff's Office.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/boone-county-crash-sullivan-hathaway-road-aircare-injuries/74285181"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-29T18:30:43+00:00",
+   "updated": "2026-10-30T21:24:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.902,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Boone County",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "crash",
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Deputies: 75-year-old dies, another hurt after Boone County crash"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "no-injuries-reported-after-fire-breaks-out-twice-in-one-nigh",
+   "title": "No injuries reported after fire breaks out twice in one night at Evanston home",
+   "link": "https://www.wlwt.com/article/cincinnati-evanston-house-fire-no-injuries-brewster-avenue/74292404",
+   "outlet": "WLWT",
+   "summary": "No injuries have been reported after crews responded to a home in Evanston twice for a fire, Cincinnati fire officials say.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/cincinnati-evanston-house-fire-no-injuries-brewster-avenue/74292404"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T09:43:00+00:00",
+   "updated": "2026-10-30T21:24:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 2.4,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.902,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [
+     {
+      "group": "Fire",
+      "term": "Cincinnati fire",
+      "where": "summary",
+      "outlet": "WLWT",
+      "points": 2.4
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Evanston",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "fire",
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "No injuries reported after fire breaks out twice in one night at Evanston home"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "1-injured-while-burning-trash-in-ryland-heights",
+   "title": "1 injured while burning trash in Ryland Heights",
+   "link": "https://local12.com/news/local/1-injured-while-burning-trash-ryland-heights-tecumseh-lane-burns-burn-fire-flames-northern-kentucky-injuries-garbage-dry-weather",
+   "outlet": "Local 12",
+   "summary": "A man suffered minor burn injuries while burning trash in Northern Kentucky.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/1-injured-while-burning-trash-ryland-heights-tecumseh-lane-burns-burn-fire-flames-northern-kentucky-injuries-garbage-dry-weather"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T21:09:23+00:00",
+   "updated": "2026-10-30T21:09:23+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.827,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "1 injured while burning trash in Ryland Heights"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "10m-bond-set-for-man-accused-of-killing-portage-county-18-y",
+   "title": "$10M bond set for man accused of killing Portage County 18-year-old Girl Scout",
+   "link": "https://www.fox19.com/2026/10/30/10m-bond-set-man-accused-killing-portage-county-18-year-old-girl-scout/",
+   "outlet": "FOX19",
+   "summary": "The 21-year-old man charged in the deadly shooting of an 18-year-old Girl Scout, was arraigned in Portage County Court of Common Pleas Friday.",
+   "outlets": [
+    "FOX19"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/10/30/10m-bond-set-man-accused-killing-portage-county-18-year-old-girl-scout/"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-10-30T20:30:03+00:00",
+   "updated": "2026-10-30T20:30:03+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.638,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": "shooting",
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": false,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "$10M bond set for man accused of killing Portage County 18-year-old Girl Scout"
+     ]
+    ]
+   }
+  }
+ ],
+ "sources_status": [
+  {
+   "source": "Enquirer",
+   "ok": true,
+   "items": 58,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://news.google.com/rss/search?q=site:cincinnati.com/story+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WCPO",
+   "ok": true,
+   "items": 30,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wcpo.com/news/local-news.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WLWT",
+   "ok": true,
+   "items": 20,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wlwt.com/local-news-rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "FOX19",
+   "ok": true,
+   "items": 20,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.fox19.com/arc/outboundfeeds/rss/category/news/?outputType=xml",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Local 12",
+   "ok": true,
+   "items": 46,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://local12.com/news/local.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WVXU",
+   "ok": true,
+   "items": 10,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wvxu.org/local-news.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Signal",
+   "ok": true,
+   "items": 10,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://signalcincinnati.org/feed/",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City Hall sweep",
+   "ok": true,
+   "items": 11,
+   "junk_dropped": 4,
+   "junk_examples": [
+    "WTAP 2026 Election Guide: West Virginia & Ohio",
+    "Ohio Charter News Weekly \u2013 10.30.26",
+    "James A. Staten Jr. Obituary (2026) - Mason, OH - Hodapp Funeral Home - West Chester",
+    "Sports on TV for Friday, Oct. 30 - The Cumberland Times-News"
+   ],
+   "used": "https://news.google.com/rss/search?q=Cincinnati+(%22city+council%22+OR+%22city+hall%22+OR+%22city+manager%22+OR+mayor)+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City of Cincinnati",
+   "ok": true,
+   "items": 1,
+   "junk_dropped": 1,
+   "junk_examples": [
+    ""
+   ],
+   "used": "https://news.google.com/rss/search?q=site:cincinnati-oh.gov+when:2d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": true,
+   "errors": [
+    "empty: https://news.google.com/rss/search?q=site:cincinnati-oh.gov/cityofcincinnati/news+when:3d&hl=en-US&gl=US&ceid=US:en"
+   ],
+   "fail_streak": 0
+  },
+  {
+   "source": "Ohio Capital Journal",
+   "ok": true,
+   "items": 15,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://ohiocapitaljournal.com/feed/",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Ohio legislation sweep",
+   "ok": true,
+   "items": 5,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://news.google.com/rss/search?q=Ohio+(lawmakers+OR+Statehouse+OR+%22House+Bill%22+OR+%22Senate+Bill%22)+(cities+OR+%22local+governments%22+OR+municipalities+OR+%22home+rule%22)+when:2d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Federal local-gov sweep",
+   "ok": true,
+   "items": 5,
+   "junk_dropped": 5,
+   "junk_examples": [
+    "Trump Administration Awards $193.7 Million to Expand Rural Healthcare in Florida",
+    "FEMA Individual Assistance Approved For Escambia, Santa Rosa, Okaloosa Counties",
+    "Nassau County Public Adjuster for Storm and Flood Claims Republic Claims Associates Opens Nor'easter Claim Help for Homeowners and Businesses as New York Seeks Federal Disaster Aid",
+    "FEMA Approves Individual Assistance for Hurricane Isaias in Eight Florida Counties: How to Apply",
+    "Four U.S. Cities to Receive Nearly $300 Million in Federal Funding to Combat Violent Crime"
+   ],
+   "used": "https://news.google.com/rss/search?q=(%22U.S.+Congress%22+OR+%22federal+funding%22+OR+%22federal+grants%22+OR+HUD+OR+FEMA+OR+%22Trump+administration%22)+(%22local+governments%22+OR+%22U.S.+cities%22+OR+mayors)+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City meetings (Legistar)",
+   "ok": true,
+   "items": 2,
+   "used": "web API (cincinnatioh)",
+   "error": null,
+   "fail_streak": 0
+  },
+  {
+   "source": "Game days (ESPN)",
+   "ok": true,
+   "items": 3,
+   "error": null,
+   "fail_streak": 0
+  }
+ ],
+ "memory": {
+  "fail_streak": {
+   "Enquirer": 0,
+   "WCPO": 0,
+   "WLWT": 0,
+   "FOX19": 0,
+   "Local 12": 0,
+   "WVXU": 0,
+   "Signal": 0,
+   "City Hall sweep": 0,
+   "City of Cincinnati": 0,
+   "Ohio Capital Journal": 0,
+   "Ohio legislation sweep": 0,
+   "Federal local-gov sweep": 0,
+   "City meetings (Legistar)": 0,
+   "Game days (ESPN)": 0
+  },
+  "seen": [
+   {
+    "tok": [
+     "adam",
+     "aggravated",
+     "attempted",
+     "charged",
+     "county",
+     "deputy",
+     "flown",
+     "home",
+     "hospital",
+     "identified",
+     "man",
+     "murder",
+     "office",
+     "recovering",
+     "released",
+     "sheriff",
+     "shooting",
+     "shot",
+     "suspect"
+    ],
+    "first_seen": "2026-10-30T02:40:15+00:00",
+    "title": "Adams County deputy recovering after being shot; suspect identified, charged"
+   },
+   {
+    "tok": [
+     "center",
+     "die",
+     "hill",
+     "identify",
+     "incident",
+     "isolated",
+     "killed",
+     "man",
+     "medical",
+     "police",
+     "shooting",
+     "walnut"
+    ],
+    "first_seen": "2026-10-29T02:48:56+00:00",
+    "title": "Police identify man killed in Walnut Hills shooting in 'isolated incident'"
+   },
+   {
+    "tok": [
+     "2018",
+     "backyard",
+     "case",
+     "chester",
+     "connection",
+     "disappearance",
+     "evidence",
+     "man",
+     "man'",
+     "missing",
+     "person",
+     "police",
+     "property",
+     "remain",
+     "search",
+     "searching",
+     "went",
+     "west"
+    ],
+    "first_seen": "2026-10-28T21:10:16+00:00",
+    "title": "Police search West Chester properties for evidence in man's 2018 disappearance"
+   },
+   {
+    "tok": [
+     "announce",
+     "bar",
+     "closure",
+     "inspired",
+     "moroccan",
+     "rhine",
+     "wine"
+    ],
+    "first_seen": "2026-10-30T23:08:00+00:00",
+    "title": "Moroccan-inspired wine bar in Over-the-Rhine announces closure"
+   },
+   {
+    "tok": [
+     "allegedly",
+     "arrest",
+     "arrested",
+     "damage",
+     "display",
+     "following",
+     "holiday",
+     "light",
+     "man",
+     "middletown",
+     "police",
+     "vandalizing"
+    ],
+    "first_seen": "2026-10-30T05:08:42+00:00",
+    "title": "Man arrested for allegedly vandalizing displays for Light Up Middletown"
+   },
+   {
+    "tok": [
+     "access",
+     "all",
+     "arrested",
+     "ban",
+     "bar",
+     "city",
+     "downtown",
+     "egg",
+     "headquarter",
+     "judge",
+     "kroger",
+     "preserve",
+     "protest",
+     "protester",
+     "reject",
+     "request",
+     "sidewalk",
+     "store"
+    ],
+    "first_seen": "2026-10-30T14:28:15+00:00",
+    "title": "Judge bars arrested Kroger protesters from downtown HQ but preserves sidewalk access"
+   },
+   {
+    "tok": [
+     "building",
+     "college",
+     "fire",
+     "hill",
+     "run",
+     "truck"
+    ],
+    "first_seen": "2026-10-31T00:24:09+00:00",
+    "title": "Cincinnati fire truck runs into building in College Hill"
+   },
+   {
+    "tok": [
+     "capture",
+     "children",
+     "evanston",
+     "gunfire",
+     "near",
+     "park",
+     "sound"
+    ],
+    "first_seen": "2026-10-30T23:32:55+00:00",
+    "title": "Video captures sound of gunfire near children at Evanston park"
+   },
+   {
+    "tok": [
+     "announce",
+     "coach",
+     "football",
+     "grippa",
+     "head",
+     "milford",
+     "position",
+     "retirement",
+     "tom"
+    ],
+    "first_seen": "2026-10-30T19:19:46+00:00",
+    "title": "Milford announces retirement of head football coach Tom Grippa"
+   },
+   {
+    "tok": [
+     "city",
+     "get",
+     "hall",
+     "halloween",
+     "loveland",
+     "makeover",
+     "spooky"
+    ],
+    "first_seen": "2026-10-30T23:15:00+00:00",
+    "title": "Loveland City Hall gets spooky makeover for Halloween"
+   },
+   {
+    "tok": [
+     "2018",
+     "day",
+     "disappearance",
+     "enter",
+     "fourth",
+     "man",
+     "missing",
+     "residence",
+     "search",
+     "state",
+     "tri"
+    ],
+    "first_seen": "2026-10-30T22:50:34+00:00",
+    "title": "Search for missing man at Tri-State residence enters fourth day after 2018 disappearance"
+   },
+   {
+    "tok": [
+     "ahead",
+     "busy",
+     "halloween",
+     "lyft",
+     "offer",
+     "uber",
+     "voucher",
+     "weekend"
+    ],
+    "first_seen": "2026-10-30T22:25:00+00:00",
+    "title": "Ohio offers $15 Uber, Lyft vouchers ahead of busy Halloween weekend"
+   },
+   {
+    "tok": [
+     "adam",
+     "county",
+     "deputy",
+     "describe",
+     "hectic",
+     "injure",
+     "moment",
+     "neighbor",
+     "shoot",
+     "suspect"
+    ],
+    "first_seen": "2026-10-30T22:25:01+00:00",
+    "title": "Neighbor describes hectic moments as suspect shoots, injures Adams County deputy"
+   },
+   {
+    "tok": [
+     "cherishing",
+     "chester",
+     "death",
+     "experience",
+     "family",
+     "man",
+     "near",
+     "time",
+     "together",
+     "west"
+    ],
+    "first_seen": "2026-10-30T22:20:00+00:00",
+    "title": "West Chester man, family cherishing time together after near-death experience"
+   },
+   {
+    "tok": [
+     "ash",
+     "blue",
+     "call",
+     "check",
+     "died",
+     "home",
+     "led",
+     "old",
+     "police",
+     "release",
+     "year"
+    ],
+    "first_seen": "2026-10-30T22:10:00+00:00",
+    "title": "Police release call that led to check at Blue Ash home where 11-year-old died"
+   },
+   {
+    "tok": [
+     "active",
+     "bodybuilder",
+     "goal",
+     "has",
+     "hoping",
+     "inspire",
+     "mind",
+     "old",
+     "other",
+     "stay",
+     "year"
+    ],
+    "first_seen": "2026-10-30T22:04:18+00:00",
+    "title": "90-year-old bodybuilder hoping to inspire others to stay active; has one more goal in mind"
+   },
+   {
+    "tok": [
+     "continue",
+     "crowd",
+     "drawing",
+     "early",
+     "greater",
+     "large",
+     "person",
+     "voting"
+    ],
+    "first_seen": "2026-10-30T21:58:00+00:00",
+    "title": "Early in-person voting continues drawing large crowds in Greater Cincinnati"
+   },
+   {
+    "tok": [
+     "boy",
+     "death",
+     "guilty",
+     "man",
+     "need",
+     "old",
+     "plead",
+     "special",
+     "year"
+    ],
+    "first_seen": "2026-10-29T13:53:59+00:00",
+    "title": "Ohio man pleads guilty in death of 7-year-old boy with special needs"
+   },
+   {
+    "tok": [
+     "acton",
+     "claim",
+     "fact",
+     "get",
+     "knowledge",
+     "looking",
+     "medical",
+     "target"
+    ],
+    "first_seen": "2026-10-30T21:44:00+00:00",
+    "title": "Get the Facts: Ad targets Acton\u2019s medical knowledge \u2013 looking into the claim"
+   },
+   {
+    "tok": [
+     "because",
+     "crittenden",
+     "daughter'",
+     "display",
+     "halloween",
+     "haunted",
+     "loved",
+     "mom",
+     "tribute"
+    ],
+    "first_seen": "2026-10-30T21:43:08+00:00",
+    "title": "'She loved Halloween because I loved Halloween': Crittenden haunted display is a daughter's tribute to her mom"
+   },
+   {
+    "tok": [
+     "agreement",
+     "anthem",
+     "blue",
+     "cross",
+     "multi",
+     "reach",
+     "shield",
+     "trihealth",
+     "year"
+    ],
+    "first_seen": "2026-10-30T19:55:00+00:00",
+    "title": "TriHealth, Anthem Blue Cross and Blue Shield reach new, multi-year agreement"
+   },
+   {
+    "tok": [
+     "662k",
+     "crumbling",
+     "funding",
+     "improve",
+     "pedestrian",
+     "rebuild",
+     "safety",
+     "secure",
+     "sidewalk",
+     "southgate"
+    ],
+    "first_seen": "2026-10-30T21:24:55+00:00",
+    "title": "Southgate secures $662K in funding to rebuild crumbling US-27 sidewalks and improve pedestrian safety"
+   },
+   {
+    "tok": [
+     "business",
+     "casino",
+     "control",
+     "county",
+     "gambling",
+     "highland",
+     "illegal",
+     "probe",
+     "raid"
+    ],
+    "first_seen": "2026-10-30T14:30:00+00:00",
+    "title": "Ohio Casino Control raids business in Highland County in illegal gambling probe"
+   },
+   {
+    "tok": [
+     "avondale",
+     "injured",
+     "man",
+     "north",
+     "overnight",
+     "police",
+     "shooting"
+    ],
+    "first_seen": "2026-10-30T09:49:00+00:00",
+    "title": "Police: Man injured after overnight North Avondale shooting"
+   },
+   {
+    "tok": [
+     "275",
+     "condition",
+     "crash",
+     "critical",
+     "hospitalized",
+     "police"
+    ],
+    "first_seen": "2026-10-30T16:55:00+00:00",
+    "title": "Police: 1 hospitalized in critical condition after crash on I-275"
+   },
+   {
+    "tok": [
+     "crash",
+     "hospitalized",
+     "injury",
+     "motorcycle",
+     "police",
+     "seriou",
+     "shut"
+    ],
+    "first_seen": "2026-10-30T01:25:16+00:00",
+    "title": "Police: 2 hospitalized with serious injuries after motorcycle crash that shut down I-75"
+   },
+   {
+    "tok": [
+     "another",
+     "boone",
+     "county",
+     "crash",
+     "deputy",
+     "die",
+     "hurt",
+     "old",
+     "year"
+    ],
+    "first_seen": "2026-10-29T18:30:43+00:00",
+    "title": "Deputies: 75-year-old dies, another hurt after Boone County crash"
+   },
+   {
+    "tok": [
+     "break",
+     "evanston",
+     "fire",
+     "home",
+     "injury",
+     "night",
+     "reported",
+     "twice"
+    ],
+    "first_seen": "2026-10-30T09:43:00+00:00",
+    "title": "No injuries reported after fire breaks out twice in one night at Evanston home"
+   },
+   {
+    "tok": [
+     "burning",
+     "height",
+     "injured",
+     "ryland",
+     "trash",
+     "while"
+    ],
+    "first_seen": "2026-10-30T21:09:23+00:00",
+    "title": "1 injured while burning trash in Ryland Heights"
+   },
+   {
+    "tok": [
+     "10m",
+     "accused",
+     "bond",
+     "county",
+     "girl",
+     "killing",
+     "man",
+     "old",
+     "portage",
+     "scout",
+     "set",
+     "year"
+    ],
+    "first_seen": "2026-10-30T20:30:03+00:00",
+    "title": "$10M bond set for man accused of killing Portage County 18-year-old Girl Scout"
+   },
+   {
+    "tok": [
+     "access",
+     "announce",
+     "bass",
+     "change",
+     "coming",
+     "great",
+     "island",
+     "park",
+     "river",
+     "upgrade"
+    ],
+    "first_seen": "2026-10-30T20:10:36+00:00",
+    "title": "Great Parks announces upgrades, changes coming to Bass Island River Access"
+   },
+   {
+    "tok": [
+     "boone",
+     "charlie",
+     "county",
+     "kirk",
+     "memorial",
+     "rep",
+     "sign",
+     "state",
+     "sys",
+     "vandalized"
+    ],
+    "first_seen": "2026-10-30T15:51:00+00:00",
+    "title": "Charlie Kirk memorial sign vandalized in Boone County, state rep sys"
+   },
+   {
+    "tok": [
+     "birthday",
+     "born",
+     "boy",
+     "celebrate",
+     "firefighter",
+     "nky",
+     "pound",
+     "weighing"
+    ],
+    "first_seen": "2026-10-30T19:48:57+00:00",
+    "title": "NKY boy born weighing one pound celebrates birthday with firefighters"
+   },
+   {
+    "tok": [
+     "972",
+     "capped",
+     "case",
+     "child",
+     "jury",
+     "man",
+     "porn",
+     "recommend",
+     "sentence",
+     "serve",
+     "year"
+    ],
+    "first_seen": "2026-10-30T19:36:45+00:00",
+    "title": "Jury recommends local man serve 972 years in child porn case; sentence capped at 20 years"
+   },
+   {
+    "tok": [
+     "election",
+     "final",
+     "midterm",
+     "stretch",
+     "vance",
+     "visit"
+    ],
+    "first_seen": "2026-10-30T20:55:00+00:00",
+    "title": "JD Vance to visit Ohio in final stretch before midterm elections"
+   },
+   {
+    "tok": [
+     "arrest",
+     "await",
+     "case",
+     "davi",
+     "domonic",
+     "later",
+     "mom",
+     "nearly",
+     "year"
+    ],
+    "first_seen": "2026-10-30T22:28:59+00:00",
+    "title": "Domonic Davis Case: Cincinnati Mom Awaits Arrest Nearly 3 Years Later"
+   },
+   {
+    "tok": [
+     "catche",
+     "fire",
+     "issue",
+     "load",
+     "maineville",
+     "reminder",
+     "rumpke",
+     "safety",
+     "truck"
+    ],
+    "first_seen": "2026-10-30T19:46:00+00:00",
+    "title": "Rumpke issues safety reminder after truck load catches fire in Maineville"
+   },
+   {
+    "tok": [
+     "community",
+     "education",
+     "food",
+     "helping",
+     "meal",
+     "senior",
+     "wheel"
+    ],
+    "first_seen": "2026-10-30T20:24:00+00:00",
+    "title": "Meals on Wheels helping seniors with food, education and community"
+   },
+   {
+    "tok": [
+     "all",
+     "brewer",
+     "connection",
+     "help",
+     "here'",
+     "milwaukee",
+     "parade",
+     "sery",
+     "set",
+     "unfold",
+     "win",
+     "world"
+    ],
+    "first_seen": "2026-10-30T08:51:26+00:00",
+    "title": "Cincinnati connections help Milwaukee Brewers win World Series"
+   },
+   {
+    "tok": [
+     "behind",
+     "meet",
+     "men",
+     "pink",
+     "that'",
+     "wear",
+     "woman"
+    ],
+    "first_seen": "2026-10-30T19:21:37+00:00",
+    "title": "Meet the woman behind Cincinnati Men Wear Pink | That's So Cincinnati"
+   },
+   {
+    "tok": [
+     "arrested",
+     "charge",
+     "drop",
+     "festival",
+     "man",
+     "prosecutor",
+     "shooting",
+     "wounded"
+    ],
+    "first_seen": "2026-10-30T19:35:00+00:00",
+    "title": "Prosecutor drops charges against man arrested in Ohio festival shooting that wounded 12"
+   },
+   {
+    "tok": [
+     "elsewhere",
+     "here",
+     "monroe",
+     "planning",
+     "played",
+     "safer",
+     "street"
+    ],
+    "first_seen": "2026-10-30T18:54:05+00:00",
+    "title": "Monroe is planning for safer streets. Here\u2019s how that played out elsewhere"
+   },
+   {
+    "tok": [
+     "allegedly",
+     "city",
+     "email",
+     "face",
+     "leader",
+     "penalty",
+     "state",
+     "tri",
+     "withholding"
+    ],
+    "first_seen": "2026-10-30T18:40:20+00:00",
+    "title": "Leaders of Tri-State city could face penalties for allegedly withholding emails"
+   },
+   {
+    "tok": [
+     "boost",
+     "deep",
+     "development",
+     "dive",
+     "line",
+     "near",
+     "plan",
+     "rapid",
+     "transit"
+    ],
+    "first_seen": "2026-10-30T18:29:00+00:00",
+    "title": "Cincinnati plans deep dive to boost development near rapid transit lines"
+   },
+   {
+    "tok": [
+     "ask",
+     "case",
+     "end",
+     "killed",
+     "mother",
+     "near",
+     "old",
+     "playground",
+     "solved",
+     "west",
+     "year"
+    ],
+    "first_seen": "2026-10-30T18:24:13+00:00",
+    "title": "Mother of 11-year-old killed near West End playground asks why cases are not being solved"
+   },
+   {
+    "tok": [
+     "beer",
+     "brewer",
+     "can",
+     "clinch",
+     "during",
+     "exact",
+     "filled",
+     "lite",
+     "made",
+     "miller",
+     "releasing",
+     "sery",
+     "time",
+     "won",
+     "world"
+    ],
+    "first_seen": "2026-10-29T20:39:33+00:00",
+    "title": "Miller Lite releasing 'Clinch Cans' filled with beer made during exact time Brewers won the World Series"
+   },
+   {
+    "tok": [
+     "clermont",
+     "county",
+     "family",
+     "found",
+     "headstone",
+     "searche",
+     "township",
+     "veteran",
+     "wwii"
+    ],
+    "first_seen": "2026-10-30T17:51:04+00:00",
+    "title": "WWII veteran\u2019s headstone found in Clermont County; township searches for family"
+   },
+   {
+    "tok": [
+     "000",
+     "bull",
+     "elephant",
+     "loui",
+     "pound",
+     "raja",
+     "saint",
+     "welcome",
+     "zoo"
+    ],
+    "first_seen": "2026-10-30T14:08:23+00:00",
+    "title": "Cincinnati Zoo welcomes Raja, new 10,000-pound bull elephant from Saint Louis Zoo"
+   },
+   {
+    "tok": [
+     "22m",
+     "cincinnati'",
+     "company",
+     "eye",
+     "largest",
+     "private",
+     "project"
+    ],
+    "first_seen": "2026-10-30T17:39:16+00:00",
+    "title": "One of Cincinnati's largest private companies eyes $22M project"
+   },
+   {
+    "tok": [
+     "chamber",
+     "citing",
+     "commerce",
+     "concern",
+     "key",
+     "levy",
+     "oppose",
+     "public",
+     "school",
+     "tax"
+    ],
+    "first_seen": "2026-10-30T17:21:49+00:00",
+    "title": "Cincinnati Chamber of Commerce opposes Cincinnati Public Schools tax levy, citing 3 key concerns"
+   },
+   {
+    "tok": [
+     "apartment",
+     "atla",
+     "boost",
+     "building",
+     "cincinnati'",
+     "downtown",
+     "get",
+     "income",
+     "mixed"
+    ],
+    "first_seen": "2026-10-30T17:03:26+00:00",
+    "title": "Downtown Cincinnati's Atlas Building Gets $2.9M Boost for 67 Mixed-Income Apartments"
+   },
+   {
+    "tok": [
+     "game",
+     "host",
+     "key",
+     "mls",
+     "philadelphia",
+     "surging"
+    ],
+    "first_seen": "2026-10-30T16:59:09+00:00",
+    "title": "FC Cincinnati hosts surging Philadelphia in key MLS game"
+   },
+   {
+    "tok": [
+     "become",
+     "dad",
+     "elephant",
+     "leaving",
+     "zoo"
+    ],
+    "first_seen": "2026-10-30T16:57:10+00:00",
+    "title": "Two Cincinnati Zoo elephants are leaving to 'become dads'"
+   },
+   {
+    "tok": [
+     "aim",
+     "bill",
+     "information",
+     "officer",
+     "online",
+     "police",
+     "posted",
+     "private",
+     "protect"
+    ],
+    "first_seen": "2026-10-30T16:43:10+00:00",
+    "title": "Ohio bill aims to protect police officers\u2019 private information from being posted online"
+   },
+   {
+    "tok": [
+     "backlash",
+     "controversial",
+     "mass",
+     "pull",
+     "ramaswamy"
+    ],
+    "first_seen": "2026-10-30T00:28:59+00:00",
+    "title": "Ramaswamy pulls down controversial ad after mass backlash"
+   },
+   {
+    "tok": [
+     "acton",
+     "amy",
+     "candidate",
+     "columbu",
+     "concert",
+     "during",
+     "gubernatorial",
+     "olivia",
+     "performance",
+     "rodrigo",
+     "show",
+     "support"
+    ],
+    "first_seen": "2026-10-30T10:23:24+00:00",
+    "title": "Olivia Rodrigo shows support for Amy Acton at Columbus concert"
+   },
+   {
+    "tok": [
+     "clinching",
+     "lock",
+     "playoff",
+     "scenario",
+     "spot",
+     "weekend"
+    ],
+    "first_seen": "2026-10-30T16:21:55+00:00",
+    "title": "Clinching scenarios: How FC Cincinnati can lock in a playoff spot this weekend"
+   },
+   {
+    "tok": [
+     "authority",
+     "business",
+     "illegal",
+     "machine",
+     "seize",
+     "slot",
+     "state",
+     "tri"
+    ],
+    "first_seen": "2026-10-30T15:58:55+00:00",
+    "title": "Authorities seize 63 illegal slot machines from Tri-State business"
+   },
+   {
+    "tok": [
+     "elephant",
+     "meet",
+     "newest",
+     "raja",
+     "zoo'"
+    ],
+    "first_seen": "2026-10-30T15:39:27+00:00",
+    "title": "Meet Raja, the Cincinnati Zoo's newest elephant!"
+   },
+   {
+    "tok": [
+     "2026",
+     "election",
+     "governor",
+     "house",
+     "midterm",
+     "race",
+     "seat",
+     "senate"
+    ],
+    "first_seen": "2026-10-30T15:29:00+00:00",
+    "title": "Ohio governor, U.S. Senate, House seats: Races to watch in 2026 midterm election"
+   },
+   {
+    "tok": [
+     "become",
+     "letter",
+     "political",
+     "ramaswamy",
+     "shouldn't",
+     "value",
+     "weapon",
+     "xavier'"
+    ],
+    "first_seen": "2026-10-30T14:02:25+00:00",
+    "title": "St. Xavier's values shouldn't become political weapons against Ramaswamy | Letter"
+   },
+   {
+    "tok": [
+     "governor",
+     "running",
+     "seat",
+     "senate",
+     "who'"
+    ],
+    "first_seen": "2026-10-30T14:52:00+00:00",
+    "title": "Who's running for governor in Ohio?"
+   },
+   {
+    "tok": [
+     "2027",
+     "add",
+     "ball",
+     "banana",
+     "demand",
+     "end",
+     "expand",
+     "game",
+     "lottery",
+     "savannah",
+     "soon",
+     "stop",
+     "surging",
+     "third",
+     "ticket",
+     "tour",
+     "world"
+    ],
+    "first_seen": "2026-10-29T20:04:47+00:00",
+    "title": "Savannah Bananas add third Cincinnati game in 2027. Ticket lottery ends soon"
+   },
+   {
+    "tok": [
+     "abandon",
+     "ambulance",
+     "cleveland",
+     "driver",
+     "patient"
+    ],
+    "first_seen": "2026-10-30T14:24:55+00:00",
+    "title": "Ambulance driver abandons patient in Cleveland"
+   },
+   {
+    "tok": [
+     "basketball",
+     "big",
+     "goal",
+     "jovan",
+     "milicevic",
+     "return",
+     "xavier"
+    ],
+    "first_seen": "2026-10-30T13:11:48+00:00",
+    "title": "Jovan Milicevic returns to Xavier basketball with big goals"
+   },
+   {
+    "tok": [
+     "all",
+     "baby",
+     "children",
+     "dressed",
+     "halloween",
+     "national",
+     "nicu",
+     "see"
+    ],
+    "first_seen": "2026-10-30T14:05:00+00:00",
+    "title": "SEE IT: Children\u2019s National NICU babies are all dressed up for Halloween"
+   },
+   {
+    "tok": [
+     "adam",
+     "call",
+     "county",
+     "deputy",
+     "health",
+     "mental",
+     "responding",
+     "shot",
+     "while"
+    ],
+    "first_seen": "2026-10-30T02:40:15+00:00",
+    "title": "Adams County deputy shot while responding to mental health call"
+   },
+   {
+    "tok": [
+     "day",
+     "early",
+     "election",
+     "indiana",
+     "less",
+     "until",
+     "vote"
+    ],
+    "first_seen": "2026-10-29T17:24:00+00:00",
+    "title": "How to vote early in Ohio, Kentucky and Indiana with less than a week until Election Day"
+   },
+   {
+    "tok": [
+     "2026",
+     "date",
+     "halloween",
+     "time",
+     "treating",
+     "trick"
+    ],
+    "first_seen": "2026-10-30T13:49:00+00:00",
+    "title": "2026 Halloween trick-or-treating dates, times in Cincinnati"
+   },
+   {
+    "tok": [
+     "blindly",
+     "county",
+     "following",
+     "hamilton",
+     "opinion",
+     "party",
+     "slate",
+     "stop",
+     "voter"
+    ],
+    "first_seen": "2026-10-30T13:40:23+00:00",
+    "title": "Hamilton County voters, stop blindly following party slates | Opinion"
+   },
+   {
+    "tok": [
+     "cool",
+     "dry",
+     "expect",
+     "halloween",
+     "treater",
+     "trick"
+    ],
+    "first_seen": "2026-10-30T11:53:59+00:00",
+    "title": "Cincinnati trick-or-treaters can expect a cool, dry Halloween"
+   },
+   {
+    "tok": [
+     "brawl",
+     "downtown",
+     "during",
+     "knocked",
+     "macke",
+     "speak",
+     "tricia",
+     "unconsciou",
+     "woman"
+    ],
+    "first_seen": "2026-10-30T03:01:33+00:00",
+    "title": "Tricia Macke speaks with woman knocked unconscious during downtown Cincinnati brawl"
+   },
+   {
+    "tok": [
+     "halloween",
+     "here'",
+     "safe",
+     "slow",
+     "stay",
+     "take",
+     "visible"
+    ],
+    "first_seen": "2026-10-30T13:31:00+00:00",
+    "title": "Stay visible and take it slow: Here's how to stay safe this Halloween"
+   },
+   {
+    "tok": [
+     "aim",
+     "battling",
+     "become",
+     "cancer",
+     "forest",
+     "kid",
+     "lee",
+     "park",
+     "stan",
+     "super",
+     "teen"
+    ],
+    "first_seen": "2026-10-30T01:53:20+00:00",
+    "title": "Forest Park teen battling cancer aims to become first Stan Lee Super Kid"
+   },
+   {
+    "tok": [
+     "2027",
+     "nominate",
+     "top",
+     "workplace"
+    ],
+    "first_seen": "2026-10-30T12:26:51+00:00",
+    "title": "Nominate a Cincinnati Top Workplace for 2027"
+   },
+   {
+    "tok": [
+     "among",
+     "bengal",
+     "best",
+     "burrow",
+     "joe",
+     "nfl'",
+     "qbs",
+     "rank",
+     "see",
+     "star"
+    ],
+    "first_seen": "2026-10-30T16:27:01+00:00",
+    "title": "Joe Burrow among NFL's best QBs for Week 8. See where Bengals star ranks"
+   },
+   {
+    "tok": [
+     "bearcat",
+     "calhoun",
+     "era",
+     "expect",
+     "jerrod",
+     "open"
+    ],
+    "first_seen": "2026-10-30T16:15:40+00:00",
+    "title": "What to expect as Cincinnati Bearcats open Jerrod Calhoun era"
+   },
+   {
+    "tok": [
+     "chair",
+     "county",
+     "courthouse",
+     "hamilton",
+     "influence",
+     "maintain",
+     "musical",
+     "republican",
+     "try"
+    ],
+    "first_seen": "2026-10-30T10:19:00+00:00",
+    "title": "Republicans try musical chairs to maintain Hamilton County courthouse influence"
+   },
+   {
+    "tok": [
+     "break",
+     "displaced",
+     "fire",
+     "house",
+     "same",
+     "twice"
+    ],
+    "first_seen": "2026-10-30T09:55:01+00:00",
+    "title": "7 displaced when fire breaks out twice at same Cincinnati house"
+   },
+   {
+    "tok": [
+     "000",
+     "395",
+     "art",
+     "historical",
+     "massive",
+     "piece",
+     "sale"
+    ],
+    "first_seen": "2026-10-30T08:21:50+00:00",
+    "title": "Massive piece of historical Cincinnati art on sale for $395,000"
+   },
+   {
+    "tok": [
+     "anti",
+     "campaign",
+     "layoff",
+     "levy",
+     "race",
+     "scripp",
+     "toss"
+    ],
+    "first_seen": "2026-10-30T08:00:00+00:00",
+    "title": "Toss-up races, anti-levy campaign and Scripps layoffs"
+   },
+   {
+    "tok": [
+     "2026",
+     "bengal",
+     "cumberland",
+     "roster",
+     "time"
+    ],
+    "first_seen": "2026-10-30T14:04:24+00:00",
+    "title": "2026 Cincinnati Bengals Roster - The Cumberland Times-News"
+   },
+   {
+    "tok": [
+     "bengal",
+     "game",
+     "halloween",
+     "outing",
+     "planner",
+     "treat",
+     "trick",
+     "weekend"
+    ],
+    "first_seen": "2026-10-30T11:20:00+00:00",
+    "title": "Halloween weekend planner: More treats than tricks for Halloween outings, Bengals game"
+   },
+   {
+    "tok": [
+     "arm",
+     "avondale",
+     "found",
+     "man",
+     "north",
+     "shot"
+    ],
+    "first_seen": "2026-10-30T06:51:08+00:00",
+    "title": "Man found shot in arm in North Avondale"
+   },
+   {
+    "tok": [
+     "abuse",
+     "abusing",
+     "agent",
+     "allegation",
+     "assault",
+     "authority",
+     "federal",
+     "former",
+     "girlfriend",
+     "homeland",
+     "ice",
+     "inquiry",
+     "lying",
+     "month",
+     "official",
+     "prison",
+     "security",
+     "sentenced"
+    ],
+    "first_seen": "2026-10-29T18:31:17+00:00",
+    "title": "ICE official sentenced for lying to federal agent amid abuse inquiry"
+   },
+   {
+    "tok": [
+     "ballet",
+     "center",
+     "duo",
+     "folk",
+     "rhine",
+     "stage",
+     "take"
+    ],
+    "first_seen": "2026-10-30T05:30:00+00:00",
+    "title": "Folk duo Over the Rhine takes center stage in 3 new Cincinnati ballets"
+   },
+   {
+    "tok": [
+     "campu",
+     "project",
+     "renovation",
+     "rfp",
+     "sinton"
+    ],
+    "first_seen": "2026-10-29T20:16:49+00:00",
+    "title": "Sinton Campus Renovation Project RFP"
+   },
+   {
+    "tok": [
+     "acton'",
+     "airing",
+     "amy",
+     "attack",
+     "estranged",
+     "featuring",
+     "longer",
+     "mother",
+     "ramaswamy'",
+     "running",
+     "stop",
+     "vivek"
+    ],
+    "first_seen": "2026-10-29T20:03:56+00:00",
+    "title": "Ramaswamy's attack ad featuring Acton's estranged mother no longer running in Ohio"
+   },
+   {
+    "tok": [
+     "case",
+     "college",
+     "investment",
+     "kent",
+     "make",
+     "president",
+     "public",
+     "state"
+    ],
+    "first_seen": "2026-10-30T04:01:00+00:00",
+    "title": "Kent State president makes the case for Ohio\u2019s investment in public colleges"
+   },
+   {
+    "tok": [
+     "convicted",
+     "killing",
+     "man",
+     "parole",
+     "stepfather",
+     "violation",
+     "wanted"
+    ],
+    "first_seen": "2026-10-30T03:16:00+00:00",
+    "title": "Cincinnati man convicted of killing stepfather with ax wanted for parole violation"
+   },
+   {
+    "tok": [
+     "district",
+     "girl",
+     "oct",
+     "soccer",
+     "team",
+     "title",
+     "which",
+     "won"
+    ],
+    "first_seen": "2026-10-30T03:07:17+00:00",
+    "title": "Which Cincinnati girls soccer teams won district titles on Oct. 29?"
+   },
+   {
+    "tok": [
+     "accused",
+     "club",
+     "cruiser",
+     "damaging",
+     "golf",
+     "man",
+     "multiple",
+     "police"
+    ],
+    "first_seen": "2026-10-29T21:38:00+00:00",
+    "title": "Man accused of damaging multiple Cincinnati police cruisers with golf club"
+   },
+   {
+    "tok": [
+     "artificial",
+     "cleve",
+     "groundbreaking",
+     "heart",
+     "implant",
+     "man",
+     "receiving",
+     "thriving"
+    ],
+    "first_seen": "2026-10-30T02:46:00+00:00",
+    "title": "Cleves man thriving after receiving groundbreaking artificial heart implant"
+   },
+   {
+    "tok": [
+     "close",
+     "crash",
+     "erlanger",
+     "hour",
+     "interstate",
+     "lane",
+     "northbound"
+    ],
+    "first_seen": "2026-10-29T23:44:00+00:00",
+    "title": "Crash closes Interstate 75 northbound lanes in Erlanger for hours"
+   },
+   {
+    "tok": [
+     "back",
+     "family",
+     "feet",
+     "greater",
+     "hit",
+     "old",
+     "scooter",
+     "suv",
+     "while",
+     "year"
+    ],
+    "first_seen": "2026-10-30T02:21:20+00:00",
+    "title": "Greater Cincinnati family says 11-year-old hit by SUV while on scooter is back on her feet"
+   },
+   {
+    "tok": [
+     "conversion",
+     "different",
+     "downtown",
+     "office",
+     "rest"
+    ],
+    "first_seen": "2026-10-30T01:49:44+00:00",
+    "title": "Why this downtown Cincinnati office conversion is different from the rest"
+   },
+   {
+    "tok": [
+     "county",
+     "crash",
+     "kenton",
+     "lane",
+     "reopen"
+    ],
+    "first_seen": "2026-10-30T01:25:16+00:00",
+    "title": "NB I-75 lanes reopen after crash in Kenton County"
+   },
+   {
+    "tok": [
+     "bearcat",
+     "bold",
+     "prediction",
+     "utah"
+    ],
+    "first_seen": "2026-10-30T05:30:00+00:00",
+    "title": "Bold predictions for Cincinnati Bearcats vs. No. 6 Utah"
+   },
+   {
+    "tok": [
+     "crash",
+     "dead",
+     "injured",
+     "leave",
+     "man",
+     "nky",
+     "sparta",
+     "union"
+    ],
+    "first_seen": "2026-10-30T00:33:23+00:00",
+    "title": "NKY crash leaves Union man dead, Sparta man injured"
+   },
+   {
+    "tok": [
+     "begin",
+     "charging",
+     "county",
+     "fee",
+     "kenton",
+     "library",
+     "non",
+     "public",
+     "resident"
+    ],
+    "first_seen": "2026-10-30T00:56:00+00:00",
+    "title": "Kenton County Public Library to begin charging fee for non-Kentucky residents"
+   },
+   {
+    "tok": [
+     "city",
+     "district",
+     "expand",
+     "safedefend",
+     "school",
+     "system",
+     "wide",
+     "winton",
+     "wood"
+    ],
+    "first_seen": "2026-10-30T00:29:36+00:00",
+    "title": "Winton Woods City Schools expands SafeDefend system district-wide"
+   },
+   {
+    "tok": [
+     "ernst",
+     "falmouth",
+     "former",
+     "impeachment",
+     "mayor",
+     "office",
+     "return",
+     "sebastian",
+     "seek"
+    ],
+    "first_seen": "2026-10-29T21:09:28+00:00",
+    "title": "Former Falmouth mayor Sebastian Ernst seeks return to office after impeachment"
+   },
+   {
+    "tok": [
+     "closed",
+     "county",
+     "crash",
+     "delay",
+     "expected",
+     "kenton",
+     "part"
+    ],
+    "first_seen": "2026-10-29T23:52:42+00:00",
+    "title": "Parts of I-75 closed in Kenton County after crash, delays expected"
+   },
+   {
+    "tok": [
+     "2027",
+     "ahead",
+     "announce",
+     "calendar",
+     "game",
+     "mls",
+     "release",
+     "schedule",
+     "season",
+     "shortened",
+     "sprint",
+     "switch"
+    ],
+    "first_seen": "2026-10-29T18:44:33+00:00",
+    "title": "FC Cincinnati announces 2027 Sprint Season MLS schedule"
+   },
+   {
+    "tok": [
+     "did",
+     "family",
+     "man",
+     "murdered",
+     "speak",
+     "state",
+     "tri",
+     "unconscionable"
+    ],
+    "first_seen": "2026-10-29T22:54:08+00:00",
+    "title": "'What you did was unconscionable': Family of murdered Tri-State man speaks out"
+   },
+   {
+    "tok": [
+     "basketball",
+     "court",
+     "dozen",
+     "eligible",
+     "keep",
+     "looming",
+     "opener",
+     "player",
+     "season",
+     "supreme"
+    ],
+    "first_seen": "2026-10-29T22:50:00+00:00",
+    "title": "Ohio Supreme Court keeps two dozen basketball players eligible with season openers looming"
+   },
+   {
+    "tok": [
+     "170",
+     "2031",
+     "across",
+     "aim",
+     "all",
+     "deploy",
+     "electronic",
+     "health",
+     "record",
+     "site",
+     "southern",
+     "system"
+    ],
+    "first_seen": "2026-10-29T22:45:21+00:00",
+    "title": "VA deploys new electronic health record system across southern Ohio, aims for all 170 sites by 2031"
+   },
+   {
+    "tok": [
+     "adult",
+     "alliance",
+     "anderson",
+     "concert",
+     "connect",
+     "disability",
+     "halloween",
+     "ken",
+     "through"
+    ],
+    "first_seen": "2026-10-29T22:26:00+00:00",
+    "title": "Ken Anderson Alliance connects adults with disabilities through Halloween concerts"
+   },
+   {
+    "tok": [
+     "despite",
+     "gang",
+     "grandpa",
+     "holiday",
+     "light",
+     "park",
+     "shine",
+     "vandalism"
+    ],
+    "first_seen": "2026-10-29T22:11:29+00:00",
+    "title": "\u201cGrandpa Gang\u201d says holiday lights will shine at park despite vandalism"
+   },
+   {
+    "tok": [
+     "bald",
+     "camera",
+     "closer",
+     "conservancy",
+     "eagle",
+     "look",
+     "nest",
+     "upgrade"
+    ],
+    "first_seen": "2026-10-29T22:09:40+00:00",
+    "title": "Local conservancy upgrades eagle nest cameras for closer look at bald eagles"
+   },
+   {
+    "tok": [
+     "city",
+     "expert",
+     "housing",
+     "hud",
+     "manufactured",
+     "must",
+     "nimble",
+     "proposal",
+     "transform"
+    ],
+    "first_seen": "2026-10-29T15:54:01+00:00",
+    "title": "HUD proposals could transform manufactured housing. Cities must be \u2018nimble,\u2019 an expert says."
+   },
+   {
+    "tok": [
+     "boone",
+     "county",
+     "crash",
+     "dead",
+     "injured"
+    ],
+    "first_seen": "2026-10-29T16:28:00+00:00",
+    "title": "1 dead, 1 injured in Boone County crash"
+   },
+   {
+    "tok": [
+     "bring",
+     "championship",
+     "discipline",
+     "hard",
+     "home",
+     "jrotc",
+     "lean",
+     "responsibility",
+     "team",
+     "teamwork",
+     "work"
+    ],
+    "first_seen": "2026-10-29T21:51:57+00:00",
+    "title": "'Responsibility, hard work': Local JROTC team leans on teamwork and discipline to bring home championships"
+   },
+   {
+    "tok": [
+     "causing",
+     "demand",
+     "doe",
+     "gold",
+     "inflation",
+     "mean",
+     "price",
+     "spike"
+    ],
+    "first_seen": "2026-10-29T21:20:00+00:00",
+    "title": "Inflation, demand causing spike in gold prices. What does it mean for you?"
+   },
+   {
+    "tok": [
+     "created",
+     "enforcement",
+     "fund",
+     "human",
+     "keeping",
+     "law",
+     "northern",
+     "officer",
+     "safe",
+     "support",
+     "team"
+    ],
+    "first_seen": "2026-10-29T21:17:11+00:00",
+    "title": "'Keeping human officers safe:' New fund created to support K9 teams for Northern Kentucky law enforcement"
+   },
+   {
+    "tok": [
+     "ahead",
+     "county",
+     "election",
+     "emphasize",
+     "hamilton",
+     "midterm",
+     "official",
+     "preparation",
+     "security"
+    ],
+    "first_seen": "2026-10-29T21:11:00+00:00",
+    "title": "Hamilton County election officials emphasize security, preparation ahead of midterms"
+   },
+   {
+    "tok": [
+     "chief",
+     "county",
+     "gilpin",
+     "jim",
+     "kenton",
+     "police",
+     "take"
+    ],
+    "first_seen": "2026-10-29T21:06:28+00:00",
+    "title": "Jim Gilpin takes over as Kenton County police chief"
+   },
+   {
+    "tok": [
+     "aimed",
+     "decide",
+     "fire",
+     "full",
+     "funding",
+     "levy",
+     "lockland",
+     "paramedic",
+     "time",
+     "voter"
+    ],
+    "first_seen": "2026-10-29T21:02:24+00:00",
+    "title": "Lockland voters to decide on fire levy aimed at funding full-time paramedics"
+   },
+   {
+    "tok": [
+     "artist",
+     "comeback",
+     "doing",
+     "flood",
+     "making",
+     "photography",
+     "survive",
+     "type"
+    ],
+    "first_seen": "2026-10-29T20:58:17+00:00",
+    "title": "'Survive a flood' | One of the first types of photography is making a comeback. This is the artist doing it."
+   },
+   {
+    "tok": [
+     "campaign",
+     "challenger",
+     "gop",
+     "house",
+     "johnson",
+     "mike",
+     "speaker"
+    ],
+    "first_seen": "2026-10-29T20:42:45+00:00",
+    "title": "House Speaker Mike Johnson campaigns in Cincinnati for GOP challenger"
+   },
+   {
+    "tok": [
+     "concern",
+     "express",
+     "minor",
+     "neighbor",
+     "taser",
+     "use"
+    ],
+    "first_seen": "2026-10-29T20:37:50+00:00",
+    "title": "Neighbors express concern about Taser use on a minor"
+   },
+   {
+    "tok": [
+     "boni",
+     "county",
+     "day",
+     "declare",
+     "hamilton",
+     "honor",
+     "legacy",
+     "liz",
+     "oct"
+    ],
+    "first_seen": "2026-10-29T20:37:53+00:00",
+    "title": "Hamilton County declares Oct. 29 Liz Bonis Day to honor her legacy"
+   },
+   {
+    "tok": [
+     "aging",
+     "bank",
+     "council",
+     "county",
+     "directing",
+     "food",
+     "freestore",
+     "hamilton",
+     "money"
+    ],
+    "first_seen": "2026-10-29T20:32:07+00:00",
+    "title": "Hamilton County directing money to Freestore Food Bank and Council on Aging"
+   },
+   {
+    "tok": [
+     "dead",
+     "die",
+     "hostage",
+     "overnight",
+     "oxford",
+     "police",
+     "rescued",
+     "situation",
+     "standoff",
+     "suspect",
+     "swat",
+     "woman"
+    ],
+    "first_seen": "2026-10-29T15:00:29+00:00",
+    "title": "Police: Woman rescued by SWAT, suspect dies after overnight hostage situation in Oxford"
+   },
+   {
+    "tok": [
+     "businesse",
+     "churche",
+     "collective",
+     "empowerment",
+     "gala",
+     "group",
+     "hosting",
+     "support"
+    ],
+    "first_seen": "2026-10-29T20:24:00+00:00",
+    "title": "The Collective Empowerment Group hosting gala to support businesses, churches"
+   },
+   {
+    "tok": [
+     "begin",
+     "bus",
+     "construction",
+     "metro",
+     "plan",
+     "rapid",
+     "spring",
+     "transit"
+    ],
+    "first_seen": "2026-10-29T20:23:43+00:00",
+    "title": "Construction to begin this spring on Metro bus rapid transit plan"
+   },
+   {
+    "tok": [
+     "assault",
+     "charge",
+     "child",
+     "county",
+     "man",
+     "pornography",
+     "sentenced",
+     "warren",
+     "woman"
+    ],
+    "first_seen": "2026-10-29T20:20:00+00:00",
+    "title": "Man sentenced in Warren County on child pornography charges, assault of woman"
+   },
+   {
+    "tok": [
+     "begin",
+     "brawl",
+     "emotional",
+     "testimony",
+     "trial",
+     "victim"
+    ],
+    "first_seen": "2026-10-29T20:14:00+00:00",
+    "title": "Cincinnati brawl trial begins with emotional testimony from victim"
+   },
+   {
+    "tok": [
+     "forgotten",
+     "include",
+     "kentucky'",
+     "payout",
+     "property",
+     "rebate",
+     "refund",
+     "unclaimed"
+    ],
+    "first_seen": "2026-10-29T19:53:08+00:00",
+    "title": "Kentucky's unclaimed property includes more than just refunds, rebates and forgotten payouts"
+   },
+   {
+    "tok": [
+     "aim",
+     "cap",
+     "closure",
+     "dovetail",
+     "downtown",
+     "highway",
+     "official",
+     "project"
+    ],
+    "first_seen": "2026-10-29T17:48:32+00:00",
+    "title": "Officials aim to dovetail Downtown highway closure with caps project"
+   },
+   {
+    "tok": [
+     "across",
+     "ahead",
+     "day",
+     "early",
+     "election",
+     "know",
+     "state",
+     "tri",
+     "voting"
+    ],
+    "first_seen": "2026-10-29T19:32:31+00:00",
+    "title": "What to know about early voting across the Tri-State ahead of Election Day"
+   },
+   {
+    "tok": [
+     "ahead",
+     "all",
+     "camera",
+     "city",
+     "cover",
+     "deadline",
+     "face",
+     "flock",
+     "removal"
+    ],
+    "first_seen": "2026-10-29T19:17:54+00:00",
+    "title": "Local city faces deadline to cover all Flock cameras ahead of removal"
+   },
+   {
+    "tok": [
+     "draw",
+     "levy",
+     "opposition",
+     "public",
+     "school",
+     "support",
+     "upcoming"
+    ],
+    "first_seen": "2026-10-29T19:15:00+00:00",
+    "title": "Cincinnati Public Schools' upcoming levy draws support and opposition"
+   },
+   {
+    "tok": [
+     "crash",
+     "deliver",
+     "deputy",
+     "driver",
+     "involved",
+     "pizza",
+     "step"
+    ],
+    "first_seen": "2026-10-29T18:48:44+00:00",
+    "title": "Deputies step up to deliver pizza after driver is involved in crash"
+   },
+   {
+    "tok": [
+     "crash",
+     "dead",
+     "northern"
+    ],
+    "first_seen": "2026-10-29T18:30:43+00:00",
+    "title": "1 dead in Northern Kentucky crash"
+   },
+   {
+    "tok": [
+     "charlotte",
+     "decade",
+     "goering",
+     "helping",
+     "spent",
+     "thrive"
+    ],
+    "first_seen": "2026-10-29T17:43:49+00:00",
+    "title": "Charlotte Goering spent decades helping Cincinnati thrive"
+   },
+   {
+    "tok": [
+     "clermont",
+     "county",
+     "familiar",
+     "former",
+     "grocery",
+     "moving",
+     "outlet",
+     "retailer",
+     "space"
+    ],
+    "first_seen": "2026-10-29T17:38:10+00:00",
+    "title": "A familiar retailer is moving into former Grocery Outlet space in Clermont County"
+   },
+   {
+    "tok": [
+     "basketball",
+     "excited",
+     "losing",
+     "men'",
+     "newcomer",
+     "nku",
+     "scorer",
+     "top"
+    ],
+    "first_seen": "2026-10-29T17:31:35+00:00",
+    "title": "NKU men's basketball excited about newcomers after losing top five scorers"
+   },
+   {
+    "tok": [
+     "alone",
+     "child",
+     "fairfield",
+     "found",
+     "have",
+     "located",
+     "parent"
+    ],
+    "first_seen": "2026-10-29T17:28:17+00:00",
+    "title": "Parents for child located alone in Fairfield have been found"
+   },
+   {
+    "tok": [
+     "bar",
+     "begin",
+     "bobby",
+     "construction",
+     "improved",
+     "mackey'",
+     "wilder"
+    ],
+    "first_seen": "2026-10-29T16:32:22+00:00",
+    "title": "Construction begins on 'new and improved' Bobby Mackey's bar in Wilder"
+   },
+   {
+    "tok": [
+     "basketball",
+     "conference",
+     "musketeer",
+     "non",
+     "opponent",
+     "power",
+     "ranking",
+     "xavier"
+    ],
+    "first_seen": "2026-10-29T19:54:59+00:00",
+    "title": "Power ranking Xavier Musketeers non-conference basketball opponents"
+   },
+   {
+    "tok": [
+     "correction",
+     "federal",
+     "file",
+     "inmate",
+     "lawsuit",
+     "officer",
+     "sheriff",
+     "state",
+     "tri"
+    ],
+    "first_seen": "2026-10-29T15:47:16+00:00",
+    "title": "Inmate files federal lawsuit against Tri-State sheriff, corrections officers"
+   },
+   {
+    "tok": [
+     "city",
+     "gov"
+    ],
+    "first_seen": "2026-10-29T14:16:03+00:00",
+    "title": "- City of Cincinnati (.gov)"
+   },
+   {
+    "tok": [
+     "among",
+     "beloved",
+     "college",
+     "death",
+     "found",
+     "home",
+     "professor",
+     "shot"
+    ],
+    "first_seen": "2026-10-29T14:57:00+00:00",
+    "title": "Beloved college professor among two found shot to death in Ohio home"
+   },
+   {
+    "tok": [
+     "carolina",
+     "crashe",
+     "deer",
+     "erupt",
+     "laundromat",
+     "mayhem",
+     "north",
+     "slam",
+     "through",
+     "window",
+     "woman"
+    ],
+    "first_seen": "2026-10-29T15:08:23+00:00",
+    "title": "'Mayhem\u2019 erupts as deer slams into woman, crashes through North Carolina laundromat window"
+   },
+   {
+    "tok": [
+     "bringing",
+     "bug",
+     "kahan",
+     "noah",
+     "tour",
+     "world"
+    ],
+    "first_seen": "2026-10-29T14:57:11+00:00",
+    "title": "Noah Kahan bringing 'The Last of the Bugs' World Tour to Ohio"
+   },
+   {
+    "tok": [
+     "approache",
+     "early",
+     "election",
+     "near",
+     "record",
+     "voting"
+    ],
+    "first_seen": "2026-10-29T14:24:40+00:00",
+    "title": "Ohio early voting approaches record as election nears"
+   },
+   {
+    "tok": [
+     "bengal",
+     "cheapest",
+     "game",
+     "has",
+     "november",
+     "see",
+     "ticket",
+     "want"
+    ],
+    "first_seen": "2026-10-29T17:08:02+00:00",
+    "title": "Want to see the Bengals in November? This game has the cheapest tickets"
+   },
+   {
+    "tok": [
+     "bengal",
+     "colt",
+     "former",
+     "linebacker",
+     "release"
+    ],
+    "first_seen": "2026-10-29T16:55:42+00:00",
+    "title": "Colts release former Bengals linebacker"
+   }
+  ],
+  "lead": {
+   "city": {
+    "tok": [
+     "building",
+     "college",
+     "fire",
+     "hill",
+     "run",
+     "truck"
+    ],
+    "id": "cincinnati-fire-truck-runs-into-building-in-college-hill"
+   },
+   "general": {
+    "tok": [
+     "adam",
+     "aggravated",
+     "attempted",
+     "charged",
+     "county",
+     "deputy",
+     "flown",
+     "home",
+     "hospital",
+     "identified",
+     "man",
+     "murder",
+     "office",
+     "recovering",
+     "released",
+     "sheriff",
+     "shooting",
+     "shot",
+     "suspect"
+    ],
+    "id": "adams-county-deputy-recovering-after-being-shot-suspect-iden"
+   }
+  }
+ }
+}
