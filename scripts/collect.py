@@ -403,6 +403,32 @@ SLUG_JUNK = {"article", "articles", "news", "local", "story", "stories", "amp", 
 # Words too common in local news to make a two-word phrase distinctive ("year-old boy", "man killed").
 PHRASE_GENERIC = {"year", "old", "man", "woman", "boy", "girl", "people", "person", "teen", "child", "says", "said",
                   "report", "new", "day", "night", "week", "month", "first", "election", "vote", "voter"}
+_STOCK_PHRASES = None
+
+
+def stock_phrases():
+    """
+    Two-word phrases that recur every day in local news, so sharing one proves nothing: the City terms
+    and neighborhood names from config.json ("city council", "police officer", "walnut hill").
+    """
+    global _STOCK_PHRASES
+    if _STOCK_PHRASES is None:
+        try:
+            cfg = json.loads(CONFIG_PATH.read_text())
+        except Exception:
+            cfg = {}
+        terms = [t for g in cfg.get("city_relevance", []) for t in g.get("terms", [])]
+        terms += cfg.get("local_terms", []) + cfg.get("cincinnati_anchors", []) + cfg.get("other_municipalities", [])
+        terms += ["police officer", "police officers", "city council", "school board", "county commissioners",
+                  "fire department", "police department", "police chief", "news conference"]
+        out = set()
+        for t in terms:
+            seq = _content_words(t)
+            out |= set(zip(seq, seq[1:]))
+        _STOCK_PHRASES = out
+    return _STOCK_PHRASES
+
+
 TITLE_CASE_SHARE = 0.6     # "Two Cincinnati Police Officers Assaulted…" — capitals mean nothing in such headlines
 GENERIC_NAMES = {"cincinnati", "cincy", "ohio", "kentucky", "indiana", "police", "city", "county", "council",
                  "explainer", "watch", "update", "breaking", "video", "photos", "tri-state", "tri"}
@@ -456,12 +482,14 @@ def _merge_related(clusters, window_hours=18):
         for b in c["_bigrams"]:
             bdf[b] = bdf.get(b, 0) + 1
     idf = {t: math.log((n + 1) / (k + 0.5)) for t, k in df.items()}
+    stock = stock_phrases()
 
     def related(a, b):
         if abs((a["_t0"] - b["_t0"]).total_seconds()) > window_hours * 3600:
             return False
         shared = a["_rich"] & b["_rich"]
-        phrases = {p for p in a["_bigrams"] & b["_bigrams"] if bdf.get(p, 0) <= 2}
+        # A big story is often split across 3-4 groups by the first pass, so a phrase can show up that often.
+        phrases = {p for p in a["_bigrams"] & b["_bigrams"] if bdf.get(p, 0) <= 4 and p not in stock}
         if (len(phrases) >= 2 and len(shared) >= 4) or (phrases and len(shared) >= 5):
             return True
         names = a["_proper"] & b["_proper"] & shared
@@ -477,7 +505,7 @@ def _merge_related(clusters, window_hours=18):
                 a, b = clusters[i], clusters[j]
                 if related(a, b):
                     for it in b["items"]:
-                        if not any(x["link"] == it["link"] for x in a["items"]):
+                        if not (it.get("link") and any(x["link"] == it["link"] for x in a["items"])):
                             a["items"].append(it)
                     a["_tok"] |= b["_tok"]
                     for k in ("_rich", "_proper", "_bigrams"):

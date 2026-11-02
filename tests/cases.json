@@ -474,12 +474,12 @@
  ],
  "grouping": [
   {
-   "note": "Nov 2, 2026: three outlets' Halloween/Short Vine officer stories are one story; two Walnut Hills shootings months apart are not; 'year-old' and election explainers stay separate.",
+   "note": "Nov 2, 2026: three outlets' Halloween/Short Vine officer stories are one story; two Walnut Hills shootings months apart are not; 'year-old' and election explainers stay separate. Item 13 is a made-up fourth version (the live run had a Hoodline copy whose exact headline isn't saved) so the shared phrase appears in 3+ groups, as it did live.",
    "items": [
     {
      "title": "2 Cincinnati officers injured after Short Vine crowds on Halloween, union says",
      "summary": "",
-     "link": "",
+     "link": "https://news.google.com/rss/articles/test-0",
      "outlet": "Enquirer",
      "first_seen": "2026-11-02T14:48:00+00:00"
     },
@@ -566,13 +566,21 @@
      "link": "https://www.wlwt.com/article/ohio-governor-us-senate-house-races-to-watch-2026-midterms/74295642",
      "outlet": "WLWT",
      "first_seen": "2026-11-02T14:24:00+00:00"
+    },
+    {
+     "title": "Cincinnati Police Officers Assaulted During Halloween Crowds on Short Vine",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/test-13",
+     "outlet": "Hoodline",
+     "first_seen": "2026-11-02T14:48:00+00:00"
     }
    ],
    "groups": [
     [
      0,
      1,
-     2
+     2,
+     13
     ],
     [
      3,
