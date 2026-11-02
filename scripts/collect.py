@@ -381,8 +381,121 @@ def same_story(a_tokens, b_tokens):
     return jaccard >= 0.34 or (shared >= 4 and jaccard >= 0.22)
 
 
+def _slug_text(url):
+    """Words from an article's web address ("/officers-assaulted-short-vine-halloween/") — often the clearest summary."""
+    if not url or "news.google.com" in url:
+        return ""
+    return " ".join(p for p in re.split(r"[/_.\-]+", urlparse(url).path.lower())
+                    if p.isalpha() and len(p) > 2 and p not in SLUG_JUNK)
+
+
+def _content_words(text):
+    """Headline words in order, minus filler — for two-word phrases like "short vine" or "officers assaulted"."""
+    out = []
+    for w in re.findall(r"[a-z0-9']+", (text or "").lower()):
+        t = tokens(w)
+        out.extend(t)
+    return out
+
+
+SLUG_JUNK = {"article", "articles", "news", "local", "story", "stories", "amp", "html", "htm", "index", "politics",
+             "wcpo", "wlwt", "fox", "wkrc", "wvxu", "enquirer", "cincinnati", "region", "metro", "community"}
+# Words too common in local news to make a two-word phrase distinctive ("year-old boy", "man killed").
+PHRASE_GENERIC = {"year", "old", "man", "woman", "boy", "girl", "people", "person", "teen", "child", "says", "said",
+                  "report", "new", "day", "night", "week", "month", "first", "election", "vote", "voter"}
+TITLE_CASE_SHARE = 0.6     # "Two Cincinnati Police Officers Assaulted…" — capitals mean nothing in such headlines
+GENERIC_NAMES = {"cincinnati", "cincy", "ohio", "kentucky", "indiana", "police", "city", "county", "council",
+                 "explainer", "watch", "update", "breaking", "video", "photos", "tri-state", "tri"}
+
+
+def _proper_words(title):
+    """Capitalized words that aren't the first word: places, names, events (Short Vine, Halloween, Riley Green)."""
+    words = re.findall(r"[A-Za-z][A-Za-z'\-]*", title or "")
+    if len(words) < 3:
+        return set()
+    caps = [w for w in words[1:] if w[0].isupper()]
+    if len(caps) / max(1, len(words) - 1) > TITLE_CASE_SHARE:
+        return set()
+    out = set()
+    for w in caps:
+        if w.isupper() and len(w) > 4:          # "EXPLAINER", "BREAKING" labels
+            continue
+        out |= tokens(w)
+    return out - GENERIC_NAMES
+
+
+def _profile(it):
+    text = f"{it['title']} {(it.get('summary') or '')[:240]} {_slug_text(it.get('link'))}"
+    seq = _content_words(it["title"]) + ["|"] + _content_words(_slug_text(it.get("link")))
+    return {"rich": tokens(text), "proper": _proper_words(it["title"]),
+            "bigrams": {(a, b) for a, b in zip(seq, seq[1:])
+                        if "|" not in (a, b) and a != b and a not in PHRASE_GENERIC and b not in PHRASE_GENERIC}}
+
+
+def _merge_related(clusters, window_hours=18):
+    """
+    Second pass: join stories the headline check missed because outlets worded them differently
+    ("officers injured after Short Vine crowds" / "officers assaulted… near UC" / "Halloween night violence").
+    Two stories join when, within the same day, they share either
+      - two distinctive two-word phrases ("short vine", "officers injured") plus 4+ shared words, or one
+        such phrase plus 5+ shared words (a neighborhood name alone isn't enough: different crimes, same street), or
+      - 2+ names or places (Short Vine, Halloween) and a solid weighted share of their words.
+    Phrases and words that show up across many of today's stories (election, ballot…) don't count.
+    """
+    for c in clusters:
+        profs = [_profile(it) for it in c["items"]]
+        c["_rich"] = set().union(*(p["rich"] for p in profs))
+        c["_proper"] = set().union(*(p["proper"] for p in profs))
+        c["_bigrams"] = set().union(*(p["bigrams"] for p in profs))
+        c["_t0"] = min(it["published"] for it in c["items"])
+    n = len(clusters)
+    df, bdf = {}, {}
+    for c in clusters:
+        for t in c["_rich"]:
+            df[t] = df.get(t, 0) + 1
+        for b in c["_bigrams"]:
+            bdf[b] = bdf.get(b, 0) + 1
+    idf = {t: math.log((n + 1) / (k + 0.5)) for t, k in df.items()}
+
+    def related(a, b):
+        if abs((a["_t0"] - b["_t0"]).total_seconds()) > window_hours * 3600:
+            return False
+        shared = a["_rich"] & b["_rich"]
+        phrases = {p for p in a["_bigrams"] & b["_bigrams"] if bdf.get(p, 0) <= 2}
+        if (len(phrases) >= 2 and len(shared) >= 4) or (phrases and len(shared) >= 5):
+            return True
+        names = a["_proper"] & b["_proper"] & shared
+        w = lambda S: sum(idf.get(t, 0) for t in S)
+        overlap = w(shared) / max(1e-9, min(w(a["_rich"]), w(b["_rich"])))
+        return len(names) >= 2 and overlap >= 0.4
+
+    merged = True
+    while merged:
+        merged = False
+        for i in range(len(clusters)):
+            for j in range(i + 1, len(clusters)):
+                a, b = clusters[i], clusters[j]
+                if related(a, b):
+                    for it in b["items"]:
+                        if not any(x["link"] == it["link"] for x in a["items"]):
+                            a["items"].append(it)
+                    a["_tok"] |= b["_tok"]
+                    for k in ("_rich", "_proper", "_bigrams"):
+                        a[k] |= b[k]
+                    a["_t0"] = min(a["_t0"], b["_t0"])
+                    del clusters[j]
+                    merged = True
+                    break
+            if merged:
+                break
+    for c in clusters:
+        for k in ("_rich", "_proper", "_bigrams", "_t0"):
+            c.pop(k, None)
+    return clusters
+
+
 def cluster(items):
-    """Greedy grouping: each headline joins the first story it closely matches."""
+    """Greedy grouping: each headline joins the first story it closely matches; then a looser second pass."""
     clusters = []
     for it in sorted(items, key=lambda x: x["published"]):
         it["_tok"] = tokens(it["title"])
@@ -395,7 +508,7 @@ def cluster(items):
                 continue
             home["items"].append(it)
             home["_tok"] |= it["_tok"]
-    return clusters
+    return _merge_related(clusters)
 
 
 # ---------------------------------------------------------------- City relevance

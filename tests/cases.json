@@ -1,196 +1,584 @@
 {
-  "_readme": "Real headlines and what the screen should do with them. GitHub checks every one before publishing; if any fail, the screen keeps the last good version. When the screen gets something wrong, add it here with the right answer. 'expect' can include: junk (true = dropped), kept (false = not local, left off the screen), national (true = river only, never the lead), city (true = counts for City Hall), label (the CITY HALL · label), place (yes / other / maybe).",
-
-  "headlines": [
-    {"note": "Hamilton, Ohio council — caught Oct 28",
-     "title": "Tri-State community to hear proposals for 3 potential marijuana dispensaries",
-     "summary": "City council will hear proposals for the three potential developments on Wednesday.",
-     "link": "https://local12.com/news/local/hamilton-ohio-city-council-marijuana-dispensaries-proposals",
-     "outlet": "Local 12", "expect": {"city": false, "place": "other"}},
-
-    {"note": "Delhi Township is not the city — caught Oct 28",
-     "title": "West side grandmother arrested, home condemned for deplorable conditions",
-     "summary": "A Delhi Township woman was arrested after her father and four children were found to be living in an unsafe home covered in feces.",
-     "outlet": "Local 12", "expect": {"city": false, "place": "other"}},
-
-    {"note": "TV datelines say CINCINNATI even for suburban stories",
-     "title": "West side grandmother arrested, home condemned for deplorable conditions",
-     "summary": "CINCINNATI (WKRC) — A Delhi Township woman was arrested after her father and four children were found living in an unsafe home.",
-     "outlet": "Local 12", "expect": {"city": false, "place": "other"}},
-
-    {"note": "Headline names Cincinnati, summary names a suburb: still Cincinnati",
-     "title": "Cincinnati police arrest man after chase that ended in Norwood", "outlet": "WCPO",
-     "expect": {"place": "yes"}},
-
-    {"title": "Green Township trustees approve new fire station", "outlet": "WVXU",
-     "expect": {"city": false, "place": "other"}},
-
-    {"note": "City/county officials reviewing a City project, only in the summary — missed Oct 28",
-     "title": "Proposal to cap Fort Washington Way moves one step closer to reality",
-     "summary": "The draft grant agreement with the U.S. Department of Transportation has now been received and is being reviewed by city and county officials.",
-     "link": "https://local12.com/news/local/proposal-cap-fort-washington-way-moves-one-step-closer-real",
-     "outlet": "Local 12", "expect": {"city": true}},
-
-    {"note": "TIF money for a Cincinnati park — missed Oct 28",
-     "title": "Park in Cincinnati could be in line for nearly $12M makeover",
-     "summary": "3CDC is seeking almost $6 million from the neighborhood's tax increment financing, or TIF fund.",
-     "outlet": "Local 12", "expect": {"city": true, "label": "Planning & Development"}},
-
-    {"note": "Wire press releases on cincinnati.com — caught Oct 28",
-     "title": "Viirtue Now Live in OpenAI’s Plugin Marketplace for ChatGPT and Codex", "outlet": "Enquirer", "google": true,
-     "expect": {"junk": true}},
-
-    {"title": "ANTIGUA AND BARBUDA SHOWCASE MICE CAPABILITIES AND TOURISM OFFERINGS AS HOST OF COMMONWEALTH HEADS OF GOVERNMENT MEETING",
-     "outlet": "Enquirer", "google": true, "expect": {"junk": true}},
-
-    {"title": "BoardCerts Expands Nursing Board Certification Prep to 30 Specialty Exams, Opens Group Access for Hospitals",
-     "outlet": "Enquirer", "google": true, "expect": {"junk": true}},
-
-    {"note": "A real Enquirer headline must survive the press-release filter",
-     "title": "Cincinnati consulting firm triples its footprint as it targets 80 new hires by 2029", "outlet": "Enquirer", "google": true,
-     "expect": {"junk": false}},
-
-    {"title": "Council budget committee takes up mid-year spending adjustments", "outlet": "Enquirer", "google": true,
-     "expect": {"junk": false}},
-
-    {"note": "Not City: a regional sanitation district in Kentucky",
-     "title": "Sewage cleanup continues in local creek after damaged pipe releases wastewater",
-     "summary": "SD1 said some wastewater continued through the pipe while an unknown amount entered the creek.",
-     "outlet": "Local 12", "expect": {"city": false}},
-
-    {"title": "Full-service pizza restaurant opening inside Rhinegeist Brewery",
-     "summary": "A new, full-service pizza restaurant is opening inside of one of Cincinnati’s most popular breweries.",
-     "outlet": "WLWT", "expect": {"city": false}},
-
-    {"note": "A City road-closure release must not be dropped as a press release",
-     "title": "Taft Road and Collins Ave. Closed 10/9 through 10/12", "outlet": "City of Cincinnati", "google": true, "official": true,
-     "expect": {"junk": false}},
-
-    {"note": "USA TODAY network stories on cincinnati.com aren't local — caught Oct 29",
-     "title": "Who was voted off 'Survivor' last night? Another castaway eliminated. See who", "outlet": "Enquirer", "google": true, "narrow": true,
-     "expect": {"junk": false, "kept": false}},
-
-    {"title": "Ohio high school football 2026 | Ranking the final top 8 Greater Akron teams", "outlet": "Enquirer", "google": true, "narrow": true,
-     "expect": {"kept": false}},
-
-    {"title": "Police identify 21-year-old man killed in Walnut Hills shooting", "outlet": "Enquirer", "google": true, "narrow": true,
-     "expect": {"kept": true}},
-
-    {"title": "Springdale company partners with Bengals on indoor practice facility", "outlet": "Enquirer", "google": true, "narrow": true,
-     "expect": {"kept": true, "city": false}},
-
-    {"note": "Enquirer City story with no place words in the headline stays on screen",
-     "title": "Council budget committee takes up mid-year spending adjustments", "outlet": "Enquirer", "google": true, "narrow": true,
-     "expect": {"kept": true}},
-
-    {"note": "A real column with a Title Case tag must not be treated as a press release",
-     "title": "Could Amy Acton sue Vivek Ramaswamy for defamation? | Strictly Legal", "outlet": "Enquirer", "google": true, "narrow": true,
-     "expect": {"junk": false}},
-
-    {"note": "A WCPO feed story with no place words is still local (it's WCPO's own feed)",
-     "title": "Parenting coach on how to make Halloween fun, stress-free for whole family", "outlet": "WCPO",
-     "expect": {"kept": true}},
-
-    {"note": "Peter's call (Oct 29): a deadly shooting matters to the mayor and CPD, so it counts as City Hall",
-     "title": "1 dead after shooting in Walnut Hills, Cincinnati police say", "outlet": "Enquirer", "google": true, "narrow": true,
-     "expect": {"kept": true, "city": true, "label": "Police"}},
-
-    {"title": "Cincinnati police officer shot during traffic stop in Westwood", "outlet": "WCPO",
-     "expect": {"city": true, "label": "Police"}},
-
-    {"title": "Cincinnati police add drones to patrols in three neighborhoods", "outlet": "WLWT",
-     "expect": {"city": true, "label": "Police"}},
-
-    {"title": "Cincinnati firefighters battle house fire in Price Hill", "outlet": "FOX19",
-     "expect": {"city": true, "label": "Fire"}},
-
-    {"note": "Faraway cities aren't local news — caught Oct 29",
-     "title": "Mayor of Dayton announces new park plan", "outlet": "Dayton Daily News", "google": true,
-     "expect": {"kept": false}},
-
-    {"title": "Columbus City Council approves new transit levy", "outlet": "Spectrum News", "google": true,
-     "expect": {"kept": false, "city": false}},
-
-    {"note": "Peter's call (Oct 29): national policy news shows in the river but never leads",
-     "title": "HUD proposals could transform manufactured housing. Cities must be ‘nimble,’ an expert says.", "outlet": "Smart Cities Dive", "google": true,
-     "expect": {"kept": true, "city": true, "label": "Federal", "national": true}},
-
-    {"title": "Ohio House bill would limit cities' home rule over short-term rentals", "outlet": "Ohio Capital Journal",
-     "expect": {"city": true, "national": false}},
-
-    {"note": "An untitled City web page (a login-protected dashboard) — caught Oct 29",
-     "title": "- City of Cincinnati (.gov)", "outlet": "City of Cincinnati", "google": true, "official": true,
-     "expect": {"junk": true}},
-
-    {"title": "Cincinnati", "outlet": "Enquirer", "google": true, "narrow": true,
-     "expect": {"junk": true}},
-
-    {"note": "A City events page in Title Case is not an obituary — caught Oct 29",
-     "title": "Krohn Conservatory Holiday Show Events", "outlet": "City of Cincinnati", "google": true, "official": true,
-     "expect": {"junk": false, "city": true}},
-
-    {"note": "Another town's council",
-     "title": "Norwood council member resigns after six years", "outlet": "WLWT",
-     "expect": {"city": false, "place": "other"}},
-
-    {"note": "Obituary that showed up as a headline — caught Oct 28",
-     "title": "Michael Elmer Bouchonnet", "outlet": "Enquirer", "google": true,
-     "expect": {"junk": true}},
-
-    {"title": "Jane Doe obituary: longtime teacher remembered", "outlet": "Enquirer", "google": true,
-     "expect": {"junk": true}},
-
-    {"note": "Title-case headline that starts with a name must survive",
-     "title": "Seth Walsh Resigns", "outlet": "Enquirer", "google": true,
-     "expect": {"junk": false, "city": true, "label": "Council"}},
-
-    {"title": "City Manager Sheryl Long outlines plan to speed up permit reviews", "outlet": "Enquirer", "google": true,
-     "expect": {"city": true, "label": "City Manager"}},
-
-    {"title": "Cincinnati City Council approves mid-year budget adjustments", "outlet": "WVXU",
-     "expect": {"city": true, "label": "Council"}},
-
-    {"title": "Mayor Pureval calls for review of downtown curfew", "outlet": "WCPO",
-     "expect": {"city": true, "label": "Mayor"}},
-
-    {"title": "Covington police investigate break-in at Mainstrasse shop", "outlet": "WCPO",
-     "expect": {"city": false}},
-
-    {"title": "Cincinnati police chief announces new violence reduction plan", "outlet": "FOX19",
-     "expect": {"city": true}},
-
-    {"title": "Buildings and Inspections condemns Westwood apartment complex", "outlet": "WLWT",
-     "expect": {"city": true, "label": "Buildings & Inspections"}},
-
-    {"title": "Water main break closes several downtown Cincinnati streets", "outlet": "WLWT",
-     "expect": {"city": true, "label": "Water & Sewers"}},
-
-    {"title": "Ohio House bill would limit cities' home rule over short-term rentals", "outlet": "Ohio Capital Journal",
-     "expect": {"city": true, "label": "State law"}},
-
-    {"note": "Street named after a suburb is not another town",
-     "title": "Crash closes Reading Road in Avondale", "outlet": "WCPO",
-     "expect": {"city": false, "place": "yes"}},
-
-    {"title": "Hamilton County commissioners approve new jail contract", "outlet": "WVXU",
-     "expect": {"city": false}},
-
-    {"title": "Bengals hold off Steelers 24-17", "outlet": "WLWT",
-     "expect": {"city": false}},
-
-    {"note": "Council word only in one outlet's summary must not make a multi-outlet story City news",
-     "group": [
-       {"title": "Brent Spence companion bridge gets final federal sign-off", "outlet": "WCPO", "summary": ""},
-       {"title": "Final federal approval clears way for Brent Spence companion bridge", "outlet": "WLWT",
-        "summary": "Cincinnati council members have long pushed for the project."}
-     ],
-     "expect": {"city": false}}
-  ],
-
-  "same_story": [
-    {"a": "Water main break closes several downtown streets", "b": "Downtown water main break closes streets, detours in place", "expect": true},
-    {"a": "WATCH: Water main break shuts down several streets downtown", "b": "Water main break closes several downtown streets | WCPO 9 Cincinnati", "expect": true},
-    {"a": "Water main break closes several downtown streets", "b": "Brent Spence companion bridge gets final federal sign-off", "expect": false},
-    {"a": "Council budget committee takes up mid-year spending adjustments", "b": "Planning Commission schedules hearing on West End housing plan", "expect": false}
-  ]
+ "_readme": "Real headlines and what the screen should do with them. GitHub checks every one before publishing; if any fail, the screen keeps the last good version. When the screen gets something wrong, add it here with the right answer. 'expect' can include: junk (true = dropped), kept (false = not local, left off the screen), national (true = river only, never the lead), city (true = counts for City Hall), label (the CITY HALL · label), place (yes / other / maybe).",
+ "headlines": [
+  {
+   "note": "Hamilton, Ohio council — caught Oct 28",
+   "title": "Tri-State community to hear proposals for 3 potential marijuana dispensaries",
+   "summary": "City council will hear proposals for the three potential developments on Wednesday.",
+   "link": "https://local12.com/news/local/hamilton-ohio-city-council-marijuana-dispensaries-proposals",
+   "outlet": "Local 12",
+   "expect": {
+    "city": false,
+    "place": "other"
+   }
+  },
+  {
+   "note": "Delhi Township is not the city — caught Oct 28",
+   "title": "West side grandmother arrested, home condemned for deplorable conditions",
+   "summary": "A Delhi Township woman was arrested after her father and four children were found to be living in an unsafe home covered in feces.",
+   "outlet": "Local 12",
+   "expect": {
+    "city": false,
+    "place": "other"
+   }
+  },
+  {
+   "note": "TV datelines say CINCINNATI even for suburban stories",
+   "title": "West side grandmother arrested, home condemned for deplorable conditions",
+   "summary": "CINCINNATI (WKRC) — A Delhi Township woman was arrested after her father and four children were found living in an unsafe home.",
+   "outlet": "Local 12",
+   "expect": {
+    "city": false,
+    "place": "other"
+   }
+  },
+  {
+   "note": "Headline names Cincinnati, summary names a suburb: still Cincinnati",
+   "title": "Cincinnati police arrest man after chase that ended in Norwood",
+   "outlet": "WCPO",
+   "expect": {
+    "place": "yes"
+   }
+  },
+  {
+   "title": "Green Township trustees approve new fire station",
+   "outlet": "WVXU",
+   "expect": {
+    "city": false,
+    "place": "other"
+   }
+  },
+  {
+   "note": "City/county officials reviewing a City project, only in the summary — missed Oct 28",
+   "title": "Proposal to cap Fort Washington Way moves one step closer to reality",
+   "summary": "The draft grant agreement with the U.S. Department of Transportation has now been received and is being reviewed by city and county officials.",
+   "link": "https://local12.com/news/local/proposal-cap-fort-washington-way-moves-one-step-closer-real",
+   "outlet": "Local 12",
+   "expect": {
+    "city": true
+   }
+  },
+  {
+   "note": "TIF money for a Cincinnati park — missed Oct 28",
+   "title": "Park in Cincinnati could be in line for nearly $12M makeover",
+   "summary": "3CDC is seeking almost $6 million from the neighborhood's tax increment financing, or TIF fund.",
+   "outlet": "Local 12",
+   "expect": {
+    "city": true,
+    "label": "Planning & Development"
+   }
+  },
+  {
+   "note": "Wire press releases on cincinnati.com — caught Oct 28",
+   "title": "Viirtue Now Live in OpenAI’s Plugin Marketplace for ChatGPT and Codex",
+   "outlet": "Enquirer",
+   "google": true,
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "title": "ANTIGUA AND BARBUDA SHOWCASE MICE CAPABILITIES AND TOURISM OFFERINGS AS HOST OF COMMONWEALTH HEADS OF GOVERNMENT MEETING",
+   "outlet": "Enquirer",
+   "google": true,
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "title": "BoardCerts Expands Nursing Board Certification Prep to 30 Specialty Exams, Opens Group Access for Hospitals",
+   "outlet": "Enquirer",
+   "google": true,
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "note": "A real Enquirer headline must survive the press-release filter",
+   "title": "Cincinnati consulting firm triples its footprint as it targets 80 new hires by 2029",
+   "outlet": "Enquirer",
+   "google": true,
+   "expect": {
+    "junk": false
+   }
+  },
+  {
+   "title": "Council budget committee takes up mid-year spending adjustments",
+   "outlet": "Enquirer",
+   "google": true,
+   "expect": {
+    "junk": false
+   }
+  },
+  {
+   "note": "Not City: a regional sanitation district in Kentucky",
+   "title": "Sewage cleanup continues in local creek after damaged pipe releases wastewater",
+   "summary": "SD1 said some wastewater continued through the pipe while an unknown amount entered the creek.",
+   "outlet": "Local 12",
+   "expect": {
+    "city": false
+   }
+  },
+  {
+   "title": "Full-service pizza restaurant opening inside Rhinegeist Brewery",
+   "summary": "A new, full-service pizza restaurant is opening inside of one of Cincinnati’s most popular breweries.",
+   "outlet": "WLWT",
+   "expect": {
+    "city": false
+   }
+  },
+  {
+   "note": "A City road-closure release must not be dropped as a press release",
+   "title": "Taft Road and Collins Ave. Closed 10/9 through 10/12",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": false
+   }
+  },
+  {
+   "note": "USA TODAY network stories on cincinnati.com aren't local — caught Oct 29",
+   "title": "Who was voted off 'Survivor' last night? Another castaway eliminated. See who",
+   "outlet": "Enquirer",
+   "google": true,
+   "narrow": true,
+   "expect": {
+    "junk": false,
+    "kept": false
+   }
+  },
+  {
+   "title": "Ohio high school football 2026 | Ranking the final top 8 Greater Akron teams",
+   "outlet": "Enquirer",
+   "google": true,
+   "narrow": true,
+   "expect": {
+    "kept": false
+   }
+  },
+  {
+   "title": "Police identify 21-year-old man killed in Walnut Hills shooting",
+   "outlet": "Enquirer",
+   "google": true,
+   "narrow": true,
+   "expect": {
+    "kept": true
+   }
+  },
+  {
+   "title": "Springdale company partners with Bengals on indoor practice facility",
+   "outlet": "Enquirer",
+   "google": true,
+   "narrow": true,
+   "expect": {
+    "kept": true,
+    "city": false
+   }
+  },
+  {
+   "note": "Enquirer City story with no place words in the headline stays on screen",
+   "title": "Council budget committee takes up mid-year spending adjustments",
+   "outlet": "Enquirer",
+   "google": true,
+   "narrow": true,
+   "expect": {
+    "kept": true
+   }
+  },
+  {
+   "note": "A real column with a Title Case tag must not be treated as a press release",
+   "title": "Could Amy Acton sue Vivek Ramaswamy for defamation? | Strictly Legal",
+   "outlet": "Enquirer",
+   "google": true,
+   "narrow": true,
+   "expect": {
+    "junk": false
+   }
+  },
+  {
+   "note": "A WCPO feed story with no place words is still local (it's WCPO's own feed)",
+   "title": "Parenting coach on how to make Halloween fun, stress-free for whole family",
+   "outlet": "WCPO",
+   "expect": {
+    "kept": true
+   }
+  },
+  {
+   "note": "Peter's call (Oct 29): a deadly shooting matters to the mayor and CPD, so it counts as City Hall",
+   "title": "1 dead after shooting in Walnut Hills, Cincinnati police say",
+   "outlet": "Enquirer",
+   "google": true,
+   "narrow": true,
+   "expect": {
+    "kept": true,
+    "city": true,
+    "label": "Police"
+   }
+  },
+  {
+   "title": "Cincinnati police officer shot during traffic stop in Westwood",
+   "outlet": "WCPO",
+   "expect": {
+    "city": true,
+    "label": "Police"
+   }
+  },
+  {
+   "title": "Cincinnati police add drones to patrols in three neighborhoods",
+   "outlet": "WLWT",
+   "expect": {
+    "city": true,
+    "label": "Police"
+   }
+  },
+  {
+   "title": "Cincinnati firefighters battle house fire in Price Hill",
+   "outlet": "FOX19",
+   "expect": {
+    "city": true,
+    "label": "Fire"
+   }
+  },
+  {
+   "note": "Faraway cities aren't local news — caught Oct 29",
+   "title": "Mayor of Dayton announces new park plan",
+   "outlet": "Dayton Daily News",
+   "google": true,
+   "expect": {
+    "kept": false
+   }
+  },
+  {
+   "title": "Columbus City Council approves new transit levy",
+   "outlet": "Spectrum News",
+   "google": true,
+   "expect": {
+    "kept": false,
+    "city": false
+   }
+  },
+  {
+   "note": "Peter's call (Oct 29): national policy news shows in the river but never leads",
+   "title": "HUD proposals could transform manufactured housing. Cities must be ‘nimble,’ an expert says.",
+   "outlet": "Smart Cities Dive",
+   "google": true,
+   "expect": {
+    "kept": true,
+    "city": true,
+    "label": "Federal",
+    "national": true
+   }
+  },
+  {
+   "title": "Ohio House bill would limit cities' home rule over short-term rentals",
+   "outlet": "Ohio Capital Journal",
+   "expect": {
+    "city": true,
+    "national": false
+   }
+  },
+  {
+   "note": "An untitled City web page (a login-protected dashboard) — caught Oct 29",
+   "title": "- City of Cincinnati (.gov)",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "title": "Cincinnati",
+   "outlet": "Enquirer",
+   "google": true,
+   "narrow": true,
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "note": "A City events page in Title Case is not an obituary — caught Oct 29",
+   "title": "Krohn Conservatory Holiday Show Events",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": false,
+    "city": true
+   }
+  },
+  {
+   "note": "Another town's council",
+   "title": "Norwood council member resigns after six years",
+   "outlet": "WLWT",
+   "expect": {
+    "city": false,
+    "place": "other"
+   }
+  },
+  {
+   "note": "Obituary that showed up as a headline — caught Oct 28",
+   "title": "Michael Elmer Bouchonnet",
+   "outlet": "Enquirer",
+   "google": true,
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "title": "Jane Doe obituary: longtime teacher remembered",
+   "outlet": "Enquirer",
+   "google": true,
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "note": "Title-case headline that starts with a name must survive",
+   "title": "Seth Walsh Resigns",
+   "outlet": "Enquirer",
+   "google": true,
+   "expect": {
+    "junk": false,
+    "city": true,
+    "label": "Council"
+   }
+  },
+  {
+   "title": "City Manager Sheryl Long outlines plan to speed up permit reviews",
+   "outlet": "Enquirer",
+   "google": true,
+   "expect": {
+    "city": true,
+    "label": "City Manager"
+   }
+  },
+  {
+   "title": "Cincinnati City Council approves mid-year budget adjustments",
+   "outlet": "WVXU",
+   "expect": {
+    "city": true,
+    "label": "Council"
+   }
+  },
+  {
+   "title": "Mayor Pureval calls for review of downtown curfew",
+   "outlet": "WCPO",
+   "expect": {
+    "city": true,
+    "label": "Mayor"
+   }
+  },
+  {
+   "title": "Covington police investigate break-in at Mainstrasse shop",
+   "outlet": "WCPO",
+   "expect": {
+    "city": false
+   }
+  },
+  {
+   "title": "Cincinnati police chief announces new violence reduction plan",
+   "outlet": "FOX19",
+   "expect": {
+    "city": true
+   }
+  },
+  {
+   "title": "Buildings and Inspections condemns Westwood apartment complex",
+   "outlet": "WLWT",
+   "expect": {
+    "city": true,
+    "label": "Buildings & Inspections"
+   }
+  },
+  {
+   "title": "Water main break closes several downtown Cincinnati streets",
+   "outlet": "WLWT",
+   "expect": {
+    "city": true,
+    "label": "Water & Sewers"
+   }
+  },
+  {
+   "title": "Ohio House bill would limit cities' home rule over short-term rentals",
+   "outlet": "Ohio Capital Journal",
+   "expect": {
+    "city": true,
+    "label": "State law"
+   }
+  },
+  {
+   "note": "Street named after a suburb is not another town",
+   "title": "Crash closes Reading Road in Avondale",
+   "outlet": "WCPO",
+   "expect": {
+    "city": false,
+    "place": "yes"
+   }
+  },
+  {
+   "title": "Hamilton County commissioners approve new jail contract",
+   "outlet": "WVXU",
+   "expect": {
+    "city": false
+   }
+  },
+  {
+   "title": "Bengals hold off Steelers 24-17",
+   "outlet": "WLWT",
+   "expect": {
+    "city": false
+   }
+  },
+  {
+   "note": "Council word only in one outlet's summary must not make a multi-outlet story City news",
+   "group": [
+    {
+     "title": "Brent Spence companion bridge gets final federal sign-off",
+     "outlet": "WCPO",
+     "summary": ""
+    },
+    {
+     "title": "Final federal approval clears way for Brent Spence companion bridge",
+     "outlet": "WLWT",
+     "summary": "Cincinnati council members have long pushed for the project."
+    }
+   ],
+   "expect": {
+    "city": false
+   }
+  }
+ ],
+ "same_story": [
+  {
+   "a": "Water main break closes several downtown streets",
+   "b": "Downtown water main break closes streets, detours in place",
+   "expect": true
+  },
+  {
+   "a": "WATCH: Water main break shuts down several streets downtown",
+   "b": "Water main break closes several downtown streets | WCPO 9 Cincinnati",
+   "expect": true
+  },
+  {
+   "a": "Water main break closes several downtown streets",
+   "b": "Brent Spence companion bridge gets final federal sign-off",
+   "expect": false
+  },
+  {
+   "a": "Council budget committee takes up mid-year spending adjustments",
+   "b": "Planning Commission schedules hearing on West End housing plan",
+   "expect": false
+  }
+ ],
+ "grouping": [
+  {
+   "note": "Nov 2, 2026: three outlets' Halloween/Short Vine officer stories are one story; two Walnut Hills shootings months apart are not; 'year-old' and election explainers stay separate.",
+   "items": [
+    {
+     "title": "2 Cincinnati officers injured after Short Vine crowds on Halloween, union says",
+     "summary": "",
+     "link": "",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-02T14:48:00+00:00"
+    },
+    {
+     "title": "Police: 1 person dead, 2 officers injured in Halloween night violence across Cincinnati",
+     "summary": "Cincinnati police are releasing more details about a violent Halloween night that left one person dead, two officers injured and multiple people arrested across the city.",
+     "link": "https://www.wlwt.com/article/officers-assaulted-short-vine-halloween-clifton/74313167",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-02T14:48:00+00:00"
+    },
+    {
+     "title": "Two Cincinnati police officers assaulted trying to break up large crowd near UC",
+     "summary": "Video and photos posted online show people standing on top of fuel pumps",
+     "link": "https://www.fox19.com/2026/11/02/two-cincinnati-police-officers-assaulted-trying-break-up-large-crowd-near-uc/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-02T14:25:15+00:00"
+    },
+    {
+     "title": "Riley Green is first concert announced for new Farmer Music Center",
+     "summary": "Cincinnati's newest music venue has announced its first concert.",
+     "link": "https://www.fox19.com/2026/11/02/riley-green-perform-new-state-of-the-art-farmer-music-center/",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-02T13:05:00+00:00"
+    },
+    {
+     "title": "First act announced for new Farmer Music Center",
+     "summary": "The first act to be booked at the Farmer Music Center is set to perform in June.",
+     "link": "https://local12.com/news/local/first-act-announced-for-new-farmer-music-center-cincinnati-coney-island-country-star-riley-green-seats-tickets-memi",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-02T13:05:00+00:00"
+    },
+    {
+     "title": "‘I want justice for my baby’: Family remembers 21-year-old killed in Walnut Hills",
+     "summary": "Candles spelling out “Rell” marked the spot where Terrell Peterson Jr.’s family gathered Friday night, two days after the 21-year-old was shot and killed in Walnut Hills.",
+     "link": "https://www.wlwt.com/article/terrell-peterson-vigil-shooting-walnut-hills-cincinnati/74300836",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-02T16:43:00+00:00"
+    },
+    {
+     "title": "Arrest made in Cincinnati fatal shooting from 5 months ago",
+     "summary": "Police believe they've arrested the suspect in a fatal shooting in Walnut Hills in May.",
+     "link": "https://local12.com/news/local/arrest-made-cincinnati-fatal-shooting-months-walnut-hills-jaeshaun-camper-eugene-wals-morgan-may-shot-chest-murder-felonious-assault",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-02T15:23:09+00:00"
+    },
+    {
+     "title": "19-year-old killed, 2 seriously hurt in Tri-State crash",
+     "summary": "Shane M. Hull of Bethel died at a hospital in Mount Orab",
+     "link": "https://www.fox19.com/2026/11/02/19-year-old-killed-2-seriously-hurt-tri-state-crash/",
+     "outlet": "FOX19",
+     "first_seen": "2026-10-29T18:30:43+00:00"
+    },
+    {
+     "title": "Ian Alert: Search ongoing for missing 6-year-old in Kentucky",
+     "summary": "The search is ongoing for a missing 6-year-old boy that prompted an Ian Alert in Kentucky.",
+     "link": "https://www.fox19.com/2026/11/02/ian-alert-issued-missing-endangered-6-year-old-boy-lawrence-county/",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-02T01:19:06+00:00"
+    },
+    {
+     "title": "8-year-old boy skips birthday presents to feed people experiencing homelessness",
+     "summary": "While many children spend their birthdays unwrapping presents, 8-year-old Kentintton McNeil had something entirely different in mind.",
+     "link": "https://local12.com/news/nation-world/8-year-old-boy-skips-birthday-presents-to-feed-people-experiencing-homelessness",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-02T16:51:45+00:00"
+    },
+    {
+     "title": "Early voting has closed in Ohio and Kentucky. Here's a look at the data.",
+     "summary": "Almost 55 million Americans have voted early this election cycle.",
+     "link": "https://www.wlwt.com/article/ohio-kentucky-2026-midterm-early-voting-data-increase/74311358",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-02T15:35:00+00:00"
+    },
+    {
+     "title": "Issue 3: Constitutional voter ID rules? Ohioans to decide on Tuesday",
+     "summary": "Issue 3 proposes adding voter ID requirements to Ohio's constitution, sparking debate over its necessity and potential long-term effects.",
+     "link": "https://www.wlwt.com/article/ohio-2026-midterm-elections-what-is-issue-3-explainer/74308373",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-02T11:25:00+00:00"
+    },
+    {
+     "title": "Ohio governor, U.S. Senate, House seats: Races to watch in 2026 midterm election",
+     "summary": "Election Day is Nov. 3. There are plenty of races to watch across our region.",
+     "link": "https://www.wlwt.com/article/ohio-governor-us-senate-house-races-to-watch-2026-midterms/74295642",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-02T14:24:00+00:00"
+    }
+   ],
+   "groups": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ]
+  }
+ ]
 }

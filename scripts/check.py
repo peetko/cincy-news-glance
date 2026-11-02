@@ -92,6 +92,22 @@ def main():
         else:
             print(f"ok    {name}")
 
+    # Whole batches: which headlines should end up as one story (every other headline stays on its own).
+    for case in cases.get("grouping", []):
+        items = [{"title": collect.clean_headline(x["title"]), "summary": x.get("summary", ""), "link": x.get("link", ""),
+                  "outlet": x.get("outlet", f"o{i}"), "published": datetime.fromisoformat(x["first_seen"]), "_i": i}
+                 for i, x in enumerate(case["items"])]
+        got = sorted(sorted(it["_i"] for it in c["items"]) for c in collect.cluster(items))
+        groups = [sorted(g) for g in case["groups"]]
+        grouped = {i for g in groups for i in g}
+        expect = sorted(groups + [[i] for i in range(len(items)) if i not in grouped])
+        name = f"grouping: {case.get('note', '')[:60]}…"
+        if got != expect:
+            failures += 1
+            print(f"FAIL  {name}\n      expected {expect}\n      got      {got}")
+        else:
+            print(f"ok    {name}")
+
     # The lead shouldn't flip-flop on a near tie.
     a = {"_tok": ["council", "budget", "committee"], "city_rank": 10.0}
     b = {"_tok": ["vice", "mayor", "housing", "ordinance"], "city_rank": 11.0}
@@ -102,7 +118,7 @@ def main():
     else:
         print("ok    lead stays put on a near tie")
 
-    total = len(cases["headlines"]) + len(cases.get("same_story", [])) + 1
+    total = len(cases["headlines"]) + len(cases.get("same_story", [])) + len(cases.get("grouping", [])) + 1
     print(f"\n{total - failures}/{total} checks passed")
     return 1 if failures else 0
 
