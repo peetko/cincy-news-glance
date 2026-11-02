@@ -448,6 +448,45 @@
    "expect": {
     "city": false
    }
+  },
+  {
+   "note": "City meeting paperwork, not news (caught Nov 2)",
+   "title": "Zoning Hearing Examiner Docket 11.04.26",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "note": "City agenda page with a date stamp",
+   "title": "City Planning Commission Agenda 11/06/2026",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "note": "A real City program announcement stays",
+   "title": "Greater Cincinnati Area One Health Collaborative Medication Take Back Program",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": false
+   }
+  },
+  {
+   "note": "A news story about an agenda is still news",
+   "title": "Cincinnati council agenda includes vote on new short-term rental rules",
+   "outlet": "WVXU",
+   "expect": {
+    "junk": false,
+    "city": true
+   }
   }
  ],
  "same_story": [
@@ -474,7 +513,7 @@
  ],
  "grouping": [
   {
-   "note": "Nov 2, 2026: three outlets' Halloween/Short Vine officer stories are one story; two Walnut Hills shootings months apart are not; 'year-old' and election explainers stay separate. Item 13 is a made-up fourth version (the live run had a Hoodline copy whose exact headline isn't saved) so the shared phrase appears in 3+ groups, as it did live.",
+   "note": "Nov 2, 2026: three outlets' Halloween/Short Vine officer stories are one story; two Walnut Hills shootings months apart are not; 'year-old' and election explainers stay separate. Item 13 is a made-up fourth version (the live run had a Hoodline copy whose exact headline isn't saved) so the shared phrase appears in 3+ groups, as it did live. Item 14 is the same FOX19 headline arriving again via Google News with no summary or web address (the 3:30 PM run split it off).",
    "items": [
     {
      "title": "2 Cincinnati officers injured after Short Vine crowds on Halloween, union says",
@@ -573,6 +612,13 @@
      "link": "https://news.google.com/rss/articles/test-13",
      "outlet": "Hoodline",
      "first_seen": "2026-11-02T14:48:00+00:00"
+    },
+    {
+     "title": "Two Cincinnati police officers assaulted trying to break up large crowd near UC",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/test-fox-copy",
+     "outlet": "WCPO",
+     "first_seen": "2026-11-02T14:48:00+00:00"
     }
    ],
    "groups": [
@@ -580,7 +626,8 @@
      0,
      1,
      2,
-     13
+     13,
+     14
     ],
     [
      3,

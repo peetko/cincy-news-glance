@@ -155,6 +155,8 @@
   "exclude": {
     "title_terms": ["obituary", "obituaries", "death notice", "death notices", "passed away", "celebration of life", "in memoriam", "funeral home", "legacy.com"],
     "url_terms": ["/login", "insights.cincinnati-oh.gov", "/obituaries", "obituaries.", "legacy.com", "/obits/", "/press-release/", "vehiclesforsale", "/shop-vehicles"],
+    "_official_paperwork_readme": "City-website items that are meeting paperwork, not news (the day's meetings already show under TODAY AT CITY HALL). Only applied to the City's own site; news stories that mention an agenda are kept. Also dropped: City items whose headline ends in a date stamp like 11.04.26.",
+    "official_paperwork_terms": ["docket", "agenda", "agendas", "minutes", "meeting packet", "meeting notice", "notice of meeting", "notice of public hearing", "public hearing notice", "hearing notice", "legal notice", "legal notices", "special meeting", "cancellation notice", "meeting cancelled", "meeting canceled", "bid opportunities", "request for proposals", "invitation to bid"],
     "drop_name_only_titles": true,
     "drop_press_releases": true,
     "min_title_words": 3

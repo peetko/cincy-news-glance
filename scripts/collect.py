@@ -159,6 +159,10 @@ def looks_like_press_release(item, cfg):
     return capitalized / len(words) >= 0.8
 
 
+# "… Docket 11.04.26", "… Agenda 11/04/2026", "… 2026-11-04" at the end of a City page title.
+DATE_STAMP = re.compile(r"(?:\b\d{1,2}[./\-]\d{1,2}[./\-]\d{2,4}|\b\d{4}-\d{2}-\d{2})\s*$")
+
+
 def is_junk(item, cfg):
     ex = cfg.get("exclude", {})
     title, link = item["title"], item["link"].lower()
@@ -174,6 +178,12 @@ def is_junk(item, cfg):
         return True
     if cfg.get("exclude", {}).get("drop_press_releases", True) and looks_like_press_release(item, cfg):
         return True
+    # Meeting paperwork from the City's own site ("Zoning Hearing Examiner Docket 11.04.26").
+    if item.get("_official"):
+        if any(term_regex(t).search(title) for t in ex.get("official_paperwork_terms", [])):
+            return True
+        if DATE_STAMP.search(title):
+            return True
     # Name-only check: only for Google News results (where obituaries slip in), and never
     # when the "name" is a City official or a Cincinnati place.
     if (ex.get("drop_name_only_titles", True) and item.get("_google") and not item.get("_official")
@@ -487,6 +497,10 @@ def _merge_related(clusters, window_hours=18):
     def related(a, b):
         if abs((a["_t0"] - b["_t0"]).total_seconds()) > window_hours * 3600:
             return False
+        # Any one headline here closely matches one there (the first pass compares against a whole
+        # group's words, which a big group can drown out: the same FOX19 headline ended up in two groups).
+        if any(same_story(x["_tok"], y["_tok"]) for x in a["items"] for y in b["items"]):
+            return True
         shared = a["_rich"] & b["_rich"]
         # A big story is often split across 3-4 groups by the first pass, so a phrase can show up that often.
         phrases = {p for p in a["_bigrams"] & b["_bigrams"] if bdf.get(p, 0) <= 4 and p not in stock}
