@@ -11,7 +11,26 @@
    "text": "Rain likely around 5 PM",
    "level": "notable"
   },
-  "alerts": []
+  "alerts": [],
+  "date": "2026-11-02",
+  "high": 64,
+  "low": 41,
+  "climate": {
+   "ok": true,
+   "date": "2026-11-02",
+   "normal_high": 58,
+   "normal_low": 40,
+   "record_high": 80,
+   "record_high_years": [
+    "1990",
+    "1950"
+   ],
+   "record_low": 18,
+   "record_low_years": [
+    "1951"
+   ],
+   "since": "1871"
+  }
  },
  "meetings": {
   "ok": true,

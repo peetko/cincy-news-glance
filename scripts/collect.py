@@ -22,10 +22,12 @@ import re
 import sys
 import html
 import os
+import urllib.parse
 import urllib.request
 from urllib.parse import urlparse, quote
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import feedparser
 
@@ -729,7 +731,85 @@ def describe_change(hourly, alerts, now_temp):
     return {"text": "No big changes in the next 24 hours", "level": "none"}
 
 
-def get_weather(cfg, now):
+def today_high_low(point, now, prev_weather):
+    """
+    Today's forecast high and low from the NWS 12-hour forecast. Once the afternoon is over the
+    forecast drops "Today", so the high this morning's runs saw is carried forward (same date only).
+    """
+    tz = ZoneInfo("America/New_York")
+    today = now.astimezone(tz).date()
+    hi = lo = None
+    try:
+        periods = fetch_json(point["properties"]["forecast"])["properties"]["periods"]
+    except Exception:
+        periods = []
+    for p in periods:
+        if datetime.fromisoformat(p["startTime"]).astimezone(tz).date() != today:
+            continue
+        if p.get("isDaytime") and hi is None:
+            hi = p.get("temperature")            # "Today" / "This Afternoon"
+        elif not p.get("isDaytime") and lo is None:
+            lo = p.get("temperature")            # "Tonight" (or "Overnight" before dawn)
+    old = prev_weather or {}
+    if hi is None and old.get("date") == today.isoformat():
+        hi = old.get("high")
+    return {"date": today.isoformat(), "high": hi, "low": lo}
+
+
+ACIS_URL = "https://data.rcc-acis.org/StnData"
+
+
+def _deg(v):
+    """ACIS temperatures arrive as strings ("58", "58.3"); "M" means missing."""
+    m = re.match(r"-?\d+(?:\.\d+)?", str(v).strip())
+    return int(round(float(m.group()))) if m else None
+
+
+def get_climate(cfg, now, prev_weather):
+    """
+    Normal (1991-2020) and record high/low for today's date in Cincinnati, from NOAA's Regional
+    Climate Centers (ACIS, free, no key). "CVGthr" is Cincinnati's official threaded record, which
+    stitches the downtown and airport readings back to 1871. Changes once a day, so it's cached.
+    """
+    tz = ZoneInfo("America/New_York")
+    today = now.astimezone(tz).date()
+    old = (prev_weather or {}).get("climate") or {}
+    if old.get("date") == today.isoformat() and old.get("ok"):
+        return old
+    sid = cfg.get("climate_station", "CVGthr")
+
+    def acis(params):
+        url = ACIS_URL + "?params=" + urllib.parse.quote(json.dumps(params, separators=(",", ":")))
+        return json.loads(fetch(url, accept="application/json"))
+
+    # The same calendar day in every year on record (interval = 1 year), through last year.
+    md = today.strftime("%m-%d") if today.strftime("%m-%d") != "02-29" else "02-28"
+    hist = acis({"sid": sid, "sdate": f"1870-{md}", "edate": f"{today.year - 1}-{md}",
+                 "elems": [{"name": "maxt", "interval": [1, 0, 0]}, {"name": "mint", "interval": [1, 0, 0]}]})
+    rows = [(r[0][:4], _deg(r[1]), _deg(r[2])) for r in hist.get("data", [])]
+    highs = [(t, y) for y, t, _ in rows if t is not None]
+    lows = [(t, y) for y, _, t in rows if t is not None]
+    if not highs or not lows:
+        raise ValueError(hist.get("error") or "no climate data")
+    rec_hi = max(t for t, _ in highs)
+    rec_lo = min(t for t, _ in lows)
+    norm = acis({"sid": sid, "sdate": today.isoformat(), "edate": today.isoformat(),
+                 "elems": [{"name": "maxt", "normal": "1"}, {"name": "mint", "normal": "1"}]})
+    nrow = (norm.get("data") or [[None, None, None]])[0]
+    return {
+        "ok": True,
+        "date": today.isoformat(),
+        "normal_high": _deg(nrow[1]),
+        "normal_low": _deg(nrow[2]),
+        "record_high": rec_hi,
+        "record_high_years": sorted({y for t, y in highs if t == rec_hi}, reverse=True)[:5],
+        "record_low": rec_lo,
+        "record_low_years": sorted({y for t, y in lows if t == rec_lo}, reverse=True)[:5],
+        "since": min(y for _, y in highs),
+    }
+
+
+def get_weather(cfg, now, prev_weather=None):
     loc = cfg["location"]
     point = fetch_json(f"https://api.weather.gov/points/{loc['lat']},{loc['lon']}")
     hourly_raw = fetch_json(point["properties"]["forecastHourly"])["properties"]["periods"]
@@ -753,8 +833,17 @@ def get_weather(cfg, now):
         pass
 
     now_h = hourly[0] if hourly else {}
+    hl = today_high_low(point, now, prev_weather)
+    try:
+        climate = get_climate(cfg, now, prev_weather)
+    except Exception as ex:
+        climate = {"ok": False, "error": http_error_text(ex)}
     return {
         "ok": True,
+        "date": hl["date"],
+        "high": hl["high"],
+        "low": hl["low"],
+        "climate": climate,
         "as_of": now.isoformat(),
         "temp": now_h.get("temp"),
         "short": now_h.get("short", ""),
@@ -919,7 +1008,7 @@ def build(cfg, now=None, previous=None):
         st["fail_streak"] = streaks[st["source"]]
 
     try:
-        weather = get_weather(cfg, now)
+        weather = get_weather(cfg, now, (previous or {}).get("weather"))
     except Exception as ex:
         old = (previous or {}).get("weather") or {}
         if old.get("ok"):
