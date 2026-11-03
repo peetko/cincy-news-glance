@@ -77,13 +77,10 @@
   #lead.fading { opacity: 0; }
   #lead.quick { transition: opacity 0.3s ease; }
   /* ‹ 1 / N › — flip through the top stories */
-  /* The ‹ 1 / 4 › arrows sit at one fixed spot, just past the longest label we've seen (~745px),
-     so they don't jump around as the label and outlet change. A label that would run into them
-     gets "…" at the end instead. */
-  #tagrow { position: relative; display: flex; align-items: center; width: 850px; height: 22px; white-space: nowrap; }
-  #tag { max-width: 760px; min-width: 0; overflow: hidden; }
-  #tag .meta { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
-  #pager { flex: none; position: absolute; left: 772px; top: 50%; transform: translateY(-50%); }
+  /* The ‹ 1 / 4 › arrows come first in the row, lined up with the headline's left edge,
+     so they stay put whatever the label and outlet say. */
+  #tagrow { display: flex; align-items: center; gap: 12px; width: max-content; white-space: nowrap; }
+  #pager { flex: none; order: -1; margin-left: -5px; }   /* -5px: the ‹ button's padding, so the glyph lines up with the headline */
   #pager { display: inline-flex; align-items: center; gap: 2px; font-size: 11px; color: var(--muted); letter-spacing: 0.04em; opacity: 0.75; transition: opacity 0.3s ease; }
   #lead:hover #pager { opacity: 1; }
   #pager[hidden] { display: none; }
