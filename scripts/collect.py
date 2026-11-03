@@ -853,14 +853,18 @@ def describe_change(hourly, alerts, now_temp):
     """One short line about anything notable in the next 24 hours."""
     if alerts:
         a = alerts[0]
-        return {"text": a["event"] + (f" until {a['ends']}" if a.get("ends") else ""), "level": "alert"}
+        return {"text": a["event"] + (f" until {a['ends']}" if a.get("ends") else ""), "level": "alert", "kind": "alert"}
 
     next24 = hourly[:24]
     if not next24:
         return {"text": "", "level": "none"}
 
+    tz = ZoneInfo("America/New_York")
+    today = datetime.fromisoformat(next24[0]["time"]).astimezone(tz).date()
+
     def hour_label(iso):
-        return datetime.fromisoformat(iso).strftime("%-I %p")
+        t = datetime.fromisoformat(iso).astimezone(tz)
+        return t.strftime("%-I %p") + (" tomorrow" if t.date() > today else "")
 
     first_pop = next24[0]["pop"] or 0
     for h in next24:
@@ -868,25 +872,124 @@ def describe_change(hourly, alerts, now_temp):
         if pop >= 50 and first_pop < 40:
             sf = h["short"].lower()
             kind = "Snow" if "snow" in sf else "Storms" if "thunder" in sf else "Rain"
-            return {"text": f"{kind} likely around {hour_label(h['time'])}", "level": "notable"}
+            return {"text": f"{kind} likely around {hour_label(h['time'])}", "level": "notable",
+                    "kind": "snow" if kind == "Snow" else "precip", "at": h["time"]}
 
     temps = [h["temp"] for h in next24 if h["temp"] is not None]
     if temps and now_temp is not None:
         lo, hi = min(temps), max(temps)
         if now_temp - lo >= 15:
             when = next(h for h in next24 if h["temp"] == lo)
-            return {"text": f"Turning colder — {lo}° by {hour_label(when['time'])}", "level": "notable"}
+            return {"text": f"Turning colder — {lo}° by {hour_label(when['time'])}", "level": "notable", "kind": "temp", "at": when["time"]}
         if hi - now_temp >= 15:
             when = next(h for h in next24 if h["temp"] == hi)
-            return {"text": f"Warming up — {hi}° by {hour_label(when['time'])}", "level": "notable"}
+            return {"text": f"Warming up — {hi}° by {hour_label(when['time'])}", "level": "notable", "kind": "temp", "at": when["time"]}
         if lo <= 32 < now_temp:
             when = next(h for h in next24 if h["temp"] <= 32)
-            return {"text": f"Freezing by {hour_label(when['time'])}", "level": "notable"}
+            return {"text": f"Freezing by {hour_label(when['time'])}", "level": "notable", "kind": "temp", "at": when["time"]}
 
     return {"text": "No big changes in the next 24 hours", "level": "none"}
 
 
-def today_high_low(point, now, prev_weather):
+def alert_parts(desc):
+    """NWS alert text has '* WHAT...', '* WHEN...', '* IMPACTS...' paragraphs; keep those as plain sentences."""
+    out = {}
+    for key in ("what", "when", "impacts"):
+        m = re.search(rf"\*\s*{key.upper()}\.\.\.(.*?)(?=\n\s*\*|\n\s*\n|$)", desc, re.S)
+        if m:
+            out[key] = re.sub(r"\s+", " ", m.group(1)).strip()
+    return out
+
+
+def _sentences(text):
+    return [x.strip() for x in re.split(r"(?<=[.!?])\s+", text or "") if x.strip()]
+
+
+PRECIP_WORDS = re.compile(r"storm|shower|rain|drizzle|snow|sleet|freezing|severe|damaging|hail|tornado|flood|"
+                          r"rainfall|accumulation|precipitation|gust", re.I)
+
+
+SEVERE_WORDS = re.compile(r"severe|damaging|hail|tornado|flood|gusts? (?:as high as|up to)", re.I)
+
+
+def _iso_span(valid):
+    """'2026-11-03T09:00:00+00:00/PT6H' -> (start, end)."""
+    start_s, dur = valid.split("/")
+    start = datetime.fromisoformat(start_s)
+    m = re.fullmatch(r"P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?)?", dur)
+    d, h, mi = (int(x or 0) for x in m.groups()) if m else (0, 1, 0)
+    return start, start + timedelta(days=d, hours=h, minutes=mi)
+
+
+def _grid_total(grid, field, start, end):
+    """Sum a gridpoint amount (mm) over the hours start..end, sharing out each interval by overlap."""
+    total = 0.0
+    for v in ((grid.get("properties") or {}).get(field) or {}).get("values", []):
+        if v.get("value") is None:
+            continue
+        a, b = _iso_span(v["validTime"])
+        overlap = (min(b, end) - max(a, start)).total_seconds()
+        if overlap > 0:
+            total += v["value"] * overlap / (b - a).total_seconds()
+    return total
+
+
+def change_details(change, hourly, periods, point, alerts):
+    """
+    One to three sentences behind the weather note, for its hover card — mostly the Weather
+    Service's own words: how severe, how much, how long.
+    """
+    kind = change.get("kind")
+    tz = ZoneInfo("America/New_York")
+    if kind == "alert" and alerts:
+        a = alerts[0]
+        lines = [x for x in (a.get("what"), a.get("when") and f"When: {a['when']}", a.get("impacts")) if x]
+        return [x if x.endswith(".") else x + "." for x in lines[:3]] or _sentences(a.get("headline"))[:2]
+    if not kind or not change.get("at"):
+        return []
+    at = datetime.fromisoformat(change["at"])
+    period = next((p for p in periods if p.get("endTime")
+                   and datetime.fromisoformat(p["startTime"]) <= at < datetime.fromisoformat(p["endTime"])), None)
+    text = _sentences(period.get("detailedForecast")) if period else []
+    out = []
+    if kind in ("precip", "snow"):
+        # What's coming (the forecast's first rain/storm sentence), then how severe if it says so,
+        # otherwise the chance. Its "new rainfall amounts…" line is replaced by the total worked out below.
+        what = [x for x in text if PRECIP_WORDS.search(x) and "%" not in x and "amounts" not in x.lower()]
+        severe = [x for x in text if SEVERE_WORDS.search(x) and x not in what[:1]]
+        chance = [x for x in text if "chance of precipitation" in x.lower()]
+        out += what[:1] + (severe[:1] or chance[:1])
+        # How long: from the first likely hour until chances drop under 40%.
+        idx = next((i for i, h in enumerate(hourly) if h["time"] == change["at"]), None)
+        if idx is not None:
+            end_i = idx
+            while end_i + 1 < len(hourly) and (hourly[end_i + 1]["pop"] or 0) >= 40:
+                end_i += 1
+            hours = end_i - idx + 1
+            end_t = datetime.fromisoformat(hourly[end_i]["time"]).astimezone(tz) + timedelta(hours=1)
+            amount = ""
+            try:
+                grid = fetch_json(point["properties"]["forecastGridData"])
+                field = "snowfallAmount" if kind == "snow" else "quantitativePrecipitation"
+                inches = _grid_total(grid, field, at, end_t) / 25.4
+                word = "snow" if kind == "snow" else "rain"
+                if inches >= 0.05:
+                    amount = f"about {inches:.1f} in. of {word}" if inches < 1 else f"about {inches:.1f} inches of {word}"
+                else:
+                    amount = f"only a little {word}"
+            except Exception:
+                pass
+            span = (f"Likely for about {hours} hour{'s' if hours != 1 else ''}, easing around {end_t.strftime('%-I %p')}"
+                    if hours > 1 else "Likely brief")
+            out.append(span + (f", with {amount} in all." if amount else "."))
+        if not out and period:
+            out = text[:2]
+    else:
+        out = text[:2]
+    return out[:3]
+
+
+def today_high_low(point, now, prev_weather, periods=None):
     """
     Today's forecast high and low from the NWS 12-hour forecast. Once the afternoon is over the
     forecast drops "Today", so the high this morning's runs saw is carried forward (same date only).
@@ -894,10 +997,11 @@ def today_high_low(point, now, prev_weather):
     tz = ZoneInfo("America/New_York")
     today = now.astimezone(tz).date()
     hi = lo = None
-    try:
-        periods = fetch_json(point["properties"]["forecast"])["properties"]["periods"]
-    except Exception:
-        periods = []
+    if periods is None:
+        try:
+            periods = fetch_json(point["properties"]["forecast"])["properties"]["periods"]
+        except Exception:
+            periods = []
     for p in periods:
         if datetime.fromisoformat(p["startTime"]).astimezone(tz).date() != today:
             continue
@@ -983,12 +1087,23 @@ def get_weather(cfg, now, prev_weather=None):
             p = f["properties"]
             ends = p.get("ends") or p.get("expires")
             ends_label = datetime.fromisoformat(ends).strftime("%-I %p") if ends else ""
-            alerts.append({"event": p.get("event", "Weather alert"), "headline": p.get("headline", ""), "ends": ends_label})
+            alerts.append({"event": p.get("event", "Weather alert"), "headline": p.get("headline", ""), "ends": ends_label,
+                           **alert_parts(p.get("description") or "")})
     except Exception:
         pass
 
     now_h = hourly[0] if hourly else {}
-    hl = today_high_low(point, now, prev_weather)
+    try:
+        periods = fetch_json(point["properties"]["forecast"])["properties"]["periods"]
+    except Exception:
+        periods = []
+    hl = today_high_low(point, now, prev_weather, periods)
+    change = describe_change(hourly, alerts, now_h.get("temp"))
+    try:
+        change["details"] = change_details(change, hourly, periods, point, alerts)
+    except Exception as ex:
+        change["details"] = []
+        change["details_error"] = type(ex).__name__
     try:
         climate = get_climate(cfg, now, prev_weather)
     except Exception as ex:
@@ -1003,7 +1118,7 @@ def get_weather(cfg, now, prev_weather=None):
         "temp": now_h.get("temp"),
         "short": now_h.get("short", ""),
         "is_day": now_h.get("is_day", True),
-        "change": describe_change(hourly, alerts, now_h.get("temp")),
+        "change": change,
         "alerts": alerts,
     }
 

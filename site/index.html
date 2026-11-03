@@ -51,6 +51,12 @@
   #wx { cursor: default; }
   #wx .wx-hl { color: var(--muted); }
   #tip.wxtip { white-space: pre; }
+  /* hover card behind "Storms likely around 4 AM": a few wrapped sentences */
+  #tip.chtip { white-space: normal; width: 340px; }
+  #tip.chtip div { margin-top: 4px; }
+  #tip.chtip div:first-child { font-weight: 600; margin-top: 0; }
+  #tip.chtip div:last-child { color: var(--muted); font-size: 11px; }
+  #wxchange.has-more { cursor: default; }
   #tip.wxtip div:first-child { font-weight: 600; margin-bottom: 2px; }
   #tip.wxtip div:last-child { color: var(--muted); font-size: 11px; margin-top: 3px; }
   .pill { padding: 4px 10px; border-radius: 999px; border: 1px solid #9DB2C0; font-size: 12px; letter-spacing: 0.03em; white-space: nowrap; }
@@ -759,7 +765,8 @@ function renderWeather(w) {
   const c = w.change || {};
   ch.hidden = !c.text;
   ch.textContent = c.text || '';
-  ch.className = 'pill ' + (c.level === 'alert' ? 'alert' : c.level === 'notable' ? 'notable' : '');
+  ch.className = 'pill ' + (c.level === 'alert' ? 'alert' : c.level === 'notable' ? 'notable' : '') +
+    (c.details && c.details.length ? ' has-more' : '');
 }
 
 /* ---------- lead story ---------- */
@@ -1176,9 +1183,10 @@ function buildBulbs() {
 buildBulbs();
 
 // A small hover card with a few lines of text (and optional team-color swatches).
-function showTextTip(lines, colors, e) {
+function showTextTip(lines, colors, e, cls = '') {
   const tip = $('tip');
   tip.textContent = '';
+  tip.className = cls;                 // style is set before measuring, so the card lands in the right spot
   lines.forEach((t, i) => {
     const row = el('div');
     if (i === 0) for (const c of colors || []) { const sw = el('span', 'sw'); sw.style.background = c; sw.style.border = '1px solid #A6B9C6'; row.append(sw); }
@@ -1197,6 +1205,7 @@ function showTextTip(lines, colors, e) {
 function showTip(id, e) {
   const g = recentByStadium[id];
   const tip = $('tip');
+  tip.className = '';
   if (!g) { tip.style.display = 'none'; return; }
   tip.textContent = '';
   for (const c of (g.colors || []).slice(0, 2)) { const sw = el('span', 'sw'); sw.style.background = c; sw.style.border = '1px solid #A6B9C6'; tip.append(sw); }
@@ -1302,14 +1311,22 @@ $('next').addEventListener('click', () => showTop(topIdx + 1));
 /* ---------- whole screen ---------- */
 function render(data) {
   renderWeather(data.weather);
+  if (!$('wxchange').dataset.tip) {    // hover the weather note for the forecast's own details
+    $('wxchange').dataset.tip = '1';
+    $('wxchange').addEventListener('pointermove', (e) => {
+      const c = (lastWeather && lastWeather.change) || {};
+      if (!c.details || !c.details.length) return;
+      showTextTip([c.text, ...c.details, 'National Weather Service forecast'], [], e, 'chtip');
+    });
+    $('wxchange').addEventListener('pointerleave', () => { $('tip').style.display = 'none'; });
+  }
   if (!$('wx').dataset.tip) {          // hover the weather for normals and records (wired up once)
     $('wx').dataset.tip = '1';
     $('wx').addEventListener('pointermove', (e) => {
       if (!lastWeather || !lastWeather.ok) return;
-      showTextTip(climateLines(lastWeather), [], e);
-      $('tip').classList.add('wxtip');
+      showTextTip(climateLines(lastWeather), [], e, 'wxtip');
     });
-    $('wx').addEventListener('pointerleave', () => { $('tip').style.display = 'none'; $('tip').classList.remove('wxtip'); });
+    $('wx').addEventListener('pointerleave', () => { $('tip').style.display = 'none'; });
   }
   const stories = data.stories || [];
   $('empty').style.display = stories.length ? 'none' : 'block';

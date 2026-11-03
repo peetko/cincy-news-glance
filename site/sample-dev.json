@@ -8,7 +8,12 @@
   "is_day": true,
   "change": {
    "text": "Rain likely around 10 PM",
-   "level": "notable"
+   "level": "notable",
+   "details": [
+    "Showers and thunderstorms likely after 3am.",
+    "Some of the storms could be severe, with damaging winds the main threat.",
+    "Likely for about 6 hours, easing around 10 AM, with about 0.4 in. of rain in all."
+   ]
   },
   "alerts": [],
   "date": "2026-11-02",
