@@ -383,8 +383,17 @@ def is_dst(now):
 
 # ---------------------------------------------------------------- grouping
 
+# Words in almost every crime headline: sharing only these ("arrest made in fatal shooting")
+# says nothing about whether two headlines are the same incident.
+CRIME_STOCK = set("""arrest arrested arrest made fatal fatally shooting shot shoot killed kill killing police man woman men
+women people person dead deadly death die died dy charged charge suspect crash injured hurt hospitalized
+investigating investigate investigation year old teen boy girl involved connection""".split())
+
+
 def same_story(a_tokens, b_tokens):
     if not a_tokens or not b_tokens:
+        return False
+    if len((a_tokens & b_tokens) - CRIME_STOCK) < 2:
         return False
     shared = len(a_tokens & b_tokens)
     jaccard = shared / len(a_tokens | b_tokens)
