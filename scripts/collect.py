@@ -390,10 +390,30 @@ women people person dead deadly death die died dy charged charge suspect crash i
 investigating investigate investigation year old teen boy girl involved connection""".split())
 
 
+_PLACE_WORDS = None
+
+
+def place_words():
+    """Words from neighborhood and town names (walnut, hill, price…): a shared place isn't a shared story."""
+    global _PLACE_WORDS
+    if _PLACE_WORDS is None:
+        try:
+            cfg = json.loads(CONFIG_PATH.read_text())
+        except Exception:
+            cfg = {}
+        _PLACE_WORDS = set().union(*(tokens(t) for t in cfg.get("local_terms", []) + cfg.get("other_municipalities", [])), set())
+    return _PLACE_WORDS
+
+
+def distinctive(shared):
+    """Shared words that actually point at one story: not crime vocabulary, not a neighborhood name."""
+    return shared - CRIME_STOCK - place_words()
+
+
 def same_story(a_tokens, b_tokens):
     if not a_tokens or not b_tokens:
         return False
-    if len((a_tokens & b_tokens) - CRIME_STOCK) < 2:
+    if len(distinctive(a_tokens & b_tokens)) < 2:
         return False
     shared = len(a_tokens & b_tokens)
     jaccard = shared / len(a_tokens | b_tokens)
@@ -474,7 +494,7 @@ def _profile(it):
     seq = _content_words(it["title"]) + ["|"] + _content_words(_slug_text(it.get("link")))
     return {"rich": tokens(text), "proper": _proper_words(it["title"]),
             "bigrams": {(a, b) for a, b in zip(seq, seq[1:])
-                        if "|" not in (a, b) and a != b and a not in PHRASE_GENERIC and b not in PHRASE_GENERIC}}
+                        if "|" not in (a, b) and a != b and not ({a, b} & (PHRASE_GENERIC | CRIME_STOCK))}}
 
 
 def _merge_related(clusters, window_hours=18):
@@ -510,14 +530,14 @@ def _merge_related(clusters, window_hours=18):
         if abs((x["published"] - y["published"]).total_seconds()) > window:
             return False
         tx, ty = x["_tok"], y["_tok"]
-        if tx and ty and len(tx & ty) / len(tx | ty) >= 0.6:
+        if tx and ty and len(tx & ty) / len(tx | ty) >= 0.6 and len(distinctive(tx & ty)) >= 2:
             return True
         px, py = x["_prof"], y["_prof"]
         shared = px["rich"] & py["rich"]
         phrases = {b for b in px["bigrams"] & py["bigrams"] if bdf.get(b, 0) <= 4 and b not in stock}
-        if phrases and len(shared) >= 4:
+        if phrases and len(distinctive(shared)) >= 4:
             return True
-        names = px["proper"] & py["proper"] & shared
+        names = distinctive(px["proper"] & py["proper"] & shared)     # "Walnut Hills" alone isn't a shared name
         if len(names) >= 2:
             w = lambda S: sum(idf.get(t, 0) for t in S)
             return w(shared) / max(1e-9, min(w(px["rich"]), w(py["rich"]))) >= 0.4
