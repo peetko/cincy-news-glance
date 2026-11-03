@@ -84,7 +84,7 @@ def tokens(title):
     out = set()
     for w in words:
         w = w.strip("'")
-        if len(w) < 3 or w in STOPWORDS:
+        if (len(w) < 3 and not (len(w) == 2 and w.isdigit())) or w in STOPWORDS:   # keep ages/counts like "20", "44"
             continue
         if w.endswith("ies") and len(w) > 4:
             w = w[:-3] + "y"
@@ -413,7 +413,11 @@ def distinctive(shared):
 def same_story(a_tokens, b_tokens):
     if not a_tokens or not b_tokens:
         return False
-    if len(distinctive(a_tokens & b_tokens)) < 2:
+    # Two specific shared words, or one plus the same place ("20" + "Norwood"). A place with only
+    # crime words ("Walnut Hills shooting") isn't enough: different incidents, same neighborhood.
+    shared_all = a_tokens & b_tokens
+    specific = distinctive(shared_all)
+    if len(specific) < 2 and not (specific and shared_all & place_words()):
         return False
     shared = len(a_tokens & b_tokens)
     jaccard = shared / len(a_tokens | b_tokens)

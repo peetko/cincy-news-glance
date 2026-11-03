@@ -509,6 +509,26 @@
    "a": "Council budget committee takes up mid-year spending adjustments",
    "b": "Planning Commission schedules hearing on West End housing plan",
    "expect": false
+  },
+  {
+   "a": "Coroner: 20-year-old woman dies after Norwood shooting",
+   "b": "Norwood shooting leaves 20-year-old woman dead, officials say",
+   "expect": true
+  },
+  {
+   "a": "Police investigating shooting near high school in East Walnut Hills",
+   "b": "Man arrested in deadly Walnut Hills shooting that happened in spring, police say",
+   "expect": false
+  },
+  {
+   "a": "Arrest made in Cincinnati fatal shooting from 5 months ago",
+   "b": "Arrest made in fatal shooting of woman in Cincinnati neighborhood",
+   "expect": false
+  },
+  {
+   "a": "PD: 44 arrested in citywide Halloween night violence that left 1 dead, 2 officers injured",
+   "b": "Police: 2 arrested in connection with assault on officers during Halloween night violence",
+   "expect": true
   }
  ],
  "grouping": [
