@@ -634,6 +634,92 @@
      4
     ]
    ]
+  },
+  {
+   "note": "Nov 3, 2026: one shooting story had swallowed Halloween stories, a May shooting and a Taco Bell robbery (groups compared on pooled words). These must stay apart.",
+   "items": [
+    {
+     "title": "18-year-old shot, killed after 'horseplay' incident with gun; 19-year-old arrested",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/apart-0",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-03T20:33:00+00:00"
+    },
+    {
+     "title": "Cincinnati police make second arrest after 2 officers assaulted in Corryville",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/apart-1",
+     "outlet": "WCPO",
+     "first_seen": "2026-11-02T14:25:15+00:00"
+    },
+    {
+     "title": "Suspect charged with beating attack on Cincinnati police officer",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/apart-2",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-02T14:25:15+00:00"
+    },
+    {
+     "title": "PD: 44 arrested in citywide Halloween night violence that left 1 dead, 2 officers injured",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/apart-3",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-02T14:25:15+00:00"
+    },
+    {
+     "title": "Police: 2 arrested in connection with assault on officers during Halloween night violence",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/apart-4",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-02T14:25:15+00:00"
+    },
+    {
+     "title": "Chaotic Halloween: Fatal shooting, assaults, fireworks and 2 Cincinnati officers hurt",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/apart-5",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-02T14:25:15+00:00"
+    },
+    {
+     "title": "Arrest made in Cincinnati fatal shooting from 5 months ago",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/apart-6",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-02T14:25:15+00:00"
+    },
+    {
+     "title": "Arrest made in fatal shooting of woman in Cincinnati neighborhood",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/apart-7",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-02T14:25:15+00:00"
+    },
+    {
+     "title": "Suspect arrested in Clermont County Taco Bell robbery",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/apart-8",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-02T14:25:15+00:00"
+    }
+   ],
+   "apart": [
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     8,
+     3
+    ],
+    [
+     0,
+     6
+    ]
+   ]
   }
  ]
 }

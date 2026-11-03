@@ -98,6 +98,15 @@ def main():
                   "outlet": x.get("outlet", f"o{i}"), "published": datetime.fromisoformat(x["first_seen"]), "_i": i}
                  for i, x in enumerate(case["items"])]
         got = sorted(sorted(it["_i"] for it in c["items"]) for c in collect.cluster(items))
+        name = f"grouping: {case.get('note', '')[:60]}…"
+        if "apart" in case:                       # only some pairs matter: they must not share a story
+            together = [p for p in case["apart"] if any(p[0] in g and p[1] in g for g in got)]
+            if together:
+                failures += 1
+                print(f"FAIL  {name}\n      should be separate but grouped: {together}\n      got {got}")
+            else:
+                print(f"ok    {name}")
+            continue
         groups = [sorted(g) for g in case["groups"]]
         grouped = {i for g in groups for i in g}
         expect = sorted(groups + [[i] for i in range(len(items)) if i not in grouped])

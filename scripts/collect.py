@@ -471,45 +471,48 @@ def _profile(it):
 def _merge_related(clusters, window_hours=18):
     """
     Second pass: join stories the headline check missed because outlets worded them differently
-    ("officers injured after Short Vine crowds" / "officers assaulted… near UC" / "Halloween night violence").
-    Two stories join when, within the same day, they share either
-      - two distinctive two-word phrases ("short vine", "officers injured") plus 4+ shared words, or one
-        such phrase plus 5+ shared words (a neighborhood name alone isn't enough: different crimes, same street), or
-      - 2+ names or places (Short Vine, Halloween) and a solid weighted share of their words.
-    Phrases and words that show up across many of today's stories (election, ballot…) don't count.
+    ("officers injured after Short Vine crowds" / "officers assaulted… near UC").
+    Two groups join only when one article in each matches the other article directly, within the
+    same day — never on a group's pooled words, which grow with every join until they match
+    anything (Nov 3: a shooting story swallowed Halloween stories and a Taco Bell robbery).
+    A pair of articles matches when they have
+      - nearly the same headline (the same story arriving twice, via an outlet and via Google), or
+      - a distinctive two-word phrase in common ("officers assaulted", "short vine") plus 4+ shared words, or
+      - 2+ names or places in common and a solid weighted share of their words.
+    Phrases that recur daily (City terms, neighborhood names) or that show up across many of today's
+    groups don't count, and neither do generic words ("year-old", "election").
     """
     for c in clusters:
-        profs = [_profile(it) for it in c["items"]]
-        c["_rich"] = set().union(*(p["rich"] for p in profs))
-        c["_proper"] = set().union(*(p["proper"] for p in profs))
-        c["_bigrams"] = set().union(*(p["bigrams"] for p in profs))
-        c["_t0"] = min(it["published"] for it in c["items"])
+        for it in c["items"]:
+            if "_prof" not in it:
+                it["_prof"] = _profile(it)
     n = len(clusters)
     df, bdf = {}, {}
     for c in clusters:
-        for t in c["_rich"]:
+        for t in set().union(*(it["_prof"]["rich"] for it in c["items"])):
             df[t] = df.get(t, 0) + 1
-        for b in c["_bigrams"]:
+        for b in set().union(*(it["_prof"]["bigrams"] for it in c["items"])):
             bdf[b] = bdf.get(b, 0) + 1
     idf = {t: math.log((n + 1) / (k + 0.5)) for t, k in df.items()}
     stock = stock_phrases()
+    window = window_hours * 3600
 
-    def related(a, b):
-        if abs((a["_t0"] - b["_t0"]).total_seconds()) > window_hours * 3600:
+    def pair(x, y):
+        if abs((x["published"] - y["published"]).total_seconds()) > window:
             return False
-        # Any one headline here closely matches one there (the first pass compares against a whole
-        # group's words, which a big group can drown out: the same FOX19 headline ended up in two groups).
-        if any(same_story(x["_tok"], y["_tok"]) for x in a["items"] for y in b["items"]):
+        tx, ty = x["_tok"], y["_tok"]
+        if tx and ty and len(tx & ty) / len(tx | ty) >= 0.6:
             return True
-        shared = a["_rich"] & b["_rich"]
-        # A big story is often split across 3-4 groups by the first pass, so a phrase can show up that often.
-        phrases = {p for p in a["_bigrams"] & b["_bigrams"] if bdf.get(p, 0) <= 4 and p not in stock}
-        if (len(phrases) >= 2 and len(shared) >= 4) or (phrases and len(shared) >= 5):
+        px, py = x["_prof"], y["_prof"]
+        shared = px["rich"] & py["rich"]
+        phrases = {b for b in px["bigrams"] & py["bigrams"] if bdf.get(b, 0) <= 4 and b not in stock}
+        if phrases and len(shared) >= 4:
             return True
-        names = a["_proper"] & b["_proper"] & shared
-        w = lambda S: sum(idf.get(t, 0) for t in S)
-        overlap = w(shared) / max(1e-9, min(w(a["_rich"]), w(b["_rich"])))
-        return len(names) >= 2 and overlap >= 0.4
+        names = px["proper"] & py["proper"] & shared
+        if len(names) >= 2:
+            w = lambda S: sum(idf.get(t, 0) for t in S)
+            return w(shared) / max(1e-9, min(w(px["rich"]), w(py["rich"]))) >= 0.4
+        return False
 
     merged = True
     while merged:
@@ -517,22 +520,19 @@ def _merge_related(clusters, window_hours=18):
         for i in range(len(clusters)):
             for j in range(i + 1, len(clusters)):
                 a, b = clusters[i], clusters[j]
-                if related(a, b):
+                if any(pair(x, y) for x in a["items"] for y in b["items"]):
                     for it in b["items"]:
                         if not (it.get("link") and any(x["link"] == it["link"] for x in a["items"])):
                             a["items"].append(it)
                     a["_tok"] |= b["_tok"]
-                    for k in ("_rich", "_proper", "_bigrams"):
-                        a[k] |= b[k]
-                    a["_t0"] = min(a["_t0"], b["_t0"])
                     del clusters[j]
                     merged = True
                     break
             if merged:
                 break
     for c in clusters:
-        for k in ("_rich", "_proper", "_bigrams", "_t0"):
-            c.pop(k, None)
+        for it in c["items"]:
+            it.pop("_prof", None)
     return clusters
 
 
@@ -541,7 +541,9 @@ def cluster(items):
     clusters = []
     for it in sorted(items, key=lambda x: x["published"]):
         it["_tok"] = tokens(it["title"])
-        home = next((c for c in clusters if same_story(it["_tok"], c["_tok"])), None)
+        # Compare with each headline already in a group, not the group's pooled words: a pool grows
+        # with every join until it matches unrelated stories ("shooting", "arrested", "election").
+        home = next((c for c in clusters if any(same_story(it["_tok"], x["_tok"]) for x in c["items"])), None)
         if home is None:
             clusters.append({"items": [it], "_tok": set(it["_tok"])})
         else:
