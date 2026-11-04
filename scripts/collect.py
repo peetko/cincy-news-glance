@@ -391,6 +391,18 @@ women people person dead deadly death die died dy charged charge suspect crash i
 investigating investigate investigation year old teen boy girl involved connection""".split())
 
 
+# Same idea for election coverage (Nov 4: "Democrat … wins race", "election results, Nov. 3",
+# "levy passes" chained 83 different election stories into one).
+ELECTION_STOCK = set("""election elect elected reelection win won winner race result live update nov day night democrat
+democratic republican gop defeat beat seat vote voted voter ballot district congressional statewide victory claim
+concede lead narrow projected project call poll levy pass passe fail flip incumbent candidate general midterm
+issue amendment measure office map county state did across""".split())
+
+# Words in a large share of this run's headlines (set in cluster()): on a big event day they're
+# everywhere, so sharing one proves nothing. A single big story stays well below this share.
+COMMON_SHARE = 0.12
+COMMON_TODAY = set()
+
 _PLACE_WORDS = None
 
 
@@ -408,7 +420,7 @@ def place_words():
 
 def distinctive(shared):
     """Shared words that actually point at one story: not crime vocabulary, not a neighborhood name."""
-    return shared - CRIME_STOCK - place_words()
+    return shared - CRIME_STOCK - ELECTION_STOCK - COMMON_TODAY - place_words()
 
 
 def same_story(a_tokens, b_tokens):
@@ -499,7 +511,7 @@ def _profile(it):
     seq = _content_words(it["title"]) + ["|"] + _content_words(_slug_text(it.get("link")))
     return {"rich": tokens(text), "proper": _proper_words(it["title"]),
             "bigrams": {(a, b) for a, b in zip(seq, seq[1:])
-                        if "|" not in (a, b) and a != b and not ({a, b} & (PHRASE_GENERIC | CRIME_STOCK))}}
+                        if "|" not in (a, b) and a != b and not ({a, b} & (PHRASE_GENERIC | CRIME_STOCK | ELECTION_STOCK))}}
 
 
 def _merge_related(clusters, window_hours=18):
@@ -572,6 +584,12 @@ def _merge_related(clusters, window_hours=18):
 
 def cluster(items):
     """Greedy grouping: each headline joins the first story it closely matches; then a looser second pass."""
+    global COMMON_TODAY
+    df = {}
+    for it in items:
+        for t in tokens(it["title"]):
+            df[t] = df.get(t, 0) + 1
+    COMMON_TODAY = {t for t, k in df.items() if k >= 15 and k / max(1, len(items)) > COMMON_SHARE}
     clusters = []
     for it in sorted(items, key=lambda x: x["published"]):
         it["_tok"] = tokens(it["title"])
@@ -753,7 +771,7 @@ def score_clusters(clusters, rules, now, memory=None):
         outlets = sorted({i["outlet"] for i in its})
         first = min(i["published"] for i in its)
         latest = max(i["published"] for i in its)
-        remembered = match_memory(c["_tok"], memory)
+        remembered = next((m for m in memory if any(same_story(i["_tok"], set(m["tok"])) for i in its)), None)
         if remembered:
             # Keep the time we first saw this story, so it can't come back as "new".
             first = min(first, datetime.fromisoformat(remembered["first_seen"]))
@@ -797,10 +815,15 @@ def score_clusters(clusters, rules, now, memory=None):
             or (bool(breaking) and len(dev_outlets) >= th["big_story_outlets"])
         )
 
-        # Headline to show: prefer a version that carries the City angle, then a local outlet's, then newest.
-        city_items = {id(it) for it in its if is_city and item_matches(it, rules)}
-        lead = sorted(its, key=lambda i: (id(i) not in city_items, i["outlet"] not in rules.local_outlets,
-                                          -i["published"].timestamp()))[0]
+        # Headline to show: one that's typical of the group (matches many of its other headlines), and
+        # among those prefer the City angle, then a local outlet's, then the newest. A one-off headline
+        # that happens to name a Council member shouldn't title a story that's mostly about levies.
+        links = {id(i): sum(1 for j in its if j is not i and same_story(i["_tok"], j["_tok"])) for i in its}
+        top = max(links.values()) if links else 0
+        typical = [i for i in its if links[id(i)] >= top / 2] or its
+        city_items = {id(it) for it in typical if is_city and item_matches(it, rules)}
+        lead = sorted(typical, key=lambda i: (id(i) not in city_items, i["outlet"] not in rules.local_outlets,
+                                              -i["published"].timestamp()))[0]
         stories.append({
             "id": re.sub(r"[^a-z0-9]+", "-", lead["title"].lower())[:60].strip("-"),
             "title": lead["title"],
@@ -832,7 +855,8 @@ def score_clusters(clusters, rules, now, memory=None):
                 "remembered": bool(remembered), "downweighted": down < 1,
                 "versions": [[i["outlet"], i["title"]] for i in its][:40],
             },
-            "_tok": sorted(c["_tok"]),
+            "_tok": sorted(lead["_tok"]),                     # the shown headline's words (memory, lead stability)
+            "_item_toks": [sorted(i["_tok"]) for i in its],
             "_age_h": age_h,
             # Keep it if it's local, a City-relevant law, or a local outlet's story that uses City words
             # ("Council budget committee takes up…") even when it names no place.
@@ -859,7 +883,8 @@ def pick_lead(candidates, rank_key, prev_lead, margin):
         return None, "no candidates"
     best = max(candidates, key=lambda s: s[rank_key])
     if prev_lead:
-        incumbent = next((s for s in candidates if same_story(set(s["_tok"]), set(prev_lead["tok"]))), None)
+        incumbent = next((s for s in candidates
+                          if any(same_story(set(t), set(prev_lead["tok"])) for t in s.get("_item_toks", [s["_tok"]]))), None)
         if incumbent and incumbent is not best and best[rank_key] < incumbent[rank_key] * margin:
             return incumbent, f"kept previous lead (challenger {best[rank_key]:.2f} < {margin}× {incumbent[rank_key]:.2f})"
         if incumbent is best:
@@ -1355,6 +1380,7 @@ def build(cfg, now=None, previous=None):
     }
     for s in stories:
         s.pop("_tok", None)
+        s.pop("_item_toks", None)
 
     return {
         "generated_at": now.isoformat(),

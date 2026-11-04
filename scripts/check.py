@@ -99,11 +99,14 @@ def main():
                  for i, x in enumerate(case["items"])]
         got = sorted(sorted(it["_i"] for it in c["items"]) for c in collect.cluster(items))
         name = f"grouping: {case.get('note', '')[:60]}…"
-        if "apart" in case:                       # only some pairs matter: they must not share a story
-            together = [p for p in case["apart"] if any(p[0] in g and p[1] in g for g in got)]
-            if together:
+        if "apart" in case or "together" in case:   # only some pairs matter
+            same = lambda p: any(p[0] in g and p[1] in g for g in got)
+            wrong_apart = [p for p in case.get("apart", []) if same(p)]
+            wrong_together = [p for p in case.get("together", []) if not same(p)]
+            if wrong_apart or wrong_together:
                 failures += 1
-                print(f"FAIL  {name}\n      should be separate but grouped: {together}\n      got {got}")
+                print(f"FAIL  {name}\n      should be separate but grouped: {wrong_apart}"
+                      f"\n      should be one story but split: {wrong_together}\n      got {got}")
             else:
                 print(f"ok    {name}")
             continue

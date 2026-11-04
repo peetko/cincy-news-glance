@@ -487,6 +487,22 @@
     "junk": false,
     "city": true
    }
+  },
+  {
+   "note": "Sportsbook affiliate promo, not news (Nov 4)",
+   "title": "ProphetX promo code CINCY offers $40 in bonus for NFL, NBA, college football & more",
+   "outlet": "Enquirer",
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "note": "Sportsbook referral ad, not news (Nov 4)",
+   "title": "Kalshi referral code CINCY | $25 bonus for NFL, NBA & more",
+   "outlet": "Enquirer",
+   "expect": {
+    "junk": true
+   }
   }
  ],
  "same_story": [
@@ -738,6 +754,240 @@
     [
      0,
      6
+    ]
+   ]
+  },
+  {
+   "note": "Nov 4, 2026 election night: 83 election stories had chained into one titled 'Meeka Owens…' via generic words (wins race, election results, levy passes). Each race/levy is its own story.",
+   "items": [
+    {
+     "title": "Democrat Meeka Owens wins race for Hamilton County Commissioner",
+     "summary": "Democrat and Cincinnati City Council member Meeka Owens has won the race for the open Hamilton County Commissioner race, according to WCPO projections.",
+     "link": "https://www.wcpo.com/news/government/elections-local/democrat-meeka-owens-wins-race-for-hamilton-county-commissioner",
+     "outlet": "WCPO",
+     "first_seen": "2026-11-04T05:01:22+00:00"
+    },
+    {
+     "title": "Meeka Owens win Hamilton County Commission seat",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQZTJCdkVHM3NiRUVUU0FmVzIyMUY0a0hwcVRYX1k5eWpsdjFQZWxxTHdEbTEzaXBfamRPMGFzZDQzUURWTGM3aTFodlI5VEswT3J3RUlGd2JmUlRycGFUcWo5akRLOTFSZF9Wek1iMkFSZ0VXR1pBYldCSXpnenlUcFlBdG9LMG5LNUdWMmJGTnoxWGFVeFhRR1ZWWHljZ3dYTU5nV2t0RW04OEpNSHY5ZDBPcEkwQQ?oc=5",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-04T05:22:00+00:00"
+    },
+    {
+     "title": "Meeka Owens wins seat on Hamilton County Commission",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGZ5eDEyMy1JZkIxUURoeWdSaFpnVVpHdXZ5Mm9jZkM3c3RFdlQ3Mk14OTU1ZkY5aGtBUmhKcjRBLW5fU0F5Vno2V2JtMHpaLWoxNGtiT0pIcW9memJsT2lNamtTY0xXRE9yUFowN2swdFlZcU9vZWNPdmRiMUsxdjRxQ21UeTJVMzNWZmd1dFhNZ3YyLTdr?oc=5",
+     "outlet": "WVXU",
+     "first_seen": "2026-11-04T04:48:00+00:00"
+    },
+    {
+     "title": "Owens wins race for Hamilton County Commissioner",
+     "summary": "In Hamilton County, it was a seat on the commissioners board that was up for grabs.",
+     "link": "https://local12.com/news/local/wins-race-hamilton-county-commissioner-commissioners-board-meeka-owens-democrat-democratic-city-council-member-republican-gop-johnathon-pearson-fairfax-business-owner-stadium-deals-prices-infrastructure-taxes",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-04T05:24:45+00:00"
+    },
+    {
+     "title": "Hamilton County Children's Services levy passes",
+     "summary": "Though an increase, the levy request was scaled back from the amount a review found is needed to continue providing mandated services.",
+     "link": "https://www.wvxu.org/local-news/2026-11-03/hamilton-county-childrens-services-levy-passes",
+     "outlet": "WVXU",
+     "first_seen": "2026-11-04T04:41:19+00:00"
+    },
+    {
+     "title": "Hamilton County children's services levy projected to pass",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNeXM2VnJSMlY5aDdLTFhZU3poLVRrT2VxS25kbkd0NUJuTUxEZFgtY3FQalNfdWY0bGZ2cWl1UjRaTldjZmxKV2FmdHpaUWN4bDZpRFY2YmlsVVVNZllKdnhmRURxeGRKdnRhMlBTdTBwQXJhYkhzWUZXNVZXSHZvNWxoNmxET0ZDcG8yUkZXeGtoeV9DSHdBem9qMmlJOGg3YUNtRmVLTXFaQm5HbFRCZzc3OUhjQUxHZGF1MG4tQmlRYjFOR1hUd0t1MGg?oc=5",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-04T03:55:00+00:00"
+    },
+    {
+     "title": "Issue 10 passes in Hamilton County; will raise property taxes to fund children's services",
+     "summary": "Hamilton County voters decided whether to raise property taxes to fund county children’s services through a levy known as Issue 10 on Tuesday.",
+     "link": "https://local12.com/news/local/issue-10-hamilton-county-will-raise-property-taxes-fund-childrens-services-pass-passed-fail-voting-tax-taxpayers-homeowners-jobs-family-service-cincinnati-ohio",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-04T06:27:38+00:00"
+    },
+    {
+     "title": "CPS school levy passes; here's what it means for the district",
+     "summary": "% of the vote in, the levy has passed, with 61% of voters supporting the measure.",
+     "link": "https://local12.com/news/local/cincinnati-public-schools-levy-controversy-controversial-opinions-money-cost-price-taxes-taxpayers-voting-voters-midterm-november-ballot-election-cps-cuts-layoffs-budget-hamilton-county-ohio",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-04T04:31:19+00:00"
+    },
+    {
+     "title": "Critical property tax levy for Cincinnati Public Schools passes",
+     "summary": "Cincinnati voters passed the increased property tax levy for Cincinnati Public Schools, helping the district fill a projected $44 million budget deficit.",
+     "link": "https://www.fox19.com/2026/11/04/critical-property-tax-levy-cincinnati-public-schools-passes/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-04T04:54:38+00:00"
+    },
+    {
+     "title": "Voters pass Cincinnati Public Schools’ $66.3M school levy",
+     "summary": "Cincinnati Public Schools had its first operating levy in nearly a decade passed Tuesday as residents voted to pass a $66.3 million property tax levy.",
+     "link": "https://www.wcpo.com/news/government/elections-local/voters-pass-cincinnati-public-schools-66-3m-school-levy",
+     "outlet": "WCPO",
+     "first_seen": "2026-11-04T04:55:57+00:00"
+    },
+    {
+     "title": "Democrat Amy Acton wins race for Ohio governor",
+     "summary": "Democrat Dr. Amy Acton has won Ohio’s race for governor according to unofficial election results. The Associated Press called the race at 10:49 p.m. Acton’s win marks the first time in 20 years that Ohio voters have selected a Democrat to l",
+     "link": "https://ohiocapitaljournal.com/2026/11/03/democrat-amy-acton-wins-race-for-ohio-governor-the-associated-press-projects/",
+     "outlet": "Ohio Capital Journal",
+     "first_seen": "2026-11-04T03:49:25+00:00"
+    },
+    {
+     "title": "Amy Acton becomes the first female governor-elect in Ohio history",
+     "summary": "Acton becomes the first woman governor-elect and first Democrat in more than a decade",
+     "link": "https://www.fox19.com/2026/11/04/amy-acton-elected-ohios-71st-governor/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-04T03:50:23+00:00"
+    },
+    {
+     "title": "Ohio elects Amy Acton first woman governor",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZ1hPbDU3SWZyM1BETlZKWlluZzFObDJYc0NrMW5lNzNqNDY2RGY3c2tsTHVhTzR2Wm5wZXpRYUI5cVhtMmVtMzI3d3NNaGlFZ3ZlNnN1cVNxTlBWbEtsRlZOMWNTSmJCNng5M3lHanFTbWV5a2lLb2Z0cFhuaFNWcXdJLU0yemhVejlINjM5VlIzanhI?oc=5",
+     "outlet": "WVIK, Quad Cities NPR",
+     "first_seen": "2026-11-04T04:14:38+00:00"
+    },
+    {
+     "title": "Democrat Sherrod Brown wins Ohio U.S. Senate race",
+     "summary": "Democrat Sherrod Brown has defeated Republican Jon Husted in Ohio’s U.S. Senate special election, a result that will shape the state’s representation in Washington, AP projects.",
+     "link": "https://www.wlwt.com/article/sherrod-brown-wins-ohio-us-senate-seat-election/74327476",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-04T14:31:00+00:00"
+    },
+    {
+     "title": "Ohio Democrat Sherrod Brown wins U.S. Senate seat in comeback election",
+     "summary": "The populist Democrat, who lost a Senate seat in 2024, knocked off Trump-backed Republican Jon Husted in a campaign where affordability issues and data center expansion played heavily. The seat is up for re-election in 2028. The post Ohio D",
+     "link": "https://signalcincinnati.org/2026/11/03/ohio-democrat-sherrod-brown-makes-comeback-with-senate-win/",
+     "outlet": "Signal",
+     "first_seen": "2026-11-04T04:12:45+00:00"
+    },
+    {
+     "title": "Ohio state and federal election results, Nov. 3",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxONkp0RXhXMmY3MGZld191bU1ocTU1V1M4MFZ0MEdVbUJVSE5fQTlMWVFBNUFMaExqMktOdzFfSktoZ3RDM3p6OWdxRDVNU3QtNEoxazNLbzVVanl1UWVOVERDaEc2YjViUGl4UU9mb1BFaHljZVlmeUw2M25iRTVVRVM1ckV2Z3ZIemgyMjFQcW5POTZYOUNSQVRDZk9jU0ItUjdxN0FCaW4zakVaU3M4c1lmYVdoNFNhWm11NGxHMjVTZEE?oc=5",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-04T00:06:00+00:00"
+    },
+    {
+     "title": "Election Day 2026: Races & Results",
+     "summary": "Local 12 is keeping you informed with up-to-date election results",
+     "link": "https://local12.com/news/local/midterms-2026-election-day-races-results-ohio-kentucky-indiana-congress-america-government",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-03T23:25:54+00:00"
+    },
+    {
+     "title": "Complete election results for OH, KY and IN",
+     "summary": "Check here for live results as they come in",
+     "link": "https://www.fox19.com/2026/11/03/complete-election-results-oh-ky/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-03T23:59:18+00:00"
+    },
+    {
+     "title": "Kentucky Amendment 1 election results, Nov. 3, 2026",
+     "summary": "",
+     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNMkdPYVh1SjBFd3V1T1ZqUE00UGNZb2trZFBaam9Nbkd6MEpwU012LXFHMFlfbWJPbFc4R1NSMFRBVU82dE15dTNfTVlzWW1tQ2d4TlJJaGl3Q2lkYUg1TDc1SmNEQWh4ZllBRGZiYUVwMmRUNHE3RVFuQVhuSWtpTFZhcTBlTEVEMFVmc0lidTJ4X2VybkNfMzRYN1ZibE1EOTVKYWdoMkQ2cVFtZnNacTlGUndkUHU5dEk0VF9jWm1DSXE4RmdkSU01aHZPTDVnZnhJOQ?oc=5",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-03T17:04:00+00:00"
+    }
+   ],
+   "together": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     7,
+     9
+    ],
+    [
+     10,
+     12
+    ],
+    [
+     13,
+     14
+    ]
+   ],
+   "apart": [
+    [
+     0,
+     4
+    ],
+    [
+     0,
+     7
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     13
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     4,
+     10
+    ],
+    [
+     4,
+     13
+    ],
+    [
+     7,
+     10
+    ],
+    [
+     7,
+     13
+    ],
+    [
+     10,
+     13
+    ],
+    [
+     0,
+     15
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     0,
+     17
+    ],
+    [
+     0,
+     18
     ]
    ]
   }
