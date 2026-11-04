@@ -34,6 +34,7 @@ import feedparser
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = ROOT / "config.json"
 OUT_PATH = ROOT / "site" / "news.json"
+RAW_PATH = ROOT / "debug" / "items.json"      # not inside site/, so it isn't published
 
 USER_AGENT = "cincy-news-glance/1.1 (personal ambient news display; github.com)"
 TIMEOUT = 20
@@ -829,7 +830,7 @@ def score_clusters(clusters, rules, now, memory=None):
                 "local": is_local, "ohio": is_ohio,
                 "breaking_word": breaking, "newsrooms_for_alert": dev_outlets,
                 "remembered": bool(remembered), "downweighted": down < 1,
-                "versions": [[i["outlet"], i["title"]] for i in its][:8],
+                "versions": [[i["outlet"], i["title"]] for i in its][:40],
             },
             "_tok": sorted(c["_tok"]),
             "_age_h": age_h,
@@ -1292,6 +1293,15 @@ def build(cfg, now=None, previous=None):
     bodies = [b for b in meetings.get("bodies", []) if "&" in b or len(b.split()) >= 4]
 
     items, status = collect_items(cfg, now)
+    # The exact articles this run grouped, for replaying a bad grouping offline (saved to the
+    # "data" branch only, never published with the page).
+    try:
+        RAW_PATH.parent.mkdir(parents=True, exist_ok=True)
+        RAW_PATH.write_text(json.dumps([{k: (v.isoformat() if isinstance(v, datetime) else v)
+                                         for k, v in i.items() if not k.startswith("_") or k in ("_google", "_official", "_narrow")}
+                                        for i in items], indent=0))
+    except Exception:
+        pass
     status.append({"source": "City meetings (Legistar)", "ok": meetings.get("ok", False),
                    "items": len(meetings.get("meetings") or []), "used": meetings.get("used"),
                    "error": meetings.get("error")})

@@ -59,9 +59,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          mkdir -p /tmp/data && cp site/news.json /tmp/data/news.json && cd /tmp/data
+          mkdir -p /tmp/data && cp site/news.json /tmp/data/news.json && (cp debug/items.json /tmp/data/items.json || true) && cd /tmp/data
           git init -q -b data
-          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" add news.json
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" add -A
           git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -qm "Latest results"
           git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" data
 

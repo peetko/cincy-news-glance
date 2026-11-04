@@ -1,3 +1,4 @@
 site/news.json
 __pycache__/
 *.pyc
+debug/
