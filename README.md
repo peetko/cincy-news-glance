@@ -107,6 +107,10 @@ Edit it right in GitHub: open the file, click the pencil icon, then **Commit cha
 
 **The safety net:** before every publish, GitHub runs `scripts/check.py`, which checks every case in `tests/cases.json`. If an edit breaks one, the run stops, the screen keeps its last good version, and GitHub emails you about the failed run. Click into the failed run on the Actions tab to see which case failed and why.
 
+## Morning review (automatic)
+
+A scheduled Claude session reviews each weekday morning's results and tunes the rules. Small list additions (each with a new test, all checks passing) go straight in; anything bigger comes as a pull request (branch `review/YYYY-MM-DD`) for you to merge. Its instructions are in [REVIEW.md](REVIEW.md). Edit that file to change what it looks for or what it's allowed to change. `python3 scripts/review.py news.json items.json` prints the same report it reads.
+
 ## How a story is scored
 
 - Headlines about the same event are grouped, even when each outlet words them differently.
