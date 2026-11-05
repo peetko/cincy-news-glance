@@ -503,6 +503,26 @@
    "expect": {
     "junk": true
    }
+  },
+  {
+   "note": "Evergreen City guidelines page, not news (was in City Hall Nov 5)",
+   "title": "CONSERVATION GUIDELINES: NORTH AVONDALE HISTORIC DISTRICT",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "note": "Untitled City spreadsheet page, not news (Nov 5)",
+   "title": "Sheet1 - cincinnati-oh.gov",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": true
+   }
   }
  ],
  "same_story": [
