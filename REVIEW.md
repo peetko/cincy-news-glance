@@ -20,6 +20,11 @@ repo is public, so never add non-public City information.
 - Dropped as junk: obituaries and name-only headlines, press releases, car listings, sportsbook promos,
   the City website's meeting paperwork (dockets, agendas, date-stamped pages), untitled or login pages.
 - Other towns (Hamilton, Delhi Township, Norwood…) are not City of Cincinnati.
+- City website pages count only from the City's news section (cincinnati-oh.gov/cityofcincinnati/news).
+  Pages from elsewhere on the site (events, programs, park and guideline pages, closure notices) are
+  informational, not stories, and are dropped by code (`official_news_section_only`). There is no
+  whole-site backup; an empty news section is a quiet day, not a failing source. If one of these pages
+  shows up anyway, fix it (Peter's call, Nov 5).
 - Enquirer comes from its newsroom-only feed. Google News items must name somewhere local.
 - Grouping: crime vocabulary, election vocabulary, neighborhood names, and words common in that day's
   headlines never prove two headlines are the same story. Groups join article-to-article, never on
@@ -49,7 +54,7 @@ repo is public, so never add non-public City information.
 
 - **Wrong City Hall label.** Other towns, county-only items, or national stories labeled City Hall.
   Also: is a City story missing its label?
-- **Not news.** Evergreen City web pages (event pages, guidelines, program pages with no news hook),
+- **Not news.** Any City web page from outside the City's news section (event, program, park, guideline or closure pages),
   ads, promos, listings, obituaries, paperwork. Real news wrongly dropped (check the "Dropped as junk" list).
 - **Grouping.** One story split across entries (same event, different wording), or different stories
   merged (look for groups whose headlines are about different people, places or events).

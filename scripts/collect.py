@@ -179,6 +179,10 @@ def is_junk(item, cfg):
         return True
     if cfg.get("exclude", {}).get("drop_press_releases", True) and looks_like_press_release(item, cfg):
         return True
+    # City website pages count only from the City's news section. Pages from elsewhere on the site
+    # (events, programs, park and guideline pages, closure notices) are informational, not stories.
+    if item.get("_official") and not item.get("_narrow") and ex.get("official_news_section_only", True):
+        return True
     # Meeting paperwork from the City's own site ("Zoning Hearing Examiner Docket 11.04.26").
     if item.get("_official"):
         if any(term_regex(t).search(title) for t in ex.get("official_paperwork_terms", [])):
@@ -240,6 +244,7 @@ def collect_items(cfg, now):
     all_items, status = [], []
     for src in cfg["sources"]:
         got, used, errors, dropped, dropped_titles = [], None, [], 0, []
+        fetched = False          # reached a feed, even if it had nothing new
         candidates = list(src.get("feeds", []))
         if src.get("fallback"):
             candidates.append(src["fallback"])
@@ -248,6 +253,7 @@ def collect_items(cfg, now):
                 data = fetch(url)
                 narrow = bool(re.search(r"site:[a-z0-9.-]+/[a-z]", url))     # e.g. site:cincinnati.com/story
                 items = parse_feed(data, src["name"], "news.google.com" in url, alias_pairs, now, src.get("official", False), narrow)
+                fetched = True
                 kept = [i for i in items if not is_junk(i, cfg)]
                 dropped = len(items) - len(kept)
                 dropped_titles = [i["title"] for i in items if is_junk(i, cfg)][:12]
@@ -259,8 +265,10 @@ def collect_items(cfg, now):
                 errors.append(f"empty: {url}")
             except Exception as ex:  # network errors, bad XML, etc.
                 errors.append(f"{type(ex).__name__}: {url}")
+        # "empty_ok" sources (the City's news section) often have nothing new: a quiet day, not a failure.
+        ok = bool(got) or (bool(src.get("empty_ok")) and fetched)
         status.append({
-            "source": src["name"], "ok": bool(got), "items": len(got), "junk_dropped": dropped,
+            "source": src["name"], "ok": ok, "items": len(got), "junk_dropped": dropped,
             "junk_examples": dropped_titles,
             "used": used, "used_fallback": bool(used and used == src.get("fallback")), "errors": errors[:3],
         })

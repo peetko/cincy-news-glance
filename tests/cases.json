@@ -128,13 +128,13 @@
    }
   },
   {
-   "note": "A City road-closure release must not be dropped as a press release",
+   "note": "Peter's call (Nov 5): a closure page from elsewhere on the City website is not a story (was: must not be dropped as a press release)",
    "title": "Taft Road and Collins Ave. Closed 10/9 through 10/12",
    "outlet": "City of Cincinnati",
    "google": true,
    "official": true,
    "expect": {
-    "junk": false
+    "junk": true
    }
   },
   {
@@ -298,14 +298,13 @@
    }
   },
   {
-   "note": "A City events page in Title Case is not an obituary — caught Oct 29",
+   "note": "Peter's call (Nov 5): a City events page from elsewhere on the City website is not a story (was: kept, caught Oct 29)",
    "title": "Krohn Conservatory Holiday Show Events",
    "outlet": "City of Cincinnati",
    "google": true,
    "official": true,
    "expect": {
-    "junk": false,
-    "city": true
+    "junk": true
    }
   },
   {
@@ -470,13 +469,13 @@
    }
   },
   {
-   "note": "A real City program announcement stays",
+   "note": "Peter's call (Nov 5): a City program page from elsewhere on the City website is not a story (was: kept)",
    "title": "Greater Cincinnati Area One Health Collaborative Medication Take Back Program",
    "outlet": "City of Cincinnati",
    "google": true,
    "official": true,
    "expect": {
-    "junk": false
+    "junk": true
    }
   },
   {
@@ -522,6 +521,91 @@
    "official": true,
    "expect": {
     "junk": true
+   }
+  },
+  {
+   "note": "The same item from the City's news section stays: A City road-closure release must not be dropped as a press release",
+   "title": "Taft Road and Collins Ave. Closed 10/9 through 10/12",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": false
+   },
+   "narrow": true
+  },
+  {
+   "note": "The same item from the City's news section stays: A City events page in Title Case is not an obituary — caught Oct 29",
+   "title": "Krohn Conservatory Holiday Show Events",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": false,
+    "city": true
+   },
+   "narrow": true
+  },
+  {
+   "note": "The same item from the City's news section stays: A real City program announcement stays",
+   "title": "Greater Cincinnati Area One Health Collaborative Medication Take Back Program",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": false
+   },
+   "narrow": true
+  },
+  {
+   "note": "Page from elsewhere on the City website, not a story: Peter's call (Nov 5)",
+   "title": "Mt. Storm Conservation",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "note": "Page from elsewhere on the City website, not a story: Peter's call (Nov 5)",
+   "title": "A Spider's Gift: Mindfulness Walk",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "note": "Page from elsewhere on the City website, not a story: Peter's call (Nov 5)",
+   "title": "Stay Cool Cincy",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "note": "Page from elsewhere on the City website, not a story: Peter's call (Nov 5)",
+   "title": "DAV 5K Street Closures",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "expect": {
+    "junk": true
+   }
+  },
+  {
+   "note": "A City release from the news section is still kept (Nov 5 rule only drops pages from elsewhere on the site)",
+   "title": "Mt. Storm Conservation",
+   "outlet": "City of Cincinnati",
+   "google": true,
+   "official": true,
+   "narrow": true,
+   "expect": {
+    "junk": false
    }
   }
  ],
