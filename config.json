@@ -157,7 +157,7 @@
     "url_terms": ["/login", "insights.cincinnati-oh.gov", "/obituaries", "obituaries.", "legacy.com", "/obits/", "/press-release/", "vehiclesforsale", "/shop-vehicles"],
     "_official_paperwork_readme": "City-website items that are meeting paperwork, not news (the day's meetings already show under TODAY AT CITY HALL). Only applied to the City's own site; news stories that mention an agenda are kept. Also dropped: City items whose headline ends in a date stamp like 11.04.26.",
     "official_paperwork_terms": ["docket", "agenda", "agendas", "minutes", "meeting packet", "meeting notice", "notice of meeting", "notice of public hearing", "public hearing notice", "hearing notice", "legal notice", "legal notices", "special meeting", "cancellation notice", "meeting cancelled", "meeting canceled", "bid opportunities", "request for proposals", "invitation to bid", "conservation guidelines", "sheet1"],
-    "_official_news_section_only_readme": "City website pages count only when they come from the City's news section (cincinnati-oh.gov/cityofcincinnati/news). Any other City page is dropped (Peter's call, Nov 5).",
+    "_official_news_section_only_readme": "City website pages count only when they come from the City's news section (cincinnati-oh.gov/cityofcincinnati/news). Any other City page is dropped (Peter's call, Nov 5), and so is a City page that comes in through a search sweep, since a sweep can't tell which section it came from (Nov 6).",
     "official_news_section_only": true,
     "drop_name_only_titles": true,
     "drop_press_releases": true,

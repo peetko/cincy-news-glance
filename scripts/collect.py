@@ -164,6 +164,10 @@ def looks_like_press_release(item, cfg):
 DATE_STAMP = re.compile(r"(?:\b\d{1,2}[./\-]\d{1,2}[./\-]\d{2,4}|\b\d{4}-\d{2}-\d{2})\s*$")
 
 
+CITY_SITE = re.compile(r"cincinnati-oh\.gov", re.I)
+CITY_OUTLET = re.compile(r"\s*city of cincinnati\s*(\(\.gov\))?\s*", re.I)
+
+
 def is_junk(item, cfg):
     ex = cfg.get("exclude", {})
     title, link = item["title"], item["link"].lower()
@@ -182,6 +186,12 @@ def is_junk(item, cfg):
     # City website pages count only from the City's news section. Pages from elsewhere on the site
     # (events, programs, park and guideline pages, closure notices) are informational, not stories.
     if item.get("_official") and not item.get("_narrow") and ex.get("official_news_section_only", True):
+        return True
+    # The same rule for City pages that come in through a search sweep instead of the City's own
+    # source: a sweep can't tell a news release from a notice page, and news releases already arrive
+    # through the City source (Nov 6: "Proposed Use of TIF Funds at Grant Park in Over-the-Rhine").
+    if (not item.get("_official") and ex.get("official_news_section_only", True)
+            and (CITY_SITE.search(link + " " + site) or CITY_OUTLET.fullmatch(item.get("outlet", "")))):
         return True
     # Meeting paperwork from the City's own site ("Zoning Hearing Examiner Docket 11.04.26").
     if item.get("_official"):
@@ -396,7 +406,14 @@ def is_dst(now):
 # says nothing about whether two headlines are the same incident.
 CRIME_STOCK = set("""arrest arrested arrest made fatal fatally shooting shot shoot killed kill killing police man woman men
 women people person dead deadly death die died dy charged charge suspect crash injured hurt hospitalized
-investigating investigate investigation year old teen boy girl involved connection""".split())
+investigating investigate investigation year old teen boy girl involved connection
+missing sheriff sheriff' deputy""".split())
+# Nov 6: "missing" and "sheriff" chained a missing Lockland girl, a missing Texas teen and a change
+# to Sheriff patrols in Whitewater Township into one story.
+
+# A kind of school, not its name: "Middle School" is shared by every middle school
+# (Nov 6: a Colerain Middle School visitor joined New Richmond Middle School threats).
+SCHOOL_WORDS = {"school", "middle", "high", "elementary", "academy", "junior", "senior", "prep", "preparatory"}
 
 
 # Same idea for election coverage (Nov 4: "Democrat … wins race", "election results, Nov. 3",
@@ -563,6 +580,8 @@ def _merge_related(clusters, window_hours=18):
         if phrases and len(distinctive(shared)) >= 4:
             return True
         names = distinctive(px["proper"] & py["proper"] & shared)     # "Walnut Hills" alone isn't a shared name
+        if names <= SCHOOL_WORDS and not (shared & place_words()):   # "Middle School" alone isn't either
+            names = set()
         if len(names) >= 2:
             w = lambda S: sum(idf.get(t, 0) for t in S)
             return w(shared) / max(1e-9, min(w(px["rich"]), w(py["rich"]))) >= 0.4
