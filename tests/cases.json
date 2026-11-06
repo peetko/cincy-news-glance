@@ -607,6 +607,15 @@
    "expect": {
     "junk": false
    }
+  },
+  {
+   "note": "Nov 6: a City web page that came in through the City Hall search sweep instead of the City's news section (was the City Hall lead). The sweep can't tell a news release from a notice page.",
+   "title": "Proposed Use of TIF Funds at Grant Park in Over-the-Rhine",
+   "outlet": "City of Cincinnati (.gov)",
+   "google": true,
+   "expect": {
+    "junk": true
+   }
   }
  ],
  "same_story": [
@@ -1092,6 +1101,345 @@
     [
      0,
      18
+    ]
+   ]
+  },
+  {
+   "note": "Nov 6, 2026: a missing Lockland girl, a missing Texas teen found in Symmes Township, and Sheriff patrols ending in Whitewater Township were one story (joined on 'missing', 'found', 'sheriff'); a Colerain Middle School visitor joined New Richmond Middle School threats (joined on 'Middle School'). Each is its own story. (The two Colerain headlines are one story and join in the live run, where the day's other news sets how rare 'Colerain Middle' is; this small batch can't show that, so it isn't asserted here.)",
+   "items": [
+    {
+     "title": "Missing 11-year-old autistic girl found alive, Lockland police say",
+     "summary": "Lockland police are searching for a missing 11-year-old autistic girl, the department announced Wednesday evening.",
+     "link": "https://www.wcpo.com/news/local-news/hamilton-county/lockland/lockland-police-searching-for-missing-11-year-old-girl-with-autism",
+     "outlet": "WCPO",
+     "first_seen": "2026-11-05T00:13:43+00:00"
+    },
+    {
+     "title": "Police: 11-year-old girl with autism believed to have ran away found safe in Lockland",
+     "summary": "The search started around 1 p.m. Police used a drone to search the surrounding area, including Mill Creek.",
+     "link": "https://local12.com/news/local/police-search-11-year-old-girl-with-autism-believed-have-run-away-lockland-officers-emergency-crews-mulberry-street-cincinnati-ohio-mill-creek-railroad-id",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-05T02:01:14+00:00"
+    },
+    {
+     "title": "Sheriff: Texas man arrested after being found with missing 17-year-old in Symmes Township",
+     "summary": "A registered sex offender from Texas was arrested after investigators said he was found with a missing 17-year-old girl at a Cincinnati gas station.",
+     "link": "https://www.wlwt.com/article/cincinnati-brandon-mcclerkin-arrest-17-year-old-montgomery-road/74350394",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-06T04:05:00+00:00"
+    },
+    {
+     "title": "Missing Texas teen found with sex offender after panhandling call at local gas station",
+     "summary": "Deputies determined the situation involved a 17-year-old juvenile who had been reported missing from Houston.",
+     "link": "https://local12.com/news/local/missing-texas-teen-found-with-sex-offender-after-panhandling-call-gas-station-speedway-symmes-township-teenager-juvenile-houston-panhandler-brandon-mcclerkin-charges-arrested",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-05T22:38:07+00:00"
+    },
+    {
+     "title": "Texas man arrested, found with missing teen from Houston at Hamilton County Speedway, sheriff’s office says",
+     "summary": "Deputies were called to the Speedway gas station at 12006 Montgomery Road to investigate a report of a female panhandler.",
+     "link": "https://www.fox19.com/2026/11/05/texas-man-arrested-found-with-missing-teen-houston-hamilton-county-speedway-sheriffs-office-says/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-05T22:49:37+00:00"
+    },
+    {
+     "title": "Missing Texas teen found in Symmes Twp. with sex offender, sheriff says",
+     "summary": "",
+     "link": "",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-06T00:32:00+00:00"
+    },
+    {
+     "title": "Hamilton County Sheriff’s Office to end routine patrols in Whitewater Township",
+     "summary": "Under the change, deputies will continue to respond to emergency situations, injuries, and crashes, but routine patrols and traffic enforcement will no longer be provided.",
+     "link": "https://www.fox19.com/2026/11/06/hamilton-county-sheriffs-office-end-routine-patrols-whitewater-township/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-06T02:29:47+00:00"
+    },
+    {
+     "title": "Routine service call turns into multi-state sex offender investigation in Cincinnati",
+     "summary": "Dispatchers received the initial call Thursday of a female panhandler at the Speedway gas station at 12006 Montgomery Road. Deputies then discovered the 17-year-old girl was reported missing.",
+     "link": "https://www.wcpo.com/news/local-news/routine-service-call-turns-into-multi-state-sex-offender-investigation-in-cincinnati",
+     "outlet": "WCPO",
+     "first_seen": "2026-11-05T22:48:21+00:00"
+    },
+    {
+     "title": "Tri-State township set to lose sheriff's office services for non-emergencies",
+     "summary": "WHITEWATER TOWNSHIP, Ohio (WKRC) - Whitewater Township will no longer have Hamilton County Sheriff's Office support for non-emergencies as of Jan. 1, 2027 unles",
+     "link": "https://local12.com/news/local/township-set-to-lose-sheriffs-office-services-for-non-emergencies-cincinnati-hamilton-county-whitewater-township-emergency-death-injury-theft-contract",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-04T20:47:29+00:00"
+    },
+    {
+     "title": "Hamilton County Sheriff's Office to adjust services provided in Whitewater Township. Here's why.",
+     "summary": "The Hamilton County Sheriff's Office announced Wednesday that it will be adjusting its services in Whitewater Township beginning in 2027.",
+     "link": "https://www.wcpo.com/news/local-news/hamilton-county/whitewater-township/hamilton-county-sheriffs-office-to-adjust-services-provided-in-whitewater-township-heres-why",
+     "outlet": "WCPO",
+     "first_seen": "2026-11-04T20:54:38+00:00"
+    },
+    {
+     "title": "Colerain Middle School investigating an unauthorized visitor",
+     "summary": "",
+     "link": "",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-05T21:30:45+00:00"
+    },
+    {
+     "title": "Parent got into Colerain Middle School without permission, allegedly confronted student",
+     "summary": "A Colerain Township mother came into the school after hours, the superintendent confirmed, and allegedly went after one of the students.",
+     "link": "https://www.fox19.com/2026/11/05/parent-got-into-colerain-middle-school-without-permission-allegedly-confronted-student/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-05T22:01:00+00:00"
+    },
+    {
+     "title": "Deputies: 8th grader charged after making online threats towards New Richmond Middle School",
+     "summary": "An eighth grader has been charged after making threats towards New Richmond Middle School, according to the Clermont County Sheriff's Office.",
+     "link": "https://www.wlwt.com/article/new-richmond-middle-school-threat-arrest-charged-8th-grader/74333232",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-06T00:18:00+00:00"
+    },
+    {
+     "title": "Police investigating second threat made toward New Richmond Middle School",
+     "summary": "The incident comes just two days after an eighth grader was arrested and charged for allegedly threatening on Snapchat to “shoot up” the same middle school.",
+     "link": "https://www.fox19.com/2026/11/06/police-investigating-second-threat-made-toward-new-richmond-middle-school/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-06T01:49:00+00:00"
+    },
+    {
+     "title": "Middle school in Clermont County receives second threat in one week",
+     "summary": "School officials at New Richmond Middle School were made aware of another threat directed toward the school on Thursday.",
+     "link": "https://local12.com/news/local/middle-school-clermont-county-receives-second-threat-one-week-threats-students-kids-children-new-richmond-district-group-chat-social-media-phone-online-tips-investigation",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-06T01:57:48+00:00"
+    },
+    {
+     "title": "New Richmond school officials investigating second threat at middle school",
+     "summary": "Officials are investigating a second threat made toward New Richmond Middle School, according to New Richmond Exempted Village School District Superintendent Paul Daniels.",
+     "link": "https://www.wcpo.com/news/new-richmond-school-officials-investigating-second-threat-at-middle-school",
+     "outlet": "WCPO",
+     "first_seen": "2026-11-06T02:11:51+00:00"
+    },
+    {
+     "title": "New Richmond school district investigating another threat to middle school",
+     "summary": "Officials in the New Richmond Exempted Village School District are investigating a second threat made this week toward the district’s middle school.",
+     "link": "https://www.wlwt.com/article/new-richmond-school-district-another-threat-middle-school/74351743",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-06T03:06:00+00:00"
+    }
+   ],
+   "together": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     8,
+     9
+    ],
+    [
+     12,
+     13
+    ],
+    [
+     13,
+     14
+    ],
+    [
+     13,
+     15
+    ],
+    [
+     15,
+     16
+    ]
+   ],
+   "apart": [
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     6,
+     2
+    ],
+    [
+     6,
+     3
+    ],
+    [
+     6,
+     4
+    ],
+    [
+     10,
+     12
+    ],
+    [
+     10,
+     13
+    ],
+    [
+     11,
+     16
+    ],
+    [
+     11,
+     14
+    ]
+   ]
+  },
+  {
+   "note": "Nov 6, 2026: 'Middle School' alone joined a Colerain Middle School visitor with New Richmond Middle School threats. Two Colerain headlines are one story, two New Richmond headlines are another. Items 4-13 are other real headlines from the same run, so the words are as rare or common as they were that morning.",
+   "items": [
+    {
+     "title": "Colerain Middle School investigating an unauthorized visitor",
+     "summary": "",
+     "link": "",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-05T21:30:45+00:00"
+    },
+    {
+     "title": "Parent got into Colerain Middle School without permission, allegedly confronted student",
+     "summary": "A Colerain Township mother came into the school after hours, the superintendent confirmed, and allegedly went after one of the students.",
+     "link": "https://www.fox19.com/2026/11/05/parent-got-into-colerain-middle-school-without-permission-allegedly-confronted-student/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-05T22:01:00+00:00"
+    },
+    {
+     "title": "Police investigating second threat made toward New Richmond Middle School",
+     "summary": "The incident comes just two days after an eighth grader was arrested and charged for allegedly threatening on Snapchat to “shoot up” the same middle school.",
+     "link": "https://www.fox19.com/2026/11/06/police-investigating-second-threat-made-toward-new-richmond-middle-school/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-06T01:49:00+00:00"
+    },
+    {
+     "title": "Deputies: 8th grader charged after making online threats towards New Richmond Middle School",
+     "summary": "An eighth grader has been charged after making threats towards New Richmond Middle School, according to the Clermont County Sheriff's Office.",
+     "link": "https://www.wlwt.com/article/new-richmond-middle-school-threat-arrest-charged-8th-grader/74333232",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-06T00:18:00+00:00"
+    },
+    {
+     "title": "Kings Island offering free admission to ages 65+. How to get a ticket",
+     "summary": "",
+     "link": "",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-05T19:34:00+00:00"
+    },
+    {
+     "title": "Miami U alum is granting largest donation in university's history",
+     "summary": "",
+     "link": "",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-05T18:45:00+00:00"
+    },
+    {
+     "title": "Concert alert! Farmer Music Center adds rock band to 2027 lineup",
+     "summary": "",
+     "link": "",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-05T15:35:00+00:00"
+    },
+    {
+     "title": "In Spain, Bengals' Dexter Lawrence missing his bed. 'My bed is undefeated'",
+     "summary": "",
+     "link": "",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-05T18:19:00+00:00"
+    },
+    {
+     "title": "Powerball winner in New Jersey. Single ticket wins 9th largest jackpot",
+     "summary": "",
+     "link": "",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-05T14:26:00+00:00"
+    },
+    {
+     "title": "GOP midterm losses may jeopardize JD Vance's 2028 presidential hopes",
+     "summary": "",
+     "link": "",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-05T20:31:00+00:00"
+    },
+    {
+     "title": "Missing Texas teen found in Symmes Twp. with sex offender, sheriff says",
+     "summary": "",
+     "link": "",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-06T00:32:00+00:00"
+    },
+    {
+     "title": "Zac Taylor gives first impression of Madrid ahead of Bengals practice",
+     "summary": "",
+     "link": "",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-05T14:12:00+00:00"
+    },
+    {
+     "title": "When does Spotify Wrapped release in 2026? It could be soon",
+     "summary": "",
+     "link": "",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-05T15:41:00+00:00"
+    },
+    {
+     "title": "Ohio Lottery Pick 3 Midday, Pick 3 Evening winning numbers for Nov. 5, 2026",
+     "summary": "",
+     "link": "",
+     "outlet": "Enquirer",
+     "first_seen": "2026-11-06T08:38:45+00:00"
+    }
+   ],
+   "together": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "apart": [
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
     ]
    ]
   }
