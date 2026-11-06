@@ -671,6 +671,11 @@ class Rules:
         # Newsrooms that can trigger the breaking-news alert (not the City's own press releases).
         self.alert_outlets = {s["name"] for s in cfg["sources"]
                               if not s.get("sweep") and not s.get("statewide") and not s.get("official")}
+        # "Greater Cincinnati", "Tri-State"…: the region, not the City. Blanked out before the place
+        # check and City-term matching (so "Greater Cincinnati police" isn't "Cincinnati police"),
+        # except in names that really are City (Greater Cincinnati Water Works).
+        self.regional = [term_regex(t) for t in cfg.get("regional_phrases", [])]
+        self.regional_keep = [term_regex(t) for t in cfg.get("regional_exceptions", [])]
         self.anchors = [term_regex(t) for t in list(cfg.get("cincinnati_anchors", ["Cincinnati"])) + list(extra_anchors)]
         self.anchors_i = [re.compile(rx.pattern, re.I) for rx in self.anchors]
         # "Hamilton" the city, not "Hamilton County" (which includes Cincinnati), and not
@@ -696,6 +701,21 @@ def earliest(patterns, text):
     return best
 
 
+def deregion(text, rules):
+    """Replace regional phrases with a neutral word, keeping City names that contain them."""
+    kept = []
+
+    def hold(m):
+        kept.append(m.group(0))
+        return f"\x00{len(kept) - 1}\x00"
+
+    for rx in rules.regional_keep:
+        text = rx.sub(hold, text)
+    for rx in rules.regional:
+        text = rx.sub("the region", text)
+    return re.sub(r"\x00(\d+)\x00", lambda m: kept[int(m.group(1))], text)
+
+
 def place_check(titles, summaries, rules, url_words=""):
     """
     Is the story about the City of Cincinnati?  Returns (verdict, evidence).
@@ -705,6 +725,8 @@ def place_check(titles, summaries, rules, url_words=""):
     The headline decides first; then whichever place the summary mentions first; then the
     story's web address. Datelines like "CINCINNATI (WKRC) —" are ignored.
     """
+    titles = deregion(titles, rules)
+    summaries = [deregion(x, rules) for x in summaries]
     for text, ci in ((titles, False), (" ".join(DATELINE.sub("", x) for x in summaries), False), (url_words, True)):
         a_pos, a_hit = earliest(rules.anchors_i if ci else rules.anchors, text)
         o_pos, o_hit = earliest(rules.others_i if ci else rules.others, text)
@@ -718,8 +740,8 @@ def place_check(titles, summaries, rules, url_words=""):
 
 def item_matches(item, rules):
     """Which City-relevance groups one headline matches, and whether in the headline or only the summary."""
-    title = OUTLET_NAMES.sub(" ", item["title"])
-    summary = OUTLET_NAMES.sub(" ", item.get("summary", ""))
+    title = deregion(OUTLET_NAMES.sub(" ", item["title"]), rules)
+    summary = deregion(OUTLET_NAMES.sub(" ", item.get("summary", "")), rules)
     both = title + " " + summary
     found = []
     # "1 dead after shooting, Cincinnati police say" is a crime report, not news about the

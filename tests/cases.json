@@ -616,6 +616,25 @@
    "expect": {
     "junk": true
    }
+  },
+  {
+   "note": "'Greater Cincinnati police' were Middletown's: the region, not the City (Nov 6)",
+   "title": "Man sentenced to over 3 decades for shooting at Greater Cincinnati police officers",
+   "summary": "A man who opened fire on Middletown police officers during an encounter in April has been sentenced to prison.",
+   "link": "https://local12.com/news/local/man-sentenced-over-3-decades-shooting-cincinnati-police-officers-middletown-butler-county",
+   "outlet": "Local 12",
+   "expect": {
+    "city": false,
+    "place": "other"
+   }
+  },
+  {
+   "note": "Greater Cincinnati Water Works is a City department, so it stays City",
+   "title": "Greater Cincinnati Water Works rate increase heads to council",
+   "outlet": "WVXU",
+   "expect": {
+    "city": true
+   }
   }
  ],
  "same_story": [

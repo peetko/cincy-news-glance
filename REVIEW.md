@@ -53,6 +53,9 @@ repo is public, so never add non-public City information.
 ## Checklist
 
 - **Wrong City Hall label.** Other towns, county-only items, or national stories labeled City Hall.
+  Read each City Hall story's **summary and web address**, not just the headline. A headline can
+  say "Greater Cincinnati" or "Cincinnati-area" when the story is about Middletown or Mason (Nov 6).
+  Regional phrases go in `regional_phrases`; real City names containing them in `regional_exceptions`.
   Also: is a City story missing its label?
 - **Not news.** Any City web page from outside the City's news section (event, program, park, guideline or closure pages),
   ads, promos, listings, obituaries, paperwork. Real news wrongly dropped (check the "Dropped as junk" list).
