@@ -1,0 +1,3941 @@
+{
+ "generated_at": "2026-11-07T02:47:32.048334+00:00",
+ "site_version": "ec8d29e7b1c1",
+ "weather": {
+  "ok": true,
+  "date": "2026-11-06",
+  "high": 55,
+  "low": 36,
+  "climate": {
+   "ok": true,
+   "date": "2026-11-06",
+   "normal_high": 58,
+   "normal_low": 38,
+   "record_high": 78,
+   "record_high_years": [
+    "1975"
+   ],
+   "record_low": 21,
+   "record_low_years": [
+    "1973"
+   ],
+   "since": "1872"
+  },
+  "as_of": "2026-11-07T02:47:32.048334+00:00",
+  "temp": 46,
+  "short": "Partly Cloudy",
+  "is_day": false,
+  "change": {
+   "text": "Frost Advisory until 9 AM",
+   "level": "alert",
+   "kind": "alert",
+   "details": [
+    "Temperatures as low as 35 will result in frost formation.",
+    "When: From midnight tonight to 9 AM EST Saturday.",
+    "Frost could harm sensitive outdoor vegetation. Sensitive outdoor plants may be killed if left uncovered."
+   ]
+  },
+  "alerts": [
+   {
+    "event": "Frost Advisory",
+    "headline": "Frost Advisory issued November 6 at 11:52AM EST until November 7 at 9:00AM EST by NWS Wilmington OH",
+    "ends": "9 AM",
+    "what": "Temperatures as low as 35 will result in frost formation.",
+    "when": "From midnight tonight to 9 AM EST Saturday.",
+    "impacts": "Frost could harm sensitive outdoor vegetation. Sensitive outdoor plants may be killed if left uncovered."
+   }
+  ]
+ },
+ "meetings": {
+  "ok": true,
+  "day": "2026-11-09",
+  "is_today": false,
+  "meetings": [
+   {
+    "date": "2026-11-09",
+    "time": "1:00 PM",
+    "body": "Budget, Finance & Governance Committee",
+    "location": "Council Chambers, Room 300",
+    "agenda": "https://cincinnatioh.legistar1.com/cincinnatioh/meetings/2026/11/10881_A_Budget%2C_Finance___Governance_Committee_26-11-09_Agenda.pdf",
+    "url": "https://cincinnatioh.legistar.com/MeetingDetail.aspx?LEGID=10881&GID=737&G=F7C7ACE8-B3D9-494B-89D1-69B0D7338C01"
+   }
+  ]
+ },
+ "games": [
+  {
+   "team": "FC Cincinnati",
+   "stadium": "tql",
+   "colors": [
+    "#F05323",
+    "#263B80"
+   ],
+   "home": true,
+   "opponent": "Nashville",
+   "start": "2026-11-07T21:00Z",
+   "state": "pre",
+   "detail": "Scheduled",
+   "score": null,
+   "result": null,
+   "odds": {
+    "provider": "DraftKings",
+    "details": "NSH +140",
+    "spread": null,
+    "over_under": 3.5,
+    "favorite": "them",
+    "moneyline": [
+     150,
+     140
+    ]
+   }
+  },
+  {
+   "team": "Bengals",
+   "stadium": "paycor",
+   "colors": [
+    "#FB4F14",
+    "#000000"
+   ],
+   "home": false,
+   "opponent": "Falcons",
+   "start": "2026-11-08T14:30Z",
+   "state": "pre",
+   "detail": "11/8 - 9:30 AM EST",
+   "score": null,
+   "result": null,
+   "odds": {
+    "provider": "Draft Kings",
+    "details": "CIN -3",
+    "spread": 3.0,
+    "over_under": 52.5,
+    "favorite": "us",
+    "moneyline": [
+     -180,
+     150
+    ]
+   }
+  }
+ ],
+ "timer_token_expires": "2027-03-31",
+ "pending_cases": 0,
+ "developing": null,
+ "lead": {
+  "city": "city-files-lawsuit-against-cincinnati-club-where-man-was-sho",
+  "general": "police-teen-accused-of-referencing-columbine-in-alleged-thre",
+  "why": {
+   "city": "same lead as last run",
+   "general": "same lead as last run"
+  }
+ },
+ "counts": {
+  "stories": 34,
+  "city": 6,
+  "city_national": 0
+ },
+ "stories": [
+  {
+   "id": "police-teen-accused-of-referencing-columbine-in-alleged-thre",
+   "title": "Police: Teen accused of referencing Columbine in alleged threats toward NKY school",
+   "link": "https://www.wlwt.com/article/florence-threat-case-dixie-heights-high-school/74359369",
+   "outlet": "WLWT",
+   "summary": "A teenager is facing a terroristic threatening charge, accused of making threats toward a school in northern Kentucky.",
+   "outlets": [
+    "Enquirer",
+    "FOX19",
+    "Local 12",
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPWlk3UUNJNkl4NW9COUNrb2pOQVc3S1RGUkRKU09hTndObVZzbmkxQXVqdHJNajE3MjVkQ2YxbS1OWk1CRzRMbXl2UXhuS2hxZHF3OWxSZzFxUzFxTHZFbFk0Q0MzaWpKRFVjZnNqRWF4ZDlfaktaVjZQQzAxQkJPNmNlMGx6N1M5SmlwaVhaaVhuNU9iM1c0TzYxWk9MZzEtNEtXWjB1YnZtRE45QUVIWktESmhxY0YyYjYwR3RhQUR5QV8zUFhxOEdXUENVSzlf?oc=5",
+    "FOX19": "https://www.fox19.com/2026/11/06/18-year-old-accused-making-threats-involving-nky-high-school/",
+    "Local 12": "https://local12.com/news/local/18-year-old-accused-making-threats-northern-kentucky-high-school-cincinnati-florence-edgewood-dixie-heights-jonah-roark-terroristic-threatening-columbine",
+    "WCPO": "https://www.wcpo.com/news/local-news/kentucky-man-arrested-for-making-alleged-threats-toward-dixie-heights-high-school",
+    "WLWT": "https://www.wlwt.com/article/florence-threat-case-dixie-heights-high-school/74359369"
+   },
+   "outlet_count": 5,
+   "first_seen": "2026-11-06T01:49:00+00:00",
+   "updated": "2026-11-06T22:41:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 6.806,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Clermont County",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "FOX19",
+     "Local 12",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Police investigating second threat made toward New Richmond Middle School"
+     ],
+     [
+      "Local 12",
+      "Middle school in Clermont County receives second threat in one week"
+     ],
+     [
+      "WLWT",
+      "Police: Teen accused of referencing Columbine in alleged threats toward NKY school"
+     ],
+     [
+      "WCPO",
+      "New Richmond school superintendent: Normal schedule on Friday, elevated police presence"
+     ],
+     [
+      "Local 12",
+      "18-year-old accused of making threats toward Northern Kentucky high school"
+     ],
+     [
+      "FOX19",
+      "18-year-old accused of making threats involving NKY high school"
+     ],
+     [
+      "WCPO",
+      "Kentucky man arrested for making alleged threats toward Dixie Heights High School"
+     ],
+     [
+      "Enquirer",
+      "Man threatened Dixie Heights High School, referenced Columbine, police say"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "missing-texas-teen-found-with-registered-sex-offender-at-gas",
+   "title": "Missing Texas teen found with registered sex offender at gas station in Cincinnati",
+   "link": "https://www.wlwt.com/article/missing-texas-teen-found-with-registered-sex-offender-cincinnati/74359885",
+   "outlet": "WLWT",
+   "summary": "A missing teenager from Houston was found at a gas station in Symmes Township with a registered sex offender, leading to his arrest and court appearance in Hamilton County.",
+   "outlets": [
+    "Enquirer",
+    "Local 12",
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOM1lseVZmWlBCTGlFdFd3SjBvZlFWQ3AzbVI4Mm5lNWVDZHNrUFB6ZlJvanhjdWxMNUg3UEhhV3AzRVhpSWpZMVA3UDFuNWxaZVZscXpUdmZ3eVRZRFpFQVlvYi02dUFfY3ZCNnRkSVc2UVg4MWg4eXh5LV96dENnbXhNVWNDYVRGVlBjRXNEYmh2a1hMcl9wT2tKeGo3OVctZEtFeXppdUhkOXlCR3NyaWs1a3JETUdXMENHM0hzS2xnZTFkVzJlZjRKZVVTb0ltOGx3?oc=5",
+    "Local 12": "https://local12.com/news/local/missing-texas-teen-found-with-sex-offender-after-panhandling-call-gas-station-speedway-symmes-township-teenager-juvenile-houston-panhandler-brandon-mcclerkin-charges-arrested",
+    "WCPO": "https://www.wcpo.com/news/local-news/routine-service-call-turns-into-multi-state-sex-offender-investigation-in-cincinnati",
+    "WLWT": "https://www.wlwt.com/article/missing-texas-teen-found-with-registered-sex-offender-cincinnati/74359885"
+   },
+   "outlet_count": 4,
+   "first_seen": "2026-11-05T00:01:00+00:00",
+   "updated": "2026-11-06T23:12:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 6.045,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "Local 12",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Missing Texas teen found with sex offender after panhandling call at local gas station"
+     ],
+     [
+      "Enquirer",
+      "Sex offender found with missing Texas teen has sexual assault history"
+     ],
+     [
+      "WLWT",
+      "Missing Texas teen found with registered sex offender at gas station in Cincinnati"
+     ],
+     [
+      "WCPO",
+      "Routine service call turns into multi-state sex offender investigation in Cincinnati"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "man-pleads-guilty-to-ammunition-charge-in-riverfront-live-ma",
+   "title": "Man pleads guilty to ammunition charge in Riverfront Live mass shooting",
+   "link": "https://www.fox19.com/2026/11/06/man-pleads-guilty-ammunition-charge-riverfront-live-mass-shooting/",
+   "outlet": "FOX19",
+   "summary": "Derrick Long, 30, pleaded guilty in federal court to illegally possessing ammunition as a felon in connection with the March 1 Riverfront Live mass shooting.",
+   "outlets": [
+    "FOX19",
+    "Local 12",
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/06/man-pleads-guilty-ammunition-charge-riverfront-live-mass-shooting/",
+    "Local 12": "https://local12.com/news/local/riverfront-live-shooting-suspect-pleads-guilty-federal-ammunition-charge-derrick-long-franeek-cobb-cincinnati-riverfront-live-mass-injured-gun-crime",
+    "WCPO": "https://www.wcpo.com/news/local-news/hamilton-county/cincinnati/east-end/prosecutor-suspect-in-mass-shooting-at-east-end-music-venue-pleads-guilty-to-ammunition-charge",
+    "WLWT": "https://www.wlwt.com/article/cincinnati-man-pleads-guilty-riverfront-live-mass-shooting/74361552"
+   },
+   "outlet_count": 4,
+   "first_seen": "2026-11-06T20:33:50+00:00",
+   "updated": "2026-11-06T23:11:58+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 6.044,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "East End",
+    "local": true,
+    "ohio": true,
+    "breaking_word": "shooting",
+    "newsrooms_for_alert": [
+     "FOX19",
+     "Local 12",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Prosecutor: Suspect in mass shooting at East End music venue pleads guilty to ammunition charge"
+     ],
+     [
+      "Local 12",
+      "Riverfront Live shooting suspect pleads guilty to federal ammunition charge"
+     ],
+     [
+      "WLWT",
+      "Cincinnati man involved in Riverfront Live mass shooting pleads guilty to federal charge"
+     ],
+     [
+      "FOX19",
+      "Man pleads guilty to ammunition charge in Riverfront Live mass shooting"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "uc-health-ice-rink-returns-to-downtown-cincinnati-through-fe",
+   "title": "UC Health Ice Rink returns to downtown Cincinnati through February",
+   "link": "https://local12.com/news/local/cincinnati-ice-rink-opening-day-elm-street-plaza",
+   "outlet": "Local 12",
+   "summary": "The UC Health Ice Rink opens Saturday at Elm Street Plaza, launching a season of skating and holiday events in downtown Cincinnati.",
+   "outlets": [
+    "Local 12",
+    "WLWT"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/cincinnati-ice-rink-opening-day-elm-street-plaza",
+    "WLWT": "https://www.wlwt.com/article/uc-health-ice-rink-cincinnati-elm-street-plaza-return/74349245"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-05T20:41:00+00:00",
+   "updated": "2026-11-07T02:38:38+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 5.853,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "UC Health Ice Rink set to return to Cincinnati\u2019s Elm Street Plaza for winter"
+     ],
+     [
+      "Local 12",
+      "UC Health Ice Rink returns to downtown Cincinnati through February"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "city-files-lawsuit-against-cincinnati-club-where-man-was-sho",
+   "title": "City files lawsuit against Cincinnati club where man was shot, killed",
+   "link": "https://www.wlwt.com/article/memories-lounge-cincinnati-lawsuit-closed-shooting/74362312",
+   "outlet": "WLWT",
+   "summary": "The City of Cincinnati has filed a lawsuit against a club where a man was shot and killed last weekend.",
+   "outlets": [
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/local-news/hamilton-county/cincinnati/city-of-cincinnati-files-lawsuit-against-downtowns-memories-lounge-calling-for-permanent-closure",
+    "WLWT": "https://www.wlwt.com/article/memories-lounge-cincinnati-lawsuit-closed-shooting/74362312"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-06T21:57:59+00:00",
+   "updated": "2026-11-07T01:59:00+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "City Hall"
+   ],
+   "city_score": 4.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 5.243,
+   "city_rank": 7.69,
+   "why": {
+    "matches": [
+     {
+      "group": "City Hall",
+      "term": "City of Cincinnati",
+      "where": "headline",
+      "outlet": "WCPO",
+      "points": 4.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "shooting",
+    "newsrooms_for_alert": [
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "City of Cincinnati files lawsuit against downtown's Memories Lounge, calling for permanent closure"
+     ],
+     [
+      "WLWT",
+      "City files lawsuit against Cincinnati club where man was shot, killed"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "second-local-pepp-dolores-restaurant-location-set-to-open",
+   "title": "Second local Pepp & Dolores restaurant location set to open",
+   "link": "https://local12.com/news/local/second-pepp-dolores-italian-restaurant-location-opening-cincinnati-deerfield",
+   "outlet": "Local 12",
+   "summary": "The Italian restaurant sits adjacent to the Eagle Food & Beer Hall at the mixed-use development north of Cincinnati.",
+   "outlets": [
+    "Local 12",
+    "WLWT"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/second-pepp-dolores-italian-restaurant-location-opening-cincinnati-deerfield",
+    "WLWT": "https://www.wlwt.com/article/pepp-and-dolores-opening-date-district-at-deerfield-township/74361313"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-06T19:55:00+00:00",
+   "updated": "2026-11-07T01:24:25+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 4.763,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Pepp and Dolores sets opening date for second restaurant location"
+     ],
+     [
+      "Local 12",
+      "Second local Pepp & Dolores restaurant location set to open"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "blue-ash-man-sentenced-for-hiding-cameras-in-children-s-bedr",
+   "title": "Blue Ash man sentenced for hiding cameras in children\u2019s bedrooms, prosecutors say",
+   "link": "https://www.fox19.com/2026/11/06/blue-ash-man-sentenced-hiding-cameras-childrens-bedrooms-prosecutors-say/",
+   "outlet": "FOX19",
+   "summary": "David Mitsnefes was convicted of hiding cameras in children\u2019s bedrooms and recording them in various states of undress",
+   "outlets": [
+    "FOX19",
+    "Local 12",
+    "WLWT"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/06/blue-ash-man-sentenced-hiding-cameras-childrens-bedrooms-prosecutors-say/",
+    "Local 12": "https://local12.com/news/local/man-gets-over-15-years-in-prison-hidden-bedroom-cameras-in-minors-home-david-mitsnefes-minor-children-kids-blue-ash-sentencing-arrested-tech-technology-child-porn-pornography-videos-pictures-phone-internet",
+    "WLWT": "https://www.wlwt.com/article/blue-ash-man-hidden-home-camera-child-exploitation-prison/74362209"
+   },
+   "outlet_count": 3,
+   "first_seen": "2026-11-06T21:54:53+00:00",
+   "updated": "2026-11-06T22:52:15+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 4.422,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Blue Ash",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19",
+     "Local 12",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Local man gets over 15 years in prison for hidden bedroom cameras in minors\u2019 home"
+     ],
+     [
+      "WLWT",
+      "Blue Ash man gets 16 years for hidden home camera child exploitation case"
+     ],
+     [
+      "FOX19",
+      "Blue Ash man sentenced for hiding cameras in children\u2019s bedrooms, prosecutors say"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "middletown-man-moved-girlfriend-s-body-gave-gun-to-neighbor",
+   "title": "Middletown man moved girlfriend's body, gave gun to neighbor, police say",
+   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNNkcyZ01BRW1zeHdnOFQyc3BqYnlGYk1NdDB4ZGZZM1dHMS1lX1c3dkFsT3phQjl5OTNOUnRtSWtfVU9FZkRqbzJab0hCS0RURVg5MV94eVBsdzZVZFo1ZnV2bTc3Z042SDZjM3kxRl9kTHBOSnZNbkpoczNDWnpLN1U3MGtEMW9ZOVhiYTlzdmdCNG5OalZ4N2V2a2t5X0pTWWd3bDF3WjN3X3R1Q2hiT2FBUUJwNzVKN19mUDAtZG11anlRbjJCVWxYSVNVUQ?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer",
+    "FOX19",
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNNkcyZ01BRW1zeHdnOFQyc3BqYnlGYk1NdDB4ZGZZM1dHMS1lX1c3dkFsT3phQjl5OTNOUnRtSWtfVU9FZkRqbzJab0hCS0RURVg5MV94eVBsdzZVZFo1ZnV2bTc3Z042SDZjM3kxRl9kTHBOSnZNbkpoczNDWnpLN1U3MGtEMW9ZOVhiYTlzdmdCNG5OalZ4N2V2a2t5X0pTWWd3bDF3WjN3X3R1Q2hiT2FBUUJwNzVKN19mUDAtZG11anlRbjJCVWxYSVNVUQ?oc=5",
+    "FOX19": "https://www.fox19.com/2026/11/06/woman-found-dead-inside-vehicle-middletown-man-arrested/",
+    "WCPO": "https://www.wcpo.com/news/local-news/woman-found-dead-in-vehicle-on-tytus-avenue-suspect-charged-with-murder",
+    "WLWT": "https://www.wlwt.com/article/middletown-tytus-avenue-police-investigation/74356279"
+   },
+   "outlet_count": 4,
+   "first_seen": "2026-11-06T14:42:00+00:00",
+   "updated": "2026-11-06T19:45:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 3.401,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Middletown",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "FOX19",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Woman found dead in vehicle on Tytus Avenue; suspect charged with murder"
+     ],
+     [
+      "FOX19",
+      "Woman found dead inside vehicle in Middletown, man arrested"
+     ],
+     [
+      "WLWT",
+      "Police: Middletown man accused of killing girlfriend, moving body inside vehicle"
+     ],
+     [
+      "Enquirer",
+      "Middletown man moved girlfriend's body, gave gun to neighbor, police say"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "xavier-rides-defense-to-win-over-eastern-michigan-2-0-start",
+   "title": "Xavier rides defense to win over Eastern Michigan, 2-0 start",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxORHhjbXhjZl9XekZNamNtZ0dwbG5VaFd4LXE5YkNvZUdtZnZpMXctNGNMdUtYSWNkR2NBWFRVOHZhMnJ2REs1SFZkX2RkWEZHb3BZOHgwNVlPZFJuM3c5WUM1bllKeGdGMks5b05TOHZIQ0NmVVRDdXBnRDN2Q2FObk9BbjZYbmNoRDVsc1RjN2NkR3lES3dBS19jVHRWTzhuMTRxbTBwRktLR2FEcmJmem8xTkJJZ2Z2UmhIaGNHbnJXNE9RcUdNQXJR?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMiygFBVV95cUxORHhjbXhjZl9XekZNamNtZ0dwbG5VaFd4LXE5YkNvZUdtZnZpMXctNGNMdUtYSWNkR2NBWFRVOHZhMnJ2REs1SFZkX2RkWEZHb3BZOHgwNVlPZFJuM3c5WUM1bllKeGdGMks5b05TOHZIQ0NmVVRDdXBnRDN2Q2FObk9BbjZYbmNoRDVsc1RjN2NkR3lES3dBS19jVHRWTzhuMTRxbTBwRktLR2FEcmJmem8xTkJJZ2Z2UmhIaGNHbnJXNE9RcUdNQXJR?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-05T16:49:00+00:00",
+   "updated": "2026-11-07T02:13:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 3.18,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "Xavier rides defense to win over Eastern Michigan, 2-0 start"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cold-climate-penguins-at-newport-aquarium-to-move-as-expansi",
+   "title": "Cold-climate penguins at Newport Aquarium to move as expansion begins",
+   "link": "https://www.wlwt.com/article/cold-climate-penguins-newport-aquarium-expansion/74361608",
+   "outlet": "WLWT",
+   "summary": "The Newport Aquarium is expanding its African penguin colony, turning Penguin Palooza into a revamped exhibit.",
+   "outlets": [
+    "FOX19",
+    "WLWT",
+    "WVXU"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/06/newport-aquarium-gives-penguins-new-home/",
+    "WLWT": "https://www.wlwt.com/article/cold-climate-penguins-newport-aquarium-expansion/74361608",
+    "WVXU": "https://www.wvxu.org/local-news/2026-11-06/newport-aquarium-endangered-african-penguins"
+   },
+   "outlet_count": 3,
+   "first_seen": "2026-11-06T19:25:50+00:00",
+   "updated": "2026-11-06T20:37:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 3.037,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Newport",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19",
+     "WLWT",
+     "WVXU"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Newport Aquarium gives penguins new home"
+     ],
+     [
+      "WVXU",
+      "Aquarium expanding African penguin exhibit, cold-climate penguins leaving"
+     ],
+     [
+      "WLWT",
+      "Cold-climate penguins at Newport Aquarium to move as expansion begins"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ohio-law-enforcement-groups-support-flock-cameras-call-for-o",
+   "title": "Ohio law enforcement groups support Flock cameras, call for oversight",
+   "link": "https://www.fox19.com/2026/11/07/ohio-law-enforcement-groups-support-flock-cameras-call-oversight/",
+   "outlet": "FOX19",
+   "summary": "The Fraternal Order of Police of Ohio (FOP) made a joint announcement with three other law enforcement groups Friday about the use of Flock cameras and the need for oversight.",
+   "outlets": [
+    "FOX19"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/07/ohio-law-enforcement-groups-support-flock-cameras-call-oversight/"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-07T01:24:56+00:00",
+   "updated": "2026-11-07T01:24:56+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.782,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": false,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Ohio law enforcement groups support Flock cameras, call for oversight"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "st-vincent-de-paul-hosting-first-winter-coat-distribution-of",
+   "title": "St. Vincent de Paul hosting first winter coat distribution of season Saturday",
+   "link": "https://www.wlwt.com/article/st-vincent-de-paul-first-winter-coat-distribution/74361687",
+   "outlet": "WLWT",
+   "summary": "As colder weather approaches, St. Vincent de Paul is working to ensure everyone in Greater Cincinnati can stay warm.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/st-vincent-de-paul-first-winter-coat-distribution/74361687"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T20:51:00+00:00",
+   "updated": "2026-11-07T00:59:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.589,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "St. Vincent de Paul hosting first winter coat distribution of season Saturday"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "tri-state-school-district-hosts-event-to-fill-bus-driver-sho",
+   "title": "Tri-State school district hosts event to fill bus driver shortage",
+   "link": "https://www.fox19.com/2026/11/07/tri-state-school-district-hosts-event-fill-bus-driver-shortage/",
+   "outlet": "FOX19",
+   "summary": "Forrest Hills Transportation Coordinator Richard Porter said the district is looking for six drivers to fill routes.",
+   "outlets": [
+    "FOX19"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/07/tri-state-school-district-hosts-event-fill-bus-driver-shortage/"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-07T00:43:36+00:00",
+   "updated": "2026-11-07T00:43:36+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.481,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": false,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Tri-State school district hosts event to fill bus driver shortage"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "kentucky-woman-died-of-natural-causes-family-questions-why-s",
+   "title": "Kentucky woman died of natural causes; family questions why she was in Ohio field",
+   "link": "https://www.fox19.com/2026/11/07/kentucky-woman-died-natural-causes-family-questions-why-she-was-ohio-field/",
+   "outlet": "FOX19",
+   "summary": "Debra Wireman went missing on June 3 while driving from Aberdeen to pick up her relative in Maysville.",
+   "outlets": [
+    "FOX19"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/07/kentucky-woman-died-natural-causes-family-questions-why-she-was-ohio-field/"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-07T00:24:40+00:00",
+   "updated": "2026-11-07T00:24:40+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.354,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Kentucky woman died of natural causes; family questions why she was in Ohio field"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "92-year-old-charged-with-attempted-murder-of-his-wife-tells",
+   "title": "92-year-old charged with attempted murder of his wife tells judge he\u2019ll \u2018die of old age\u2019 in jail",
+   "link": "https://www.fox19.com/2026/11/07/92-year-old-charged-with-attempted-murder-his-wife-tells-judge-hell-die-old-age-jail/",
+   "outlet": "FOX19",
+   "summary": "Police found Morris pinching his wife\u2019s nose after \u201cplacing a plastic bag over her face.\u201d",
+   "outlets": [
+    "FOX19"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/07/92-year-old-charged-with-attempted-murder-his-wife-tells-judge-hell-die-old-age-jail/"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-07T00:02:44+00:00",
+   "updated": "2026-11-07T00:02:44+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.214,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": false,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "92-year-old charged with attempted murder of his wife tells judge he\u2019ll \u2018die of old age\u2019 in jail"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "first-responders-rally-around-paramedic-diagnosed-with-aggre",
+   "title": "First responders rally around paramedic diagnosed with aggressive blood cancer",
+   "link": "https://www.wlwt.com/article/clermont-county-paramedic-blood-cancer-danielle-vonder-meulen/74362787",
+   "outlet": "WLWT",
+   "summary": "A Clermont County paramedic who has spent her career helping others through emergencies is now facing a medical crisis of her own.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/clermont-county-paramedic-blood-cancer-danielle-vonder-meulen/74362787"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T23:25:00+00:00",
+   "updated": "2026-11-06T23:25:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.994,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Clermont County",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "First responders rally around paramedic diagnosed with aggressive blood cancer"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "waymo-continues-mapping-cincinnati-streets-ahead-of-possible",
+   "title": "Waymo continues mapping Cincinnati streets ahead of possible self-driving car testing",
+   "link": "https://www.wlwt.com/article/waymo-mapping-cincinnati-streets-self-driving-car-testing/74362515",
+   "outlet": "WLWT",
+   "summary": "Waymo, a self-driving car company owned by Google's parent company, Alphabet Inc., has spent the last two months mapping Cincinnati streets, potentially setting the stage for testing autonomous vehicles with people in the backseat and no driver.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/waymo-mapping-cincinnati-streets-self-driving-car-testing/74362515"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T23:19:00+00:00",
+   "updated": "2026-11-06T23:19:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.961,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Waymo continues mapping Cincinnati streets ahead of possible self-driving car testing"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "zoo-announces-birth-of-fifth-baby-sloth",
+   "title": "Zoo announces birth of fifth baby sloth",
+   "link": "https://local12.com/news/offbeat/zoo-celebrates-new-baby-sloth",
+   "outlet": "Local 12",
+   "summary": "The Roger Williams Park Zoo in Rhode Island has announced the birth of a baby sloth named Bodhi.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/offbeat/zoo-celebrates-new-baby-sloth"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T23:16:07+00:00",
+   "updated": "2026-11-06T23:16:07+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.945,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Zoo announces birth of fifth baby sloth"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cincinnati-mother-speaks-out-after-daughter-killed-in-appare",
+   "title": "Cincinnati mother speaks out after daughter killed in apparent accidental shooting",
+   "link": "https://local12.com/news/local/mother-speaks-out-after-18-year-old-killed-apparent-accidental-shooting-in-north-fairmount-cincinnati-ohio-charges-arrest-emirah-overstreet-suspect-linburgh-borden",
+   "outlet": "Local 12",
+   "summary": "Investigators later told Linda Overstreet her daughter had died. Emirah was pronounced dead at the scene.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/mother-speaks-out-after-18-year-old-killed-apparent-accidental-shooting-in-north-fairmount-cincinnati-ohio-charges-arrest-emirah-overstreet-suspect-linburgh-borden"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T23:13:33+00:00",
+   "updated": "2026-11-06T23:13:33+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.932,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "shooting",
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Cincinnati mother speaks out after daughter killed in apparent accidental shooting"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cincinnati-police-department-welcomes-54-new-officers-amid-s",
+   "title": "Cincinnati Police Department welcomes 54 new officers amid staffing challenges",
+   "link": "https://www.wlwt.com/article/cincinnati-police-department-54-new-officers-staffing-challenges/74362117",
+   "outlet": "WLWT",
+   "summary": "Fifty-four new police recruits graduated from the Cincinnati Police Academy, marking the end of months of training and the beginning of their careers in law enforcement.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/cincinnati-police-department-54-new-officers-staffing-challenges/74362117"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T23:13:00+00:00",
+   "updated": "2026-11-06T23:13:00+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "Police"
+   ],
+   "city_score": 3.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.929,
+   "city_rank": 3.306,
+   "why": {
+    "matches": [
+     {
+      "group": "Police",
+      "term": "Cincinnati Police",
+      "where": "headline",
+      "outlet": "WLWT",
+      "points": 3.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Cincinnati Police Department welcomes 54 new officers amid staffing challenges"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "bold-predictions-as-uc-tries-to-win-at-no-17-houston-nov-7",
+   "title": "Bold predictions as UC tries to win at No. 17 Houston Nov. 7",
+   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNUFFWdkIxOGpkSkEtd0NUejlETkY3RkxxdkN4bDNqNGhRUTdvT3RQbFZBTmFfanJSNFFNTVF6UWpuRlkwdEZ4U2xadDN4OFFFbmFwajNSVGlObk1VaEViVF9hNTV2b01jWVNVbUNWTXhORURSak5Jb1hDbUZFSTRqNVhEWDNRSEd5MnhBV0xEVnJlQnQ2ODVkaWw2YUtJblg3RjVPQVpaejJsUWxNbC1ZMDNQRjRUSW9wMW1FODJCdzRfMEJJVENEU1U3aHZrMDU0T3BwUVhiUTVMTGNxYjN5eDlSblhnSXVvZ244?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNUFFWdkIxOGpkSkEtd0NUejlETkY3RkxxdkN4bDNqNGhRUTdvT3RQbFZBTmFfanJSNFFNTVF6UWpuRlkwdEZ4U2xadDN4OFFFbmFwajNSVGlObk1VaEViVF9hNTV2b01jWVNVbUNWTXhORURSak5Jb1hDbUZFSTRqNVhEWDNRSEd5MnhBV0xEVnJlQnQ2ODVkaWw2YUtJblg3RjVPQVpaejJsUWxNbC1ZMDNQRjRUSW9wMW1FODJCdzRfMEJJVENEU1U3aHZrMDU0T3BwUVhiUTVMTGNxYjN5eDlSblhnSXVvZ244?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T22:40:42+00:00",
+   "updated": "2026-11-06T22:40:42+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.763,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "Bold predictions as UC tries to win at No. 17 Houston Nov. 7"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "city-sues-downtown-lounge-after-20-year-old-dies-in-shooting",
+   "title": "City sues downtown lounge after 20-year-old dies in shooting",
+   "link": "https://www.fox19.com/2026/11/06/city-sues-downtown-lounge-after-20-year-old-dies-shooting/",
+   "outlet": "FOX19",
+   "summary": "This move comes less than a week after a 20-year-old employee was shot and killed inside the bar.",
+   "outlets": [
+    "FOX19"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/06/city-sues-downtown-lounge-after-20-year-old-dies-shooting/"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T22:07:22+00:00",
+   "updated": "2026-11-06T22:07:22+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.607,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": "shooting",
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "City sues downtown lounge after 20-year-old dies in shooting"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cincinnati-reds-announce-2027-postgame-concert-lineup",
+   "title": "Cincinnati Reds announce 2027 postgame concert lineup",
+   "link": "https://www.wlwt.com/article/cincinnati-reds-2027-postgame-concert-lineup/74358877",
+   "outlet": "WLWT",
+   "summary": "The Cincinnati Reds have announced their postgame concerts for the 2027 season.",
+   "outlets": [
+    "Enquirer",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNOV9UYXVnd1Z5SS1ROGl0QTZGRjhDWFpFeWt3X05rczRmV2NPdjlma0dSSkxzSVJnNUNRcmpaNGh3TWpKRDZ1RU1hMDd6aXBrSDJkc0hFWkNYcElkMzBvZzJEeEkzNVZld3A1X2tMd2tkSlJ3a0VWUldocmNxT2d1NXg5M3VaQWlOUE9IdHNOOWgyRkVQOHJPM3Bmd1RZNFdsSXVaU192aE9QVnpKX3B6XzJ4WmRveWxZVWpzZlZ6ZkU5N0VocTkwcVRXb2xlT0h4?oc=5",
+    "WLWT": "https://www.wlwt.com/article/cincinnati-reds-2027-postgame-concert-lineup/74358877"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-06T15:50:00+00:00",
+   "updated": "2026-11-06T22:53:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.564,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": true,
+    "versions": [
+     [
+      "Enquirer",
+      "See Reds 2027 postgame concert lineup with Dierks Bentley, more"
+     ],
+     [
+      "WLWT",
+      "Cincinnati Reds announce 2027 postgame concert lineup"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cincinnati-high-school-football-week-12-playoff-scores-live",
+   "title": "Cincinnati high school football Week 12 playoff scores | Live",
+   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQT2h5d1RnaWt5cEFyRFFNaWlGVlNhOGJSZGVSUWxBS1dLYjlhWjJ4bFBzS0ZqM2N1ZThxYmVaSFZ4ZXhLOTNnekN2WUhCdkxtTkVSY3gwT3I5U0dMZmsyNGlmWF9jVGstQVZ1UWZQU0RPSzNNM3dFZ0ZkY2otQjZQSXVrbWNBNzlyNXRRZ0RTOTdsUEJSa3BNbFZsSG1HdFU4b3QxQ01pR19rbXduWjhDS05SRFkyQlFobUd3a05QSS11RHl4M0dHY3ZIZEx3Um4yR1N2MXpkbURuZ2tUMWlPdWVpOEc?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer",
+    "WCPO"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQT2h5d1RnaWt5cEFyRFFNaWlGVlNhOGJSZGVSUWxBS1dLYjlhWjJ4bFBzS0ZqM2N1ZThxYmVaSFZ4ZXhLOTNnekN2WUhCdkxtTkVSY3gwT3I5U0dMZmsyNGlmWF9jVGstQVZ1UWZQU0RPSzNNM3dFZ0ZkY2otQjZQSXVrbWNBNzlyNXRRZ0RTOTdsUEJSa3BNbFZsSG1HdFU4b3QxQ01pR19rbXduWjhDS05SRFkyQlFobUd3a05QSS11RHl4M0dHY3ZIZEx3Um4yR1N2MXpkbURuZ2tUMWlPdWVpOEc?oc=5",
+    "WCPO": "https://www.wcpo.com/sports/high-school-sports/scores-for-week-12-of-greater-cincinnati-high-school-football-season"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-06T21:01:00+00:00",
+   "updated": "2026-11-06T22:39:51+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.508,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": true,
+    "breaking_word": "live updates",
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": true,
+    "versions": [
+     [
+      "Enquirer",
+      "OHSAA high school football playoff scores, live updates from Week 12"
+     ],
+     [
+      "WCPO",
+      "Scores for Week 12 of Greater Cincinnati high school football season"
+     ],
+     [
+      "Enquirer",
+      "OHSAA high school football scores, Marion Star's live Week 12 updates"
+     ],
+     [
+      "Enquirer",
+      "Cincinnati high school football Week 12 playoff scores | Live"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "around-the-world-across-the-cov-new-blink-murals-leave-a-las",
+   "title": "Around the World, Across the Cov: New BLINK Murals Leave a Lasting Impact on Covington",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxORm13UjVHRldneXNpS1dYR3lmVkVrd0czVFdWMnNPejNIZmVLX0RQN0VTWnhobU5INzhJa2EzZUpoWmpSaU0tZE9rWkRnZ19nTVdsc1g1MTBSVjMzNU92U19iODdmdGdod1hUSlFrY2J2V2RkanhWWVRQT2lRR1plbnU2YnlGY21KWlFzN0ctbzY0UWdYdDZaUmRJMW1sMTg0VFpORjg2Y05tSXZVeXVwQktJZ0lEUmlMaF9rVnp5SmEwbDdlQjFz?oc=5",
+   "outlet": "The City of Covington, KY (.gov)",
+   "summary": "",
+   "outlets": [
+    "The City of Covington, KY (.gov)"
+   ],
+   "links": {
+    "The City of Covington, KY (.gov)": "https://news.google.com/rss/articles/CBMixwFBVV95cUxORm13UjVHRldneXNpS1dYR3lmVkVrd0czVFdWMnNPejNIZmVLX0RQN0VTWnhobU5INzhJa2EzZUpoWmpSaU0tZE9rWkRnZ19nTVdsc1g1MTBSVjMzNU92U19iODdmdGdod1hUSlFrY2J2V2RkanhWWVRQT2lRR1plbnU2YnlGY21KWlFzN0ctbzY0UWdYdDZaUmRJMW1sMTg0VFpORjg2Y05tSXZVeXVwQktJZ0lEUmlMaF9rVnp5SmEwbDdlQjFz?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T21:44:30+00:00",
+   "updated": "2026-11-06T21:44:30+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.508,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Covington",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "The City of Covington, KY (.gov)",
+      "Around the World, Across the Cov: New BLINK Murals Leave a Lasting Impact on Covington"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "kentucky-gov-beshear-addresses-presidential-run-speculation",
+   "title": "Kentucky Gov. Beshear addresses presidential run speculation after midterms",
+   "link": "https://www.wlwt.com/article/kentucky-governor-andy-beshear-president-run-speculation/74361757",
+   "outlet": "WLWT",
+   "summary": "With this month\u2019s midterm elections now concluded, eyes are starting to turn to who could run for president in 2028.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/kentucky-governor-andy-beshear-president-run-speculation/74361757"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T21:15:00+00:00",
+   "updated": "2026-11-06T21:40:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.49,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Kentucky Gov. Beshear addresses presidential run speculation after midterms"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "new-program-looks-to-prepare-northern-kentucky-students-for",
+   "title": "New program looks to prepare Northern Kentucky students for Artificial Intelligence workforce of tomorrow",
+   "link": "https://www.wcpo.com/news/northern-kentucky/new-program-looks-to-prepare-northern-kentucky-students-for-artificial-intelligence-workforce-of-tomorrow",
+   "outlet": "WCPO",
+   "summary": "A partnership between Northern Kentucky University, the NKY Chamber of Commerce, and We Lead CS will look to pair 20 students with regional employers to solve challenges using AI.",
+   "outlets": [
+    "WCPO"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/northern-kentucky/new-program-looks-to-prepare-northern-kentucky-students-for-artificial-intelligence-workforce-of-tomorrow"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T21:31:43+00:00",
+   "updated": "2026-11-06T21:31:43+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.456,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "New program looks to prepare Northern Kentucky students for Artificial Intelligence workforce of tomorrow"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "shop-opens-in-cincinnati-with-40-plus-bottled-wines-and-by-t",
+   "title": "Shop opens in Cincinnati with 40-plus bottled wines and by-the-glass pours",
+   "link": "https://local12.com/news/local/shop-opens-cincinnati-40-plus-bottled-wines-by-the-glass-pours-liquor-drinks-drinking-sayler-park-sips-gracely-drive-served-servings-products-private-events",
+   "outlet": "Local 12",
+   "summary": "Sayler Park Sips held its grand opening on Friday. The wine shop and gathering space is located on Gracely Drive.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/shop-opens-cincinnati-40-plus-bottled-wines-by-the-glass-pours-liquor-drinks-drinking-sayler-park-sips-gracely-drive-served-servings-products-private-events"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T21:26:24+00:00",
+   "updated": "2026-11-06T21:26:24+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.434,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Shop opens in Cincinnati with 40-plus bottled wines and by-the-glass pours"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "disabled-american-veterans-5k-in-cincinnati-to-honor-those-w",
+   "title": "Disabled American Veterans 5K in Cincinnati to honor those who served",
+   "link": "https://www.wlwt.com/article/disabled-american-veterans-5k-cincinnati/74361493",
+   "outlet": "WLWT",
+   "summary": "Our nation's veterans make sacrifices that don't end when they return home, as many continue to face challenges from injuries, illnesses and the last effect of their service.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/disabled-american-veterans-5k-cincinnati/74361493"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-05T21:41:00+00:00",
+   "updated": "2026-11-06T21:23:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.421,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Disabled American Veterans 5K in Cincinnati to honor those who served"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "next-phase-begins-to-preserve-historic-frank-duveneck-house",
+   "title": "Next phase begins to preserve historic Frank Duveneck House in Northern Kentucky",
+   "link": "https://local12.com/news/local/next-phase-begins-preserve-historic-frank-duveneck-house-in-northern-kentucky-covington-influential-art-artwork-artists-national-park-service-construction-repairs-repairing-cincinnati",
+   "outlet": "Local 12",
+   "summary": "After stabilizing the historic Frank Duveneck House in Covington, the city is moving into the next phase of work to preserve the building.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/next-phase-begins-preserve-historic-frank-duveneck-house-in-northern-kentucky-covington-influential-art-artwork-artists-national-park-service-construction-repairs-repairing-cincinnati"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T21:14:49+00:00",
+   "updated": "2026-11-06T21:14:49+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.389,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Covington",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Next phase begins to preserve historic Frank Duveneck House in Northern Kentucky"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "seth-walsh-to-take-leave-of-absence-from-city-council-follow",
+   "title": "Seth Walsh to take leave of absence from City Council following presumptive State Treasurer win",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVUxUUmQtNmZldkJhc2gzbnd3TzNicnZSaVMyX2NpM1FTcm9xeGRiaDIxT0dZQlhGRDRzeGw3bTJCakFEYkdQTDVsQ2VPUEZuY0VjWTJwVXB1X19NTUFqNVRINm9PM0l3d29XcUFfN2lHbDg5bGNFSFpHZW1pb21HVV9oWHBtcE15MENIMFRvNlhKbTJyTUtaZHR2ZFR3UFVHUmc?oc=5",
+   "outlet": "WLWT",
+   "summary": "",
+   "outlets": [
+    "Enquirer",
+    "FOX19",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOVWpfNW9YVUtIaG5yWnNpeDEwQzl5bVNXZHJaTzJEVjRvNGQ2Tmk3WXMyVWpOLTlmX3Z0V1VZb1p1bzJtS0xKZEg4YU9jYk9xZ2xkVUNtWlZVM3h4UTFTd2EzWXJsR3Y0N0JJak01NlpxblJFdDNGRVBDaThSU2NmYllJdkNQem4xSW12eDdKMDF1TDJZZkhvMnRsNDdOMWtMbDNMaDhSUXEta2FMR2VNem02YTFpdHRQQlRLVmNZWm9RTWVkZVdBNVhaYlltdE04UUF3dA?oc=5",
+    "FOX19": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNYWZuUDYzaDFqYV9ZQlR4N0hCUnNLV3FZblNEbHhSWFlFNDdpdG1IUGlRVU1yZUo0dFhOcWFIb1JKZks3N1hwSjM0UGZ1enNwVE5QYXNRWVFNNjdMdGNMX0FHNjZyY3NaVk9PQTJpeVVCYVdoUlFrMm51UHZaZEFQcURaZDlZdw?oc=5",
+    "WLWT": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVUxUUmQtNmZldkJhc2gzbnd3TzNicnZSaVMyX2NpM1FTcm9xeGRiaDIxT0dZQlhGRDRzeGw3bTJCakFEYkdQTDVsQ2VPUEZuY0VjWTJwVXB1X19NTUFqNVRINm9PM0l3d29XcUFfN2lHbDg5bGNFSFpHZW1pb21HVV9oWHBtcE15MENIMFRvNlhKbTJyTUtaZHR2ZFR3UFVHUmc?oc=5"
+   },
+   "outlet_count": 3,
+   "first_seen": "2026-11-06T14:24:00+00:00",
+   "updated": "2026-11-06T15:46:50+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "Council"
+   ],
+   "city_score": 5.0,
+   "place": "yes",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 1.356,
+   "city_rank": 1.851,
+   "why": {
+    "matches": [
+     {
+      "group": "Council",
+      "term": "Council",
+      "where": "headline",
+      "outlet": "WLWT",
+      "points": 5.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "FOX19",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Cincinnati city councilman to take leave of absence"
+     ],
+     [
+      "WLWT",
+      "Seth Walsh to take leave of absence from City Council following presumptive State Treasurer win"
+     ],
+     [
+      "Enquirer",
+      "Walsh to step down from Cincinnati City Council following election win"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "camp-washington-zoning-changes-could-mean-more-housing-in-th",
+   "title": "Camp Washington zoning changes could mean more housing in the future",
+   "link": "https://www.wvxu.org/local-news/2026-11-06/camp-washington-zoning-changes-housing",
+   "outlet": "WVXU",
+   "summary": "The changes in four portions of the neighborhood are designed to usher in more housing and limit things like tow lots. The Camp Washington Urban Revitalization Corporation says it counted 18 such lots in the small neighborhood.",
+   "outlets": [
+    "WVXU"
+   ],
+   "links": {
+    "WVXU": "https://www.wvxu.org/local-news/2026-11-06/camp-washington-zoning-changes-housing"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T20:55:47+00:00",
+   "updated": "2026-11-06T20:55:47+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "Planning & Development"
+   ],
+   "city_score": 4.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.317,
+   "city_rank": 2.861,
+   "why": {
+    "matches": [
+     {
+      "group": "Planning & Development",
+      "term": "zoning",
+      "where": "headline",
+      "outlet": "WVXU",
+      "points": 4.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Camp Washington",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WVXU"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WVXU",
+      "Camp Washington zoning changes could mean more housing in the future"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "lawsuit-aims-to-shut-down-memories-after-fatal-shooting-nume",
+   "title": "Lawsuit aims to shut down Memories after fatal shooting, numerous other incidents",
+   "link": "https://local12.com/news/local/lawsuit-aims-shut-down-memories-fatal-shooting-numerous-other-incidents-dre-kirkpatrick-deryka-minor-kameiro-blair-martin-overcrowding-overserving-assault-fights",
+   "outlet": "Local 12",
+   "summary": "The city of Cincinnati has filed a lawsuit in an effort to shut down Memories Lounge following a fatal shooting.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/lawsuit-aims-shut-down-memories-fatal-shooting-numerous-other-incidents-dre-kirkpatrick-deryka-minor-kameiro-blair-martin-overcrowding-overserving-assault-fights"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-06T19:31:34+00:00",
+   "updated": "2026-11-06T19:31:34+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "City Hall"
+   ],
+   "city_score": 3.2,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.043,
+   "city_rank": 1.883,
+   "why": {
+    "matches": [
+     {
+      "group": "City Hall",
+      "term": "city of Cincinnati",
+      "where": "summary",
+      "outlet": "Local 12",
+      "points": 3.2
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "shooting",
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Lawsuit aims to shut down Memories after fatal shooting, numerous other incidents"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "daily-brief-new-vacancies-on-cincinnati-city-council",
+   "title": "Daily Brief: New vacancies on Cincinnati City Council",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQNzRtRTdQdVpkV3l0N0FXNl9OOFBGbGdPbVVjYnF6Vlg1RHd2dG9IZmtEb3BDNjRKZ3BwbjFydHIzWjJtdW5OWXdWeXZBaWpJc0Zoc3NxeXRpR0pRYVZjd2pzU041LUJvZGU5TlB3U01QbEo1WkZ0X1VDN1k4TFF4NWJOb3B0V01nZmVKdTFvUXYtMFk?oc=5",
+   "outlet": "FOX19",
+   "summary": "",
+   "outlets": [
+    "FOX19"
+   ],
+   "links": {
+    "FOX19": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQNzRtRTdQdVpkV3l0N0FXNl9OOFBGbGdPbVVjYnF6Vlg1RHd2dG9IZmtEb3BDNjRKZ3BwbjFydHIzWjJtdW5OWXdWeXZBaWpJc0Zoc3NxeXRpR0pRYVZjd2pzU041LUJvZGU5TlB3U01QbEo1WkZ0X1VDN1k4TFF4NWJOb3B0V01nZmVKdTFvUXYtMFk?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-05T18:30:27+00:00",
+   "updated": "2026-11-06T11:04:19+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "Council"
+   ],
+   "city_score": 5.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 0.255,
+   "city_rank": 0.67,
+   "why": {
+    "matches": [
+     {
+      "group": "Council",
+      "term": "Council",
+      "where": "headline",
+      "outlet": "FOX19",
+      "points": 5.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Daily Brief: New vacancies on Cincinnati City Council"
+     ]
+    ]
+   }
+  }
+ ],
+ "sources_status": [
+  {
+   "source": "Enquirer",
+   "ok": true,
+   "items": 50,
+   "junk_dropped": 6,
+   "junk_examples": [
+    "ProphetX sign-up bonus: Use code CINCY for $40 welcome offer",
+    "ProphetX promo code CINCY offers $40 in bonus for NFL, NBA, college football & more",
+    "Novig referral code CINCY | Exclusive $50 bonus for NFL, NBA & NCAAF",
+    "Novig promo code CINCY scores $50 bonus for NFL, NBA, NCAAF, & more",
+    "Kalshi referral code CINCY | $25 bonus for NFL, NCAAF, NBA & more",
+    "Exclusive Kalshi promo code CINCY offers $25 bonus for NFL, NCAAF, NBA and more"
+   ],
+   "used": "https://news.google.com/rss/search?q=site:cincinnati.com/story+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WCPO",
+   "ok": true,
+   "items": 30,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wcpo.com/news/local-news.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WLWT",
+   "ok": true,
+   "items": 20,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wlwt.com/local-news-rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "FOX19",
+   "ok": true,
+   "items": 20,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.fox19.com/arc/outboundfeeds/rss/category/news/?outputType=xml",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Local 12",
+   "ok": true,
+   "items": 46,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://local12.com/news/local.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WVXU",
+   "ok": true,
+   "items": 10,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wvxu.org/local-news.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Signal",
+   "ok": true,
+   "items": 10,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://signalcincinnati.org/feed/",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City Hall sweep",
+   "ok": true,
+   "items": 13,
+   "junk_dropped": 5,
+   "junk_examples": [
+    "Mayor Selected to Climate Mayors 2027 Steering Committee",
+    "Proposed Use of TIF Funds at Grant Park in Over-the-Rhine",
+    "Ken Sugiura: Postcard from Madrid includes Tim Hortons and Taco Bell - The Atlanta Journal-Constitution",
+    "Protesters Storm Microsoft Data Center Construction Site",
+    "DFW\u2019s Fight Between Data Centers and Clean Water"
+   ],
+   "used": "https://news.google.com/rss/search?q=Cincinnati+(%22city+council%22+OR+%22city+hall%22+OR+%22city+manager%22+OR+mayor)+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City of Cincinnati",
+   "ok": true,
+   "items": 0,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": null,
+   "used_fallback": false,
+   "errors": [
+    "empty: https://news.google.com/rss/search?q=site:cincinnati-oh.gov/cityofcincinnati/news+when:3d&hl=en-US&gl=US&ceid=US:en"
+   ],
+   "fail_streak": 0
+  },
+  {
+   "source": "Ohio Capital Journal",
+   "ok": true,
+   "items": 15,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://ohiocapitaljournal.com/feed/",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Ohio legislation sweep",
+   "ok": true,
+   "items": 5,
+   "junk_dropped": 2,
+   "junk_examples": [
+    "Lebanon Lawmaker Adam Mathews Named Legislator of the Year by Ohio Chamber of Commerce",
+    "Ohio House Bill 1034: Rules for Driverless Cars Explained"
+   ],
+   "used": "https://news.google.com/rss/search?q=Ohio+(lawmakers+OR+Statehouse+OR+%22House+Bill%22+OR+%22Senate+Bill%22)+(cities+OR+%22local+governments%22+OR+municipalities+OR+%22home+rule%22)+when:2d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Federal local-gov sweep",
+   "ok": true,
+   "items": 5,
+   "junk_dropped": 4,
+   "junk_examples": [
+    "Trusted Long Island Public Adjuster, Republic Claims Associates, Launches Nor'easter Flood Claim Help Ahead of Late-November Federal Flood Insurance Deadline",
+    "Historic Diwali Celebration across the U.S. Pacific Northwest",
+    "Diwali Celebrations Across US Pacific Northwest: 6 State Governors, 21 Mayors Host Festivities",
+    "Unprecedented Diwali Celebrations In US Pacific Northwest"
+   ],
+   "used": "https://news.google.com/rss/search?q=(%22U.S.+Congress%22+OR+%22federal+funding%22+OR+%22federal+grants%22+OR+HUD+OR+FEMA+OR+%22Trump+administration%22)+(%22local+governments%22+OR+%22U.S.+cities%22+OR+mayors)+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City meetings (Legistar)",
+   "ok": true,
+   "items": 1,
+   "used": "web API (cincinnatioh)",
+   "error": null,
+   "fail_streak": 0
+  },
+  {
+   "source": "Game days (ESPN)",
+   "ok": true,
+   "items": 2,
+   "error": null,
+   "fail_streak": 0
+  }
+ ],
+ "memory": {
+  "fail_streak": {
+   "Enquirer": 0,
+   "WCPO": 0,
+   "WLWT": 0,
+   "FOX19": 0,
+   "Local 12": 0,
+   "WVXU": 0,
+   "Signal": 0,
+   "City Hall sweep": 0,
+   "City of Cincinnati": 0,
+   "Ohio Capital Journal": 0,
+   "Ohio legislation sweep": 0,
+   "Federal local-gov sweep": 0,
+   "City meetings (Legistar)": 0,
+   "Game days (ESPN)": 0
+  },
+  "seen": [
+   {
+    "tok": [
+     "accused",
+     "alleged",
+     "columbine",
+     "nky",
+     "police",
+     "referencing",
+     "school",
+     "teen",
+     "threat",
+     "toward"
+    ],
+    "first_seen": "2026-11-06T01:49:00+00:00",
+    "title": "Police: Teen accused of referencing Columbine in alleged threats toward NKY school"
+   },
+   {
+    "tok": [
+     "found",
+     "gas",
+     "missing",
+     "offender",
+     "registered",
+     "sex",
+     "station",
+     "teen",
+     "texa"
+    ],
+    "first_seen": "2026-11-05T00:01:00+00:00",
+    "title": "Missing Texas teen found with registered sex offender at gas station in Cincinnati"
+   },
+   {
+    "tok": [
+     "ammunition",
+     "charge",
+     "guilty",
+     "man",
+     "mass",
+     "plead",
+     "riverfront",
+     "shooting"
+    ],
+    "first_seen": "2026-11-06T20:33:50+00:00",
+    "title": "Man pleads guilty to ammunition charge in Riverfront Live mass shooting"
+   },
+   {
+    "tok": [
+     "downtown",
+     "february",
+     "health",
+     "ice",
+     "return",
+     "rink",
+     "through"
+    ],
+    "first_seen": "2026-11-05T20:41:00+00:00",
+    "title": "UC Health Ice Rink returns to downtown Cincinnati through February"
+   },
+   {
+    "tok": [
+     "city",
+     "club",
+     "file",
+     "killed",
+     "lawsuit",
+     "man",
+     "shot"
+    ],
+    "first_seen": "2026-11-06T21:57:59+00:00",
+    "title": "City files lawsuit against Cincinnati club where man was shot, killed"
+   },
+   {
+    "tok": [
+     "dolore",
+     "location",
+     "open",
+     "pepp",
+     "restaurant",
+     "second",
+     "set"
+    ],
+    "first_seen": "2026-11-06T19:55:00+00:00",
+    "title": "Second local Pepp & Dolores restaurant location set to open"
+   },
+   {
+    "tok": [
+     "ash",
+     "bedroom",
+     "blue",
+     "camera",
+     "children",
+     "hiding",
+     "man",
+     "prosecutor",
+     "sentenced"
+    ],
+    "first_seen": "2026-11-06T21:54:53+00:00",
+    "title": "Blue Ash man sentenced for hiding cameras in children\u2019s bedrooms, prosecutors say"
+   },
+   {
+    "tok": [
+     "body",
+     "gave",
+     "girlfriend'",
+     "gun",
+     "man",
+     "middletown",
+     "moved",
+     "neighbor",
+     "police"
+    ],
+    "first_seen": "2026-11-06T14:42:00+00:00",
+    "title": "Middletown man moved girlfriend's body, gave gun to neighbor, police say"
+   },
+   {
+    "tok": [
+     "defense",
+     "eastern",
+     "michigan",
+     "ride",
+     "start",
+     "win",
+     "xavier"
+    ],
+    "first_seen": "2026-11-05T16:49:00+00:00",
+    "title": "Xavier rides defense to win over Eastern Michigan, 2-0 start"
+   },
+   {
+    "tok": [
+     "aquarium",
+     "begin",
+     "climate",
+     "cold",
+     "expansion",
+     "move",
+     "newport",
+     "penguin"
+    ],
+    "first_seen": "2026-11-06T19:25:50+00:00",
+    "title": "Cold-climate penguins at Newport Aquarium to move as expansion begins"
+   },
+   {
+    "tok": [
+     "call",
+     "camera",
+     "enforcement",
+     "flock",
+     "group",
+     "law",
+     "oversight",
+     "support"
+    ],
+    "first_seen": "2026-11-07T01:24:56+00:00",
+    "title": "Ohio law enforcement groups support Flock cameras, call for oversight"
+   },
+   {
+    "tok": [
+     "coat",
+     "distribution",
+     "hosting",
+     "paul",
+     "saturday",
+     "season",
+     "vincent",
+     "winter"
+    ],
+    "first_seen": "2026-11-06T20:51:00+00:00",
+    "title": "St. Vincent de Paul hosting first winter coat distribution of season Saturday"
+   },
+   {
+    "tok": [
+     "bus",
+     "district",
+     "driver",
+     "event",
+     "fill",
+     "host",
+     "school",
+     "shortage",
+     "state",
+     "tri"
+    ],
+    "first_seen": "2026-11-07T00:43:36+00:00",
+    "title": "Tri-State school district hosts event to fill bus driver shortage"
+   },
+   {
+    "tok": [
+     "cause",
+     "died",
+     "family",
+     "field",
+     "natural",
+     "question",
+     "woman"
+    ],
+    "first_seen": "2026-11-07T00:24:40+00:00",
+    "title": "Kentucky woman died of natural causes; family questions why she was in Ohio field"
+   },
+   {
+    "tok": [
+     "92",
+     "age",
+     "attempted",
+     "charged",
+     "die",
+     "jail",
+     "judge",
+     "murder",
+     "old",
+     "tell",
+     "wife",
+     "year"
+    ],
+    "first_seen": "2026-11-07T00:02:44+00:00",
+    "title": "92-year-old charged with attempted murder of his wife tells judge he\u2019ll \u2018die of old age\u2019 in jail"
+   },
+   {
+    "tok": [
+     "aggressive",
+     "around",
+     "blood",
+     "cancer",
+     "diagnosed",
+     "paramedic",
+     "rally",
+     "responder"
+    ],
+    "first_seen": "2026-11-06T23:25:00+00:00",
+    "title": "First responders rally around paramedic diagnosed with aggressive blood cancer"
+   },
+   {
+    "tok": [
+     "ahead",
+     "car",
+     "continue",
+     "driving",
+     "mapping",
+     "possible",
+     "self",
+     "street",
+     "testing",
+     "waymo"
+    ],
+    "first_seen": "2026-11-06T23:19:00+00:00",
+    "title": "Waymo continues mapping Cincinnati streets ahead of possible self-driving car testing"
+   },
+   {
+    "tok": [
+     "announce",
+     "baby",
+     "birth",
+     "fifth",
+     "sloth",
+     "zoo"
+    ],
+    "first_seen": "2026-11-06T23:16:07+00:00",
+    "title": "Zoo announces birth of fifth baby sloth"
+   },
+   {
+    "tok": [
+     "accidental",
+     "apparent",
+     "daughter",
+     "killed",
+     "mother",
+     "shooting",
+     "speak"
+    ],
+    "first_seen": "2026-11-06T23:13:33+00:00",
+    "title": "Cincinnati mother speaks out after daughter killed in apparent accidental shooting"
+   },
+   {
+    "tok": [
+     "54",
+     "challenge",
+     "department",
+     "officer",
+     "police",
+     "staffing",
+     "welcome"
+    ],
+    "first_seen": "2026-11-06T23:13:00+00:00",
+    "title": "Cincinnati Police Department welcomes 54 new officers amid staffing challenges"
+   },
+   {
+    "tok": [
+     "17",
+     "bold",
+     "houston",
+     "nov",
+     "prediction",
+     "try",
+     "win"
+    ],
+    "first_seen": "2026-11-06T22:40:42+00:00",
+    "title": "Bold predictions as UC tries to win at No. 17 Houston Nov. 7"
+   },
+   {
+    "tok": [
+     "20",
+     "city",
+     "die",
+     "downtown",
+     "lounge",
+     "old",
+     "shooting",
+     "sue",
+     "year"
+    ],
+    "first_seen": "2026-11-06T22:07:22+00:00",
+    "title": "City sues downtown lounge after 20-year-old dies in shooting"
+   },
+   {
+    "tok": [
+     "2027",
+     "announce",
+     "concert",
+     "lineup",
+     "postgame",
+     "red"
+    ],
+    "first_seen": "2026-11-06T15:50:00+00:00",
+    "title": "Cincinnati Reds announce 2027 postgame concert lineup"
+   },
+   {
+    "tok": [
+     "12",
+     "football",
+     "high",
+     "playoff",
+     "school",
+     "score"
+    ],
+    "first_seen": "2026-11-06T21:01:00+00:00",
+    "title": "Cincinnati high school football Week 12 playoff scores | Live"
+   },
+   {
+    "tok": [
+     "across",
+     "around",
+     "blink",
+     "cov",
+     "covington",
+     "impact",
+     "lasting",
+     "leave",
+     "mural",
+     "world"
+    ],
+    "first_seen": "2026-11-06T21:44:30+00:00",
+    "title": "Around the World, Across the Cov: New BLINK Murals Leave a Lasting Impact on Covington"
+   },
+   {
+    "tok": [
+     "addresse",
+     "beshear",
+     "gov",
+     "midterm",
+     "presidential",
+     "run",
+     "speculation"
+    ],
+    "first_seen": "2026-11-06T21:15:00+00:00",
+    "title": "Kentucky Gov. Beshear addresses presidential run speculation after midterms"
+   },
+   {
+    "tok": [
+     "artificial",
+     "intelligence",
+     "look",
+     "northern",
+     "prepare",
+     "program",
+     "student",
+     "tomorrow",
+     "workforce"
+    ],
+    "first_seen": "2026-11-06T21:31:43+00:00",
+    "title": "New program looks to prepare Northern Kentucky students for Artificial Intelligence workforce of tomorrow"
+   },
+   {
+    "tok": [
+     "40",
+     "bottled",
+     "glass",
+     "open",
+     "plu",
+     "pour",
+     "shop",
+     "wine"
+    ],
+    "first_seen": "2026-11-06T21:26:24+00:00",
+    "title": "Shop opens in Cincinnati with 40-plus bottled wines and by-the-glass pours"
+   },
+   {
+    "tok": [
+     "american",
+     "disabled",
+     "honor",
+     "served",
+     "veteran"
+    ],
+    "first_seen": "2026-11-05T21:41:00+00:00",
+    "title": "Disabled American Veterans 5K in Cincinnati to honor those who served"
+   },
+   {
+    "tok": [
+     "begin",
+     "duveneck",
+     "frank",
+     "historic",
+     "house",
+     "northern",
+     "phase",
+     "preserve"
+    ],
+    "first_seen": "2026-11-06T21:14:49+00:00",
+    "title": "Next phase begins to preserve historic Frank Duveneck House in Northern Kentucky"
+   },
+   {
+    "tok": [
+     "absence",
+     "city",
+     "council",
+     "following",
+     "leave",
+     "presumptive",
+     "seth",
+     "state",
+     "take",
+     "treasurer",
+     "walsh",
+     "win"
+    ],
+    "first_seen": "2026-11-06T14:24:00+00:00",
+    "title": "Seth Walsh to take leave of absence from City Council following presumptive State Treasurer win"
+   },
+   {
+    "tok": [
+     "camp",
+     "change",
+     "future",
+     "housing",
+     "mean",
+     "washington",
+     "zoning"
+    ],
+    "first_seen": "2026-11-06T20:55:47+00:00",
+    "title": "Camp Washington zoning changes could mean more housing in the future"
+   },
+   {
+    "tok": [
+     "aim",
+     "fatal",
+     "incident",
+     "lawsuit",
+     "memory",
+     "numerou",
+     "other",
+     "shooting",
+     "shut"
+    ],
+    "first_seen": "2026-11-06T19:31:34+00:00",
+    "title": "Lawsuit aims to shut down Memories after fatal shooting, numerous other incidents"
+   },
+   {
+    "tok": [
+     "brief",
+     "city",
+     "council",
+     "daily",
+     "vacancy"
+    ],
+    "first_seen": "2026-11-05T18:30:27+00:00",
+    "title": "Daily Brief: New vacancies on Cincinnati City Council"
+   },
+   {
+    "tok": [
+     "bengal",
+     "falcon",
+     "madrid"
+    ],
+    "first_seen": "2026-11-05T17:18:00+00:00",
+    "title": "Bengals vs. Falcons in Madrid: How to watch"
+   },
+   {
+    "tok": [
+     "closed",
+     "fatal",
+     "keep",
+     "lounge",
+     "memory",
+     "shooting",
+     "sue"
+    ],
+    "first_seen": "2026-11-06T16:32:00+00:00",
+    "title": "Cincinnati sues to keep Memories Lounge closed after fatal shooting"
+   },
+   {
+    "tok": [
+     "athlete",
+     "break",
+     "facility",
+     "foundation",
+     "ground",
+     "need",
+     "nuxhall",
+     "special"
+    ],
+    "first_seen": "2026-11-06T20:28:50+00:00",
+    "title": "Nuxhall Foundation to break ground on new facility for athletes with special needs"
+   },
+   {
+    "tok": [
+     "grand",
+     "indiana",
+     "northern",
+     "opening",
+     "set",
+     "store",
+     "wawa"
+    ],
+    "first_seen": "2026-11-06T20:25:00+00:00",
+    "title": "Northern Kentucky, SE Indiana Wawa stores set for grand openings"
+   },
+   {
+    "tok": [
+     "brown",
+     "county",
+     "destination",
+     "freedom",
+     "landing",
+     "officially",
+     "open",
+     "riverfront"
+    ],
+    "first_seen": "2026-11-06T20:06:30+00:00",
+    "title": "New riverfront destination 'Freedom Landing' officially opens in Brown County"
+   },
+   {
+    "tok": [
+     "holiday",
+     "oldest",
+     "pop",
+     "speakeasy",
+     "tavern",
+     "transform"
+    ],
+    "first_seen": "2026-11-06T19:50:18+00:00",
+    "title": "Cincinnati\u2019s oldest tavern transforms into speakeasy holiday pop-up"
+   },
+   {
+    "tok": [
+     "adoption",
+     "children",
+     "county",
+     "day",
+     "during",
+     "find",
+     "forever",
+     "foster",
+     "hamilton",
+     "home"
+    ],
+    "first_seen": "2026-11-06T19:36:37+00:00",
+    "title": "6 Cincinnati foster children find forever homes during Adoption Day in Hamilton County"
+   },
+   {
+    "tok": [
+     "day",
+     "decision",
+     "has",
+     "home",
+     "much",
+     "nashville",
+     "stake"
+    ],
+    "first_seen": "2026-11-06T18:26:00+00:00",
+    "title": "FC Cincinnati has much at stake at home vs. Nashville on Decision Day"
+   },
+   {
+    "tok": [
+     "calling",
+     "city",
+     "closure",
+     "downtown'",
+     "file",
+     "lawsuit",
+     "lounge",
+     "memory",
+     "permanent"
+    ],
+    "first_seen": "2026-11-06T21:57:59+00:00",
+    "title": "City of Cincinnati files lawsuit against downtown's Memories Lounge, calling for permanent closure"
+   },
+   {
+    "tok": [
+     "ahead",
+     "bengal",
+     "burrow",
+     "enjoying",
+     "feeling",
+     "game",
+     "like",
+     "madrid",
+     "madrid'",
+     "museum",
+     "normal",
+     "person"
+    ],
+    "first_seen": "2026-11-06T22:26:17+00:00",
+    "title": "Bengals' Burrow enjoying Madrid's museums and feeling like a \u2018normal person\u2019 ahead of Madrid game"
+   },
+   {
+    "tok": [
+     "based",
+     "currito",
+     "group",
+     "location",
+     "open",
+     "restaurant"
+    ],
+    "first_seen": "2026-11-06T17:46:05+00:00",
+    "title": "Cincinnati-based restaurant group to open 4 new Currito locations"
+   },
+   {
+    "tok": [
+     "dead",
+     "gunshot",
+     "hearing",
+     "man",
+     "neighbor",
+     "neighborhood",
+     "police",
+     "westwood"
+    ],
+    "first_seen": "2026-11-06T11:38:00+00:00",
+    "title": "Police: Man dead after neighbors report hearing gunshots in Westwood neighborhood"
+   },
+   {
+    "tok": [
+     "fed",
+     "man",
+     "meet",
+     "met",
+     "online",
+     "sentenced",
+     "teen",
+     "traveling"
+    ],
+    "first_seen": "2026-11-06T16:06:00+00:00",
+    "title": "Feds: Man sentenced after traveling to Ohio to meet teen he met online"
+   },
+   {
+    "tok": [
+     "cancelled",
+     "class",
+     "early",
+     "fire",
+     "grade",
+     "hill",
+     "lead",
+     "madisonville'",
+     "morning",
+     "school",
+     "seven"
+    ],
+    "first_seen": "2026-11-06T12:23:33+00:00",
+    "title": "Early-morning fire leads to class cancelled for grades 1-5 at Madisonville's Seven Hills School"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "found",
+     "inside",
+     "man",
+     "middletown",
+     "vehicle",
+     "woman"
+    ],
+    "first_seen": "2026-11-06T14:42:00+00:00",
+    "title": "Woman found dead inside vehicle in Middletown, man arrested"
+   },
+   {
+    "tok": [
+     "almost",
+     "back",
+     "festival",
+     "fiona",
+     "here",
+     "light",
+     "nutcracker",
+     "sign"
+    ],
+    "first_seen": "2026-11-05T15:55:00+00:00",
+    "title": "Fiona nutcracker is back, a sign the Festival of Lights is almost here"
+   },
+   {
+    "tok": [
+     "case",
+     "charged",
+     "convicted",
+     "earlier",
+     "involving",
+     "kidnapping",
+     "man",
+     "rape",
+     "women"
+    ],
+    "first_seen": "2026-11-06T15:03:37+00:00",
+    "title": "Man convicted in 2 earlier cases involving women charged with rape, kidnapping"
+   },
+   {
+    "tok": [
+     "bengal",
+     "game",
+     "madrid",
+     "player",
+     "rule",
+     "sunday'"
+    ],
+    "first_seen": "2026-11-06T19:12:00+00:00",
+    "title": "Bengals rule out one player for Sunday's game in Madrid"
+   },
+   {
+    "tok": [
+     "commit",
+     "elder'",
+     "estep",
+     "football",
+     "kaden",
+     "panther",
+     "record",
+     "rewriting"
+    ],
+    "first_seen": "2026-11-06T14:59:00+00:00",
+    "title": "Elder's Kaden Estep, UC football commit, is rewriting Panther records"
+   },
+   {
+    "tok": [
+     "children",
+     "choice",
+     "die",
+     "eritrea",
+     "fleeing",
+     "had",
+     "now",
+     "she'",
+     "starting",
+     "watched"
+    ],
+    "first_seen": "2026-11-06T14:08:48+00:00",
+    "title": "\u2018I had no choice\u2019 | She watched children die fleeing Eritrea. Now, she's starting over in Cincinnati"
+   },
+   {
+    "tok": [
+     "die",
+     "man",
+     "multiple",
+     "police",
+     "shot",
+     "time",
+     "westwood"
+    ],
+    "first_seen": "2026-11-06T14:08:29+00:00",
+    "title": "Man shot multiple times in Westwood dies, police say"
+   },
+   {
+    "tok": [
+     "fatally",
+     "found",
+     "information",
+     "man",
+     "police",
+     "seek",
+     "shot",
+     "westwood"
+    ],
+    "first_seen": "2026-11-06T13:59:00+00:00",
+    "title": "Man found fatally shot in Westwood, police seek information"
+   },
+   {
+    "tok": [
+     "blue",
+     "midterm",
+     "spilled",
+     "that'",
+     "wave"
+    ],
+    "first_seen": "2026-11-06T13:57:00+00:00",
+    "title": "How the midterm blue wave spilled into Cincinnati | That's So Cincinnati"
+   },
+   {
+    "tok": [
+     "2027",
+     "concert",
+     "game",
+     "performing",
+     "post",
+     "red"
+    ],
+    "first_seen": "2026-11-06T18:02:41+00:00",
+    "title": "Who\u2019s performing at the Reds\u2019 post-game concerts in 2027?"
+   },
+   {
+    "tok": [
+     "bengal",
+     "burrow",
+     "fashion",
+     "joe",
+     "madrid",
+     "presser",
+     "ranging",
+     "real",
+     "talk",
+     "wide"
+    ],
+    "first_seen": "2026-11-06T17:57:00+00:00",
+    "title": "In wide-ranging presser, Bengals' Joe Burrow talks Real Madrid, fashion"
+   },
+   {
+    "tok": [
+     "bundle",
+     "coming",
+     "freezing",
+     "frost",
+     "possibly",
+     "temp"
+    ],
+    "first_seen": "2026-11-06T12:47:00+00:00",
+    "title": "Bundle up, Cincinnati. Frost and possibly freezing temps are coming"
+   },
+   {
+    "tok": [
+     "concern",
+     "emergency",
+     "fail",
+     "fire",
+     "forest",
+     "levy",
+     "park",
+     "raising",
+     "response",
+     "time"
+    ],
+    "first_seen": "2026-11-06T12:54:00+00:00",
+    "title": "Forest Park fire levy fails, raising concerns over emergency response times"
+   },
+   {
+    "tok": [
+     "40s",
+     "cold",
+     "day",
+     "dropping",
+     "front",
+     "impact",
+     "lower",
+     "sliding",
+     "temperature",
+     "through"
+    ],
+    "first_seen": "2026-11-06T12:08:00+00:00",
+    "title": "Impact day: Cold front sliding through Cincinnati, dropping temperatures into the 40s (or lower)"
+   },
+   {
+    "tok": [
+     "identified",
+     "identity",
+     "killed",
+     "person",
+     "shooting",
+     "westwood"
+    ],
+    "first_seen": "2026-11-06T11:49:23+00:00",
+    "title": "Identity of person killed in Westwood shooting identified"
+   },
+   {
+    "tok": [
+     "aquarium",
+     "give",
+     "home",
+     "newport",
+     "penguin"
+    ],
+    "first_seen": "2026-11-06T19:25:50+00:00",
+    "title": "Newport Aquarium gives penguins new home"
+   },
+   {
+    "tok": [
+     "brent",
+     "bridge",
+     "cause",
+     "crash",
+     "headache",
+     "major",
+     "spence",
+     "traffic"
+    ],
+    "first_seen": "2026-11-06T11:21:19+00:00",
+    "title": "Crash on Brent Spence Bridge causes major traffic headache"
+   },
+   {
+    "tok": [
+     "break",
+     "camp",
+     "early",
+     "fire",
+     "firefighter",
+     "food",
+     "friday",
+     "mart",
+     "morning",
+     "suspiciou",
+     "washington"
+    ],
+    "first_seen": "2026-11-06T10:43:00+00:00",
+    "title": "Firefighters: 'Suspicious' fire breaks out at Camp Washington food mart early Friday morning"
+   },
+   {
+    "tok": [
+     "75",
+     "crash",
+     "greater",
+     "open"
+    ],
+    "first_seen": "2026-11-06T10:22:58+00:00",
+    "title": "I-75 SB re-opens after crash in Greater Cincinnati"
+   },
+   {
+    "tok": [
+     "begin",
+     "construction",
+     "day",
+     "latter",
+     "ohio'",
+     "saint",
+     "temple",
+     "third"
+    ],
+    "first_seen": "2026-11-06T09:48:00+00:00",
+    "title": "Construction begins on Ohio's third Latter-day Saints temple"
+   },
+   {
+    "tok": [
+     "back",
+     "plan",
+     "preparedness",
+     "snowy",
+     "unveil",
+     "winter"
+    ],
+    "first_seen": "2026-11-06T00:42:58+00:00",
+    "title": "Cincinnati unveils new winter preparedness plan after back-to-back snowy winters"
+   },
+   {
+    "tok": [
+     "building",
+     "car",
+     "cleaning",
+     "county",
+     "crashe",
+     "front",
+     "shop",
+     "vape",
+     "warren"
+    ],
+    "first_seen": "2026-11-05T21:22:10+00:00",
+    "title": "Warren County vape shop cleaning up after car crashes into front of building"
+   },
+   {
+    "tok": [
+     "girl",
+     "nov",
+     "regional",
+     "semi",
+     "team",
+     "volleyball",
+     "which",
+     "won"
+    ],
+    "first_seen": "2026-11-06T05:50:00+00:00",
+    "title": "Which Cincinnati teams won Nov. 5 girls volleyball regional semis?"
+   },
+   {
+    "tok": [
+     "fatally",
+     "identified",
+     "man",
+     "neighborhood",
+     "shot"
+    ],
+    "first_seen": "2026-11-06T05:19:58+00:00",
+    "title": "Man fatally shot in Cincinnati neighborhood identified"
+   },
+   {
+    "tok": [
+     "back",
+     "brewery",
+     "mystery",
+     "peel",
+     "plan",
+     "shuttered",
+     "space",
+     "tenant"
+    ],
+    "first_seen": "2026-11-06T05:14:41+00:00",
+    "title": "Mystery tenant peels back plans for shuttered Cincinnati brewery space"
+   },
+   {
+    "tok": [
+     "71",
+     "close",
+     "crash",
+     "fiery"
+    ],
+    "first_seen": "2026-11-06T04:57:30+00:00",
+    "title": "Fiery crash closes I-71"
+   },
+   {
+    "tok": [
+     "board",
+     "crash",
+     "election",
+     "killed",
+     "missouri",
+     "plane",
+     "school",
+     "woman"
+    ],
+    "first_seen": "2026-11-05T23:29:00+00:00",
+    "title": "Woman killed in Missouri plane crash was up for Kentucky school board election"
+   },
+   {
+    "tok": [
+     "advised",
+     "closure",
+     "delay",
+     "driver",
+     "fort",
+     "upcoming",
+     "using",
+     "washington",
+     "way"
+    ],
+    "first_seen": "2026-11-05T21:50:03+00:00",
+    "title": "Drivers using Fort Washington Way advised to watch for upcoming closures, delays"
+   },
+   {
+    "tok": [
+     "decade",
+     "greater",
+     "man",
+     "officer",
+     "police",
+     "sentenced",
+     "shooting"
+    ],
+    "first_seen": "2026-11-06T02:50:52+00:00",
+    "title": "Man sentenced to over 3 decades for shooting at Greater Cincinnati police officers"
+   },
+   {
+    "tok": [
+     "71",
+     "crash",
+     "interstate",
+     "investigating",
+     "near",
+     "northbound",
+     "police",
+     "silverton"
+    ],
+    "first_seen": "2026-11-06T04:13:00+00:00",
+    "title": "Police investigating crash on Interstate 71 northbound near Silverton"
+   },
+   {
+    "tok": [
+     "ban",
+     "clock",
+     "hemp",
+     "looming",
+     "midterm",
+     "national",
+     "result",
+     "stop",
+     "thc"
+    ],
+    "first_seen": "2026-11-06T04:12:00+00:00",
+    "title": "Could midterm results stop the clock on a looming national THC hemp ban?"
+   },
+   {
+    "tok": [
+     "fight",
+     "have",
+     "him",
+     "jail",
+     "keep",
+     "killer",
+     "lifetime",
+     "officer'",
+     "prison",
+     "spent",
+     "trying",
+     "widow"
+    ],
+    "first_seen": "2026-11-05T20:23:28+00:00",
+    "title": "'We have spent a lifetime trying to keep him in jail': Officer's widow fights to keep killer in prison"
+   },
+   {
+    "tok": [
+     "community",
+     "hour",
+     "information",
+     "investigation",
+     "limited",
+     "long",
+     "middletown",
+     "residential"
+    ],
+    "first_seen": "2026-11-06T11:17:00+00:00",
+    "title": "Information limited after hours-long investigation at Middletown residential community"
+   },
+   {
+    "tok": [
+     "fund",
+     "grant",
+     "park",
+     "proposed",
+     "rhine",
+     "tif",
+     "use"
+    ],
+    "first_seen": "2026-11-06T09:39:51+00:00",
+    "title": "Proposed Use of TIF Funds at Grant Park in Over-the-Rhine"
+   },
+   {
+    "tok": [
+     "dead",
+     "know",
+     "person",
+     "shooting",
+     "westwood"
+    ],
+    "first_seen": "2026-11-06T11:49:23+00:00",
+    "title": "1 person dead in Westwood shooting. What we know"
+   },
+   {
+    "tok": [
+     "10",
+     "boy",
+     "community",
+     "deny",
+     "drowned",
+     "hoa",
+     "maineville",
+     "memorial",
+     "old",
+     "plaque",
+     "pond",
+     "year"
+    ],
+    "first_seen": "2026-11-06T03:35:11+00:00",
+    "title": "Maineville HOA denies memorial plaque for 10-year-old boy who drowned in community pond"
+   },
+   {
+    "tok": [
+     "animal",
+     "care",
+     "control",
+     "fayette",
+     "lexington",
+     "lost",
+     "owner",
+     "reunite",
+     "seeking",
+     "snake",
+     "tortoise"
+    ],
+    "first_seen": "2026-11-06T03:33:50+00:00",
+    "title": "Lexington-Fayette Animal Care & Control seeking to reunite lost snake, tortoise with owners"
+   },
+   {
+    "tok": [
+     "contract",
+     "fewer",
+     "service",
+     "sheriff",
+     "township",
+     "warn",
+     "without"
+    ],
+    "first_seen": "2026-11-06T03:33:56+00:00",
+    "title": "Sheriff warns local township of fewer services without contract"
+   },
+   {
+    "tok": [
+     "000",
+     "breeder",
+     "chinchilla",
+     "condition",
+     "pet",
+     "surrender",
+     "troubling"
+    ],
+    "first_seen": "2026-11-05T20:56:00+00:00",
+    "title": "Ohio pet breeder surrenders over 1,000 chinchillas from \u2018troubling conditions\u2019"
+   },
+   {
+    "tok": [
+     "card",
+     "credit",
+     "finding",
+     "fraud",
+     "help",
+     "police",
+     "seek",
+     "suspect",
+     "theft",
+     "vehicle"
+    ],
+    "first_seen": "2026-11-05T20:06:23+00:00",
+    "title": "Cincinnati police seek help finding suspect in vehicle theft, credit card fraud"
+   },
+   {
+    "tok": [
+     "injured",
+     "seriously",
+     "shooting",
+     "westwood"
+    ],
+    "first_seen": "2026-11-06T05:19:58+00:00",
+    "title": "1 seriously injured in Westwood shooting"
+   },
+   {
+    "tok": [
+     "18",
+     "animal",
+     "cat",
+     "charged",
+     "court",
+     "cruelty",
+     "doc",
+     "home",
+     "man",
+     "removed"
+    ],
+    "first_seen": "2026-11-06T03:02:00+00:00",
+    "title": "Court docs: 18 cats removed from home, man charged with animal cruelty"
+   },
+   {
+    "tok": [
+     "firefighter",
+     "private",
+     "respond",
+     "school"
+    ],
+    "first_seen": "2026-11-06T12:23:33+00:00",
+    "title": "Firefighters respond to local private school"
+   },
+   {
+    "tok": [
+     "275",
+     "crash",
+     "east",
+     "interstate",
+     "lane",
+     "northern",
+     "reopen"
+    ],
+    "first_seen": "2026-11-06T00:39:00+00:00",
+    "title": "Lanes reopen on Interstate 275 east after crash in Northern Kentucky"
+   },
+   {
+    "tok": [
+     "100m",
+     "family",
+     "farmer",
+     "get",
+     "gift",
+     "history",
+     "largest",
+     "miami",
+     "school",
+     "university"
+    ],
+    "first_seen": "2026-11-05T19:23:00+00:00",
+    "title": "Miami University gets largest gift in school history with $100M from Farmer family"
+   },
+   {
+    "tok": [
+     "counter",
+     "flyer",
+     "found",
+     "kkk",
+     "mount",
+     "protest",
+     "satanist",
+     "washington"
+    ],
+    "first_seen": "2026-11-06T00:04:34+00:00",
+    "title": "Local Satanists counter-protest KKK flyers found in Mount Washington"
+   },
+   {
+    "tok": [
+     "body",
+     "chester",
+     "dig",
+     "man",
+     "missing",
+     "police",
+     "record",
+     "reveal",
+     "timeline",
+     "west"
+    ],
+    "first_seen": "2026-11-05T23:10:00+00:00",
+    "title": "New records reveal timeline as police dig for missing man\u2019s body in West Chester"
+   },
+   {
+    "tok": [
+     "acton'",
+     "amy",
+     "dewine",
+     "gov",
+     "idea",
+     "limiting",
+     "mike",
+     "power",
+     "reject"
+    ],
+    "first_seen": "2026-11-05T16:44:00+00:00",
+    "title": "Ohio Gov. Mike DeWine rejects idea of limiting Dr. Amy Acton's powers"
+   },
+   {
+    "tok": [
+     "ahead",
+     "announce",
+     "gps",
+     "snowplow",
+     "system",
+     "tracker",
+     "winter"
+    ],
+    "first_seen": "2026-11-05T19:11:00+00:00",
+    "title": "Cincinnati announces updates to snowplow tracker, GPS systems ahead of winter"
+   },
+   {
+    "tok": [
+     "advocate",
+     "awareness",
+     "cleat",
+     "mental",
+     "mom",
+     "nfl",
+     "pair",
+     "player",
+     "special",
+     "through"
+    ],
+    "first_seen": "2026-11-05T23:27:23+00:00",
+    "title": "Local mom, NFL player advocate for mental awareness through a special pair of cleats"
+   },
+   {
+    "tok": [
+     "another",
+     "edge",
+     "media",
+     "party",
+     "promote",
+     "resident",
+     "social",
+     "street",
+     "unruly"
+    ],
+    "first_seen": "2026-11-05T22:44:10+00:00",
+    "title": "Cincinnati residents on edge as social media promotes another unruly street party"
+   },
+   {
+    "tok": [
+     "dewine",
+     "election",
+     "governor",
+     "reflect",
+     "result",
+     "transition"
+    ],
+    "first_seen": "2026-11-05T21:00:00+00:00",
+    "title": "DeWine reflects on election results, transition to next governor"
+   },
+   {
+    "tok": [
+     "allegedly",
+     "colerain",
+     "confronted",
+     "got",
+     "middle",
+     "parent",
+     "permission",
+     "school",
+     "student",
+     "without"
+    ],
+    "first_seen": "2026-11-05T22:01:00+00:00",
+    "title": "Parent got into Colerain Middle School without permission, allegedly confronted student"
+   },
+   {
+    "tok": [
+     "annual",
+     "day",
+     "organizer",
+     "preparing",
+     "race",
+     "thanksgiving"
+    ],
+    "first_seen": "2026-11-05T21:34:00+00:00",
+    "title": "Organizers preparing for annual Thanksgiving Day Race in Cincinnati"
+   },
+   {
+    "tok": [
+     "alert",
+     "autism",
+     "girl",
+     "issued",
+     "joshua",
+     "lockland",
+     "missing",
+     "wasn"
+    ],
+    "first_seen": "2026-11-05T21:05:38+00:00",
+    "title": "Why wasn\u2019t a Joshua Alert issued for a missing girl with autism in Lockland?"
+   },
+   {
+    "tok": [
+     "bar",
+     "holiday",
+     "oldest",
+     "speakeasy",
+     "themed",
+     "transforming"
+    ],
+    "first_seen": "2026-11-05T21:05:00+00:00",
+    "title": "Cincinnati\u2019s oldest bar transforming into holiday-themed speakeasy"
+   },
+   {
+    "tok": [
+     "47",
+     "bringing",
+     "cannabi",
+     "dispensary",
+     "medical",
+     "northern",
+     "open",
+     "statewide",
+     "total"
+    ],
+    "first_seen": "2026-11-05T20:52:43+00:00",
+    "title": "New medical cannabis dispensary opens in Northern Kentucky, bringing total to 47 statewide"
+   },
+   {
+    "tok": [
+     "begin",
+     "fiona",
+     "holiday",
+     "nutcracker",
+     "season",
+     "zoo"
+    ],
+    "first_seen": "2026-11-05T15:55:00+00:00",
+    "title": "Cincinnati Zoo begins the holiday season with Fiona the Nutcracker"
+   },
+   {
+    "tok": [
+     "65",
+     "admission",
+     "age",
+     "free",
+     "get",
+     "island",
+     "king",
+     "offering",
+     "ticket"
+    ],
+    "first_seen": "2026-11-05T14:55:00+00:00",
+    "title": "Kings Island offering free admission to ages 65+. How to get a ticket"
+   },
+   {
+    "tok": [
+     "building",
+     "colerain",
+     "investigating",
+     "middle",
+     "school",
+     "unauthorized",
+     "visitor"
+    ],
+    "first_seen": "2026-11-05T22:01:00+00:00",
+    "title": "Colerain Middle School investigating unauthorized visitor in building"
+   },
+   {
+    "tok": [
+     "alligator",
+     "bagel",
+     "owner",
+     "scare",
+     "shop",
+     "wander"
+    ],
+    "first_seen": "2026-11-05T20:32:22+00:00",
+    "title": "Alligator wanders into bagel shop, scares owner"
+   },
+   {
+    "tok": [
+     "driver",
+     "during",
+     "keep",
+     "overhaul",
+     "snowplow",
+     "storm",
+     "tracker",
+     "updated",
+     "winter"
+    ],
+    "first_seen": "2026-11-05T20:19:00+00:00",
+    "title": "Cincinnati overhauls snowplow tracker to keep drivers updated during winter storms"
+   },
+   {
+    "tok": [
+     "condition",
+     "plow",
+     "road",
+     "snow",
+     "station",
+     "tout",
+     "tracker"
+    ],
+    "first_seen": "2026-11-05T20:07:00+00:00",
+    "title": "Cincinnati touts new snow plow tracker, more road condition stations"
+   },
+   {
+    "tok": [
+     "charged",
+     "greater",
+     "police",
+     "ram",
+     "shop",
+     "suspect",
+     "tobacco",
+     "vehicle"
+    ],
+    "first_seen": "2026-11-05T21:22:10+00:00",
+    "title": "Police: Suspect charged after vehicle rams into Greater Cincinnati tobacco shop"
+   },
+   {
+    "tok": [
+     "boutique",
+     "open",
+     "owned",
+     "shop",
+     "side",
+     "west",
+     "wine",
+     "women"
+    ],
+    "first_seen": "2026-11-05T20:05:39+00:00",
+    "title": "Women-owned boutique wine shop opens on Cincinnati\u2019s West Side"
+   },
+   {
+    "tok": [
+     "abortion",
+     "anti",
+     "booth",
+     "charged",
+     "doc",
+     "miami",
+     "post",
+     "woman",
+     "yak",
+     "yik"
+    ],
+    "first_seen": "2026-11-05T14:48:00+00:00",
+    "title": "Docs: Woman charged after Yik Yak post about anti-abortion booth at Miami U"
+   },
+   {
+    "tok": [
+     "31",
+     "builder",
+     "college",
+     "finish",
+     "hill",
+     "home",
+     "project",
+     "step"
+    ],
+    "first_seen": "2026-11-05T19:52:00+00:00",
+    "title": "New builder steps in to finish 31-home College Hill project"
+   },
+   {
+    "tok": [
+     "can't",
+     "extra",
+     "jan",
+     "lose",
+     "patrol",
+     "pay",
+     "police",
+     "them",
+     "township"
+    ],
+    "first_seen": "2026-11-05T19:49:12+00:00",
+    "title": "Township says it can't pay for 'extra' police patrols, could lose them by Jan. 1"
+   },
+   {
+    "tok": [
+     "cause",
+     "church",
+     "fort",
+     "horror",
+     "nku",
+     "promo",
+     "rocky",
+     "stir",
+     "student",
+     "thoma"
+    ],
+    "first_seen": "2026-11-05T19:38:00+00:00",
+    "title": "NKU students cause stir with 'Rocky Horror' promo at Fort Thomas church"
+   },
+   {
+    "tok": [
+     "bar",
+     "behind",
+     "cop",
+     "he'",
+     "help",
+     "husband'",
+     "keeping",
+     "killer",
+     "murderer",
+     "plead",
+     "widow"
+    ],
+    "first_seen": "2026-11-05T19:26:05+00:00",
+    "title": "'He's a cop killer': Widow pleads for help keeping husband's murderer behind bars"
+   },
+   {
+    "tok": [
+     "250",
+     "city",
+     "decline",
+     "federal",
+     "gun",
+     "homicide",
+     "jump",
+     "prosecution",
+     "shooting"
+    ],
+    "first_seen": "2026-11-05T19:03:25+00:00",
+    "title": "Federal gun prosecutions in Cincinnati jump 250% as city reports decline in homicides and shootings"
+   },
+   {
+    "tok": [
+     "50m",
+     "coaster",
+     "expansion",
+     "indoor",
+     "kingdom",
+     "largest",
+     "part",
+     "unveiling",
+     "wooden",
+     "world"
+    ],
+    "first_seen": "2026-11-05T17:56:19+00:00",
+    "title": "Kentucky Kingdom unveiling world\u2019s largest indoor wooden coaster as part of $50M expansion"
+   },
+   {
+    "tok": [
+     "bar",
+     "christma",
+     "factory",
+     "gingerbread",
+     "has",
+     "holiday",
+     "mansion",
+     "massive",
+     "slide"
+    ],
+    "first_seen": "2026-11-05T17:40:00+00:00",
+    "title": "This massive 'Ohio Christmas Factory' has a gingerbread mansion, slide and 4 holiday bars"
+   },
+   {
+    "tok": [
+     "candidate",
+     "coin",
+     "decided",
+     "nky",
+     "race",
+     "tie",
+     "toss"
+    ],
+    "first_seen": "2026-11-05T17:00:26+00:00",
+    "title": "NKY race decided with coin toss after candidates tie"
+   },
+   {
+    "tok": [
+     "buffet",
+     "chinese",
+     "cincinnati'",
+     "gravy",
+     "join",
+     "mullet",
+     "rapper",
+     "review",
+     "yung"
+    ],
+    "first_seen": "2026-11-05T15:19:00+00:00",
+    "title": "Rapper Yung Gravy joins Cincinnati's Mullet Review at Chinese buffet"
+   },
+   {
+    "tok": [
+     "big",
+     "come",
+     "democrat",
+     "won"
+    ],
+    "first_seen": "2026-11-05T15:15:43+00:00",
+    "title": "Ohio Democrats won big. What comes next?"
+   },
+   {
+    "tok": [
+     "ccm",
+     "donate",
+     "love",
+     "music",
+     "radiologist",
+     "retired"
+    ],
+    "first_seen": "2026-11-05T14:58:35+00:00",
+    "title": "Retired radiologist with a love of music donates $1M to UC CCM"
+   },
+   {
+    "tok": [
+     "bed",
+     "bengal",
+     "dexter",
+     "lawrence",
+     "missing",
+     "spain",
+     "undefeated"
+    ],
+    "first_seen": "2026-11-05T18:19:00+00:00",
+    "title": "In Spain, Bengals' Dexter Lawrence missing his bed. 'My bed is undefeated'"
+   },
+   {
+    "tok": [
+     "atlantic",
+     "bengal",
+     "crossed",
+     "game",
+     "he'",
+     "higgin",
+     "tee",
+     "time"
+    ],
+    "first_seen": "2026-11-05T18:07:00+00:00",
+    "title": "For Tee Higgins, Bengals game is first time he's crossed the Atlantic"
+   },
+   {
+    "tok": [
+     "bengal",
+     "contributor",
+     "defensive",
+     "good",
+     "key",
+     "share"
+    ],
+    "first_seen": "2026-11-05T16:59:00+00:00",
+    "title": "Bengals share good news about key defensive contributor"
+   },
+   {
+    "tok": [
+     "award",
+     "bengal",
+     "landon",
+     "nfl",
+     "nominated",
+     "robinson",
+     "salute",
+     "service"
+    ],
+    "first_seen": "2026-11-05T16:00:00+00:00",
+    "title": "Landon Robinson nominated by Bengals for NFL Salute to Service Award"
+   },
+   {
+    "tok": [
+     "arrested",
+     "attempting",
+     "candy",
+     "children",
+     "event",
+     "halloween",
+     "lancaster",
+     "lure",
+     "man"
+    ],
+    "first_seen": "2026-11-05T16:12:30+00:00",
+    "title": "Lancaster man attempting to lure children with candy at Halloween event arrested"
+   }
+  ],
+  "lead": {
+   "city": {
+    "tok": [
+     "city",
+     "club",
+     "file",
+     "killed",
+     "lawsuit",
+     "man",
+     "shot"
+    ],
+    "id": "city-files-lawsuit-against-cincinnati-club-where-man-was-sho"
+   },
+   "general": {
+    "tok": [
+     "accused",
+     "alleged",
+     "columbine",
+     "nky",
+     "police",
+     "referencing",
+     "school",
+     "teen",
+     "threat",
+     "toward"
+    ],
+    "id": "police-teen-accused-of-referencing-columbine-in-alleged-thre"
+   }
+  }
+ }
+}
