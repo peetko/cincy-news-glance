@@ -1473,5 +1473,117 @@
     ]
    ]
   }
+ ],
+ "misdated": [
+  {
+   "note": "Nov 9: Google dated Local 12's Sept 4 Pureval/UC story as new; Local 12's own feed (back to Nov 5) doesn't have it",
+   "items": [
+    {
+     "outlet": "Local 12",
+     "title": "New Jersey ticket wins $847M Powerball jackpot",
+     "published": "2026-11-05T18:54:58+00:00"
+    },
+    {
+     "outlet": "Local 12",
+     "title": "Indian Hill home of former Bengals coach sells for $3.5M",
+     "published": "2026-11-09T04:39:46+00:00"
+    },
+    {
+     "outlet": "Local 12",
+     "title": "1 found dead after Cincinnati home catches fire",
+     "published": "2026-11-09T11:18:35+00:00"
+    },
+    {
+     "outlet": "Local 12",
+     "google": true,
+     "title": "Mayor Aftab Pureval addresses recent violence around UC, what's being done to prevent it",
+     "published": "2026-11-09T04:43:08+00:00"
+    }
+   ],
+   "dropped": [
+    3
+   ]
+  },
+  {
+   "note": "A Google result that is in the newsroom's own feed stays",
+   "items": [
+    {
+     "outlet": "Local 12",
+     "title": "New Jersey ticket wins $847M Powerball jackpot",
+     "published": "2026-11-05T18:54:58+00:00"
+    },
+    {
+     "outlet": "Local 12",
+     "title": "Indian Hill home of former Bengals coach sells for $3.5M",
+     "published": "2026-11-09T04:39:46+00:00"
+    },
+    {
+     "outlet": "Local 12",
+     "title": "1 found dead after Cincinnati home catches fire",
+     "published": "2026-11-09T11:18:35+00:00"
+    },
+    {
+     "outlet": "Local 12",
+     "google": true,
+     "title": "1 found dead after Cincinnati home catches fire",
+     "published": "2026-11-09T11:20:00+00:00"
+    }
+   ],
+   "dropped": []
+  },
+  {
+   "note": "Newsrooms we only reach through Google (the Enquirer) are never second-guessed",
+   "items": [
+    {
+     "outlet": "Local 12",
+     "title": "New Jersey ticket wins $847M Powerball jackpot",
+     "published": "2026-11-05T18:54:58+00:00"
+    },
+    {
+     "outlet": "Local 12",
+     "title": "Indian Hill home of former Bengals coach sells for $3.5M",
+     "published": "2026-11-09T04:39:46+00:00"
+    },
+    {
+     "outlet": "Local 12",
+     "title": "1 found dead after Cincinnati home catches fire",
+     "published": "2026-11-09T11:18:35+00:00"
+    },
+    {
+     "outlet": "Enquirer",
+     "google": true,
+     "title": "Person found dead in attic after Cincinnati house fire, officials say",
+     "published": "2026-11-09T11:33:00+00:00"
+    }
+   ],
+   "dropped": []
+  },
+  {
+   "note": "A Google result older than the newsroom's own feed reaches can't be checked, so it stays",
+   "items": [
+    {
+     "outlet": "Local 12",
+     "title": "New Jersey ticket wins $847M Powerball jackpot",
+     "published": "2026-11-05T18:54:58+00:00"
+    },
+    {
+     "outlet": "Local 12",
+     "title": "Indian Hill home of former Bengals coach sells for $3.5M",
+     "published": "2026-11-09T04:39:46+00:00"
+    },
+    {
+     "outlet": "Local 12",
+     "title": "1 found dead after Cincinnati home catches fire",
+     "published": "2026-11-09T11:18:35+00:00"
+    },
+    {
+     "outlet": "Local 12",
+     "google": true,
+     "title": "Mayor Aftab Pureval addresses recent violence around UC, what's being done to prevent it",
+     "published": "2026-11-05T12:00:00+00:00"
+    }
+   ],
+   "dropped": []
+  }
  ]
 }

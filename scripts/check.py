@@ -120,6 +120,19 @@ def main():
         else:
             print(f"ok    {name}")
 
+    # Old articles Google re-dates as new (checked against the newsroom's own feed).
+    for case in cases.get("misdated", []):
+        items = [{"title": collect.clean_headline(x["title"]), "outlet": x["outlet"], "_google": x.get("google", False),
+                  "published": datetime.fromisoformat(x["published"]), "_i": n} for n, x in enumerate(case["items"])]
+        _, dropped = collect.drop_misdated_pickups(items)
+        got = sorted(i["_i"] for i in dropped)
+        name = f"misdated: {case.get('note', '')[:60]}…"
+        if got != sorted(case["dropped"]):
+            failures += 1
+            print(f"FAIL  {name}\n      expected dropped {case['dropped']}, got {got}")
+        else:
+            print(f"ok    {name}")
+
     # The lead shouldn't flip-flop on a near tie.
     a = {"_tok": ["council", "budget", "committee"], "city_rank": 10.0}
     b = {"_tok": ["vice", "mayor", "housing", "ordinance"], "city_rank": 11.0}
@@ -130,7 +143,7 @@ def main():
     else:
         print("ok    lead stays put on a near tie")
 
-    total = len(cases["headlines"]) + len(cases.get("same_story", [])) + len(cases.get("grouping", [])) + 1
+    total = len(cases["headlines"]) + len(cases.get("same_story", [])) + len(cases.get("grouping", [])) + len(cases.get("misdated", [])) + 1
     print(f"\n{total - failures}/{total} checks passed")
     return 1 if failures else 0
 
