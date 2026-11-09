@@ -685,6 +685,9 @@ class Rules:
         self.others = [re.compile(term_regex(t).pattern + tail, term_regex(t).flags)
                        for t in list(cfg.get("other_municipalities", [])) + list(cfg.get("far_places", []))]
         self.others_i = [re.compile(rx.pattern, re.I) for rx in self.others]
+        # Places outside the Tri-State (Cleveland, North Royalton...): used to spot a local station's
+        # pickup of a faraway story, which isn't local just because the station ran it.
+        self.far_i = [re.compile(term_regex(t).pattern, re.I) for t in cfg.get("far_places", [])]
 
 
 # TV stations start most summaries with "CINCINNATI (WKRC) —" even for suburban stories.
@@ -834,8 +837,11 @@ def score_clusters(clusters, rules, now, memory=None):
 
         # A local outlet's own feed is local by definition. Results from a Google search under its name
         # (e.g. USA TODAY network stories on cincinnati.com) have to name somewhere local themselves.
-        is_local = bool(first_hit(rules.local_terms, text)) or any(
-            i["outlet"] in rules.local_outlets and (not i.get("_google") or i.get("_official")) for i in its)
+        # Exception: a story whose place is far away (FOX19's pickups of Cleveland-area news, Nov 9)
+        # and that names nowhere local isn't local just because a local station ran it.
+        far_away = place == "other" and bool(place_hint) and bool(first_hit(rules.far_i, place_hint))
+        is_local = bool(first_hit(rules.local_terms, text)) or (not far_away and any(
+            i["outlet"] in rules.local_outlets and (not i.get("_google") or i.get("_official")) for i in its))
         is_ohio = bool(first_hit(rules.ohio_terms, text))
         city_score, reasons, why = city_relevance(its, rules, is_local, is_ohio, place)
         is_legislation = any(r in ("State law", "Federal") for r in reasons)
