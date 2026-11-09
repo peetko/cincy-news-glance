@@ -270,6 +270,27 @@
    }
   },
   {
+   "note": "A local station's pickup of a faraway story isn't local — caught Nov 9 (North Royalton is near Cleveland)",
+   "title": "🔴LIVE: Funeral, procession for North Royalton firefighter killed in the line of duty",
+   "summary": "The procession and funeral for North Royalton Firefighter Ryan Milligan will take place Monday.",
+   "link": "https://www.fox19.com/2026/11/09/funeral-procession-north-royalton-firefighter-killed-line-duty/",
+   "outlet": "FOX19",
+   "expect": {
+    "kept": false,
+    "city": false
+   }
+  },
+  {
+   "note": "I-90 runs through northern Ohio, not the Tri-State — caught Nov 9",
+   "title": "3 people die in fiery wrong-way crash on I-90",
+   "summary": "Three people were killed in a fiery, wrong-way accident on I-90 late Sunday evening.",
+   "link": "https://www.fox19.com/2026/11/09/3-people-die-fiery-wrong-way-crash-i-90/",
+   "outlet": "FOX19",
+   "expect": {
+    "kept": false
+   }
+  },
+  {
    "note": "Peter's call (Oct 29): national policy news shows in the river but never leads",
    "title": "HUD proposals could transform manufactured housing. Cities must be ‘nimble,’ an expert says.",
    "outlet": "Smart Cities Dive",
