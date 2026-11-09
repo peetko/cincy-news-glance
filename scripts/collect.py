@@ -245,8 +245,44 @@ def parse_feed(data, source_name, is_google, alias_pairs, now, official=False, n
             # Google hides the real address; its <source> tag still names the site (e.g. vehiclesforsale…cincinnati.com).
             "_source_site": src_href if is_google else "",
             "_narrow": narrow,
+            "_via": source_name,      # which configured source fetched it (for the source-health report)
         })
     return items
+
+
+def _same_headline(a, b):
+    """Lenient: the same article's headline in two feeds (Google sometimes shows the page title)."""
+    if a.lower() == b.lower():
+        return True
+    ta, tb = tokens(a), tokens(b)
+    if not ta or not tb:
+        return False
+    return same_story(ta, tb) or len(ta & tb) / len(ta | tb) >= 0.5
+
+
+def drop_misdated_pickups(items):
+    """
+    Google News sometimes re-dates an old article as new: Local 12's "Mayor Aftab Pureval addresses
+    recent violence around UC..." (published Sept 4) came through the City Hall sweep on Nov 9 dated
+    that night. When a Google result is credited to a newsroom whose own feed we read, and that feed
+    reaches back past the date Google gives, a really new article would be in it. If it isn't, the
+    date is wrong: drop it. Newsrooms we only reach through Google (the Enquirer) are unaffected.
+    Returns (kept, dropped).
+    """
+    direct = {}
+    for i in items:
+        if not i.get("_google"):
+            direct.setdefault(i["outlet"], []).append(i)
+    kept, dropped = [], []
+    for i in items:
+        own = direct.get(i["outlet"])
+        if (i.get("_google") and not i.get("_official") and own
+                and i["published"] >= min(d["published"] for d in own)
+                and not any(_same_headline(i["title"], d["title"]) for d in own)):
+            dropped.append(i)
+        else:
+            kept.append(i)
+    return kept, dropped
 
 
 def collect_items(cfg, now):
@@ -283,6 +319,13 @@ def collect_items(cfg, now):
             "used": used, "used_fallback": bool(used and used == src.get("fallback")), "errors": errors[:3],
         })
         all_items.extend(got)
+    all_items, misdated = drop_misdated_pickups(all_items)
+    for i in misdated:
+        for st in status:
+            if st["source"] == i.get("_via"):
+                st["items"] -= 1
+                st["junk_dropped"] += 1
+                st["junk_examples"].append(f"{i['title']} (old {i['outlet']} story Google dated as new)")
     return all_items, status
 
 
