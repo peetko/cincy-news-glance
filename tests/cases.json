@@ -241,6 +241,17 @@
    }
   },
   {
+   "note": "A deadly Cincinnati house fire is Fire news even when the headline doesn't name the department — caught Nov 9",
+   "title": "1 found dead after Cincinnati house fire",
+   "summary": "Flames broke out on Bevis Avenue shortly before 5 a.m. Monday",
+   "link": "https://www.fox19.com/2026/11/09/1-found-dead-after-cincinnati-house-fire/",
+   "outlet": "FOX19",
+   "expect": {
+    "city": true,
+    "label": "Fire"
+   }
+  },
+  {
    "note": "Faraway cities aren't local news — caught Oct 29",
    "title": "Mayor of Dayton announces new park plan",
    "outlet": "Dayton Daily News",

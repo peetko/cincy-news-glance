@@ -117,7 +117,7 @@
     {"label": "Council", "weight": 5, "terms": ["council", "city council", "councilmember", "council member", "vice mayor", "Lemon Kearney", "Jan-Michele Lemon Kearney", "Scotty Johnson", "Anna Albi", "Jeff Cramerding", "Cramerding", "Ryan James", "Mark Jeffreys", "Evan Nolan", "Meeka Owens", "Seth Walsh", "council committee", "council vote"]},
     {"label": "City Hall", "weight": 4, "terms": ["city hall", "city budget", "earnings tax", "city income tax", "city of Cincinnati", "Cincinnati officials", "city leaders", "city officials", "ordinance"]},
     {"label": "Police", "weight": 3, "incident_rule": true, "terms": ["Cincinnati Police", "Cincinnati police", "CPD", "police department", "police officer", "officers"], "requires_any": ["Cincinnati", "CPD", "city"]},
-    {"label": "Fire", "weight": 3, "incident_rule": true, "terms": ["Cincinnati Fire", "fire department", "firefighters", "CFD"], "requires_any": ["Cincinnati", "CFD", "city"]},
+    {"label": "Fire", "weight": 3, "incident_rule": true, "terms": ["Cincinnati Fire", "fire department", "firefighters", "CFD", "house fire"], "requires_any": ["Cincinnati", "CFD", "city"]},
     {"label": "Buildings & Inspections", "weight": 3, "terms": ["Buildings & Inspections", "Buildings and Inspections", "building inspectors", "code enforcement", "building permit", "condemned"]},
     {"label": "Transportation", "weight": 3, "terms": ["Fort Washington Way", "DOTE", "Transportation and Engineering", "Transportation & Engineering", "streetcar", "Connector", "road work", "repaving", "Vision Zero"]},
     {"label": "Water & Sewers", "weight": 3, "terms": ["Water Works", "GCWW", "MSD", "Metropolitan Sewer", "Stormwater Management", "water main"]},
