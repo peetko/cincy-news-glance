@@ -291,6 +291,48 @@
    }
   },
   {
+   "note": "A Westwood house fire is a City fire (fire counts as City Hall) — caught Nov 10, had no label",
+   "title": "Fire damages home in Westwood",
+   "summary": "A home is damaged after a fire in Cincinnati on Monday.",
+   "link": "https://local12.com/news/local/fire-damages-home-in-westwood-cincinnati-ohio-firefighters-cause-investigation-shaffer-avenue",
+   "outlet": "Local 12",
+   "expect": {
+    "city": true,
+    "label": "Fire",
+    "place": "yes"
+   }
+  },
+  {
+   "note": "I-70 runs through Dayton/Columbus/Zanesville, not the Tri-State — caught Nov 10 (#5 in Biggest; the summary misspells Zanesville, the web address names I-70)",
+   "title": "ODOT worker dies after being hit while on site of interstate construction project",
+   "summary": "The Ohio Department of Transportation is mourning the loss of one of its workers while in a construction zone in Zainesville.",
+   "link": "https://www.wlwt.com/article/odot-worker-hit-killed-zainesville-i-70-project/74384572",
+   "outlet": "WLWT",
+   "expect": {
+    "kept": false
+   }
+  },
+  {
+   "note": "Vinton County is in southeast Ohio, not the Tri-State — caught Nov 10",
+   "title": "Judge issues competency rulings on mother, grandmother charged in child abuse case",
+   "summary": "A judge released a decision on the competency of an Ohio mother and grandmother accused in a child endangerment case in Vinton County.",
+   "link": "https://www.wlwt.com/article/vinton-county-ohio-competency-hearings-child-abuse-case/74381813",
+   "outlet": "WLWT",
+   "expect": {
+    "kept": false
+   }
+  },
+  {
+   "note": "Laurel County is in southeast Kentucky, not the Tri-State — caught Nov 10",
+   "title": "KSP investigating trooper-involved shooting in Laurel County",
+   "summary": "A state police official said that the shooting occurred on I-75.",
+   "link": "https://www.fox19.com/2026/11/10/ksp-investigating-trooper-involved-shooting-laurel-county/",
+   "outlet": "FOX19",
+   "expect": {
+    "kept": false
+   }
+  },
+  {
    "note": "Peter's call (Oct 29): national policy news shows in the river but never leads",
    "title": "HUD proposals could transform manufactured housing. Cities must be ‘nimble,’ an expert says.",
    "outlet": "Smart Cities Dive",
