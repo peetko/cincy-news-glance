@@ -450,9 +450,20 @@ def is_dst(now):
 CRIME_STOCK = set("""arrest arrested arrest made fatal fatally shooting shot shoot killed kill killing police man woman men
 women people person dead deadly death die died dy charged charge suspect crash injured hurt hospitalized
 investigating investigate investigation year old teen boy girl involved connection
-missing sheriff sheriff' deputy""".split())
+missing sheriff sheriff' deputy
+convicted conviction sentence sentenced sentencing guilty plea plead pleaded indicted indictment trial jury
+judge court prison jail probation learn officer rescue rescued rescuing""".split())
 # Nov 6: "missing" and "sheriff" chained a missing Lockland girl, a missing Texas teen and a change
 # to Sheriff patrols in Whitewater Township into one story.
+# Nov 11: court words ("convicted… learn sentences") joined Adams County corrections officers with a
+# Warren County couple's sex-crimes case, and "officer rescues woman from burning…" joined a Nov 7
+# apartment rescue with a Nov 10 car-fire rescue in Hamilton.
+
+# Same idea for road and traffic coverage (Nov 11: "traffic", "drivers", "detour", "work" joined the
+# Riverside Drive beaver delays with the Brent Spence Bridge closures).
+TRAFFIC_STOCK = set("""traffic driver driving detour closure close closing closed lane ramp road construction
+project work delay delayed commute commuter""".split())
+
 
 # A kind of school, not its name: "Middle School" is shared by every middle school
 # (Nov 6: a Colerain Middle School visitor joined New Richmond Middle School threats).
@@ -488,7 +499,7 @@ def place_words():
 
 def distinctive(shared):
     """Shared words that actually point at one story: not crime vocabulary, not a neighborhood name."""
-    return shared - CRIME_STOCK - ELECTION_STOCK - COMMON_TODAY - place_words()
+    return shared - CRIME_STOCK - ELECTION_STOCK - TRAFFIC_STOCK - COMMON_TODAY - place_words()
 
 
 def same_story(a_tokens, b_tokens):
@@ -579,7 +590,7 @@ def _profile(it):
     seq = _content_words(it["title"]) + ["|"] + _content_words(_slug_text(it.get("link")))
     return {"rich": tokens(text), "proper": _proper_words(it["title"]),
             "bigrams": {(a, b) for a, b in zip(seq, seq[1:])
-                        if "|" not in (a, b) and a != b and not ({a, b} & (PHRASE_GENERIC | CRIME_STOCK | ELECTION_STOCK))}}
+                        if "|" not in (a, b) and a != b and not ({a, b} & (PHRASE_GENERIC | CRIME_STOCK | ELECTION_STOCK | TRAFFIC_STOCK))}}
 
 
 def _merge_related(clusters, window_hours=18):
@@ -616,6 +627,11 @@ def _merge_related(clusters, window_hours=18):
             return False
         tx, ty = x["_tok"], y["_tok"]
         if tx and ty and len(tx & ty) / len(tx | ty) >= 0.6 and len(distinctive(tx & ty)) >= 2:
+            return True
+        # The headline test from the first pass. The first pass puts each article in the first group it
+        # matches, so an article that matches two groups never joins them (Nov 11: "Hamilton, Fairfield
+        # officers pull woman from burning car" stayed apart from the WCPO and Local 12 versions).
+        if same_story(tx, ty):
             return True
         px, py = x["_prof"], y["_prof"]
         shared = px["rich"] & py["rich"]
