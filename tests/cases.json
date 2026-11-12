@@ -1750,6 +1750,81 @@
      16
     ]
    ]
+  },
+  {
+   "note": "Nov 12, 2026: '14-year-old … accused' joined WLWT's Georgetown (Brown County) stabbing (3) to three outlets' Cincinnati juvenile sexual-assault case (0-2). The stabbing is its own story. Items 4-5 are the other outlets' Brown County stabbing headlines, one story.",
+   "items": [
+    {
+     "title": "14-year old charged with sexually assaulting another juvenile in Cincinnati neighborhood",
+     "summary": "14-year old charged with sexually assaulting another juvenile in Cincinnati neighborhood",
+     "link": "https://local12.com/news/local/14-year-old-charged-with-sexually-assaulting-another-juvenile-cincinnati-cuf-probasco-police-crime",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-11T20:35:56+00:00"
+    },
+    {
+     "title": "14-year-old accused of sex assault on juvenile in Cincinnati neighborhood",
+     "summary": "Cincinnati police say they’ve arrested a teen following a report of a sexual assault on a juvenile in the CUF neighborhood on Sept. 28.",
+     "link": "https://www.fox19.com/2026/11/11/14-year-old-accused-sexual-assault-juvenile-cincinnati-neighborhood/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-11T20:52:02+00:00"
+    },
+    {
+     "title": "14-year-old charged in juvenile sexual assault case, Cincinnati police say",
+     "summary": "A 14-year-old is facing multiple charges, accused of sexually assaulting a juvenile earlier this year.",
+     "link": "https://www.wlwt.com/article/14-year-old-charged-juvenile-sexual-assault-case-cincinnati/74403193",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-11T23:12:00+00:00"
+    },
+    {
+     "title": "14-year-old boy accused of stabbing his mother inside Georgetown mobile home",
+     "summary": "A woman is in the hospital after a stabbing in Brown County.",
+     "link": "https://www.wlwt.com/article/brown-county-ohio-woman-stabbed-south-main-street-juvenile-arrested/74397113",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-12T00:06:00+00:00"
+    },
+    {
+     "title": "Juvenile in custody, woman hospitalized in Brown County stabbing",
+     "summary": "911 calls indicate the woman's son may have stabbed her.",
+     "link": "https://www.fox19.com/2026/11/11/juvenile-custody-woman-hospitalized-brown-county-stabbing/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-11T17:08:02+00:00"
+    },
+    {
+     "title": "Juvenile arrested after woman stabbed in Brown County, flown to hospital",
+     "summary": "According to a statement issued by police, it happened at 9:45 p.m. on the south end of Georgetown.",
+     "link": "https://local12.com/news/local/georgetown-ohio-stabbing-woman-flown-hospital-juvenile-arrested-police-say-isolated-incident-no-known-public-threat-cincinnati-south-end-tuesday-night-investigation-ongoing-victim-receives-medical-care-crime-police-response",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-11T06:04:39+00:00"
+    }
+   ],
+   "together": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "apart": [
+    [
+     3,
+     0
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     2
+    ]
+   ]
   }
  ],
  "misdated": [
