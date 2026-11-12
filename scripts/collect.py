@@ -452,12 +452,15 @@ women people person dead deadly death die died dy charged charge suspect crash i
 investigating investigate investigation year old teen boy girl involved connection
 missing sheriff sheriff' deputy
 convicted conviction sentence sentenced sentencing guilty plea plead pleaded indicted indictment trial jury
-judge court prison jail probation learn officer rescue rescued rescuing""".split())
+judge court prison jail probation learn officer rescue rescued rescuing
+accused accuse accusing alleged allegedly""".split())
 # Nov 6: "missing" and "sheriff" chained a missing Lockland girl, a missing Texas teen and a change
 # to Sheriff patrols in Whitewater Township into one story.
 # Nov 11: court words ("convicted… learn sentences") joined Adams County corrections officers with a
 # Warren County couple's sex-crimes case, and "officer rescues woman from burning…" joined a Nov 7
 # apartment rescue with a Nov 10 car-fire rescue in Hamilton.
+# Nov 12: "14-year-old … accused" joined a Georgetown (Brown County) stabbing to a Cincinnati
+# juvenile sexual-assault case.
 
 # Same idea for road and traffic coverage (Nov 11: "traffic", "drivers", "detour", "work" joined the
 # Riverside Drive beaver delays with the Brent Spence Bridge closures).
