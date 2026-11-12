@@ -120,7 +120,7 @@
     {"label": "Fire", "weight": 3, "incident_rule": true, "terms": ["Cincinnati Fire", "fire department", "firefighters", "CFD", "house fire", "fire damages"], "requires_any": ["Cincinnati", "CFD", "city"]},
     {"label": "Buildings & Inspections", "weight": 3, "terms": ["Buildings & Inspections", "Buildings and Inspections", "building inspectors", "code enforcement", "building permit", "condemned"]},
     {"label": "Transportation", "weight": 3, "terms": ["Fort Washington Way", "DOTE", "Transportation and Engineering", "Transportation & Engineering", "streetcar", "Connector", "road work", "repaving", "Vision Zero"]},
-    {"label": "Water & Sewers", "weight": 3, "terms": ["Water Works", "GCWW", "MSD", "Metropolitan Sewer", "Stormwater Management", "water main"]},
+    {"label": "Water & Sewers", "weight": 3, "terms": ["Water Works", "GCWW", "MSD", "Metropolitan Sewer", "Stormwater Management", "water main", "water bill", "water bills", "water rate", "water rates"]},
     {"label": "Parks & Rec", "weight": 2, "terms": ["Cincinnati Parks", "Park Board", "Recreation Commission", "rec center"]},
     {"label": "Health Dept", "weight": 3, "terms": ["Cincinnati Health Department", "health commissioner", "Board of Health"]},
     {"label": "Planning & Development", "weight": 4, "terms": ["3CDC", "Port Authority", "Planning Commission", "zoning", "Planning and Engagement", "Community and Economic Development", "DCED", "Connected Communities", "tax abatement", "TIF"]},

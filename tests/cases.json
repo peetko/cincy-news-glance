@@ -333,6 +333,19 @@
    }
   },
   {
+   "note": "Water rates are Greater Cincinnati Water Works (a City department) — caught Nov 12, had no label",
+   "title": "Cincinnati water bills could rise nearly 10% a year through 2031",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNZEhtUjRKUy1lLVZqSDZqOXIxZFZnamphekJXUkVUYm05RDBOZktxNU00a0x0YXVSanJUdnZjRjd3NnFXa0xnU2wwbUJ4UG1pTFBralZqVWxtQlNPTjdQVlNndjlIWndyUXlTWGhEY3dWZ1BBYTU4MnNteFRjZUF2ZXZNSXpLOVNTbG5ZZWxJdkM0dERoVHc?oc=5",
+   "outlet": "Axios",
+   "google": true,
+   "expect": {
+    "city": true,
+    "label": "Water & Sewers",
+    "place": "yes"
+   }
+  },
+  {
    "note": "Peter's call (Oct 29): national policy news shows in the river but never leads",
    "title": "HUD proposals could transform manufactured housing. Cities must be ‘nimble,’ an expert says.",
    "outlet": "Smart Cities Dive",
