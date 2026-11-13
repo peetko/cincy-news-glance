@@ -107,6 +107,29 @@ Edit it right in GitHub: open the file, click the pencil icon, then **Commit cha
 
 **The safety net:** before every publish, GitHub runs `scripts/check.py`, which checks every case in `tests/cases.json`. If an edit breaks one, the run stops, the screen keeps its last good version, and GitHub emails you about the failed run. Click into the failed run on the Actions tab to see which case failed and why.
 
+## Review page (no AI needed)
+
+Open **[review.html](https://peetko.github.io/cincy-news-glance/review.html)** at your desk once a day. It loads the latest run and sorts the stories into:
+
+- **Needs a look**: flagged automatically. A City Hall label on a story whose summary or web address names another town, a City Hall label with no place named, a near miss (some City points, not enough), a group whose headlines share few words, an odd outlet name, a lead story more than a day old.
+- **City Hall**: is each one really City business?
+- **About Cincinnati, not City Hall**: any City stories missing their label?
+- **Grouped stories**: is each one story?
+
+The sidebar shows the leads, source health and what was dropped as junk.
+
+Each story has two buttons. **Looks right** hides it from the list (only on that computer). **Fix…** builds a rule in three steps: pick what's wrong (*another town*, *not news* or *should be City Hall*), click the word that proves it (shift-click to extend it to a phrase), and check the preview. The preview shows which other articles from that morning the word would also catch, and warns you when a rule can't work (a word that isn't in the story, a department worth too few points). **Send rule to GitHub** opens a ready-made issue titled `Rule: …`. Click **Create**.
+
+GitHub then tries the rule (`.github/workflows/rules.yml`, `scripts/apply_rule.py`). It adds the word to the list in `config.json`, adds a test made from the real headline, runs every check, and replays the latest run before and after. Then it answers on the issue and closes it:
+
+- **Only the flagged story changes and every check passes:** committed straight to `main`. The screen picks it up on its next update.
+- **Other stories change too:** a pull request listing exactly what changes, for you to merge or close.
+- **It breaks a check, or isn't enough to fix the story:** nothing changes, and the issue says which check failed or why.
+
+Only issues you open yourself are applied. If pull requests don't appear, allow them under Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests". Until then the issue gives you a link to open one with one click.
+
+Some problems aren't list entries: real news dropped as junk, two stories that should be grouped, a threshold. The page can't fix those. Ask Claude for those.
+
 ## Morning review (automatic)
 
 A scheduled Claude session reviews each weekday morning's results and tunes the rules. Small list additions (each with a new test, all checks passing) go straight in; anything bigger comes as a pull request (branch `review/YYYY-MM-DD`) for you to merge. Its instructions are in [REVIEW.md](REVIEW.md). Edit that file to change what it looks for or what it's allowed to change. `python3 scripts/review.py news.json items.json` prints the same report it reads.

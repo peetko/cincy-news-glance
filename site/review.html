@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cincy News Glance · Review</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+  /* Same palette as the display (index.html). */
+  :root {
+    --sky: #DCEBF3;
+    --paper: #F6FAFC;
+    --card: #FFFFFF;
+    --ink: #13283A;
+    --muted: #3E5668;
+    --faint: #7D93A3;
+    --line: #C9DAE4;
+    --city: #E3A21A;
+    --city-text: #8A5A00;
+    --city-bg: #FDF4DF;
+    --warn: #E2603C;
+    --warn-text: #B13D1C;
+    --warn-bg: #FCEBE5;
+    --ok: #2E7D5B;
+    --ok-bg: #E3F2EA;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink);
+         font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 16px; line-height: 1.45; }
+  .mono { font-family: 'DM Mono', ui-monospace, monospace; }
+  a { color: inherit; }
+  button { font: inherit; cursor: pointer; }
+
+  header { background: var(--sky); border-bottom: 1px solid var(--line); }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 28px; }
+  header .wrap { display: flex; align-items: baseline; gap: 20px; padding-top: 20px; padding-bottom: 18px; flex-wrap: wrap; }
+  header h1 { font-size: 26px; margin: 0; letter-spacing: -0.01em; }
+  header .run { font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
+  header .run.stale { color: var(--warn-text); font-weight: 500; }
+  header nav { margin-left: auto; display: flex; gap: 16px; font-size: 13px; }
+  header nav a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted var(--faint); }
+
+  main.wrap { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 32px; padding-top: 24px; padding-bottom: 80px; }
+  @media (max-width: 1000px) { main.wrap { grid-template-columns: 1fr; } aside { order: -1; } }
+
+  h2 { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: 32px 0 10px;
+       font-family: 'DM Mono', ui-monospace, monospace; font-weight: 500; display: flex; gap: 10px; align-items: baseline; }
+  h2:first-child { margin-top: 0; }
+  h2 .count { color: var(--faint); }
+  h2 .hint { text-transform: none; letter-spacing: 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; color: var(--faint); font-size: 13px; }
+
+  .filter { display: flex; gap: 6px; margin-bottom: 4px; }
+  .filter button { border: 1px solid var(--line); background: var(--card); color: var(--muted); border-radius: 999px;
+                   padding: 4px 12px; font-size: 13px; }
+  .filter button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+  /* ---------- story cards ---------- */
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; }
+  .card.is-city { border-left: 4px solid var(--city); }
+  .card.done { opacity: 0.55; }
+  .card.done:hover { opacity: 1; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: 12px; color: var(--muted); align-items: center; }
+  .meta .outlet { letter-spacing: 0.06em; text-transform: uppercase; }
+  .tag { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px;
+         background: var(--sky); color: var(--muted); }
+  .tag.city { background: var(--city-bg); color: var(--city-text); }
+  .card h3 { font-size: 19px; margin: 6px 0 4px; line-height: 1.25; font-weight: 600; }
+  .card h3 a { text-decoration: none; }
+  .card h3 a:hover { text-decoration: underline; }
+  .summary { color: var(--muted); font-size: 14px; margin: 0 0 6px; }
+  .flags { display: flex; flex-direction: column; gap: 4px; margin: 8px 0; }
+  .flag { background: var(--warn-bg); color: var(--warn-text); font-size: 13px; padding: 5px 10px; border-radius: 6px; }
+  .why { font-size: 12px; color: var(--muted); margin: 6px 0 0; padding: 0; list-style: none; }
+  .why li::before { content: "· "; color: var(--faint); }
+  .versions { font-size: 13px; margin: 8px 0 0; padding: 8px 10px; background: var(--paper); border-radius: 6px; list-style: none; }
+  .versions li { padding: 2px 0; }
+  .versions .o { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--faint); margin-right: 6px; }
+  .actions { display: flex; gap: 8px; margin-top: 10px; align-items: center; }
+  .btn { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 6px; padding: 5px 12px; font-size: 14px; }
+  .btn:hover { border-color: var(--faint); }
+  .btn.primary { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .btn.primary:disabled { background: var(--faint); border-color: var(--faint); cursor: not-allowed; }
+  .btn.okb { color: var(--ok); }
+  .status { font-size: 13px; color: var(--ok); }
+
+  /* ---------- the rule builder ---------- */
+  .fix { margin-top: 12px; padding: 14px; border: 1px dashed var(--faint); border-radius: 8px; background: var(--paper); }
+  .fix .step { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); margin: 0 0 6px;
+               font-family: 'DM Mono', ui-monospace, monospace; }
+  .fix .step + * { margin-bottom: 14px; }
+  .kinds { display: flex; flex-direction: column; gap: 4px; }
+  .kinds label { display: flex; gap: 8px; align-items: baseline; font-size: 15px; cursor: pointer; }
+  .picker { line-height: 2; font-size: 16px; user-select: none; -webkit-user-select: none; }
+  .picker .src { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); margin-right: 6px; }
+  .picker .w { padding: 2px 3px; border-radius: 4px; cursor: pointer; }
+  .picker .w:hover { background: var(--sky); }
+  .picker .w.sel { background: var(--ink); color: #fff; }
+  .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .row input[type=text], .row select { font: inherit; font-size: 15px; padding: 5px 8px; border: 1px solid var(--line);
+                                        border-radius: 6px; background: var(--card); color: var(--ink); }
+  .row input[type=text] { min-width: 260px; }
+  .preview { font-size: 13px; color: var(--muted); }
+  .preview ul { margin: 4px 0 0; padding-left: 18px; }
+  .preview .bad { color: var(--warn-text); }
+  .preview .good { color: var(--ok); }
+
+  /* ---------- sidebar ---------- */
+  aside .box { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; }
+  aside h4 { margin: 0 0 8px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+             font-family: 'DM Mono', ui-monospace, monospace; font-weight: 500; }
+  aside .lead { font-size: 15px; font-weight: 600; line-height: 1.3; margin-bottom: 8px; }
+  aside .lead small { display: block; font-weight: 400; font-size: 12px; color: var(--muted); }
+  .progress { font-size: 28px; font-weight: 600; }
+  .progress small { display: block; font-size: 13px; font-weight: 400; color: var(--muted); margin-top: 2px; }
+  .sources { width: 100%; font-size: 13px; border-collapse: collapse; }
+  .sources td { padding: 3px 0; border-bottom: 1px solid var(--paper); }
+  .sources td:last-child { text-align: right; }
+  .bad { color: var(--warn-text); }
+  .junk { font-size: 13px; color: var(--muted); padding-left: 18px; margin: 0; }
+  .help { font-size: 13px; color: var(--muted); }
+  .help p { margin: 0 0 8px; }
+  details > summary { cursor: pointer; color: var(--muted); font-size: 14px; margin: 8px 0; }
+  .empty { color: var(--faint); font-size: 14px; padding: 6px 0; }
+  #error { background: var(--warn-bg); color: var(--warn-text); padding: 14px; border-radius: 8px; display: none; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Morning review</h1>
+    <span class="run mono" id="run">Loading…</span>
+    <nav>
+      <a href="./" target="_blank" rel="noopener">The display</a>
+      <a id="rulesLink" target="_blank" rel="noopener">Rule results</a>
+      <a id="casesLink" target="_blank" rel="noopener">Test cases</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="main">
+    <div id="error"></div>
+    <div class="filter" role="group" aria-label="Show">
+      <button data-f="todo" aria-pressed="true">Not reviewed yet</button>
+      <button data-f="all" aria-pressed="false">Everything</button>
+    </div>
+    <div id="sections"></div>
+  </section>
+  <aside>
+    <div class="box">
+      <h4>Today's review</h4>
+      <div class="progress" id="progress">–</div>
+    </div>
+    <div class="box" id="leads"><h4>Leads</h4></div>
+    <div class="box"><h4>Sources</h4><table class="sources" id="sources"></table></div>
+    <div class="box"><h4>Dropped as junk</h4><ul class="junk" id="junk"></ul>
+      <p class="help" style="margin-top:8px">Real news in this list? That needs a code change, so ask Claude to look at it.</p></div>
+    <div class="box help">
+      <h4>How fixes work</h4>
+      <p><b>Looks right</b> hides a story from this list on this computer.</p>
+      <p><b>Fix</b> builds a rule: pick what's wrong, click the word that proves it, and send. It opens a GitHub issue; click <i>Create</i>.</p>
+      <p>GitHub then tests the rule against every saved case and this morning's articles. If it fixes only this story, it goes live on the next update. If it changes other stories too, you get a pull request to look over. If it breaks something, nothing changes and the issue says why.</p>
+    </div>
+  </aside>
+</main>
+
+<script>
+/* ---------- where the data comes from ---------- */
+const OWNER = location.hostname.endsWith('.github.io') ? location.hostname.split('.')[0] : 'peetko';
+const REPO = location.hostname.endsWith('.github.io') ? (location.pathname.split('/').filter(Boolean)[0] || 'cincy-news-glance') : 'cincy-news-glance';
+const RAW = `https://raw.githubusercontent.com/${OWNER}/${REPO}`;
+const q = new URLSearchParams(location.search);
+// ?news=…&items=…&config=… load other copies (for testing on your own computer).
+const URLS = {
+  news: q.get('news') || 'news.json',
+  items: q.get('items') || `${RAW}/data/items.json`,
+  config: q.get('config') || `${RAW}/main/config.json`,
+};
+const ISSUES = `https://github.com/${OWNER}/${REPO}/issues`;
+document.getElementById('rulesLink').href = `${ISSUES}?q=${encodeURIComponent('is:issue in:title "Rule:"')}`;
+document.getElementById('casesLink').href = `https://github.com/${OWNER}/${REPO}/blob/main/tests/cases.json`;
+
+let NEWS, ITEMS = [], CFG, NOW;
+let filter = 'todo';
+
+/* ---------- small helpers ---------- */
+const $ = (s, root = document) => root.querySelector(s);
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+function store(key, val) {
+  try {
+    const all = JSON.parse(localStorage.getItem('review') || '{}');
+    if (val === undefined) return all[key];
+    all[key] = val; localStorage.setItem('review', JSON.stringify(all));
+  } catch (e) { return undefined; }
+}
+const hoursAgo = iso => (NOW - new Date(iso)) / 36e5;
+const ago = iso => { const h = hoursAgo(iso); return h < 1 ? `${Math.max(1, Math.round(h * 60))} min ago` : `${Math.round(h)} h ago`; };
+
+// The same matching rule as collect.py's term_regex: single capitalised words and acronyms match
+// case-sensitively, everything else ignores case; always whole words.
+function termRx(term) {
+  const cs = !term.includes(' ') && /[A-Z]/.test(term);
+  return new RegExp(`(?<![A-Za-z0-9])${esc(term)}(?![A-Za-z0-9])`, cs ? '' : 'i');
+}
+const isGoogle = s => (s.link || '').startsWith('https://news.google.com');
+
+/* ---------- automatic flags: what the morning reviewer used to catch ---------- */
+const TAIL = /^\s+(County|Road|Rd|Avenue|Ave|Street|St|Pike|Boulevard|Blvd|Parkway)\b/;
+function townsIn(text, slug) {
+  const found = new Set();
+  for (const t of CFG.other_municipalities || []) {
+    const rx = new RegExp(termRx(t).source, termRx(t).flags + 'g');
+    let m;
+    while ((m = rx.exec(text))) { if (!TAIL.test(text.slice(m.index + m[0].length))) { found.add(t); break; } }
+    const s = t.toLowerCase().replace(/\s+/g, '-');
+    if (slug && new RegExp(`(^|[/-])${esc(s)}($|[/-])`).test(slug) && !new RegExp(`${esc(s)}-county`).test(slug)) found.add(t);
+  }
+  return [...found];
+}
+function tokens(t) {
+  return new Set((t.toLowerCase().match(/[a-z0-9']+/g) || []).map(w => w.replace(/^'+|'+$/g, ''))
+    .filter(w => w.length > 3).map(w => w.endsWith('s') && !w.endsWith('ss') ? w.slice(0, -1) : w));
+}
+function flagsFor(s) {
+  const f = [];
+  const slug = isGoogle(s) ? '' : (() => { try { return new URL(s.link).pathname.toLowerCase(); } catch (e) { return ''; } })();
+  if (s.is_city) {
+    const towns = townsIn(`${s.summary || ''}`, slug);
+    if (towns.length) f.push(`Labeled City Hall, but the summary or web address names ${towns.join(', ')}. Is it really the City of Cincinnati?`);
+    if (s.place === 'maybe') f.push('Labeled City Hall, but it names no place. Check it is about Cincinnati.');
+    if (s.national) f.push('Labeled as national policy (river only). Right?');
+  } else if (s.city_score > 0 && s.place === 'yes') {
+    f.push(`Near miss: ${s.city_score} City point(s), and City Hall needs ${(CFG.thresholds || {}).city_min_score || 3}. Should it be City Hall?`);
+  }
+  const versions = [...new Set((s.why && s.why.versions || []).map(v => v[1]))];
+  if (versions.length > 1) {
+    let low = 1;
+    for (let i = 0; i < versions.length; i++) for (let j = i + 1; j < versions.length; j++) {
+      const a = tokens(versions[i]), b = tokens(versions[j]);
+      const shared = [...a].filter(x => b.has(x)).length;
+      low = Math.min(low, shared / (new Set([...a, ...b]).size || 1));
+    }
+    if (low < 0.2) f.push('Headlines in this group share few words. Same story?');
+  }
+  if ((s.outlets || []).some(o => /[-–—|:]\s*$|\s-\s/.test(o))) f.push(`Odd outlet name: "${s.outlets.find(o => /[-–—|:]\s*$|\s-\s/.test(o))}".`);
+  const lead = Object.entries(NEWS.lead || {}).filter(([k, v]) => v === s.id && k !== 'why').map(([k]) => k);
+  if (lead.length && hoursAgo(s.first_seen) > 24) f.push(`Lead story (${lead.join(' and ')}) first seen ${Math.round(hoursAgo(s.first_seen))} hours ago. Stale?`);
+  return f;
+}
+
+/* ---------- rule builder ---------- */
+const KINDS = {
+  other_town: { label: 'Shouldn’t be City Hall: it’s about another town', pick: 'Click the town’s name', want: 'not City Hall' },
+  junk: { label: 'Not news: drop it from the screen', pick: 'Click the word or phrase that marks it as junk', want: 'dropped' },
+  city: { label: 'Should be City Hall', pick: 'Click the word or phrase that makes it City business', want: 'City Hall' },
+};
+function cityGroups() { return (CFG.city_relevance || []).filter(g => (g.kind || 'city') === 'city'); }
+
+function matchesToday(term, kind, where, self) {
+  // Which of this morning's articles a new list entry would also catch (a quick preview; GitHub's check decides).
+  const selfTitles = new Set((self.why && self.why.versions || []).map(v => v[1]).concat(self.title));
+  const hit = [];
+  for (const it of ITEMS) {
+    if (selfTitles.has(it.title)) continue;
+    const text = `${it.title} ${it.summary || ''}`;
+    let m;
+    if (kind === 'junk' && where === 'url_terms') m = (it.link || '').toLowerCase().includes(term.toLowerCase());
+    else if (kind === 'junk') m = text.toLowerCase().includes(term.toLowerCase());
+    else m = termRx(term).test(text);
+    if (m) hit.push(it);
+  }
+  return hit;
+}
+function listFor(kind, where) {
+  if (kind === 'other_town') return CFG.other_municipalities || [];
+  if (kind === 'junk') return (CFG.exclude || {})[where] || [];
+  return (cityGroups().find(g => g.label === where) || {}).terms || [];
+}
+
+function buildFix(s, card) {
+  const box = el('div', 'fix');
+  let kind = s.is_city ? 'other_town' : 'city';
+  let where = '';
+  const kinds = el('div', 'kinds');
+  box.append(el('p', 'step', '1 · What’s wrong'), kinds);
+  for (const k of (s.is_city ? ['other_town', 'junk'] : ['city', 'junk'])) {
+    const lab = el('label');
+    const r = el('input'); r.type = 'radio'; r.name = `k-${s.id}`; r.checked = k === kind;
+    r.addEventListener('change', () => { kind = k; refreshWhere(); update(); });
+    lab.append(r, el('span', null, KINDS[k].label));
+    kinds.append(lab);
+  }
+
+  const pickStep = el('p', 'step');
+  const picker = el('div', 'picker');
+  box.append(pickStep, picker);
+  let sel = null;   // {field, from, to}
+  const fields = [['headline', s.title], ['summary', s.summary || '']];
+  if (!isGoogle(s)) { try { fields.push(['web address', decodeURIComponent(new URL(s.link).pathname)]); } catch (e) {} }
+  const words = {};
+  for (const [name, text] of fields) {
+    if (!text) continue;
+    const line = el('div');
+    line.append(el('span', 'src', name));
+    const parts = name === 'web address' ? text.split(/([\/\-_.]+)/) : text.split(/(\s+)/);
+    words[name] = [];
+    parts.forEach(p => {
+      if (!p || /^[\s\/\-_.]+$/.test(p)) { line.append(document.createTextNode(name === 'web address' ? p : ' ')); return; }
+      const idx = words[name].length;
+      const w = el('span', 'w', p);
+      w.addEventListener('click', ev => {
+        if (ev.shiftKey && sel && sel.field === name) { sel = { field: name, from: Math.min(sel.from, idx), to: Math.max(sel.to, idx) }; }
+        else sel = { field: name, from: idx, to: idx };
+        const raw = words[name].slice(sel.from, sel.to + 1).map(x => x.textContent);
+        let phrase = name === 'web address' ? raw.join('-') : raw.join(' ');
+        if (name !== 'web address') phrase = phrase.replace(/^[^A-Za-z0-9]+|[^A-Za-z0-9]+$/g, '').replace(/['’]s$/, '');
+        if (name === 'web address' && kind === 'junk') { where = 'url_terms'; whereSel.value = 'url_terms'; }
+        input.value = phrase;
+        paint(); update();
+      });
+      words[name].push(w);
+      line.append(w);
+    });
+    picker.append(line);
+  }
+  function paint() {
+    for (const [name, ws] of Object.entries(words)) ws.forEach((w, i) =>
+      w.classList.toggle('sel', !!sel && sel.field === name && i >= sel.from && i <= sel.to));
+  }
+
+  box.append(el('p', 'step', '3 · The rule'));
+  const row = el('div', 'row');
+  const input = el('input'); input.type = 'text'; input.placeholder = 'word or phrase';
+  input.addEventListener('input', () => { sel = null; paint(); update(); });
+  const whereSel = el('select');
+  whereSel.addEventListener('change', () => { where = whereSel.value; update(); });
+  row.append(el('span', null, 'Add'), input, el('span', null, 'to'), whereSel);
+  box.append(row);
+
+  const preview = el('div', 'preview');
+  box.append(preview);
+  const send = el('button', 'btn primary', 'Send rule to GitHub');
+  const cancel = el('button', 'btn', 'Cancel');
+  cancel.addEventListener('click', () => box.remove());
+  const acts = el('div', 'actions'); acts.append(send, cancel);
+  box.append(acts);
+
+  function refreshWhere() {
+    whereSel.textContent = '';
+    if (kind === 'other_town') {
+      whereSel.append(new Option('other towns', 'other_municipalities')); where = 'other_municipalities';
+    } else if (kind === 'junk') {
+      whereSel.append(new Option('junk words (headline or summary)', 'title_terms'), new Option('junk web-address words', 'url_terms'));
+      where = 'title_terms';
+    } else {
+      for (const g of cityGroups()) whereSel.append(new Option(`${g.label} (${g.weight} pts)`, g.label));
+      const best = (s.why && s.why.matches || [])[0];
+      where = best ? best.group : 'City Hall';
+      whereSel.value = where;
+    }
+    pickStep.textContent = `2 · ${KINDS[kind].pick}${Object.keys(words).length > 1 ? ' (shift-click to add the next words)' : ''}`;
+  }
+
+  function update() {
+    const term = input.value.replace(/\s+/g, ' ').trim();
+    preview.textContent = '';
+    send.disabled = true;
+    if (term.length < 2) { preview.append(el('span', null, 'Pick a word above, or type one.')); return; }
+    if (term.length > 60) { preview.append(el('span', 'bad', 'Keep it under 60 characters.')); return; }
+    const list = listFor(kind, where);
+    if (list.some(t => t.toLowerCase() === term.toLowerCase())) {
+      preview.append(el('span', 'bad', `"${term}" is already on that list, so the list isn't what went wrong. Ask Claude to look at this one.`));
+      return;
+    }
+    const text = `${s.title} ${s.summary || ''}`;
+    const inStory = kind === 'junk' && where === 'url_terms' ? (s.link || '').toLowerCase().includes(term.toLowerCase())
+      : kind === 'junk' ? text.toLowerCase().includes(term.toLowerCase()) : termRx(term).test(text) || (kind === 'other_town' && isGoogle(s) === false && (s.link || '').toLowerCase().includes(term.toLowerCase().replace(/\s+/g, '-')));
+    if (!inStory) preview.append(el('p', 'bad', `"${term}" doesn't appear in this story${kind === 'city' || kind === 'other_town' ? ' as a whole word' : ''}, so it won't change it.`));
+    if (kind === 'city') {
+      const g = cityGroups().find(x => x.label === where);
+      const need = (CFG.thresholds || {}).city_min_score || 3;
+      const placeFactor = { yes: 1, maybe: 0.4, other: 0 }[s.place] ?? 1;
+      const pts = g ? Math.round(g.weight * placeFactor * 10) / 10 : 0;
+      if (g && pts + (s.city_score || 0) < need) preview.append(el('p', 'bad',
+        `${g.label} words count ${pts} point(s) here${placeFactor < 1 ? ` (less, because the story is place: ${s.place})` : ''}, and this story has ${s.city_score || 0}; City Hall needs ${need}. Pick a department worth more points, or the rule won't be enough.`));
+      if (g && g.requires_any && !g.requires_any.some(t => termRx(t).test(text))) preview.append(el('p', 'bad',
+        `${g.label} words only count when the story also says one of: ${g.requires_any.join(', ')}. This one doesn't, so the rule won't be enough.`));
+    }
+    const others = matchesToday(term, kind, where, s);
+    const p = el('p');
+    if (!others.length) p.append(el('span', 'good', `Matches no other article this morning.`));
+    else {
+      p.append(el('span', others.length > 3 ? 'bad' : null, `Also matches ${others.length} other article(s) this morning`));
+      const ul = el('ul');
+      others.slice(0, 6).forEach(it => ul.append(el('li', null, `${it.outlet}: ${it.title}`)));
+      if (others.length > 6) ul.append(el('li', null, `…and ${others.length - 6} more`));
+      p.append(ul);
+      if (kind === 'other_town') p.append(el('span', null, 'Fine if they’re about that town too; GitHub checks the City Hall ones.'));
+    }
+    preview.append(p);
+    send.disabled = !inStory;
+  }
+
+  send.addEventListener('click', () => {
+    const term = input.value.replace(/\s+/g, ' ').trim();
+    const google = isGoogle(s);
+    const req = {
+      rule: { kind, value: term, where: kind === 'other_town' ? '' : where },
+      story: { title: s.title, summary: s.summary || '', link: s.link, outlet: s.outlet, google,
+               narrow: google && s.outlet === 'Enquirer', official: s.outlet === 'City of Cincinnati' },
+    };
+    const dest = kind === 'other_town' ? 'other towns' : kind === 'junk' ? 'junk words' : where;
+    const title = `Rule: "${term}" → ${dest} — ${s.title.slice(0, 70)}`;
+    const body = `Sent from the review page (should be ${KINDS[kind].want}). GitHub will try it and answer here.\n\n\`\`\`json\n${JSON.stringify(req, null, 1)}\n\`\`\`\n`;
+    window.open(`${ISSUES}/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`, '_blank', 'noopener');
+    store(s.id, { state: 'sent', rule: `"${term}" → ${dest}`, day: NEWS.generated_at.slice(0, 10) });
+    box.remove();
+    render();
+  });
+
+  refreshWhere();
+  update();
+  return box;
+}
+
+/* ---------- cards ---------- */
+function card(s, flags) {
+  const done = store(s.id);
+  const c = el('article', `card${s.is_city ? ' is-city' : ''}${done ? ' done' : ''}`);
+  const meta = el('div', 'meta mono');
+  meta.append(el('span', 'outlet', s.outlets.length > 1 ? `${s.outlet} +${s.outlets.length - 1}` : s.outlet));
+  if (s.is_city) meta.append(el('span', 'tag city', `City Hall · ${s.city_reasons.join(', ')}`));
+  if (s.national) meta.append(el('span', 'tag', 'national'));
+  if (s.developing) meta.append(el('span', 'tag', 'developing'));
+  meta.append(el('span', null, `place: ${s.place}`), el('span', null, `first seen ${ago(s.first_seen)}`),
+              el('span', null, `score ${s.score.toFixed(1)}${s.is_city ? ` · City rank ${s.city_rank.toFixed(1)}` : ''}`));
+  c.append(meta);
+  const h = el('h3'); const a = el('a', null, s.title); a.href = s.link; a.target = '_blank'; a.rel = 'noopener'; h.append(a);
+  c.append(h);
+  if (s.summary) c.append(el('p', 'summary', s.summary));
+  if (flags.length) { const f = el('div', 'flags'); flags.forEach(x => f.append(el('div', 'flag', x))); c.append(f); }
+  const why = el('ul', 'why');
+  for (const m of (s.why && s.why.matches) || []) {
+    if (m.note) { why.append(el('li', null, m.note)); continue; }
+    why.append(el('li', null, `${m.group}: "${m.term}" in the ${m.where} (${m.outlet}, ${m.points} pts${m.incident ? `, incident: ${m.incident}` : ''})`));
+  }
+  if (s.why && s.why.place_evidence) why.append(el('li', null, `place evidence: ${s.why.place_evidence}`));
+  if (why.children.length) c.append(why);
+  const versions = [...new Map(((s.why && s.why.versions) || []).map(v => [v.join('|'), v])).values()];
+  if (new Set(versions.map(v => v[1])).size > 1) {
+    const ul = el('ul', 'versions');
+    versions.forEach(([o, t]) => { const li = el('li'); li.append(el('span', 'o mono', o), document.createTextNode(t)); ul.append(li); });
+    c.append(ul);
+  }
+  const acts = el('div', 'actions');
+  if (done) {
+    acts.append(el('span', 'status', done.state === 'sent' ? `Rule sent: ${done.rule}` : 'Marked as looking right'));
+    const undo = el('button', 'btn', 'Undo'); undo.addEventListener('click', () => { store(s.id, null); render(); });
+    acts.append(undo);
+  } else {
+    const ok = el('button', 'btn okb', 'Looks right');
+    ok.addEventListener('click', () => { store(s.id, { state: 'ok', day: NEWS.generated_at.slice(0, 10) }); render(); });
+    const fix = el('button', 'btn', 'Fix…');
+    fix.addEventListener('click', () => { if (!$('.fix', c)) c.append(buildFix(s, c)); });
+    acts.append(ok, fix);
+  }
+  c.append(acts);
+  return c;
+}
+
+function section(root, title, hint, stories, always = false) {
+  const shown = stories.filter(([s]) => filter === 'all' || !store(s.id));
+  const h = el('h2', null, title);
+  h.append(el('span', 'count', `${shown.length}${shown.length !== stories.length ? ` of ${stories.length}` : ''}`));
+  if (hint) h.append(el('span', 'hint', hint));
+  if (!stories.length && !always) return;
+  root.append(h);
+  if (!shown.length) { root.append(el('div', 'empty', stories.length ? 'All reviewed.' : 'Nothing here this run.')); return; }
+  shown.forEach(([s, f]) => root.append(card(s, f)));
+}
+
+function render() {
+  const root = $('#sections');
+  root.textContent = '';
+  const all = NEWS.stories.map(s => [s, flagsFor(s)]);
+  const seen = new Set();
+  const take = pred => all.filter(x => !seen.has(x[0].id) && pred(x)).map(x => { seen.add(x[0].id); return x; });
+
+  section(root, 'Needs a look', 'flagged automatically', take(([, f]) => f.length), true);
+  section(root, 'City Hall', 'is each one really City business?', take(([s]) => s.is_city), true);
+  section(root, 'About Cincinnati, not City Hall', 'any City stories missing their label?', take(([s]) => s.place === 'yes'));
+  section(root, 'Grouped stories', 'one story each?', take(([s]) => new Set(((s.why && s.why.versions) || []).map(v => v[1])).size > 1));
+  const rest = take(() => true);
+  const det = el('details');
+  det.append(el('summary', null, `Everything else on the screen (${rest.length})`));
+  section(det, 'Everything else', null, rest);
+  root.append(det);
+
+  const total = NEWS.stories.length;
+  const reviewed = NEWS.stories.filter(s => store(s.id)).length;
+  const flagged = all.filter(([s, f]) => f.length);
+  const flaggedLeft = flagged.filter(([s]) => !store(s.id)).length;
+  const pr = $('#progress');
+  pr.textContent = '';
+  pr.append(document.createTextNode(flaggedLeft ? `${flaggedLeft} flagged left` : 'Flags cleared'));
+  pr.append(el('small', null, `${reviewed} of ${total} stories reviewed`));
+}
+
+function sidebar() {
+  const leads = $('#leads');
+  const byId = Object.fromEntries(NEWS.stories.map(s => [s.id, s]));
+  for (const [mode, label] of [['city', 'City Hall'], ['general', 'Biggest']]) {
+    const s = byId[NEWS.lead[mode]];
+    const d = el('div', 'lead', s ? s.title : '(none)');
+    d.append(el('small', 'mono', `${label}${s ? ` · ${s.outlet} · first seen ${ago(s.first_seen)}` : ''}`));
+    d.append(el('small', null, (NEWS.lead.why || {})[mode] || ''));
+    leads.append(d);
+  }
+  const t = $('#sources');
+  for (const st of NEWS.sources_status) {
+    const tr = el('tr');
+    const bad = !st.ok || st.fail_streak;
+    tr.append(el('td', bad ? 'bad' : null, st.source),
+              el('td', `mono${bad ? ' bad' : ''}`, st.ok ? `${st.items}` : `failing ${st.fail_streak}×`));
+    t.append(tr);
+  }
+  const j = $('#junk');
+  const junk = NEWS.sources_status.flatMap(st => (st.junk_examples || []).map(x => `${st.source}: ${x}`));
+  if (!junk.length) j.append(el('li', null, 'None this run.'));
+  junk.slice(0, 30).forEach(x => j.append(el('li', null, x)));
+  if (NEWS.pending_cases) {
+    const box = el('div', 'box');
+    box.append(el('p', 'help bad', `${NEWS.pending_cases} wrong-call report(s) waiting in tests/cases.json (pending).`));
+    $('#leads').after(box);
+  }
+}
+
+document.querySelectorAll('.filter button').forEach(b => b.addEventListener('click', () => {
+  filter = b.dataset.f;
+  document.querySelectorAll('.filter button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  render();
+}));
+
+(async function start() {
+  try {
+    const get = async (u, need) => {
+      const r = await fetch(`${u}${u.includes('?') ? '&' : '?'}t=${Date.now()}`, { cache: 'no-store' });
+      if (!r.ok) { if (need) throw new Error(`${u}: ${r.status}`); return null; }
+      return r.json();
+    };
+    [NEWS, CFG, ITEMS] = await Promise.all([get(URLS.news, true), get(URLS.config, true), get(URLS.items, false)]);
+    ITEMS = ITEMS || [];
+    NOW = new Date();
+    const age = hoursAgo(NEWS.generated_at);
+    const run = $('#run');
+    const when = new Date(NEWS.generated_at).toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York' });
+    run.textContent = `Run of ${when} ET · ${ago(NEWS.generated_at)} · ${NEWS.stories.length} stories, ${NEWS.counts.city} City Hall${ITEMS.length ? ` · ${ITEMS.length} articles` : ''}`;
+    const et = new Date(NOW.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+    if (age > 0.75 && et.getDay() >= 1 && et.getDay() <= 5 && et.getHours() >= 8 && et.getHours() < 19) {
+      run.classList.add('stale');
+      run.textContent += ' · updates may have stopped (check the outside timer)';
+    }
+    if (!ITEMS.length) run.textContent += ' · couldn’t load this morning’s articles, so rule previews are off';
+    sidebar();
+    render();
+  } catch (e) {
+    const box = $('#error');
+    box.style.display = 'block';
+    box.textContent = `Couldn't load the data: ${e.message}`;
+  }
+})();
+</script>
+</body>
+</html>
