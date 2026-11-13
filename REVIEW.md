@@ -30,6 +30,8 @@ repo is public, so never add non-public City information.
   headlines never prove two headlines are the same story. Groups join article-to-article, never on
   pooled words. A story's title must be typical of its group.
 - In City Hall mode the arrows step through every City Hall story (matching the count); Biggest shows 3.
+- A developing story from another town (place "other") leads only in Biggest mode, never in City Hall
+  mode (Peter's call, Nov 13).
 
 ## Daily procedure
 

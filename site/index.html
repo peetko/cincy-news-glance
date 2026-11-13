@@ -1337,12 +1337,15 @@ function render(data) {
   lastData = data;
   const byId = (id) => (id ? stories.find((s) => s.id === id) : null);
   const devStory = byId(data.developing);
-  // A developing story always leads. Otherwise the switch decides.
+  // A developing story leads in Biggest mode. In City Hall mode it leads only if it's about Cincinnati
+  // (or names no place): breaking news from another town (Nov 13: a Sharonville water main break)
+  // stays in the river, marked coral, and the City Hall lead stays put. Otherwise the switch decides.
+  const devLeads = devStory && (mode !== 'city' || devStory.place !== 'other') ? devStory : null;
   const cityPick = byId(data.lead && data.lead.city) || stories.find((s) => s.is_city && !s.national);
   const generalPick = byId(data.lead && data.lead.general) || stories.find((s) => !s.national);
   const noCityNews = mode === 'city' && !cityPick;
-  const lead = devStory || (mode === 'city' ? cityPick || generalPick : generalPick);
-  currentDev = devStory;
+  const lead = devLeads || (mode === 'city' ? cityPick || generalPick : generalPick);
+  currentDev = devLeads;
   renderMeetings(data.meetings);
   renderGames(data.games);
   renderReminder(data.timer_token_expires);
@@ -1379,7 +1382,7 @@ function render(data) {
     // The list the arrows flip through. If you were looking at #2 or #3 and it's still in the list, stay on it.
     const showing = topList[topIdx] && topList[topIdx].id;
     topList = buildTopList(stories, lead, cityMode ? 'city_rank' : 'score', cityMode);
-    topCtx = { devId: devStory && devStory.id, noCityNews };
+    topCtx = { devId: devLeads && devLeads.id, noCityNews };
     const keep = topList.findIndex((s) => s.id === showing);
     showTop(keep > 0 ? keep : 0, false);
     renderRiver(stories.filter((s) => s !== lead), devStory && devStory.id);
