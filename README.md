@@ -77,7 +77,7 @@ Top right of the screen. It starts on **City Hall**, and the browser remembers y
 
 - **City Hall** leads with the biggest story for City work. The label says why, e.g. `CITY HALL · CITY MANAGER`, `CITY HALL · POLICE` or `CITY HALL · STATE LAW`.
 - **Biggest** leads with the most-covered local story overall, whatever it's about.
-- A **developing** story takes the lead in either mode.
+- A **developing** story takes the lead in Biggest mode. In City Hall mode it leads only if it's about Cincinnati (or names no place); breaking news from another town stays in the river, marked coral, and the City Hall lead stays put.
 - **‹ 1 / N ›** at the start of the label row (left-aligned with the headline, so it never moves) flips through the stories for the current mode: every City Hall story in City Hall mode (so it matches the "N for City Hall" count), the top three in Biggest mode (a breaking story stays #1). It returns to #1 after two minutes without a click.
 - If there's no City news yet that day, City Hall mode shows the biggest story and says "no City Hall news yet".
 
