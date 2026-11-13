@@ -453,7 +453,8 @@ investigating investigate investigation year old teen boy girl involved connecti
 missing sheriff sheriff' deputy
 convicted conviction sentence sentenced sentencing guilty plea plead pleaded indicted indictment trial jury
 judge court prison jail probation learn officer rescue rescued rescuing
-accused accuse accusing alleged allegedly""".split())
+accused accuse accusing alleged allegedly
+sexual sexually""".split())
 # Nov 6: "missing" and "sheriff" chained a missing Lockland girl, a missing Texas teen and a change
 # to Sheriff patrols in Whitewater Township into one story.
 # Nov 11: court words ("convicted… learn sentences") joined Adams County corrections officers with a
@@ -461,6 +462,8 @@ accused accuse accusing alleged allegedly""".split())
 # apartment rescue with a Nov 10 car-fire rescue in Hamilton.
 # Nov 12: "14-year-old … accused" joined a Georgetown (Brown County) stabbing to a Cincinnati
 # juvenile sexual-assault case.
+# Nov 13: "sexually assaulting" joined a Colerain Township man's case to that same CUF juvenile case.
+# ("assaulted" and "sex" stay distinctive: "officers assaulted" and "sex offender" name one story.)
 
 # Same idea for road and traffic coverage (Nov 11: "traffic", "drivers", "detour", "work" joined the
 # Riverside Drive beaver delays with the Brent Spence Bridge closures).
