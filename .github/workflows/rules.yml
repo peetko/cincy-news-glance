@@ -1,0 +1,92 @@
+# The "Fix" button on the review page (site/review.html) opens a GitHub issue titled "Rule: …".
+# This tries the rule: adds it to config.json with a test made from the real headline, runs every
+# check, and replays the latest run to see what else it would change. Then:
+#   - only the flagged story changes and every check passes → committed straight to main
+#   - other stories change too                             → a pull request to look over
+#   - the rule breaks a check or isn't enough               → nothing changes; the issue says why
+# It answers on the issue and closes it.
+name: Apply a rule from the review page
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: rules              # one rule at a time, so two rules never edit config.json at once
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    # Only rules you send yourself, from the review page.
+    if: startsWith(github.event.issue.title, 'Rule:') && github.event.issue.user.login == github.repository_owner
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE: ${{ github.event.issue.number }}
+      OUT: ${{ runner.temp }}/rule
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the feed reader
+        run: pip install feedparser==6.0.14
+
+      - name: Get the latest run's articles
+        continue-on-error: true      # without them the rule still gets checked, just not compared
+        run: |
+          git fetch -q --depth 1 origin data
+          git show FETCH_HEAD:items.json > "$RUNNER_TEMP/items.json"
+          git show FETCH_HEAD:news.json > "$RUNNER_TEMP/news.json"
+
+      - name: Try the rule
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python scripts/apply_rule.py "$ISSUE" "$RUNNER_TEMP/items.json" "$RUNNER_TEMP/news.json" "$OUT"
+
+      - name: Commit to main, or open a pull request
+        run: |
+          outcome=$(cat "$OUT/outcome")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ "$outcome" = "commit" ]; then
+            git add config.json tests/cases.json
+            git commit -q -F "$OUT/commit.txt"
+            git pull -q --rebase origin main
+            git push -q origin HEAD:main
+            echo "" >> "$OUT/comment.md"
+            echo "Commit: ${{ github.server_url }}/${{ github.repository }}/commit/$(git rev-parse HEAD)" >> "$OUT/comment.md"
+          elif [ "$outcome" = "pr" ]; then
+            branch="rule/issue-$ISSUE"
+            git checkout -q -b "$branch"
+            git add config.json tests/cases.json
+            git commit -q -F "$OUT/commit.txt"
+            git push -q -f origin "$branch"
+            { cat "$OUT/comment.md"; echo; echo "From review-page issue #$ISSUE."; } > "$OUT/pr.md"
+            if url=$(gh pr create --base main --head "$branch" --title "$(head -n1 "$OUT/commit.txt")" --body-file "$OUT/pr.md"); then
+              echo "" >> "$OUT/comment.md"; echo "Pull request: $url" >> "$OUT/comment.md"
+            else
+              # Happens if the repo doesn't let Actions open pull requests (Settings → Actions → General).
+              echo "" >> "$OUT/comment.md"
+              echo "Open the pull request here: ${{ github.server_url }}/${{ github.repository }}/compare/main...$branch?expand=1" >> "$OUT/comment.md"
+            fi
+          fi
+
+      - name: Answer on the issue
+        run: |
+          gh issue comment "$ISSUE" --repo "${{ github.repository }}" --body-file "$OUT/comment.md"
+          gh issue close "$ISSUE" --repo "${{ github.repository }}"
+
+      - name: Say so if something went wrong
+        if: failure()
+        run: |
+          gh issue comment "$ISSUE" --repo "${{ github.repository }}" \
+            --body "Something went wrong while trying this rule, so nothing changed. The log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

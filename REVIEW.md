@@ -95,8 +95,12 @@ Same requirements: tests from real headlines, `check.py` passing, and a plain-En
 - **If unsure, don't change it. Report it.**
 
 Commit messages explain what was wrong (with the real headline) and what changed. End them with the
-attribution lines the session provides. Never start an issue title with "Case:" (that triggers
-the wrong-call workflow).
+attribution lines the session provides. Never start an issue title with "Case:" or "Rule:" (those
+trigger the wrong-call and review-page workflows).
+
+Peter can also fix things himself from the review page (`site/review.html`), which sends `Rule:` issues
+that GitHub applies. Before fixing something, check the recent `Rule:` issues and `rule/issue-*` pull
+requests so you don't fix it twice.
 
 ## Report
 
