@@ -29,8 +29,12 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       ISSUE: ${{ github.event.issue.number }}
-      OUT: ${{ runner.temp }}/rule
+      # Where the rule's results go: under the runner's temp folder (set in the first step,
+      # because the runner context isn't available at the job level).
     steps:
+      - name: Set the results folder
+        run: echo "OUT=$RUNNER_TEMP/rule" >> "$GITHUB_ENV"
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
