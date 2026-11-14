@@ -1,0 +1,3922 @@
+{
+ "generated_at": "2026-11-14T00:45:17.309758+00:00",
+ "site_version": "24392ff913a3",
+ "weather": {
+  "ok": true,
+  "date": "2026-11-13",
+  "high": 47,
+  "low": 31,
+  "climate": {
+   "ok": true,
+   "date": "2026-11-13",
+   "normal_high": 55,
+   "normal_low": 36,
+   "record_high": 78,
+   "record_high_years": [
+    "1955"
+   ],
+   "record_low": 10,
+   "record_low_years": [
+    "2019"
+   ],
+   "since": "1872"
+  },
+  "as_of": "2026-11-14T00:45:17.309758+00:00",
+  "temp": 40,
+  "short": "Mostly Cloudy",
+  "is_day": false,
+  "change": {
+   "text": "Freezing by 6 AM tomorrow",
+   "level": "notable",
+   "kind": "temp",
+   "at": "2026-11-14T06:00:00-05:00",
+   "details": [
+    "Mostly sunny, with a high near 48.",
+    "Northwest wind 2 to 9 mph."
+   ]
+  },
+  "alerts": []
+ },
+ "meetings": {
+  "ok": true,
+  "day": "2026-11-16",
+  "is_today": false,
+  "meetings": [
+   {
+    "date": "2026-11-16",
+    "time": "10:00 AM",
+    "body": "Economic and Cultural Opportunity",
+    "location": "Council Chambers, Room 300",
+    "agenda": "",
+    "url": "https://cincinnatioh.legistar.com/MeetingDetail.aspx?LEGID=10877&GID=737&G=F7C7ACE8-B3D9-494B-89D1-69B0D7338C01"
+   },
+   {
+    "date": "2026-11-16",
+    "time": "1:00 PM",
+    "body": "Budget, Finance & Governance Committee",
+    "location": "Council Chambers, Room 300",
+    "agenda": "https://cincinnatioh.legistar1.com/cincinnatioh/meetings/2026/11/10882_A_Budget%2C_Finance___Governance_Committee_26-11-16_Agenda.pdf",
+    "url": "https://cincinnatioh.legistar.com/MeetingDetail.aspx?LEGID=10882&GID=737&G=F7C7ACE8-B3D9-494B-89D1-69B0D7338C01"
+   }
+  ]
+ },
+ "games": [
+  {
+   "team": "Bengals",
+   "stadium": "paycor",
+   "colors": [
+    "#FB4F14",
+    "#000000"
+   ],
+   "home": true,
+   "opponent": "Steelers",
+   "start": "2026-11-16T01:20Z",
+   "state": "pre",
+   "detail": "11/15 - 8:20 PM EST",
+   "score": null,
+   "result": null,
+   "odds": {
+    "provider": "DraftKings",
+    "details": "CIN -3.5",
+    "spread": 3.5,
+    "over_under": 49.5,
+    "favorite": "us",
+    "moneyline": [
+     -185,
+     154
+    ]
+   }
+  }
+ ],
+ "timer_token_expires": "2027-03-31",
+ "pending_cases": 0,
+ "developing": null,
+ "lead": {
+  "city": "greater-cincinnati-community-votes-to-remove-flock-cameras",
+  "general": "staff-didn-t-properly-strap-in-cps-student-who-died-on-bus-e",
+  "why": {
+   "city": "highest score",
+   "general": "same lead as last run"
+  }
+ },
+ "counts": {
+  "stories": 32,
+  "city": 3,
+  "city_national": 0
+ },
+ "stories": [
+  {
+   "id": "staff-didn-t-properly-strap-in-cps-student-who-died-on-bus-e",
+   "title": "Staff didn't properly strap in CPS student who died on bus, emails say",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOQVRPZjRpdFFLNmQ4LV9GNTVGVElnQmNoQ0dmclI0U0IwMjN5cjJrWll2U2FNZ0RoQ0xhUGtwcUxvSGNsUUlzdFJiY3FWWTlmYTQ5d0pnVFA1TWpHcHdJczdOdGdySl9IcTNfMWd5MUhtT0FSSjFScWpOQnpMbmZ0MW5iUWJKUk5EMkswREpPSDVPc2JJeGhBQ0lTSXBJR3UwYTE4Q1BKVzNmQnJqX3ducjQxUm1KM1FSbWEtV0pWUUp5QmNSUThvLTJ3?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer",
+    "FOX19",
+    "Local 12",
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOQVRPZjRpdFFLNmQ4LV9GNTVGVElnQmNoQ0dmclI0U0IwMjN5cjJrWll2U2FNZ0RoQ0xhUGtwcUxvSGNsUUlzdFJiY3FWWTlmYTQ5d0pnVFA1TWpHcHdJczdOdGdySl9IcTNfMWd5MUhtT0FSSjFScWpOQnpMbmZ0MW5iUWJKUk5EMkswREpPSDVPc2JJeGhBQ0lTSXBJR3UwYTE4Q1BKVzNmQnJqX3ducjQxUm1KM1FSbWEtV0pWUUp5QmNSUThvLTJ3?oc=5",
+    "FOX19": "https://www.fox19.com/2026/11/13/bus-staff-didnt-properly-strap-cps-student-causing-her-death-emails-say/",
+    "Local 12": "https://local12.com/news/local/superintendent-told-board-bus-staff-failed-secure-strap-cps-student-ngone-talla-before-death-emails-show-cincinnati-public-schools-shauna-murphy",
+    "WCPO": "https://www.wcpo.com/news/local-news/hamilton-county/cincinnati/emails-show-bus-driver-monitor-didnt-properly-strap-in-cincinnati-public-schools-student-who-died-on-bus",
+    "WLWT": "https://www.wlwt.com/article/emails-7-year-old-died-bus-ride-cincinnati-public-schools-first-student/74426085"
+   },
+   "outlet_count": 5,
+   "first_seen": "2026-11-13T04:20:00+00:00",
+   "updated": "2026-11-13T23:13:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 10.447,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "FOX19",
+     "Local 12",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Bus staff didn\u2019t properly strap in CPS student, \u2018causing her death,\u2019 emails say"
+     ],
+     [
+      "WCPO",
+      "Emails show bus driver, monitor didn't properly strap in Cincinnati Public Schools student who died on bus"
+     ],
+     [
+      "Local 12",
+      "Superintendent told board bus staff failed to secure CPS student before death, emails show"
+     ],
+     [
+      "Enquirer",
+      "Staff didn't properly strap in CPS student who died on bus, emails say"
+     ],
+     [
+      "WLWT",
+      "Emails reveal what CPS leaders were told after 7-year-old student's death"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "faa-issues-nationwide-ground-stop-check-flight-status",
+   "title": "FAA issues nationwide ground stop: Check flight status",
+   "link": "https://www.wlwt.com/article/faa-nationwide-ground-stop-airport-flight-status/74427209",
+   "outlet": "WLWT",
+   "summary": "The Federal Aviation Administration has issued a nationwide ground stop for all airports.",
+   "outlets": [
+    "Enquirer",
+    "FOX19",
+    "Ohio Capital Journal",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNeE5lbjVoME1xNFpuLThjZjNxbjZ6eUxiTDhQT1RHMXlBeTItQzEtM3NjajMxcUpjcHFMLVdZSTFVZkp1aHFOQTNxS2NwWTZBWkFXU3M2UFFYanN5Y3NEb3NlNUg3bXZoMVlmQnJyckxHVm00Zmt0anJZLUZtZzhfTUVHZWJSMXV4NmJtLWZ1dTQwOEVtekFQcTVRZllxV0ZmVTJ2UHEzV2xjRVJLTnE0THctUHRKdVJVNlFEazdMdFM?oc=5",
+    "FOX19": "https://www.fox19.com/2026/11/14/cvg-issues-notice-travelers-amid-nationwide-ground-stop/",
+    "Ohio Capital Journal": "https://ohiocapitaljournal.com/2026/11/13/repub/faa-grounds-all-us-flights-due-to-air-traffic-control-issue/",
+    "WLWT": "https://www.wlwt.com/article/faa-nationwide-ground-stop-airport-flight-status/74427209"
+   },
+   "outlet_count": 4,
+   "first_seen": "2026-11-13T21:19:33+00:00",
+   "updated": "2026-11-14T00:15:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 10.112,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "FOX19",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Flights halted at airports across US due to air traffic control communications problems, FAA says"
+     ],
+     [
+      "Ohio Capital Journal",
+      "FAA grounds all US flights due to air traffic control issue"
+     ],
+     [
+      "WLWT",
+      "FAA issues nationwide ground stop: Check flight status"
+     ],
+     [
+      "FOX19",
+      "CVG issues notice to travelers amid nationwide ground stop"
+     ],
+     [
+      "Enquirer",
+      "FAA grounds departing flights nationwide over safety concerns"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "flock-cameras-find-driver-wanted-in-fatal-hit-and-run-motorc",
+   "title": "Flock cameras find driver wanted in fatal hit-and-run motorcycle crash: Sheriff",
+   "link": "https://www.fox19.com/2026/11/13/flock-cameras-find-driver-wanted-fatal-hit-and-run-motorcycle-crash-sheriff/",
+   "outlet": "FOX19",
+   "summary": "No charges have been filed yet, while the case remains under investigation",
+   "outlets": [
+    "FOX19",
+    "Local 12",
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/13/flock-cameras-find-driver-wanted-fatal-hit-and-run-motorcycle-crash-sheriff/",
+    "Local 12": "https://local12.com/news/local/suspected-driver-hit-and-run-killed-motorcycle-rider-questioned-reily-township-braden-martin-jeep-cherokee-millville-bunker-hill-woods",
+    "WCPO": "https://www.wcpo.com/news/local-news/in-your-community/butler-county/sheriff-motorcyclist-killed-in-hit-and-run-crash-in-reily-township",
+    "WLWT": "https://www.wlwt.com/article/suspect-vehicle-fatal-butler-county-hit-and-run-reily-township/74423845"
+   },
+   "outlet_count": 4,
+   "first_seen": "2026-11-12T00:28:35+00:00",
+   "updated": "2026-11-13T22:46:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 7.897,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Butler County",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "crash",
+    "newsrooms_for_alert": [
+     "FOX19",
+     "Local 12",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Sheriff: Motorcyclist killed in hit-and-run crash in Reily Township"
+     ],
+     [
+      "FOX19",
+      "Flock cameras find driver wanted in fatal hit-and-run motorcycle crash: Sheriff"
+     ],
+     [
+      "Local 12",
+      "Suspected driver in hit-and-run that killed Tri-State motorcycle rider questioned"
+     ],
+     [
+      "WLWT",
+      "Suspect vehicle located in fatal Butler County hit-and-run, sheriff says"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "flock-cameras-aid-arrest-in-deadly-fairfield-jewelry-store-r",
+   "title": "Flock cameras aid arrest in deadly Fairfield jewelry store robbery, police say",
+   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNdUxEOG4tblhUcjdLTW5hRDJBRVVoa1J1dXdPMXRWMVdfOUFLbXNqZjhaa2RoUXdXT2xDS0ZQTHlsR1dpNTZQd2dtQUNxMkw1TGlQaUpvSFpqZWNMSk1KaHJHekZwdXNHanJrMEVsSkdsVGNpMmdkc0k5R2hXYk1Id285dE5pamZldXY5UE1KaW9HNlUzUElXNldqSFZVSnBkZ21SaVlCYW5aVXlYWktFUlZyUVhJWW81NHlKR29UdGJaMGVERndPTVVaYlNWZnI4THRuTGN5NU43eTd0Q1dhOA?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer",
+    "FOX19",
+    "Local 12",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNdUxEOG4tblhUcjdLTW5hRDJBRVVoa1J1dXdPMXRWMVdfOUFLbXNqZjhaa2RoUXdXT2xDS0ZQTHlsR1dpNTZQd2dtQUNxMkw1TGlQaUpvSFpqZWNMSk1KaHJHekZwdXNHanJrMEVsSkdsVGNpMmdkc0k5R2hXYk1Id285dE5pamZldXY5UE1KaW9HNlUzUElXNldqSFZVSnBkZ21SaVlCYW5aVXlYWktFUlZyUVhJWW81NHlKR29UdGJaMGVERndPTVVaYlNWZnI4THRuTGN5NU43eTd0Q1dhOA?oc=5",
+    "FOX19": "https://www.fox19.com/2026/11/13/one-under-arrest-another-wanted-deadly-fairfield-jewelry-store-robbery/",
+    "Local 12": "https://local12.com/news/local/1-arrested-in-new-york-1-wanted-in-deadly-jewelry-store-robbery-tara-sinchuri-fairfield-carlos-idrogo-arias-and-richard-guzman-flock-everest-gun-crime",
+    "WLWT": "https://www.wlwt.com/article/fairfield-everest-jewels-owner-robbery-arrest-richard-guzman/74423317"
+   },
+   "outlet_count": 4,
+   "first_seen": "2026-11-13T13:59:47+00:00",
+   "updated": "2026-11-13T22:28:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 7.512,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Fairfield",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "FOX19",
+     "Local 12",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "One under arrest, another wanted in deadly Fairfield jewelry store robbery"
+     ],
+     [
+      "Local 12",
+      "1 arrested in New York, 1 wanted in deadly Tri-State jewelry store robbery"
+     ],
+     [
+      "Enquirer",
+      "Flock cameras aid arrest in deadly Fairfield jewelry store robbery, police say"
+     ],
+     [
+      "WLWT",
+      "Prosecutor: Camera technology helped identify suspects in Fairfield jewelry store killing"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "suspended-northern-kentucky-attorney-indicted-in-alleged-mur",
+   "title": "Suspended Northern Kentucky attorney indicted in alleged murder-for-hire plot",
+   "link": "https://www.wlwt.com/article/suspended-northern-kentucky-attorney-indicted-alleged-murder-for-hire/74426795",
+   "outlet": "WLWT",
+   "summary": "A suspended Northern Kentucky attorney has been federally indicted in connection with an alleged murder-for-hire plot.",
+   "outlets": [
+    "Enquirer",
+    "FOX19",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQQS1QbVEtLU9pRF9raXBsWnN4TTJqYk10emIwM0xoMGEtRndnSmdYdTd6RWVVeWhjMFljLVdzMUJpSEpiTlRYcWtWcThxMG9KVUVDamhCd2k0dUozNmx3d1JwTTM4OFAwdmRROFFGaFRNWHZZMVdreGQ3RTU1QWl0YURXSzE3X3lEQ09DNUhzMmYta1pHalBoQkZoMGdPWGtOc3BZZFlsZHA3b09fRjVtUTZfR096amRBaEo3dFI5cjdFSHNjUjNCMS1UMUJpUVZUY1E?oc=5",
+    "FOX19": "https://www.fox19.com/2026/11/13/former-nky-lawyer-accused-attempted-murder-for-hire-plot/",
+    "WLWT": "https://www.wlwt.com/article/suspended-northern-kentucky-attorney-indicted-alleged-murder-for-hire/74426795"
+   },
+   "outlet_count": 3,
+   "first_seen": "2026-11-13T15:55:28+00:00",
+   "updated": "2026-11-13T23:49:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 7.27,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "FOX19",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Former Northern Kentucky lawyer accused in attempted murder-for-hire plot"
+     ],
+     [
+      "Enquirer",
+      "NKY lawyer locked up for witness reprisal now accused of murder-for-hire plot"
+     ],
+     [
+      "WLWT",
+      "Suspended Northern Kentucky attorney indicted in alleged murder-for-hire plot"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "fenwick-girls-volleyball-team-wins-division-iv-state-champio",
+   "title": "Fenwick girls volleyball team wins Division IV state championship",
+   "link": "https://www.wcpo.com/sports/high-school-sports/fenwick-girls-volleyball-team-wins-division-iv-state-championship",
+   "outlet": "WCPO",
+   "summary": "The Fenwick girls volleyball team defeated Ottawa-Glandorf to capture the Division IV state championship on Friday.",
+   "outlets": [
+    "Enquirer",
+    "WCPO"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNdHdFTFZ4SGxZRkJuRW81bnM0MUJXQjd2WDdsRXNDU05RaTh0Wi1XSTdsdFRZQzdaNHhGYkFQZ0FXeWxEVEZDdEV5TDJXOEpRY20wNF9OU2hIUkRPZHZBcDdHUUNqRmx2N1V6WnQ4dXNMUzVhUkhCWHo5MGFYeVNna3c4OHpLc2VXVlJrT2dYT3N6eGFpWlVlRkQ5S2s1S2ZQeWFCbTBKYVdwS2Zwc0VobnM3bVB0d1RQb0ZmMXo3bEZhS3dxZG5mU2kxdWFaS1RoUTFLZVZaMFZWUk05RGdKNFRnTENLNnd5Nm8wcWNBdlU4RE90T2M3NFZCRFJhY2hPUEYyUEVRUmdRNHM?oc=5",
+    "WCPO": "https://www.wcpo.com/sports/high-school-sports/fenwick-girls-volleyball-team-wins-division-iv-state-championship"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-12T17:37:29+00:00",
+   "updated": "2026-11-14T00:16:19+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 5.536,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Mariemont",
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "'Special' | Mariemont girls soccer team earns program's first trip to state final"
+     ],
+     [
+      "WCPO",
+      "Mariemont girls soccer team captures first state championship in program history"
+     ],
+     [
+      "Enquirer",
+      "How Mariemont claimed first girls state soccer title"
+     ],
+     [
+      "WCPO",
+      "Fenwick girls volleyball team wins Division IV state championship"
+     ],
+     [
+      "WCPO",
+      "Seton volleyball team captures third consecutive state championship"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "mini-golf-course-dedicated-to-cincinnati-legends-opening-thi",
+   "title": "Mini-golf course dedicated to Cincinnati legends opening this month next to The Banks",
+   "link": "https://www.wlwt.com/article/cincinnati-the-banks-legends-putt-house-opening-mini-golf/74423258",
+   "outlet": "WLWT",
+   "summary": "A new mini-golf experience is coming to downtown Cincinnati, along the banks of the Ohio River, with holes dedicated to legends who helped shape the city.",
+   "outlets": [
+    "FOX19",
+    "WLWT"
+   ],
+   "links": {
+    "FOX19": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPZWFtalhFX091ckZzTmdfeExibjRtLURJUHlWc3VZZDlnNjgxYTdSaG41dmtoeTZ3bWQ1RDZZMmFaa2luYWRrS1E1X0hORjBPWjRfQ3l6LTBtSG45MHNBQWxLSGtnejFSX0VOXzhUT180b2Y0eWl6UU1PVkZUdUhDcXdnMk9pTkVDVTRkSWpPRjU2MlNOaF9BUTVn?oc=5",
+    "WLWT": "https://www.wlwt.com/article/cincinnati-the-banks-legends-putt-house-opening-mini-golf/74423258"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-13T13:19:00+00:00",
+   "updated": "2026-11-13T23:42:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 5.033,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "The Banks",
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "When does The Banks\u2019 new mini golf course open? Here\u2019s what we know"
+     ],
+     [
+      "WLWT",
+      "Mini-golf course dedicated to Cincinnati legends opening this month next to The Banks"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "busy-sharonville-road-to-stay-closed-all-weekend-after-water",
+   "title": "Busy Sharonville road to stay closed all weekend after water main break: 'VERY UNSAFE'",
+   "link": "https://www.wlwt.com/article/kemper-road-sharonville-shut-down-water-main-break/74426181",
+   "outlet": "WLWT",
+   "summary": "A portion of a busy road in Sharonville is shut down in both directions due to a water main break causing major issues on the roadway.",
+   "outlets": [
+    "Local 12",
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/water-main-break-shuts-down-busy-sharonville-road",
+    "WCPO": "https://www.wcpo.com/news/local-news/hamilton-county/sharonville/kemper-road-shut-down-in-both-directions-due-to-water-main-break-in-sharonville",
+    "WLWT": "https://www.wlwt.com/article/kemper-road-sharonville-shut-down-water-main-break/74426181"
+   },
+   "outlet_count": 3,
+   "first_seen": "2026-11-13T19:15:34+00:00",
+   "updated": "2026-11-13T21:13:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 4.713,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Sharonville",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "Water main",
+    "newsrooms_for_alert": [
+     "Local 12",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Water main break shuts down busy Sharonville road"
+     ],
+     [
+      "WCPO",
+      "Kemper Road shut down in both directions due to water main break in Sharonville"
+     ],
+     [
+      "WLWT",
+      "Busy Sharonville road to stay closed all weekend after water main break: 'VERY UNSAFE'"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hamilton-county-sheriff-warns-ohio-bill-easing-firearm-restr",
+   "title": "Hamilton County sheriff warns Ohio bill easing firearm restrictions could endanger public safety",
+   "link": "https://www.wcpo.com/news/local-news/hamilton-county-sheriff-warns-ohio-bill-easing-firearm-restrictions-could-endanger-public-safety",
+   "outlet": "WCPO",
+   "summary": "Senate Bill 214 would remove gun mufflers and suppressors, as well as short-barreled shotguns and rifles, from Ohio's \"dangerous ordnance\" list, meaning they would be treated as standard firearms.",
+   "outlets": [
+    "Local 12",
+    "WCPO"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/hamilton-county-sheriff-urges-dewine-to-reject-bill-loosening-suppressor-gun-regulations",
+    "WCPO": "https://www.wcpo.com/news/local-news/hamilton-county-sheriff-warns-ohio-bill-easing-firearm-restrictions-could-endanger-public-safety"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-13T20:23:37+00:00",
+   "updated": "2026-11-13T22:20:51+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 4.017,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12",
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Hamilton County sheriff urges DeWine to reject bill loosening suppressor, gun regulations"
+     ],
+     [
+      "WCPO",
+      "Hamilton County sheriff warns Ohio bill easing firearm restrictions could endanger public safety"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "greater-cincinnati-community-votes-to-remove-flock-cameras",
+   "title": "Greater Cincinnati community votes to remove Flock cameras",
+   "link": "https://local12.com/news/local/cincinnati-community-votes-remove-flock-cameras-license-plate-readers-tech-technology-voting-vote-city-council-blanchester-police",
+   "outlet": "Local 12",
+   "summary": "Blanchester village leaders voted 4-1 during a village council meeting on Thursday to remove Flock license plate reader cameras within the next three days.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/cincinnati-community-votes-remove-flock-cameras-license-plate-readers-tech-technology-voting-vote-city-council-blanchester-police"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-14T00:37:37+00:00",
+   "updated": "2026-11-14T00:37:37+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "Council"
+   ],
+   "city_score": 4.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": true,
+   "developing": false,
+   "score": 3.426,
+   "city_rank": 7.44,
+   "why": {
+    "matches": [
+     {
+      "group": "Council",
+      "term": "council",
+      "where": "summary",
+      "outlet": "Local 12",
+      "points": 4.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": false,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Greater Cincinnati community votes to remove Flock cameras"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "fbi-warns-of-impersonation-scheme-that-has-stolen-more-than",
+   "title": "FBI warns of impersonation scheme that has stolen more than $400 million",
+   "link": "https://www.fox19.com/2026/11/14/fbi-warns-impersonation-scheme-that-has-stolen-more-than-400-million/",
+   "outlet": "FOX19",
+   "summary": "It\u2019s called \u201cfacestealer\u201d and is primarily used to steal cryptocurrency.",
+   "outlets": [
+    "FOX19"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/14/fbi-warns-impersonation-scheme-that-has-stolen-more-than-400-million/"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-14T00:32:41+00:00",
+   "updated": "2026-11-14T00:32:41+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": true,
+   "developing": false,
+   "score": 3.38,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": false,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "FBI warns of impersonation scheme that has stolen more than $400 million"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "police-investigating-after-shots-fired-into-corryville-kroge",
+   "title": "Police investigating after shots fired into Corryville Kroger; no injuries reported",
+   "link": "https://www.wlwt.com/article/corryville-kroger-shots-fired-windows-cincinnati/74428284",
+   "outlet": "WLWT",
+   "summary": "Police are investigating after shots were fired into a Kroger store in Corryville on Friday evening.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/corryville-kroger-shots-fired-windows-cincinnati/74428284"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T23:59:00+00:00",
+   "updated": "2026-11-14T00:22:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 3.281,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Corryville",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Police investigating after shots fired into Corryville Kroger; no injuries reported"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "developer-sues-trenton-over-voter-approved-data-center-ban",
+   "title": "Developer sues Trenton over voter-approved data center ban",
+   "link": "https://www.wvxu.org/politics/2026-11-13/developer-sues-trenton-over-voter-approved-data-center-ban",
+   "outlet": "WVXU",
+   "summary": "Prologis filed a federal lawsuit arguing the data center ban is unconstitutional and cannot be applied to its already-permitted project. Attorneys representing Trenton taxpayers think differently.",
+   "outlets": [
+    "Local 12",
+    "WVXU"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/company-sues-city-over-vote-that-practically-bans-large-scale-data-centers-tech-technology-prologis-amendment-ballot-project",
+    "WVXU": "https://www.wvxu.org/politics/2026-11-13/developer-sues-trenton-over-voter-approved-data-center-ban"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-11T05:19:15+00:00",
+   "updated": "2026-11-13T20:43:35+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 3.066,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Trenton",
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12",
+     "WVXU"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Company sues Tri-State city over vote that practically bans large-scale data centers"
+     ],
+     [
+      "WVXU",
+      "Developer sues Trenton over voter-approved data center ban"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "reservations-at-new-cincinnati-sushi-restaurant-booked-month",
+   "title": "Reservations at new Cincinnati sushi restaurant booked months out in advance",
+   "link": "https://local12.com/news/local/suzu-reservations-booked-months-ahead-as-celebrity-chef-brings-japanese-dining-to-cincinnati-jefry-adytia-chef-makoto-okuwa-marella-porter",
+   "outlet": "Local 12",
+   "summary": "A fresh take on Japanese dining is already drawing a crowd in Cincinnati, where a celebrity chef is bringing his vision of Japanese cuisine to the city.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/suzu-reservations-booked-months-ahead-as-celebrity-chef-brings-japanese-dining-to-cincinnati-jefry-adytia-chef-makoto-okuwa-marella-porter"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T23:26:52+00:00",
+   "updated": "2026-11-13T23:26:52+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.815,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Reservations at new Cincinnati sushi restaurant booked months out in advance"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "19-year-old-accused-of-exposing-himself-to-12-year-old-in-no",
+   "title": "19-year-old accused of exposing himself to 12-year-old in North College Hill",
+   "link": "https://www.wlwt.com/article/colin-black-north-college-hill-charges-sexual-battery/74426846",
+   "outlet": "WLWT",
+   "summary": "A 19-year-old has been ordered to stay away from a 12-year-old after prosecutors said he exposed himself to her.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/colin-black-north-college-hill-charges-sexual-battery/74426846"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T20:40:00+00:00",
+   "updated": "2026-11-13T23:19:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.754,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "North College Hill",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "19-year-old accused of exposing himself to 12-year-old in North College Hill"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "coney-island-s-nights-of-lights-holiday-display-finds-new-ho",
+   "title": "Coney Island's Nights of Lights holiday display finds new home at Warren County Fairgrounds",
+   "link": "https://www.wcpo.com/news/local-news/in-your-community/warren-county/coney-islands-nights-of-lights-holiday-display-finds-new-home-at-warren-county-fairgrounds",
+   "outlet": "WCPO",
+   "summary": "A longtime Cincinnati holiday tradition is moving to Warren County. Nights of Lights will bring more than 2 million synchronized lights to the Warren County Fairgrounds in Lebanon beginning Nov. 20.",
+   "outlets": [
+    "WCPO"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/local-news/in-your-community/warren-county/coney-islands-nights-of-lights-holiday-display-finds-new-home-at-warren-county-fairgrounds"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-12T16:44:57+00:00",
+   "updated": "2026-11-13T23:13:01+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.709,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Warren County",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Coney Island's Nights of Lights holiday display finds new home at Warren County Fairgrounds"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "paycor-stadium-to-host-division-i-regional-football-champion",
+   "title": "Paycor Stadium to host Division I regional football championship",
+   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNWVFpMmQ0My1tak9zanhQb2UyYjVDaVVDVTR2ZEE5YktIX0VubVY5UmJvaVloZUNYUVZ0aVZXMXRHWl96NzIxbkZaWVNxcnhMLXhWa1otZW9WcVdlVC1MbzZGbDd6VHpUOC1feWV4NV9YZ3RjQmRCQ1EwdTFRaFo1QmpMV2FneXU4Wjg0S0pJX2JyRUtpaTktdWlEaUc3VGNQM05VYUlSOHFVamplbDBOem8yR21oRTRoYzlWWGhwVHFMZEh4bXJ5aTA3LTFUTjZQYk5JWTB5X0F5Sm1VVGpXdzhtOA?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer",
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNWVFpMmQ0My1tak9zanhQb2UyYjVDaVVDVTR2ZEE5YktIX0VubVY5UmJvaVloZUNYUVZ0aVZXMXRHWl96NzIxbkZaWVNxcnhMLXhWa1otZW9WcVdlVC1MbzZGbDd6VHpUOC1feWV4NV9YZ3RjQmRCQ1EwdTFRaFo1QmpMV2FneXU4Wjg0S0pJX2JyRUtpaTktdWlEaUc3VGNQM05VYUlSOHFVamplbDBOem8yR21oRTRoYzlWWGhwVHFMZEh4bXJ5aTA3LTFUTjZQYk5JWTB5X0F5Sm1VVGpXdzhtOA?oc=5",
+    "WCPO": "https://www.wcpo.com/sports/high-school-sports/scores-for-week-13-of-greater-cincinnati-high-school-football-season",
+    "WLWT": "https://www.wlwt.com/article/paycor-stadium-ohio-high-school-football-regional-championship/74426689"
+   },
+   "outlet_count": 3,
+   "first_seen": "2026-11-13T20:23:00+00:00",
+   "updated": "2026-11-13T22:00:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 2.685,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Paycor Stadium",
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": true,
+    "versions": [
+     [
+      "WLWT",
+      "Paycor Stadium to host Ohio high school football regional championship game"
+     ],
+     [
+      "WCPO",
+      "Division I football regional final Nov. 20 to be played at Paycor Stadium"
+     ],
+     [
+      "Enquirer",
+      "Paycor Stadium to host Division I regional football championship"
+     ],
+     [
+      "WCPO",
+      "Scores for Week 13 of Greater Cincinnati high school football season"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ohio-gov-dewine-plans-to-commute-more-death-sentences-before",
+   "title": "Ohio Gov. DeWine plans to commute more death sentences before leaving office",
+   "link": "https://www.wcpo.com/news/state/state-ohio/ohio-gov-dewine-plans-to-commute-more-death-sentences-before-leaving-office",
+   "outlet": "WCPO",
+   "summary": "Gov. Mike DeWine is reviewing death row cases that may have gone awry in the legal process. The anti-capital punishment Republican said he is using one of his last acts as governor to save lives.",
+   "outlets": [
+    "WCPO"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/state/state-ohio/ohio-gov-dewine-plans-to-commute-more-death-sentences-before-leaving-office"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T23:02:15+00:00",
+   "updated": "2026-11-13T23:02:15+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.629,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Ohio Gov. DeWine plans to commute more death sentences before leaving office"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "microsoft-recovering-after-outage-disrupts-email-communicati",
+   "title": "Microsoft recovering after outage disrupts email, communication services worldwide",
+   "link": "https://www.wlwt.com/article/microsoft-outlook-outage-email-communications-recovering/74427315",
+   "outlet": "WLWT",
+   "summary": "A major Microsoft outage disrupted Outlook email, Teams, and other services, affecting businesses, governments, and millions of users worldwide, including many in the local area.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/microsoft-outlook-outage-email-communications-recovering/74427315"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T22:52:00+00:00",
+   "updated": "2026-11-13T22:52:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.555,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Microsoft recovering after outage disrupts email, communication services worldwide"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "personal-collection-of-reds-legend-joe-morgan-up-for-auction",
+   "title": "Personal collection of Reds legend Joe Morgan up for auction in Louisville",
+   "link": "https://www.wlwt.com/article/cincinnati-reds-joe-morgan-auction-louisville-bats-rings/74427519",
+   "outlet": "WLWT",
+   "summary": "Fans who are interested in owning memorabilia from the personal collection of a Reds legend will have an incredible opportunity this weekend.",
+   "outlets": [
+    "Local 12",
+    "WLWT"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/joe-morgan-memorabilia-from-big-red-machine-era-heads-to-auction-reds-cincinnati-baseball-mlb-world-series-ring-rings-bats-glove-signed-auto-autograph-mvp-iconic-historic-ohio-hunt-auctions",
+    "WLWT": "https://www.wlwt.com/article/cincinnati-reds-joe-morgan-auction-louisville-bats-rings/74427519"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-13T02:32:24+00:00",
+   "updated": "2026-11-13T23:38:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.489,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Louisville",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": true,
+    "versions": [
+     [
+      "Local 12",
+      "Joe Morgan memorabilia from Big Red Machine era heads to auction"
+     ],
+     [
+      "WLWT",
+      "Personal collection of Reds legend Joe Morgan up for auction in Louisville"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cincinnati-man-accused-of-threatening-to-burn-school-to-the",
+   "title": "Cincinnati man accused of threatening to burn school \u2018to the ground\u2019",
+   "link": "https://www.fox19.com/2026/11/13/cincinnati-man-accused-threatening-burn-school-ground/",
+   "outlet": "FOX19",
+   "summary": "The man was charged with disorderly conduct and terroristic threats, records show",
+   "outlets": [
+    "FOX19"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/13/cincinnati-man-accused-threatening-burn-school-ground/"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T22:39:08+00:00",
+   "updated": "2026-11-13T22:39:08+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.465,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Cincinnati man accused of threatening to burn school \u2018to the ground\u2019"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ex-judge-s-claims-against-supreme-court-justices-were-reveng",
+   "title": "Ex-judge's claims against Supreme Court justices were 'revenge,' prosecutor says",
+   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQb1FKaVpyeWFWb3J1bGxKaFc4UGVlZ3FzMmZpNFNBWWZSUjJDSURGREpWTEQyLXFKM0E4YmhMdFB0V0dEZTVjVWE4Uzl3Q2NsRmZNWVNtMmpOZEVWRDExbkhhcjFxc1RZTFBlOEk3ZGNvaVg0aUdsajJLT2dZLVZLOHQxRjJvaUxrMWJkWjZnWVR1XzhxdTBvTDhHdXhwQk9LS21aSTRTbFpmM2t6S05DZGJMaHl0SW5TQTIyRlE0T0dhVmFHQVhvVUVtblJCQQ?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer",
+    "Local 12"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQb1FKaVpyeWFWb3J1bGxKaFc4UGVlZ3FzMmZpNFNBWWZSUjJDSURGREpWTEQyLXFKM0E4YmhMdFB0V0dEZTVjVWE4Uzl3Q2NsRmZNWVNtMmpOZEVWRDExbkhhcjFxc1RZTFBlOEk3ZGNvaVg0aUdsajJLT2dZLVZLOHQxRjJvaUxrMWJkWjZnWVR1XzhxdTBvTDhHdXhwQk9LS21aSTRTbFpmM2t6S05DZGJMaHl0SW5TQTIyRlE0T0dhVmFHQVhvVUVtblJCQQ?oc=5",
+    "Local 12": "https://local12.com/news/local/special-prosecutor-ends-felony-allegations-against-2-ohio-supreme-court-justices-pat-dewine-joe-deters-judges-judge-tracie-hunter-felony-allegations-charges-court-political-politics"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-13T00:49:31+00:00",
+   "updated": "2026-11-13T19:18:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.417,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Special prosecutor ends felony allegations against 2 Ohio Supreme Court justices"
+     ],
+     [
+      "Enquirer",
+      "Ex-judge's claims against Supreme Court justices were 'revenge,' prosecutor says"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "i-m-happy-that-it-s-getting-done-residents-in-williamsburg",
+   "title": "'I'm happy that it's getting done.' Residents in Williamsburg Twp. hope wait to reopen nearby bridge ends soon",
+   "link": "https://www.wcpo.com/news/local-news/im-happy-that-its-getting-done-residents-in-williamsburg-township-hope-the-wait-to-reopen-a-nearby-bridge-ends-soon",
+   "outlet": "WCPO",
+   "summary": "The Bethel Concord Road Bridge was closed in April 2025 due to weather damage. Over a year and a half later, residents are seeing crews get to work to replace the structure",
+   "outlets": [
+    "WCPO"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/local-news/im-happy-that-its-getting-done-residents-in-williamsburg-township-hope-the-wait-to-reopen-a-nearby-bridge-ends-soon"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T22:31:01+00:00",
+   "updated": "2026-11-13T22:31:01+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.41,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": "closed",
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "'I'm happy that it's getting done.' Residents in Williamsburg Twp. hope wait to reopen nearby bridge ends soon"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "pancreatic-cancer-patient-in-cincinnati-finds-hope-from-new",
+   "title": "Pancreatic cancer patient in Cincinnati finds hope from new drug trial",
+   "link": "https://www.wlwt.com/article/pancreatic-cancer-patient-cincinnati-jim-dynes/74427148",
+   "outlet": "WLWT",
+   "summary": "A clinical trial at the University of Cincinnati Cancer Center has given pancreatic cancer patient Jim Dynes more time to enjoy life after his stage 4 diagnosis.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/pancreatic-cancer-patient-cincinnati-jim-dynes/74427148"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T22:30:00+00:00",
+   "updated": "2026-11-13T22:30:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.404,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Pancreatic cancer patient in Cincinnati finds hope from new drug trial"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "people-believe-the-system-is-rigged-sherrod-brown-speaks-on",
+   "title": "'People believe the system is rigged': Sherrod Brown speaks on issues, return to congress",
+   "link": "https://local12.com/news/local/people-believe-the-system-is-rigged-sherrod-brown-speaks-on-issues-return-to-congress-politics-political-democrats-democrat-gop-republican-policies-war-iran-east-palestine-cincinnati-ohio",
+   "outlet": "Local 12",
+   "summary": "Ohio\u2019s newest U.S. senator-elect is a familiar face in Washington, with Democrat Sherrod Brown set to return to the Senate as part of what was described as a big Democratic wave.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/people-believe-the-system-is-rigged-sherrod-brown-speaks-on-issues-return-to-congress-politics-political-democrats-democrat-gop-republican-policies-war-iran-east-palestine-cincinnati-ohio"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T22:22:32+00:00",
+   "updated": "2026-11-13T22:22:32+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.354,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "cincinnati",
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "'People believe the system is rigged': Sherrod Brown speaks on issues, return to congress"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "do-you-get-stressed-during-the-holidays-expert-talks-how-to",
+   "title": "Do you get stressed during the holidays? Expert talks how to manage mental health",
+   "link": "https://www.wlwt.com/article/holidays-mental-health-holistic-therapy-cincinnati/74426612",
+   "outlet": "WLWT",
+   "summary": "The holidays are supposed to be a time of joy and celebration, but for many people, they also bring added stress.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/holidays-mental-health-holistic-therapy-cincinnati/74426612"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T21:25:00+00:00",
+   "updated": "2026-11-13T21:25:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.007,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Do you get stressed during the holidays? Expert talks how to manage mental health"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "australian-football-championships-returning-to-warren-county",
+   "title": "Australian football championships returning to Warren County",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPN083alYyaUw0TGpIWTZOY3VmbGVCSm1zTHk3TkM5NXo4MmxGRTM0bDFZZ1kxbXQ1cmliMG9ERjFHN3hNcnFZak9hQUhOb0Z1Z2xiNlJxVjQtWGVJYjZHS2p1Vjhja0s3d2FqM3JGTkI2M25FYW9ITnhBUU4wUm03aFlLbFpOU1YtamZEb3kwTWtmRlhMTVBBbUpHcjRZdDBoYm9Nc2pLMHR2eFJlczU0NUZ0ZzRoZFV3Ukl0OGhwZS1iSXgyMFVjU01Ebllqa0M1?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer",
+    "Yahoo Sports"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPN083alYyaUw0TGpIWTZOY3VmbGVCSm1zTHk3TkM5NXo4MmxGRTM0bDFZZ1kxbXQ1cmliMG9ERjFHN3hNcnFZak9hQUhOb0Z1Z2xiNlJxVjQtWGVJYjZHS2p1Vjhja0s3d2FqM3JGTkI2M25FYW9ITnhBUU4wUm03aFlLbFpOU1YtamZEb3kwTWtmRlhMTVBBbUpHcjRZdDBoYm9Nc2pLMHR2eFJlczU0NUZ0ZzRoZFV3Ukl0OGhwZS1iSXgyMFVjU01Ebllqa0M1?oc=5",
+    "Yahoo Sports": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNRVVyci1zZEwzWVdJSzU1akw1WnVpQ2h3UDNJalY1bmZkazY5V0hscjQxUW11MjJnNmVzY3VQSG5Sa01HNFoyRVFVUnhNM0dFVU1oSERRTTlMTDI3dEVZV3h6S1FUUXJ5MEN6RFEwUERLYVJwX1dsRFpmeEEyWHZPT1NBV0swVEs2VFhkWDQ0M1lvc1l2N0xWQWVkcERyRnVQ?oc=5"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-13T18:08:00+00:00",
+   "updated": "2026-11-13T18:08:18+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.992,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Warren County",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "Australian football championships returning to Warren County"
+     ],
+     [
+      "Yahoo Sports",
+      "Australian football championships returning to Warren County"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "norwood-s-former-deputy-auditor-charged-with-theft-in-office",
+   "title": "Norwood's former deputy auditor charged with theft in office",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRnh5NWZnVVRxMkNBNDFMYmJUbHMxMm1KZXRabjJXOFFiX3FqVTJBUXEtY2Q2cnFOZEhrN2w0NXdlTmpfb1I1MVRBZHVQUTdWSlNVN1NLa243YnMxd2FFUGxqU1pBa3dQcFVEYm1EdUI5ZzJVall3VUpyUWEzX3ZIaEppYU80TzhrN0dYcDdHZFRCSUpvWVJFZUc3ZThaR0xUb2RIakx3bTNyYVBiMmZOZ1JuTDlHRUlad2hEMklEZlBNdzE5?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRnh5NWZnVVRxMkNBNDFMYmJUbHMxMm1KZXRabjJXOFFiX3FqVTJBUXEtY2Q2cnFOZEhrN2w0NXdlTmpfb1I1MVRBZHVQUTdWSlNVN1NLa243YnMxd2FFUGxqU1pBa3dQcFVEYm1EdUI5ZzJVall3VUpyUWEzX3ZIaEppYU80TzhrN0dYcDdHZFRCSUpvWVJFZUc3ZThaR0xUb2RIakx3bTNyYVBiMmZOZ1JuTDlHRUlad2hEMklEZlBNdzE5?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T21:08:00+00:00",
+   "updated": "2026-11-13T21:10:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.925,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Norwood",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "Norwood's former deputy auditor charged with theft in office"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "larosa-s-officially-opens-new-cincinnati-location",
+   "title": "LaRosa\u2019s officially opens new Cincinnati location",
+   "link": "https://www.wlwt.com/article/larosas-cincinnati-pleasant-ridge-highland-avenue/74426954",
+   "outlet": "WLWT",
+   "summary": "A new LaRosa\u2019s restaurant has officially opened in Cincinnati!",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/larosas-cincinnati-pleasant-ridge-highland-avenue/74426954"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T20:53:00+00:00",
+   "updated": "2026-11-13T20:53:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.836,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "LaRosa\u2019s officially opens new Cincinnati location"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "local-partnership-helps-give-new-shoes-to-the-people-who-nee",
+   "title": "Local partnership helps give new shoes to the people who need them most",
+   "link": "https://local12.com/news/local/partnership-helps-give-new-shoes-people-who-need-them-most-shoe-athletic-gift-gifts-donations-nonprofit-international-brand-inspiration-studios-inclusive-wellness-program-hamilton-on-running-cincinnati",
+   "outlet": "Local 12",
+   "summary": "A local running store, a nonprofit and an international shoe brand teamed up Friday to put new athletic shoes on the feet of people who need them most.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/partnership-helps-give-new-shoes-people-who-need-them-most-shoe-athletic-gift-gifts-donations-nonprofit-international-brand-inspiration-studios-inclusive-wellness-program-hamilton-on-running-cincinnati"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T20:50:44+00:00",
+   "updated": "2026-11-13T20:50:44+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.824,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "hamilton",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Local partnership helps give new shoes to the people who need them most"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "why-the-meeting-of-the-cincinnati-democrats-on-nov-17-will-i",
+   "title": "Why the meeting of the Cincinnati Democrats on Nov. 17 will impact the future of City Council",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQeFh0Wkl6RlZ2VlJYdDVLQmNVRWtWYnJkbnE2Y25Sb2s0cGZiR2UxMUFpQmhQVjBpVHZ0YmVmSHhUSmpjUjRuXzVnZFhmalhwZjRQYU9ickVPeFZKR0RhY0FNR2E5SkNsVk9CUjBZblRxY25nYmlEaFhva3AxS0pRZlVidUFudVNnRVE1cXczVjBPLUIwbXRPWEVlandENFVBRmUzangtVXJaNDcwc1FXR0F6ODJ1OFBRbFVxeXlTZGptQ1pSY01BRQ?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQeFh0Wkl6RlZ2VlJYdDVLQmNVRWtWYnJkbnE2Y25Sb2s0cGZiR2UxMUFpQmhQVjBpVHZ0YmVmSHhUSmpjUjRuXzVnZFhmalhwZjRQYU9ickVPeFZKR0RhY0FNR2E5SkNsVk9CUjBZblRxY25nYmlEaFhva3AxS0pRZlVidUFudVNnRVE1cXczVjBPLUIwbXRPWEVlandENFVBRmUzangtVXJaNDcwc1FXR0F6ODJ1OFBRbFVxeXlTZGptQ1pSY01BRQ?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T19:57:43+00:00",
+   "updated": "2026-11-13T19:57:43+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "Council"
+   ],
+   "city_score": 5.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.575,
+   "city_rank": 4.139,
+   "why": {
+    "matches": [
+     {
+      "group": "Council",
+      "term": "Council",
+      "where": "headline",
+      "outlet": "Enquirer",
+      "points": 5.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "Why the meeting of the Cincinnati Democrats on Nov. 17 will impact the future of City Council"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "some-cincinnati-council-members-balk-at-latest-water-rate-hi",
+   "title": "Some Cincinnati council members balk at latest water rate hike plan",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVTUtRnNnMlE2OHlNNjNWZjhMSlNPay1HM2xjdVB6LUcyTzZ6b0lRUi01blV1SkhNaVV3VEdhNlVPMkNUakJmNEF1bTdGcnJVVm04eDF2WXFTWUxidHE3dnczR3hMYVZ2Y2NvUkcyU3ByVllPN1FMV240Vmt6TzJNRHpKeDdscERIbWdTNkxTLVhxNkZsakNxXzREMDRaS01VbDFGU09PZWhrNGRoMGZFQXR6MzF1V1pP?oc=5",
+   "outlet": "Axios",
+   "summary": "",
+   "outlets": [
+    "Axios"
+   ],
+   "links": {
+    "Axios": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVTUtRnNnMlE2OHlNNjNWZjhMSlNPay1HM2xjdVB6LUcyTzZ6b0lRUi01blV1SkhNaVV3VEdhNlVPMkNUakJmNEF1bTdGcnJVVm04eDF2WXFTWUxidHE3dnczR3hMYVZ2Y2NvUkcyU3ByVllPN1FMV240Vmt6TzJNRHpKeDdscERIbWdTNkxTLVhxNkZsakNxXzREMDRaS01VbDFGU09PZWhrNGRoMGZFQXR6MzF1V1pP?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-13T11:19:01+00:00",
+   "updated": "2026-11-13T11:19:01+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "Council",
+    "Water & Sewers"
+   ],
+   "city_score": 8.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 0.373,
+   "city_rank": 1.491,
+   "why": {
+    "matches": [
+     {
+      "group": "Council",
+      "term": "council",
+      "where": "headline",
+      "outlet": "Axios",
+      "points": 5.0
+     },
+     {
+      "group": "Water & Sewers",
+      "term": "water rate",
+      "where": "headline",
+      "outlet": "Axios",
+      "points": 3.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Axios",
+      "Some Cincinnati council members balk at latest water rate hike plan"
+     ]
+    ]
+   }
+  }
+ ],
+ "sources_status": [
+  {
+   "source": "Enquirer",
+   "ok": true,
+   "items": 54,
+   "junk_dropped": 2,
+   "junk_examples": [
+    "Kalshi promo code CINCY offers $25 bonus for NFL, NCAAF, NBA and more",
+    "Kalshi referral code CINCY | $25 bonus for NFL, NCAAF, NBA & more"
+   ],
+   "used": "https://news.google.com/rss/search?q=site:cincinnati.com/story+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WCPO",
+   "ok": true,
+   "items": 30,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wcpo.com/news/local-news.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WLWT",
+   "ok": true,
+   "items": 20,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wlwt.com/local-news-rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "FOX19",
+   "ok": true,
+   "items": 20,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.fox19.com/arc/outboundfeeds/rss/category/news/?outputType=xml",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Local 12",
+   "ok": true,
+   "items": 46,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://local12.com/news/local.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WVXU",
+   "ok": true,
+   "items": 10,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wvxu.org/local-news.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Signal",
+   "ok": true,
+   "items": 10,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://signalcincinnati.org/feed/",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City Hall sweep",
+   "ok": true,
+   "items": 13,
+   "junk_dropped": 5,
+   "junk_examples": [
+    "11 European-Style Christmas Markets in the U.S. For Festive Fun Without the Jetlag",
+    "Democratic Conference",
+    "Democratic Conference",
+    "OH's latest gun deregulation bill 'incredibly dangerous,' local Sheriff says (old WVXU story Google dated as new)",
+    "City's St. Patrick\u2019s Day, Pride parades canceled because of new anti-DEI legislation (old Local 12 story Google dated as new)"
+   ],
+   "used": "https://news.google.com/rss/search?q=Cincinnati+(%22city+council%22+OR+%22city+hall%22+OR+%22city+manager%22+OR+mayor)+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City of Cincinnati",
+   "ok": true,
+   "items": 0,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": null,
+   "used_fallback": false,
+   "errors": [
+    "empty: https://news.google.com/rss/search?q=site:cincinnati-oh.gov/cityofcincinnati/news+when:3d&hl=en-US&gl=US&ceid=US:en"
+   ],
+   "fail_streak": 0
+  },
+  {
+   "source": "Ohio Capital Journal",
+   "ok": true,
+   "items": 15,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://ohiocapitaljournal.com/feed/",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Ohio legislation sweep",
+   "ok": true,
+   "items": 10,
+   "junk_dropped": 2,
+   "junk_examples": [
+    "Ohio Handicap Parking Law Changes Advance in Statehouse",
+    "Efforts to push for a vote on child marriage ban escalate in Ohio Senate (old WVXU story Google dated as new)"
+   ],
+   "used": "https://news.google.com/rss/search?q=Ohio+(lawmakers+OR+Statehouse+OR+%22House+Bill%22+OR+%22Senate+Bill%22)+(cities+OR+%22local+governments%22+OR+municipalities+OR+%22home+rule%22)+when:2d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Federal local-gov sweep",
+   "ok": true,
+   "items": 6,
+   "junk_dropped": 3,
+   "junk_examples": [
+    "Trump Administration\u2019s 4-Year Plan To Shrink Public Land",
+    "Senator Bernard Sanders introduces S. 5692: Ban Flock Act",
+    "Renew Financial and FLASH Advance the Conversation on Affordable Home Resilience at 2026 National Conference"
+   ],
+   "used": "https://news.google.com/rss/search?q=(%22U.S.+Congress%22+OR+%22federal+funding%22+OR+%22federal+grants%22+OR+HUD+OR+FEMA+OR+%22Trump+administration%22)+(%22local+governments%22+OR+%22U.S.+cities%22+OR+mayors)+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City meetings (Legistar)",
+   "ok": true,
+   "items": 2,
+   "used": "web API (cincinnatioh)",
+   "error": null,
+   "fail_streak": 0
+  },
+  {
+   "source": "Game days (ESPN)",
+   "ok": true,
+   "items": 1,
+   "error": null,
+   "fail_streak": 0
+  }
+ ],
+ "memory": {
+  "fail_streak": {
+   "Enquirer": 0,
+   "WCPO": 0,
+   "WLWT": 0,
+   "FOX19": 0,
+   "Local 12": 0,
+   "WVXU": 0,
+   "Signal": 0,
+   "City Hall sweep": 0,
+   "City of Cincinnati": 0,
+   "Ohio Capital Journal": 0,
+   "Ohio legislation sweep": 0,
+   "Federal local-gov sweep": 0,
+   "City meetings (Legistar)": 0,
+   "Game days (ESPN)": 0
+  },
+  "seen": [
+   {
+    "tok": [
+     "bus",
+     "cps",
+     "didn't",
+     "died",
+     "email",
+     "properly",
+     "staff",
+     "strap",
+     "student"
+    ],
+    "first_seen": "2026-11-13T04:20:00+00:00",
+    "title": "Staff didn't properly strap in CPS student who died on bus, emails say"
+   },
+   {
+    "tok": [
+     "check",
+     "faa",
+     "flight",
+     "ground",
+     "issue",
+     "nationwide",
+     "statu",
+     "stop"
+    ],
+    "first_seen": "2026-11-13T21:19:33+00:00",
+    "title": "FAA issues nationwide ground stop: Check flight status"
+   },
+   {
+    "tok": [
+     "camera",
+     "crash",
+     "driver",
+     "fatal",
+     "find",
+     "flock",
+     "hit",
+     "motorcycle",
+     "run",
+     "sheriff",
+     "wanted"
+    ],
+    "first_seen": "2026-11-12T00:28:35+00:00",
+    "title": "Flock cameras find driver wanted in fatal hit-and-run motorcycle crash: Sheriff"
+   },
+   {
+    "tok": [
+     "aid",
+     "arrest",
+     "camera",
+     "deadly",
+     "fairfield",
+     "flock",
+     "jewelry",
+     "police",
+     "robbery",
+     "store"
+    ],
+    "first_seen": "2026-11-13T13:59:47+00:00",
+    "title": "Flock cameras aid arrest in deadly Fairfield jewelry store robbery, police say"
+   },
+   {
+    "tok": [
+     "alleged",
+     "attorney",
+     "hire",
+     "indicted",
+     "murder",
+     "northern",
+     "plot",
+     "suspended"
+    ],
+    "first_seen": "2026-11-13T15:55:28+00:00",
+    "title": "Suspended Northern Kentucky attorney indicted in alleged murder-for-hire plot"
+   },
+   {
+    "tok": [
+     "championship",
+     "division",
+     "fenwick",
+     "girl",
+     "state",
+     "team",
+     "volleyball",
+     "win"
+    ],
+    "first_seen": "2026-11-12T17:37:29+00:00",
+    "title": "Fenwick girls volleyball team wins Division IV state championship"
+   },
+   {
+    "tok": [
+     "bank",
+     "course",
+     "dedicated",
+     "golf",
+     "legend",
+     "mini",
+     "month",
+     "opening"
+    ],
+    "first_seen": "2026-11-13T13:19:00+00:00",
+    "title": "Mini-golf course dedicated to Cincinnati legends opening this month next to The Banks"
+   },
+   {
+    "tok": [
+     "all",
+     "break",
+     "busy",
+     "closed",
+     "main",
+     "road",
+     "sharonville",
+     "stay",
+     "unsafe",
+     "very",
+     "water",
+     "weekend"
+    ],
+    "first_seen": "2026-11-13T19:15:34+00:00",
+    "title": "Busy Sharonville road to stay closed all weekend after water main break: 'VERY UNSAFE'"
+   },
+   {
+    "tok": [
+     "bill",
+     "county",
+     "easing",
+     "endanger",
+     "firearm",
+     "hamilton",
+     "public",
+     "restriction",
+     "safety",
+     "sheriff",
+     "warn"
+    ],
+    "first_seen": "2026-11-13T20:23:37+00:00",
+    "title": "Hamilton County sheriff warns Ohio bill easing firearm restrictions could endanger public safety"
+   },
+   {
+    "tok": [
+     "camera",
+     "community",
+     "flock",
+     "greater",
+     "remove",
+     "vote"
+    ],
+    "first_seen": "2026-11-14T00:37:37+00:00",
+    "title": "Greater Cincinnati community votes to remove Flock cameras"
+   },
+   {
+    "tok": [
+     "400",
+     "fbi",
+     "has",
+     "impersonation",
+     "million",
+     "scheme",
+     "stolen",
+     "warn"
+    ],
+    "first_seen": "2026-11-14T00:32:41+00:00",
+    "title": "FBI warns of impersonation scheme that has stolen more than $400 million"
+   },
+   {
+    "tok": [
+     "corryville",
+     "fired",
+     "injury",
+     "investigating",
+     "kroger",
+     "police",
+     "reported",
+     "shot"
+    ],
+    "first_seen": "2026-11-13T23:59:00+00:00",
+    "title": "Police investigating after shots fired into Corryville Kroger; no injuries reported"
+   },
+   {
+    "tok": [
+     "approved",
+     "ban",
+     "center",
+     "data",
+     "developer",
+     "sue",
+     "trenton",
+     "voter"
+    ],
+    "first_seen": "2026-11-11T05:19:15+00:00",
+    "title": "Developer sues Trenton over voter-approved data center ban"
+   },
+   {
+    "tok": [
+     "advance",
+     "booked",
+     "month",
+     "reservation",
+     "restaurant",
+     "sushi"
+    ],
+    "first_seen": "2026-11-13T23:26:52+00:00",
+    "title": "Reservations at new Cincinnati sushi restaurant booked months out in advance"
+   },
+   {
+    "tok": [
+     "12",
+     "19",
+     "accused",
+     "college",
+     "exposing",
+     "hill",
+     "himself",
+     "north",
+     "old",
+     "year"
+    ],
+    "first_seen": "2026-11-13T20:40:00+00:00",
+    "title": "19-year-old accused of exposing himself to 12-year-old in North College Hill"
+   },
+   {
+    "tok": [
+     "coney",
+     "county",
+     "display",
+     "fairground",
+     "find",
+     "holiday",
+     "home",
+     "island'",
+     "light",
+     "night",
+     "warren"
+    ],
+    "first_seen": "2026-11-12T16:44:57+00:00",
+    "title": "Coney Island's Nights of Lights holiday display finds new home at Warren County Fairgrounds"
+   },
+   {
+    "tok": [
+     "championship",
+     "division",
+     "football",
+     "host",
+     "paycor",
+     "regional",
+     "stadium"
+    ],
+    "first_seen": "2026-11-13T20:23:00+00:00",
+    "title": "Paycor Stadium to host Division I regional football championship"
+   },
+   {
+    "tok": [
+     "commute",
+     "death",
+     "dewine",
+     "gov",
+     "leaving",
+     "office",
+     "plan",
+     "sentence"
+    ],
+    "first_seen": "2026-11-13T23:02:15+00:00",
+    "title": "Ohio Gov. DeWine plans to commute more death sentences before leaving office"
+   },
+   {
+    "tok": [
+     "communication",
+     "disrupt",
+     "email",
+     "microsoft",
+     "outage",
+     "recovering",
+     "service",
+     "worldwide"
+    ],
+    "first_seen": "2026-11-13T22:52:00+00:00",
+    "title": "Microsoft recovering after outage disrupts email, communication services worldwide"
+   },
+   {
+    "tok": [
+     "auction",
+     "collection",
+     "joe",
+     "legend",
+     "louisville",
+     "morgan",
+     "personal",
+     "red"
+    ],
+    "first_seen": "2026-11-13T02:32:24+00:00",
+    "title": "Personal collection of Reds legend Joe Morgan up for auction in Louisville"
+   },
+   {
+    "tok": [
+     "accused",
+     "burn",
+     "ground",
+     "man",
+     "school",
+     "threatening"
+    ],
+    "first_seen": "2026-11-13T22:39:08+00:00",
+    "title": "Cincinnati man accused of threatening to burn school \u2018to the ground\u2019"
+   },
+   {
+    "tok": [
+     "claim",
+     "court",
+     "judge'",
+     "justice",
+     "prosecutor",
+     "revenge",
+     "supreme"
+    ],
+    "first_seen": "2026-11-13T00:49:31+00:00",
+    "title": "Ex-judge's claims against Supreme Court justices were 'revenge,' prosecutor says"
+   },
+   {
+    "tok": [
+     "bridge",
+     "done",
+     "end",
+     "getting",
+     "happy",
+     "hope",
+     "i'm",
+     "it'",
+     "nearby",
+     "reopen",
+     "resident",
+     "soon",
+     "twp",
+     "wait",
+     "williamsburg"
+    ],
+    "first_seen": "2026-11-13T22:31:01+00:00",
+    "title": "'I'm happy that it's getting done.' Residents in Williamsburg Twp. hope wait to reopen nearby bridge ends soon"
+   },
+   {
+    "tok": [
+     "cancer",
+     "drug",
+     "find",
+     "hope",
+     "pancreatic",
+     "patient",
+     "trial"
+    ],
+    "first_seen": "2026-11-13T22:30:00+00:00",
+    "title": "Pancreatic cancer patient in Cincinnati finds hope from new drug trial"
+   },
+   {
+    "tok": [
+     "believe",
+     "brown",
+     "congress",
+     "issue",
+     "people",
+     "return",
+     "rigged",
+     "sherrod",
+     "speak",
+     "system"
+    ],
+    "first_seen": "2026-11-13T22:22:32+00:00",
+    "title": "'People believe the system is rigged': Sherrod Brown speaks on issues, return to congress"
+   },
+   {
+    "tok": [
+     "during",
+     "expert",
+     "get",
+     "health",
+     "holiday",
+     "manage",
+     "mental",
+     "stressed",
+     "talk"
+    ],
+    "first_seen": "2026-11-13T21:25:00+00:00",
+    "title": "Do you get stressed during the holidays? Expert talks how to manage mental health"
+   },
+   {
+    "tok": [
+     "australian",
+     "championship",
+     "county",
+     "football",
+     "returning",
+     "warren"
+    ],
+    "first_seen": "2026-11-13T18:08:00+00:00",
+    "title": "Australian football championships returning to Warren County"
+   },
+   {
+    "tok": [
+     "auditor",
+     "charged",
+     "deputy",
+     "former",
+     "norwood'",
+     "office",
+     "theft"
+    ],
+    "first_seen": "2026-11-13T21:08:00+00:00",
+    "title": "Norwood's former deputy auditor charged with theft in office"
+   },
+   {
+    "tok": [
+     "larosa",
+     "location",
+     "officially",
+     "open"
+    ],
+    "first_seen": "2026-11-13T20:53:00+00:00",
+    "title": "LaRosa\u2019s officially opens new Cincinnati location"
+   },
+   {
+    "tok": [
+     "give",
+     "help",
+     "need",
+     "partnership",
+     "people",
+     "shoe",
+     "them"
+    ],
+    "first_seen": "2026-11-13T20:50:44+00:00",
+    "title": "Local partnership helps give new shoes to the people who need them most"
+   },
+   {
+    "tok": [
+     "17",
+     "city",
+     "council",
+     "democrat",
+     "future",
+     "impact",
+     "meeting",
+     "nov"
+    ],
+    "first_seen": "2026-11-13T19:57:43+00:00",
+    "title": "Why the meeting of the Cincinnati Democrats on Nov. 17 will impact the future of City Council"
+   },
+   {
+    "tok": [
+     "balk",
+     "council",
+     "hike",
+     "latest",
+     "member",
+     "plan",
+     "rate",
+     "some",
+     "water"
+    ],
+    "first_seen": "2026-11-13T11:19:01+00:00",
+    "title": "Some Cincinnati council members balk at latest water rate hike plan"
+   },
+   {
+    "tok": [
+     "13",
+     "football",
+     "high",
+     "playoff",
+     "school",
+     "score"
+    ],
+    "first_seen": "2026-11-13T20:23:00+00:00",
+    "title": "Cincinnati high school football Week 13 playoff scores | Live"
+   },
+   {
+    "tok": [
+     "attorney",
+     "conviction",
+     "file",
+     "hinton",
+     "jury",
+     "member",
+     "motion",
+     "murder",
+     "rodney",
+     "subpoena"
+    ],
+    "first_seen": "2026-11-13T15:59:00+00:00",
+    "title": "Attorney for Rodney Hinton Jr. files motion to subpoena jury members after murder conviction"
+   },
+   {
+    "tok": [
+     "find",
+     "friendship",
+     "group",
+     "helping",
+     "mom",
+     "strolling",
+     "village"
+    ],
+    "first_seen": "2026-11-13T20:28:26+00:00",
+    "title": "Strolling into friendships: How this Cincinnati group is helping moms find their village"
+   },
+   {
+    "tok": [
+     "claimed",
+     "girl",
+     "mariemont",
+     "soccer",
+     "state",
+     "title"
+    ],
+    "first_seen": "2026-11-12T17:37:29+00:00",
+    "title": "How Mariemont claimed first girls state soccer title"
+   },
+   {
+    "tok": [
+     "cause",
+     "road",
+     "sharonville",
+     "shutdown",
+     "sinking"
+    ],
+    "first_seen": "2026-11-13T19:54:48+00:00",
+    "title": "\u2018Sinking\u2019 road in Sharonville causes shutdown"
+   },
+   {
+    "tok": [
+     "burst",
+     "close",
+     "large",
+     "pipe",
+     "road",
+     "sharonville"
+    ],
+    "first_seen": "2026-11-13T19:54:00+00:00",
+    "title": "Burst pipe closes large Sharonville road"
+   },
+   {
+    "tok": [
+     "best",
+     "event",
+     "holiday",
+     "island",
+     "king",
+     "park",
+     "prepare",
+     "race",
+     "theme",
+     "winterfest"
+    ],
+    "first_seen": "2026-11-13T19:46:49+00:00",
+    "title": "Kings Island in the race for 'Best Holiday Theme Park Event' as it prepares for Winterfest"
+   },
+   {
+    "tok": [
+     "across",
+     "air",
+     "airport",
+     "communication",
+     "control",
+     "due",
+     "faa",
+     "flight",
+     "halted",
+     "problem",
+     "traffic"
+    ],
+    "first_seen": "2026-11-13T21:19:33+00:00",
+    "title": "Flights halted at airports across US due to air traffic control communications problems, FAA says"
+   },
+   {
+    "tok": [
+     "delivery",
+     "drone",
+     "grocery",
+     "soon",
+     "state",
+     "takeoff",
+     "tri"
+    ],
+    "first_seen": "2026-11-13T19:28:50+00:00",
+    "title": "Drone grocery delivery could soon takeoff in the Tri-State"
+   },
+   {
+    "tok": [
+     "attraction",
+     "christma",
+     "indoor",
+     "largest",
+     "located",
+     "round",
+     "year"
+    ],
+    "first_seen": "2026-11-12T16:16:00+00:00",
+    "title": "The largest indoor year-round Christmas attraction is located in Ohio"
+   },
+   {
+    "tok": [
+     "crash",
+     "hospitalized",
+     "injury",
+     "pilot",
+     "plane",
+     "seriou",
+     "township",
+     "woodville"
+    ],
+    "first_seen": "2026-11-13T18:58:10+00:00",
+    "title": "Pilot hospitalized with serious injuries after plane crash in Woodville Township"
+   },
+   {
+    "tok": [
+     "center",
+     "duke",
+     "energy",
+     "holiday",
+     "museum",
+     "return",
+     "train"
+    ],
+    "first_seen": "2026-11-13T18:41:00+00:00",
+    "title": "Duke Energy Holiday Trains return to Cincinnati Museum Center"
+   },
+   {
+    "tok": [
+     "bring",
+     "drive",
+     "larosa",
+     "pizza",
+     "pizzeria",
+     "service",
+     "slice"
+    ],
+    "first_seen": "2026-11-13T18:28:09+00:00",
+    "title": "New LaRosa\u2019s pizzeria brings drive-up service, pizza by the slice to Cincinnati"
+   },
+   {
+    "tok": [
+     "found",
+     "neighborhood",
+     "shot"
+    ],
+    "first_seen": "2026-11-13T17:21:07+00:00",
+    "title": "1 found shot in Cincinnati neighborhood"
+   },
+   {
+    "tok": [
+     "attraction",
+     "bar",
+     "christkindlmarkt",
+     "holiday",
+     "inspired",
+     "return"
+    ],
+    "first_seen": "2026-11-13T17:11:00+00:00",
+    "title": "Cincinnati Christkindlmarkt returns with new attractions, holiday-inspired bar"
+   },
+   {
+    "tok": [
+     "1950",
+     "christma",
+     "downtown",
+     "elve",
+     "return",
+     "shillito'",
+     "since",
+     "tradition"
+    ],
+    "first_seen": "2026-11-13T16:21:00+00:00",
+    "title": "The Shillito's elves, a Christmas tradition since the 1950s, return to downtown"
+   },
+   {
+    "tok": [
+     "accused",
+     "hire",
+     "lawyer",
+     "locked",
+     "murder",
+     "nky",
+     "now",
+     "plot",
+     "reprisal",
+     "witness"
+    ],
+    "first_seen": "2026-11-13T15:55:28+00:00",
+    "title": "NKY lawyer locked up for witness reprisal now accused of murder-for-hire plot"
+   },
+   {
+    "tok": [
+     "continue",
+     "custody",
+     "deadly",
+     "everest",
+     "jewel",
+     "october",
+     "police",
+     "search",
+     "second",
+     "shooting",
+     "suspect"
+    ],
+    "first_seen": "2026-11-13T16:03:17+00:00",
+    "title": "1 in custody for October Everest Jewels deadly shooting; police continue search for second suspect"
+   },
+   {
+    "tok": [
+     "58",
+     "arrive",
+     "christma",
+     "cincinnati'",
+     "foot",
+     "massive",
+     "tree",
+     "weekend"
+    ],
+    "first_seen": "2026-11-13T15:55:00+00:00",
+    "title": "Cincinnati's massive 58-foot Christmas tree arrives this weekend"
+   },
+   {
+    "tok": [
+     "alert",
+     "cold",
+     "day",
+     "friday",
+     "possible",
+     "season",
+     "snowflake",
+     "weather"
+    ],
+    "first_seen": "2026-11-13T15:38:21+00:00",
+    "title": "First Alert Weather Day: Cold Friday, season\u2019s first snowflakes possible"
+   },
+   {
+    "tok": [
+     "internet",
+     "microsoft",
+     "outage",
+     "react"
+    ],
+    "first_seen": "2026-11-13T15:23:42+00:00",
+    "title": "Microsoft outage: The internet reacts"
+   },
+   {
+    "tok": [
+     "afternoon",
+     "breezy",
+     "bringing",
+     "condition",
+     "cool",
+     "day",
+     "impact",
+     "linger",
+     "overnight",
+     "shower"
+    ],
+    "first_seen": "2026-11-13T12:33:00+00:00",
+    "title": "Impact day: Overnight showers linger into afternoon, bringing cool and breezy conditions"
+   },
+   {
+    "tok": [
+     "back",
+     "give",
+     "holiday",
+     "season",
+     "way"
+    ],
+    "first_seen": "2026-11-13T15:03:55+00:00",
+    "title": "3 ways to give back this holiday season"
+   },
+   {
+    "tok": [
+     "alum",
+     "building",
+     "earlham",
+     "hamilton",
+     "margaret",
+     "nasa",
+     "rename",
+     "scientist"
+    ],
+    "first_seen": "2026-11-13T15:02:45+00:00",
+    "title": "Earlham to rename building for alum, NASA scientist Margaret Hamilton"
+   },
+   {
+    "tok": [
+     "bengal",
+     "burrow",
+     "face",
+     "had",
+     "sack",
+     "steeler",
+     "strip",
+     "won't"
+    ],
+    "first_seen": "2026-11-13T18:56:00+00:00",
+    "title": "Steeler who had Week 3 Burrow strip sack won't face Bengals | Report"
+   },
+   {
+    "tok": [
+     "bengal",
+     "cordell",
+     "former",
+     "lineman",
+     "offensive",
+     "seahawk",
+     "sign",
+     "volson"
+    ],
+    "first_seen": "2026-11-13T18:38:00+00:00",
+    "title": "Cordell Volson, former Bengals offensive lineman, signs with Seahawks"
+   },
+   {
+    "tok": [
+     "ahead",
+     "bengal",
+     "football",
+     "full",
+     "night",
+     "strength",
+     "sunday"
+    ],
+    "first_seen": "2026-11-13T18:28:00+00:00",
+    "title": "Bengals at full strength ahead of Sunday Night Football"
+   },
+   {
+    "tok": [
+     "ahead",
+     "awareness",
+     "check",
+     "coldest",
+     "expert",
+     "furnace",
+     "gas",
+     "leak",
+     "month",
+     "urge"
+    ],
+    "first_seen": "2026-11-13T14:00:00+00:00",
+    "title": "Experts urge furnace checks, gas leak awareness ahead of coldest months"
+   },
+   {
+    "tok": [
+     "bengal",
+     "here'",
+     "injury",
+     "jackson",
+     "lamar",
+     "mean",
+     "raven",
+     "rematch"
+    ],
+    "first_seen": "2026-11-13T18:03:00+00:00",
+    "title": "Here's what Lamar Jackson injury news means for Bengals-Ravens rematch"
+   },
+   {
+    "tok": [
+     "63",
+     "alleged",
+     "between",
+     "deceptive",
+     "dollar",
+     "family",
+     "ftc",
+     "million",
+     "part",
+     "pricing",
+     "settlement"
+    ],
+    "first_seen": "2026-11-13T13:45:00+00:00",
+    "title": "Ohio part of $63 million settlement between FTC, Family Dollar over alleged deceptive pricing"
+   },
+   {
+    "tok": [
+     "apartment",
+     "brink",
+     "business",
+     "courier",
+     "downtown",
+     "full",
+     "led",
+     "return"
+    ],
+    "first_seen": "2026-11-13T11:46:00+00:00",
+    "title": "Downtown Cincinnati returns from the brink, led by new apartments. But are they full? - Cincinnati Business Courier"
+   },
+   {
+    "tok": [
+     "48",
+     "approve",
+     "city",
+     "council",
+     "development",
+     "mason",
+     "rental",
+     "townhome",
+     "unit"
+    ],
+    "first_seen": "2026-11-13T11:41:00+00:00",
+    "title": "Mason City Council approves 48-unit rental townhome development"
+   },
+   {
+    "tok": [
+     "chippewa",
+     "columbu",
+     "final",
+     "girl",
+     "hill",
+     "ottawa",
+     "soccer",
+     "state"
+    ],
+    "first_seen": "2026-11-12T17:37:29+00:00",
+    "title": "Chippewa-Ottawa Hills girls soccer state final live updates from Columbus"
+   },
+   {
+    "tok": [
+     "beer",
+     "brewery'",
+     "drop",
+     "episode",
+     "homage",
+     "pay",
+     "turkey",
+     "wkrp"
+    ],
+    "first_seen": "2026-11-13T11:20:00+00:00",
+    "title": "Cincy brewery's new beer pays homage to 'WKRP' turkey drop episode"
+   },
+   {
+    "tok": [
+     "artist",
+     "collaborative",
+     "mural",
+     "plan",
+     "program",
+     "walton"
+    ],
+    "first_seen": "2026-11-13T11:00:00+00:00",
+    "title": "Walton Artist Collaborative plans murals, programs and more"
+   },
+   {
+    "tok": [
+     "chester",
+     "commercial",
+     "here",
+     "land",
+     "plan",
+     "remain",
+     "running",
+     "west"
+    ],
+    "first_seen": "2026-11-13T09:54:00+00:00",
+    "title": "West Chester is running out of commercial land. Here\u2019s the plan for what remains"
+   },
+   {
+    "tok": [
+     "butler",
+     "conservation",
+     "county",
+     "land",
+     "miami",
+     "remain",
+     "returned",
+     "tribe"
+    ],
+    "first_seen": "2026-11-13T09:47:00+00:00",
+    "title": "Butler County land returned to Miami Tribe, will remain in conservation"
+   },
+   {
+    "tok": [
+     "bengal",
+     "biggest",
+     "chase",
+     "doesn't",
+     "ja'marr",
+     "rival",
+     "steeler",
+     "think"
+    ],
+    "first_seen": "2026-11-13T13:15:00+00:00",
+    "title": "Ja'Marr Chase doesn't think the Steelers are the Bengals biggest rival"
+   },
+   {
+    "tok": [
+     "deer",
+     "gunpoint",
+     "large",
+     "masked",
+     "park",
+     "remain",
+     "robbed",
+     "suspect",
+     "udf"
+    ],
+    "first_seen": "2026-11-13T09:01:39+00:00",
+    "title": "Deer Park UDF robbed at gunpoint, masked suspect remains at large"
+   },
+   {
+    "tok": [
+     "buggy",
+     "county",
+     "crash",
+     "flown",
+     "highland",
+     "hospital",
+     "injured",
+     "teen"
+    ],
+    "first_seen": "2026-11-13T09:00:35+00:00",
+    "title": "2 injured, teen flown to hospital after buggy crash in Highland County"
+   },
+   {
+    "tok": [
+     "arrest",
+     "butler",
+     "county",
+     "gop",
+     "house",
+     "ice",
+     "jim",
+     "jordan",
+     "leader",
+     "serve",
+     "story",
+     "top"
+    ],
+    "first_seen": "2026-11-13T09:00:00+00:00",
+    "title": "Jim Jordan to serve as House GOP leader, ICE arrest in Butler County and more top stories"
+   },
+   {
+    "tok": [
+     "commission",
+     "county",
+     "dearborn",
+     "farm",
+     "hold",
+     "planning",
+     "proposal",
+     "remain",
+     "rule",
+     "solar",
+     "table"
+    ],
+    "first_seen": "2026-11-13T03:12:16+00:00",
+    "title": "Dearborn County solar farm rules remain on hold after planning commission tables proposal"
+   },
+   {
+    "tok": [
+     "bengal",
+     "family",
+     "fan",
+     "higgin",
+     "madrid",
+     "mistaken",
+     "tee"
+    ],
+    "first_seen": "2026-11-13T12:01:39+00:00",
+    "title": "Bengals fans mistaken for Tee Higgins\u2019 family on TV in Madrid"
+   },
+   {
+    "tok": [
+     "afc",
+     "bengal",
+     "defense",
+     "must",
+     "north",
+     "show",
+     "showdown",
+     "steeler",
+     "win"
+    ],
+    "first_seen": "2026-11-13T11:51:00+00:00",
+    "title": "Defense must show for Bengals to win AFC North showdown with Steelers"
+   },
+   {
+    "tok": [
+     "bengal",
+     "disadvantage",
+     "face",
+     "historic",
+     "scheduling",
+     "steeler"
+    ],
+    "first_seen": "2026-11-13T11:50:00+00:00",
+    "title": "Bengals face historic scheduling disadvantage against Steelers"
+   },
+   {
+    "tok": [
+     "adam",
+     "aimed",
+     "back",
+     "center",
+     "county",
+     "data",
+     "limiting",
+     "plan",
+     "voter",
+     "zoning"
+    ],
+    "first_seen": "2026-11-12T17:50:09+00:00",
+    "title": "Adams County voters back zoning plans aimed at limiting new data centers"
+   },
+   {
+    "tok": [
+     "hall",
+     "near",
+     "police",
+     "residence",
+     "robbery",
+     "searching",
+     "suspect"
+    ],
+    "first_seen": "2026-11-13T02:40:40+00:00",
+    "title": "Police searching for suspects after robbery near UC residence hall"
+   },
+   {
+    "tok": [
+     "cvg",
+     "eye",
+     "major",
+     "overhaul",
+     "parking"
+    ],
+    "first_seen": "2026-11-12T17:44:00+00:00",
+    "title": "CVG eyes major parking overhaul"
+   },
+   {
+    "tok": [
+     "bring",
+     "cause",
+     "close",
+     "crash",
+     "hour",
+     "nch",
+     "outage",
+     "pole",
+     "road",
+     "utility"
+    ],
+    "first_seen": "2026-11-13T05:51:58+00:00",
+    "title": "NCH road closes for hours after crash brings down utility pole, causes outage"
+   },
+   {
+    "tok": [
+     "elsmere",
+     "erlanger",
+     "fort",
+     "mayoral",
+     "race",
+     "recount",
+     "thoma",
+     "tight"
+    ],
+    "first_seen": "2026-11-13T05:25:00+00:00",
+    "title": "No recounts in tight Fort Thomas, Elsmere, Erlanger mayoral races"
+   },
+   {
+    "tok": [
+     "any",
+     "bakery",
+     "bluebird",
+     "chat",
+     "enter",
+     "good",
+     "pie"
+    ],
+    "first_seen": "2026-11-13T05:20:00+00:00",
+    "title": "Is there any good pie in Cincinnati? Bluebird Bakery enters the chat"
+   },
+   {
+    "tok": [
+     "county",
+     "hamilton",
+     "opinion",
+     "shape",
+     "well"
+    ],
+    "first_seen": "2026-11-13T05:05:00+00:00",
+    "title": "Where you live in Hamilton County can shape your well-being | Opinion"
+   },
+   {
+    "tok": [
+     "continue",
+     "microsoft",
+     "outage",
+     "outlook",
+     "overnight",
+     "reported",
+     "widespread"
+    ],
+    "first_seen": "2026-11-12T18:45:00+00:00",
+    "title": "Microsoft Outlook down: Reported widespread outages continue overnight"
+   },
+   {
+    "tok": [
+     "created",
+     "other",
+     "played",
+     "star",
+     "swift",
+     "taylor",
+     "uno"
+    ],
+    "first_seen": "2026-11-13T05:01:00+00:00",
+    "title": "Uno, played by Taylor Swift and other stars, was created in Cincinnati"
+   },
+   {
+    "tok": [
+     "app",
+     "email",
+     "microsoft",
+     "outlook",
+     "user"
+    ],
+    "first_seen": "2026-11-12T18:52:32+00:00",
+    "title": "Users report email app Microsoft Outlook is down"
+   },
+   {
+    "tok": [
+     "announcement",
+     "board",
+     "join",
+     "location",
+     "mayor",
+     "monopoly",
+     "pureval",
+     "themed"
+    ],
+    "first_seen": "2026-11-12T20:27:20+00:00",
+    "title": "Mr. Monopoly to join Mayor Pureval for announcement of Cincinnati-themed board locations"
+   },
+   {
+    "tok": [
+     "bring",
+     "friendsgiving",
+     "health",
+     "mental",
+     "organization",
+     "people",
+     "together"
+    ],
+    "first_seen": "2026-11-13T04:21:00+00:00",
+    "title": "Cincinnati mental health organizations bring people together for Friendsgiving"
+   },
+   {
+    "tok": [
+     "cps",
+     "levy",
+     "mother",
+     "passage",
+     "relief",
+     "rely",
+     "service",
+     "share",
+     "son",
+     "support",
+     "tax",
+     "whose"
+    ],
+    "first_seen": "2026-11-13T04:20:00+00:00",
+    "title": "CPS mother whose son relies on support services shares relief over tax levy passage"
+   },
+   {
+    "tok": [
+     "continue",
+     "delivery",
+     "drone",
+     "expansion",
+     "greater",
+     "program",
+     "walmart"
+    ],
+    "first_seen": "2026-11-13T04:12:00+00:00",
+    "title": "Walmart\u2019s drone delivery program continues expansion into Greater Cincinnati"
+   },
+   {
+    "tok": [
+     "community",
+     "department",
+     "died",
+     "funeral",
+     "invite",
+     "ludlow",
+     "officer",
+     "police",
+     "visitation"
+    ],
+    "first_seen": "2026-11-13T04:10:00+00:00",
+    "title": "Ludlow Police Department invites community to visitation, funeral for officer who died"
+   },
+   {
+    "tok": [
+     "10m",
+     "cut",
+     "district",
+     "face",
+     "failed",
+     "levy",
+     "school",
+     "state",
+     "tri"
+    ],
+    "first_seen": "2026-11-13T03:48:36+00:00",
+    "title": "Tri-State school district faces more than $10M in cuts after failed levy"
+   },
+   {
+    "tok": [
+     "death",
+     "farewell",
+     "nky",
+     "officer",
+     "police",
+     "public",
+     "set",
+     "sudden"
+    ],
+    "first_seen": "2026-11-13T03:33:24+00:00",
+    "title": "Public farewell set for NKY police officer after sudden death"
+   },
+   {
+    "tok": [
+     "attempted",
+     "charged",
+     "covington",
+     "man",
+     "murder",
+     "shooting"
+    ],
+    "first_seen": "2026-11-12T15:43:17+00:00",
+    "title": "Man charged with attempted murder after shooting in Covington"
+   },
+   {
+    "tok": [
+     "battling",
+     "become",
+     "book",
+     "cancer",
+     "comic",
+     "compete",
+     "rare",
+     "superhero",
+     "teen"
+    ],
+    "first_seen": "2026-11-13T00:21:00+00:00",
+    "title": "Cincinnati teen battling rare cancer competes to become a comic book superhero"
+   },
+   {
+    "tok": [
+     "adult",
+     "between",
+     "drink",
+     "energy",
+     "heart",
+     "issue",
+     "link",
+     "research",
+     "suggest",
+     "young"
+    ],
+    "first_seen": "2026-11-12T22:21:00+00:00",
+    "title": "Research suggests link between energy drinks and heart issues in young adults"
+   },
+   {
+    "tok": [
+     "body",
+     "burning",
+     "cam",
+     "car",
+     "citizen",
+     "officer",
+     "pulling",
+     "show",
+     "woman"
+    ],
+    "first_seen": "2026-11-12T23:18:28+00:00",
+    "title": "Body cam video shows officers, citizen pulling local woman from burning car"
+   },
+   {
+    "tok": [
+     "cincinnati'",
+     "here'",
+     "snowplow",
+     "system",
+     "tracker",
+     "upgraded",
+     "work"
+    ],
+    "first_seen": "2026-11-12T23:14:32+00:00",
+    "title": "Here's how Cincinnati's upgraded snowplow tracker system works"
+   },
+   {
+    "tok": [
+     "ashley",
+     "asked",
+     "conviction",
+     "decide",
+     "flynn",
+     "get",
+     "husband",
+     "insurance",
+     "judge",
+     "life",
+     "money",
+     "murder"
+    ],
+    "first_seen": "2026-11-12T18:09:00+00:00",
+    "title": "Judge asked to decide who gets Ashley Flynn\u2019s life insurance money after husband\u2019s murder conviction"
+   },
+   {
+    "tok": [
+     "2027",
+     "bring",
+     "checked",
+     "morgan",
+     "stadium",
+     "time",
+     "tour",
+     "wallen"
+    ],
+    "first_seen": "2026-11-12T15:48:00+00:00",
+    "title": "Morgan Wallen to bring 'Last Time I Checked Tour' to Ohio Stadium in 2027"
+   },
+   {
+    "tok": [
+     "check",
+     "earliest",
+     "record",
+     "snowfall",
+     "stat"
+    ],
+    "first_seen": "2026-11-12T16:01:00+00:00",
+    "title": "When was the earliest snowfall on record in Cincinnati? Check these snowfall stats"
+   },
+   {
+    "tok": [
+     "abduction",
+     "charge",
+     "conviction",
+     "county",
+     "facing",
+     "kenton",
+     "man",
+     "previou",
+     "rape"
+    ],
+    "first_seen": "2026-11-12T21:39:00+00:00",
+    "title": "Man facing rape, abduction charges after previous conviction in Kenton County"
+   },
+   {
+    "tok": [
+     "act",
+     "attacker",
+     "early",
+     "fear",
+     "federal",
+     "leave",
+     "prison",
+     "rape",
+     "step",
+     "survivor"
+    ],
+    "first_seen": "2026-11-12T22:13:00+00:00",
+    "title": "Cincinnati rape survivor fears attacker could leave federal prison early under First Step Act"
+   },
+   {
+    "tok": [
+     "back",
+     "bringing",
+     "butter",
+     "cup",
+     "peanut",
+     "pie",
+     "pound",
+     "reese'",
+     "thanksgiving"
+    ],
+    "first_seen": "2026-11-12T22:11:13+00:00",
+    "title": "Reese's is bringing back its 3-pound Peanut Butter Cup Pie for Thanksgiving"
+   },
+   {
+    "tok": [
+     "available",
+     "benefit",
+     "children",
+     "edition",
+     "fund",
+     "limited",
+     "lyon",
+     "ornament",
+     "ruth"
+    ],
+    "first_seen": "2026-11-12T21:54:00+00:00",
+    "title": "Limited-edition ornaments available to benefit Ruth Lyons Children\u2019s Fund"
+   },
+   {
+    "tok": [
+     "authority",
+     "covington",
+     "gathering",
+     "input",
+     "motor",
+     "parking",
+     "study",
+     "vehicle"
+    ],
+    "first_seen": "2026-11-12T21:53:00+00:00",
+    "title": "Covington Motor Vehicle Parking Authority gathering input for parking study"
+   },
+   {
+    "tok": [
+     "319m",
+     "benefit",
+     "butler",
+     "expect",
+     "group",
+     "hope",
+     "meta",
+     "settlement",
+     "youth"
+    ],
+    "first_seen": "2026-11-12T21:36:37+00:00",
+    "title": "Ohio expects $319M from Meta settlement, Butler Co. youth groups hope to benefit"
+   },
+   {
+    "tok": [
+     "among",
+     "bike",
+     "children",
+     "injury",
+     "kid",
+     "pediatrician",
+     "rising",
+     "scooter",
+     "warn"
+    ],
+    "first_seen": "2026-11-12T21:30:57+00:00",
+    "title": "Cincinnati Children\u2019s pediatrician warns of rising e-bike, e-scooter injuries among kids"
+   },
+   {
+    "tok": [
+     "anderson",
+     "change",
+     "draft",
+     "future",
+     "growth",
+     "have",
+     "housing",
+     "plan",
+     "safety",
+     "township",
+     "traffic"
+    ],
+    "first_seen": "2026-11-12T21:27:02+00:00",
+    "title": "'You have to plan for change' | Anderson Township drafts plan for future growth, housing and traffic safety"
+   },
+   {
+    "tok": [
+     "campaign",
+     "community",
+     "immigrant",
+     "neighbor",
+     "role",
+     "understand",
+     "working"
+    ],
+    "first_seen": "2026-11-12T21:24:00+00:00",
+    "title": "Neighbor to Neighbor campaign working to understand immigrants' roles in communities"
+   },
+   {
+    "tok": [
+     "beshear",
+     "health",
+     "remove",
+     "rfk",
+     "secretary",
+     "trump",
+     "urge"
+    ],
+    "first_seen": "2026-11-12T21:23:44+00:00",
+    "title": "Beshear urges Trump to remove RFK Jr. as health secretary"
+   },
+   {
+    "tok": [
+     "cost",
+     "exposing",
+     "family",
+     "forced",
+     "former",
+     "him",
+     "job",
+     "misconduct",
+     "move",
+     "officer",
+     "police",
+     "sardinia"
+    ],
+    "first_seen": "2026-11-12T21:16:58+00:00",
+    "title": "Former Sardinia officer says exposing police misconduct cost him his job, forced family to move"
+   },
+   {
+    "tok": [
+     "accused",
+     "children",
+     "county",
+     "explicit",
+     "hamilton",
+     "having",
+     "man",
+     "sexually"
+    ],
+    "first_seen": "2026-11-12T20:40:00+00:00",
+    "title": "Hamilton County man accused of having sexually explicit photos of children"
+   },
+   {
+    "tok": [
+     "arrested",
+     "below",
+     "captain",
+     "deck",
+     "die",
+     "reality",
+     "show",
+     "teenager",
+     "turkey",
+     "yacht"
+    ],
+    "first_seen": "2026-11-12T21:04:50+00:00",
+    "title": "Yacht captain on reality show \u2018Below Deck\u2019 arrested in Turkey after teenager dies"
+   },
+   {
+    "tok": [
+     "course",
+     "downtown",
+     "history",
+     "putt",
+     "through",
+     "way"
+    ],
+    "first_seen": "2026-11-12T21:03:40+00:00",
+    "title": "Putt your way through Cincinnati history with new downtown course"
+   },
+   {
+    "tok": [
+     "air",
+     "connecting",
+     "culture",
+     "documentary",
+     "guatemala",
+     "thursday",
+     "wcpo"
+    ],
+    "first_seen": "2026-11-12T21:00:36+00:00",
+    "title": "'Connecting Cultures: Cincinnati to Guatemala' documentary airs Thursday at 8 p.m. on WCPO 9"
+   },
+   {
+    "tok": [
+     "200",
+     "ahead",
+     "employee",
+     "holiday",
+     "nearly",
+     "nky",
+     "rush",
+     "seasonal",
+     "seek",
+     "shipping",
+     "ups"
+    ],
+    "first_seen": "2026-11-12T20:52:56+00:00",
+    "title": "UPS seeks nearly 200 seasonal employees in NKY ahead of holiday shipping rush"
+   },
+   {
+    "tok": [
+     "book",
+     "chance",
+     "childhood",
+     "event",
+     "give",
+     "lover",
+     "relive",
+     "tradition",
+     "twist",
+     "upcoming"
+    ],
+    "first_seen": "2026-11-12T20:05:55+00:00",
+    "title": "Upcoming event gives local book lovers chance to relive childhood tradition with a twist"
+   },
+   {
+    "tok": [
+     "adult",
+     "back",
+     "bring",
+     "event",
+     "night",
+     "only",
+     "zoo"
+    ],
+    "first_seen": "2026-11-12T19:38:08+00:00",
+    "title": "Cincinnati Zoo brings back adults-only event for 2 nights"
+   },
+   {
+    "tok": [
+     "defense",
+     "effort",
+     "filed",
+     "get",
+     "hinton",
+     "motion",
+     "rodney",
+     "trial"
+    ],
+    "first_seen": "2026-11-12T19:23:59+00:00",
+    "title": "New motions filed in defense effort to get Rodney Hinton a new trial"
+   },
+   {
+    "tok": [
+     "2027",
+     "act",
+     "center",
+     "coming",
+     "deftone",
+     "farmer",
+     "legendary",
+     "metal",
+     "music"
+    ],
+    "first_seen": "2026-11-12T18:32:00+00:00",
+    "title": "Legendary metal act Deftones coming to new Farmer Music Center in 2027"
+   },
+   {
+    "tok": [
+     "accident",
+     "beloved",
+     "die",
+     "doctor",
+     "freak",
+     "home"
+    ],
+    "first_seen": "2026-11-12T17:54:29+00:00",
+    "title": "Beloved Ky. doctor dies after freak accident in his home"
+   },
+   {
+    "tok": [
+     "all",
+     "honor",
+     "indiana",
+     "northern",
+     "region",
+     "soccer",
+     "state"
+    ],
+    "first_seen": "2026-11-12T17:47:00+00:00",
+    "title": "All-state, all-region honors for Northern Kentucky, Indiana soccer"
+   },
+   {
+    "tok": [
+     "day",
+     "headline",
+     "story",
+     "top"
+    ],
+    "first_seen": "2026-11-12T17:41:10+00:00",
+    "title": "The Headlines: Top stories of the day"
+   },
+   {
+    "tok": [
+     "coolest",
+     "festival",
+     "film",
+     "named",
+     "world"
+    ],
+    "first_seen": "2026-11-12T17:37:00+00:00",
+    "title": "Cincinnati film festival named one of the 'coolest' in the world"
+   },
+   {
+    "tok": [
+     "88",
+     "ammonia",
+     "cat",
+     "court",
+     "doc",
+     "dog",
+     "extremely",
+     "high",
+     "home",
+     "level",
+     "rescued"
+    ],
+    "first_seen": "2026-11-12T17:03:04+00:00",
+    "title": "88 cats, dog rescued from home with \u2018extremely high\u2019 ammonia levels: Court docs"
+   },
+   {
+    "tok": [
+     "12",
+     "battle",
+     "bearcat",
+     "big",
+     "bold",
+     "iowa",
+     "prediction",
+     "state"
+    ],
+    "first_seen": "2026-11-12T21:00:00+00:00",
+    "title": "Bold predictions for UC Bearcats in Big 12 battle at Iowa State"
+   },
+   {
+    "tok": [
+     "burned",
+     "hazing",
+     "investigate",
+     "osu",
+     "police",
+     "student",
+     "victim",
+     "whether"
+    ],
+    "first_seen": "2026-11-12T16:42:19+00:00",
+    "title": "Police investigate whether burned OSU students were victims of hazing"
+   },
+   {
+    "tok": [
+     "15",
+     "broadcast",
+     "during",
+     "elder",
+     "featured",
+     "football",
+     "nov",
+     "snf",
+     "xavier"
+    ],
+    "first_seen": "2026-11-12T16:40:00+00:00",
+    "title": "Elder, St. Xavier football to be featured during Nov. 15 SNF broadcast"
+   },
+   {
+    "tok": [
+     "11",
+     "couple"
+    ],
+    "first_seen": "2026-11-12T16:18:49+00:00",
+    "title": "Local couple says 'I do' at 11:11 on 11/11"
+   },
+   {
+    "tok": [
+     "24",
+     "arrest",
+     "gunman",
+     "hour",
+     "northern",
+     "police",
+     "shooting",
+     "street",
+     "suspected"
+    ],
+    "first_seen": "2026-11-12T15:43:17+00:00",
+    "title": "Police arrest suspected gunman about 24 hours after shooting on Northern Kentucky street"
+   },
+   {
+    "tok": [
+     "brian",
+     "coach",
+     "football",
+     "pitzer",
+     "richmond",
+     "season",
+     "step"
+    ],
+    "first_seen": "2026-11-12T14:24:00+00:00",
+    "title": "New Richmond football coach Brian Pitzer steps down after five seasons"
+   },
+   {
+    "tok": [
+     "bengal",
+     "open",
+     "player",
+     "practice",
+     "returning",
+     "window"
+    ],
+    "first_seen": "2026-11-12T17:09:00+00:00",
+    "title": "Bengals open practice window for three players returning from IR"
+   },
+   {
+    "tok": [
+     "airlifted",
+     "himself",
+     "hospital",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-12T14:00:18+00:00",
+    "title": "2-year-old airlifted to hospital after shooting himself, police say"
+   },
+   {
+    "tok": [
+     "2026",
+     "case",
+     "free",
+     "look",
+     "losing",
+     "measle",
+     "statu",
+     "verge"
+    ],
+    "first_seen": "2026-11-12T13:07:00+00:00",
+    "title": "U.S. on verge of losing measles-free status. A look at cases in Kentucky, Ohio in 2026"
+   },
+   {
+    "tok": [
+     "goe",
+     "need",
+     "opinion",
+     "pay",
+     "price",
+     "red",
+     "sal",
+     "stewart"
+    ],
+    "first_seen": "2026-11-12T12:55:00+00:00",
+    "title": "Reds need to pay Sal Stewart before his price goes up | Opinion"
+   }
+  ],
+  "lead": {
+   "city": {
+    "tok": [
+     "camera",
+     "community",
+     "flock",
+     "greater",
+     "remove",
+     "vote"
+    ],
+    "id": "greater-cincinnati-community-votes-to-remove-flock-cameras"
+   },
+   "general": {
+    "tok": [
+     "bus",
+     "cps",
+     "didn't",
+     "died",
+     "email",
+     "properly",
+     "staff",
+     "strap",
+     "student"
+    ],
+    "id": "staff-didn-t-properly-strap-in-cps-student-who-died-on-bus-e"
+   }
+  }
+ }
+}
