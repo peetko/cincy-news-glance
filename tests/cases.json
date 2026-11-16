@@ -1906,6 +1906,158 @@
      2
     ]
    ]
+  },
+  {
+   "note": "Nov 16, 2026: one Walnut Hills homicide on May Street showed as separate entries (WCPO's 'near May Street' headline names no neighborhood; FOX19's summary names the street, not the victim's case). Same for a Roselawn shooting on Sparkle Drive, a Newport shooting on Isabella Street and a Westwood shooting on Allview Circle. A shared street plus a shared incident word now joins them. Items 11 (WLWT Westwood, no street) and 12 (WCPO, 'Isabella Avenue') aren't asserted: a neighborhood alone never joins, and Avenue vs Street is left apart on purpose.",
+   "items": [
+    {
+     "title": "23-year-old dies after shooting near May Street, Cincinnati police say",
+     "summary": "A 23-year-old died after a shooting that took place on Sunday near May Street, according to Cincinnati police.",
+     "link": "https://www.wcpo.com/news/local-news/23-year-old-killed-after-shooting-near-may-street-cincinnati-police-say",
+     "outlet": "WCPO",
+     "first_seen": "2026-11-16T01:06:47+00:00"
+    },
+    {
+     "title": "Cincinnati police identify 23-year-old man killed in Walnut Hills shooting",
+     "summary": "Cincinnati police are investigating a shooting that left a 23-year-old man dead in Walnut Hills on Sunday.",
+     "link": "https://www.wlwt.com/article/cpd-23-year-old-man-killed-in-shooting-in-walnut-hills/74434273",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-16T02:42:00+00:00"
+    },
+    {
+     "title": "1 dead after shooting in Walnut Hills, police say",
+     "summary": "Quatrell Hill died following a shooting in the 2300 block of May Street",
+     "link": "https://www.fox19.com/2026/11/15/1-dead-after-shooting-walnut-hills-police-say/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-15T23:44:07+00:00"
+    },
+    {
+     "title": "Cincinnati Police identify man killed in Walnut Hills shooting",
+     "summary": "Cincinnati Police are probing a fatal shooting in Walnut Hills. Quatrell Hill, 23, was shot on May Street near E. McMillan Sunday and later died at the hospital. No suspect information has been released.",
+     "link": "https://local12.com/news/local/cincinnati-police-identify-man-killed-walnut-hills-shooting-quatrell-hill-may-east-mcmillan-street-investigation-local-12-wkrc-crime-news",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-16T03:06:08+00:00"
+    },
+    {
+     "title": "Police: Man shot in leg early Monday morning in Roselawn",
+     "summary": "Cincinnati police are investigating after a man was shot early Monday morning in Roselawn.",
+     "link": "https://www.wlwt.com/article/cincinnati-police-roselawn-shooting-sparkle-drive-hospitalized/74437801",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-16T11:12:00+00:00"
+    },
+    {
+     "title": "Shooting investigation underway in Roselawn",
+     "summary": "Police responded to Sparkle Drive shortly before 4 a.m.",
+     "link": "https://www.fox19.com/2026/11/16/shooting-investigation-underway-roselawn/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-16T09:22:12+00:00"
+    },
+    {
+     "title": "Shooting in Cincinnati neighborhood leaves 1 injured",
+     "summary": "Shooting in Cincinnati neighborhood leaves 1 injured",
+     "link": "https://local12.com/news/local/cincinnati-shooting-leaves-man-injured-leg-early-morning-gunfire-near-sparkle-drive-roselawn-police-report-no-suspect-information",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-16T10:07:17+00:00"
+    },
+    {
+     "title": "1 hospitalized after shooting in Newport, police say",
+     "summary": "Officers responded to the reported shooting near the intersection of Hardy Alley and Isabella Street",
+     "link": "https://www.fox19.com/2026/11/14/police-investigating-shooting-newport-dispatch-says/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-14T22:36:23+00:00"
+    },
+    {
+     "title": "1 injured in Northern Kentucky shooting",
+     "summary": "Newport Police are searching for a suspect after a Saturday afternoon shooting on Isabella Street left one person wounded. The victim is expected to survive, and investigators do not believe it was a random attack.",
+     "link": "https://local12.com/news/local/1-injured-northern-kentucky-shooting-newport-police-investigation-isabella-street-west-ninth-gunshot-wound-non-life-threatening-injuries-suspect-unidentified-tips-crime-news",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-14T23:45:38+00:00"
+    },
+    {
+     "title": "1 injured in Westwood shooting, police say",
+     "summary": "Officers responded to the shooting in the 3600 block of Allview Circle just before 7 p.m.",
+     "link": "https://www.fox19.com/2026/11/15/1-injured-shooting-westwood-police-say/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-15T02:00:10+00:00"
+    },
+    {
+     "title": "Police investigating shooting in Westwood",
+     "summary": "Cincinnati Police are investigating a Saturday night shooting in Westwood. Officers responded to Allview Circle near Muddy Creek Road around 6:45 p.m. Details on suspects, victims, and motive have not been released.",
+     "link": "https://local12.com/news/local/cincinnati-police-investigating-shooting-westwood-allview-circle-muddy-creek-road-local-12-wkrc-crime-news",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-15T03:23:15+00:00"
+    },
+    {
+     "title": "CPD: 1 injured after domestic dispute leads to shooting in Westwood",
+     "summary": "Cincinnati police are investigating a shooting that took place Saturday evening in Westwood.",
+     "link": "https://www.wlwt.com/article/1-injured-after-domestic-dispute-shooting-in-westwood/74431752",
+     "outlet": "WLWT",
+     "first_seen": "2026-11-15T16:03:00+00:00"
+    },
+    {
+     "title": "Police: Man found shot in the back near Isabella Avenue in Newport",
+     "summary": "A man was found shot in the back near the 900 Block of Isabella Avenue on Saturday, according to Newport police.",
+     "link": "https://www.wcpo.com/news/local-news/police-man-found-shot-in-the-back-near-isabella-avenue-in-newport",
+     "outlet": "WCPO",
+     "first_seen": "2026-11-15T18:07:19+00:00"
+    }
+   ],
+   "together": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     9,
+     10
+    ]
+   ],
+   "apart": [
+    [
+     0,
+     4
+    ],
+    [
+     0,
+     7
+    ],
+    [
+     0,
+     9
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     7,
+     9
+    ]
+   ]
   }
  ],
  "misdated": [
