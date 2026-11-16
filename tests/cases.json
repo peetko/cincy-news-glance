@@ -722,6 +722,17 @@
    "expect": {
     "city": true
    }
+  },
+  {
+   "note": "WLWT's Roselawn shooting (Nov 16): headline says only 'Police', summary and web address say Cincinnati police; it had no City Hall label",
+   "title": "Police: Man shot in leg early Monday morning in Roselawn",
+   "summary": "Cincinnati police are investigating after a man was shot early Monday morning in Roselawn.",
+   "link": "https://www.wlwt.com/article/cincinnati-police-roselawn-shooting-sparkle-drive-hospitalized/74437801",
+   "outlet": "WLWT",
+   "expect": {
+    "city": true,
+    "label": "Police"
+   }
   }
  ],
  "same_story": [
