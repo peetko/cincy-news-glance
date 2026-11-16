@@ -591,10 +591,74 @@ def _proper_words(title):
     return out - GENERIC_NAMES
 
 
+# Street names ("May Street", "Sparkle Drive", "E. McMillan St."): the same street in two crime
+# reports from the same day is the same incident (Nov 16: one Walnut Hills homicide on May Street
+# showed as four entries; one Roselawn shooting on Sparkle Drive as two). Kept as the last name word
+# plus the street type, so "East McMillan Street" in a web address matches "E. McMillan St." in a summary.
+STREET_TYPES = {"street": "street", "st": "street", "avenue": "avenue", "ave": "avenue", "road": "road", "rd": "road",
+                "drive": "drive", "boulevard": "boulevard", "blvd": "boulevard", "lane": "lane",
+                "pike": "pike", "parkway": "parkway", "pkwy": "parkway", "circle": "circle"}
+# Not "Court" ("Supreme Court"), "Place" ("took place") or "Dr." ("Dr. Grant"): in news text those are rarely streets.
+STREET_TEXT = re.compile(r"\b([A-Z][a-z']+)\.?\s+(" + "|".join(sorted(STREET_TYPES, key=len, reverse=True))
+                         + r")\b", re.I)
+STREET_NOT_NAMES = {"the", "a", "an", "on", "off", "of", "in", "at", "near", "to", "and", "one", "two", "this", "that",
+                    "side", "dead", "end", "same", "main", "wall", "high", "front", "back", "busy", "city", "county",
+                    "state", "new", "old", "private", "public", "residential", "dr", "st"}
+# What happened there: the two reports must share one of these, not just "police" or "man".
+STREET_INCIDENT = (CRIME_STOCK - {"police", "man", "woman", "men", "women", "people", "person", "year", "old", "teen", "boy",
+                                  "girl", "involved", "connection", "officer", "learn", "judge", "court", "investigating",
+                                  "investigate", "investigation", "sheriff", "sheriff'", "deputy", "missing"}) \
+    | {"fire", "blaze", "stabbing", "stabbed", "robbery", "robbed", "carjacking", "explosion", "gunfire"}
+# Names too wide to tell two places apart: the whole city, county or region.
+PLACE_WIDE = {"cincinnati", "cincy", "queen city", "tri-state", "tristate", "northern kentucky", "nky", "hamilton county",
+              "downtown", "ohio river", "butler county", "warren county", "clermont county", "boone county",
+              "kenton county", "campbell county", "brown county", "dearborn county"}
+_PLACE_NAMES = None
+
+
+def _named_places(it):
+    """Neighborhoods and towns an article names, as written ("Walnut Hills", "Newport"), minus the whole city/region."""
+    global _PLACE_NAMES
+    if _PLACE_NAMES is None:
+        try:
+            cfg = json.loads(CONFIG_PATH.read_text())
+        except Exception:
+            cfg = {}
+        people = " | ".join(t for g in cfg.get("city_relevance", []) for t in g.get("terms", []))
+        anchors = [a for a in cfg.get("cincinnati_anchors", []) if not a.isupper() and a not in people]   # not CPD, Pureval…
+        names = {n for n in cfg.get("local_terms", []) + cfg.get("other_municipalities", []) + anchors
+                 if n.lower() not in PLACE_WIDE}
+        _PLACE_NAMES = [(n.lower(), re.compile(r"(?<![A-Za-z])" + re.escape(n) + r"(?![A-Za-z])"),
+                         re.compile(r"(?<![a-z])" + re.escape(n.lower().replace("-", " ").replace(".", "")) + r"(?![a-z])"))
+                        for n in sorted(names, key=len, reverse=True)]
+    text = f"{it['title']} {(it.get('summary') or '')[:240]}"
+    slug = _slug_text(it.get("link"))
+    found = set()
+    for low, rx, rx_slug in _PLACE_NAMES:
+        if rx.search(text) or rx_slug.search(slug):
+            text, slug = rx.sub(" ", text), rx_slug.sub(" ", slug)     # "East Walnut Hills" isn't also "Walnut Hills"
+            found.add(low)
+    return found
+
+
+def _streets(it):
+    out = set()
+    title, summary = it["title"], (it.get("summary") or "")[:240]
+    for text, cased in ((title, True), (summary, True), (_slug_text(it.get("link")), False)):
+        for m in STREET_TEXT.finditer(text):
+            name, kind = m.group(1), m.group(2).lower()
+            if cased and not (name[0].isupper() and m.group(2)[0].isupper()):
+                continue           # "the street", "on the road": not a street name
+            if name.lower() in STREET_NOT_NAMES:
+                continue
+            out.add(f"{name.lower()} {STREET_TYPES[kind]}")
+    return out
+
+
 def _profile(it):
     text = f"{it['title']} {(it.get('summary') or '')[:240]} {_slug_text(it.get('link'))}"
     seq = _content_words(it["title"]) + ["|"] + _content_words(_slug_text(it.get("link")))
-    return {"rich": tokens(text), "proper": _proper_words(it["title"]),
+    return {"rich": tokens(text), "proper": _proper_words(it["title"]), "streets": _streets(it),
             "bigrams": {(a, b) for a, b in zip(seq, seq[1:])
                         if "|" not in (a, b) and a != b and not ({a, b} & (PHRASE_GENERIC | CRIME_STOCK | ELECTION_STOCK | TRAFFIC_STOCK))}}
 
@@ -618,12 +682,14 @@ def _merge_related(clusters, window_hours=18):
             if "_prof" not in it:
                 it["_prof"] = _profile(it)
     n = len(clusters)
-    df, bdf = {}, {}
+    df, bdf, sdf = {}, {}, {}
     for c in clusters:
         for t in set().union(*(it["_prof"]["rich"] for it in c["items"])):
             df[t] = df.get(t, 0) + 1
         for b in set().union(*(it["_prof"]["bigrams"] for it in c["items"])):
             bdf[b] = bdf.get(b, 0) + 1
+        for s in set().union(*(it["_prof"]["streets"] for it in c["items"])):
+            sdf[s] = sdf.get(s, 0) + 1
     idf = {t: math.log((n + 1) / (k + 0.5)) for t, k in df.items()}
     stock = stock_phrases()
     window = window_hours * 3600
@@ -644,6 +710,14 @@ def _merge_related(clusters, window_hours=18):
         phrases = {b for b in px["bigrams"] & py["bigrams"] if bdf.get(b, 0) <= 4 and b not in stock}
         if phrases and len(distinctive(shared)) >= 4:
             return True
+        # The same street in two crime reports ("shooting near May Street" / "shot on May Street"), as long
+        # as the street isn't in many of today's groups and the two don't name different places
+        # (Washington Street in Covington and Washington Street in Newport are different streets).
+        streets = {s for s in px["streets"] & py["streets"] if sdf.get(s, 0) <= 4}
+        if streets and shared & STREET_INCIDENT:
+            gx, gy = _named_places(x), _named_places(y)
+            if not (gx and gy and not gx & gy):
+                return True
         names = distinctive(px["proper"] & py["proper"] & shared)     # "Walnut Hills" alone isn't a shared name
         if names <= SCHOOL_WORDS and not (shared & place_words()):   # "Middle School" alone isn't either
             names = set()
