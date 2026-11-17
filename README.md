@@ -134,6 +134,16 @@ Some problems aren't list entries: real news dropped as junk, two stories that s
 
 A scheduled Claude session reviews each weekday morning's results and tunes the rules. Small list additions (each with a new test, all checks passing) go straight in; anything bigger comes as a pull request (branch `review/YYYY-MM-DD`) for you to merge. Its instructions are in [REVIEW.md](REVIEW.md). Edit that file to change what it looks for or what it's allowed to change. `python3 scripts/review.py news.json items.json` prints the same report it reads.
 
+## Replaying past days
+
+Every run's articles are kept for 30 days on the `archive` branch (one commit, replaced each run).
+`python3 scripts/replay.py --fetch` replays the last 30 weekdays through the current rules and lists
+things to check; `--compare main` shows what a rule change on a branch would have changed on those
+screens. To start with weeks of history instead of an empty archive, run **Actions → Backfill past
+headlines → Run workflow** once: it rebuilds past days from free public archives (GDELT, Google News
+searches by date, Internet Archive copies of the newsrooms' feeds) into the `archive-backfill` branch.
+Backfilled days are mostly headlines without summaries, so they're an approximation.
+
 ## How a story is scored
 
 - Headlines about the same event are grouped, even when each outlet words them differently.
