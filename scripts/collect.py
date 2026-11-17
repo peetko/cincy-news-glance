@@ -610,6 +610,10 @@ STREET_INCIDENT = (CRIME_STOCK - {"police", "man", "woman", "men", "women", "peo
                                   "investigate", "investigation", "sheriff", "sheriff'", "deputy", "missing"}) \
     | {"fire", "blaze", "stabbing", "stabbed", "robbery", "robbed", "carjacking", "explosion", "gunfire"}
 # Names too wide to tell two places apart: the whole city, county or region.
+# A fire in one neighborhood the same morning (Nov 17: one 3-alarm fire in Oakley showed as four entries,
+# worded "large fire burning commercial building", "3-alarm blaze", "roads blocked off", "storage facility").
+FIRE_WORDS = {"fire", "blaze", "flame", "inferno"}
+FIRE_WINDOW_HOURS = 6
 PLACE_WIDE = {"cincinnati", "cincy", "queen city", "tri-state", "tristate", "northern kentucky", "nky", "hamilton county",
               "downtown", "ohio river", "butler county", "warren county", "clermont county", "boone county",
               "kenton county", "campbell county", "brown county", "dearborn county"}
@@ -717,6 +721,15 @@ def _merge_related(clusters, window_hours=18):
         if streets and shared & STREET_INCIDENT:
             gx, gy = _named_places(x), _named_places(y)
             if not (gx and gy and not gx & gy):
+                return True
+        # A fire in the same neighborhood or town within a few hours, when both headlines are about the fire and
+        # share one more specific word ("large", "3-alarm", "building", "displaced"). The place alone never
+        # joins two stories; it has to be a fire, close in time, with another word in common.
+        if (tx & FIRE_WORDS and ty & FIRE_WORDS
+                and abs((x["published"] - y["published"]).total_seconds()) <= FIRE_WINDOW_HOURS * 3600
+                and distinctive(tx & ty) - FIRE_WORDS):
+            gx, gy = _named_places(x), _named_places(y)
+            if gx & gy:
                 return True
         names = distinctive(px["proper"] & py["proper"] & shared)     # "Walnut Hills" alone isn't a shared name
         if names <= SCHOOL_WORDS and not (shared & place_words()):   # "Middle School" alone isn't either

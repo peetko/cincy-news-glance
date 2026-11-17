@@ -2080,7 +2080,97 @@
      9
     ]
    ]
-  }
+  },
+ {
+  "note": "Nov 17, 2026: one 3-alarm fire in Oakley showed as four entries (0-4: 'large fire burning commercial building', '3-alarm blaze', 'roads blocked off', 'storage facility', 'building storing lawn equipment'). The Forest Park apartment fire two days earlier (5-6) is its own story, and was also split in two (one outlet named Forest Park only in the summary).",
+  "items": [
+   {
+    "title": "Oakley fire threatens building storing lawn equipment, Civil War artifacts",
+    "summary": "",
+    "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPTHZ5SHZOUTNHZUxfRGNUakV1Qm8zTzZwYllKNkJJakYybE1sWnc2R1dkNFVWS3F0cEhraGloclRpWXc5VkJZM1hjTnpOZWVIeXdRS2hlYTJ5R09xMzY0a2wwNjRrZUlUZWxRZlVDTUs1d1Mzcmw0RFpvMnVob2xaUFlvNEFrZW9QM0NNcnNyRWZlZG1DSkFZSDFJaGNZUEZkRGd1U3FMdnFVcEF1dHVBQktsOXZaZDcwcGVMMElmLVlINmVzU0dlVEl1ekloMG1tQXJteg?oc=5",
+    "outlet": "Enquirer",
+    "first_seen": "2026-11-17T13:03:00+00:00"
+   },
+   {
+    "title": "Fire chief: Large fire burning commercial building in Oakley",
+    "summary": "A large fire is burning a commercial building in the Oakley neighborhood, Cincinnati Fire Chief Frank McKinley tells WCPO.",
+    "link": "https://www.wcpo.com/news/local-news/hamilton-county/cincinnati/large-fire-seen-burning-building-in-oakley-neighborhood",
+    "outlet": "WCPO",
+    "first_seen": "2026-11-17T12:22:43+00:00"
+   },
+   {
+    "title": "Large emergency response to fire leads to roads being blocked off in Oakley",
+    "summary": "A neighborhood in Oakley is blocked off for a huge response to a fire at an industrial building.",
+    "link": "https://www.wlwt.com/article/cincinnati-oakley-verne-avenue-fire-response-roads-bocked/74451914",
+    "outlet": "WLWT",
+    "first_seen": "2026-11-17T13:04:00+00:00"
+   },
+   {
+    "title": "Crews battle large, 3-alarm fire at Oakley storage facility",
+    "summary": "No injuries were reported",
+    "link": "https://www.fox19.com/2026/11/17/crews-battle-large-3-alarm-fire-oakley-storage-facility/",
+    "outlet": "FOX19",
+    "first_seen": "2026-11-17T12:21:57+00:00"
+   },
+   {
+    "title": "Cincinnati fire responds to 3-alarm blaze in Oakley",
+    "summary": "It happened around 6:30 a.m. at a structure on Vern Avenue in Oakley.",
+    "link": "https://local12.com/news/local/oakley-commercial-building-fire-draws-large-firefighter-response-tuesday-morning-after-neighbor-calls-911-flames-break-through-roof-aging-structure-complicates-firefighting-hazmat-responds-no-immediate-danger-to-neighbors",
+    "outlet": "Local 12",
+    "first_seen": "2026-11-17T12:36:30+00:00"
+   },
+   {
+    "title": "Fire leaves 18 displaced, three units damaged in Forest Park Sunday morning",
+    "summary": "A fire at the Northwest Woods Apartments in Forest Park has now left 18 people looking for a new place to live, according to Forest Park Fire Department officials.",
+    "link": "https://www.wcpo.com/news/local-news/fire-leaves-18-displaced-three-units-damaged-in-forest-park-sunday-morning",
+    "outlet": "WCPO",
+    "first_seen": "2026-11-15T17:16:14+00:00"
+   },
+   {
+    "title": "Multiple families displaced after apartment fire in the Tri-State",
+    "summary": "Three families are looking for temporary housing after a fire damaged an apartment building in Forest Park early Sunday.",
+    "link": "https://local12.com/news/local/multiple-families-displaced-after-apartment-fire-in-the-tri-state",
+    "outlet": "Local 12",
+    "first_seen": "2026-11-15T15:41:06+00:00"
+   }
+  ],
+  "together": [
+   [
+    0,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    5,
+    6
+   ]
+  ],
+  "apart": [
+   [
+    0,
+    5
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    4,
+    6
+   ]
+  ]
+ }
  ],
  "misdated": [
   {
