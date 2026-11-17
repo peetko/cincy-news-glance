@@ -733,6 +733,28 @@
     "city": true,
     "label": "Police"
    }
+  },
+  {
+   "note": "Sardinia is a village in Brown County (Nov 17): its council and police chief were labeled City Hall",
+   "title": "What’s next for Sardinia police after council’s special meeting as police chief faces possible charges",
+   "summary": "Sardinia Village Council left a special meeting Tuesday night without taking action against Police Chief Brian Perry, but he could still face possible charges. Details below:",
+   "link": "https://www.wcpo.com/news/local-news/whats-next-for-sardinia-police-after-councils-special-meeting-as-police-chief-faces-possible-charges",
+   "outlet": "WCPO",
+   "expect": {
+    "city": false,
+    "place": "other"
+   }
+  },
+  {
+   "note": "FOX19 spelled the same village 'Sardina' (Nov 17); still not City Hall",
+   "title": "Sardina council weighs next steps for police chief after investigation",
+   "summary": "The investigation found that the village police chief told his officers to ticket everyone they stopped",
+   "link": "https://www.fox19.com/2026/11/17/sardina-council-weighs-next-steps-police-chief-after-investigation/",
+   "outlet": "FOX19",
+   "expect": {
+    "city": false,
+    "place": "other"
+   }
   }
  ],
  "same_story": [
