@@ -136,6 +136,19 @@ def main():
         else:
             print(f"ok    {name}")
 
+    # The same article from the newsroom's own feed and from Google: grouping keeps the newsroom's copy.
+    for case in cases.get("own_copies", []):
+        items = [{"title": collect.clean_headline(x["title"]), "summary": x.get("summary", ""), "link": x.get("link", ""),
+                  "outlet": x["outlet"], "_google": x.get("google", False), "_official": False,
+                  "published": datetime.fromisoformat(x["published"]), "_i": n} for n, x in enumerate(case["items"])]
+        got = sorted(it["_i"] for c in collect.cluster(items) for it in c["items"])
+        name = f"own copies: {case.get('note', '')[:60]}…"
+        if got != sorted(case["kept"]):
+            failures += 1
+            print(f"FAIL  {name}\n      expected kept {case['kept']}, got {got}")
+        else:
+            print(f"ok    {name}")
+
     # The lead shouldn't flip-flop on a near tie.
     a = {"_tok": ["council", "budget", "committee"], "city_rank": 10.0}
     b = {"_tok": ["vice", "mayor", "housing", "ordinance"], "city_rank": 11.0}
@@ -146,7 +159,7 @@ def main():
     else:
         print("ok    lead stays put on a near tie")
 
-    total = len(cases["headlines"]) + len(cases.get("same_story", [])) + len(cases.get("grouping", [])) + len(cases.get("misdated", [])) + 1
+    total = len(cases["headlines"]) + len(cases.get("same_story", [])) + len(cases.get("grouping", [])) + len(cases.get("misdated", [])) + len(cases.get("own_copies", [])) + 1
     print(f"\n{total - failures}/{total} checks passed")
     return 1 if failures else 0
 
