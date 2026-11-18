@@ -1,0 +1,61 @@
+# One-time (or occasional) backfill of past headlines from free public archives (GDELT, Google News
+# searches by date, Internet Archive copies of the newsrooms' feeds), so the rules can be replayed against
+# weeks of real news (scripts/replay.py). Run it from the Actions tab: "Backfill past headlines" → Run workflow.
+# Days already backfilled are skipped, so running it again only fills gaps. Results go to the
+# "archive-backfill" branch (one commit, replaced each time). Never touches main or the live screen.
+name: Backfill past headlines
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "How many past days to fill"
+        default: "30"
+
+permissions:
+  contents: write           # to save the results to the "archive-backfill" branch
+
+concurrency:
+  group: backfill
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the feed reader
+        run: pip install feedparser==6.0.14
+
+      - name: Get the days already backfilled
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/out
+          if git clone -q --depth 1 --branch archive-backfill "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" /tmp/prev 2>/dev/null; then
+            cp -r /tmp/prev/backfill /tmp/out/ 2>/dev/null || true
+          fi
+
+      - name: Fetch past headlines
+        env:
+          DAYS: ${{ inputs.days }}
+        run: python scripts/backfill.py /tmp/out --days "${DAYS:-30}"
+
+      # Runs even if the fetch stopped early, so finished days are kept.
+      - name: Save to the archive-backfill branch
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd /tmp/out
+          ls backfill/*.json.gz >/dev/null 2>&1 || exit 0
+          git init -q -b archive-backfill
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -qm "Backfilled headlines"
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" archive-backfill

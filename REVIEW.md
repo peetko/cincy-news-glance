@@ -45,6 +45,13 @@ repo is public, so never add non-public City information.
 3. **Read the report.** `python3 scripts/review.py /tmp/news.json /tmp/items.json`. It lists source
    health, junk that was dropped, the leads, every City Hall story with why it matched, the biggest
    stories, every multi-headline group with its headlines, and a replay of the raw articles.
+3b. **Replay the last 30 days.** `python3 scripts/replay.py --fetch` replays the past weekdays (8 AM, noon,
+   5 PM) through today's rules, using the real runs' articles (the `archive` branch) and, for older days,
+   headlines rebuilt from public archives (the `archive-backfill` branch). It lists City Hall labels whose
+   place isn't confirmed, stories that may be split or wrongly joined, and stale leads. These are
+   questions, not verdicts: check each one against the decisions above before acting (e.g. two crime
+   reports on the same street are joined on purpose). New items that also show on today's screen come
+   first; recurring patterns from past days are worth a fix even when today looks fine.
 4. **Look at the page.** Copy `/tmp/news.json` into `site/`, serve `site/` locally
    (`python3 -m http.server 8765 -d site`), screenshot it with Playwright at 1600×900, and look at it
    in both modes (click "Biggest"). Delete the copied file afterwards; never commit `site/news.json`.
@@ -87,7 +94,10 @@ repo is public, so never add non-public City information.
 - any number in `config.json` (thresholds, weights, factors) or removing or renaming any entry
 - anything that needs a new rule rather than a new list entry
 Same requirements: tests from real headlines, `check.py` passing, and a plain-English PR description
-(what was wrong, with the real headlines; what changed; any trade-off).
+(what was wrong, with the real headlines; what changed; any trade-off). Also run
+`python3 scripts/replay.py --fetch --compare main` on the branch and put its summary in the description:
+what the change would have done to the last 30 days of screens (stories joined or split, labels and leads
+changed). An unexpected change there is a reason to rethink the fix, not to explain it away.
 
 **Never:**
 - delete, weaken, or edit an existing test so the checks pass

@@ -65,6 +65,24 @@ jobs:
           git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -qm "Latest results"
           git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" data
 
+      # The exact articles of every run, kept 30 days on the "archive" branch (one commit, replaced each
+      # time, so the repo doesn't grow), so rule changes can be replayed against past days (scripts/replay.py).
+      - name: Add this run to the 30-day archive
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test -s debug/items.json || exit 0
+          REPO_URL="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          rm -rf /tmp/prev /tmp/archive && mkdir -p /tmp/archive
+          if git clone -q --depth 1 --branch archive "$REPO_URL" /tmp/prev 2>/dev/null; then cp -r /tmp/prev/runs /tmp/archive/ 2>/dev/null || true; fi
+          python scripts/archive.py debug/items.json /tmp/archive --at "$(date -u +%Y-%m-%dT%H:%M:%S+00:00)"
+          cd /tmp/archive
+          git init -q -b archive
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -qm "Articles from the last 30 days of runs"
+          git push -qf "$REPO_URL" archive
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
