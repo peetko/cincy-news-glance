@@ -761,6 +761,18 @@ def _merge_related(clusters, window_hours=18):
     return clusters
 
 
+def prefer_own_copies(items):
+    """
+    The same article often arrives twice: from the newsroom's own feed (with a summary and its real web
+    address) and from a Google sweep (no summary, a news.google.com link, the time rounded down to the
+    minute). Grouping kept whichever came first, which was usually the Google copy because of that rounding
+    (Nov 18: FOX19's "Cincinnati city manager reports decrease in shootings…" showed with no summary and a
+    Google link). Keep the newsroom's own copy and drop its Google twin. Google-only articles are untouched.
+    """
+    own = {(i["outlet"], i["title"].lower()) for i in items if not i.get("_google")}
+    return [i for i in items if not (i.get("_google") and not i.get("_official") and (i["outlet"], i["title"].lower()) in own)]
+
+
 def cluster(items):
     """Greedy grouping: each headline joins the first story it closely matches; then a looser second pass."""
     global COMMON_TODAY
@@ -769,6 +781,7 @@ def cluster(items):
         for t in tokens(it["title"]):
             df[t] = df.get(t, 0) + 1
     COMMON_TODAY = {t for t, k in df.items() if k >= 15 and k / max(1, len(items)) > COMMON_SHARE}
+    items = prefer_own_copies(items)
     clusters = []
     for it in sorted(items, key=lambda x: x["published"]):
         it["_tok"] = tokens(it["title"])

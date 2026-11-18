@@ -2283,5 +2283,37 @@
    ],
    "dropped": []
   }
+ ],
+ "own_copies": [
+  {
+   "note": "Nov 18, 2026: FOX19's City Manager story arrived from FOX19's own feed and from a Google sweep. The Google copy (time rounded down to the minute, so it sorted first) was kept, and the screen showed no summary and a news.google.com link. The newsroom's own copy should win; a Google-only article (the Enquirer) stays.",
+   "items": [
+    {
+     "outlet": "FOX19",
+     "google": true,
+     "title": "Cincinnati city manager reports decrease in shootings, rise in reported rapes, strangulations",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWFF5Q05zYTBGcGdDUE1VUHdkSi1TbjF1aTUwSnphajIxN28tekI0TDNz?oc=5",
+     "published": "2026-11-17T22:42:00+00:00"
+    },
+    {
+     "outlet": "FOX19",
+     "title": "Cincinnati city manager reports decrease in shootings, rise in reported rapes, strangulations",
+     "summary": "Sheryl Long presented her year-end report to a City Council committee, including infrastructure work and crime figures",
+     "link": "https://www.fox19.com/2026/11/17/cincinnati-city-manager-reports-decrease-shootings-rise-reported-rapes-strangulations/",
+     "published": "2026-11-17T22:42:22+00:00"
+    },
+    {
+     "outlet": "Enquirer",
+     "google": true,
+     "title": "Cincinnati should approve water rate hikes one year at a time | Opinion",
+     "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQWjYwRkQyQ3VodGptQ1hMYmMy?oc=5",
+     "published": "2026-11-18T11:00:00+00:00"
+    }
+   ],
+   "kept": [
+    1,
+    2
+   ]
+  }
  ]
 }
