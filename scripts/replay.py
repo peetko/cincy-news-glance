@@ -50,7 +50,7 @@ def fetch_archives(out_dir):
     out_dir.mkdir(parents=True, exist_ok=True)
     got = []
     for branch in ("archive", "archive-backfill"):
-        if git("fetch", "-q", "origin", f"{branch}:refs/remotes/origin/{branch}", check=False).returncode != 0:
+        if git("fetch", "-q", "origin", f"+{branch}:refs/remotes/origin/{branch}", check=False).returncode != 0:
             continue
         tar = subprocess.run(["git", "archive", f"origin/{branch}"], cwd=REPO, capture_output=True, check=True)
         subprocess.run(["tar", "-x", "-C", str(out_dir)], input=tar.stdout, check=True)
