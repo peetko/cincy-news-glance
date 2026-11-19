@@ -755,6 +755,36 @@
     "city": false,
     "place": "other"
    }
+  },
+  {
+   "note": "Greenville, S.C. council story in FOX19's feed (backfill, Nov 9): it was labeled City Hall · Council",
+   "title": "Greenville city council passes Laurens Road ordinance reading, Woodruff Road rezoning",
+   "summary": "",
+   "outlet": "FOX19",
+   "expect": {
+    "kept": false,
+    "city": false
+   }
+  },
+  {
+   "note": "City Council buying graffiti trucks (Nov 19): Hoodline's headline-only copy cancelled WCPO's summary mention, so it had no City Hall label",
+   "group": [
+    {
+     "title": "Cincinnati to spend $230k on graffiti removal trucks as vandalism spreads",
+     "summary": "Cincinnati City Council is set to spend $230,000 on new trucks to remove graffiti for a problem that has worsened since city workers stopped removing the vandalism on private property.",
+     "link": "https://www.wcpo.com/news/local-news/i-team/cincinnati-to-spend-230k-on-graffiti-removal-trucks-as-vandalism-spreads",
+     "outlet": "WCPO"
+    },
+    {
+     "title": "Cincinnati Graffiti Trucks: $230K Plan Amid West End Vandalism",
+     "summary": "",
+     "outlet": "Hoodline",
+     "google": true
+    }
+   ],
+   "expect": {
+    "city": true
+   }
   }
  ],
  "same_story": [
