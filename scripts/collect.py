@@ -454,7 +454,8 @@ missing sheriff sheriff' deputy
 convicted conviction sentence sentenced sentencing guilty plea plead pleaded indicted indictment trial jury
 judge court prison jail probation learn officer rescue rescued rescuing
 accused accuse accusing alleged allegedly
-sexual sexually""".split())
+sexual sexually
+gunshot wound""".split())
 # Nov 6: "missing" and "sheriff" chained a missing Lockland girl, a missing Texas teen and a change
 # to Sheriff patrols in Whitewater Township into one story.
 # Nov 11: court words ("convicted… learn sentences") joined Adams County corrections officers with a
@@ -463,6 +464,8 @@ sexual sexually""".split())
 # Nov 12: "14-year-old … accused" joined a Georgetown (Brown County) stabbing to a Cincinnati
 # juvenile sexual-assault case.
 # Nov 13: "sexually assaulting" joined a Colerain Township man's case to that same CUF juvenile case.
+# Nov 20: "gunshot wound(s)" joined a Nov 18 Fairfield shooting to the Westwood 4-year-old's death, which
+# then showed Fairfield as its place and lost its City Hall label.
 # ("assaulted" and "sex" stay distinctive: "officers assaulted" and "sex offender" name one story.)
 
 # Same idea for road and traffic coverage (Nov 11: "traffic", "drivers", "detour", "work" joined the

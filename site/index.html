@@ -537,6 +537,7 @@ let mode = 'city';
 try { mode = localStorage.getItem('leadMode') === 'general' ? 'general' : 'city'; } catch (e) {}
 
 function setMode(next) {
+  if (next !== mode) topIdx = 0;     // a new mode starts at its own #1
   mode = next;
   try { localStorage.setItem('leadMode', mode); } catch (e) {}
   document.querySelectorAll('#mode button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
@@ -1380,7 +1381,9 @@ function render(data) {
   const cityMode = mode === 'city' && !noCityNews;
   const swap = () => {
     // The list the arrows flip through. If you were looking at #2 or #3 and it's still in the list, stay on it.
-    const showing = topList[topIdx] && topList[topIdx].id;
+    // Only then: the old #1 isn't a story you picked, so it never pulls the arrows off the new #1
+    // (Nov 20: switching to Biggest showed the City Hall lead as "3 / 3" instead of Biggest's own #1).
+    const showing = topIdx > 0 && topList[topIdx] && topList[topIdx].id;
     topList = buildTopList(stories, lead, cityMode ? 'city_rank' : 'score', cityMode);
     topCtx = { devId: devLeads && devLeads.id, noCityNews };
     const keep = topList.findIndex((s) => s.id === showing);
