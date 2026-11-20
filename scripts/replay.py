@@ -13,7 +13,8 @@ Where the past days come from (--fetch downloads both into --dir):
     used for days the real archive doesn't cover. Backfilled days are an approximation: mostly
     headlines without summaries, so summary-based City labels are tested less well.
 
-For each weekday it replays the screen at a few times (default 8 AM, noon, 5 PM Eastern), in order,
+For each weekday it replays the screen at a few times (default 8 AM, noon, 5 PM Eastern; backfilled days
+only at the last time, since older Google results carry a date but no time), in order,
 carrying the story memory and leads from one replayed run to the next, as the real runs do.
 Not replayed: the City meeting calendar (committee names add Cincinnati proof) and the weather.
 """
@@ -24,7 +25,7 @@ import os
 import subprocess
 import sys
 import tempfile
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -49,7 +50,7 @@ def fetch_archives(out_dir):
     out_dir.mkdir(parents=True, exist_ok=True)
     got = []
     for branch in ("archive", "archive-backfill"):
-        if git("fetch", "-q", "origin", f"{branch}:refs/remotes/origin/{branch}", check=False).returncode != 0:
+        if git("fetch", "-q", "origin", f"+{branch}:refs/remotes/origin/{branch}", check=False).returncode != 0:
             continue
         tar = subprocess.run(["git", "archive", f"origin/{branch}"], cwd=REPO, capture_output=True, check=True)
         subprocess.run(["tar", "-x", "-C", str(out_dir)], input=tar.stdout, check=True)
@@ -63,11 +64,22 @@ def load(dir_):
     return live, back
 
 
-def as_item(a):
+def as_item(a, backfill=False):
     i = dict(a)
     i["published"] = datetime.fromisoformat(a["published"])
     i.setdefault("summary", "")
     i.setdefault("link", "")
+    if backfill:
+        if a.get("_from") == "google":
+            # A newsroom's Google search also returns its national wire stories, which its local feed
+            # doesn't carry: treat these like Google results, which must name somewhere local.
+            i["_google"] = True
+        p = i["published"].astimezone(timezone.utc)
+        if (p.hour, p.minute, p.second) in ((7, 0, 0), (8, 0, 0)):
+            # Older Google results carry only a date (midnight Pacific): call it noon Eastern that day.
+            d = p.astimezone(ET).date()
+            i["published"] = datetime(d.year, d.month, d.day, 12, tzinfo=ET)
+            i["_date_only"] = True
     return i
 
 
@@ -85,7 +97,7 @@ def items_at(t, live, back, all_runs_slack=timedelta(minutes=60)):
         pool += back.get((t.date() - timedelta(days=n)).isoformat(), [])
     if not pool:
         return None, None
-    items = [as_item(a) for a in pool]
+    items = [as_item(a, backfill=True) for a in pool]
     items = [i for i in items if t - timedelta(hours=36) < i["published"] <= t]
     return items, "backfill"
 
@@ -93,9 +105,8 @@ def items_at(t, live, back, all_runs_slack=timedelta(minutes=60)):
 # ------------------------------------------------------------------ one replayed run
 
 def replay_run(items, source, t, cfg, rules, state):
+    # (No misdated-pickup check on backfilled days: there's no newsroom feed of that moment to check against.)
     items = [i for i in items if not collect.is_junk(i, cfg)]
-    if source == "backfill":
-        items, _ = collect.drop_misdated_pickups(items)
     stories = collect.score_clusters(collect.cluster(items), rules, t, memory=state.get("seen", []))
     th = cfg["thresholds"]
     margin = th.get("lead_switch_margin", 1.25)
@@ -123,11 +134,11 @@ def replay_run(items, source, t, cfg, rules, state):
 
     rec = {"at": t.isoformat(), "source": source, "articles": len(items), "stories": [brief(s) for s in stories],
            "lead_city": brief(lead_city) if lead_city else None, "lead_general": brief(lead_gen) if lead_gen else None}
-    rec["flags"] = flags(rec, t)
+    rec["flags"] = flags(rec, t, check_age=(source == "live"))
     return rec
 
 
-def flags(rec, t):
+def flags(rec, t, check_age=True):
     """Things a reviewer should look at. Heuristics: a flag is a question, not a verdict."""
     out = []
     tok = lambda v: collect.tokens(v.split("|", 1)[1])          # noqa: E731
@@ -163,7 +174,7 @@ def flags(rec, t):
             if hit:
                 pair = sorted([a["title"], b["title"]])
                 out.append({"kind": "maybe_split", "key": " <> ".join(pair), "a": hit[0], "b": hit[1]})
-    for mode in ("lead_city", "lead_general"):
+    for mode in ("lead_city", "lead_general") if check_age else ():     # backfilled times are approximate
         s = rec.get(mode)
         if s and t - datetime.fromisoformat(s["first_seen"]) > timedelta(hours=24):
             out.append({"kind": "stale_lead", "key": f"{mode} {s['title']}", "mode": mode, "story": s["title"],
@@ -188,6 +199,8 @@ def replay(dir_, days, times, now=None):
             items, source = items_at(t, live, back)
             if not items:
                 continue
+            if source == "backfill" and h != max(times):
+                continue            # most backfilled headlines only have a date: one end-of-day screen
             rec = replay_run(items, source, t, cfg, rules, state)
             rec["key"] = t.strftime("%a %b %-d %-I %p")
             runs.append(rec)

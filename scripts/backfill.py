@@ -49,17 +49,29 @@ def polite(kind, gap):
     _last[kind] = time.time()
 
 
-def get(url, kind, gap, tries=3):
+FAILS = {}               # failed requests in a row, per archive
+GIVE_UP_AFTER = 4       # Nov 18: GDELT failed or timed out on most requests, and the retries took 2.5 hours
+
+
+def get(url, kind, gap, tries=2):
+    if FAILS.get(kind, 0) >= GIVE_UP_AFTER:
+        return None
     for n in range(tries):
         polite(kind, gap)
         try:
-            return collect.fetch(url)
+            data = collect.fetch(url)
+            FAILS[kind] = 0
+            return data
         except Exception as ex:
             err = collect.http_error_text(ex) if hasattr(collect, "http_error_text") else type(ex).__name__
             if n == tries - 1:
                 LOG.append(f"{kind}: {err}: {url[:160]}")
+                FAILS[kind] = FAILS.get(kind, 0) + 1
+                if FAILS[kind] == GIVE_UP_AFTER:
+                    LOG.append(f"{kind}: {GIVE_UP_AFTER} failures in a row; not used for the rest of this run")
+                    print(f"  {kind}: {GIVE_UP_AFTER} failures in a row, skipping it from now on", flush=True)
                 return None
-            time.sleep(10 * (n + 1))
+            time.sleep(5)
 
 
 def to_text(data):
@@ -123,6 +135,7 @@ def gdelt_items(src, domain, path_prefix, day, alias_names):
         arts = json.loads(to_text(data)).get("articles", [])
     except ValueError:
         LOG.append(f"gdelt: not JSON for {domain} {day}: {to_text(data)[:120]}")
+        FAILS["gdelt"] = FAILS.get("gdelt", 0) + 1      # usually "Please limit requests…": counts as a failure
         return None
     out = []
     for a in arts:
@@ -207,6 +220,13 @@ def merge(lists):
     return out
 
 
+def write_log(out, started):
+    log_path = out / "log.json"
+    old = json.loads(log_path.read_text()) if log_path.exists() else []
+    old = [r for r in old if r.get("at") != started]
+    log_path.write_text(json.dumps((old + [{"at": started, "problems": LOG[:200]}])[-10:], indent=1))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("out_dir")
@@ -236,6 +256,7 @@ def main():
                     snaps[src["name"]] = wayback_snapshots(feed, todo[0], todo[-1] + timedelta(days=1))
                     print(f"  Wayback: {src['name']}: copies on {len(snaps[src['name']])} day(s)", flush=True)
 
+    started, shown = datetime.now(timezone.utc).isoformat(), len(LOG)
     for day in todo:
         lists, counts = {"wayback": [], "gdelt": [], "google": []}, {}
         for src in cfg["sources"]:
@@ -274,10 +295,11 @@ def main():
                  {"day": day.isoformat(), "articles": [clean_article(a) for a in articles], "counts": counts})
         print(f"  {day}: {len(articles)} articles  " + ", ".join(
             f"{n} {'/'.join(f'{k} {v}' for k, v in c.items())}" for n, c in counts.items()), flush=True)
+        for problem in LOG[shown:shown + 3]:
+            print(f"    problem: {problem}", flush=True)
+        shown = len(LOG)
+        write_log(out, started)      # after every day, so a run that times out still leaves its log
 
-    log_path = out / "log.json"
-    old = json.loads(log_path.read_text()) if log_path.exists() else []
-    log_path.write_text(json.dumps((old + [{"at": datetime.now(timezone.utc).isoformat(), "problems": LOG[:200]}])[-10:], indent=1))
     print(f"Done. {len(LOG)} request problem(s); see backfill/log.json")
     return 0
 
