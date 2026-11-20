@@ -827,6 +827,11 @@
    "a": "PD: 44 arrested in citywide Halloween night violence that left 1 dead, 2 officers injured",
    "b": "Police: 2 arrested in connection with assault on officers during Halloween night violence",
    "expect": true
+  },
+  {
+   "a": "19-year-old found with multiple gunshot wounds in vehicle in Fairfield",
+   "b": "Police: 4-year-old boy dies from gunshot wound, 2 arrested in connection",
+   "expect": false
   }
  ],
  "grouping": [
@@ -2198,6 +2203,59 @@
    [
     4,
     6
+   ]
+  ]
+ },
+ {
+  "note": "Nov 20, 2026: a Fairfield shooting from Nov 18 (0) swallowed the Westwood 4-year-old's death (1-3) because both said 'gunshot wound'. The Westwood story then showed Fairfield as its place, lost its City Hall label, and looked two days old. 'Gunshot wound' is crime vocabulary, like 'shooting'.",
+  "items": [
+   {
+    "title": "19-year-old found with multiple gunshot wounds in vehicle in Fairfield",
+    "summary": "Officials reported that a 19-year-old was found with multiple gunshot wounds in a vehicle around 11:30 p.m. on Tuesday at The Crossing in Fairfield.",
+    "link": "https://www.wcpo.com/news/local-news/19-year-old-found-with-multiple-gunshot-wounds-in-vehicle-in-fairfield",
+    "outlet": "WCPO",
+    "first_seen": "2026-11-18T10:50:37+00:00"
+   },
+   {
+    "title": "Police: 4-year-old boy dies from gunshot wound, 2 arrested in connection",
+    "summary": "A four-year-old is dead after suffering a gunshot wound near the 2800 block of Harrison Avenue on Thursday evening, according to the Cincinnati Police Department.",
+    "link": "https://www.wcpo.com/news/local-news/4-year-old-child-in-critical-condition-following-shooting-in-westwood",
+    "outlet": "WCPO",
+    "first_seen": "2026-11-20T02:54:36+00:00"
+   },
+   {
+    "title": "4-year-old boy dies after shooting in Westwood, 2 arrested",
+    "summary": "Police are still investigating the scene where the shooting happened. There's no word on what led up to the shooting or if there are any possible suspects.",
+    "link": "https://local12.com/news/local/child-hospitalized-critical-condition-after-shooting-in-westwood-shots-fired-shot-gun-guns-weapons-harrison-avenue",
+    "outlet": "Local 12",
+    "first_seen": "2026-11-20T04:21:40+00:00"
+   },
+   {
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood",
+    "summary": "Two people have been arrested after a 4-year-old died after a shooting Thursday night in Westwood, according to Cincinnati police.",
+    "link": "https://www.wlwt.com/article/westwood-4-year-old-shot-critical-condition-harrison-avenue/74487040",
+    "outlet": "WLWT",
+    "first_seen": "2026-11-20T13:01:00+00:00"
+   }
+  ],
+  "apart": [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    2
+   ],
+   [
+    0,
+    3
+   ]
+  ],
+  "together": [
+   [
+    1,
+    3
    ]
   ]
  }
