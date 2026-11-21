@@ -1,0 +1,6361 @@
+{
+ "generated_at": "2026-11-21T00:47:34.037836+00:00",
+ "site_version": "af2e2d527841",
+ "weather": {
+  "ok": true,
+  "date": "2026-11-20",
+  "high": 68,
+  "low": 40,
+  "climate": {
+   "ok": true,
+   "date": "2026-11-20",
+   "normal_high": 52,
+   "normal_low": 34,
+   "record_high": 75,
+   "record_high_years": [
+    "1931",
+    "1906"
+   ],
+   "record_low": 11,
+   "record_low_years": [
+    "1914"
+   ],
+   "since": "1872"
+  },
+  "as_of": "2026-11-21T00:47:34.037836+00:00",
+  "temp": 54,
+  "short": "Clear",
+  "is_day": false,
+  "change": {
+   "text": "No big changes in the next 24 hours",
+   "level": "none",
+   "details": []
+  },
+  "alerts": []
+ },
+ "meetings": {
+  "ok": true,
+  "day": "2026-11-23",
+  "is_today": false,
+  "meetings": [
+   {
+    "date": "2026-11-23",
+    "time": "1:00 PM",
+    "body": "Budget, Finance & Governance Committee",
+    "location": "Council Chambers, Room 300",
+    "agenda": "",
+    "url": "https://cincinnatioh.legistar.com/MeetingDetail.aspx?LEGID=10883&GID=737&G=F7C7ACE8-B3D9-494B-89D1-69B0D7338C01"
+   }
+  ]
+ },
+ "games": [
+  {
+   "team": "FC Cincinnati",
+   "stadium": "tql",
+   "colors": [
+    "#F05323",
+    "#263B80"
+   ],
+   "home": false,
+   "opponent": "Orlando",
+   "start": "2026-11-20T00:30Z",
+   "state": "post",
+   "detail": "FT",
+   "score": [
+    "3",
+    "1"
+   ],
+   "result": "W",
+   "odds": null
+  },
+  {
+   "team": "FC Cincinnati",
+   "stadium": "tql",
+   "colors": [
+    "#F05323",
+    "#263B80"
+   ],
+   "home": false,
+   "opponent": "Nashville",
+   "start": "2026-11-22T21:00Z",
+   "state": "pre",
+   "detail": "Scheduled",
+   "score": null,
+   "result": null,
+   "odds": {
+    "provider": "DraftKings",
+    "details": "NSH -215",
+    "spread": null,
+    "over_under": 3.5,
+    "favorite": "them",
+    "moneyline": [
+     450,
+     -215
+    ]
+   }
+  },
+  {
+   "team": "Bengals",
+   "stadium": "paycor",
+   "colors": [
+    "#FB4F14",
+    "#000000"
+   ],
+   "home": false,
+   "opponent": "Commanders",
+   "start": "2026-11-24T01:15Z",
+   "state": "pre",
+   "detail": "11/23 - 8:15 PM EST",
+   "score": null,
+   "result": null,
+   "odds": {
+    "provider": "Draft Kings",
+    "details": "CIN -6",
+    "spread": 6.0,
+    "over_under": 53.5,
+    "favorite": "us",
+    "moneyline": [
+     -294,
+     240
+    ]
+   }
+  }
+ ],
+ "timer_token_expires": "2027-03-31",
+ "pending_cases": 0,
+ "developing": null,
+ "lead": {
+  "city": "ohio-s-little-fighter-u-s-senate-passes-unanimous-resolutio",
+  "general": "nation-mourns-fiona-cincinnati-zoo-hippo-who-died-after-inge",
+  "why": {
+   "city": "same lead as last run",
+   "general": "same lead as last run"
+  }
+ },
+ "counts": {
+  "stories": 34,
+  "city": 7,
+  "city_national": 0
+ },
+ "stories": [
+  {
+   "id": "nation-mourns-fiona-cincinnati-zoo-hippo-who-died-after-inge",
+   "title": "Nation mourns Fiona, Cincinnati Zoo hippo who died after ingesting a hat",
+   "link": "https://www.wcpo.com/news/local-news/hamilton-county/cincinnati/nation-mourns-fiona-cincinnati-zoo-hippo-who-died-after-ingesting-a-hat",
+   "outlet": "WCPO",
+   "summary": "The beloved hippo died after swallowing a hat that accidentally got thrown in her enclosure.",
+   "outlets": [
+    "Baltimore Sun",
+    "CTPost",
+    "FOX19",
+    "Hromadske",
+    "Hypefresh Magazine, Inc.",
+    "K99.1FM",
+    "SRN News",
+    "WCPO",
+    "WLWT",
+    "Yahoo"
+   ],
+   "links": {
+    "Baltimore Sun": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOc2xXV1QzUnlldU0xV0Z5b1JsMkN0LWhnREM4djBDOGtCajN3cElleDQ4QldYc3ZPSklCWFJDY3FhNVlTT1pEaXFGc3JHZlRBcGt1X181NjczbTBZSEkxcWdlNEJRTWkxQ2hGQVBpNmlVNVV2VldyWFdOLXJta1dZVmlVUl9mRkVuYmROZWJXNmtpMzNjelFXcHFSUHRrSUZqbVpFZGw0aXZ3M2lXTmgtV21PeTZTSzFzN3RYUlpn?oc=5",
+    "CTPost": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOcFZHdDFpcWFjUW9yd1Noa0pHUVpsNm5SdWhIUldxV21pWVVSZmdvWmRkMExYQ1pIdHExNFc0RHNiWjExcVkxb19IVDV2QmtHV1I2VnZpYTRnVHhqdk8zd001Zl9MZzBaMTk3R2I2cF9DUC1oVU5tU21VcHBFWjkyS1NYREpaQlRuS3dvRlRBaHpoRTd4VU8tUDhCYw?oc=5",
+    "FOX19": "https://www.fox19.com/2026/11/20/fiona-memorial-grows-cincinnati-zoo-visitors-remember-beloved-hippo/",
+    "Hromadske": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPak8wTXdNeDB2RU1MeWNiZEtQWDIta2lmdk85WndOVnBVel9YUVpoWkR1ZDNUd1pBTHBEOW5UTEVQOGZva1o1ZGFZSF93bnd5cjRQYVJjX0tDRmRxV2I3UkJmUHF5Yko5VEhBRG1qSmd1a2ZKUTZFM2RxbmNTMnNIRl92dS1JNzVvc0FaUjhqME9fRE9XVGpxd1gzeDJxZTZEX1RPcmFEM2hzZ9IBqgFBVV95cUxPak8wTXdNeDB2RU1MeWNiZEtQWDIta2lmdk85WndOVnBVel9YUVpoWkR1ZDNUd1pBTHBEOW5UTEVQOGZva1o1ZGFZSF93bnd5cjRQYVJjX0tDRmRxV2I3UkJmUHF5Yko5VEhBRG1qSmd1a2ZKUTZFM2RxbmNTMnNIRl92dS1JNzVvc0FaUjhqME9fRE9XVGpxd1gzeDJxZTZEX1RPcmFEM2hzZw?oc=5",
+    "Hypefresh Magazine, Inc.": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOVXlOajUyYXJYQmRpNXhiRm96U3FNekxUeUZjWE9xV3MtZUY3SXBMM0xmeEVpa2lUSFpwYVczSm90NGV3MG1wVTFCVjdpOU8wOUJRSVIxcVI0TER6Z0JIbWVXOENrRXVHZ2F0R2hKcHMxT0xjbDNodFhlLUFmTWZ0cWFKSTJVelFFc1BLa2d6blBRb0k0MS1WdHdUNWt3LXFPUndr?oc=5",
+    "K99.1FM": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNVWY5eHM1MHJPdUg5cEtQdnBhakpFRUIxM2IycVE4TndjRG0zWUFrTUk5ZDVTdFJjWWxqYjVRclJYM0V0QVJWNmFxcDBHZDctSGk2N3lCOTNEc3pVSmJ5b2RXc3pwM2V1MzBLd1ItUU5heU11UVVScVFUOWhHSWFHblFyUnQ2UDNlXzAzbVo0TkR6cHp2N29FUEJ4a08yVi1BRDFGWTBsM0V1YndpX0JNUm5jcFFseGl3aU92T3RMREwyTkpZaXRKbk1n0gHeAUFVX3lxTE9tQk1DYW5PbmMzd0F5cDVIZE9MU3RXLXRmMEhNNk0tOG10OEdfNU5UTzdmWUVEZ3RTRWhMNnVhbGVYeUk5WDI2eWFyUnZ4RHJZbkVuYWpJSmd2MUtsdmhsWDRZV1QyR05jOUFNRXNlcTZFTnUtYXhNRm9idG8zV3Rpd1l3YTVnNFZGZ0FadzJOQ05RVEMtUHNQWDZxaEl4bGhlYjB5SjktTzlJVUpyR3d5bFhiMDBvLVUwcEwxalNDZ0FYWVJjVGJsRWZLVnB3WlBBLWtDQlpzdFNscHV2UQ?oc=5",
+    "SRN News": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPT0V6cHFHaEhKODVZX2o2Mjk1ZFJsa3psNWNrVFhLUl9RUUFvSDJ5a3pYZ2N5eHhBSXdnMjhtZGpwQnc2QjEtUkhnMWlnNnBnVjBGUmg3djlWZ0JyTC1iR0JydmJZZmdsemlNSDdsWW9xNHZFMmIyNWZJSlpPNmNOSElaRXU2UHc?oc=5",
+    "WCPO": "https://www.wcpo.com/news/local-news/hamilton-county/cincinnati/nation-mourns-fiona-cincinnati-zoo-hippo-who-died-after-ingesting-a-hat",
+    "WLWT": "https://www.wlwt.com/article/cincinnati-nurse-fiona-hippo-cincinnati-zoo-remember/74494305",
+    "Yahoo": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQZXAtZ1RwUjFlREw4bGNBc1N3YXk2RkZkZnRReE5lSzdGSDVhU1dyTEUwVzBNUWQwckptU2V1N241cm9IT19iU1BLTTc1REhHWTlua0hJMnFnM1NhbHRWb0d3T3lLTlNsejRZN2JGdE9JQ285ZFRtLXd5MWJCNkRkS2J6NDZuNlJ6NHV3Wlo4V0V1Zw?oc=5"
+   },
+   "outlet_count": 10,
+   "first_seen": "2026-11-19T20:21:34+00:00",
+   "updated": "2026-11-20T23:01:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 19.338,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Retired Cincinnati Children's nurse reflects on the day she helped save Fiona the hippo's life in 2017"
+     ],
+     [
+      "WLWT",
+      "Cincinnati nurse who helped save Fiona as a baby remembers beloved hippo"
+     ],
+     [
+      "WCPO",
+      "Cincinnati Zoo's beloved Fiona the hippo dies after swallowing hat thrown into exhibit"
+     ],
+     [
+      "SRN News",
+      "Fiona, beloved Cincinnati Zoo hippo, dies after ingesting hat"
+     ],
+     [
+      "Baltimore Sun",
+      "Cincinnati Zoo says Fiona the hippo has died, days after ingesting a visitor\u2019s hat"
+     ],
+     [
+      "CTPost",
+      "The Latest: Cincinnati Zoo says Fiona the hippo has died, days after ingesting a visitor\u2019s hat"
+     ],
+     [
+      "Yahoo",
+      "Fiona the hippo dies after swallowing a hat at Cincinnati Zoo"
+     ],
+     [
+      "Hromadske",
+      "Fiona, Cincinnati Zoo's beloved hippo who defied the odds, dies at 9"
+     ],
+     [
+      "K99.1FM",
+      "Beloved Cincinnati Zoo hippo Fiona dies after swallowing a knit hat"
+     ],
+     [
+      "Hypefresh Magazine, Inc.",
+      "Cincinnati Zoo\u2019s Beloved Hippo Fiona Dies at 9 After Ingesting Visitor\u2019s Hat"
+     ],
+     [
+      "FOX19",
+      "Fiona memorial grows at Cincinnati Zoo as visitors remember beloved hippo"
+     ],
+     [
+      "WCPO",
+      "Nation mourns Fiona, Cincinnati Zoo hippo who died after ingesting a hat"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ohio-s-little-fighter-u-s-senate-passes-unanimous-resolutio",
+   "title": "'Ohio's little fighter': U.S. Senate passes unanimous resolution honoring Fiona the hippo",
+   "link": "https://www.wcpo.com/news/local-news/hamilton-county/cincinnati/ohios-little-fighter-u-s-senate-passes-unanimous-resolution-honoring-fiona",
+   "outlet": "WCPO",
+   "summary": "Fiona\u2019s legacy is being honored on the national stage, with the U.S. Senate unanimously approving a resolution recognizing the beloved Cincinnati Zoo hippo and the people who cared for her.",
+   "outlets": [
+    "Enquirer",
+    "FOX19",
+    "Local 12",
+    "WCPO"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNV3Q4TGRNcmZ3MFRfS0ltWGxLY3NGZkVpY2RSelVNdTR5UFFmLUhEUDQ0MFotZDBVNEpKSmQtVVh1Z2FXMTZpckthcUJKTDBXNmNBRHN5V2lhZXRLNWpxNG02aTk1aUV3U2NEODFNYzdVaWppdlFNTzd2Y1M4TXl3MXZ2ME5XVGxIeURFZTRHQ2JiVVJIbGtjOW40UzQ5T01YandveWFxZWVJWVl5Q0tja1doV1Zkd3l0dkl0MnhBbDdpTXlBM1NiUFZYcGxKaXFkcjM5VTB3?oc=5",
+    "FOX19": "https://www.fox19.com/2026/11/20/symbol-resilience-resolution-honoring-fiona-cincinnati-zoo-passes-us-senate/",
+    "Local 12": "https://local12.com/news/local/symbol-of-the-spirit-heart-ohio-resolution-honoring-fionas-legacy-moves-forward-bill",
+    "WCPO": "https://www.wcpo.com/news/local-news/hamilton-county/cincinnati/ohios-little-fighter-u-s-senate-passes-unanimous-resolution-honoring-fiona"
+   },
+   "outlet_count": 4,
+   "first_seen": "2026-11-20T20:11:39+00:00",
+   "updated": "2026-11-20T23:27:41+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "Federal"
+   ],
+   "city_score": 3.0,
+   "place": "yes",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 8.811,
+   "city_rank": 7.69,
+   "why": {
+    "matches": [
+     {
+      "group": "Federal",
+      "term": "Senate passes",
+      "where": "headline",
+      "outlet": "WCPO",
+      "points": 3.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "FOX19",
+     "Local 12",
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "\u2018A symbol of resilience\u2019: Resolution honoring Fiona, Cincinnati Zoo passes US Senate"
+     ],
+     [
+      "Enquirer",
+      "U.S. Senate unanimously passes resolution to honor Fiona the hippo"
+     ],
+     [
+      "WCPO",
+      "'Ohio's little fighter': U.S. Senate passes unanimous resolution honoring Fiona the hippo"
+     ],
+     [
+      "Local 12",
+      "'Symbol of the spirit and heart of Ohio': Resolution honoring Fiona's legacy moves forward"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "judge-awards-rape-survivor-98-25-million-in-1989-cincinnati",
+   "title": "Judge awards rape survivor $98.25 million in 1989 Cincinnati case",
+   "link": "https://local12.com/news/local/dana-beatty-98-million-rape-judgment-cincinnati-tanzer",
+   "outlet": "Local 12",
+   "summary": "Hamilton County judge awards Dana Beatty $98.25M in civil damages over a 1989 rape never criminally charged due to time limits. Court cites ongoing PTSD and calls Ohio\u2019s noneconomic cap unconstitutional as applied.",
+   "outlets": [
+    "Enquirer",
+    "Local 12",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNYmVzY0RINTRsUTFaX1R1UFJ5V1JBWGJxTUxORVBfSWhueEk4ME5LSVlvNHIxR3g1QnZOYjhjMjhsUXA0RjZWYWtfc3ZMcHkyS0xFV1ZfdTZmU1JyU3U3VGR0d2tjZmgxczlEdlVlZmFXT2QtYlBtRmE5cFpyQXFRd28xR3JkeTNrMV9aSC1FUFZUTGlodjluUmxkWDdXSnJWSHBVUXRSZmpNeEZIU0tzSldjcFd0dkVXOVdWNHNmMXE5MWc1?oc=5",
+    "Local 12": "https://local12.com/news/local/dana-beatty-98-million-rape-judgment-cincinnati-tanzer",
+    "WLWT": "https://www.wlwt.com/article/dana-beatty-tanzer-cincinnati-rape-civil-judgment/74493991"
+   },
+   "outlet_count": 3,
+   "first_seen": "2026-11-20T16:33:00+00:00",
+   "updated": "2026-11-20T22:48:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 6.098,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "Local 12",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "Judge awards $98 million to woman sexually assaulted in Cincinnati"
+     ],
+     [
+      "Local 12",
+      "Judge awards rape survivor $98.25 million in 1989 Cincinnati case"
+     ],
+     [
+      "WLWT",
+      "Rape survivor awarded more than $98M in civil judgment against doctor who admitted to 1989 attack"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cincinnati-man-sentenced-for-threats-against-ice-border-czar",
+   "title": "Cincinnati man sentenced for threats against ICE, border czar, others",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPLWZEZHl1QUhyOVR0VDlOZkttR3NCQzBIRUZpOUN5SHp4c3Q3djhpVFAzMS1RMERaaFhhT0p6eXVNUjE0ZjBMLWsySEZtT3lwVk5HOEpua3JycTFWMW9tczZHZ3JBTXhTamh0TVBRczBZRlI1N2tldjhPY2N0RjZhRXdJSUtJdlRGOWJmWmZaa281R1QyU2ozXzdoLVcxR2RYN1duQWw0Z3RNc0FyXzBBczNmcDN2VHV2V1ItSnNuMldFbEd3?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer",
+    "Local 12"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPLWZEZHl1QUhyOVR0VDlOZkttR3NCQzBIRUZpOUN5SHp4c3Q3djhpVFAzMS1RMERaaFhhT0p6eXVNUjE0ZjBMLWsySEZtT3lwVk5HOEpua3JycTFWMW9tczZHZ3JBTXhTamh0TVBRczBZRlI1N2tldjhPY2N0RjZhRXdJSUtJdlRGOWJmWmZaa281R1QyU2ozXzdoLVcxR2RYN1duQWw0Z3RNc0FyXzBBczNmcDN2VHV2V1ItSnNuMldFbEd3?oc=5",
+    "Local 12": "https://local12.com/news/local/tri-state-man-sentenced-for-making-death-threats-against-ice-agents-anthony-marcus-kelly-cincinnati-butler-county"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-20T20:44:20+00:00",
+   "updated": "2026-11-20T23:32:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 4.864,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Tri-State man sentenced for making death threats against ICE agents"
+     ],
+     [
+      "Enquirer",
+      "Cincinnati man sentenced for threats against ICE, border czar, others"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "milwaukee-county-zoo-welcomes-new-hippo-while-remembering-fi",
+   "title": "Milwaukee County Zoo welcomes new hippo while remembering Fiona",
+   "link": "https://www.wlwt.com/article/fiona-hippo-cincinnati-milwaukee-zoo-devi/74494165",
+   "outlet": "WLWT",
+   "summary": "The Milwaukee County Zoo announced a new hippo on Thursday, while also taking a moment to remember Fiona the Hippo from the Cincinnati Zoo.",
+   "outlets": [
+    "Local 12",
+    "WLWT",
+    "WVXU"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/fiona-fan-shares-emotional-story-while-remembering-beloved-hippo-at-cincinnati-zoo-bob-herzog-local-12",
+    "WLWT": "https://www.wlwt.com/article/fiona-hippo-cincinnati-milwaukee-zoo-devi/74494165",
+    "WVXU": "https://www.wvxu.org/show/cincinnati-edition/2026-11-20/fiona-has-died-remembering-cincinnatis-beloved-hippo"
+   },
+   "outlet_count": 3,
+   "first_seen": "2026-11-19T21:01:28+00:00",
+   "updated": "2026-11-20T20:49:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 4.381,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12",
+     "WLWT",
+     "WVXU"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WVXU",
+      "Beloved Cincinnati Zoo hippo Fiona has died"
+     ],
+     [
+      "WVXU",
+      "Fiona has died, remembering Cincinnati's beloved hippo"
+     ],
+     [
+      "Local 12",
+      "Fiona fan shares emotional story while remembering beloved hippo at Cincinnati Zoo"
+     ],
+     [
+      "WLWT",
+      "Milwaukee County Zoo welcomes new hippo while remembering Fiona"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "police-motorcyclist-dies-in-crash-that-closed-beechmont-aven",
+   "title": "Police: Motorcyclist dies in crash that closed Beechmont Avenue for hours",
+   "link": "https://www.wlwt.com/article/serious-crash-motorcycle-beechmont-avenue-linwood/74494618",
+   "outlet": "WLWT",
+   "summary": "A motorcyclist has died after a crash that closed Beechmont Avenue for hours on Friday afternoon, Cincinnati Police said.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/serious-crash-motorcycle-beechmont-avenue-linwood/74494618"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T22:18:00+00:00",
+   "updated": "2026-11-21T00:47:00+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "Police"
+   ],
+   "city_score": 3.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 3.494,
+   "city_rank": 5.991,
+   "why": {
+    "matches": [
+     {
+      "group": "Police",
+      "term": "Police",
+      "where": "headline",
+      "outlet": "WLWT",
+      "points": 3.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "crash",
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Police: Motorcyclist dies in crash that closed Beechmont Avenue for hours"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ohio-high-school-playoff-football-scores-see-who-is-winning",
+   "title": "Ohio high school playoff football scores. See who is winning in regional finals tonight",
+   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNdEpDY3ZJWnk5OUhTaTY3cV9fWlJHMTAyMXl2Zlo3aWdHUFJTZVhHbHNMZzltZnJ2ejMwT0NmNTF4alA1Z0FaUEFadWVBY0ZBVVNEVDk5bWNkRHhkN0swTVZXUXIyZ0JrbHgySGt6TnNhUzhXYWZnbzAxTllCMDdzLXRVUGRjVkxpUmMyX29EUGVzNmY2dDY1Yzk3b0tFLXpsZDVKRmpMbWVPYjg0N0V4aWdvMHJrV2FVVlRzLWtWakpGRW5rZk5faC0tazlOdE5OOVBqMHZHMVJKSXJwNXpCRTBZWQ?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer",
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNdEpDY3ZJWnk5OUhTaTY3cV9fWlJHMTAyMXl2Zlo3aWdHUFJTZVhHbHNMZzltZnJ2ejMwT0NmNTF4alA1Z0FaUEFadWVBY0ZBVVNEVDk5bWNkRHhkN0swTVZXUXIyZ0JrbHgySGt6TnNhUzhXYWZnbzAxTllCMDdzLXRVUGRjVkxpUmMyX29EUGVzNmY2dDY1Yzk3b0tFLXpsZDVKRmpMbWVPYjg0N0V4aWdvMHJrV2FVVlRzLWtWakpGRW5rZk5faC0tazlOdE5OOVBqMHZHMVJKSXJwNXpCRTBZWQ?oc=5",
+    "WCPO": "https://www.wcpo.com/sports/high-school-sports/scores-for-week-14-of-greater-cincinnati-high-school-football-season",
+    "WLWT": "https://www.wlwt.com/article/elder-princeton-paycor-stadium-division-1-region-final/74493981"
+   },
+   "outlet_count": 3,
+   "first_seen": "2026-11-19T22:03:17+00:00",
+   "updated": "2026-11-20T22:51:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 3.074,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Paycor Stadium",
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": true,
+    "versions": [
+     [
+      "Enquirer",
+      "Ohio high school playoff football scores. See who is winning in regional finals tonight"
+     ],
+     [
+      "WCPO",
+      "Scores for Week 14 of Greater Cincinnati high school football season"
+     ],
+     [
+      "WLWT",
+      "Elder, Princeton meeting at Paycor Stadium for Division I regional final"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "we-ll-miss-you-fiona-authors-of-hippo-musical-in-cincinnati",
+   "title": "\u2018We\u2019ll miss you Fiona\u2019 | Authors of hippo musical in Cincinnati reflect on beloved animal\u2019s death",
+   "link": "https://www.wcpo.com/news/local-news/well-miss-you-fiona-authors-of-hippo-musical-in-cincinnati-reflect-on-beloved-animals-death",
+   "outlet": "WCPO",
+   "summary": "In 2023, Fiona the hippo's story of survival became a musical. It premiered at the Ensemble Theatre. And a day after Fiona's death, WCPO 9 caught up with some of the artists who made that music.",
+   "outlets": [
+    "WCPO"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/local-news/well-miss-you-fiona-authors-of-hippo-musical-in-cincinnati-reflect-on-beloved-animals-death"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T23:29:31+00:00",
+   "updated": "2026-11-20T23:29:31+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.818,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "\u2018We\u2019ll miss you Fiona\u2019 | Authors of hippo musical in Cincinnati reflect on beloved animal\u2019s death"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "coroner-ids-19-year-old-shot-found-dead-inside-vehicle-in-fa",
+   "title": "Coroner IDs 19-year-old shot, found dead inside vehicle in Fairfield",
+   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOQmpxU0tBa3JzMV9rcG9KREhxZklfN3pOWVViUWlpZjFWQ1pSdl9XbnFUUE0zbVBISUw3c1E5UHJIUmh5blZ6TGwwN3F1dEdMX0xWcW9wallfVmtQblRselhTWW9IS2VjanlvWlU2d2dzeHo4RW1LXzlqN1piWTZvaGRBT3kwaHdZcFRlVHdNRjhzU0NzcXNrQU9oaDdqM3ZSM205cURKbGNBZVBzbkFsaWh4X29JMS12YXVIdjRVdHVTMkl6dDR4TVhPcFJ1UjdDdk4zMA?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer",
+    "FOX19",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOQmpxU0tBa3JzMV9rcG9KREhxZklfN3pOWVViUWlpZjFWQ1pSdl9XbnFUUE0zbVBISUw3c1E5UHJIUmh5blZ6TGwwN3F1dEdMX0xWcW9wallfVmtQblRselhTWW9IS2VjanlvWlU2d2dzeHo4RW1LXzlqN1piWTZvaGRBT3kwaHdZcFRlVHdNRjhzU0NzcXNrQU9oaDdqM3ZSM205cURKbGNBZVBzbkFsaWh4X29JMS12YXVIdjRVdHVTMkl6dDR4TVhPcFJ1UjdDdk4zMA?oc=5",
+    "FOX19": "https://www.fox19.com/2026/11/20/coroner-identifies-19-year-old-found-shot-death-vehicle-fairfield/",
+    "WLWT": "https://www.wlwt.com/article/fairfield-deadly-shooting-19-year-old-woodridge-boulevard/74463177"
+   },
+   "outlet_count": 3,
+   "first_seen": "2026-11-18T10:50:37+00:00",
+   "updated": "2026-11-20T18:08:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 2.802,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Fairfield",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "shooting",
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "FOX19",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Police: 19-year-old found dead in car after shooting in Fairfield"
+     ],
+     [
+      "FOX19",
+      "Coroner identifies 19-year-old found shot to death in vehicle in Fairfield"
+     ],
+     [
+      "Enquirer",
+      "Coroner IDs 19-year-old shot, found dead inside vehicle in Fairfield"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hamilton-county-board-splits-again-over-provisional-ballots",
+   "title": "Hamilton County board splits again over provisional ballots",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNa2Ffa21VUGp0aXFScU5KN2tlTG5oc3RYVlR5NnBqeWtsc0JzLXFNLW5fZTdtdGlLdUxBYzBuZWFGRnBVejlXRXh3czVySG0xTFprWkcxZW5qMk1DU1B1aE9lLVM1a0x3NnFoa2lIcUtrZmM3SEt5VnE2NVpuSTZ4ODUwNjJRNnNCaXJYUkY5QV9sUmdPR2xmQW94WjBjTDFHZGFCbkxmSVQ3cU8wdWdqV2xQOVdlSmM1R1gxWVBZeFNmNXZlZEE?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNa2Ffa21VUGp0aXFScU5KN2tlTG5oc3RYVlR5NnBqeWtsc0JzLXFNLW5fZTdtdGlLdUxBYzBuZWFGRnBVejlXRXh3czVySG0xTFprWkcxZW5qMk1DU1B1aE9lLVM1a0x3NnFoa2lIcUtrZmM3SEt5VnE2NVpuSTZ4ODUwNjJRNnNCaXJYUkY5QV9sUmdPR2xmQW94WjBjTDFHZGFCbkxmSVQ3cU8wdWdqV2xQOVdlSmM1R1gxWVBZeFNmNXZlZEE?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T05:25:00+00:00",
+   "updated": "2026-11-20T23:20:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.744,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "Provisional ballot controversy could determine Hamilton County race"
+     ],
+     [
+      "Enquirer",
+      "Hamilton County board splits again over provisional ballots"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "former-server-sues-looking-glass-hospitality-over-unpaid-wag",
+   "title": "Former server sues Looking Glass Hospitality over unpaid wages",
+   "link": "https://www.wlwt.com/article/looking-glass-hospitality-wages-lawsuit-former-server/74493816",
+   "outlet": "WLWT",
+   "summary": "A former server at Fretboard Brewing and Public House in Hamilton has filed a federal lawsuit against Looking Glass Hospitality Group, saying he and other workers weren\u2019t paid for about three weeks of work before the company\u2019s restaurants abruptly closed.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/looking-glass-hospitality-wages-lawsuit-former-server/74493816"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T23:20:00+00:00",
+   "updated": "2026-11-20T23:20:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.744,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Hamilton",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "closed",
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Former server sues Looking Glass Hospitality over unpaid wages"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "zoo-provides-update-on-rest-of-hippo-cove-bloat-after-death",
+   "title": "Zoo provides update on rest of Hippo Cove bloat after death of Fiona",
+   "link": "https://www.wlwt.com/article/cincinnati-zoo-fiona-death-tucker-bibi-fritz-update/74493088",
+   "outlet": "WLWT",
+   "summary": "In a statement Friday, the Cincinnati Zoo provided an update on how Tucker, Bibi, and Fritz are doing after the death of Fiona the hippo.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/cincinnati-zoo-fiona-death-tucker-bibi-fritz-update/74493088"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T19:11:00+00:00",
+   "updated": "2026-11-20T23:00:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.596,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Zoo provides update on rest of Hippo Cove bloat after death of Fiona"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "fiona-merchandise-in-high-demand-as-cincinnati-businesses-ho",
+   "title": "Fiona Merchandise in High Demand as Cincinnati Businesses Honor Beloved Hippo\u2019s Legacy",
+   "link": "https://www.wcpo.com/news/local-news/fiona-merchandise-in-high-demand-as-cincinnati-businesses-honor-beloved-hippos-legacy",
+   "outlet": "WCPO",
+   "summary": "Fiona's impact lives on as Cincinnati-area businesses see thousands of orders for shirts and merchandise honoring the beloved hippo.",
+   "outlets": [
+    "WCPO"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/local-news/fiona-merchandise-in-high-demand-as-cincinnati-businesses-honor-beloved-hippos-legacy"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T22:56:31+00:00",
+   "updated": "2026-11-20T22:56:31+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.571,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Fiona Merchandise in High Demand as Cincinnati Businesses Honor Beloved Hippo\u2019s Legacy"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "where-to-buy-fiona-themed-treats-to-benefit-the-cincinnati-z",
+   "title": "Where to buy Fiona-themed treats to benefit the Cincinnati Zoo",
+   "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOdVZ4YWh4YUlhQlY0dVNGcDVNbXBYMnljcFRBMkF6c3RtRTFlY1gxdFpiOUVpVTRuNVFvU2dvWkdxVTQwQjNuakM1MTI0WUh2dzZ0aUNQNXlCT3Rjd3otMGR5MkNaeG11TXVyZ0pIU3I0bTZ2c0ZaZnNKM01jck5QZWE1b2p0X2I1bTAyMWVra3B1UmtQRGVvZXp1Ri1RRDlTMnpyUXozalZaZjZoMHpKcjZDdExtaFEwMmV6ZDZtUWZBZXd5YXdsSVRPUmRfbGVsWldodl9XeUc1bXVCZTZN?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOdVZ4YWh4YUlhQlY0dVNGcDVNbXBYMnljcFRBMkF6c3RtRTFlY1gxdFpiOUVpVTRuNVFvU2dvWkdxVTQwQjNuakM1MTI0WUh2dzZ0aUNQNXlCT3Rjd3otMGR5MkNaeG11TXVyZ0pIU3I0bTZ2c0ZaZnNKM01jck5QZWE1b2p0X2I1bTAyMWVra3B1UmtQRGVvZXp1Ri1RRDlTMnpyUXozalZaZjZoMHpKcjZDdExtaFEwMmV6ZDZtUWZBZXd5YXdsSVRPUmRfbGVsWldodl9XeUc1bXVCZTZN?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T22:54:00+00:00",
+   "updated": "2026-11-20T22:54:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.553,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "Where to buy Fiona-themed treats to benefit the Cincinnati Zoo"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "post-mortem-exam-sheds-new-light-on-fiona-the-hippo-s-death",
+   "title": "Post-mortem exam sheds new light on Fiona the hippo\u2019s death",
+   "link": "https://www.wlwt.com/article/fiona-cincinnati-zoo-cause-of-death-hat/74492871",
+   "outlet": "WLWT",
+   "summary": "The Cincinnati Zoo says a post-mortem exam has shed new light on what led to Fiona's death. Here's what they're saying.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/fiona-cincinnati-zoo-cause-of-death-hat/74492871"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T18:45:00+00:00",
+   "updated": "2026-11-20T22:51:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.532,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Post-mortem exam sheds new light on Fiona the hippo\u2019s death"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cat-colony-at-nku-finds-new-home-ahead-of-planned-renovation",
+   "title": "Cat colony at NKU finds new home ahead of planned renovations",
+   "link": "https://local12.com/news/local/cat-colony-nku-finds-new-home-ahead-of-planned-renovations-renovate-landrum-hall-northern-kentucky-university-animal-animals-home-feeding-cats-kittens-wellbeing",
+   "outlet": "Local 12",
+   "summary": "Northern Kentucky University has identified a new long-term home for the cats currently living outside Landrum Hall, as planned renovations to the building would make it impossible for the animals to remain there.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/cat-colony-nku-finds-new-home-ahead-of-planned-renovations-renovate-landrum-hall-northern-kentucky-university-animal-animals-home-feeding-cats-kittens-wellbeing"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T22:38:23+00:00",
+   "updated": "2026-11-20T22:38:23+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.445,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Cat colony at NKU finds new home ahead of planned renovations"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "two-adults-due-in-court-saturday-after-westwood-4-year-old-d",
+   "title": "Two adults due in court Saturday after Westwood 4-year-old dies from gunshot wound",
+   "link": "https://www.wlwt.com/article/westwood-shooting-court-suspects-ceontay-miller/74494565",
+   "outlet": "WLWT",
+   "summary": "A 4-year-old boy, Ceontay Miller Jr., died from a gunshot wound Thursday evening at the Royal Sentry Apartments in Westwood, leading to the arrest of two adults.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/westwood-shooting-court-suspects-ceontay-miller/74494565"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T22:38:00+00:00",
+   "updated": "2026-11-20T22:38:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.442,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Westwood",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Two adults due in court Saturday after Westwood 4-year-old dies from gunshot wound"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "police-4-year-old-dies-2-arrested-after-shooting-in-westwood",
+   "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood",
+   "link": "https://www.wlwt.com/article/westwood-4-year-old-shot-critical-condition-harrison-avenue/74487040",
+   "outlet": "WLWT",
+   "summary": "Two people have been arrested after a 4-year-old died after a shooting Thursday night in Westwood, according to Cincinnati police.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/westwood-4-year-old-shot-critical-condition-harrison-avenue/74487040"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T22:35:00+00:00",
+   "updated": "2026-11-20T22:35:00+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "Police"
+   ],
+   "city_score": 3.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.422,
+   "city_rank": 4.152,
+   "why": {
+    "matches": [
+     {
+      "group": "Police",
+      "term": "Police",
+      "where": "headline",
+      "outlet": "WLWT",
+      "points": 3.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Westwood",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "shooting",
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": false,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "kemper-road-in-sharonville-reopens-after-water-main-break-fi",
+   "title": "Kemper Road in Sharonville reopens after water main break fixed",
+   "link": "https://www.wcpo.com/news/local-news/kemper-road-in-sharonville-reopens-after-water-main-break-fixed",
+   "outlet": "WCPO",
+   "summary": "A portion of Kemper Road in Sharonville, which was closed for a week due to a water main break, has reopened.",
+   "outlets": [
+    "WCPO"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/local-news/kemper-road-in-sharonville-reopens-after-water-main-break-fixed"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T22:23:54+00:00",
+   "updated": "2026-11-20T22:23:54+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.348,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Sharonville",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "water main",
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Kemper Road in Sharonville reopens after water main break fixed"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "two-time-cancer-survivor-mother-of-2-joins-uc-health-oncolog",
+   "title": "Two-time cancer survivor, mother of 2 joins UC Health oncology team to help others",
+   "link": "https://www.wlwt.com/article/mary-toennis-cancer-survivor-university-cincinnati-health/74494272",
+   "outlet": "WLWT",
+   "summary": "Mary Toennis, a mother and health professional, has transformed her battle with colorectal cancer into a mission to support others by joining the oncology team that helped her through her journey.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/mary-toennis-cancer-survivor-university-cincinnati-health/74494272"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T22:22:00+00:00",
+   "updated": "2026-11-20T22:22:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.336,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Two-time cancer survivor, mother of 2 joins UC Health oncology team to help others"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "it-s-just-shocking-funeral-procession-held-in-florence-frid",
+   "title": "'It's just shocking:' Funeral procession held in Florence Friday for fallen Ludlow police officer",
+   "link": "https://www.wcpo.com/news/northern-kentucky/its-just-shocking-funeral-procession-held-in-florence-friday-for-fallen-ludlow-police-officer",
+   "outlet": "WCPO",
+   "summary": "Family, friends and fellow officers gathered to honor Sgt. Brian Koenes, a Northern Kentucky officer and veteran remembered for his life of service.",
+   "outlets": [
+    "WCPO"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/northern-kentucky/its-just-shocking-funeral-procession-held-in-florence-friday-for-fallen-ludlow-police-officer"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T22:14:07+00:00",
+   "updated": "2026-11-20T22:14:07+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.285,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Florence",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "'It's just shocking:' Funeral procession held in Florence Friday for fallen Ludlow police officer"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "larose-says-he-can-t-break-ties-over-hamilton-delaware-count",
+   "title": "LaRose says he can't break ties over Hamilton, Delaware county ballots",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPc3FObU1TeV9VZkc3UndIVkdnT1BLSXZMbDU5Z3FGNmVSalFCRU1tMUNGZnkxc19nbWJrVTNJb2hqRzVhbTRwOVRKQV9lTXVqSXF5Mkl6N1N6VEFtLXhoU0lSYWZBdEV6V1B3VlZ6Yms3OHd5YkliZDhicmlHQi1Od3hxRDdscGFsRjFaTmdfVFotWU04V0FNd21YbmtxY0FVTkYyOW9jdWpQZ1U5aFRCcUVEMG5tb1hhd3ItMlFJVTRlQTJ2V0o1cA?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPc3FObU1TeV9VZkc3UndIVkdnT1BLSXZMbDU5Z3FGNmVSalFCRU1tMUNGZnkxc19nbWJrVTNJb2hqRzVhbTRwOVRKQV9lTXVqSXF5Mkl6N1N6VEFtLXhoU0lSYWZBdEV6V1B3VlZ6Yms3OHd5YkliZDhicmlHQi1Od3hxRDdscGFsRjFaTmdfVFotWU04V0FNd21YbmtxY0FVTkYyOW9jdWpQZ1U5aFRCcUVEMG5tb1hhd3ItMlFJVTRlQTJ2V0o1cA?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T22:09:00+00:00",
+   "updated": "2026-11-20T22:13:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.278,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Hamilton",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "LaRose says he can't break ties over Hamilton, Delaware county ballots"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "fiona-the-hippo-died-and-cincinnati-grieved-then-came-the-an",
+   "title": "Fiona the hippo died and Cincinnati grieved. Then came the anger",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOWmdWS3MwYjVMaW1jVXJta0VPaFp0b19mV25vWjBla1ZrUTU1VjFuaC02NjZBREFCVlgxeGE1MUE0VW50WDI5YmEwWFlWUUtuX1FabkJCYkxCYjBqVjFscWEyeTV1ODdrbVBjM1RSRG1LbzJiWE1JSG9SQ1lzVGplZmhWeFBrcVBOYkZ0YmlqN2RQTFJzTzlCMmluOWswZFRYa2t1UDFvTWVoYUN6WEVha3NxR3NLQkdYQm9jVUN5TFhzUTZzTWlv?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOWmdWS3MwYjVMaW1jVXJta0VPaFp0b19mV25vWjBla1ZrUTU1VjFuaC02NjZBREFCVlgxeGE1MUE0VW50WDI5YmEwWFlWUUtuX1FabkJCYkxCYjBqVjFscWEyeTV1ODdrbVBjM1RSRG1LbzJiWE1JSG9SQ1lzVGplZmhWeFBrcVBOYkZ0YmlqN2RQTFJzTzlCMmluOWswZFRYa2t1UDFvTWVoYUN6WEVha3NxR3NLQkdYQm9jVUN5TFhzUTZzTWlv?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T21:52:00+00:00",
+   "updated": "2026-11-20T21:56:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.173,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "Fiona the hippo died and Cincinnati grieved. Then came the anger"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "fiona-will-continue-to-represent-city",
+   "title": "Fiona will continue to represent city",
+   "link": "https://www.fox19.com/2026/11/20/fiona-will-continue-represent-city/",
+   "outlet": "FOX19",
+   "summary": "Cincinnati still plans on using Fiona's image to represent the city.",
+   "outlets": [
+    "FOX19"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/20/fiona-will-continue-represent-city/"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T21:54:57+00:00",
+   "updated": "2026-11-20T21:54:57+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.167,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Fiona will continue to represent city"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "what-changes-could-cincinnati-zoo-implement-following-fiona",
+   "title": "What changes could Cincinnati Zoo implement following Fiona's death?",
+   "link": "https://local12.com/news/local/what-changes-could-cincinnati-zoo-implement-following-fionas-death-hippo-cove-hippopotamus-animal-animals-safety-guests-visitors-experts-federal-standards-endangered",
+   "outlet": "Local 12",
+   "summary": "A day after a tragedy at Hippo Cove, questions are mounting about what the Cincinnati Zoo might do next to prevent another incident like it.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/what-changes-could-cincinnati-zoo-implement-following-fionas-death-hippo-cove-hippopotamus-animal-animals-safety-guests-visitors-experts-federal-standards-endangered"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T21:49:47+00:00",
+   "updated": "2026-11-20T21:49:47+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.136,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "What changes could Cincinnati Zoo implement following Fiona's death?"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ohio-health-officials-announce-state-s-1st-pediatric-flu-dea",
+   "title": "Ohio health officials announce state\u2019s 1st pediatric flu death",
+   "link": "https://www.fox19.com/2026/11/20/ohio-health-officials-announce-states-1st-pediatric-flu-death/",
+   "outlet": "FOX19",
+   "summary": "Ohio health officials announced Friday the state\u2019s first pediatric flu death of the 2026-2027 flu season.",
+   "outlets": [
+    "FOX19",
+    "WLWT"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/20/ohio-health-officials-announce-states-1st-pediatric-flu-death/",
+    "WLWT": "https://www.wlwt.com/article/ohio-department-health-pediatric-death-flu-related-first-2026-27/74490052"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-20T14:44:00+00:00",
+   "updated": "2026-11-20T18:26:10+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.08,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Ohio health officials report first flu-associated pediatric death of 2026/27 flu season"
+     ],
+     [
+      "FOX19",
+      "Ohio health officials announce state\u2019s 1st pediatric flu death"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "timothy-the-hippo-writes-one-last-love-letter-to-fiona",
+   "title": "Timothy the hippo writes one last love letter to Fiona",
+   "link": "https://local12.com/news/local/timothy-the-hippo-writes-one-last-love-letter-to-fiona",
+   "outlet": "Local 12",
+   "summary": "Timothy, speaking through the San Antonio Zoo, wrote one last letter for Fiona after her passing.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/timothy-the-hippo-writes-one-last-love-letter-to-fiona"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T21:29:47+00:00",
+   "updated": "2026-11-20T21:29:47+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.021,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Timothy the hippo writes one last love letter to Fiona"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "surgery-on-fiona-would-have-been-a-death-sentence-cincinnati",
+   "title": "Surgery on Fiona \u2018would have been a death sentence,\u2019 Cincinnati Zoo says",
+   "link": "https://www.fox19.com/2026/11/20/cincinnati-zoo-shares-update-attempts-save-fiona-her-final-moments/",
+   "outlet": "FOX19",
+   "summary": "Zoo says hat Fiona ingested Nov. 8 was found stuck in her small intestine during post-mortem exam",
+   "outlets": [
+    "FOX19"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/20/cincinnati-zoo-shares-update-attempts-save-fiona-her-final-moments/"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T20:16:49+00:00",
+   "updated": "2026-11-20T21:22:41+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.981,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Surgery on Fiona \u2018would have been a death sentence,\u2019 Cincinnati Zoo says"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "the-good-life-expo-to-connect-people-with-local-businesses-e",
+   "title": "The Good Life Expo to connect people with local businesses, experts to improve life",
+   "link": "https://www.wlwt.com/article/the-good-life-expo-sharonville-experts-businesses/74493878",
+   "outlet": "WLWT",
+   "summary": "Are you looking for ways to improve your home, prioritize your health or plan your next adventure?",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/the-good-life-expo-sharonville-experts-businesses/74493878"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T21:21:00+00:00",
+   "updated": "2026-11-20T21:21:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.972,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "sharonville",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "The Good Life Expo to connect people with local businesses, experts to improve life"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "police-traffic-stop-for-impaired-driving-leads-to-large-drug",
+   "title": "Police: Traffic stop for impaired driving leads to large drug bust, 2 arrests in NKY",
+   "link": "https://local12.com/news/local/police-traffic-stop-impaired-driving-leads-to-large-drug-bust-2-arrests-in-nky-northern-kentucky-grant-county-weed-marijuana-pot-ovi-dui-cannabis-drugs-cincinnati",
+   "outlet": "Local 12",
+   "summary": "A traffic stop on Interstate 75 early Friday morning ended with two people in jail after deputies said they detected marijuana and signs of impairment during the roadside encounter.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/police-traffic-stop-impaired-driving-leads-to-large-drug-bust-2-arrests-in-nky-northern-kentucky-grant-county-weed-marijuana-pot-ovi-dui-cannabis-drugs-cincinnati"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T21:09:19+00:00",
+   "updated": "2026-11-20T21:09:19+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.909,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Police: Traffic stop for impaired driving leads to large drug bust, 2 arrests in NKY"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cincinnati-vice-mayor-jan-michele-lemon-kearney-discusses-fi",
+   "title": "Cincinnati Vice Mayor Jan-Michele Lemon Kearney discusses Fiona's death",
+   "link": "https://local12.com/news/local/cincinnati-vice-mayor-jan-michele-lemon-kearney-discusses-fionas-death",
+   "outlet": "Local 12",
+   "summary": "Cincinnati Vice Mayor Jan-Michele Lemon Kearney discusses Fiona's death",
+   "outlets": [
+    "Local 12",
+    "WKEF"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/cincinnati-vice-mayor-jan-michele-lemon-kearney-discusses-fionas-death",
+    "WKEF": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY19MTXNadVdwaHdURVlNWXF5cnFEY2hhM2czT09fTzJWVnRiVFo3d2RBX01kSUJXNTI2c1duNkZsZzVhMG4zcExQQlZtUGFSekRiY3lzOC1CbFBHaUJuazB2eDdFN2ZGOXNQc1dTRWFHZnJqZUpHUzdlczI0MXg5ZHFmSnhnYmVGMzNDV3lkVjlvUnBhUUhITG5LWHZ5WU4zeEJnT01qRmZQZw?oc=5"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-20T12:58:05+00:00",
+   "updated": "2026-11-20T16:05:34+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "Council"
+   ],
+   "city_score": 5.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.407,
+   "city_rank": 2.44,
+   "why": {
+    "matches": [
+     {
+      "group": "Council",
+      "term": "Vice Mayor",
+      "where": "headline",
+      "outlet": "Local 12",
+      "points": 5.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Cincinnati Vice Mayor Jan-Michele Lemon Kearney discusses Fiona's death"
+     ],
+     [
+      "WKEF",
+      "Cincinnati Vice Mayor Jan-Michele Lemon Kearney discusses Fiona's death"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ohio-gov-mike-dewine-speaks-out-after-fiona-the-hippo-dies-i",
+   "title": "Ohio Gov. Mike DeWine speaks out after Fiona the hippo dies in Cincinnati",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNMVVxNGlFRzl1TmtjdjlWSUp6TGlqd1ZXZ1Q4dm41eFdHM3dHZWs0cThFZndDUWlCaHQwbnNpN2NKZUFOVWY3N2xwbVhka0RIRVMtN2NkSUZobnV3aWpaZHlFdXJBMnNHUnVmaW16YXU5Mm1ncmVCTkszN2I0NzU0bUdwZDkzdDdqUW5xNVBRVUE1WlhfcF8ySGJwUFV0elJWY0ZtUjFtRHQ?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNMVVxNGlFRzl1TmtjdjlWSUp6TGlqd1ZXZ1Q4dm41eFdHM3dHZWs0cThFZndDUWlCaHQwbnNpN2NKZUFOVWY3N2xwbVhka0RIRVMtN2NkSUZobnV3aWpaZHlFdXJBMnNHUnVmaW16YXU5Mm1ncmVCTkszN2I0NzU0bUdwZDkzdDdqUW5xNVBRVUE1WlhfcF8ySGJwUFV0elJWY0ZtUjFtRHQ?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T17:25:00+00:00",
+   "updated": "2026-11-20T17:25:00+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "State law"
+   ],
+   "city_score": 4.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.024,
+   "city_rank": 2.223,
+   "why": {
+    "matches": [
+     {
+      "group": "State law",
+      "term": "DeWine",
+      "where": "headline",
+      "outlet": "Enquirer",
+      "points": 4.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "Ohio Gov. Mike DeWine speaks out after Fiona the hippo dies in Cincinnati"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cincinnati-needs-a-new-city-manager-not-a-148k-consultant-le",
+   "title": "Cincinnati needs a new city manager, not a $148K consultant | Letters",
+   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNbXhsZXNISk1pOGtGakw4MkdrREFFa041YlBXVm9RMHhLaDlMdGtuSks2YUhsTXh6ZGpNbjl6dHY0UEpzZ2RUcUdoV0JlVkg1UUZZWG0tUm9icGl6TzBPR1UzSDZjUlhDNktsUnZESlpUenY5XzZpSDd4cFJpY0ZjSmdWTFdrVmFvaXdCMjhTMUo3MUZzc0dFcnJiWFhOVWMybi1YdTRMeWNHVjlhd2NPOUcwVFdnWDQtQVg1RWxKenJHRmV6QzJpN2ZiLTRNdWJyWkJiRkNqa2FIcDA?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNbXhsZXNISk1pOGtGakw4MkdrREFFa041YlBXVm9RMHhLaDlMdGtuSks2YUhsTXh6ZGpNbjl6dHY0UEpzZ2RUcUdoV0JlVkg1UUZZWG0tUm9icGl6TzBPR1UzSDZjUlhDNktsUnZESlpUenY5XzZpSDd4cFJpY0ZjSmdWTFdrVmFvaXdCMjhTMUo3MUZzc0dFcnJiWFhOVWMybi1YdTRMeWNHVjlhd2NPOUcwVFdnWDQtQVg1RWxKenJHRmV6QzJpN2ZiLTRNdWJyWkJiRkNqa2FIcDA?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T15:20:00+00:00",
+   "updated": "2026-11-20T15:20:00+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "City Manager"
+   ],
+   "city_score": 6.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 0.723,
+   "city_rank": 2.232,
+   "why": {
+    "matches": [
+     {
+      "group": "City Manager",
+      "term": "city manager",
+      "where": "headline",
+      "outlet": "Enquirer",
+      "points": 6.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "Cincinnati needs a new city manager, not a $148K consultant | Letters"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "4-year-old-critically-injured-in-cincinnati-shooting-police",
+   "title": "4-year-old critically injured in Cincinnati shooting, police say",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWFJRQVRpWThSakhXZjlmX0otdVZJdFNQaTZEMWdmLTVfU1lENmZKZXJtSWFGRDVRNGgxVzZRekZ1bm1ubW51N2ZYNE9yaXFyZDc2Vl9OR2VDaFo5WjFGbzBvVXJQTEtidFo5elV2SlJ2LVFEdUFxMjNiV0dERzUtTEZHVFUwa2t0X1pjZzFlNzYtaUNIZ2VWbEJXZjVUNkRLV0Q2eXBEMmtkc1ZoRFRYZG8wcnRBMjV1dk0yVm1kdW5Vem8?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWFJRQVRpWThSakhXZjlmX0otdVZJdFNQaTZEMWdmLTVfU1lENmZKZXJtSWFGRDVRNGgxVzZRekZ1bm1ubW51N2ZYNE9yaXFyZDc2Vl9OR2VDaFo5WjFGbzBvVXJQTEtidFo5elV2SlJ2LVFEdUFxMjNiV0dERzUtTEZHVFUwa2t0X1pjZzFlNzYtaUNIZ2VWbEJXZjVUNkRLV0Q2eXBEMmtkc1ZoRFRYZG8wcnRBMjV1dk0yVm1kdW5Vem8?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-20T11:02:00+00:00",
+   "updated": "2026-11-20T11:02:00+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "Police"
+   ],
+   "city_score": 3.0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 0.353,
+   "city_rank": 0.606,
+   "why": {
+    "matches": [
+     {
+      "group": "Police",
+      "term": "police",
+      "where": "headline",
+      "outlet": "Enquirer",
+      "points": 3.0
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "shooting",
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": false,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "4-year-old critically injured in Cincinnati shooting, police say"
+     ]
+    ]
+   }
+  }
+ ],
+ "sources_status": [
+  {
+   "source": "Enquirer",
+   "ok": true,
+   "items": 59,
+   "junk_dropped": 3,
+   "junk_examples": [
+    "Polymarket Sign-Up Bonus Code SBWIRE | Get $25 for NFL, NBA, NCAAF, Politics (Nov. 20)",
+    "Kalshi referral code CINCY | $25 bonus for NFL, NCAAF, NBA & more",
+    "Kalshi promo code CINCY | $25 bonus for NFL, NCAAF, NBA & more"
+   ],
+   "used": "https://news.google.com/rss/search?q=site:cincinnati.com/story+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WCPO",
+   "ok": true,
+   "items": 30,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wcpo.com/news/local-news.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WLWT",
+   "ok": true,
+   "items": 19,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wlwt.com/local-news-rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "FOX19",
+   "ok": true,
+   "items": 20,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.fox19.com/arc/outboundfeeds/rss/category/news/?outputType=xml",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Local 12",
+   "ok": true,
+   "items": 45,
+   "junk_dropped": 1,
+   "junk_examples": [
+    "Cincinnati Zoo announces Fiona's death after medical emergency caused by ingesting hat"
+   ],
+   "used": "https://local12.com/news/local.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WVXU",
+   "ok": true,
+   "items": 10,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wvxu.org/local-news.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Signal",
+   "ok": true,
+   "items": 10,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://signalcincinnati.org/feed/",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City Hall sweep",
+   "ok": true,
+   "items": 16,
+   "junk_dropped": 1,
+   "junk_examples": [
+    "Tributes Pour In For Fiona The Hippo"
+   ],
+   "used": "https://news.google.com/rss/search?q=Cincinnati+(%22city+council%22+OR+%22city+hall%22+OR+%22city+manager%22+OR+mayor)+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City of Cincinnati",
+   "ok": true,
+   "items": 0,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": null,
+   "used_fallback": false,
+   "errors": [
+    "empty: https://news.google.com/rss/search?q=site:cincinnati-oh.gov/cityofcincinnati/news+when:3d&hl=en-US&gl=US&ceid=US:en"
+   ],
+   "fail_streak": 0
+  },
+  {
+   "source": "Ohio Capital Journal",
+   "ok": true,
+   "items": 15,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://ohiocapitaljournal.com/feed/",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Ohio legislation sweep",
+   "ok": true,
+   "items": 12,
+   "junk_dropped": 7,
+   "junk_examples": [
+    "Rep. Gross Champions Freedom to Carry Act as Ohio General Assembly Passes Amended Senate Bill 278",
+    "Ohio Judge Improperly Blocked Nearly 1,700 Vehicle Registrations Over Unpaid Fines",
+    "Rep. King Votes in Support of Legislation Strengthening Ohio's Second Amendment Rights",
+    "Ohio Lawmaker Backs Expanded Gun Rights Bill",
+    "Ohio Senate Passes Bill on Voter Approval for Traffic Cameras",
+    "Ohio Tightens Rules for Addiction Recovery Homes",
+    "This State Just Put Anti-Gunner Cities on Notice With the Freedom to Carry Act"
+   ],
+   "used": "https://news.google.com/rss/search?q=Ohio+(lawmakers+OR+Statehouse+OR+%22House+Bill%22+OR+%22Senate+Bill%22)+(cities+OR+%22local+governments%22+OR+municipalities+OR+%22home+rule%22)+when:2d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Federal local-gov sweep",
+   "ok": true,
+   "items": 9,
+   "junk_dropped": 4,
+   "junk_examples": [
+    "Infrastructure Spending in States and Congressional Districts",
+    "LA Tenants Sue to Stop HUD Rule Targeting Immigrant Households",
+    "Flock Cameras in Utah and Your Data Privacy",
+    "Augusta Firefighters Get $300,000 for Cancer, Mental Health"
+   ],
+   "used": "https://news.google.com/rss/search?q=(%22U.S.+Congress%22+OR+%22federal+funding%22+OR+%22federal+grants%22+OR+HUD+OR+FEMA+OR+%22Trump+administration%22)+(%22local+governments%22+OR+%22U.S.+cities%22+OR+mayors)+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City meetings (Legistar)",
+   "ok": true,
+   "items": 1,
+   "used": "web API (cincinnatioh)",
+   "error": null,
+   "fail_streak": 0
+  },
+  {
+   "source": "Game days (ESPN)",
+   "ok": true,
+   "items": 3,
+   "error": null,
+   "fail_streak": 0
+  }
+ ],
+ "memory": {
+  "fail_streak": {
+   "Enquirer": 0,
+   "WCPO": 0,
+   "WLWT": 0,
+   "FOX19": 0,
+   "Local 12": 0,
+   "WVXU": 0,
+   "Signal": 0,
+   "City Hall sweep": 0,
+   "City of Cincinnati": 0,
+   "Ohio Capital Journal": 0,
+   "Ohio legislation sweep": 0,
+   "Federal local-gov sweep": 0,
+   "City meetings (Legistar)": 0,
+   "Game days (ESPN)": 0
+  },
+  "seen": [
+   {
+    "tok": [
+     "died",
+     "fiona",
+     "hat",
+     "hippo",
+     "ingesting",
+     "mourn",
+     "nation",
+     "zoo"
+    ],
+    "first_seen": "2026-11-19T20:21:34+00:00",
+    "title": "Nation mourns Fiona, Cincinnati Zoo hippo who died after ingesting a hat"
+   },
+   {
+    "tok": [
+     "fighter",
+     "fiona",
+     "hippo",
+     "honoring",
+     "little",
+     "ohio'",
+     "passe",
+     "resolution",
+     "senate",
+     "unanimou"
+    ],
+    "first_seen": "2026-11-20T20:11:39+00:00",
+    "title": "'Ohio's little fighter': U.S. Senate passes unanimous resolution honoring Fiona the hippo"
+   },
+   {
+    "tok": [
+     "1989",
+     "25",
+     "98",
+     "award",
+     "case",
+     "judge",
+     "million",
+     "rape",
+     "survivor"
+    ],
+    "first_seen": "2026-11-20T16:33:00+00:00",
+    "title": "Judge awards rape survivor $98.25 million in 1989 Cincinnati case"
+   },
+   {
+    "tok": [
+     "border",
+     "czar",
+     "ice",
+     "man",
+     "other",
+     "sentenced",
+     "threat"
+    ],
+    "first_seen": "2026-11-20T20:44:20+00:00",
+    "title": "Cincinnati man sentenced for threats against ICE, border czar, others"
+   },
+   {
+    "tok": [
+     "county",
+     "fiona",
+     "hippo",
+     "milwaukee",
+     "remembering",
+     "welcome",
+     "while",
+     "zoo"
+    ],
+    "first_seen": "2026-11-19T21:01:28+00:00",
+    "title": "Milwaukee County Zoo welcomes new hippo while remembering Fiona"
+   },
+   {
+    "tok": [
+     "avenue",
+     "beechmont",
+     "closed",
+     "crash",
+     "die",
+     "hour",
+     "motorcyclist",
+     "police"
+    ],
+    "first_seen": "2026-11-20T22:18:00+00:00",
+    "title": "Police: Motorcyclist dies in crash that closed Beechmont Avenue for hours"
+   },
+   {
+    "tok": [
+     "final",
+     "football",
+     "high",
+     "playoff",
+     "regional",
+     "school",
+     "score",
+     "see",
+     "winning"
+    ],
+    "first_seen": "2026-11-19T22:03:17+00:00",
+    "title": "Ohio high school playoff football scores. See who is winning in regional finals tonight"
+   },
+   {
+    "tok": [
+     "animal",
+     "author",
+     "beloved",
+     "death",
+     "fiona",
+     "hippo",
+     "miss",
+     "musical",
+     "reflect"
+    ],
+    "first_seen": "2026-11-20T23:29:31+00:00",
+    "title": "\u2018We\u2019ll miss you Fiona\u2019 | Authors of hippo musical in Cincinnati reflect on beloved animal\u2019s death"
+   },
+   {
+    "tok": [
+     "19",
+     "coroner",
+     "dead",
+     "fairfield",
+     "found",
+     "ids",
+     "inside",
+     "old",
+     "shot",
+     "vehicle",
+     "year"
+    ],
+    "first_seen": "2026-11-18T10:50:37+00:00",
+    "title": "Coroner IDs 19-year-old shot, found dead inside vehicle in Fairfield"
+   },
+   {
+    "tok": [
+     "again",
+     "ballot",
+     "board",
+     "county",
+     "hamilton",
+     "provisional",
+     "split"
+    ],
+    "first_seen": "2026-11-20T05:25:00+00:00",
+    "title": "Hamilton County board splits again over provisional ballots"
+   },
+   {
+    "tok": [
+     "former",
+     "glass",
+     "hospitality",
+     "looking",
+     "server",
+     "sue",
+     "unpaid",
+     "wage"
+    ],
+    "first_seen": "2026-11-20T23:20:00+00:00",
+    "title": "Former server sues Looking Glass Hospitality over unpaid wages"
+   },
+   {
+    "tok": [
+     "bloat",
+     "cove",
+     "death",
+     "fiona",
+     "hippo",
+     "provide",
+     "rest",
+     "zoo"
+    ],
+    "first_seen": "2026-11-20T19:11:00+00:00",
+    "title": "Zoo provides update on rest of Hippo Cove bloat after death of Fiona"
+   },
+   {
+    "tok": [
+     "beloved",
+     "businesse",
+     "demand",
+     "fiona",
+     "high",
+     "hippo",
+     "honor",
+     "legacy",
+     "merchandise"
+    ],
+    "first_seen": "2026-11-20T22:56:31+00:00",
+    "title": "Fiona Merchandise in High Demand as Cincinnati Businesses Honor Beloved Hippo\u2019s Legacy"
+   },
+   {
+    "tok": [
+     "benefit",
+     "buy",
+     "fiona",
+     "themed",
+     "treat",
+     "zoo"
+    ],
+    "first_seen": "2026-11-20T22:54:00+00:00",
+    "title": "Where to buy Fiona-themed treats to benefit the Cincinnati Zoo"
+   },
+   {
+    "tok": [
+     "death",
+     "exam",
+     "fiona",
+     "hippo",
+     "light",
+     "mortem",
+     "post",
+     "shed"
+    ],
+    "first_seen": "2026-11-20T18:45:00+00:00",
+    "title": "Post-mortem exam sheds new light on Fiona the hippo\u2019s death"
+   },
+   {
+    "tok": [
+     "ahead",
+     "cat",
+     "colony",
+     "find",
+     "home",
+     "nku",
+     "planned",
+     "renovation"
+    ],
+    "first_seen": "2026-11-20T22:38:23+00:00",
+    "title": "Cat colony at NKU finds new home ahead of planned renovations"
+   },
+   {
+    "tok": [
+     "adult",
+     "court",
+     "die",
+     "due",
+     "gunshot",
+     "old",
+     "saturday",
+     "westwood",
+     "wound",
+     "year"
+    ],
+    "first_seen": "2026-11-20T22:38:00+00:00",
+    "title": "Two adults due in court Saturday after Westwood 4-year-old dies from gunshot wound"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T22:35:00+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "break",
+     "fixed",
+     "kemper",
+     "main",
+     "reopen",
+     "road",
+     "sharonville",
+     "water"
+    ],
+    "first_seen": "2026-11-20T22:23:54+00:00",
+    "title": "Kemper Road in Sharonville reopens after water main break fixed"
+   },
+   {
+    "tok": [
+     "cancer",
+     "health",
+     "help",
+     "join",
+     "mother",
+     "oncology",
+     "other",
+     "survivor",
+     "team",
+     "time"
+    ],
+    "first_seen": "2026-11-20T22:22:00+00:00",
+    "title": "Two-time cancer survivor, mother of 2 joins UC Health oncology team to help others"
+   },
+   {
+    "tok": [
+     "fallen",
+     "florence",
+     "friday",
+     "funeral",
+     "held",
+     "it'",
+     "ludlow",
+     "officer",
+     "police",
+     "procession",
+     "shocking"
+    ],
+    "first_seen": "2026-11-20T22:14:07+00:00",
+    "title": "'It's just shocking:' Funeral procession held in Florence Friday for fallen Ludlow police officer"
+   },
+   {
+    "tok": [
+     "ballot",
+     "break",
+     "can't",
+     "county",
+     "delaware",
+     "hamilton",
+     "larose",
+     "tie"
+    ],
+    "first_seen": "2026-11-20T22:09:00+00:00",
+    "title": "LaRose says he can't break ties over Hamilton, Delaware county ballots"
+   },
+   {
+    "tok": [
+     "anger",
+     "came",
+     "died",
+     "fiona",
+     "grieved",
+     "hippo"
+    ],
+    "first_seen": "2026-11-20T21:52:00+00:00",
+    "title": "Fiona the hippo died and Cincinnati grieved. Then came the anger"
+   },
+   {
+    "tok": [
+     "city",
+     "continue",
+     "fiona",
+     "represent"
+    ],
+    "first_seen": "2026-11-20T21:54:57+00:00",
+    "title": "Fiona will continue to represent city"
+   },
+   {
+    "tok": [
+     "change",
+     "death",
+     "fiona'",
+     "following",
+     "implement",
+     "zoo"
+    ],
+    "first_seen": "2026-11-20T21:49:47+00:00",
+    "title": "What changes could Cincinnati Zoo implement following Fiona's death?"
+   },
+   {
+    "tok": [
+     "1st",
+     "announce",
+     "death",
+     "flu",
+     "health",
+     "official",
+     "pediatric",
+     "state"
+    ],
+    "first_seen": "2026-11-20T14:44:00+00:00",
+    "title": "Ohio health officials announce state\u2019s 1st pediatric flu death"
+   },
+   {
+    "tok": [
+     "fiona",
+     "hippo",
+     "letter",
+     "love",
+     "timothy",
+     "write"
+    ],
+    "first_seen": "2026-11-20T21:29:47+00:00",
+    "title": "Timothy the hippo writes one last love letter to Fiona"
+   },
+   {
+    "tok": [
+     "death",
+     "fiona",
+     "have",
+     "sentence",
+     "surgery",
+     "zoo"
+    ],
+    "first_seen": "2026-11-20T20:16:49+00:00",
+    "title": "Surgery on Fiona \u2018would have been a death sentence,\u2019 Cincinnati Zoo says"
+   },
+   {
+    "tok": [
+     "businesse",
+     "connect",
+     "expert",
+     "expo",
+     "good",
+     "improve",
+     "life",
+     "people"
+    ],
+    "first_seen": "2026-11-20T21:21:00+00:00",
+    "title": "The Good Life Expo to connect people with local businesses, experts to improve life"
+   },
+   {
+    "tok": [
+     "arrest",
+     "bust",
+     "driving",
+     "drug",
+     "impaired",
+     "large",
+     "lead",
+     "nky",
+     "police",
+     "stop",
+     "traffic"
+    ],
+    "first_seen": "2026-11-20T21:09:19+00:00",
+    "title": "Police: Traffic stop for impaired driving leads to large drug bust, 2 arrests in NKY"
+   },
+   {
+    "tok": [
+     "death",
+     "discusse",
+     "fiona'",
+     "jan",
+     "kearney",
+     "lemon",
+     "mayor",
+     "michele",
+     "vice"
+    ],
+    "first_seen": "2026-11-20T12:58:05+00:00",
+    "title": "Cincinnati Vice Mayor Jan-Michele Lemon Kearney discusses Fiona's death"
+   },
+   {
+    "tok": [
+     "dewine",
+     "die",
+     "fiona",
+     "gov",
+     "hippo",
+     "mike",
+     "speak"
+    ],
+    "first_seen": "2026-11-20T17:25:00+00:00",
+    "title": "Ohio Gov. Mike DeWine speaks out after Fiona the hippo dies in Cincinnati"
+   },
+   {
+    "tok": [
+     "148k",
+     "city",
+     "consultant",
+     "letter",
+     "manager",
+     "need"
+    ],
+    "first_seen": "2026-11-20T15:20:00+00:00",
+    "title": "Cincinnati needs a new city manager, not a $148K consultant | Letters"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T22:35:00+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T22:35:00+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "beloved",
+     "die",
+     "exhibit",
+     "fiona",
+     "hat",
+     "hippo",
+     "swallowing",
+     "thrown",
+     "zoo'"
+    ],
+    "first_seen": "2026-11-19T20:21:34+00:00",
+    "title": "Cincinnati Zoo's beloved Fiona the hippo dies after swallowing hat thrown into exhibit"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T22:35:00+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T22:35:00+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T22:35:00+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T22:35:00+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "apparent",
+     "dead",
+     "found",
+     "home",
+     "including",
+     "indiana",
+     "murder",
+     "suicide",
+     "teen"
+    ],
+    "first_seen": "2026-11-19T15:34:00+00:00",
+    "title": "Four found dead, including 2 teens, in Indiana home in apparent murder-suicide"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T22:35:00+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "businesse",
+     "fiona",
+     "love",
+     "show"
+    ],
+    "first_seen": "2026-11-20T20:44:50+00:00",
+    "title": "Cincinnati businesses show their love for Fiona"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T22:35:00+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "benefit",
+     "coffee",
+     "donut",
+     "fiona",
+     "honoring",
+     "servatii",
+     "zoo"
+    ],
+    "first_seen": "2026-11-20T20:29:43+00:00",
+    "title": "SERVATii Honoring Fiona with $1 Fiona Donuts & Coffee to Benefit Cincinnati Zoo"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "baby",
+     "beloved",
+     "fiona",
+     "helped",
+     "hippo",
+     "nurse",
+     "remember",
+     "save"
+    ],
+    "first_seen": "2026-11-19T20:21:34+00:00",
+    "title": "Cincinnati nurse who helped save Fiona as a baby remembers beloved hippo"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T22:35:00+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "animal",
+     "brief",
+     "death",
+     "fiona",
+     "harambe",
+     "history",
+     "involved",
+     "visitor",
+     "zoo"
+    ],
+    "first_seen": "2026-11-20T20:12:40+00:00",
+    "title": "From Harambe to Fiona: A brief history of visitor-involved zoo animal deaths"
+   },
+   {
+    "tok": [
+     "170m",
+     "builder",
+     "former",
+     "housing",
+     "northern",
+     "project",
+     "public",
+     "site",
+     "unveil"
+    ],
+    "first_seen": "2026-11-20T11:32:38+00:00",
+    "title": "Builder unveils $170M project on former Northern Kentucky public housing site"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "fiona'",
+     "hat",
+     "hippo",
+     "intestine",
+     "middle",
+     "necropsy",
+     "show",
+     "stuck"
+    ],
+    "first_seen": "2026-11-20T19:49:37+00:00",
+    "title": "Necropsy shows hat was stuck in the middle of hippo Fiona's intestines"
+   },
+   {
+    "tok": [
+     "firearm",
+     "high",
+     "investigated",
+     "lifted",
+     "lockdown",
+     "northern",
+     "school"
+    ],
+    "first_seen": "2026-11-20T19:48:16+00:00",
+    "title": "Lockdown lifted at Northern Kentucky high school after firearm report investigated"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "change",
+     "chief",
+     "emergency",
+     "fema",
+     "house",
+     "management",
+     "member",
+     "push"
+    ],
+    "first_seen": "2026-11-20T14:18:08+00:00",
+    "title": "FEMA chief, US House members push for emergency management changes"
+   },
+   {
+    "tok": [
+     "blockage",
+     "caused",
+     "death",
+     "fiona",
+     "hat",
+     "intestinal",
+     "led",
+     "reveal",
+     "zoo"
+    ],
+    "first_seen": "2026-11-20T19:22:03+00:00",
+    "title": "Cincinnati Zoo reveals hat caused intestinal blockage that led to Fiona\u2019s death"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "division",
+     "elder",
+     "final",
+     "meeting",
+     "paycor",
+     "princeton",
+     "regional",
+     "stadium"
+    ],
+    "first_seen": "2026-11-19T22:03:17+00:00",
+    "title": "Elder, Princeton meeting at Paycor Stadium for Division I regional final"
+   },
+   {
+    "tok": [
+     "around",
+     "feel",
+     "returning",
+     "seasonal",
+     "sticking",
+     "thanksgiving",
+     "warm",
+     "weather"
+    ],
+    "first_seen": "2026-11-20T12:26:00+00:00",
+    "title": "Warm weather sticking around before returning to seasonal feel for Thanksgiving"
+   },
+   {
+    "tok": [
+     "death",
+     "effort",
+     "explain",
+     "fiona'",
+     "save",
+     "share",
+     "zoo"
+    ],
+    "first_seen": "2026-11-20T18:51:31+00:00",
+    "title": "Cincinnati Zoo shares update after Fiona's death, explains efforts to save her"
+   },
+   {
+    "tok": [
+     "23m",
+     "best",
+     "expansion",
+     "plan",
+     "plu",
+     "sanitizer",
+     "walton"
+    ],
+    "first_seen": "2026-11-20T18:26:00+00:00",
+    "title": "Best Sanitizers plans $23M-plus expansion in Walton"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "connection",
+     "did",
+     "different",
+     "everyone",
+     "feel",
+     "fiona",
+     "has",
+     "reason",
+     "strong",
+     "such"
+    ],
+    "first_seen": "2026-11-20T18:23:00+00:00",
+    "title": "Why did we feel such a strong connection to Fiona? Everyone has a different reason"
+   },
+   {
+    "tok": [
+     "400",
+     "greater",
+     "holiday",
+     "market",
+     "return",
+     "vendor"
+    ],
+    "first_seen": "2026-11-20T18:20:17+00:00",
+    "title": "Greater Cincinnati Holiday Market returns with 400+ vendors"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T18:19:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "here'",
+     "misse",
+     "pardon",
+     "pete",
+     "point",
+     "rose",
+     "trump"
+    ],
+    "first_seen": "2026-11-19T21:45:00+00:00",
+    "title": "Here's the point Trump misses with Pete Rose 'pardon'"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T18:19:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "has",
+     "human",
+     "massage",
+     "parlor",
+     "place",
+     "raided",
+     "recovered",
+     "trafficking",
+     "victim"
+    ],
+    "first_seen": "2026-11-20T15:22:03+00:00",
+    "title": "\u2018Human trafficking has no place in Ohio:\u2019 3 massage parlors raided, 6 victims recovered"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "fiona'",
+     "forward",
+     "heart",
+     "honoring",
+     "legacy",
+     "move",
+     "resolution",
+     "spirit",
+     "symbol"
+    ],
+    "first_seen": "2026-11-20T20:11:39+00:00",
+    "title": "'Symbol of the spirit and heart of Ohio': Resolution honoring Fiona's legacy moves forward"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T18:19:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "charge",
+     "criminal",
+     "death",
+     "fiona",
+     "hippo",
+     "unlikely",
+     "zoo"
+    ],
+    "first_seen": "2026-11-20T17:42:43+00:00",
+    "title": "Fiona the Cincinnati Zoo hippo: Why criminal charges in her death are unlikely"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T18:19:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "aim",
+     "city",
+     "covington",
+     "initiative",
+     "input",
+     "part",
+     "public",
+     "revitalize",
+     "seek"
+    ],
+    "first_seen": "2026-11-20T17:20:33+00:00",
+    "title": "New initiative aims to revitalize part of Covington; city seeks public input"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T18:19:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "apartment",
+     "displaced",
+     "dog",
+     "fire",
+     "rescued",
+     "resident"
+    ],
+    "first_seen": "2026-11-20T06:17:40+00:00",
+    "title": "Dog rescued, 3 residents displaced in Cincinnati apartment fire"
+   },
+   {
+    "tok": [
+     "back",
+     "between",
+     "big",
+     "bond",
+     "fiona",
+     "fritz",
+     "looking",
+     "sister",
+     "special"
+    ],
+    "first_seen": "2026-11-20T16:33:00+00:00",
+    "title": "Fiona the Big Sister: Looking back on the special bond between Fiona, Fritz"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "attempt",
+     "final",
+     "fiona",
+     "moment",
+     "save",
+     "share",
+     "zoo"
+    ],
+    "first_seen": "2026-11-20T18:51:39+00:00",
+    "title": "Cincinnati Zoo shares update on attempts to save Fiona, her final moments"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T18:19:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "devastated",
+     "fan",
+     "fiona",
+     "loss"
+    ],
+    "first_seen": "2026-11-19T18:45:00+00:00",
+    "title": "Fans devastated over loss of Fiona"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T18:19:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "center",
+     "glowing",
+     "holiday",
+     "light",
+     "mile",
+     "nature",
+     "through",
+     "trail",
+     "walk"
+    ],
+    "first_seen": "2026-11-19T19:14:00+00:00",
+    "title": "Walk through a one-mile trail of glowing holiday lights at the Cincinnati Nature Center"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "changing",
+     "emotional",
+     "fiona",
+     "keeper",
+     "life",
+     "losing",
+     "tribute"
+    ],
+    "first_seen": "2026-11-20T19:43:00+00:00",
+    "title": "Fiona\u2019s keeper says losing her is 'life-changing' in emotional tribute"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T18:19:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T18:19:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "county",
+     "death",
+     "fentanyl",
+     "hamilton",
+     "inmate",
+     "jail",
+     "reache",
+     "settlement"
+    ],
+    "first_seen": "2026-11-20T15:50:06+00:00",
+    "title": "Hamilton County reaches settlement in jail inmate\u2019s fentanyl death"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T18:19:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "city",
+     "fiona",
+     "mourning",
+     "time",
+     "wake",
+     "without"
+    ],
+    "first_seen": "2026-11-20T15:33:44+00:00",
+    "title": "A city in mourning: Cincinnati wakes up, this time without Fiona"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T18:19:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T18:19:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "911",
+     "campbell",
+     "county",
+     "kenton",
+     "outage",
+     "restored",
+     "service"
+    ],
+    "first_seen": "2026-11-20T09:43:12+00:00",
+    "title": "911 service restored in Kenton, Campbell counties after outage"
+   },
+   {
+    "tok": [
+     "county",
+     "doe",
+     "hamilton",
+     "letter",
+     "like",
+     "shortchange",
+     "taxpayer",
+     "them"
+    ],
+    "first_seen": "2026-11-20T14:28:00+00:00",
+    "title": "Can taxpayers shortchange Hamilton County like it does them? | Letters"
+   },
+   {
+    "tok": [
+     "fiona",
+     "hippo",
+     "honor",
+     "iconic",
+     "media",
+     "remembering",
+     "social",
+     "tribute"
+    ],
+    "first_seen": "2026-11-19T21:18:00+00:00",
+    "title": "Remembering Fiona: Tributes honor iconic hippo on social media"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "around",
+     "death",
+     "felt",
+     "fiona'",
+     "image",
+     "legacy"
+    ],
+    "first_seen": "2026-11-20T13:55:00+00:00",
+    "title": "Fiona's image, legacy still felt around Cincinnati after death"
+   },
+   {
+    "tok": [
+     "911",
+     "call",
+     "carrier",
+     "enforcement",
+     "impacting",
+     "issue",
+     "law",
+     "northern",
+     "reporting",
+     "service"
+    ],
+    "first_seen": "2026-11-20T08:29:55+00:00",
+    "title": "Law enforcement in Ohio, Northern Kentucky reporting carrier service issues impacting 911 calls"
+   },
+   {
+    "tok": [
+     "butler",
+     "county",
+     "health",
+     "noroviru",
+     "official",
+     "reported",
+     "warn",
+     "wastewater"
+    ],
+    "first_seen": "2026-11-20T00:40:00+00:00",
+    "title": "Butler County health officials warn of norovirus reported in wastewater"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "community",
+     "deliver",
+     "fiona",
+     "flower",
+     "letter",
+     "outside",
+     "prayer",
+     "zoo"
+    ],
+    "first_seen": "2026-11-20T11:41:00+00:00",
+    "title": "Community delivers letters, flowers and prayers for Fiona outside Cincinnati Zoo"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "die",
+     "emergency",
+     "fiona",
+     "hippo",
+     "medical",
+     "zoo"
+    ],
+    "first_seen": "2026-11-20T12:30:02+00:00",
+    "title": "Fiona the hippo dies after medical emergency at Cincinnati Zoo"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "briefing",
+     "daily",
+     "fiona",
+     "mourn"
+    ],
+    "first_seen": "2026-11-20T11:32:05+00:00",
+    "title": "Cincinnati mourns Fiona | Daily Briefing"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "branch",
+     "fairfield",
+     "lane",
+     "library",
+     "open",
+     "township"
+    ],
+    "first_seen": "2026-11-20T09:40:00+00:00",
+    "title": "Lane Libraries opens new branch in Fairfield Township"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "911",
+     "butler",
+     "call",
+     "county",
+     "nky",
+     "official",
+     "outage",
+     "phone"
+    ],
+    "first_seen": "2026-11-20T10:51:00+00:00",
+    "title": "911 call outages in NKY; phone outages in Butler County, officials say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "dead",
+     "fire",
+     "found",
+     "house",
+     "indiana",
+     "person",
+     "southeast"
+    ],
+    "first_seen": "2026-11-19T20:37:41+00:00",
+    "title": "1 person found dead after house fire in southeast Indiana"
+   },
+   {
+    "tok": [
+     "begin",
+     "employee",
+     "kroger",
+     "laying",
+     "thousand"
+    ],
+    "first_seen": "2026-11-20T05:55:58+00:00",
+    "title": "Kroger begins laying off thousands of employees"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T15:57:04+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T14:38:27+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "cowboy",
+     "lobo",
+     "mexico",
+     "odd",
+     "pick",
+     "prediction",
+     "wyoming"
+    ],
+    "first_seen": "2026-11-20T06:37:00+00:00",
+    "title": "New Mexico Lobos at Wyoming Cowboys odds, picks and predictions"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T14:38:27+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "eye",
+     "greater",
+     "hooper",
+     "keep",
+     "nationally",
+     "ranked"
+    ],
+    "first_seen": "2026-11-20T05:05:00+00:00",
+    "title": "Keep an eye on these nationally-ranked Greater Cincinnati hoopers"
+   },
+   {
+    "tok": [
+     "2026",
+     "boy",
+     "northern",
+     "placed",
+     "returning",
+     "state",
+     "wrestler"
+    ],
+    "first_seen": "2026-11-20T05:02:00+00:00",
+    "title": "Returning Northern Kentucky boys wrestlers who placed at state in 2026"
+   },
+   {
+    "tok": [
+     "biase",
+     "center",
+     "civic",
+     "combat",
+     "created",
+     "gain",
+     "liberal",
+     "perceived",
+     "power",
+     "university"
+    ],
+    "first_seen": "2026-11-20T05:01:00+00:00",
+    "title": "Civics centers created to combat perceived liberal biases at Ohio universities could gain more power"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T14:38:27+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "away",
+     "beloved",
+     "cincinnati'",
+     "eating",
+     "fionna",
+     "hat",
+     "hippo",
+     "passe",
+     "visitor'"
+    ],
+    "first_seen": "2026-11-20T04:35:32+00:00",
+    "title": "Cincinnati's beloved hippo, Fionna, passes away after eating visitor's hat"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T14:38:27+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "fiona",
+     "hippo",
+     "remembering",
+     "zoo'"
+    ],
+    "first_seen": "2026-11-20T00:26:00+00:00",
+    "title": "Remembering Cincinnati Zoo's Fiona the hippo"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T14:38:27+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T14:38:27+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "best",
+     "fiona",
+     "global",
+     "hippo'",
+     "icon",
+     "moment",
+     "remembering"
+    ],
+    "first_seen": "2026-11-19T23:17:00+00:00",
+    "title": "Fiona the hippo's best moments: Remembering a global icon"
+   },
+   {
+    "tok": [
+     "arrested",
+     "die",
+     "old",
+     "police",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "Police: 4-year-old dies, 2 arrested after shooting in Westwood"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T14:38:27+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-20T14:38:27+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "coroner'",
+     "did",
+     "family",
+     "friend",
+     "henry",
+     "know",
+     "lavar",
+     "office",
+     "seek"
+    ],
+    "first_seen": "2026-11-19T20:39:46+00:00",
+    "title": "Did you know Lavar Henry? Coroner's office seeks family, friends"
+   },
+   {
+    "tok": [
+     "bank",
+     "course",
+     "friday",
+     "golf",
+     "mini",
+     "open"
+    ],
+    "first_seen": "2026-11-19T22:19:25+00:00",
+    "title": "New mini golf course to open at The Banks in Cincinnati Friday"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "beat",
+     "card",
+     "game",
+     "mls",
+     "orlando",
+     "rally",
+     "wild"
+    ],
+    "first_seen": "2026-11-20T03:26:00+00:00",
+    "title": "FC Cincinnati rallies to beat Orlando in MLS wild-card game"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "access",
+     "between",
+     "enclosure",
+     "expert",
+     "explain",
+     "fiona'",
+     "gap",
+     "got",
+     "hat",
+     "safety"
+    ],
+    "first_seen": "2026-11-20T02:59:31+00:00",
+    "title": "How a hat got into Fiona's enclosure; Expert explains gap between access and safety"
+   },
+   {
+    "tok": [
+     "fiona",
+     "gather",
+     "hundred",
+     "mourn",
+     "zoo"
+    ],
+    "first_seen": "2026-11-20T02:50:59+00:00",
+    "title": "Hundreds gather at Cincinnati Zoo to mourn Fiona"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "accessory",
+     "dangerou",
+     "gun",
+     "list",
+     "multiple",
+     "ohio'",
+     "ordinance",
+     "removed",
+     "soon"
+    ],
+    "first_seen": "2026-11-19T19:37:47+00:00",
+    "title": "Multiple guns, accessories on Ohio's 'dangerous ordinance' list may soon be removed"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "arrested",
+     "dead",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T12:49:00+00:00",
+    "title": "4-year-old dead after Westwood shooting; 2 arrested"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old boy shot to death in Cincinnati, 2 arrested"
+   },
+   {
+    "tok": [
+     "child",
+     "condition",
+     "critical",
+     "following",
+     "old",
+     "shooting",
+     "westwood",
+     "year"
+    ],
+    "first_seen": "2026-11-20T02:54:36+00:00",
+    "title": "4-year-old child in critical condition following shooting in Westwood"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "arrested",
+     "boy",
+     "death",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "Two arrested after 4-year-old boy shot to death in Cincinnati"
+   },
+   {
+    "tok": [
+     "businesse",
+     "fiona",
+     "hippo",
+     "offering",
+     "passing",
+     "tribute"
+    ],
+    "first_seen": "2026-11-20T02:26:27+00:00",
+    "title": "Local businesses offering tributes to Fiona the hippo after her passing"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "child",
+     "critically",
+     "hurt",
+     "old",
+     "shot",
+     "year"
+    ],
+    "first_seen": "2026-11-20T09:50:49+00:00",
+    "title": "4-year-old child shot, critically hurt in Cincinnati"
+   },
+   {
+    "tok": [
+     "critically",
+     "injured",
+     "old",
+     "police",
+     "shooting",
+     "year"
+    ],
+    "first_seen": "2026-11-20T11:02:00+00:00",
+    "title": "4-year-old critically injured in Cincinnati shooting, police say"
+   },
+   {
+    "tok": [
+     "chance",
+     "death",
+     "fiona'",
+     "give",
+     "grief",
+     "kid",
+     "life",
+     "parent",
+     "teach"
+    ],
+    "first_seen": "2026-11-20T01:38:17+00:00",
+    "title": "Fiona's death gives parents a chance to teach kids about grief -- and life"
+   },
+   {
+    "tok": [
+     "bengal",
+     "chase",
+     "everything",
+     "know",
+     "need",
+     "seed"
+    ],
+    "first_seen": "2026-11-20T05:20:00+00:00",
+    "title": "Everything you need to know as Bengals chase No. 1 seed"
+   },
+   {
+    "tok": [
+     "18",
+     "announce",
+     "athletic",
+     "dec",
+     "director",
+     "effective",
+     "haye",
+     "jonathan",
+     "moeller",
+     "retirement"
+    ],
+    "first_seen": "2026-11-20T00:57:12+00:00",
+    "title": "Moeller athletic director Jonathan Hayes announces retirement effective Dec. 18"
+   },
+   {
+    "tok": [
+     "100m",
+     "1989",
+     "doctor",
+     "nearly",
+     "ordered",
+     "pay",
+     "rape",
+     "woman"
+    ],
+    "first_seen": "2026-11-20T00:20:29+00:00",
+    "title": "Ex-doctor ordered to pay woman nearly $100M for 1989 rape in Cincinnati"
+   },
+   {
+    "tok": [
+     "create",
+     "fight",
+     "food",
+     "insecurity",
+     "mobile",
+     "pantry",
+     "state",
+     "student"
+    ],
+    "first_seen": "2026-11-19T20:39:00+00:00",
+    "title": "Cincinnati State students create mobile food pantry to fight food insecurity"
+   },
+   {
+    "tok": [
+     "30",
+     "answer",
+     "carrie",
+     "continue",
+     "culberson",
+     "later",
+     "mother'",
+     "search",
+     "year"
+    ],
+    "first_seen": "2026-11-19T23:00:55+00:00",
+    "title": "Where Is Carrie Culberson? Her mother's search for answers continues 30 years later"
+   },
+   {
+    "tok": [
+     "across",
+     "closure",
+     "greater",
+     "pay",
+     "restaurant",
+     "sudden",
+     "worker"
+    ],
+    "first_seen": "2026-11-19T22:57:23+00:00",
+    "title": "Still no pay for restaurant workers after sudden closures across Greater Cincinnati"
+   },
+   {
+    "tok": [
+     "alpha",
+     "family",
+     "giveaway",
+     "help",
+     "kappa",
+     "need",
+     "psi'",
+     "thanksgiving",
+     "turkey"
+    ],
+    "first_seen": "2026-11-19T22:57:00+00:00",
+    "title": "Kappa Alpha Psi's Thanksgiving Turkey Giveaway to help families in need"
+   },
+   {
+    "tok": [
+     "approved",
+     "ban",
+     "center",
+     "challenge",
+     "data",
+     "developer",
+     "intervene",
+     "protect",
+     "resident",
+     "trenton",
+     "voter"
+    ],
+    "first_seen": "2026-11-19T22:54:59+00:00",
+    "title": "Trenton residents intervene to protect voter-approved data center ban after developer\u2019s challenge"
+   },
+   {
+    "tok": [
+     "ahead",
+     "cvg",
+     "faa",
+     "flight",
+     "ground",
+     "plan",
+     "reflect",
+     "stop",
+     "thanksgiving",
+     "traveler"
+    ],
+    "first_seen": "2026-11-19T22:50:00+00:00",
+    "title": "CVG travelers reflect on FAA ground stop ahead of Thanksgiving flight plans"
+   },
+   {
+    "tok": [
+     "coach",
+     "death",
+     "fiona'",
+     "kid",
+     "parenting",
+     "people",
+     "talk"
+    ],
+    "first_seen": "2026-11-19T22:35:00+00:00",
+    "title": "Parenting coach on how people can talk to their kids about Fiona's death"
+   },
+   {
+    "tok": [
+     "accused",
+     "carolina",
+     "dog",
+     "kidnapping",
+     "man",
+     "south",
+     "teen"
+    ],
+    "first_seen": "2026-11-19T17:44:08+00:00",
+    "title": "Cincinnati man accused of kidnapping teen and her dog in South Carolina"
+   },
+   {
+    "tok": [
+     "city",
+     "complex",
+     "covington",
+     "former",
+     "height",
+     "housing",
+     "public",
+     "redeveloping"
+    ],
+    "first_seen": "2026-11-19T22:27:15+00:00",
+    "title": "Covington is redeveloping the former City Heights public housing complex"
+   },
+   {
+    "tok": [
+     "across",
+     "best",
+     "drone",
+     "enforcement",
+     "have",
+     "law",
+     "northern",
+     "rely",
+     "technology",
+     "tool"
+    ],
+    "first_seen": "2026-11-19T22:19:02+00:00",
+    "title": "'One of the Best Tools We Have:' How law enforcement across Northern Kentucky relies on drone technology"
+   },
+   {
+    "tok": [
+     "did",
+     "die",
+     "gorilla",
+     "harambe",
+     "year",
+     "zoo"
+    ],
+    "first_seen": "2026-11-19T22:14:00+00:00",
+    "title": "What year did Harambe the gorilla die at the Cincinnati Zoo?"
+   },
+   {
+    "tok": [
+     "bus",
+     "clermont",
+     "county'",
+     "improve",
+     "look",
+     "potential",
+     "real",
+     "study",
+     "there'",
+     "think",
+     "transit"
+    ],
+    "first_seen": "2026-11-19T22:11:00+00:00",
+    "title": "'I think that there's real potential' | Clermont County's new study looks to improve local bus transit"
+   },
+   {
+    "tok": [
+     "cincinnati'",
+     "editorial",
+     "fiona",
+     "heart",
+     "hippo"
+    ],
+    "first_seen": "2026-11-19T22:10:00+00:00",
+    "title": "Fiona was more than a hippo. She was Cincinnati's heart | Editorial"
+   },
+   {
+    "tok": [
+     "die",
+     "fiona",
+     "hippo",
+     "miracle"
+    ],
+    "first_seen": "2026-11-19T22:00:56+00:00",
+    "title": "Fiona, Cincinnati\u2019s miracle hippo, dies at 9"
+   },
+   {
+    "tok": [
+     "beloved",
+     "fan",
+     "fiona",
+     "leader",
+     "mourn",
+     "zoo'"
+    ],
+    "first_seen": "2026-11-19T21:56:00+00:00",
+    "title": "Fans, Ohio leaders mourn Cincinnati Zoo's beloved Fiona"
+   },
+   {
+    "tok": [
+     "fiona",
+     "through",
+     "year"
+    ],
+    "first_seen": "2026-11-19T21:46:58+00:00",
+    "title": "Fiona through the years"
+   },
+   {
+    "tok": [
+     "day",
+     "everything",
+     "final",
+     "fiona",
+     "know",
+     "staff",
+     "tried",
+     "vet"
+    ],
+    "first_seen": "2026-11-19T21:43:00+00:00",
+    "title": "\u2018Vet staff tried everything they could\u2019: What we know about Fiona\u2019s final days"
+   },
+   {
+    "tok": [
+     "fiona",
+     "through",
+     "year"
+    ],
+    "first_seen": "2026-11-19T21:46:58+00:00",
+    "title": "Fiona through the years"
+   },
+   {
+    "tok": [
+     "age",
+     "die",
+     "fiona",
+     "hippo",
+     "long",
+     "viral"
+    ],
+    "first_seen": "2026-11-19T21:35:00+00:00",
+    "title": "How long do hippos live? Fiona, viral Cincinnati hippo, dies at age 9"
+   },
+   {
+    "tok": [
+     "burrow",
+     "dealing",
+     "illness",
+     "joe",
+     "media",
+     "practice",
+     "speak",
+     "won't"
+    ],
+    "first_seen": "2026-11-19T19:46:00+00:00",
+    "title": "Joe Burrow dealing with illness, won't speak to media after practice"
+   },
+   {
+    "tok": [
+     "fiona",
+     "through",
+     "year"
+    ],
+    "first_seen": "2026-11-19T21:46:58+00:00",
+    "title": "Fiona through the years"
+   },
+   {
+    "tok": [
+     "fiona",
+     "through",
+     "year"
+    ],
+    "first_seen": "2026-11-19T21:46:58+00:00",
+    "title": "Fiona through the years"
+   },
+   {
+    "tok": [
+     "approve",
+     "center",
+     "data",
+     "exclusively",
+     "large",
+     "plant",
+     "power"
+    ],
+    "first_seen": "2026-11-19T21:15:51+00:00",
+    "title": "Ohio approves two large power plants exclusively for data centers"
+   },
+   {
+    "tok": [
+     "captured",
+     "fiona",
+     "heart",
+     "hippo",
+     "million",
+     "mourning",
+     "story"
+    ],
+    "first_seen": "2026-11-19T21:08:00+00:00",
+    "title": "Mourning Fiona the hippo: How she captured the hearts of millions with her story"
+   },
+   {
+    "tok": [
+     "fiona",
+     "through",
+     "year"
+    ],
+    "first_seen": "2026-11-19T21:46:58+00:00",
+    "title": "Fiona through the years"
+   },
+   {
+    "tok": [
+     "fiona",
+     "through",
+     "year"
+    ],
+    "first_seen": "2026-11-19T21:46:58+00:00",
+    "title": "Fiona through the years"
+   },
+   {
+    "tok": [
+     "fiona",
+     "through",
+     "year"
+    ],
+    "first_seen": "2026-11-19T21:46:58+00:00",
+    "title": "Fiona through the years"
+   },
+   {
+    "tok": [
+     "fiona",
+     "through",
+     "year"
+    ],
+    "first_seen": "2026-11-19T21:46:58+00:00",
+    "title": "Fiona through the years"
+   },
+   {
+    "tok": [
+     "fiona",
+     "through",
+     "year"
+    ],
+    "first_seen": "2026-11-19T21:46:58+00:00",
+    "title": "Fiona through the years"
+   },
+   {
+    "tok": [
+     "citybird",
+     "closure",
+     "employee",
+     "former",
+     "really",
+     "reflect",
+     "restaurant",
+     "sad"
+    ],
+    "first_seen": "2026-11-19T21:02:04+00:00",
+    "title": "\u2018It\u2019s really sad\u2019: Former CityBird employee reflects on restaurant\u2019s closure"
+   },
+   {
+    "tok": [
+     "brush",
+     "coroner",
+     "fire",
+     "house",
+     "state",
+     "tri"
+    ],
+    "first_seen": "2026-11-19T21:01:15+00:00",
+    "title": "Coroner at Tri-State house and brush fire"
+   },
+   {
+    "tok": [
+     "ask",
+     "coroner'",
+     "died",
+     "family",
+     "help",
+     "locating",
+     "man",
+     "office",
+     "recently"
+    ],
+    "first_seen": "2026-11-19T20:39:46+00:00",
+    "title": "Coroner's office asks for help locating family of man who recently died in Cincinnati"
+   },
+   {
+    "tok": [
+     "county",
+     "earn",
+     "park",
+     "recognition",
+     "top",
+     "transformation",
+     "warren"
+    ],
+    "first_seen": "2026-11-19T20:25:50+00:00",
+    "title": "Park transformation earns Warren County top recognition"
+   },
+   {
+    "tok": [
+     "address",
+     "blocked",
+     "congressman",
+     "crossing",
+     "deadly",
+     "fire",
+     "lockland",
+     "push",
+     "railroad",
+     "spark"
+    ],
+    "first_seen": "2026-11-19T20:20:46+00:00",
+    "title": "Deadly Lockland fire sparks new push from Congressman to address blocked railroad crossings"
+   },
+   {
+    "tok": [
+     "fiona",
+     "through",
+     "year"
+    ],
+    "first_seen": "2026-11-19T21:46:58+00:00",
+    "title": "Fiona through the years"
+   },
+   {
+    "tok": [
+     "fiona",
+     "through",
+     "year"
+    ],
+    "first_seen": "2026-11-19T21:46:58+00:00",
+    "title": "Fiona through the years"
+   },
+   {
+    "tok": [
+     "back",
+     "cancer",
+     "center",
+     "give",
+     "help",
+     "patient",
+     "student"
+    ],
+    "first_seen": "2026-11-19T21:22:26+00:00",
+    "title": "Local students help give back to patients at UC Cancer Center"
+   },
+   {
+    "tok": [
+     "2027",
+     "alumni",
+     "award",
+     "grammy",
+     "nominated"
+    ],
+    "first_seen": "2026-11-19T20:24:00+00:00",
+    "title": "These 8 UC alumni are nominated for 2027 Grammy Awards"
+   },
+   {
+    "tok": [
+     "fiona",
+     "through",
+     "year"
+    ],
+    "first_seen": "2026-11-19T21:17:07+00:00",
+    "title": "Fiona through the years"
+   },
+   {
+    "tok": [
+     "arrested",
+     "case",
+     "deputy",
+     "kidnapping",
+     "man",
+     "several",
+     "spanning",
+     "state"
+    ],
+    "first_seen": "2026-11-19T20:16:53+00:00",
+    "title": "Cincinnati man arrested in kidnapping case spanning several states, deputies say"
+   },
+   {
+    "tok": [
+     "000",
+     "663",
+     "cincinnatian",
+     "greater",
+     "thanksgiving",
+     "travel"
+    ],
+    "first_seen": "2026-11-19T20:12:02+00:00",
+    "title": "More than 663,000 Greater Cincinnatians will travel this Thanksgiving"
+   },
+   {
+    "tok": [
+     "cvg",
+     "get",
+     "holiday",
+     "major",
+     "prepare",
+     "ready",
+     "rush",
+     "thanksgiving",
+     "travel",
+     "traveler"
+    ],
+    "first_seen": "2026-11-19T20:01:34+00:00",
+    "title": "As local travelers get ready for Thanksgiving, CVG prepares for major holiday travel rush"
+   },
+   {
+    "tok": [
+     "65",
+     "agree",
+     "boyfriend",
+     "facing",
+     "girlfriend'",
+     "man",
+     "murder",
+     "plea",
+     "prosecutor",
+     "sentence",
+     "year"
+    ],
+    "first_seen": "2026-11-19T16:29:33+00:00",
+    "title": "Prosecutor: Man agrees to plea in murder of ex-girlfriend's boyfriend, facing 65-year sentence"
+   },
+   {
+    "tok": [
+     "closing",
+     "day",
+     "early",
+     "kroger",
+     "store",
+     "thanksgiving"
+    ],
+    "first_seen": "2026-11-19T19:47:00+00:00",
+    "title": "Kroger stores closing early Thanksgiving Day"
+   },
+   {
+    "tok": [
+     "beach",
+     "carat",
+     "carried",
+     "perfect",
+     "proposal",
+     "ring",
+     "until",
+     "wave"
+    ],
+    "first_seen": "2026-11-19T19:45:51+00:00",
+    "title": "A perfect beach proposal -- until a wave carried off the 4-carat ring"
+   },
+   {
+    "tok": [
+     "center",
+     "data",
+     "home",
+     "mean",
+     "meta",
+     "mobile",
+     "move",
+     "must",
+     "nky",
+     "park",
+     "planned",
+     "resident"
+    ],
+    "first_seen": "2026-11-19T19:38:36+00:00",
+    "title": "Planned Meta data center in NKY means mobile home park residents must move"
+   },
+   {
+    "tok": [
+     "abduction",
+     "alert",
+     "attempted",
+     "father",
+     "middletown",
+     "parent"
+    ],
+    "first_seen": "2026-11-19T19:16:30+00:00",
+    "title": "Middletown parents on alert after father\u2019s report of attempted abduction"
+   },
+   {
+    "tok": [
+     "big",
+     "connection",
+     "game",
+     "greater",
+     "has",
+     "hunger",
+     "movie"
+    ],
+    "first_seen": "2026-11-19T19:14:00+00:00",
+    "title": "New 'Hunger Games' movie has 3 big Greater Cincinnati connections"
+   },
+   {
+    "tok": [
+     "bar",
+     "experience",
+     "holiday",
+     "immersive",
+     "season",
+     "transforming"
+    ],
+    "first_seen": "2026-11-19T18:59:00+00:00",
+    "title": "Cincinnati bar transforming into immersive holiday experience this season"
+   },
+   {
+    "tok": [
+     "made",
+     "much",
+     "player",
+     "season",
+     "see"
+    ],
+    "first_seen": "2026-11-19T18:41:00+00:00",
+    "title": "See how much FC Cincinnati players made this season"
+   },
+   {
+    "tok": [
+     "ash",
+     "blue",
+     "developer",
+     "downtown",
+     "mixed",
+     "project",
+     "revive",
+     "signature",
+     "town",
+     "use"
+    ],
+    "first_seen": "2026-11-19T18:19:00+00:00",
+    "title": "Out-of-town developer revives signature mixed-use project in downtown Blue Ash"
+   },
+   {
+    "tok": [
+     "announce",
+     "date",
+     "location",
+     "opening",
+     "zaxby'"
+    ],
+    "first_seen": "2026-11-19T18:00:00+00:00",
+    "title": "Zaxby's announces opening date for first Ohio location"
+   },
+   {
+    "tok": [
+     "announce",
+     "bank",
+     "chase",
+     "customer",
+     "cyberattack",
+     "hacker",
+     "have",
+     "information",
+     "obtained",
+     "personal"
+    ],
+    "first_seen": "2026-11-19T17:52:21+00:00",
+    "title": "Chase Bank announces cyberattack, says hackers may have obtained customers\u2019 personal information"
+   },
+   {
+    "tok": [
+     "address",
+     "asking",
+     "concern",
+     "feedback",
+     "kytc",
+     "release",
+     "speeding",
+     "survey"
+    ],
+    "first_seen": "2026-11-19T17:47:00+00:00",
+    "title": "KYTC releases survey asking for feedback to address speeding concerns"
+   },
+   {
+    "tok": [
+     "book",
+     "buying",
+     "clerk",
+     "comic",
+     "good",
+     "lego",
+     "resale",
+     "role",
+     "sentenced",
+     "shop",
+     "stolen"
+    ],
+    "first_seen": "2026-11-19T17:12:47+00:00",
+    "title": "Clerk sentenced for role in buying stolen goods, LEGOs for resale at local comic book shop"
+   },
+   {
+    "tok": [
+     "accused",
+     "crash",
+     "fatal",
+     "man",
+     "pedestrian",
+     "reading",
+     "road",
+     "speeding"
+    ],
+    "first_seen": "2026-11-19T16:21:00+00:00",
+    "title": "Man accused of speeding before fatal Reading Road pedestrian crash"
+   },
+   {
+    "tok": [
+     "ever",
+     "here'",
+     "home",
+     "matt",
+     "native",
+     "returning",
+     "rife",
+     "show",
+     "stadium"
+    ],
+    "first_seen": "2026-11-19T15:50:00+00:00",
+    "title": "Ohio native Matt Rife returning home for first-ever stadium show. Here's when, where"
+   },
+   {
+    "tok": [
+     "bakery",
+     "get",
+     "heart",
+     "home",
+     "location",
+     "same"
+    ],
+    "first_seen": "2026-11-19T15:38:47+00:00",
+    "title": "\u2018New location, same heart:\u2019 Cincinnati bakery gets a new home"
+   },
+   {
+    "tok": [
+     "county",
+     "death",
+     "franklin",
+     "mourn",
+     "school",
+     "student"
+    ],
+    "first_seen": "2026-11-19T15:15:00+00:00",
+    "title": "Franklin County schools mourns death of student"
+   },
+   {
+    "tok": [
+     "explosion",
+     "hospitalized",
+     "motorhome"
+    ],
+    "first_seen": "2026-11-19T14:40:00+00:00",
+    "title": "Five hospitalized after motorhome explosion in Ohio"
+   },
+   {
+    "tok": [
+     "admit",
+     "boyfriend",
+     "ex'",
+     "expected",
+     "killing",
+     "man",
+     "state",
+     "tri"
+    ],
+    "first_seen": "2026-11-19T16:29:33+00:00",
+    "title": "Tri-State man expected to admit to killing his ex's new boyfriend"
+   }
+  ],
+  "lead": {
+   "city": {
+    "tok": [
+     "fighter",
+     "fiona",
+     "hippo",
+     "honoring",
+     "little",
+     "ohio'",
+     "passe",
+     "resolution",
+     "senate",
+     "unanimou"
+    ],
+    "id": "ohio-s-little-fighter-u-s-senate-passes-unanimous-resolutio"
+   },
+   "general": {
+    "tok": [
+     "died",
+     "fiona",
+     "hat",
+     "hippo",
+     "ingesting",
+     "mourn",
+     "nation",
+     "zoo"
+    ],
+    "id": "nation-mourns-fiona-cincinnati-zoo-hippo-who-died-after-inge"
+   }
+  }
+ }
+}
