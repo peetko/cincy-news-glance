@@ -612,6 +612,12 @@ STREET_INCIDENT = (CRIME_STOCK - {"police", "man", "woman", "men", "women", "peo
                                   "girl", "involved", "connection", "officer", "learn", "judge", "court", "investigating",
                                   "investigate", "investigation", "sheriff", "sheriff'", "deputy", "missing"}) \
     | {"fire", "blaze", "stabbing", "stabbed", "robbery", "robbed", "carjacking", "explosion", "gunfire"}
+# More crime-report vocabulary: rare on a given day, but it never shows two reports are about one incident.
+RARE_NOT_SPECIFIC = {"assault", "assaulted", "assaulting", "victim", "custody", "manhunt", "gunman", "gun", "weapon",
+                     "armed", "injury", "injure", "wanted", "search", "searching", "deputie", "detective",
+                     "hospital", "critical", "condition", "stable", "scene", "standoff", "chase", "pursuit",
+                     "theft", "stolen", "steal", "burglary", "fraud", "vehicle", "car", "truck", "motorcycle",
+                     "pedestrian", "rollover", "home", "house", "apartment", "residence", "business", "store"}
 # Names too wide to tell two places apart: the whole city, county or region.
 # A fire in one neighborhood the same morning (Nov 17: one 3-alarm fire in Oakley showed as four entries,
 # worded "large fire burning commercial building", "3-alarm blaze", "roads blocked off", "storage facility").
@@ -640,6 +646,12 @@ def _named_places(it):
                         for n in sorted(names, key=len, reverse=True)]
     text = f"{it['title']} {(it.get('summary') or '')[:240]}"
     slug = _slug_text(it.get("link"))
+    # "Hamilton County" is the county, not the city of Hamilton (Nov 23: a Local 12 web address's
+    # "...hamilton-county..." read as Hamilton tied two unrelated Hamilton County police stories).
+    for wide in PLACE_WIDE:
+        if " " in wide:
+            text = re.sub(r"(?i)(?<![a-z])" + re.escape(wide) + r"(?![a-z])", " ", text)
+            slug = re.sub(r"(?<![a-z])" + re.escape(wide) + r"(?![a-z])", " ", slug)
     found = set()
     for low, rx, rx_slug in _PLACE_NAMES:
         if rx.search(text) or rx_slug.search(slug):
@@ -657,7 +669,12 @@ def _streets(it):
             if cased and not (name[0].isupper() and m.group(2)[0].isupper()):
                 continue           # "the street", "on the road": not a street name
             if name.lower() in STREET_NOT_NAMES:
-                continue
+                # A two-word name whose last word isn't a name on its own: "Queen City Avenue" (Nov 23: one
+                # deadly Westwood crash on Queen City Avenue showed as three entries). Keep both words.
+                prev = re.search(r"([A-Za-z][a-z']+)\s+$", text[:m.start()])
+                if not prev or prev.group(1).lower() in STREET_NOT_NAMES or (cased and not prev.group(1)[0].isupper()):
+                    continue
+                name = f"{prev.group(1)} {name}"
             out.add(f"{name.lower()} {STREET_TYPES[kind]}")
     return out
 
@@ -666,6 +683,7 @@ def _profile(it):
     text = f"{it['title']} {(it.get('summary') or '')[:240]} {_slug_text(it.get('link'))}"
     seq = _content_words(it["title"]) + ["|"] + _content_words(_slug_text(it.get("link")))
     return {"rich": tokens(text), "proper": _proper_words(it["title"]), "streets": _streets(it),
+            "headline": tokens(f"{it['title']} {_slug_text(it.get('link'))}"),
             "bigrams": {(a, b) for a, b in zip(seq, seq[1:])
                         if "|" not in (a, b) and a != b and not ({a, b} & (PHRASE_GENERIC | CRIME_STOCK | ELECTION_STOCK | TRAFFIC_STOCK))}}
 
@@ -689,8 +707,10 @@ def _merge_related(clusters, window_hours=18):
             if "_prof" not in it:
                 it["_prof"] = _profile(it)
     n = len(clusters)
-    df, bdf, sdf = {}, {}, {}
+    df, bdf, sdf, hdf = {}, {}, {}, {}
     for c in clusters:
+        for t in set().union(*(it["_prof"]["headline"] for it in c["items"])):
+            hdf[t] = hdf.get(t, 0) + 1
         for t in set().union(*(it["_prof"]["rich"] for it in c["items"])):
             df[t] = df.get(t, 0) + 1
         for b in set().union(*(it["_prof"]["bigrams"] for it in c["items"])):
@@ -712,6 +732,11 @@ def _merge_related(clusters, window_hours=18):
         # officers pull woman from burning car" stayed apart from the WCPO and Local 12 versions).
         if same_story(tx, ty):
             return True
+        # Word-for-word the same headline from two outlets, with at least one specific word: a syndicated copy
+        # (Nov 23: Sinclair's WHP Harrisburg ran Local 12's "1 hospitalized after being shot with crossbow in
+        # Cincinnati" word for word; "crossbow" alone fell short of the two-word test, so it showed twice).
+        if x["title"].strip().lower() == y["title"].strip().lower() and distinctive(tx) - GENERIC_NAMES:
+            return True
         px, py = x["_prof"], y["_prof"]
         shared = px["rich"] & py["rich"]
         phrases = {b for b in px["bigrams"] & py["bigrams"] if bdf.get(b, 0) <= 4 and b not in stock}
@@ -724,6 +749,18 @@ def _merge_related(clusters, window_hours=18):
         if streets and shared & STREET_INCIDENT:
             gx, gy = _named_places(x), _named_places(y)
             if not (gx and gy and not gx & gy):
+                return True
+        # The same unusual thing in the same neighborhood, in two incident reports (Nov 23: a man shot "by arrow on
+        # Purcell Avenue" and "with an arrow in East Price Hill" showed as two stories, and only the web addresses
+        # tied them: "...bow-arrow-cincinnati-east-price-hill-purcell..."). The word must be in the headline or web
+        # address, specific (not crime, traffic or place vocabulary), and rare today (in at most 3 of today's
+        # first-pass groups, which may be pieces of the one story); the reports must name the same neighborhood
+        # or town and share a word for what happened.
+        rare = {t for t in distinctive(px["headline"] & py["headline"]) - GENERIC_NAMES - STREET_INCIDENT - RARE_NOT_SPECIFIC
+                if hdf.get(t, 0) <= 3}
+        if rare and shared & STREET_INCIDENT:
+            gx, gy = _named_places(x), _named_places(y)
+            if gx & gy:
                 return True
         # A fire in the same neighborhood or town within a few hours, when both headlines are about the fire and
         # share one more specific word ("large", "3-alarm", "building", "displaced"). The place alone never
