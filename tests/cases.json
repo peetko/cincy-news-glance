@@ -785,6 +785,28 @@
    "expect": {
     "city": true
    }
+  },
+  {
+   "note": "Cleveland-suburb baby shower shooting in FOX19's feed (Nov 23): it showed in Biggest; Parma isn't local",
+   "title": "3 people dead after shooting at Parma baby shower, including, unborn baby’s father, grandfather",
+   "summary": "",
+   "link": "https://www.fox19.com/2026/11/21/police-3-people-dead-after-shooting-parma-baby-shower/",
+   "outlet": "FOX19",
+   "expect": {
+    "kept": false,
+    "city": false
+   }
+  },
+  {
+   "note": "Evansville, Ind. story in FOX19's feed (replay of Nov 23): Evansville isn't local",
+   "title": "Police: Woman threatened to burn down Evansville Circle K",
+   "summary": "",
+   "link": "https://www.fox19.com/2026/11/22/police-woman-threatened-burn-down-evansville-circle-k/",
+   "outlet": "FOX19",
+   "expect": {
+    "kept": false,
+    "city": false
+   }
   }
  ],
  "same_story": [
