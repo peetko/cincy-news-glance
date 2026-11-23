@@ -2280,6 +2280,165 @@
     3
    ]
   ]
+ },
+ {
+  "note": "Nov 23, 2026: one deadly Westwood crash on Queen City Avenue showed as three entries (0-4). 'Queen City Avenue' wasn't read as a street because 'City' alone isn't a name. Other crashes that weekend (5 Linwood, 6 Beechmont Avenue motorcyclist) stay separate.",
+  "items": [
+   {
+    "title": "1 dead, 3 injured in rollover crash on Queen City Avenue",
+    "summary": "",
+    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSUpObUplalVJZ1VjeE5lMlZSWjFIMkRsNzhnamVGWGlyVUhZOVpNR3RRc21WRm9lT05Dc0wxbGItNDB4X1ByRUtiMUY3aXRNQzllaTdtSmk3UGxUQ01TYjh6VGl1U2tESHRKeFZQNFNVRC1zVUlDYXpOY1dlcWZBX2M2VnRmNnZMQi1Lb3dRZXFKRHF2RzhpenJYVzBSMlhTc3VSaHFyOG5OTVJCTjJOdlJma3ZTU3Vj?oc=5",
+    "outlet": "Enquirer",
+    "first_seen": "2026-11-23T12:29:00+00:00"
+   },
+   {
+    "title": "1 dead, 3 others taken to hospital following overnight crash in Westwood",
+    "summary": "One person is dead, and three others were taken to the hospital following a crash around midnight Monday in Westwood.",
+    "link": "https://www.wcpo.com/news/local-news/1-dead-3-others-taken-to-hospital-following-overnight-crash-in-westwood",
+    "outlet": "WCPO",
+    "first_seen": "2026-11-23T11:00:19+00:00"
+   },
+   {
+    "title": "Police: 1 dead, 3 hurt after overnight crash in Westwood",
+    "summary": "Cincinnati police are investigating a crash in Westwood that left one person dead and three others hospitalized.",
+    "link": "https://www.wlwt.com/article/westwood-cincinnati-queen-city-avenue-deadly-crash/74504913",
+    "outlet": "WLWT",
+    "first_seen": "2026-11-23T10:46:00+00:00"
+   },
+   {
+    "title": "1 dead, 3 hurt in Cincinnati crash",
+    "summary": "Officers responded to Queen City Avenue and Bluffcrest Lane",
+    "link": "https://www.fox19.com/2026/11/23/1-dead-3-hurt-cincinnati-crash/",
+    "outlet": "FOX19",
+    "first_seen": "2026-11-23T11:29:30+00:00"
+   },
+   {
+    "title": "1 dead, 3 hospitalized, 1 in critical condition after crash in Cincinnati neighborhood",
+    "summary": "1 dead, 3 hospitalized, 1 in critical condition after crash in Cincinnati neighborhood",
+    "link": "https://local12.com/news/local/queen-city-avenue-westwood-crash-kills-one-person-injures-three-others-leaves-one-hospitalized-critical-police-investigate-roadway-reopens-cincinnati-ohio-traffic-collision-fatal-wreck-authorities-emergency-response",
+    "outlet": "Local 12",
+    "first_seen": "2026-11-23T10:29:37+00:00"
+   },
+   {
+    "title": "CPD: 1 dead, 2 injured after multi-vehicle crash in Linwood",
+    "summary": "Cincinnati police say that a man is dead after a multi-vehicle crash occurred in Linwood on Friday morning.",
+    "link": "https://www.wlwt.com/article/cpd-1-dead-2-injured-after-multi-vehicle-crash-in-linwood/74497657",
+    "outlet": "WLWT",
+    "first_seen": "2026-11-21T20:21:00+00:00"
+   },
+   {
+    "title": "20-year-old motorcyclist killed in Cincinnati crash",
+    "summary": "Cincinnati police seek witnesses after a Beechmont Avenue crash involving a Trailblazer, a Lexus, and a motorcycle left a 20-year-old rider dead. Speed may have been a factor.",
+    "link": "https://local12.com/news/local/20-year-old-motorcyclist-killed-in-cincinnati-crash-beechmont-avenue-cincinnati-police-departments-traffic-unit",
+    "outlet": "Local 12",
+    "first_seen": "2026-11-21T13:35:01+00:00"
+   }
+  ],
+  "groups": [
+   [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  ]
+ },
+ {
+  "note": "Nov 23, 2026: one East Price Hill crossbow shooting on Purcell Avenue showed as three entries (0-5): 'arrow' plus East Price Hill only showed up in web addresses, and Sinclair's WHP Harrisburg copy of Local 12's headline stood alone. The Anderson Township shooting (6) and the police officer's arrest (7) stay separate.",
+  "items": [
+   {
+    "title": "Police: Man taken to hospital after being shot by arrow on Purcell Avenue",
+    "summary": "A suspect has been taken into custody after a man was shot by an arrow on Sunday, according to Cincinnati police.",
+    "link": "https://www.wcpo.com/news/local-news/hamilton-county/cincinnati/police-man-taken-to-hospital-after-being-shot-by-arrow-on-purcell-avenue",
+    "outlet": "WCPO",
+    "first_seen": "2026-11-23T00:01:13+00:00"
+   },
+   {
+    "title": "Docs: Man facing charges after allegedly shooting another man with crossbow in East Price Hill",
+    "summary": "A man is facing charges for shooting another person with a crossbow in East Price Hill.",
+    "link": "https://www.wlwt.com/article/cincinnati-purcell-avenue-man-shot-crossbow-arrest-charges/74505359",
+    "outlet": "WLWT",
+    "first_seen": "2026-11-23T11:12:00+00:00"
+   },
+   {
+    "title": "CPD: Man hospitalized after being shot with an arrow in East Price Hill; suspect in custody",
+    "summary": "Cincinnati police say that a man has been hospitalized after he was shot with an arrow in East Price Hill on Sunday.",
+    "link": "https://www.wlwt.com/article/man-hospitalized-after-being-shot-with-an-arrow-in-east-price-hill/74502333",
+    "outlet": "WLWT",
+    "first_seen": "2026-11-23T05:26:00+00:00"
+   },
+   {
+    "title": "Police: Man shot by arrow in East Price Hill, suspect in custody",
+    "summary": "A person has been shot by an arrow in East Price Hill, according to CPD.",
+    "link": "https://www.fox19.com/2026/11/22/man-shot-by-arrow-east-price-hill-says-police/",
+    "outlet": "FOX19",
+    "first_seen": "2026-11-22T23:05:34+00:00"
+   },
+   {
+    "title": "1 hospitalized after being shot with crossbow in Cincinnati",
+    "summary": "A person was hospitalized with non-life-threatening injuries after an assault on Purcell Avenue, Cincinnati police said.",
+    "link": "https://local12.com/news/local/hospitalized-after-being-shot-with-bow-arrow-in-cincinnati-east-price-hill-purcell-avenue-hospital-police-investigation-crossbow-arrows-victim",
+    "outlet": "Local 12",
+    "first_seen": "2026-11-22T23:35:50+00:00"
+   },
+   {
+    "title": "1 hospitalized after being shot with crossbow in Cincinnati",
+    "summary": "",
+    "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxQU1hwRDRSRHZWdjdtUE5SMm9Va3VyMHF1dWV1alRSckxSS3NaSE40UUVVbVZxSi1PcElqTFVmcWVxaXdFRmVNWE5uQkZBRF8tZnA0VVU2UWdpd0VQMUZVclVldnExOXpnVzREaDAwVlpWMWlMVEVWam03cW40WUVseHB3dVlDT3A1bEd3M2JLQ0Job3ZHYk5fVjBUTlB2cUw5S1p0ekJaanRiMGpLMFdjNWZWNGtZZ2VsTmd3bkJNWm5td0s5a0VrVkh5REJhVkJNSm1vNUhBU1NBRllvRFVQSUlXM3MwODRkNmJqMFZGaXotOTNhX3h6eVVyR0xqS0lkdUVNQU1hSmdsMHZJSHlVUzBn?oc=5",
+    "outlet": "WHP Harrisburg",
+    "first_seen": "2026-11-23T11:42:57+00:00"
+   },
+   {
+    "title": "Suspect arrested after shooting, assault in Anderson Township leaves 2 injured, prompts police manhunt",
+    "summary": "The Hamilton County Sheriff's Office says that a suspect is now in custody after a person was reported to have been shot at a home in Anderson Township on Saturday evening.",
+    "link": "https://www.wlwt.com/article/police-searching-for-suspect-in-anderson-township-shooting/74499183",
+    "outlet": "WLWT",
+    "first_seen": "2026-11-22T16:39:00+00:00"
+   },
+   {
+    "title": "Cincinnati police officer arrested after assaulting woman, court records say",
+    "summary": "Jailen Stone, 28, was charged after allegedly kicking and choking another woman.",
+    "link": "https://www.fox19.com/2026/11/23/cincinnati-police-officer-arrested-after-assaulting-woman-court-records-say/",
+    "outlet": "FOX19",
+    "first_seen": "2026-11-23T04:29:04+00:00"
+   }
+  ],
+  "groups": [
+   [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  ]
+ },
+ {
+  "note": "Guard for the Nov 23 'same unusual word in the same place' rule (replay of Nov 5): two unrelated Local 12 Hamilton County police stories share 'vehicle' and 'theft', and both web addresses say 'hamilton-county', which isn't the city of Hamilton. They stay apart.",
+  "items": [
+   {
+    "title": "Police : Suspect charged after vehicle rams into Greater Cincinnati tobacco shop",
+    "summary": "",
+    "link": "https://local12.com/news/local/police-suspect-charged-after-vehicle-rams-cincinnati-tobacco-shop-hamilton-township-maineville-vape-vapes-smoke-smoking-hospitalized-investigation-charges-arrested-theft",
+    "outlet": "Local 12",
+    "first_seen": "2026-11-05T22:00:00+00:00"
+   },
+   {
+    "title": "Cincinnati police seek help finding suspect in vehicle theft , credit card fraud",
+    "summary": "",
+    "link": "https://local12.com/news/local/cincinnati-police-seek-help-finding-suspect-vehicle-theft-credit-card-fraud-marlowe-avenue-hamilton-udf-gas-station-purchases-tip-tips-anonymous-rewards-crime-stoppers-ohio",
+    "outlet": "Local 12",
+    "first_seen": "2026-11-05T22:00:00+00:00"
+   }
+  ],
+  "apart": [
+   [
+    0,
+    1
+   ]
+  ]
  }
  ],
  "misdated": [
