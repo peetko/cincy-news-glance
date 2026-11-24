@@ -811,6 +811,12 @@
  ],
  "same_story": [
   {
+   "note": "Nov 24, 2026: two unrelated holiday stories joined only on the stock phrase 'here's what you can expect' plus 'holiday'",
+   "a": "Traveling for the holidays? Here's what you can expect",
+   "b": "Christkindlmarkt returns to Cincinnati; here's what you can expect this holiday season",
+   "expect": false
+  },
+  {
    "a": "Water main break closes several downtown streets",
    "b": "Downtown water main break closes streets, detours in place",
    "expect": true
@@ -857,6 +863,31 @@
   }
  ],
  "grouping": [
+  {
+   "note": "Nov 24, 2026: WVXU's holiday-travel show and Local 12's Christkindlmarkt story showed as one entry, joined only on the stock phrase 'here's what you can expect' plus 'holiday'. Different stories: they stay apart.",
+   "items": [
+    {
+     "title": "Christkindlmarkt returns to Cincinnati; here's what you can expect this holiday season",
+     "summary": "They'll have special programming throughout the holiday season. This weekend, they're doing a holiday beer extravaganza with seasonal and holiday craft beers.",
+     "link": "https://local12.com/news/local/christkindlmarkt-returns-to-cincinnati-heres-what-you-can-expect-this-holiday-season",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-23T19:42:27+00:00"
+    },
+    {
+     "title": "Traveling for the holidays? Here's what you can expect",
+     "summary": "Insights on air travel, road-tripping and tips on how to save money on your holiday vacations, on Cincinnati Edition.",
+     "link": "https://www.wvxu.org/show/cincinnati-edition/2026-11-24/traveling-for-the-holidays-heres-what-you-can-expect",
+     "outlet": "WVXU",
+     "first_seen": "2026-11-24T09:01:00+00:00"
+    }
+   ],
+   "apart": [
+    [
+     0,
+     1
+    ]
+   ]
+  },
   {
    "note": "Nov 2, 2026: three outlets' Halloween/Short Vine officer stories are one story; two Walnut Hills shootings months apart are not; 'year-old' and election explainers stay separate. Item 13 is a made-up fourth version (the live run had a Hoodline copy whose exact headline isn't saved) so the shared phrase appears in 3+ groups, as it did live. Item 14 is the same FOX19 headline arriving again via Google News with no summary or web address (the 3:30 PM run split it off).",
    "items": [

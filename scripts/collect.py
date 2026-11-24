@@ -474,6 +474,12 @@ TRAFFIC_STOCK = set("""traffic driver driving detour closure close closing close
 project work delay delayed commute commuter""".split())
 
 
+# Explainer and service-headline formulas ("here's what you can expect", "what to know", "need to know"):
+# they name no story. Nov 24: WVXU's "Traveling for the holidays? Here's what you can expect" and Local 12's
+# "Christkindlmarkt returns to Cincinnati; here's what you can expect this holiday season" showed as one entry.
+EXPLAINER_STOCK = {"here", "here'", "expect", "know", "need", "everything"}
+
+
 # A kind of school, not its name: "Middle School" is shared by every middle school
 # (Nov 6: a Colerain Middle School visitor joined New Richmond Middle School threats).
 SCHOOL_WORDS = {"school", "middle", "high", "elementary", "academy", "junior", "senior", "prep", "preparatory"}
@@ -508,7 +514,7 @@ def place_words():
 
 def distinctive(shared):
     """Shared words that actually point at one story: not crime vocabulary, not a neighborhood name."""
-    return shared - CRIME_STOCK - ELECTION_STOCK - TRAFFIC_STOCK - COMMON_TODAY - place_words()
+    return shared - CRIME_STOCK - ELECTION_STOCK - TRAFFIC_STOCK - EXPLAINER_STOCK - COMMON_TODAY - place_words()
 
 
 def same_story(a_tokens, b_tokens):
@@ -685,7 +691,8 @@ def _profile(it):
     return {"rich": tokens(text), "proper": _proper_words(it["title"]), "streets": _streets(it),
             "headline": tokens(f"{it['title']} {_slug_text(it.get('link'))}"),
             "bigrams": {(a, b) for a, b in zip(seq, seq[1:])
-                        if "|" not in (a, b) and a != b and not ({a, b} & (PHRASE_GENERIC | CRIME_STOCK | ELECTION_STOCK | TRAFFIC_STOCK))}}
+                        if "|" not in (a, b) and a != b
+                        and not ({a, b} & (PHRASE_GENERIC | CRIME_STOCK | ELECTION_STOCK | TRAFFIC_STOCK | EXPLAINER_STOCK))}}
 
 
 def _merge_related(clusters, window_hours=18):
