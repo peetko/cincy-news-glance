@@ -807,6 +807,17 @@
     "kept": false,
     "city": false
    }
+  },
+  {
+   "note": "Nov 25: WCPO's Cincinnati-leaders veto story had no City label, so WSYX's 'Columbus city leaders…' headline titled the City Hall lead",
+   "title": "Cincinnati leaders urge governor to veto Ohio bill that would lower concealed carry age to 18",
+   "summary": "'The Freedom to Carry Act' would allow people 18 and older to conceal carry, expand the type of weapons a person can carry and allow people to drive with a loaded firearm that's within reach.",
+   "link": "https://www.wcpo.com/news/state/state-ohio/cincinnati-leaders-urge-governor-to-veto-ohio-bill-that-would-lower-concealed-carry-age-to-18",
+   "outlet": "WCPO",
+   "expect": {
+    "city": true,
+    "label": "City Hall"
+   }
   }
  ],
  "same_story": [
