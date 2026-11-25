@@ -2481,6 +2481,100 @@
     1
    ]
   ]
+ },
+ {
+  "note": "Nov 25: one deadly I-275 crash near Turkeyfoot Road in Kenton County showed as two entries (0-2 and 3-4) and the Enquirer's copy (5) stood alone. Outlets wrote 'I-275', 'Interstate 275' and 'i-275'; the same highway, the same outcome ('struck', 'killed'), within hours, ties them.",
+  "items": [
+   {
+    "title": "32-year-old man dies after being struck by vehicle on I-275 in Northern Kentucky",
+    "summary": "The Lakeside Park-Crestview Hills Police Department reported that the pedestrian who was hit by a vehicle on westbound I-275 in Northern Kentucky Tuesday evening has died from their injuries.",
+    "link": "https://www.wcpo.com/news/local-news/kenton-county/pedestrian-struck-on-i-275-in-northern-kentucky-both-directions-of-interstate-shut-down",
+    "outlet": "WCPO",
+    "first_seen": "2026-11-25T01:21:36+00:00"
+   },
+   {
+    "title": "32-year-old Newport man hit, killed running across I-275 after crash: Police",
+    "summary": "Both sides of the highway were closed for hours",
+    "link": "https://www.fox19.com/2026/11/25/32-year-old-man-hit-killed-running-across-i-275-after-nky-crash/",
+    "outlet": "FOX19",
+    "first_seen": "2026-11-25T01:58:53+00:00"
+   },
+   {
+    "title": "Stretch of I-275 in NKY reopens after crash",
+    "summary": "Drivers in Kenton County were urged to avoid a stretch of Interstate 275 after a crash shut down traffic in both directions for hours.",
+    "link": "https://local12.com/news/local/stretch-interstate-275-closed-both-directions-in-nky-due-to-crash-closure-wreck-crashed-kenton-county-investigation-detours-traffic-alert",
+    "outlet": "Local 12",
+    "first_seen": "2026-11-25T02:33:32+00:00"
+   },
+   {
+    "title": "Driver involved in crash on I-275 EB runs into WB lanes before being fatally struck",
+    "summary": "Driver involved in crash on I-275 EB runs into WB lanes before being fatally struck",
+    "link": "https://local12.com/news/local/i-275-pedestrian-crash-closes-northern-kentucky-interstate-near-turkeyfoot-road-exit-erlanger-traffic-delayed-cincinnati-hours-roadway-reopens-after-lengthy-closure-officials-confirm-emergency",
+    "outlet": "Local 12",
+    "first_seen": "2026-11-25T08:59:47+00:00"
+   },
+   {
+    "title": "All lanes reopened on Interstate 275 after serious crash in Kenton County",
+    "summary": "A man is dead after being hit by a car on the highway in Kenton County.",
+    "link": "https://www.wlwt.com/article/interstate-275-turkeyfoot-road-kenton-county-lanes-closed/74525492",
+    "outlet": "WLWT",
+    "first_seen": "2026-11-25T11:35:00+00:00"
+   },
+   {
+    "title": "Man struck, killed while crossing I-275 after separate crash, police say",
+    "summary": "",
+    "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbElHd2dOX2RXSm9xVzZLMFF6dmd2ekEzNTBBdGNGS0tmRWEwTWhDTlAtc0NvTWtER0VWYjdVTW1VbDQtTkNrNmJPMk9aOFFIaXY5aS1wTTkzQTBTWDNyTy1oVWlEZUx6OGtlRWdGVWR3MlZlTUhneldBVVdnUmRlZ25hb3ZsVlZpdXdiNVNQU3JFN2VMaUVlYUgxRnl5akhwdWtHb2JNelE4UGhGZ2t2UzQycXVZOGsxQzcyUDZBa3h0dw?oc=5",
+    "outlet": "Enquirer",
+    "first_seen": "2026-11-25T10:41:00+00:00"
+   }
+  ],
+  "together": [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    2
+   ],
+   [
+    0,
+    3
+   ],
+   [
+    0,
+    4
+   ],
+   [
+    0,
+    5
+   ]
+  ]
+ },
+ {
+  "note": "Guard for the Nov 25 interstate rule: two real I-275 crash reports (WLWT, Oct 30 and Nov 6) put on the same day. Sharing the highway and 'crash' isn't enough without the same outcome; they stay apart.",
+  "items": [
+   {
+    "title": "Police: 1 hospitalized in critical condition after crash on I-275",
+    "summary": "",
+    "link": "https://www.wlwt.com/article/i-275-crash-hospitalized/1",
+    "outlet": "WLWT",
+    "first_seen": "2026-11-06T01:30:00+00:00"
+   },
+   {
+    "title": "Lanes closed on Interstate 275 east after crash in Northern Kentucky",
+    "summary": "",
+    "link": "https://www.wlwt.com/article/interstate-275-east-crash-northern-kentucky/2",
+    "outlet": "WLWT",
+    "first_seen": "2026-11-06T04:00:00+00:00"
+   }
+  ],
+  "apart": [
+   [
+    0,
+    1
+   ]
+  ]
  }
  ],
  "misdated": [
