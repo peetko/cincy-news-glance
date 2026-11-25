@@ -629,6 +629,15 @@ RARE_NOT_SPECIFIC = {"assault", "assaulted", "assaulting", "victim", "custody", 
 # worded "large fire burning commercial building", "3-alarm blaze", "roads blocked off", "storage facility").
 FIRE_WORDS = {"fire", "blaze", "flame", "inferno"}
 FIRE_WINDOW_HOURS = 6
+# A crash on the same interstate within a few hours (Nov 25: one deadly I-275 crash near Turkeyfoot Road showed
+# as two entries, worded "32-year-old Newport man hit, killed running across I-275 after crash" and "All lanes
+# reopened on Interstate 275 after serious crash in Kenton County"; outlets wrote "I-275", "Interstate 275" and
+# "i-275" in web addresses, and no other word tied them).
+HIGHWAY_TEXT = re.compile(r"(?<![A-Za-z0-9])(?:I|Interstate)[\s\-]?(\d{2,3})(?![0-9])", re.I)
+HIGHWAY_OUTCOME = {"struck", "hit", "killed", "fatal", "fatally", "die", "died", "dead", "pedestrian", "wrong", "overturn",
+                   "overturned", "rollover", "fiery"}
+HIGHWAY_WINDOW_HOURS = 12
+HIGHWAY_MAX_GROUPS = 8
 PLACE_WIDE = {"cincinnati", "cincy", "queen city", "tri-state", "tristate", "northern kentucky", "nky", "hamilton county",
               "downtown", "ohio river", "butler county", "warren county", "clermont county", "boone county",
               "kenton county", "campbell county", "brown county", "dearborn county"}
@@ -685,10 +694,19 @@ def _streets(it):
     return out
 
 
+def _highways(it):
+    """Interstates an article names in its headline, summary or web address: {"275"} for "I-275" or "interstate-275"."""
+    link = it.get("link") or ""
+    path = "" if "news.google.com" in link else re.sub(r"[-_/.]+", " ", urlparse(link).path)
+    text = f"{it['title']} {(it.get('summary') or '')[:240]} {path}"
+    return {m.group(1) for m in HIGHWAY_TEXT.finditer(text)}
+
+
 def _profile(it):
     text = f"{it['title']} {(it.get('summary') or '')[:240]} {_slug_text(it.get('link'))}"
     seq = _content_words(it["title"]) + ["|"] + _content_words(_slug_text(it.get("link")))
     return {"rich": tokens(text), "proper": _proper_words(it["title"]), "streets": _streets(it),
+            "highways": _highways(it),
             "headline": tokens(f"{it['title']} {_slug_text(it.get('link'))}"),
             "bigrams": {(a, b) for a, b in zip(seq, seq[1:])
                         if "|" not in (a, b) and a != b
@@ -714,7 +732,7 @@ def _merge_related(clusters, window_hours=18):
             if "_prof" not in it:
                 it["_prof"] = _profile(it)
     n = len(clusters)
-    df, bdf, sdf, hdf = {}, {}, {}, {}
+    df, bdf, sdf, hdf, hwdf = {}, {}, {}, {}, {}
     for c in clusters:
         for t in set().union(*(it["_prof"]["headline"] for it in c["items"])):
             hdf[t] = hdf.get(t, 0) + 1
@@ -724,6 +742,8 @@ def _merge_related(clusters, window_hours=18):
             bdf[b] = bdf.get(b, 0) + 1
         for s in set().union(*(it["_prof"]["streets"] for it in c["items"])):
             sdf[s] = sdf.get(s, 0) + 1
+        for h in set().union(*(it["_prof"]["highways"] for it in c["items"])):
+            hwdf[h] = hwdf.get(h, 0) + 1
     idf = {t: math.log((n + 1) / (k + 0.5)) for t, k in df.items()}
     stock = stock_phrases()
     window = window_hours * 3600
@@ -777,6 +797,17 @@ def _merge_related(clusters, window_hours=18):
                 and distinctive(tx & ty) - FIRE_WORDS):
             gx, gy = _named_places(x), _named_places(y)
             if gx & gy:
+                return True
+        # A crash on the same interstate within a few hours, when both headlines (or web addresses) share the
+        # same outcome ("struck", "killed", "pedestrian"), not just "crash": I-71 has a fender-bender most days.
+        # The highway mustn't be in many of today's first-pass groups (Nov 25's one crash was in 5 of them, all
+        # pieces of the one story). Two reports that name different towns stay apart (an I-75 crash in Florence
+        # and one in Lockland the same day are two crashes).
+        highways = {h for h in px["highways"] & py["highways"] if hwdf.get(h, 0) <= HIGHWAY_MAX_GROUPS}
+        if (highways and px["headline"] & py["headline"] & HIGHWAY_OUTCOME
+                and abs((x["published"] - y["published"]).total_seconds()) <= HIGHWAY_WINDOW_HOURS * 3600):
+            gx, gy = _named_places(x), _named_places(y)
+            if not (gx and gy and not gx & gy):
                 return True
         names = distinctive(px["proper"] & py["proper"] & shared)     # "Walnut Hills" alone isn't a shared name
         if names <= SCHOOL_WORDS and not (shared & place_words()):   # "Middle School" alone isn't either
