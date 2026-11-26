@@ -535,7 +535,10 @@ def _slug_text(url):
     """Words from an article's web address ("/officers-assaulted-short-vine-halloween/") — often the clearest summary."""
     if not url or "news.google.com" in url:
         return ""
-    return " ".join(p for p in re.split(r"[/_.\-]+", urlparse(url).path.lower())
+    path = urlparse(url).path.lower()
+    for tag in SLUG_TAGS:
+        path = re.sub(r"(?<![a-z0-9])" + re.escape(tag) + r"(?![a-z0-9])", "-", path)
+    return " ".join(p for p in re.split(r"[/_.\-]+", path)
                     if p.isalpha() and len(p) > 2 and p not in SLUG_JUNK)
 
 
@@ -550,6 +553,10 @@ def _content_words(text):
 
 SLUG_JUNK = {"article", "articles", "news", "local", "story", "stories", "amp", "html", "htm", "index", "politics",
              "wcpo", "wlwt", "fox", "wkrc", "wvxu", "enquirer", "cincinnati", "region", "metro", "community"}
+# Topic tags a newsroom appends to many unrelated web addresses. They say nothing about the story
+# (Nov 26: Local 12 ended a Whitewater Township house fire's, an I-275 crash's and an I-75 crash's
+# addresses with "...-emergency-rapid-response-...", and that shared phrase joined all three as one entry).
+SLUG_TAGS = ("emergency-rapid-response",)
 # Words too common in local news to make a two-word phrase distinctive ("year-old boy", "man killed").
 PHRASE_GENERIC = {"year", "old", "man", "woman", "boy", "girl", "people", "person", "teen", "child", "says", "said",
                   "report", "new", "day", "night", "week", "month", "first", "election", "vote", "voter"}
