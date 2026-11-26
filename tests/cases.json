@@ -875,6 +875,67 @@
  ],
  "grouping": [
   {
+   "note": "Nov 26, 2026: a Whitewater Township house fire, an I-275 crash in Forest Park and an I-75 head-on crash showed as one entry. Local 12 had added the same tag 'emergency-rapid-response' to all three web addresses, and that shared phrase joined them. Three different events: they stay apart; the two reports of the one fire stay together.",
+   "items": [
+    {
+     "title": "I-275 EB re-opens after crash",
+     "summary": "It happened around 3 a.m. on I-275 eastbound beyond US-127/Hamilton Avenue in Forest Park.",
+     "link": "https://local12.com/news/local/i-275-eb-closes-due-to-crash-emergency-rapid-response-us27-hamilton-avenue-forest-park-cincinnati",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-26T08:29:21+00:00"
+    },
+    {
+     "title": "Home catches fire in Whitewater Township",
+     "summary": "It happened around 1:25 a.m. at a residence on Buena Vista Drive in Whitewater Township",
+     "link": "https://local12.com/news/local/home-catches-fire-in-whitewater-township-buena-vista-drive-cincinnati-emergency-rapid-response-official-word",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-26T09:34:15+00:00"
+    },
+    {
+     "title": "I-75 SB, ramp closes after apparent head-on crash",
+     "summary": "I-75 SB, ramp closes after apparent head-on crash",
+     "link": "https://local12.com/news/local/i-75-sb-ramp-closes-due-to-crash-cincinnati-united-state-52-eastbound-emergency-rapid-response-timer",
+     "outlet": "Local 12",
+     "first_seen": "2026-11-26T10:15:49+00:00"
+    },
+    {
+     "title": "Crews battle Whitewater Twp house fire",
+     "summary": "Flames broke out about 1:30 a.m. on Buena Vista Drive",
+     "link": "https://www.fox19.com/2026/11/26/crews-battle-whitewater-twp-house-fire/",
+     "outlet": "FOX19",
+     "first_seen": "2026-11-26T10:46:44+00:00"
+    }
+   ],
+   "apart": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     0,
+     3
+    ]
+   ],
+   "together": [
+    [
+     1,
+     3
+    ]
+   ]
+  },
+  {
    "note": "Nov 24, 2026: WVXU's holiday-travel show and Local 12's Christkindlmarkt story showed as one entry, joined only on the stock phrase 'here's what you can expect' plus 'holiday'. Different stories: they stay apart.",
    "items": [
     {
