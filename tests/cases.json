@@ -818,6 +818,33 @@
     "city": true,
     "label": "City Hall"
    }
+  },
+  {
+   "note": "Nov 27: the Enquirer's Water Works rate-hike story had no City label (Google copy, no summary, so 'Water Works' didn't place it in Cincinnati); Greater Cincinnati Water Works is a City department",
+   "title": "As Water Works asks for rate hike, memos disclose who gets water free",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZHh2YnV1ei1aNDBMdFQ1TjNJMTFkUHBteEdUNUU4djNIVWJyQjlKSURyejNTZ1dwdmxmNmJ2RV9KMkhIZmlfS1VMcHZ4MzV5R0xxRU1EVHd1LXBnLXlqYlZpOVRQR19BZ29abUZseGtJdE5iM0ttekZnWDRCWlZ4VEs4OFNMS1k2NURuYWY3cld3bnQyTUc4bHBndVNQQmJVZW54NUQyMGlJZEdMWFpnaGNrbUE4UXBGLTI5UVZKd01fd3Aw?oc=5",
+   "outlet": "Enquirer",
+   "google": true,
+   "narrow": true,
+   "expect": {
+    "city": true,
+    "label": "Water & Sewers",
+    "place": "yes"
+   }
+  },
+  {
+   "note": "Nov 27: an Akron-area story in the Enquirer's Google feed showed in Biggest; Munroe Falls (Summit County) isn't local",
+   "title": "Munroe Falls police chief takes on unique challenges of small city",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPN3AyMWNCcHNoMzFsQWUyYzcyODMzcHRFYzVTMDQ0a0FWX0h5eWZyY29ZQ3h4YzNEMTJPajVhRnVtejZ1Ym5EYmdXejZMcXVSakFETjlDNlgzenBXYzdwNjE2ZVJHb0J3Skd1bGJsNnpWY09mOFFnNF9lQWxlT1MzMnRDSjJEbmR4eklxQXpZajhnaW04VjFERy16WXVmcDVZVHpHemdUSGhzWFpkZVFOWFNUckwwTlowWVRfVlBlTFBwelRId1lHUUhB?oc=5",
+   "outlet": "Enquirer",
+   "google": true,
+   "narrow": true,
+   "expect": {
+    "kept": false,
+    "city": false
+   }
   }
  ],
  "same_story": [
