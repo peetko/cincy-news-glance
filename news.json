@@ -1,0 +1,2836 @@
+{
+ "generated_at": "2026-11-28T02:40:10.189744+00:00",
+ "site_version": "1a74889a01a2",
+ "weather": {
+  "ok": true,
+  "date": "2026-11-27",
+  "high": 45,
+  "low": 34,
+  "climate": {
+   "ok": true,
+   "date": "2026-11-27",
+   "normal_high": 49,
+   "normal_low": 32,
+   "record_high": 74,
+   "record_high_years": [
+    "1990"
+   ],
+   "record_low": 3,
+   "record_low_years": [
+    "1930"
+   ],
+   "since": "1872"
+  },
+  "as_of": "2026-11-28T02:40:10.189744+00:00",
+  "temp": 40,
+  "short": "Cloudy",
+  "is_day": false,
+  "change": {
+   "text": "No big changes in the next 24 hours",
+   "level": "none",
+   "details": []
+  },
+  "alerts": []
+ },
+ "meetings": {
+  "ok": true,
+  "day": "2026-11-30",
+  "is_today": false,
+  "meetings": [
+   {
+    "date": "2026-11-30",
+    "time": "10:00 AM",
+    "body": "Economic and Cultural Opportunity",
+    "location": "Council Chambers, Room 300",
+    "agenda": "",
+    "url": "https://cincinnatioh.legistar.com/MeetingDetail.aspx?LEGID=10879&GID=737&G=F7C7ACE8-B3D9-494B-89D1-69B0D7338C01"
+   },
+   {
+    "date": "2026-11-30",
+    "time": "1:00 PM",
+    "body": "Budget, Finance & Governance Committee",
+    "location": "Council Chambers, Room 300",
+    "agenda": "https://cincinnatioh.legistar1.com/cincinnatioh/meetings/2026/11/10884_A_Budget%2C_Finance___Governance_Committee_26-11-30_Agenda.pdf",
+    "url": "https://cincinnatioh.legistar.com/MeetingDetail.aspx?LEGID=10884&GID=737&G=F7C7ACE8-B3D9-494B-89D1-69B0D7338C01"
+   }
+  ]
+ },
+ "games": [],
+ "timer_token_expires": "2027-03-31",
+ "pending_cases": 0,
+ "developing": null,
+ "lead": {
+  "city": "department-of-justice-awards-3-6m-to-cpd-to-hire-more-office",
+  "general": "3-die-in-hamilton-house-fire",
+  "why": {
+   "city": "same lead as last run",
+   "general": "same lead as last run"
+  }
+ },
+ "counts": {
+  "stories": 31,
+  "city": 1,
+  "city_national": 0
+ },
+ "stories": [
+  {
+   "id": "3-die-in-hamilton-house-fire",
+   "title": "3 die in Hamilton house fire",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQYVFfWHFSMXlNbU9JbWR0RlhlZjRHNkZDbzAzdDJCUGF1NGRHLUtlMW4tOEgxRmh6SFhuWFNVZnl4TnVHU2U1LW13dWFDZFU2aEhwZ01LUTZwVGZjVzRPa2UxTXRSc1FxelpPajJ1MDZseEY5VTlnMlRmNzFBclFGR1ZWWWRPY3JSWi1CUmVKTTAtZkJiRzRYUl9R?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer",
+    "FOX19",
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQYVFfWHFSMXlNbU9JbWR0RlhlZjRHNkZDbzAzdDJCUGF1NGRHLUtlMW4tOEgxRmh6SFhuWFNVZnl4TnVHU2U1LW13dWFDZFU2aEhwZ01LUTZwVGZjVzRPa2UxTXRSc1FxelpPajJ1MDZseEY5VTlnMlRmNzFBclFGR1ZWWWRPY3JSWi1CUmVKTTAtZkJiRzRYUl9R?oc=5",
+    "FOX19": "https://www.fox19.com/2026/11/27/3-dead-hamilton-house-fire/",
+    "WCPO": "https://www.wcpo.com/news/local-news/butler-county/hamilton/3-people-found-dead-after-overnight-house-fire-in-hamilton",
+    "WLWT": "https://www.wlwt.com/article/3-people-killed-overnight-in-house-fire-in-hamilton-authorities-say/74547674"
+   },
+   "outlet_count": 4,
+   "first_seen": "2026-11-26T02:24:00+00:00",
+   "updated": "2026-11-27T23:09:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 6.118,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Hamilton",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "shooting",
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "FOX19",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "3 dead in Hamilton house fire"
+     ],
+     [
+      "WCPO",
+      "3 people found dead after overnight house fire in Hamilton"
+     ],
+     [
+      "Enquirer",
+      "3 die in Hamilton house fire"
+     ],
+     [
+      "WLWT",
+      "3 killed after fire breaks out at home overnight in Hamilton, authorities say"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ohio-state-trooper-stops-wrong-way-driver-near-interstate",
+   "title": "Ohio state trooper stops wrong-way driver near interstate",
+   "link": "https://www.wlwt.com/article/video-ohio-state-trooper-stops-wrong-way-driver-hamilton/74550712",
+   "outlet": "WLWT",
+   "summary": "New dash camera video shows an Ohio state trooper stopping a wrong-way driver before he got on Interstate 75.",
+   "outlets": [
+    "FOX19",
+    "Local 12",
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/26/wrong-way-crash-closes-sb-i-75-cincinnati-hours/",
+    "Local 12": "https://local12.com/news/local/trooper-stops-wrong-way-driver-on-tri-state-highway-ramp-cincinnati-liberty-way-ohio-state-highway-pit-maneuver-ovi",
+    "WCPO": "https://www.wcpo.com/news/local-news/watch-trooper-uses-pit-maneuver-on-wrong-way-driver-entering-i-75-from-exit-ramp",
+    "WLWT": "https://www.wlwt.com/article/video-ohio-state-trooper-stops-wrong-way-driver-hamilton/74550712"
+   },
+   "outlet_count": 4,
+   "first_seen": "2026-11-26T08:29:21+00:00",
+   "updated": "2026-11-27T22:08:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 5.165,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Whitewater Township",
+    "local": true,
+    "ohio": true,
+    "breaking_word": "fire",
+    "newsrooms_for_alert": [
+     "FOX19",
+     "Local 12",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "I-275 EB re-opens after crash"
+     ],
+     [
+      "Local 12",
+      "Home catches fire in Whitewater Township"
+     ],
+     [
+      "Local 12",
+      "Wrong-way crash in Cincinnati sends 5 to the hospital, 2nd collision reported"
+     ],
+     [
+      "FOX19",
+      "Crews battle Whitewater Twp house fire"
+     ],
+     [
+      "FOX19",
+      "2 kids hospitalized after SUV hit by wrong-way driver on I-75, police say"
+     ],
+     [
+      "WCPO",
+      "Trooper uses PIT maneuver on wrong-way driver entering I-75 from exit ramp"
+     ],
+     [
+      "WLWT",
+      "Ohio state trooper stops wrong-way driver near interstate"
+     ],
+     [
+      "Local 12",
+      "Trooper stops wrong-way driver on Tri-State highway ramp"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cincinnati-s-fountain-square-christmas-tree-lights-up-for-ho",
+   "title": "Cincinnati's Fountain Square Christmas tree lights up for holidays",
+   "link": "https://www.wlwt.com/article/watch-cincinnati-fountain-square-christmas-tree-lights-up/74551502",
+   "outlet": "WLWT",
+   "summary": "Cincinnati's annual tree lighting ceremony, Light Up the Square, officially kicked off the holiday season in the Queen City on Friday night.",
+   "outlets": [
+    "Local 12",
+    "WLWT"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/cincinnati-heads-into-the-christmas-season-with-duke-energys-light-up-the-square-event-tree-traditional-lights-holiday-spirit-santa-ice-skating-rink",
+    "WLWT": "https://www.wlwt.com/article/watch-cincinnati-fountain-square-christmas-tree-lights-up/74551502"
+   },
+   "outlet_count": 2,
+   "first_seen": "2026-11-27T19:30:13+00:00",
+   "updated": "2026-11-28T00:28:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 4.156,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Cincinnati heads into the Christmas season with Duke Energy's 'Light up the Square' event"
+     ],
+     [
+      "WLWT",
+      "Cincinnati's Fountain Square Christmas tree lights up for holidays"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "nky-dance-team-to-perform-in-postponed-macy-s-thanksgiving-p",
+   "title": "NKY dance team to perform in postponed Macy's Thanksgiving parade after community support",
+   "link": "https://local12.com/news/local/nky-dance-team-perform-postponed-macys-thanksgiving-parade-after-community-support-holiday-holidays-mjm-studios-boone-county-new-york-city-dancing-performance-cincinnati",
+   "outlet": "Local 12",
+   "summary": "Heavy rains and high winds on Thanksgiving delayed the annual Macy\u2019s Parade in New York City, leaving participants scrambling to figure out how to stay in the city for two extra days.The dance team from MJM Studios in",
+   "outlets": [
+    "Local 12",
+    "WCPO",
+    "WLWT"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/nky-dance-team-perform-postponed-macys-thanksgiving-parade-after-community-support-holiday-holidays-mjm-studios-boone-county-new-york-city-dancing-performance-cincinnati",
+    "WCPO": "https://www.wcpo.com/news/local-news/we-are-so-grateful-local-dancers-get-their-own-miracle-on-34th-street-after-macys-parade-postponed",
+    "WLWT": "https://www.wlwt.com/article/northern-kentucky-dance-team-thanksgiving-parade-postponed/74543703"
+   },
+   "outlet_count": 3,
+   "first_seen": "2026-11-26T06:58:35+00:00",
+   "updated": "2026-11-27T21:52:49+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 3.826,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12",
+     "WCPO",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "NKY dance group requests assistance after Macy's Thanksgiving Day Parade postponed"
+     ],
+     [
+      "WLWT",
+      "Northern Kentucky dance team will stay in New York to perform in postponed Thanksgiving parade"
+     ],
+     [
+      "Local 12",
+      "NKY dance team to perform in postponed Macy's Thanksgiving parade after community support"
+     ],
+     [
+      "Local 12",
+      "Hogwarts magic, Mr. Peanut and more join Macy's 100th Thanksgiving parade"
+     ],
+     [
+      "WCPO",
+      "'We are so grateful': Local dancers get their own Miracle on 34th Street after Macy's parade postponed"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "shoppers-brave-traffic-massive-crowds-for-black-friday-deals",
+   "title": "Shoppers brave traffic, massive crowds for Black Friday deals in Cincinnati",
+   "link": "https://www.wlwt.com/article/black-friday-shopping-kenwood-monroe-rookwood-cincinnati/74551881",
+   "outlet": "WLWT",
+   "summary": "Black Friday shoppers filled Kenwood Towne Centre and Monroe Outlets, searching for big markdowns and turning parking lots into standstill traffic.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/black-friday-shopping-kenwood-monroe-rookwood-cincinnati/74551881"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T21:13:00+00:00",
+   "updated": "2026-11-28T02:28:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 3.384,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Shoppers brave traffic, massive crowds for Black Friday deals in Cincinnati"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "it-s-a-surreal-moment-cincinnati-native-voices-character-in",
+   "title": "'It's a surreal moment': Cincinnati native voices character in GTA VI",
+   "link": "https://local12.com/news/local/its-a-surreal-moment-cincinnati-native-voices-character-in-gta-vi",
+   "outlet": "Local 12",
+   "summary": "Take-Two Interactive says the game generated $3.79 billion in worldwide retail sales during its first day. GTA VI has gamers glued to their consoles as they make their way through missions as Jason and Lucia.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/its-a-surreal-moment-cincinnati-native-voices-character-in-gta-vi"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-28T01:49:38+00:00",
+   "updated": "2026-11-28T01:49:38+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 3.042,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": false,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "'It's a surreal moment': Cincinnati native voices character in GTA VI"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "springfield-township-police-officer-resigns-in-wake-of-misco",
+   "title": "Springfield Township police officer resigns in wake of misconduct investigation",
+   "link": "https://www.wcpo.com/news/local-news/springfield-township-police-officer-resigns-in-wake-of-misconduct-investigation",
+   "outlet": "WCPO",
+   "summary": "Sgt. Deshawn Brooks resigned on Nov. 3, roughly a week after the township launched its investigation following an anonymous tip, according to a summary of the investigative report.",
+   "outlets": [
+    "WCPO"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/local-news/springfield-township-police-officer-resigns-in-wake-of-misconduct-investigation"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-28T01:12:35+00:00",
+   "updated": "2026-11-28T01:12:35+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.744,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Springfield Township",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": false,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Springfield Township police officer resigns in wake of misconduct investigation"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "police-2-year-old-dies-after-drowning-in-pool-during-family",
+   "title": "Police: 2-year-old dies after drowning in pool during family gathering on Thanksgiving",
+   "link": "https://www.wlwt.com/article/2-year-old-dead-after-drowning-in-pool-on-thanksgiving/74550010",
+   "outlet": "WLWT",
+   "summary": "Butler County police say that a two-year-old boy drowned in a pool during a family gathering on Thanksgiving.",
+   "outlets": [
+    "Enquirer",
+    "FOX19",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOOVYxdnZkT3dTc1c3alVOYUZBd09oSGdXX2R4dG5La3oyZFB5OGVzbE5Bb3JBelFVVjRPUi1YcS1weEhzdU9tUXRXRmVmQkZLY2xCaFZGcVA2TG5CSndWRno1QkdiSFhkUlRYeDBjaUZKai1jWjA4WU5wejZocWVOY0JlMW9fUFZsLTFsQmx5SXV2V0IzZmRFZXR5Q3YwRG56TXRMZXcxZU9Rb29pSUpNQllzWFRxUG51aU9oRlVfOFJMNlRoR19VVg?oc=5",
+    "FOX19": "https://www.fox19.com/2026/11/27/toddler-drowns-while-family-busy-with-thanksgiving-dinner-sheriff/",
+    "WLWT": "https://www.wlwt.com/article/2-year-old-dead-after-drowning-in-pool-on-thanksgiving/74550010"
+   },
+   "outlet_count": 3,
+   "first_seen": "2026-11-27T02:50:25+00:00",
+   "updated": "2026-11-27T19:52:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 2.735,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Butler County",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "FOX19",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "2-year-old drowns during Thanksgiving family gathering in Butler County"
+     ],
+     [
+      "Enquirer",
+      "Toddler drowns during Thanksgiving gathering, sheriff says"
+     ],
+     [
+      "WLWT",
+      "Police: 2-year-old dies after drowning in pool during family gathering on Thanksgiving"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "report-former-tri-state-officer-sent-100s-of-sexual-messages",
+   "title": "Report: Former Tri-State officer sent 100s of sexual messages to township employees",
+   "link": "https://local12.com/news/local/report-former-tri-state-officer-sent-100s-of-sexual-messages-to-township-employees",
+   "outlet": "Local 12",
+   "summary": "The township released a report on the investigation into former sergeant Deshawn Brooks on Friday. A probe into his conduct started at the end of October, and he was placed on administrative leave.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/report-former-tri-state-officer-sent-100s-of-sexual-messages-to-township-employees"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T23:24:43+00:00",
+   "updated": "2026-11-27T23:24:43+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.034,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Report: Former Tri-State officer sent 100s of sexual messages to township employees"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "lakota-east-graduate-set-to-compete-on-u-s-bobsled-world-cup",
+   "title": "Lakota East graduate set to compete on U.S. bobsled World Cup team",
+   "link": "https://www.wlwt.com/article/azariyah-bryant-lakota-east-us-world-cup-bobsled-team/74551619",
+   "outlet": "WLWT",
+   "summary": "Azariyah and her team are headed to Europe to compete on the world stage, where she will be competing through February.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/azariyah-bryant-lakota-east-us-world-cup-bobsled-team/74551619"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T23:20:00+00:00",
+   "updated": "2026-11-27T23:20:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 2.007,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Lakota East graduate set to compete on U.S. bobsled World Cup team"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "former-springfield-township-officer-accused-of-soliciting-se",
+   "title": "Former Springfield Township officer accused of soliciting sex from coworkers",
+   "link": "https://www.wlwt.com/article/springfield-township-police-officer-report-deshawn-brooks/74552176",
+   "outlet": "WLWT",
+   "summary": "The Springfield Township Police Department is sharing the result of a weeks-long internal investigation into the conduct of an officer who has since resigned.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/springfield-township-police-officer-report-deshawn-brooks/74552176"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T22:37:00+00:00",
+   "updated": "2026-11-27T23:17:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.991,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Springfield Township",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Former Springfield Township officer accused of soliciting sex from coworkers"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "bengals-linebacker-to-tribute-fiona-the-hippo-for-my-cause-m",
+   "title": "Bengals linebacker to tribute Fiona the hippo for My Cause, My Cleats game",
+   "link": "https://www.fox19.com/2026/11/27/bengals-linebacker-pays-tribute-fiona-hippo-with-custom-cleats/",
+   "outlet": "FOX19",
+   "summary": "Linebacker Barrett Carter took to social media to show off cleats inspired by the iconic hippo",
+   "outlets": [
+    "Enquirer",
+    "FOX19",
+    "Local 12",
+    "WLWT"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOZlR5M0drYmlmOTVhN1J5cXBpNkRrLW83d1ZxYzB4MkZRRGZ5TU96dzgxQU1CV25pcUVPZ1BVNFI4RW83bGFnMjBnUjNleUFQX0xsVXFmSFRYOW80SUlTUGxsSVh3Y2VmcVN6aW8wSDFLbDBONm9XNVlvVmlmU2U3MjRfRFZRQ1NGUzkyN0ZLelJoU0V1NEUtMDhLMEtaUmx5Z0x1MzNDdlpZeGpsQWFUQllBTkJOZjVTdmd5UlQzSkVXRVlSZWFYdl9TTnJidWw0V1BqbXVUcU5EUTRBSWc?oc=5",
+    "FOX19": "https://www.fox19.com/2026/11/27/bengals-linebacker-pays-tribute-fiona-hippo-with-custom-cleats/",
+    "Local 12": "https://local12.com/news/local/bengals-player-to-honor-fiona-during-my-cause-my-cleats-game-linebacker-barrett-carter-saints-nfl",
+    "WLWT": "https://www.wlwt.com/article/jake-golday-minnesota-vikings-cleats-impacting-tomorrow/74551799"
+   },
+   "outlet_count": 4,
+   "first_seen": "2026-11-27T17:55:00+00:00",
+   "updated": "2026-11-27T20:15:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 1.887,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Loveland",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer",
+     "FOX19",
+     "Local 12",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": true,
+    "versions": [
+     [
+      "Local 12",
+      "Bengals player to honor Fiona during My Cause, My Cleats game"
+     ],
+     [
+      "WLWT",
+      "Bengals linebacker to honor Fiona for \u2018My Cause My Cleats\u2019 game"
+     ],
+     [
+      "Enquirer",
+      "Bengals linebacker to wear special cleats honoring Fiona the hippo"
+     ],
+     [
+      "FOX19",
+      "Bengals linebacker to tribute Fiona the hippo for My Cause, My Cleats game"
+     ],
+     [
+      "WLWT",
+      "Vikings linebacker, former UC star selects Loveland nonprofit for My Cause My Cleats"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "trespassing-turkey-ends-up-behind-bars",
+   "title": "Trespassing turkey ends up behind bars",
+   "link": "https://local12.com/news/offbeat/watch-trespassing-turkey-ends-up-behind-bars",
+   "outlet": "Local 12",
+   "summary": "This Idaho turkey may have avoided becoming Thanksgiving dinner, but that doesn't mean he got off scot-free.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/offbeat/watch-trespassing-turkey-ends-up-behind-bars"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T22:48:33+00:00",
+   "updated": "2026-11-27T22:48:33+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.839,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Trespassing turkey ends up behind bars"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "stpd-release-investigation-report-after-inappropriate-commun",
+   "title": "STPD release investigation report after inappropriate communication allegations",
+   "link": "https://www.fox19.com/2026/11/27/stpd-release-internal-investigation-reports-following-inappropriate-communication-allegations/",
+   "outlet": "FOX19",
+   "summary": "Springfield Township Police Department has released the Investigative Report Summary following reports of inappropriate communication.",
+   "outlets": [
+    "FOX19"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/27/stpd-release-internal-investigation-reports-following-inappropriate-communication-allegations/"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T22:40:24+00:00",
+   "updated": "2026-11-27T22:40:24+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.798,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Springfield Township",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "STPD release investigation report after inappropriate communication allegations"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cincinnati-s-football-players-participating-in-early-signing",
+   "title": "Cincinnati's football players participating in early Signing Day",
+   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQS1hDQ09BaTF3ZllYLS16OXpWbjVYNG1MVXM1MFVEWXJyajNPVURrOUpPaDlPMFlNQ1ZiN3o0U0hOMkNzY0c4dGVST0UxSnlQNEpWR1lyTldJQUcyRlM0RlYyYVZya1ZjNWMzb3ZmZ25sMlZ0SEhFUDN3dFprX1hKMFZhanJ1d0dqTzRQbVlHOVV5aFdmU3poSXJBSDhHcnA0WTNZQ1BBWEo3bzhXcUtaa25CMDB3blB2R1RvRk04VnVCeXpTOUtwaVMzaWRKaUlLSXVYc1ZJelVTMTdJS3JrNQ?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQS1hDQ09BaTF3ZllYLS16OXpWbjVYNG1MVXM1MFVEWXJyajNPVURrOUpPaDlPMFlNQ1ZiN3o0U0hOMkNzY0c4dGVST0UxSnlQNEpWR1lyTldJQUcyRlM0RlYyYVZya1ZjNWMzb3ZmZ25sMlZ0SEhFUDN3dFprX1hKMFZhanJ1d0dqTzRQbVlHOVV5aFdmU3poSXJBSDhHcnA0WTNZQ1BBWEo3bzhXcUtaa25CMDB3blB2R1RvRk04VnVCeXpTOUtwaVMzaWRKaUlLSXVYc1ZJelVTMTdJS3JrNQ?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T22:32:00+00:00",
+   "updated": "2026-11-27T22:32:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.757,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Enquirer",
+      "Cincinnati's football players participating in early Signing Day"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "colerain-township-man-accused-of-threatening-to-set-mother-s",
+   "title": "Colerain Township man accused of threatening to set mother\u2019s home on fire",
+   "link": "https://www.wlwt.com/article/niszaha-lang-colerain-township-charges-aggravated-menacing/74550644",
+   "outlet": "WLWT",
+   "summary": "A Colerain Township man accused of threatening to kill his mother and set her home on fire was in court on Friday morning.",
+   "outlets": [
+    "FOX19",
+    "Local 12",
+    "WLWT"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/27/20-year-old-man-tried-set-his-mothers-townhouse-fire-police/",
+    "Local 12": "https://local12.com/news/local/tri-state-man-accused-of-trying-to-set-mothers-home-on-fire-threatening-to-kill-her-niszaha-lang-hiddenmeadows-drive-colerain-stove-oil-attempt-domestic-violence",
+    "WLWT": "https://www.wlwt.com/article/niszaha-lang-colerain-township-charges-aggravated-menacing/74550644"
+   },
+   "outlet_count": 3,
+   "first_seen": "2026-11-26T16:35:49+00:00",
+   "updated": "2026-11-27T17:09:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": true,
+   "is_new": false,
+   "developing": false,
+   "score": 1.739,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Colerain",
+    "local": true,
+    "ohio": false,
+    "breaking_word": "fire",
+    "newsrooms_for_alert": [
+     "FOX19",
+     "Local 12",
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Tri-State man accused of trying to set mother's home on fire, threatening to kill her"
+     ],
+     [
+      "WLWT",
+      "Colerain Township man accused of threatening to set mother\u2019s home on fire"
+     ],
+     [
+      "FOX19",
+      "20-year-old man tried to set his mother\u2019s townhouse on fire: Police"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cincinnati-animal-care-offers-99-cent-adoption-fees-for-blac",
+   "title": "Cincinnati Animal Care offers 99 cent adoption fees for Black Friday",
+   "link": "https://www.fox19.com/2026/11/27/cincinnati-animal-care-offers-99-cent-adoption-fees-black-friday/",
+   "outlet": "FOX19",
+   "summary": "The annual event hopes to address overcrowding at the shelter",
+   "outlets": [
+    "FOX19"
+   ],
+   "links": {
+    "FOX19": "https://www.fox19.com/2026/11/27/cincinnati-animal-care-offers-99-cent-adoption-fees-black-friday/"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T21:33:49+00:00",
+   "updated": "2026-11-27T21:33:49+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.494,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "FOX19"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "FOX19",
+      "Cincinnati Animal Care offers 99 cent adoption fees for Black Friday"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "where-cincinnati-bearcats-stand-after-espn-events-invitation",
+   "title": "Where Cincinnati Bearcats stand after ESPN Events Invitational wins",
+   "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOdFBlUlpoOGt5RTdZTEl3VXNjZmZEV0R2ZS1WN2YtS1Eyd2RxenJKYW95RGpxWl85ZDF2bmVwRkotYUZmS3J1NEh3Y2tuUEsyUlhyMVFNTjhYMk9uZHN5YzRfTDFwYVdvUVRaYV9HOWl3dTRfSjBYY1hsMHJXSmNzbmVRcE1mUzhHajg5MnBNZEJTRU9rTWdXNXZ0WTdJN2tvOExPTmZRUU5IbEhwSGU3b2NJUHpfLWZucEt1Z3VUMGQzN0hQWXFpR29RZTNMOTNNZWkyUl92VjNPYVM4cFVlM2g1UFpGdER1TGc?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOdFBlUlpoOGt5RTdZTEl3VXNjZmZEV0R2ZS1WN2YtS1Eyd2RxenJKYW95RGpxWl85ZDF2bmVwRkotYUZmS3J1NEh3Y2tuUEsyUlhyMVFNTjhYMk9uZHN5YzRfTDFwYVdvUVRaYV9HOWl3dTRfSjBYY1hsMHJXSmNzbmVRcE1mUzhHajg5MnBNZEJTRU9rTWdXNXZ0WTdJN2tvOExPTmZRUU5IbEhwSGU3b2NJUHpfLWZucEt1Z3VUMGQzN0hQWXFpR29RZTNMOTNNZWkyUl92VjNPYVM4cFVlM2g1UFpGdER1TGc?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-28T01:38:00+00:00",
+   "updated": "2026-11-28T01:38:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.472,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": false,
+    "downweighted": true,
+    "versions": [
+     [
+      "Enquirer",
+      "Where Cincinnati Bearcats stand after ESPN Events Invitational wins"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "local-stores-stay-busy-for-black-friday-despite-high-prices",
+   "title": "Local stores stay busy for Black Friday despite high prices and bad weather",
+   "link": "https://local12.com/news/local/stores-packed-black-friday-despite-high-prices-bad-weather-turnout-shop-shoppers-hopping-kenwood-towne-center-economy-economics-gifts-presents-deals-discount-credit-cards",
+   "outlet": "Local 12",
+   "summary": "At Kenwood Towne Centre, parking lots were full and lines to get in stretched onto the highway, even with bad weather.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/stores-packed-black-friday-despite-high-prices-bad-weather-turnout-shop-shoppers-hopping-kenwood-towne-center-economy-economics-gifts-presents-deals-discount-credit-cards"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T21:27:42+00:00",
+   "updated": "2026-11-27T21:27:42+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.469,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Local stores stay busy for Black Friday despite high prices and bad weather"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "survivors-advocates-sharing-stories-signs-during-pancreatic",
+   "title": "Survivors, advocates sharing stories, signs during Pancreatic Cancer Awareness Month",
+   "link": "https://www.wlwt.com/article/survivors-advocates-pancreatic-cancer-awareness-month/74551042",
+   "outlet": "WLWT",
+   "summary": "November is Pancreatic Cancer Awareness Month, which is a time to bring awareness to a disease that can be difficult to catch in its early stages.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/survivors-advocates-pancreatic-cancer-awareness-month/74551042"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T21:27:00+00:00",
+   "updated": "2026-11-27T21:27:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.466,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Survivors, advocates sharing stories, signs during Pancreatic Cancer Awareness Month"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "still-need-to-shop-for-the-holidays-here-s-a-look-at-what-ci",
+   "title": "Still need to shop for the holidays? Here's a look at what Cincinnati has to offer",
+   "link": "https://local12.com/news/local/still-need-to-shop-for-the-holidays-heres-a-look-at-what-cincinnati-has-to-offer-christmas-gift-gifts-toys-presents-jewelry-vendors-market-washington-park",
+   "outlet": "Local 12",
+   "summary": "With the holiday shopping season ramping up, shoppers looking for unique gifts will have several local options this weekend and next in Cincinnati.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/still-need-to-shop-for-the-holidays-heres-a-look-at-what-cincinnati-has-to-offer-christmas-gift-gifts-toys-presents-jewelry-vendors-market-washington-park"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T20:54:15+00:00",
+   "updated": "2026-11-27T20:54:15+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.339,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Still need to shop for the holidays? Here's a look at what Cincinnati has to offer"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "fc-cincinnati-at-nashville-sc-mls-cup-first-round-home-game",
+   "title": "FC Cincinnati at Nashville SC (MLS Cup First Round - Home Game 2) (If Necessary) Parking",
+   "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxON3BadnZEcGl3bWYtTXVPU09zcmVDR2E1UUtVYTNsRnZmNUNUNEFjNUtBU2R0cXlWZWliclRRU3M3eFRPcWtFaFp4VlVodVdtd0pjTW5iWGNmZmMyejNvdVNLUFdLV2FNS3paMndXazd5ZWZCcHBETXc1NXBtUGlVb3ZjcE56TEM4MkEwbnJXeTZZbWF1VlphNFg1c1hOenp3MWFQUldLcVg0dmg0WG5DbVNfRm1RTDVJWWdTMUZvZDc1S25LUlNGMUhFZzMzNWd4R3BHTzNNTk1zU0dWTHcxSkVMWTNUd0FpZExPN3NGbVhfbnRG?oc=5",
+   "outlet": "Williamson Herald",
+   "summary": "",
+   "outlets": [
+    "Williamson Herald"
+   ],
+   "links": {
+    "Williamson Herald": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxON3BadnZEcGl3bWYtTXVPU09zcmVDR2E1UUtVYTNsRnZmNUNUNEFjNUtBU2R0cXlWZWliclRRU3M3eFRPcWtFaFp4VlVodVdtd0pjTW5iWGNmZmMyejNvdVNLUFdLV2FNS3paMndXazd5ZWZCcHBETXc1NXBtUGlVb3ZjcE56TEM4MkEwbnJXeTZZbWF1VlphNFg1c1hOenp3MWFQUldLcVg0dmg0WG5DbVNfRm1RTDVJWWdTMUZvZDc1S25LUlNGMUhFZzMzNWd4R3BHTzNNTk1zU0dWTHcxSkVMWTNUd0FpZExPN3NGbVhfbnRG?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T20:40:52+00:00",
+   "updated": "2026-11-27T20:40:52+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.29,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Williamson Herald",
+      "FC Cincinnati at Nashville SC (MLS Cup First Round - Home Game 2) (If Necessary) Parking"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "made-what-cincinnati-is-today-12m-restoration-eyed-for-the",
+   "title": "'Made what Cincinnati is today': $12M restoration eyed for The Delta Queen on Ludlow riverfront",
+   "link": "https://www.wcpo.com/news/northern-kentucky/made-what-cincinnati-is-today-12m-restoration-eyed-for-the-delta-queen-on-ludlow-riverfront",
+   "outlet": "WCPO",
+   "summary": "The Ludlow Heritage Museum and the Delta Queen Steamboat Preservation Trust want to transform the historic steamboat into a living museum, hotel and event destination.",
+   "outlets": [
+    "WCPO"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/northern-kentucky/made-what-cincinnati-is-today-12m-restoration-eyed-for-the-delta-queen-on-ludlow-riverfront"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T20:33:18+00:00",
+   "updated": "2026-11-27T20:33:18+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.263,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "'Made what Cincinnati is today': $12M restoration eyed for The Delta Queen on Ludlow riverfront"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "measles-outbreak-accelerates-in-ohio-1-week-total-nearly-mat",
+   "title": "Measles outbreak accelerates in Ohio; 1 week total nearly matches all of last year",
+   "link": "https://local12.com/news/local/measles-outbreak-accelerates-in-ohio-1-week-total-nearly-matches-all-of-last-year-cincinnati-cleveland-columbus-ill-illness-sick-sickness-symptom-symptoms-skin-condition-medical-emergency-hospital-vaccine-vaccines",
+   "outlet": "Local 12",
+   "summary": "Ohio\u2019s measles outbreak is accelerating, with new cases reported in the past week nearly matching the state\u2019s total for all of last year. Ohio is experiencing its third measles outbreak of 2026.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/measles-outbreak-accelerates-in-ohio-1-week-total-nearly-matches-all-of-last-year-cincinnati-cleveland-columbus-ill-illness-sick-sickness-symptom-symptoms-skin-condition-medical-emergency-hospital-vaccine-vaccines"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T20:18:07+00:00",
+   "updated": "2026-11-27T20:18:07+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.211,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "cincinnati",
+    "local": true,
+    "ohio": true,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Measles outbreak accelerates in Ohio; 1 week total nearly matches all of last year"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "winterfest-returns-to-kings-island-with-lights-parade-skatin",
+   "title": "Winterfest returns to Kings Island with lights, parade, skating and shows",
+   "link": "https://local12.com/news/local/winterfest-returns-to-kings-island-with-lights-parade-skating-and-shows-cincinnati-mason",
+   "outlet": "Local 12",
+   "summary": "Thanksgiving is over and Winterfest begins Friday at Kings Island.",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/winterfest-returns-to-kings-island-with-lights-parade-skating-and-shows-cincinnati-mason"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T20:08:03+00:00",
+   "updated": "2026-11-27T20:08:03+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.178,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Winterfest returns to Kings Island with lights, parade, skating and shows"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "here-s-when-you-can-see-cincinnati-s-iconic-shillito-s-elves",
+   "title": "Here's when you can see Cincinnati's iconic Shillito's elves",
+   "link": "https://local12.com/news/local/heres-when-you-can-see-cincinnatis-iconic-shillitos-elves",
+   "outlet": "Local 12",
+   "summary": "A longtime Cincinnati holiday tradition is back in Mariemont, bringing decades of Christmas nostalgia to life.The Shillito\u2019s Elves have returned for a walk-through holiday display featuring more than 60 restored animated",
+   "outlets": [
+    "Local 12"
+   ],
+   "links": {
+    "Local 12": "https://local12.com/news/local/heres-when-you-can-see-cincinnatis-iconic-shillitos-elves"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T20:06:14+00:00",
+   "updated": "2026-11-27T20:06:14+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.172,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "yes",
+    "place_evidence": "Cincinnati",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Local 12"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "Local 12",
+      "Here's when you can see Cincinnati's iconic Shillito's elves"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "what-ja-marr-chase-said-about-bengals-energy-in-loss-to-comm",
+   "title": "What Ja'Marr Chase said about Bengals' energy in loss to Commanders",
+   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNbXlGRHhfX2VLbmJjdWswS3p0T2N1ZFg4dTRWZHQ2OUVJNkhBNGVYQjROcTZ1S1NGZS1TUnhHVTVKTjM5RGVuZ3lwaTZVN2IwQU1BbnBDRERtT1lsMjI2UUZocjRtUnB3X2IzblBINXlwY1EyQ0hhY2paQ1pqVGtJLTM2clBiRVpFWlJvekJCR1lDbmpsUXd5RFhRTC1WYjlzRWZGYVYwbXg4STJ4YXFrS1JKdGE5N192TEtGek45Umc4RnhYSmVHWEhSWHJ6allxTmkxZQ?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNbXlGRHhfX2VLbmJjdWswS3p0T2N1ZFg4dTRWZHQ2OUVJNkhBNGVYQjROcTZ1S1NGZS1TUnhHVTVKTjM5RGVuZ3lwaTZVN2IwQU1BbnBDRERtT1lsMjI2UUZocjRtUnB3X2IzblBINXlwY1EyQ0hhY2paQ1pqVGtJLTM2clBiRVpFWlJvekJCR1lDbmpsUXd5RFhRTC1WYjlzRWZGYVYwbXg4STJ4YXFrS1JKdGE5N192TEtGek45Umc4RnhYSmVHWEhSWHJ6allxTmkxZQ?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-28T00:10:00+00:00",
+   "updated": "2026-11-28T00:10:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.153,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": true,
+    "versions": [
+     [
+      "Enquirer",
+      "What Ja'Marr Chase said about Bengals' energy in loss to Commanders"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "black-friday-basketball-good-for-uc-bearcats-bouncing-boston",
+   "title": "Black Friday basketball good for UC Bearcats, bouncing Boston College",
+   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPbXNtRGgtSmJMclk1XzdNTENMakd3d2x0azU2YVlaUVpfUzBRRHBsUE1uUzJnb1RKSmFvWmZaSDlFbUVDeUVQUW04bVBDcmZZbmlZS05yUDFBNkhuckRKckdtcFRkbXJ0S0c2bUY3RVFkU3kyVkpWTnNiMm1sZGp1SWE0ZE9EX0l1ektmeGM2QWplUlVGV2k1aDVRaGRVeVJrazRHaXFuUmd0cVRkaGhNNWJMSWs3VjZlWFVTbTdCZExucXVJUlpzMTlxZTUybE9qNWR5RVQ2UzJUVDAxMGNGSg?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPbXNtRGgtSmJMclk1XzdNTENMakd3d2x0azU2YVlaUVpfUzBRRHBsUE1uUzJnb1RKSmFvWmZaSDlFbUVDeUVQUW04bVBDcmZZbmlZS05yUDFBNkhuckRKckdtcFRkbXJ0S0c2bUY3RVFkU3kyVkpWTnNiMm1sZGp1SWE0ZE9EX0l1ektmeGM2QWplUlVGV2k1aDVRaGRVeVJrazRHaXFuUmd0cVRkaGhNNWJMSWs3VjZlWFVTbTdCZExucXVJUlpzMTlxZTUybE9qNWR5RVQ2UzJUVDAxMGNGSg?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T23:50:00+00:00",
+   "updated": "2026-11-28T00:05:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.137,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": true,
+    "versions": [
+     [
+      "Enquirer",
+      "Black Friday basketball good for UC Bearcats, bouncing Boston College"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "3-keys-for-bengals-to-bounce-back-vs-new-orleans-saints",
+   "title": "3 keys for Bengals to bounce back vs. New Orleans Saints",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOZmFKWld5eUl6Vy1zMmUtVlloMEdENkttWlJmWjdQWEZTYjhzTUMtT2MyS2Vpb1A4N05ZSUtDN2tWUjE2NWxNaUZ0WUZReVJ6eG8ta0U3YV9mWXRMbm9WMkNOeVFQTUFRSGRfc1pOd0hfM1BLWEZicDZtcnEwXzRIUzdaTzlvWHZfbWJmcTV5V1k4V1RWcllfMG9GT19EX0xCaHQybnFoRDhjRGoyeFc5YklQQWtYNGV6akNxckhWRkFZcjRMYVFiVmVxUjJYT1hJ?oc=5",
+   "outlet": "Enquirer",
+   "summary": "",
+   "outlets": [
+    "Enquirer"
+   ],
+   "links": {
+    "Enquirer": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOZmFKWld5eUl6Vy1zMmUtVlloMEdENkttWlJmWjdQWEZTYjhzTUMtT2MyS2Vpb1A4N05ZSUtDN2tWUjE2NWxNaUZ0WUZReVJ6eG8ta0U3YV9mWXRMbm9WMkNOeVFQTUFRSGRfc1pOd0hfM1BLWEZicDZtcnEwXzRIUzdaTzlvWHZfbWJmcTV5V1k4V1RWcllfMG9GT19EX0xCaHQybnFoRDhjRGoyeFc5YklQQWtYNGV6akNxckhWRkFZcjRMYVFiVmVxUjJYT1hJ?oc=5"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T23:41:00+00:00",
+   "updated": "2026-11-27T23:41:00+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "maybe",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 1.064,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "maybe",
+    "place_evidence": null,
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "Enquirer"
+    ],
+    "remembered": true,
+    "downweighted": true,
+    "versions": [
+     [
+      "Enquirer",
+      "3 keys for Bengals to bounce back vs. New Orleans Saints"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "florence-mall-sees-black-friday-crowds-as-questions-remain-a",
+   "title": "Florence Mall sees Black Friday crowds as questions remain about its future",
+   "link": "https://www.wcpo.com/news/local-news/florence-mall-sees-black-friday-crowds-as-questions-remain-about-its-future",
+   "outlet": "WCPO",
+   "summary": "The Florence Mall saw a Black Friday boost, but shoppers say the struggling shopping center needs more than a busy day to turn things around.",
+   "outlets": [
+    "WCPO"
+   ],
+   "links": {
+    "WCPO": "https://www.wcpo.com/news/local-news/florence-mall-sees-black-friday-crowds-as-questions-remain-about-its-future"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T18:53:14+00:00",
+   "updated": "2026-11-27T18:53:14+00:00",
+   "is_city": false,
+   "national": false,
+   "city_reasons": [],
+   "city_score": 0,
+   "place": "other",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 0.957,
+   "city_rank": 0.0,
+   "why": {
+    "matches": [],
+    "place": "other",
+    "place_evidence": "Florence",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WCPO"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WCPO",
+      "Florence Mall sees Black Friday crowds as questions remain about its future"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "department-of-justice-awards-3-6m-to-cpd-to-hire-more-office",
+   "title": "Department of Justice awards $3.6M to CPD to hire more officers",
+   "link": "https://www.wlwt.com/article/department-of-justice-awards-36m-to-cpd-to-hire-more-officers/74522655",
+   "outlet": "WLWT",
+   "summary": "Cincinnati Police is getting federal funding to hire more officers.",
+   "outlets": [
+    "WLWT"
+   ],
+   "links": {
+    "WLWT": "https://www.wlwt.com/article/department-of-justice-awards-36m-to-cpd-to-hire-more-officers/74522655"
+   },
+   "outlet_count": 1,
+   "first_seen": "2026-11-27T17:13:00+00:00",
+   "updated": "2026-11-27T17:13:00+00:00",
+   "is_city": true,
+   "national": false,
+   "city_reasons": [
+    "Police",
+    "Federal"
+   ],
+   "city_score": 5.4,
+   "place": "yes",
+   "is_big": false,
+   "is_new": false,
+   "developing": false,
+   "score": 0.724,
+   "city_rank": 2.036,
+   "why": {
+    "matches": [
+     {
+      "group": "Police",
+      "term": "CPD",
+      "where": "headline",
+      "outlet": "WLWT",
+      "points": 3.0
+     },
+     {
+      "group": "Federal",
+      "term": "federal funding",
+      "where": "summary",
+      "outlet": "WLWT",
+      "points": 2.4
+     }
+    ],
+    "place": "yes",
+    "place_evidence": "CPD",
+    "local": true,
+    "ohio": false,
+    "breaking_word": null,
+    "newsrooms_for_alert": [
+     "WLWT"
+    ],
+    "remembered": true,
+    "downweighted": false,
+    "versions": [
+     [
+      "WLWT",
+      "Department of Justice awards $3.6M to CPD to hire more officers"
+     ]
+    ]
+   }
+  }
+ ],
+ "sources_status": [
+  {
+   "source": "Enquirer",
+   "ok": true,
+   "items": 39,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://news.google.com/rss/search?q=site:cincinnati.com/story+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WCPO",
+   "ok": true,
+   "items": 30,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wcpo.com/news/local-news.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WLWT",
+   "ok": true,
+   "items": 20,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wlwt.com/local-news-rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "FOX19",
+   "ok": true,
+   "items": 20,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.fox19.com/arc/outboundfeeds/rss/category/news/?outputType=xml",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Local 12",
+   "ok": true,
+   "items": 46,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://local12.com/news/local.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "WVXU",
+   "ok": true,
+   "items": 10,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://www.wvxu.org/local-news.rss",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Signal",
+   "ok": true,
+   "items": 10,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://signalcincinnati.org/feed/",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City Hall sweep",
+   "ok": true,
+   "items": 10,
+   "junk_dropped": 3,
+   "junk_examples": [
+    "Hogsett Packs Thanksgiving Meals, Predicts Indy MLS Deal",
+    "VinEnergo Breaks Ground On 126 MWp Solar Power Project In The Philippines, Advancing Strategic Cooperation With The Department Of Energy",
+    "Hogsett Predicts MLS Deal Before 2028 Term Ends"
+   ],
+   "used": "https://news.google.com/rss/search?q=Cincinnati+(%22city+council%22+OR+%22city+hall%22+OR+%22city+manager%22+OR+mayor)+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City of Cincinnati",
+   "ok": true,
+   "items": 0,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": null,
+   "used_fallback": false,
+   "errors": [
+    "empty: https://news.google.com/rss/search?q=site:cincinnati-oh.gov/cityofcincinnati/news+when:3d&hl=en-US&gl=US&ceid=US:en"
+   ],
+   "fail_streak": 0
+  },
+  {
+   "source": "Ohio Capital Journal",
+   "ok": true,
+   "items": 15,
+   "junk_dropped": 0,
+   "junk_examples": [],
+   "used": "https://ohiocapitaljournal.com/feed/",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Ohio legislation sweep",
+   "ok": true,
+   "items": 4,
+   "junk_dropped": 3,
+   "junk_examples": [
+    "Where America\u2019s $30 Billion in Marijuana Tax Revenue Goes: A State-by-State Breakdown",
+    "Ohio Bill Would Regulate License Plate Reader Networks",
+    "Ohio Bill Would Limit Massage Work to Licensed Therapists"
+   ],
+   "used": "https://news.google.com/rss/search?q=Ohio+(lawmakers+OR+Statehouse+OR+%22House+Bill%22+OR+%22Senate+Bill%22)+(cities+OR+%22local+governments%22+OR+municipalities+OR+%22home+rule%22)+when:2d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "Federal local-gov sweep",
+   "ok": true,
+   "items": 9,
+   "junk_dropped": 7,
+   "junk_examples": [
+    "President Donald J. Trump Approves Major Disaster Declaration for Florida",
+    "Recovery Starts Before the Disaster: Authorities Need Legal Help | Opinion",
+    "Trump Declares Major Disaster, Approves Emergency Relief Funding for Florida After Severe Floods",
+    "Dress for Success Southern Nevada Needs $70,000",
+    "Supreme Court to Hear Cases on Assault Weapons Bans",
+    "Trump Marks Thanksgiving by Signing Florida Flood Relief",
+    "Trump Declares Major Disaster, Approves $100 Million in Emergency Relief Funding for Florida"
+   ],
+   "used": "https://news.google.com/rss/search?q=(%22U.S.+Congress%22+OR+%22federal+funding%22+OR+%22federal+grants%22+OR+HUD+OR+FEMA+OR+%22Trump+administration%22)+(%22local+governments%22+OR+%22U.S.+cities%22+OR+mayors)+when:1d&hl=en-US&gl=US&ceid=US:en",
+   "used_fallback": false,
+   "errors": [],
+   "fail_streak": 0
+  },
+  {
+   "source": "City meetings (Legistar)",
+   "ok": true,
+   "items": 2,
+   "used": "web API (cincinnatioh)",
+   "error": null,
+   "fail_streak": 0
+  },
+  {
+   "source": "Game days (ESPN)",
+   "ok": false,
+   "items": 0,
+   "error": "AttributeError",
+   "fail_streak": 55
+  }
+ ],
+ "memory": {
+  "fail_streak": {
+   "Enquirer": 0,
+   "WCPO": 0,
+   "WLWT": 0,
+   "FOX19": 0,
+   "Local 12": 0,
+   "WVXU": 0,
+   "Signal": 0,
+   "City Hall sweep": 0,
+   "City of Cincinnati": 0,
+   "Ohio Capital Journal": 0,
+   "Ohio legislation sweep": 0,
+   "Federal local-gov sweep": 0,
+   "City meetings (Legistar)": 0,
+   "Game days (ESPN)": 55
+  },
+  "seen": [
+   {
+    "tok": [
+     "die",
+     "fire",
+     "hamilton",
+     "house"
+    ],
+    "first_seen": "2026-11-26T02:24:00+00:00",
+    "title": "3 die in Hamilton house fire"
+   },
+   {
+    "tok": [
+     "driver",
+     "interstate",
+     "near",
+     "state",
+     "stop",
+     "trooper",
+     "way",
+     "wrong"
+    ],
+    "first_seen": "2026-11-26T08:29:21+00:00",
+    "title": "Ohio state trooper stops wrong-way driver near interstate"
+   },
+   {
+    "tok": [
+     "christma",
+     "cincinnati'",
+     "fountain",
+     "holiday",
+     "light",
+     "square",
+     "tree"
+    ],
+    "first_seen": "2026-11-27T19:30:13+00:00",
+    "title": "Cincinnati's Fountain Square Christmas tree lights up for holidays"
+   },
+   {
+    "tok": [
+     "community",
+     "dance",
+     "macy'",
+     "nky",
+     "parade",
+     "perform",
+     "postponed",
+     "support",
+     "team",
+     "thanksgiving"
+    ],
+    "first_seen": "2026-11-26T06:58:35+00:00",
+    "title": "NKY dance team to perform in postponed Macy's Thanksgiving parade after community support"
+   },
+   {
+    "tok": [
+     "black",
+     "brave",
+     "crowd",
+     "deal",
+     "friday",
+     "massive",
+     "shopper",
+     "traffic"
+    ],
+    "first_seen": "2026-11-27T21:13:00+00:00",
+    "title": "Shoppers brave traffic, massive crowds for Black Friday deals in Cincinnati"
+   },
+   {
+    "tok": [
+     "character",
+     "gta",
+     "it'",
+     "moment",
+     "native",
+     "surreal",
+     "voice"
+    ],
+    "first_seen": "2026-11-28T01:49:38+00:00",
+    "title": "'It's a surreal moment': Cincinnati native voices character in GTA VI"
+   },
+   {
+    "tok": [
+     "investigation",
+     "misconduct",
+     "officer",
+     "police",
+     "resign",
+     "springfield",
+     "township",
+     "wake"
+    ],
+    "first_seen": "2026-11-28T01:12:35+00:00",
+    "title": "Springfield Township police officer resigns in wake of misconduct investigation"
+   },
+   {
+    "tok": [
+     "die",
+     "drowning",
+     "during",
+     "family",
+     "gathering",
+     "old",
+     "police",
+     "pool",
+     "thanksgiving",
+     "year"
+    ],
+    "first_seen": "2026-11-27T02:50:25+00:00",
+    "title": "Police: 2-year-old dies after drowning in pool during family gathering on Thanksgiving"
+   },
+   {
+    "tok": [
+     "100",
+     "employee",
+     "former",
+     "message",
+     "officer",
+     "sent",
+     "sexual",
+     "state",
+     "township",
+     "tri"
+    ],
+    "first_seen": "2026-11-27T23:24:43+00:00",
+    "title": "Report: Former Tri-State officer sent 100s of sexual messages to township employees"
+   },
+   {
+    "tok": [
+     "bobsled",
+     "compete",
+     "cup",
+     "east",
+     "graduate",
+     "lakota",
+     "set",
+     "team",
+     "world"
+    ],
+    "first_seen": "2026-11-27T23:20:00+00:00",
+    "title": "Lakota East graduate set to compete on U.S. bobsled World Cup team"
+   },
+   {
+    "tok": [
+     "accused",
+     "coworker",
+     "former",
+     "officer",
+     "sex",
+     "soliciting",
+     "springfield",
+     "township"
+    ],
+    "first_seen": "2026-11-27T22:37:00+00:00",
+    "title": "Former Springfield Township officer accused of soliciting sex from coworkers"
+   },
+   {
+    "tok": [
+     "bengal",
+     "cause",
+     "cleat",
+     "fiona",
+     "game",
+     "hippo",
+     "linebacker",
+     "tribute"
+    ],
+    "first_seen": "2026-11-27T17:55:00+00:00",
+    "title": "Bengals linebacker to tribute Fiona the hippo for My Cause, My Cleats game"
+   },
+   {
+    "tok": [
+     "bar",
+     "behind",
+     "end",
+     "trespassing",
+     "turkey"
+    ],
+    "first_seen": "2026-11-27T22:48:33+00:00",
+    "title": "Trespassing turkey ends up behind bars"
+   },
+   {
+    "tok": [
+     "allegation",
+     "communication",
+     "inappropriate",
+     "investigation",
+     "release",
+     "stpd"
+    ],
+    "first_seen": "2026-11-27T22:40:24+00:00",
+    "title": "STPD release investigation report after inappropriate communication allegations"
+   },
+   {
+    "tok": [
+     "cincinnati'",
+     "day",
+     "early",
+     "football",
+     "participating",
+     "player",
+     "signing"
+    ],
+    "first_seen": "2026-11-27T22:32:00+00:00",
+    "title": "Cincinnati's football players participating in early Signing Day"
+   },
+   {
+    "tok": [
+     "accused",
+     "colerain",
+     "fire",
+     "home",
+     "man",
+     "mother",
+     "set",
+     "threatening",
+     "township"
+    ],
+    "first_seen": "2026-11-26T16:35:49+00:00",
+    "title": "Colerain Township man accused of threatening to set mother\u2019s home on fire"
+   },
+   {
+    "tok": [
+     "99",
+     "adoption",
+     "animal",
+     "black",
+     "care",
+     "cent",
+     "fee",
+     "friday",
+     "offer"
+    ],
+    "first_seen": "2026-11-27T21:33:49+00:00",
+    "title": "Cincinnati Animal Care offers 99 cent adoption fees for Black Friday"
+   },
+   {
+    "tok": [
+     "bearcat",
+     "espn",
+     "event",
+     "invitational",
+     "stand",
+     "win"
+    ],
+    "first_seen": "2026-11-28T01:38:00+00:00",
+    "title": "Where Cincinnati Bearcats stand after ESPN Events Invitational wins"
+   },
+   {
+    "tok": [
+     "bad",
+     "black",
+     "busy",
+     "despite",
+     "friday",
+     "high",
+     "price",
+     "stay",
+     "store",
+     "weather"
+    ],
+    "first_seen": "2026-11-27T21:27:42+00:00",
+    "title": "Local stores stay busy for Black Friday despite high prices and bad weather"
+   },
+   {
+    "tok": [
+     "advocate",
+     "awareness",
+     "cancer",
+     "during",
+     "month",
+     "pancreatic",
+     "sharing",
+     "sign",
+     "story",
+     "survivor"
+    ],
+    "first_seen": "2026-11-27T21:27:00+00:00",
+    "title": "Survivors, advocates sharing stories, signs during Pancreatic Cancer Awareness Month"
+   },
+   {
+    "tok": [
+     "has",
+     "here'",
+     "holiday",
+     "look",
+     "need",
+     "offer",
+     "shop"
+    ],
+    "first_seen": "2026-11-27T20:54:15+00:00",
+    "title": "Still need to shop for the holidays? Here's a look at what Cincinnati has to offer"
+   },
+   {
+    "tok": [
+     "cup",
+     "game",
+     "home",
+     "mls",
+     "nashville",
+     "necessary",
+     "parking",
+     "round"
+    ],
+    "first_seen": "2026-11-27T20:40:52+00:00",
+    "title": "FC Cincinnati at Nashville SC (MLS Cup First Round - Home Game 2) (If Necessary) Parking"
+   },
+   {
+    "tok": [
+     "12m",
+     "delta",
+     "eyed",
+     "ludlow",
+     "made",
+     "queen",
+     "restoration",
+     "riverfront"
+    ],
+    "first_seen": "2026-11-27T20:33:18+00:00",
+    "title": "'Made what Cincinnati is today': $12M restoration eyed for The Delta Queen on Ludlow riverfront"
+   },
+   {
+    "tok": [
+     "accelerate",
+     "all",
+     "matche",
+     "measle",
+     "nearly",
+     "outbreak",
+     "total",
+     "year"
+    ],
+    "first_seen": "2026-11-27T20:18:07+00:00",
+    "title": "Measles outbreak accelerates in Ohio; 1 week total nearly matches all of last year"
+   },
+   {
+    "tok": [
+     "island",
+     "king",
+     "light",
+     "parade",
+     "return",
+     "show",
+     "skating",
+     "winterfest"
+    ],
+    "first_seen": "2026-11-27T20:08:03+00:00",
+    "title": "Winterfest returns to Kings Island with lights, parade, skating and shows"
+   },
+   {
+    "tok": [
+     "cincinnati'",
+     "elve",
+     "here'",
+     "iconic",
+     "see",
+     "shillito'"
+    ],
+    "first_seen": "2026-11-27T20:06:14+00:00",
+    "title": "Here's when you can see Cincinnati's iconic Shillito's elves"
+   },
+   {
+    "tok": [
+     "bengal",
+     "chase",
+     "commander",
+     "energy",
+     "ja'marr",
+     "loss"
+    ],
+    "first_seen": "2026-11-28T00:10:00+00:00",
+    "title": "What Ja'Marr Chase said about Bengals' energy in loss to Commanders"
+   },
+   {
+    "tok": [
+     "basketball",
+     "bearcat",
+     "black",
+     "boston",
+     "bouncing",
+     "college",
+     "friday",
+     "good"
+    ],
+    "first_seen": "2026-11-27T23:50:00+00:00",
+    "title": "Black Friday basketball good for UC Bearcats, bouncing Boston College"
+   },
+   {
+    "tok": [
+     "back",
+     "bengal",
+     "bounce",
+     "key",
+     "orlean",
+     "saint"
+    ],
+    "first_seen": "2026-11-27T23:41:00+00:00",
+    "title": "3 keys for Bengals to bounce back vs. New Orleans Saints"
+   },
+   {
+    "tok": [
+     "black",
+     "crowd",
+     "florence",
+     "friday",
+     "future",
+     "mall",
+     "question",
+     "remain",
+     "see"
+    ],
+    "first_seen": "2026-11-27T18:53:14+00:00",
+    "title": "Florence Mall sees Black Friday crowds as questions remain about its future"
+   },
+   {
+    "tok": [
+     "award",
+     "cpd",
+     "department",
+     "hire",
+     "justice",
+     "officer"
+    ],
+    "first_seen": "2026-11-27T17:13:00+00:00",
+    "title": "Department of Justice awards $3.6M to CPD to hire more officers"
+   },
+   {
+    "tok": [
+     "15",
+     "football",
+     "greater",
+     "high",
+     "school",
+     "score",
+     "season"
+    ],
+    "first_seen": "2026-11-27T22:00:00+00:00",
+    "title": "Scores for Week 15 of Greater Cincinnati high school football season"
+   },
+   {
+    "tok": [
+     "accused",
+     "black",
+     "friday",
+     "injuring",
+     "middletown",
+     "officer",
+     "shoplifting",
+     "target",
+     "woman"
+    ],
+    "first_seen": "2026-11-27T17:39:12+00:00",
+    "title": "Woman accused of shoplifting from Middletown Target on Black Friday, injuring officers"
+   },
+   {
+    "tok": [
+     "bengal",
+     "here'",
+     "higgin",
+     "know",
+     "listed",
+     "questionable",
+     "tee"
+    ],
+    "first_seen": "2026-11-27T21:33:00+00:00",
+    "title": "Tee Higgins listed as 'questionable' for Bengals. Here's what we know"
+   },
+   {
+    "tok": [
+     "christma",
+     "duke",
+     "energy'",
+     "event",
+     "head",
+     "light",
+     "season",
+     "square"
+    ],
+    "first_seen": "2026-11-27T19:30:13+00:00",
+    "title": "Cincinnati heads into the Christmas season with Duke Energy's 'Light up the Square' event"
+   },
+   {
+    "tok": [
+     "ask",
+     "disclose",
+     "free",
+     "get",
+     "hike",
+     "memo",
+     "rate",
+     "water",
+     "work"
+    ],
+    "first_seen": "2026-11-27T05:30:00+00:00",
+    "title": "As Water Works asks for rate hike, memos disclose who gets water free"
+   },
+   {
+    "tok": [
+     "holiday",
+     "kick",
+     "light",
+     "season",
+     "square"
+    ],
+    "first_seen": "2026-11-27T19:30:13+00:00",
+    "title": "WATCH LIVE: Light Up the Square kicks off holiday season in Cincinnati"
+   },
+   {
+    "tok": [
+     "accused",
+     "assaulting",
+     "forest",
+     "house",
+     "leaving",
+     "man",
+     "park",
+     "stop",
+     "trying",
+     "woman"
+    ],
+    "first_seen": "2026-11-27T16:29:00+00:00",
+    "title": "Forest Park man accused of assaulting woman, trying to stop her from leaving house"
+   },
+   {
+    "tok": [
+     "75n",
+     "again",
+     "carrying",
+     "jackknifed",
+     "mail",
+     "moving",
+     "overpasse",
+     "semi",
+     "straddling",
+     "traffic"
+    ],
+    "first_seen": "2026-11-26T20:10:32+00:00",
+    "title": "Traffic moving again after semi carrying mail jackknifed on I-75N, straddling overpasses"
+   },
+   {
+    "tok": [
+     "clinch",
+     "look",
+     "nashville",
+     "sery"
+    ],
+    "first_seen": "2026-11-27T17:04:00+00:00",
+    "title": "FC Cincinnati looks to clinch series against Nashville SC"
+   },
+   {
+    "tok": [
+     "december",
+     "heading",
+     "musketeer",
+     "stand",
+     "xavier"
+    ],
+    "first_seen": "2026-11-27T20:46:00+00:00",
+    "title": "Where do Xavier Musketeers stand heading into December?"
+   },
+   {
+    "tok": [
+     "hit",
+     "killed",
+     "liberty",
+     "pedestrian",
+     "township"
+    ],
+    "first_seen": "2026-11-27T03:41:36+00:00",
+    "title": "Pedestrian hit and killed in Liberty Township"
+   },
+   {
+    "tok": [
+     "butler",
+     "die",
+     "incident",
+     "old",
+     "pool",
+     "sheriff",
+     "thanksgiving",
+     "year"
+    ],
+    "first_seen": "2026-11-27T02:50:25+00:00",
+    "title": "Butler Co. Sheriff: 2-year-old dies after pool incident on Thanksgiving"
+   },
+   {
+    "tok": [
+     "dead",
+     "drowning",
+     "family'",
+     "following",
+     "pool",
+     "possible",
+     "state",
+     "toddler",
+     "tri"
+    ],
+    "first_seen": "2026-11-27T15:33:57+00:00",
+    "title": "Toddler dead following possible drowning at Tri-State family's pool"
+   },
+   {
+    "tok": [
+     "creek",
+     "found",
+     "item",
+     "makeshift",
+     "propane",
+     "raft",
+     "state",
+     "stolen",
+     "tank",
+     "tri"
+    ],
+    "first_seen": "2026-11-27T15:07:45+00:00",
+    "title": "Makeshift raft, propane tanks and stolen items found at Tri-State creek"
+   },
+   {
+    "tok": [
+     "fat",
+     "fly",
+     "found",
+     "hawk",
+     "released",
+     "too"
+    ],
+    "first_seen": "2026-11-27T14:41:49+00:00",
+    "title": "Hawk found to be too 'fat' to fly to be released"
+   },
+   {
+    "tok": [
+     "building",
+     "cincinnati'",
+     "fund",
+     "get",
+     "pogue",
+     "traction"
+    ],
+    "first_seen": "2026-11-27T14:09:06+00:00",
+    "title": "Cincinnati's Pogue, Traction Buildings Get $5.1M Ohio Funds"
+   },
+   {
+    "tok": [
+     "bengal",
+     "breezy",
+     "expect",
+     "game",
+     "paycor",
+     "planner",
+     "stadium",
+     "weather",
+     "weekend",
+     "wet"
+    ],
+    "first_seen": "2026-11-27T15:59:00+00:00",
+    "title": "Weekend weather planner: Expect wet, breezy Bengals game at Paycor Stadium"
+   },
+   {
+    "tok": [
+     "across",
+     "dinner",
+     "greater",
+     "serve",
+     "thanksgiving",
+     "volunteer"
+    ],
+    "first_seen": "2026-11-27T13:43:00+00:00",
+    "title": "Volunteers serve up Thanksgiving dinners across Greater Cincinnati"
+   },
+   {
+    "tok": [
+     "business",
+     "look",
+     "saturday",
+     "shop",
+     "small",
+     "take"
+    ],
+    "first_seen": "2026-11-27T12:44:58+00:00",
+    "title": "Local shops to take a look at this Small Business Saturday"
+   },
+   {
+    "tok": [
+     "25",
+     "bengal",
+     "football",
+     "help",
+     "legend",
+     "mark",
+     "neighbor",
+     "side",
+     "thanksgiving",
+     "tradition",
+     "west",
+     "year"
+    ],
+    "first_seen": "2026-11-26T23:13:00+00:00",
+    "title": "West Side neighbors marks 25 years of Thanksgiving football tradition, with help of Bengals legend"
+   },
+   {
+    "tok": [
+     "dead",
+     "fire",
+     "greater",
+     "gut",
+     "home"
+    ],
+    "first_seen": "2026-11-27T08:52:56+00:00",
+    "title": "3 dead after fire guts Greater Cincinnati home"
+   },
+   {
+    "tok": [
+     "award",
+     "conversion",
+     "downtown"
+    ],
+    "first_seen": "2026-11-27T06:23:27+00:00",
+    "title": "Ohio Awards $5.1M for Downtown Cincinnati Conversions"
+   },
+   {
+    "tok": [
+     "10",
+     "post",
+     "thanksgiving",
+     "thing",
+     "top",
+     "weekend"
+    ],
+    "first_seen": "2026-11-27T05:32:58+00:00",
+    "title": "Top 10 things to do post-Thanksgiving weekend in Cincinnati"
+   },
+   {
+    "tok": [
+     "conversion",
+     "downtown",
+     "high",
+     "inch",
+     "major",
+     "money",
+     "rise",
+     "state",
+     "toward"
+    ],
+    "first_seen": "2026-11-27T05:30:00+00:00",
+    "title": "2 major Downtown high-rises inch toward conversion with state money"
+   },
+   {
+    "tok": [
+     "democrat",
+     "further",
+     "govern",
+     "left",
+     "move",
+     "need",
+     "opinion"
+    ],
+    "first_seen": "2026-11-27T05:30:00+00:00",
+    "title": "Cincinnati Democrats need to govern, not move further left | Opinion"
+   },
+   {
+    "tok": [
+     "deal",
+     "industrial",
+     "land",
+     "large",
+     "pave",
+     "project",
+     "state",
+     "tri",
+     "way"
+    ],
+    "first_seen": "2026-11-27T03:48:04+00:00",
+    "title": "$7.5M land deal paves way for large Tri-State industrial project"
+   },
+   {
+    "tok": [
+     "cancer",
+     "foundation",
+     "fundraise",
+     "help",
+     "other",
+     "patient",
+     "rare",
+     "teen",
+     "through",
+     "young"
+    ],
+    "first_seen": "2026-11-27T02:26:21+00:00",
+    "title": "Local teen with rare cancer fundraises to help other young patients through foundation"
+   },
+   {
+    "tok": [
+     "approval",
+     "build",
+     "center",
+     "data",
+     "get",
+     "made",
+     "plan",
+     "satellite",
+     "space",
+     "starmind"
+    ],
+    "first_seen": "2026-11-27T01:48:22+00:00",
+    "title": "Plan to build 'Starmind' data center in space made up of 1M satellites gets approval"
+   },
+   {
+    "tok": [
+     "beware",
+     "black",
+     "friday",
+     "scammer"
+    ],
+    "first_seen": "2026-11-27T01:46:31+00:00",
+    "title": "Beware of scammers this Black Friday"
+   },
+   {
+    "tok": [
+     "crash",
+     "even",
+     "family",
+     "holiday",
+     "hurt",
+     "loss",
+     "make",
+     "nky",
+     "speak",
+     "victim"
+    ],
+    "first_seen": "2026-11-27T01:43:23+00:00",
+    "title": "\u2018The holidays can make a loss hurt even more\u2019: NKY crash victim\u2019s family speaks out"
+   },
+   {
+    "tok": [
+     "75",
+     "closed",
+     "crash",
+     "due",
+     "interstate",
+     "lane",
+     "monroe",
+     "near",
+     "northbound"
+    ],
+    "first_seen": "2026-11-27T16:49:00+00:00",
+    "title": "Lane closed on Interstate 75 northbound near Monroe due to crash"
+   },
+   {
+    "tok": [
+     "accused",
+     "brown",
+     "child",
+     "county",
+     "course",
+     "man",
+     "raping",
+     "year"
+    ],
+    "first_seen": "2026-11-26T23:29:56+00:00",
+    "title": "Brown County man accused of raping child over the course of 3 years"
+   },
+   {
+    "tok": [
+     "500",
+     "away",
+     "free",
+     "give",
+     "greater",
+     "meal",
+     "restaurant",
+     "thanksgiving"
+    ],
+    "first_seen": "2026-11-26T22:37:19+00:00",
+    "title": "Greater Cincinnati restaurant gives away over 500 free Thanksgiving meals"
+   },
+   {
+    "tok": [
+     "dinner",
+     "drown",
+     "family",
+     "preparing",
+     "sheriff",
+     "thanksgiving",
+     "toddler",
+     "while"
+    ],
+    "first_seen": "2026-11-27T02:50:25+00:00",
+    "title": "Toddler drowns while family preparing Thanksgiving dinner, sheriff says"
+   },
+   {
+    "tok": [
+     "amberley",
+     "deliver",
+     "jewish",
+     "kosher",
+     "neighbor",
+     "responder",
+     "thanksgiving",
+     "village"
+    ],
+    "first_seen": "2026-11-26T22:20:00+00:00",
+    "title": "Jewish neighbors deliver kosher Thanksgiving to Amberley Village first responders"
+   },
+   {
+    "tok": [
+     "feel",
+     "kosher",
+     "make",
+     "meal",
+     "responder",
+     "safe",
+     "thanked",
+     "thanksgiving"
+    ],
+    "first_seen": "2026-11-26T20:58:39+00:00",
+    "title": "'They make us feel safe': Local first responders thanked with Thanksgiving, kosher meals"
+   },
+   {
+    "tok": [
+     "1st",
+     "bearcat",
+     "beat",
+     "espn",
+     "game",
+     "georgia",
+     "invitational"
+    ],
+    "first_seen": "2026-11-26T18:56:00+00:00",
+    "title": "Cincinnati Bearcats beat Georgia in 1st game of ESPN Invitational"
+   },
+   {
+    "tok": [
+     "challenge",
+     "chief",
+     "city",
+     "fall",
+     "munroe",
+     "police",
+     "small",
+     "take",
+     "unique"
+    ],
+    "first_seen": "2026-11-27T11:01:00+00:00",
+    "title": "Munroe Falls police chief takes on unique challenges of small city"
+   },
+   {
+    "tok": [
+     "bible",
+     "college",
+     "free",
+     "hand",
+     "help",
+     "meal",
+     "need",
+     "shoe",
+     "temple",
+     "thanksgiving"
+    ],
+    "first_seen": "2026-11-26T19:40:33+00:00",
+    "title": "Temple Bible College hands out free meals, shoes to help those in need on Thanksgiving"
+   },
+   {
+    "tok": [
+     "capture",
+     "celebrating",
+     "energy",
+     "fiona",
+     "permanent",
+     "tribute"
+    ],
+    "first_seen": "2026-11-26T19:12:55+00:00",
+    "title": "'It captures her energy': Celebrating Fiona with a permanent tribute"
+   },
+   {
+    "tok": [
+     "eve",
+     "light",
+     "meteor",
+     "sky",
+     "thanksgiving"
+    ],
+    "first_seen": "2026-11-26T18:08:10+00:00",
+    "title": "Meteor lights up the sky on Thanksgiving Eve"
+   },
+   {
+    "tok": [
+     "again",
+     "charity",
+     "fly",
+     "hamilton",
+     "iconic",
+     "recreate",
+     "rubber",
+     "sitcom",
+     "stunt",
+     "turkey",
+     "wkrp"
+    ],
+    "first_seen": "2026-11-26T15:28:44+00:00",
+    "title": "Rubber turkeys fly again in Hamilton as WKRP recreates iconic sitcom stunt for charity"
+   }
+  ],
+  "lead": {
+   "city": {
+    "tok": [
+     "award",
+     "cpd",
+     "department",
+     "hire",
+     "justice",
+     "officer"
+    ],
+    "id": "department-of-justice-awards-3-6m-to-cpd-to-hire-more-office"
+   },
+   "general": {
+    "tok": [
+     "die",
+     "fire",
+     "hamilton",
+     "house"
+    ],
+    "id": "3-die-in-hamilton-house-fire"
+   }
+  }
+ }
+}
